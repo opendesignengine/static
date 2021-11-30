@@ -1,0 +1,98 @@
+h1. Wiki
+
+h2. Shepard Test Stand Version 1.0
+
+# [[General Overview v1.0]]
+
+h4. Systems Engineering Process - Version 1.0
+
+# [[Initial Questions v1_0|Initial Questions]]
+# [[Requirements Document v1.0]]
+# Block Diagram v1.0
+# Preliminary Design v1.0
+# Detailed Design v1.0
+# Design Review v1.0
+# Procurement/Manufacture v1.0
+# Assembly v1.0
+# Integration v1.0
+# Testing v1.0
+# Disposal v1.0
+
+h4. Documentation - Version 1.0
+
+# [[Budget v1.0]]
+# BOM v1.0
+# PCB Files v1.0
+# Software Source Code v1.0
+# Assembly Instructions v1.0
+# Operating Manual v1.0
+# Safety Procedures v1.0
+# Software/Firmware Summary v1.0
+# Meeting Minutes v1.0
+# [[Licensing and Attribution v1.0]]
+# Errata v1.0
+
+h2. Shepard Test Stand Version 2.0
+
+# [[General Overview v2.0]]
+
+h4. Systems Engineering Process - Version 2.0 (Project Pending)
+
+
+# Initial Questions v2.0
+# [[Requirements Document v2.0]]
+# Block Diagram v2.0
+# Preliminary Design v2.0
+# Detailed Design v2.0
+# Design Review v2.0
+# Procurement/Manufacture v2.0
+# Assembly v2.0
+# Integration v2.0
+# Testing v2.0
+# Disposal v2.0
+
+h4. Documentation - Version 2.0 (Project Pending)
+
+# Budget v2.0
+# BOM v2.0
+# PCB Files v2.0
+# Software Source Code v2.0
+# Assembly Instructions v2.0
+# Operating Manual v2.0
+# Safety Procedures v2.0
+# Software/Firmware Summary v2.0
+# Meeting Minutes v2.0
+# [[Licensing and Attribution v2.0]]
+# Errata v2.0
+
+* [[Requirements document]]
+* Detailed design
+* Parts list
+* Assembly instructions
+* Operating manual
+
+h2.  Draft requirements
+
++*Version 1.0*+
+-# Verify that we can measure the Estes motor performance data (thrust vs time for various motors as published here: http://estes.aptinet.com/images/page%2033.pdf)-
+-# Measure and record exhaust temperature of the Estes motors *[NOTE:  This means using a computer -gm]*-
+-# Document the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand-
+
+These requirements are currently being revised "here":https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document
+
++*Version 2.0*+
+# Add support for commercial high-power model rocket motors (above E)
+# Add support for video capture (low and high speed) to data collection
+
+h2. Budget
+
+Money:  $200
+Time: 3 months *[where did the time limit come from? -gm]*
+
+h2. Links to meeting minutes
+
+* https://docs.google.com/document/d/13MwZOAPU8h5ysgTOGlrgwql5hTVJ5koQw2xuwRfLzHk/edit
+
+Note: The sections on this page should be broken into separate pages as needed to maintain organization.
+
+ 

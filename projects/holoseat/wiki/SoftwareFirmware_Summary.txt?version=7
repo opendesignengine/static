@@ -1,0 +1,13 @@
+h1. Software Notes
+
+h2. Controller Schemes
+
+As the *Holoseat* only controls locomotion, you will need to use a keyboard or a controller for other inputs.  One of the *Holoseat* developers prefers to play games on a recumbent exercise bike, and in turn uses a controller.  For PC games, he uses "JoyToKey":http://www-en.jtksoft.net/ to map an XBox 360 Wired controller to keystrokes.  Below are the configuration files for the games he has played using the *Holoseat*.
+
+* Star Wars The Old Republic ("Main":https://opendesignengine.net/attachments/362/SWToR.cfg | "Alt 1":https://opendesignengine.net/attachments/363/SWToRa.cfg | "Alt 2":https://opendesignengine.net/attachments/364/SWToRb.cfg)
+* "Star Wars Knights of The Old Republic":
+* "Mass Effect":https://opendesignengine.net/attachments/365/KoTOR_Bike.cfg
+* "Portal 2":https://opendesignengine.net/attachments/367/Portal_2.cfg
+* "Morrowind":https://opendesignengine.net/attachments/368/Morrowind_Bike.cfg
+
+To use these files, download and unzip JoyToKey, then download the cfg file(s) for the game in question to the JoyToKey executable directory.  The next time you run JoyToKey (note, the JoyToKey developer recommends running JoyToKey as an administrator), the configuration(s) you downloaded will be listed.  Simply select the one matching the game you want to play and things should be ready to go.  Browse the key mappings in JoyToKey to see how the controller has been configured.  Note, the walk command (*w*) is not mapped in these config files as the *Holoseat* will provide this input.

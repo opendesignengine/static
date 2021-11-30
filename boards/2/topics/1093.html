@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Open Design Engine - 404 errors with browsing repositories - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/ode.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/ode.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/ode%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/ode%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/ode/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/ode%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/ode/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/ode%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../../projects/ode/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/ode/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/ode%3Fjump=files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/ode/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/ode/boards.html">Forums</a> » <a href="../../../projects/ode/boards/2.html">Development</a> » </p>
+
+<div class="contextual">
+    <span class="message-1093-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>404 errors with browsing repositories</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/ode/activity%3Ffrom=2015-11-12.html" title="11/12/2015 07:39 pm">almost 7 years</a> ago</span></p>
+<div class="wiki">
+<p>We've been experiencing an issue with older repositories where they are accessible via Subversion, but when viewing them from the Repository tab, a 404 (no content) error is returned. Note that newer repositories did not have an issue. Looking at the server logs, a message like the below was being logged:<br /><pre>
+...
+No close tag for /lists/list
+Line:
+Position:
+Last 80 unconsumed characters:
+
+Output was:
+ &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;lists&gt;
+&lt;list
+   path="https://opendesignengine.net/svn/ode"&gt;
+
+Rendering template within layouts/base
+Rendering common/error (404)
+</pre><br />A Google search turned up a number of other people seeing this error as well, but in their cases it was new repositories, not old ones. In addition to the error message we were seeing, all of them were also stating issues with SSL (either via HTTPS or SSH). This thread on the Redmine forums in particular was of help: <a class="external" href="http://www.redmine.org/boards/2/topics/11896">http://www.redmine.org/boards/2/topics/11896</a>, which led me to running<br /><pre>
+svn list --xml "https://opendesignengine.net/svn/ode"@HEAD
+</pre><br />This prompted me to accept the server's certificate because it was failing to be validated by the local SVN client, just as others were reporting. Once I had permanently accepted it, everything started working again. I'm still a little perplexed as to why newer repositories had no issues, but I suspect it had something to do with a partial update when the server's certificate was updated last.</p>
+</div>
+
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/1093">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

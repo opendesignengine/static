@@ -1,0 +1,127 @@
+h1. Wiki
+
+h2.  Project documentation
+
+* [[Requirements document]]
+* Detailed design
+* Parts list
+* Assembly instructions
+* Operating manual
+
+h2.  Draft requirements
+
++*Shepard Test Stand Version 1.0*+
+-# Verify that we can measure the Estes motor performance data (thrust vs time for various motors as published here: http://estes.aptinet.com/images/page%2033.pdf)-
+-# Measure and record exhaust temperature of the Estes motors *[NOTE:  This means using a computer -gm]*-
+-# Document the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand-
+
+Below is a list of questions and proposed answers to help us narrow down the requirements for this project. You can view the original forum discussion "here":https://opendesignengine.net/boards/4/topics/38
+
+*Q1. Why are we making this?*
+
+*A1*. Jeremy Said - _To gain experience in the open design and development of test stands (and other equipment), test ODE (Open Design Engine), and to provide a marketing, outreach, and educational tool._
+
+*A1*. J Said - _The Shepard Test Stand is the first step toward developing an open source test stand for flight capable rocket engines. It's focus on low power, commercially available amateur rocket motors is intended to provide a safe first experience for both designers (low power and low cost lead to little penalty for failing to mean design goals the first time around) and operators (low power leads to lower cost if accidentally misused during early training). Additionally, as one of Mach 30's earliest open source hardware projects, it will give us practical experience in open source hardware development and managing projects on ODE. Finally, we have received interest in performing live demonstrations of the test stand as part of educational and outreach activities, so it is expected the test stand will become an educational and marketing tool._
+
+*Q2. Who is this for?*
+
+*A2*. Jeremy Said - _It is hoped that the design and development process will be helpful to any and all who have an interest in test stands, and the finished stand will be used by Mach 30 and its partners._
+
+*A2*. J Said - _The Shepard Test Stand is for anyone wanting to learn about measuring the performance of rockets. This includes open source spaceflight designers who will design and build future test stands (at Mach 30 or elsewhere), Mach 30 operators who will use future test stands in other Mach 30 projects, students and educators who want to bring rocket engineering into the classroom, and anyone else interested in how rockets are tested._
+
+*Q3. How will this be used?*
+
+*A3*. Jeremy Said - _The final test stand will be used for verification of typical motor performance metrics such as thrust and exhaust temperature. These metrics will be compared against benchmark values provided in the Estes motor documentation: http://estes.aptinet.com/images/page%2033.pdf The test stand will also be used to do demonstrations at various conferences and educational events._
+
+*A3*. J Said - _The final test stand will be used for verification of typical motor performance metrics such as thrust and exhaust temperature. These metrics will be compared against benchmark values provided in the Estes motor documentation:http://estes.aptinet.com/images/page%2033.pdf The test stand will also be used to do demonstrations at various conferences and educational events._
+
+*Q4. What features does it need to have (now)?*
+
+*A4*. Jeremy Said - 
+_The test stand needs to:_
+* _Be easily set up and torn down for demonstration purposes._
+* _Be easy to package for shipment to any event at which it will be used._
+* _Provide a stable base on which to test model rocket motors._
+* _Be as safe to operate as possible._
+* _Accommodate Estes rocket motor sizes A through E._
+* _Provide the ability to measure thrust and exhaust temperature while keeping an accurate timestamp for each data point._
+
+*A4*. J Said -
+_A4a. I would adjust the safety requirement to read:_
+* _Conform to NAR safety rules for the operation of model rockets (for example, using "non-metal parts" for all components directly interfacing with the motor to reduce the risk from shrapnel)_
+* _I would like to amend my previous answer regarding safety to be Where appropriate, conform to NAR safety rules for the operation of model rockets (for example, using "non-metal parts" for all components directly interfacing with the motor to reduce the risk from shrapnel). My thought is the Shepard test stand should be something that NAR can endorse both educationally and as it relates to safety._
+
+*A4*. Greg Said - _A4a: I disagree. I think the application of the NAR safety code for operations of model rockets does not apply to the design and operations of rocket motor test stands. While there are some parts of this rule set are reasonable i don't think that the entire code can be applied in broad strokes. A rocket test stand is not designed to fly, however this code was developed for flight operations of rockets. We need to better define the intent of the safety requirement for this project._
+
+*Q5. What features does it need to have (later)?*
+
+*A5*. Jeremy Said - _Version 2.0 of the test stand will be a separate design that will add support for commercial high-power model rocket motors (above E), and high and low speed video capture._
+
+*A5*. J Said - _Once we have enough experience with Estes class motors, I think the logical progression in scale of test stands (most of which I expect to be implemented as separate projects, spread out over a significant period of time) is_
+# _high power commercial solid motors_
+# _small hybrid motors (on the thrust scale of high power commercial solid motors)_
+# _larger thrust hybrid motors_
+# _small liquid engines_
+# _medium liquid engines_
+# _large liquid engines_
+
+_In terms of other features to add to the test stands, those could include:_
+* _video capture of the tests (high and low speed, from multiple angles)_
+* _integrated ignition systems (so the test management software can control the entire test)_
+* _additional measurements_
+* _higher fidelity measurements_
+
+*Q6. What are the legacy requirements?*
+
+*A6*. Jeremy Said - _This is a first generation test stand, so there are no legacy requirements to remain compatible with previous Mach 30 designs._
+
+*A6*. J Said - _This is the first project of its kind at Mach 30, there are no existing projects it must interface with. However, if the system includes desktop control software (and I expect it will), that software should run on all three major PC platforms (MS Windows, Mac OS X, and Linux). Additionally, it should use standard connections back to the control software (for example, USB, Ethernet, or similar connections)._
+
+*Q7. Who's going to build this?*
+
+*A7*. Jeremy Said - _It is assumed that volunteers within the Mach 30 community will build this test stand. The designs will be open so that other individuals and groups may choose to build their own as well._
+
+*A7*. J Said - _I have nothing else to add to this answer._
+
+*A7*. Greg Said - _I would add that the intent is to simplify the design such that ANYONE, without necessarily a technical education in rocketry, propulsion, or engineering, would be able to build and operate a Shepherd test stand._
+
+*Q8. How many do we want to make?*
+
+*A8*. Jeremy Said - _One._
+
+*A8*. J Said - _One (for now). If the design proves particularly valuable as a teaching or training tool, we may revisit this decision. If highly successful, it is not outside the realm of possibility to consider offering it (or a related design) as a kit for others to assemble._
+
+*Q9. What is the budget?*
+
+*A9*. Jeremy Said - _$200_
+
+*A9*. J Said - _$200, firm. If there is a conflict between function and budget, for this iteration, budget should trump. Our goal is not to make the perfect test stand, it is to make the first prototype of a test stand and see what we can learn from that experience (both about test stands, and about our processes). We can always go back and do another iteration to meet the design requirements if needed. Holding to a firm budget minimizes the amount of time spent trying to make it perfect (once you are out of money, you have to wrap up the project, successful or not). Even a "unsuccessful" prototype will teach us important lessons to apply moving forward._
+
+*A9*. Greg Said - _I'm not really sure why the arbitrary number of $200 is important. J and I have already talked about this and it turns out that I'm not invested enough to pursue the discussion farther. I don't know that sticking to a $200 budget at the expense of a successful project is very valuable, but agree that we should continue to work our way through the process and see what comes out the other end._
+
+*Q10. What is the timeline?*
+
+*A10*. Jeremy Said - _An original timeline of 3 months was proposed, but the timeline will be completely dependent on the involvement of the Mach 30 community._
+
+*A10*. J Said - _The goal is to complete the project within three months of formal launch as an exercise of agile design. However, given the project is also an experiment in open source hardware development and is all volunteer based, we need to recognize the need to be flexible in this requirement._
+
+*Q11. What waste products will be produced by the manufacture and/or operation of this?*
+
+*A11*. Jeremy Said - _Spent Estes motors will be a waste product of the operation of this test stand, and any residual materials should be treated as hazardous. Disposal of these motors should conform to all local, state, and federal guidelines. Estes motors are based on black powder propellant, so any motors that do not fire properly or are damaged can be disposed of in an ordinary manner by first soaking them in water until the casing unwraps and the propellant falls apart._
+
++*Shepard Test Stand Version 2.0*+
+# Add support for commercial high-power model rocket motors (above E)
+# Add support for video capture (low and high speed) to data collection
+
+h2. Budget
+
+Money:  $200
+Time: 3 months *[where did the time limit come from? -gm]*
+
+h2. Links to meeting minutes
+
+* TBD 
+
+Note: The sections on this page should be broken into separate pages as needed to maintain organization.
+
+ 

@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Some notes on testing Holoseat as joystick in place of keyboard - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-849-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Some notes on testing Holoseat as joystick in place of keyboard</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-09-25.html" title="09/25/2014 06:13 pm">about 8 years</a> ago</span></p>
+<div class="wiki">
+<p>This week, Bryan found a link to a hack to add support to a Leonardo for joystick emulation (see <a href="../../../projects/holoseat/wiki/Resources.html" class="wiki-page">Resources</a>).  This is one half of the capability I have wanted from day one (that is to connect the Holoseat between a PC and a joystick and trap signals for walking, etc, and pass through everything else so users don't have to do anything special to use Holoseat).  The other half is the ability to read signals from a controller and react to them, well I found a USB host shield that does just that (also listed on <a href="../../../projects/holoseat/wiki/Resources.html" class="wiki-page">Resources</a>).</p>
+
+
+	<p>So, after we work out the Hall effect sensor, I want to add a new task to v0.3, namely investigating joystick emulation/integration.  Here are a couple of notes on what I think we will need to conduct this research.</p>
+
+
+	<ul>
+	<li>new Leonardo (if we are going to hack on the underlying Arduino code at all, I want a clean board that I can muck with and not worry about bricking current development work)</li>
+		<li>new proto shield with latest Holoseat design implemented on it</li>
+		<li>USB host shield</li>
+		<li>XBOX controller (I already have one)</li>
+		<li>updates to the desktop app to report debug messages from holoseat and show joystick signals from holoseat's emulation of joystick(?)</li>
+	</ul>
+
+
+	<p>Do we need anything else?</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (5)</h3>
+
+  <div class="message reply" id="message-857">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="849%3Fr=857.html#message-857">RE: Some notes on testing Holoseat as joystick in place of keyboard</a>
+    -
+    Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-09-26.html" title="09/26/2014 09:30 am">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Seems like this should work.  I'm interested in testing this too.  I'm thinking this likely should wait on the hall effect sensors unless we want to try to do parallel efforts and then merge the code.  Right now there's no real way to simulate a full axis of the controller so instead of replacing an axis entirely we would instead be replacing half of an axis which is going to be different code.  I'm willing to give it a shot though.  Could be fun to see if I could get this to work and would go a long way towards the joypad bit.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-904">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="849%3Fr=904.html#message-904">RE: Some notes on testing Holoseat as joystick in place of keyboard</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-08.html" title="10/08/2014 06:53 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>I just thought of something else we could do with full joystick emulation...  Keyboard mappings without software in the loop.  When I play games like SWTOR that do not support joysticks, I use <a href="http://www-en.jtksoft.net/" class="external">Joy2key</a> to map the remainder of my joystick (I skip mapping 'w' of course) to key board controls.  It is an extra layer of software and one that can be temperamental at times.  If we supported mapping joystick inputs to joystick or keyboard outputs, then we would really have a reason to know what games the user was playing and we could open up a range of games that right now take a bit of hacking to get working (especially if we have an easy way for users to share mappings).</p>
+
+
+	<p>It would definitely be more complicated, but I think it could be a very useful feature that we would ship in entirely in firmware/software upgrades.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-905">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="849%3Fr=905.html#message-905">RE: Some notes on testing Holoseat as joystick in place of keyboard</a>
+    -
+    Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-09.html" title="10/09/2014 05:43 am">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Great idea.  Basically just need a file that defines buttons.  I'm thinking something as simple as an INI file where you indicate the executable to look for and the button/keyboard mapping itself.  Just need to setup a function to load the config over serial.</p>
+
+
+	<p>Only two possible issues I'm seeing here:<br />Do we handle diagonals?  If so, how far do we go there?<br />If the holoseat is Y1 and the controller is providing X1, do we combine the two to hit the diagonal?</p>
+
+
+	<p>Other than that, sound idea.  Makes us a hardware keyboard converter for a joypad which probably would work better in many instances.</p>
+
+
+	<p>Additional thought:  What about the idea of changing from an on/off switch to a joypad/keyboard/off switch?  Can do it by game, but thinking that could also be useful.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-906">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="849%3Fr=906.html#message-906">RE: Some notes on testing Holoseat as joystick in place of keyboard</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-09.html" title="10/09/2014 06:45 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Good questions.</p>
+
+
+	<p>Not sure about the diagonal yet, but my first instinct is to pass both signals if it would make sense in most games (and possibly have an option to control which way it works now that I think of it).</p>
+
+
+	<p>I was thinking of the keyboard/joypad emulation being a software setting and probably controllable by game with an option for global default.  That was we can have many keyboard mappings that are easy to switch out.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-914">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="849%3Fr=914.html#message-914">RE: Some notes on testing Holoseat as joystick in place of keyboard</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-23.html" title="10/23/2014 08:52 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Rough BoM for v0.3 joystick build test hardware</p>
+
+
+	<table>
+		<tr>
+			<th>Part # </th>
+			<th style="text-align:left;">Description</th>
+			<th style="text-align:left;">Vendor (linked)</th>
+			<th style="text-align:right;">Unit Cost ($)</th>
+			<th style="text-align:right;">Qty</th>
+			<th style="text-align:right;">Total Cost ($)</th>
+		</tr>
+		<tr>
+			<td>TR 12    </td>
+			<td>Arduino Leonardo              </td>
+			<td><a href="http://www.amazon.com/Arduino-A000057-Leonardo-with-Headers/dp/B008A36R2Y" class="external">Amazon</a> </td>
+			<td style="text-align:right;">24.99</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">24.99</td>
+		</tr>
+		<tr>
+			<td>TR 13    </td>
+			<td>Arduino Prototype Shield  </td>
+			<td><a href="http://www.amazon.com/Arduino-Proto-Shield-R3-Assembled/dp/B007QXTRNA/" class="external">Amazon</a>        </td>
+			<td style="text-align:right;">14.95</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">14.95</td>
+		</tr>
+		<tr>
+			<td>TR 14    </td>
+			<td>USB Host Shield               </td>
+			<td><a href="http://www.amazon.com/Arduino-A000004-USB-Host-Shield/dp/B00LUJYN5S/" class="external">Amazon</a>           </td>
+			<td style="text-align:right;">49.95</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">49.95</td>
+		</tr>
+		<tr>
+			<td>--       </td>
+			<td>Misc Hardware             </td>
+			<td>--                                                                                   </td>
+			<td style="text-align:right;">15.00</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">15.00</td>
+		</tr>
+		<tr>
+			<td><strong>Total</strong>  </td>
+			<td>                          </td>
+			<td>                                                                                     </td>
+			<td style="text-align:right;">    </td>
+			<td style="text-align:right;">  </td>
+			<td style="text-align:right;"><strong>104.89</strong></td>
+		</tr>
+	</table></div>
+  
+  </div>
+
+<p class="pagination"> (1-5/5)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/849.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

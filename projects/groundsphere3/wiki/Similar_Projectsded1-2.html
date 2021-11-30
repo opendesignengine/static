@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Similar_Projects.html?version=8 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:15 GMT -->
+<head>
+<title>Similar Projects</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Similar-Projects"></a>
+<h1 >Similar Projects<a href="#Similar-Projects" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="#Similar-Projects">Similar Projects</a><ul><li><a href="#Listening-to-a-Satellites-for-30-Dollars">Listening to a Satellites for 30 Dollars</a></li><li><a href="#KickSat-Ground-Station">KickSat Ground Station</a></li><li><a href="#How-to-Hear-the-ISS">How to Hear the ISS</a></li><li><a href="#Receiving-Slow-Scan-TV-Images-from-the-International-Space-Station">Receiving Slow Scan TV Images from the International Space Station</a></li><li><a href="#Listening-to-Satellites-on-a-Handheld-Scanner">Listening to Satellites on a Handheld Scanner</a></li><li><a href="#RTL-SDR-Blog-Posts-About-Using-RTL2832U-to-Receive-ISS-Signals">RTL-SDR Blog Posts About Using RTL2832U to Receive ISS Signals</a></li><li><a href="#Example-Video-of-Using-an-SDR-to-Receive-Signals-from-the-ISS">Example Video of Using an SDR to Receive Signals from the ISS</a></li></ul></li></ul>
+
+
+	<p>The following is a list of other low cost satellite receiving projects.  Not all projects are open source hardware, but all include at least some degree of documentation/evidence of success.  Note, some of these projects require the use of a directional antenna (usually a hand held <a href="https://en.wikipedia.org/wiki/Yagi-Uda_antenna" class="external">Yagi</a>) to provide sufficient gain.  Contrast this with the Ground Sphere goal of providing a new user friendly system by utilizing an omni-directional antenna.</p>
+
+
+	<a name="Listening-to-a-Satellites-for-30-Dollars"></a>
+<h2 ><a href="http://blog.nobugware.com/post/2015/listening_to_satellites_for_30_dollars/" class="external">Listening to a Satellites for 30 Dollars</a><a href="#Listening-to-a-Satellites-for-30-Dollars" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Basic instructions for receiving 1990s era weather satellite data.  Utilizes SDR USB dongle and free (mostly open source) software.  Lowest cost example that does not strictly require Yagi antenna (post does not spend much time discussing the antenna).  There is a PBI in Sprint 1 to attempt to reproduce the results of this post at one or more Mach 30 volunteer sites.</p>
+
+
+	<a name="KickSat-Ground-Station"></a>
+<h2 ><a href="https://github.com/kicksat/groundstation/wiki" class="external">KickSat Ground Station</a><a href="#KickSat-Ground-Station" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Hand-held Yagi + SDR based ground station for receiving telemetry from <a href="https://www.kickstarter.com/projects/zacinaction/kicksat-your-personal-spacecraft-in-space" class="external">KickSat sprites</a>.  This is an open source hardware project published on GitHub.</p>
+
+
+	<a name="How-to-Hear-the-ISS"></a>
+<h2 ><a href="http://amsat-uk.org/beginners/how-to-hear-the-iss/" class="external">How to Hear the ISS</a><a href="#How-to-Hear-the-ISS" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>AMSAT-UK blog post on using ham radio gear to listen to the ISS.  Discussion includes antenna selection (a <a href="https://en.wikipedia.org/wiki/Whip_antenna" class="external">1/4 wave whip antenna</a> and a <a href="http://www.hamuniverse.com/2metergp.html" class="external">1/4 wave ground plane</a>).  The post mentions 3 things you can listen for from the ISS.</p>
+
+
+	<ul>
+	<li>AX.25 packet repeater</li>
+		<li>Voice repeater</li>
+		<li>Receive Slow Scan Television (SSTV) pictures</li>
+	</ul>
+
+
+	<a name="Receiving-Slow-Scan-TV-Images-from-the-International-Space-Station"></a>
+<h2 ><a href="http://www.jpole-antenna.com/2015/02/25/receiving-slow-scan-tv-images-from-the-international-space-station/" class="external">Receiving Slow Scan TV Images from the International Space Station</a><a href="#Receiving-Slow-Scan-TV-Images-from-the-International-Space-Station" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>YouTube video/blog post about using ham radio gear to receive and decode an SSTV picture from the ISS.  As with earlier posts, this operator recommends lower gain antennas for these applications (mostly for omni-directional qualities).  Post includes specific antenna recommendations and includes an example pass of the ISS.  Check it out:</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/UGK32xwFpjo?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/UGK32xwFpjo?rel=1&amp;fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+
+
+	<p>Need to see if anyone is doing this with SDRs.</p>
+
+
+	<a name="Listening-to-Satellites-on-a-Handheld-Scanner"></a>
+<h2 ><a href="http://www.instructables.com/id/Listening-to-Satellites-on-a-Handheld-Scanner/?ALLSTEPS" class="external">Listening to Satellites on a Handheld Scanner</a><a href="#Listening-to-Satellites-on-a-Handheld-Scanner" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Less instructions and more background.  The antenna section is particularly interesting.</p>
+
+
+	<a name="RTL-SDR-Blog-Posts-About-Using-RTL2832U-to-Receive-ISS-Signals"></a>
+<h2 ><a href="http://www.rtl-sdr.com/tag/international-space-station/" class="external">RTL-SDR Blog Posts About Using RTL2832U to Receive ISS Signals</a><a href="#RTL-SDR-Blog-Posts-About-Using-RTL2832U-to-Receive-ISS-Signals" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Tag search for ISS posts on RTL-SDR blog.  Lots of good posts linking to YouTube videos and other blog posts.  This is a goldmine of info and a potential resource to share our work with.  What I don't see here is someone having kit'ified the concept for easy replication by others.</p>
+
+
+	<a name="Example-Video-of-Using-an-SDR-to-Receive-Signals-from-the-ISS"></a>
+<h2 >Example Video of Using an SDR to Receive Signals from the ISS<a href="#Example-Video-of-Using-an-SDR-to-Receive-Signals-from-the-ISS" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>There is a lot of static and then around half way through the video there are a series of very clear beeps.  According to the description, the operator also decoded data on the downlink.  Not a lot of detail here, but it is a nice example of what one might actually expect to experience during operations.</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/k6ounmCsHD8?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/k6ounmCsHD8?rel=1&amp;fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+</body>
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Similar_Projects.html?version=8 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:15 GMT -->
+</html>

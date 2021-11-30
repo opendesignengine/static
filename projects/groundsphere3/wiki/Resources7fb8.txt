@@ -1,0 +1,9 @@
+h1. Resources
+
+h2. Link Budget References
+
+* "KickSat Ground Station Link Budget":https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx (MS Excel)
+
+h2. ISS SSTV Links
+
+* "SSTV activity being planned for late Dec. 2015 (Now Jan.)":http://ariss-sstv.blogspot.com/2015/12/sstv-activity-being-planned-for-late.html - March and April 2016 are the new target dates

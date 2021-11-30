@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Software Set Up - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../holoseat%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Holoseat"></a>
+<h2 >Holoseat<a href="Software_Set_Up%3Fversion=11.html#Holoseat" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/holoseat/repository/entry/trunk/LICENSE.txt" class="external">LICENSE.txt</a></li>
+		<li><a href="Wiki.html" class="wiki-page">Home</a></li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Versions" class="wiki-page">Versions</a>
+	<ul>
+	<li><a href="Versioning_Scheme.html" class="wiki-page">Versioning Scheme</a></li>
+	</ul>
+	</li>
+		<li><ins>Agile Process Docs</ins><br /><em>See <strong><a href="https://opendesignengine.net/projects/holoseat/news" class="external">News</a></strong> feed for weekly status reports</em>
+	<ul>
+	<li><strong><ins>PY 2018</ins></strong><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external">Sprints</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRCZuJwnYll_TmSo-xetofzjQEt3Z7iNpluPzayWbqm2HfYWLipouTmh1opgfWy-x-3OGeM2Cf1irWh/pubhtml" class="external">Alpha Test Program Prep User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlnq6BIMuJN-t3uKjflf_q9u3dXzvch0zEVz9O3335_fPiGyPcJxaRJ8IHz4ErCTIw7QrtPh5d_b50/pubhtml" class="external">Run Alpha Test User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyBqnWyXACEEoG5dThw5szRkVltrdHNvFpyaPqF1sNXHrS_fG1w1g861yqTjjyoL1b9xP2xUtNsFz3/pubhtml" class="external">Finalize v1.0 Design User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-DTjsHW_DTbR0hbIvS1Gl_9ItytNimWamw5wmEJ-8K44NpYyw0eQ4GM91nVI-ZRs2-BbQr-S9EA6Z/pubhtml" class="external">Social Media Engagement User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAt6mXMp1lwvffT9mNiNCXENC3wI47ofl_sATVjadmkgGnJroKbMCChzkZctD-wlNnsREUa0c0YqA-/pubhtml" class="external">Prep Initial Crowdsource Campaign User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQWsqkwJTsFScDjahnQ6AhIpC5Qk-BMsfurWkfxy7SmtSotXtgSvEgCC6uB2d_Hch9PUc41MRd4cwm2/pubhtml" class="external">SyndCon 2018 Prep User Stories</a></li>
+		<li><strong><ins>2017</ins></strong><br /><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/spreadsheets/d/1j_eza96PgV3tMuTy_fypZ4SuCLWP2jLKIEG1HgXg5LA/pubhtml" class="external">Development User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1Q1mnwN-Um-nn47k3GF9SzAEblP1sw7Lwtpq4snxCEXk/pubhtml" class="external">SyndCon User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1GGMKfctxfgl5Ath5ld7SL3lvXx7fN759DRMKXVEJSR4/pubhtml" class="external">Biz User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1UKTSqLvZyH9EIJBt7YSVZoF8krdZYmHjoK1yx6pesQs/pubhtml" class="external">Crowd Source User Stories</a></li>
+		<li><strong><ins>2016</ins></strong> <br /><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTnBFoFpZA4rAainOlzv4E7-PW3-BwjTg9SP0iXHz1XZUCjVF_4WYIWttJyHtO5EhO24pYazn8sL7Jh/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/document/d/e/2PACX-1vSVLmaORZab4QV0ZSy5OUl6lSPx2lNc3gud5nB6WSxNrrxkMu7Kz5zObKeKnP8pw7eghYJY3h_xs99L/pub" class="external">User Stories</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Instructions"></a>
+<h4 >Instructions<a href="Software_Set_Up%3Fversion=11.html#Instructions" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="User's_Guide.html" class="wiki-page">User&#x27;s Guide</a>
+	<ul>
+	<li><a href="First_Time_Setup.html" class="wiki-page">First Time Setup</a></li>
+		<li><a href="Operating_Instructions.html" class="wiki-page">Operating Instructions</a></li>
+		<li><a href="Alpha_Patches.html" class="wiki-page">Alpha Patches</a></li>
+	</ul>
+	</li>
+		<li><ins>Assembly Information</ins>
+	<ul>
+	<li><a href="BOM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a>
+	<ul>
+	<li><a href="Controller_Assembly.html" class="wiki-page">Controller Assembly</a></li>
+		<li><a href="Sensor_Assembly.html" class="wiki-page">Sensor Assembly</a></li>
+		<li><a href="Snap_Fit_Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Half Assembly</a><br /><a href="Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Assembly</a> (deprecated)</li>
+		<li><a href="Final_Assembly.html" class="wiki-page">Final Assembly</a></li>
+	</ul>
+	</li>
+		<li><a href="Software_Set_Up.html" class="wiki-page">Software Set Up</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Design-Data"></a>
+<h4 >Design Data<a href="Software_Set_Up%3Fversion=11.html#Design-Data" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="http://pid.codes/1209/B058/" title="via pid.codes" class="external">USB PID</a>
+	<ul>
+	<li>VID: 0x1209</li>
+		<li>PID: 0xB058</li>
+	</ul>
+	</li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Project Software</a>
+	<ul>
+	<li><a href="HSP.html" class="wiki-page">Holoseat Serial Protocol</a> <br />(<a href="https://opendesignengine.net/projects/holoseat/wiki/HSP?version=26" class="external">Legacy REST Implementation</a>)</li>
+		<li><a href="HSP_Over_REST_API.html" class="wiki-page">HSP Over REST API</a> </li>
+	</ul>
+	</li>
+		<li><a href="Vendor_Documentation.html" class="wiki-page">Vendor Documentation</a></li>
+	</ul>
+
+
+	<a name="Dev-Team-Links"></a>
+<h4 >Dev Team Links<a href="Software_Set_Up%3Fversion=11.html#Dev-Team-Links" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Dev_Team_On_Boarding" class="wiki-page new">Dev Team On Boarding</a> (outline)</li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/CHIP_Setup_Instructions" class="wiki-page new">C.H.I.P. Setup Instructions</a></li>
+	</ul>
+
+
+	<a name="Research"></a>
+<h4 >Research<a href="Software_Set_Up%3Fversion=11.html#Research" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Resources.html" class="wiki-page">General Resources</a></li>
+		<li><ins>Technical Resources</ins>
+	<ul>
+	<li><a href="General_Technical_Resources.html" class="wiki-page">General</a></li>
+		<li><a href="ME_Resources.html" class="wiki-page">Mech Eng Resources</a></li>
+		<li><a href="Arduino_Resources.html" class="wiki-page">Arduino Resources</a></li>
+		<li><a href="Bluetooth.html" class="wiki-page">Bluetooth</a></li>
+		<li><a href="HID.html" class="wiki-page">HID</a></li>
+		<li><del><a href="NodeBots_Resources.html" class="wiki-page">NodeBots Resources</a></del></li>
+		<li><del><a href="Raspbery_Pi_Resources.html" class="wiki-page">Raspbery Pi Resources</a></del></li>
+		<li><a href="Python_Resources.html" class="wiki-page">Python Resources</a></li>
+		<li><a href="CHIP_Resources.html" class="wiki-page">C.H.I.P. Resources</a></li>
+	</ul>
+	</li>
+		<li><ins>Biz Resources</ins>
+	<ul>
+	<li><a href="Marketing_Resources.html" class="wiki-page">Marketing Resources</a></li>
+		<li><a href="Start_Up_Resources.html" class="wiki-page">Start Up Resources</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Edit-Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Edit Navigation</a><a href="Software_Set_Up%3Fversion=11.html#Edit-Navigation" class="wiki-anchor">&para;</a></h3>
+
+<h3>Wiki</h3>
+
+<a href="../../holoseat%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-327-watcher"></span>
+
+
+
+
+
+
+<a href="Software_Set_Up/history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+
+    <p>
+    <a href="Software_Set_Up%3Fversion=10.html">« Previous</a> - 
+    Version 11/20
+    (<a href="http://opendesignengine.net/projects/holoseat/wiki/Software_Set_Up/diff/11">diff</a>) - 
+    <a href="Software_Set_Up%3Fversion=12.html">Next »</a> - 
+    <a href="Software_Set_Up.html">Current version</a>
+    <br />
+    <em><a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a>, 12/12/2016 08:20 pm </em><br />
+    
+    </p>
+    <hr />
+
+
+<div class="wiki">
+  <a name="Software-Set-Up"></a>
+<h1 >Software Set Up<a href="Software_Set_Up%3Fversion=11.html#Software-Set-Up" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="Software_Set_Up%3Fversion=11.html#Software-Set-Up">Software Set Up</a><ul><li><a href="Software_Set_Up%3Fversion=11.html#Introduction">Introduction</a></li><li><a href="Software_Set_Up%3Fversion=11.html#1-Download-required-Software">1. Download required Software</a></li><li><a href="Software_Set_Up%3Fversion=11.html#2-Install-Arduino-IDE">2. Install Arduino IDE</a></li><li><a href="Software_Set_Up%3Fversion=11.html#3-Install-Firmware-on-Holoseat-Controller">3. Install Firmware on Holoseat Controller</a></li><li><a href="Software_Set_Up%3Fversion=11.html#4-Install-Desktop-Configuration-App">4. Install Desktop Configuration App</a></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h2 >Introduction<a href="Software_Set_Up%3Fversion=11.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>These instructions cover the software set up of a newly built Holoseat controllerThere are three pieces of software required to configure and use the Holoseat: the Arduino IDE, the Holoseat controller firmware, and the desktop configuration app.  The setup is presented in the following four major steps.</p>
+
+
+	<p>Note, these steps are for Windows (tested on Windows 7).  The process is similar on other platforms, but the desktop configuration app only runs on Windows for v0.3.  Future versions will support other platforms.</p>
+
+
+	<a name="1-Download-required-Software"></a>
+<h2 >1. Download required Software<a href="Software_Set_Up%3Fversion=11.html#1-Download-required-Software" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Download the following files
+	<ol>
+	<li><a href="https://www.arduino.cc/en/Main/Software" class="external">Arduino IDE</a> (v1.6.4+)</li>
+		<li><a href="https://github.com/adafruit/Adafruit_Windows_Drivers/releases/download/1.0.0.0/adafruit_drivers.exe" class="external">Adafruit Windows Drivers</a></li>
+		<li>Firmware source code - link to DMSF to be created as soon as we tag v0.3 in svn</li>
+		<li>Desktop configuration app executable - link to DMSF to be created as soon as we tag v0.3 in svn</li>
+	</ol>
+	</li>
+		<li>Unzip Holoseat files (see figure)
+	<ol>
+	<li>Create a new folder under Documents\ named Holoseat</li>
+		<li>Unzip the firmware source code to Documents\Holoseat</li>
+		<li>Unzip the desktop configuration app to Documents\Holoseat</li>
+	</ol></li>
+	</ol>
+
+
+	<p><img src="../../../attachments/download/621" alt="" /></p>
+
+
+	<a name="2-Install-Arduino-IDE"></a>
+<h2 >2. Install Arduino IDE<a href="Software_Set_Up%3Fversion=11.html#2-Install-Arduino-IDE" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Run the Arduino IDE installer</li>
+		<li>Configure the Arduino IDE to work with the Feather board<br />Complete details are available at learn.adafruit.com: <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/arduino-1-dot-6-x-ide" class="external">General details</a> | <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide" class="external">Feather specific details</a>
+	<ol>
+	<li>Launch the Arduino IDE </li>
+		<li>Open the Arduino IDE Preferences by selecting File>Preferences from the menu</li>
+		<li>Add <code>https://adafruit.github.io/arduino-board-index/package_adafruit_index.json</code> to the <strong>Additional Boards Manager URLs</strong> field</li>
+		<li>Click the <strong>OK</strong> button to save the new preferences</li>
+		<li>Launch the Boards Manager by selecting <strong>Tools>Board>Board Manager</strong> from the menu</li>
+		<li>Select <em>Contributed</em> from the <strong>Type</strong> select box</li>
+		<li>Select <em>Adafruit AVR Boards by Adafruit</em> in the list of contributed boards then click the <strong>Install</strong> button</li>
+		<li>Click the <strong>Close</strong> button, then exit out of the Arduino IDE (you may optionally relaunch the Arduino IDE and verify the list of boards under Tools>Board includes the Adafruit Feather)</li>
+		<li><strong>ON WINDOWS ONLY</strong> Install the Windows Adafruit Drivers (optional: only select the <em>Feather 32u4</em> to minimize the number of drivers installed)<br /><img src="../../../attachments/download/615" alt="" /></li>
+	</ol>
+	</li>
+		<li>Set the Arduino libraries path to point at the Holoseat libs directory
+	<ol>
+	<li>Launch the Arduino IDE</li>
+		<li>Open the Arduino IDE Preferences by selecting File>Preferences from the menu</li>
+		<li>Note the Sketchbook location (typically Documents\Arduino)</li>
+		<li>Close the Arduino IDE Preferences and exit the Arduino IDE</li>
+		<li>Copy Documents\Holoseat\Firmware\libs\Bounce2 to the libraries folder in the sketchbook folder (typically Documents\Arduino\libraries)<br /><img src="../../../attachments/download/616" alt="" /></li>
+	</ol></li>
+	</ol>
+
+
+	<a name="3-Install-Firmware-on-Holoseat-Controller"></a>
+<h2 >3. Install Firmware on Holoseat Controller<a href="Software_Set_Up%3Fversion=11.html#3-Install-Firmware-on-Holoseat-Controller" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Launch the Arduino IDE</li>
+		<li>Plug the Holoseat controller into a USB port</li>
+		<li>Set the board type to <em>Adafruit Feather 32u4</em> by selecting Tools>Board>Adafruit Feather 32u4 in the menu</li>
+		<li>Set the port the Feather is connected to by selecting Tools>Port>COM# (Adafruit Feather 32u4) in the menu where # is an integer (see figure)<br /><img src="../../../attachments/download/617" alt="" /></li>
+		<li>Open the Holoseat firmware in the Arduino by selecting File>Open and navigating to Documents\Holoseat\Firmware\holoseat_firmware\holoseat_firmware.ino</li>
+		<li>Confirm the firmware compiles by clicking the <strong>Verify</strong> button (with the check mark icon)</li>
+		<li>Flash the Holoseat controller with the firmware by clicking the <strong>Upload</strong> button (with the right facing arrow icon)</li>
+	</ol>
+
+
+	<a name="4-Install-Desktop-Configuration-App"></a>
+<h2 >4. Install Desktop Configuration App<a href="Software_Set_Up%3Fversion=11.html#4-Install-Desktop-Configuration-App" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>unzip archive to &lt;insert path here&gt;</p>
+</div>
+
+
+<div class="attachments">
+
+<p><a href="../../../attachments/615/InstallFeatherDriver.png" class="icon icon-attachment">InstallFeatherDriver.png</a>
+  <span class="size">(42.5 kB)</span>
+  
+  
+    <span class="author">J. Simmons, 12/12/2016 06:56 pm</span>
+  
+  </p>
+
+<p><a href="../../../attachments/616/LibrariesFolder.png" class="icon icon-attachment">LibrariesFolder.png</a>
+  <span class="size">(78.8 kB)</span>
+  
+  
+    <span class="author">J. Simmons, 12/12/2016 07:05 pm</span>
+  
+  </p>
+
+<p><a href="../../../attachments/617/SelectComPort.png" class="icon icon-attachment">SelectComPort.png</a>
+  <span class="size">(48.8 kB)</span>
+  
+  
+    <span class="author">J. Simmons, 12/12/2016 08:16 pm</span>
+  
+  </p>
+
+<p><a href="../../../attachments/621/HoloseatDir.png" class="icon icon-attachment">HoloseatDir.png</a>
+  <span class="size">(75.1 kB)</span>
+  
+  
+    <span class="author">J. Simmons, 12/22/2016 01:01 pm</span>
+  
+  </p>
+
+</div>
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/Software_Set_Up.html?version=11" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/Software_Set_Up.txt?version=11" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/Software_Set_Up.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

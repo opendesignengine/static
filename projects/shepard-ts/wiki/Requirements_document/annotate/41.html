@@ -1,0 +1,933 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../../../favicon.ico%3F1359925685' />
+<link href="../../../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+<link href="../../../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-annotate">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../../../index.html" class="home">Home</a></li>
+<li><a href="../../../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../../../search/index/shepard-ts.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../../shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../activity.html" class="activity">Activity</a></li>
+<li><a href="../../../roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../issues.html" class="issues">Issues</a></li>
+<li><a href="../../../issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../news.html" class="news">News</a></li>
+<li><a href="../../../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../../../boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<a href="http://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document/edit" class="icon icon-edit">Edit</a>
+<a href="../history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+<h2>Requirements document</h2>
+
+<p>
+Version <a href="http://opendesignengine.net/wiki/show/Requirements_document?version=41">41</a>
+<em>(Jeremy Wright, 07/08/2013 02:13 pm)</em>
+</p>
+
+
+
+<table class="filecontent annotate">
+<tbody>
+
+<tr class="bloc-0">
+    <th class="line-num">1</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=30.html">30</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>h1. Shepard Test Stand Requirements Document v1.1</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">2</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=1.html">1</a></td>
+    <td class="author">Greg Moran</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">3</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>{{toc}}</pre></td>
+</tr>
+
+<tr class="bloc-3">
+    <th class="line-num">4</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=22.html">22</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-4">
+    <th class="line-num">5</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=20.html">20</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>This is a newer document based on &quot;this one&quot;:https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0 , and you should refer to that original version if you want to see the revision history.</pre></td>
+</tr>
+
+<tr class="bloc-4">
+    <th class="line-num">6</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=20.html">20</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">7</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>h3. Introduction</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">8</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=1.html">1</a></td>
+    <td class="author">Greg Moran</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-5">
+    <th class="line-num">9</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=37.html">37</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>The requirements list matches up to the &quot;Initial Questions&quot;:https://opendesignengine.net/projects/shepard-ts/wiki/Initial_Questions in step one of the Systems Engineering process as shown below. Each requirement is labeled with STSR (Shepard Test Stand Requirement), followed by the number of the initial question that the requirement corresponds to, followed by a dot and then the ID number of the requirement.</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">10</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=1.html">1</a></td>
+    <td class="author">Greg Moran</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">11</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 1.x* - Why are we making this?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">12</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 2.x* - Who is this for?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">13</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 3.x* - How will this be used?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">14</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.x* - What features does it need to have (now)?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">15</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.x* - What features does it need to have (later)?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">16</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 6.x* - What are the legacy requirements?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">17</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 7.x* - Who&#x27;s going to build this?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">18</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 8.x* - How many do we want to make?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">19</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 9.x* - What is the budget?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">20</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 10.x* - What is the timeline?</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">21</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 11.x* - What waste products will be produced by the manufacture and/or operation of this?</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">22</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=1.html">1</a></td>
+    <td class="author">Greg Moran</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">23</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=1.html">1</a></td>
+    <td class="author">Greg Moran</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">24</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>h3. Technical Requirements</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">25</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">26</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>Technical requirements are those requirements which include measurable performance values.  Each technical requirement should be verified through testing to ensure the design meets the requirement.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">27</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">28</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 1.1* The STS must accommodate low power, commercially available amateur rocket motors sized A through E.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">29</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 1.2* The STS must be mobile enough to enable live demonstrations as part of educational and outreach activities.</pre></td>
+</tr>
+
+<tr class="bloc-6">
+    <th class="line-num">30</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=38.html">38</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 1.2.1* The STS total weight shall be less than 25 pounds (11.3 Kg), or be able to break into components that weigh no more than 25 pounds (11.3 Kg) each (based on OSHA recommendations).</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">31</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 1.2.2* The STS must be transportable by 1 person.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">32</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-7">
+    <th class="line-num">33</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=23.html">23</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 3.1* The design and operation of the STS shall be conducted in compliance with &quot;The National Association of Rocketry (NAR) Standards &amp; Testing Committee Motor Testing Manual, Version 1.5, Effective Date: July 1, 2011&quot;:http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf, henceforth referred to as the &quot;NAR testing manual&quot;. </pre></td>
+</tr>
+
+<tr class="bloc-8">
+    <th class="line-num">34</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=27.html">27</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 3.2* The STS must be useful for the verification of Estes thrust vs time &quot;motor performance data&quot;:http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf and to acquire casing temperature vs time data.</pre></td>
+</tr>
+
+<tr class="bloc-9">
+    <th class="line-num">35</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=39.html">39</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 3.2.1* The STS must be able to record motor thrust vs time data for Estes motors and transport that data to an attached computer.</pre></td>
+</tr>
+
+<tr class="bloc-9">
+    <th class="line-num">36</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=39.html">39</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 3.2.2* The STS must be able to record motor casing temperature vs time data at the nozzle throat of Estes motors and transport that data to an attached computer.</pre></td>
+</tr>
+
+<tr class="bloc-10">
+    <th class="line-num">37</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=31.html">31</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>*** *STSR 3.2.2.1* The STS must be able to record the peak temperature at the nozzle throat of Estes motors during a test run. </pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">38</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">39</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.1* The STS shall be easily set up and torn down for demonstration purposes.</pre></td>
+</tr>
+
+<tr class="bloc-7">
+    <th class="line-num">40</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=23.html">23</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.1.1* Unpack and set up time should be less than 45 min.</pre></td>
+</tr>
+
+<tr class="bloc-7">
+    <th class="line-num">41</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=23.html">23</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.1.2* Clean up and storage time should be less than 90 min.</pre></td>
+</tr>
+
+<tr class="bloc-7">
+    <th class="line-num">42</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=23.html">23</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.2* The STS shall be easy to package for shipment to any event at which it will be used, meaning the whole test stand system shall fit in the backseat or trunk of a standard 4-door sedan.</pre></td>
+</tr>
+
+<tr class="bloc-7">
+    <th class="line-num">43</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=23.html">23</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.4* The STS shall be capable of a data acquisition sample rate of no less than 250 samples per second when sampling both the thrust and casing temperature values, with a goal of 400 samples per second.</pre></td>
+</tr>
+
+<tr class="bloc-7">
+    <th class="line-num">44</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=23.html">23</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.5* Force sensor requirements</pre></td>
+</tr>
+
+<tr class="bloc-11">
+    <th class="line-num">45</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=40.html">40</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.5.1* It must be possible to calibrate the load cell with a &quot;NIST traceable weight standard such as an Instron&quot;. &quot;1&quot;:http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">46</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=41.html">41</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.5.2* IAW NAR testing manual requirements specified in Section 8.5, the STS shall use a data collection system &quot;where the least significant bit (LSB) has a value that is&quot; 0.006 lbs (&quot;less than 0.33% percent of the average thrust of the motor under test&quot;).</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">47</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=41.html">41</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.5.3* The force sensor shall have a measurement range of no less than 33 Newtons.</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">48</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=34.html">34</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.6* Temperature sensor requirements</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">49</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=34.html">34</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.6.1* IAW NAR testing manual requirements specified in Section 8.6, the STS shall use temperature sensors with &quot;a readout system still be accurate to 10 degrees C&quot; &quot;1&quot;:http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">50</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=34.html">34</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.6.2* IAW NAR testing manual requirements specified in Section 8.6, the STS shall use temperature sensors with a response of &quot;5 seconds or less&quot; &quot;1&quot;:http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">51</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=34.html">34</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.6.3* IAW (partial) NAR testing manual requirements specified in Section 8.6, a temperature sensor will be attached to the motor under test &quot;where the propellant and nozzle meet&quot; (the &quot;throat&quot; in Mach 30 parlance). &quot;1&quot;:http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf Full compliance with this requirement has been moved to the future requirements section below.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">52</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.7* IAW NAR testing manual requirements specified in Section 8.5, the STS shall &quot;store the collected data into a general use data formats [sic], such as a .txt, .csv&quot; &quot;1&quot;:http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">53</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=24.html">24</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.8* The data collection system must have a threshold (minimum) of 1 ADC (Analog to Digital Converter) channel for the force sensor.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">54</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">55</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 6.1* Any desktop computer based control software for the STS should run on all three major PC platforms (MS Windows, Mac OS X, and Linux).</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">56</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 6.2* The STS must use standard connections to the computer running the control software (for example, USB, Ethernet, or similar connections).</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">57</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">58</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>h3. Project Requirements</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">59</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">60</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>Project requirements are the remaining requirements which are not tied to specific performance values.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">61</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">62</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 2.1* The STS must be well documented so as to meet the needs of open source spaceflight designers who will design and build future test stands (at Mach 30 and elsewhere).</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">63</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 2.2* The STS documentation and procedures must be complete enough that Mach 30 operators, students and educators who want to bring rocket engineering into the classroom, and anyone else interested in how rockets are tested can learn how to use it.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">64</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 2.3* The STS documentation must cover the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">65</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">66</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 3.4* The STS shall be operated IAW the safety procedures which are outlined in Section 8 of the NAR testing manual.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">67</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">68</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 4.3* The STS shall provide a fixed base on which to test model rocket motors.  </pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">69</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.3.1* The test stand will remain stationary during motor firings.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">70</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 4.3.2* The test stand components will not experience undo vibration during motor firings. </pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">71</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">72</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 7.1* All STS design documentation must be open and complete enough so that ANYONE, without necessarily a technical education in rocketry, propulsion, or engineering, would be able to build and operate the test stand.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">73</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">74</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 8.1* The design of the STS must enable the completion of at least one operational test stand.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">75</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 8.2* Whenever and wherever possible, considerations should be made so that the design of this STS can be used as a kit in the future.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">76</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">77</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 9.1* The cost of the first operational STS must not exceed $200 excluding &quot;consumables&quot; and tools.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">78</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">79</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 10.1* If at all possible, the STS should be completed within 3 months of formal launch as an exercise in agile design.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">80</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">81</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 11.1* Disposal of the spent Estes motors should conform to all local, state, and federal guidelines.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">82</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 11.2* Electronic waste items, including batteries and circuit boards, must also be disposed of according to all local, state, and federal guidelines.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">83</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 11.3* If the frame of the STS is damaged beyond repair during operation, proper disposal/recycling guidelines must be followed for the materials used in its construction.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">84</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 11.4* Wherever possible, the STS design should make it as easy as possible to replace components which are consumable or relatively easy to damage.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">85</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-3">
+    <th class="line-num">86</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=25.html">25</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>h3. Future Requirements</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">87</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">88</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>These are for reference only so that future features can be accommodated in the current design where practical.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">89</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-4">
+    <th class="line-num">90</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=29.html">29</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.1* High and low speed video capture of test firings from multiple angles.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">91</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.2* Integrated ignition system so the test management software can control the entire test.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">92</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.3* Additional measurements including:</pre></td>
+</tr>
+
+<tr class="bloc-5">
+    <th class="line-num">93</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=35.html">35</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 5.3.1* The STS must meet the second part of the NAR testing manual requirement for casing temperature measurements and have a second temperature sensor &quot;3/4 of the way down the motor casing as measured from the nozzle end.&quot; &quot;1&quot;:http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf</pre></td>
+</tr>
+
+<tr class="bloc-6">
+    <th class="line-num">94</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=36.html">36</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>** *STSR 5.3.2* The STS must be able to record exhaust temperature vs time of Estes motors and transport that data to an attached computer.</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">95</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=1.html">1</a></td>
+    <td class="author">Greg Moran</td>
+    <td class="line-code"><pre>* *STSR 5.4* Higher resolution measurements.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">96</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-3">
+    <th class="line-num">97</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=25.html">25</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>The accommodation of:</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">98</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.5* High power commercial solid motors.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">99</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.6* Small hybrid motors (on the thrust scale of high power commercial solid motors).</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">100</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.7* Larger thrust hybrid motors.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">101</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.8* Small liquid engines.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">102</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.9* Medium liquid engines.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">103</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>* *STSR 5.10* Large liquid engines.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">104</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">105</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>h3. Glossary</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">106</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">107</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>ADC - Analog to Digital Converter</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">108</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>consumables - Items that are used and then discarded, i.e. rocket motors.</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">109</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>IAW - In Accordance With</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">110</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>LSB - Least Significant Bit</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">111</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>NAR - National Association of Rocketry</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">112</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>STS - Shepard Test Stand</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">113</th>
+    <td class="revision"><a href="../../Requirements_document%3Fversion=19.html">19</a></td>
+    <td class="author">Jeremy Wright</td>
+    <td class="line-code"><pre>STSR - Shepard Test Stand Requirement</pre></td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../../../terms_of_services/Requirements_document.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

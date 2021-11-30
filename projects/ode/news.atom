@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: News</title>
+  <link rel="self" href="http://opendesignengine.net/projects/ode/news.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/ode/news"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2012-12-02T14:34:46+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Public Beta is here!!!</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/27"/>
+    <id>http://opendesignengine.net/news/27</id>
+    <updated>2012-12-02T14:34:46+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;With the help of &lt;a href="http://www.discoded.com/" class="external"&gt;Kevin Bouwkamp&lt;/a&gt;, Bryan Christian, and &lt;a href="http://schoolfactory.org/" class="external"&gt;The School Factory&lt;/a&gt;, we have reached a critical milestone: The Public Beta of &lt;strong&gt;ODE&lt;/strong&gt;.  Self-registration for user accounts is now active, and we are ready for our next round of promotion of &lt;strong&gt;Open Design Engine&lt;/strong&gt;.  Please share the news on Twitter, Facebook, Google+, and your own personal blogs (be sure to link to &lt;a href="https://opendesignengine.net/news/27" class="external"&gt;&lt;strong&gt;this page&lt;/strong&gt;&lt;/a&gt;).  And, if you have not &lt;a href="https://opendesignengine.net/account/register" class="external"&gt;signed up&lt;/a&gt; for an account yet, please do so.  Then, &lt;a href="https://opendesignengine.net/projects/new" class="external"&gt;start a project&lt;/a&gt; on &lt;strong&gt;ODE&lt;/strong&gt; and document one of your &lt;a href="http://www.oshwa.org/definition/" class="external"&gt;Open Source Hardware&lt;/a&gt; projects (or document a new one from day one).&lt;/p&gt;
+
+
+	&lt;p&gt;And this is just the beginning.  We are actively improving the site.  For example, just this weekend Kevin completed the &lt;a href="https://opendesignengine.net/projects/ode/wiki/Features#Embed-Chipin-Badge" class="external"&gt;funding plugin&lt;/a&gt;, allowing users to insert Kickstarter badges and Paypal buttons into any field which supports wiki-syntax (this is in addition to earlier support developed by &lt;a href="http://littlelines.com/" class="external"&gt;Littlelines&lt;/a&gt; which enabled users to insert Pledgie and ChipIn badges).  Future plans include &lt;a href="https://opendesignengine.net/issues/51" class="external"&gt;adding support for integrated git repositories&lt;/a&gt; and &lt;a href="https://opendesignengine.net/versions/4" class="external"&gt;major improvements to the user interface&lt;/a&gt;.  As always, watch the &lt;a href="https://opendesignengine.net/projects/ode/roadmap" class="external"&gt;roadmap&lt;/a&gt; to keep up with our plans and progress.&lt;/p&gt;
+
+
+	&lt;p&gt;Thanks to all of our supporters, backers, and volunteers.  We are looking forward to growing &lt;strong&gt;Open Design Engine&lt;/strong&gt; into a great site for hosting open source hardware projects.  And remember, Makers, &lt;em&gt;document what you make&lt;/em&gt;.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Another step closer to the public beta</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/9"/>
+    <id>http://opendesignengine.net/news/9</id>
+    <updated>2012-06-24T15:44:36+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Today we migrated &lt;strong&gt;ODE&lt;/strong&gt; to its production server.  I am sure we will have a few bugs to work through over the next week or so, but this is a significant step in the path toward launching the public beta.  Thank you to School Factory and our volunteers who helped make this possible.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>ODE v0.2 - Public Beta development to start in November</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/4"/>
+    <id>http://opendesignengine.net/news/4</id>
+    <updated>2011-10-28T14:15:18+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Our &lt;a href="http://www.kickstarter.com/projects/373493158/open-hardware-needs-a-sourceforge-of-its-own" class="external"&gt;KickStarter campaign&lt;/a&gt;" was a success.  We received $6237 in pledges from 166 backers, and heard many great ideas for future development.  Thank you to everyone who backed us, shared the KickStarter link, and participated in the many discussions on and off line.  We have already been in contact with our developers at Littlelines, and we will begin development on &lt;a href="http://opendesignengine.net/versions/2" class="version"&gt;v0.2 - Public Beta&lt;/a&gt; in November.  Keep an eye out here and on the &lt;a href="http://www.kickstarter.com/projects/373493158/open-hardware-needs-a-sourceforge-of-its-own/posts" class="external"&gt;KickStarter Updates Page&lt;/a&gt; for more news.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Working toward v0.1 - Private Alpha</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/2"/>
+    <id>http://opendesignengine.net/news/2</id>
+    <updated>2011-09-22T17:34:09+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;As can be seen by the lack of recent updates, progress ground to a halt over the summer.  My other Mach 30 commitments and my PhD research pretty much meant there was no time for working on ODE.  Not to mention, my formal training is in rocket science not web development, so when I did get time to work on ODE, it was slow going.  But I am here to tell you we have started work again in earnest.&lt;/p&gt;
+
+
+	&lt;p&gt;Starting this September, Mach 30 has been partnering with our first ODE sponsor, &lt;a href="http://littlelines.com/" class="external"&gt;Littlelines&lt;/a&gt;.  They are a Ruby on Rails development shop here in Dayton, OH, and they are going to be the developers for ODE.  As a sponsor, they are graciously giving Mach 30 a discounted rate on their work.  Many thanks to Littlelines.&lt;/p&gt;
+
+
+	&lt;p&gt;With a developer in hand, we are now working to get ODE up and running, starting with v0.1, the private alpha, and looking toward v0.2, the public beta.  If you take a look at the &lt;a href="http://opendesignengine.net/versions/1" class="version"&gt;v0.1 - Private Alpha&lt;/a&gt; specs, you can see we are moving ahead quite well.  We only need a few more plugins installed and configured to be able to call this first release complete.  We also managed to get a head start on &lt;a href="http://opendesignengine.net/versions/2" class="version"&gt;v0.2 - Public Beta&lt;/a&gt;.&lt;/p&gt;
+
+
+	&lt;p&gt;Speaking of the next version, we are also launching a &lt;a href="http://www.kickstarter.com/projects/373493158/open-hardware-needs-a-sourceforge-of-its-own" class="external"&gt;KickStarter&lt;/a&gt; to raise the funds for development.  If you give $25 or more, we will give you an early access account on the private alpha so you can host your projects today, and help provide valuable feedback.  So, please donate $25 today and help us spread the word about the urgent need to publish open source hardware designs and the role Open Design Engine can play in filling that need.&lt;/p&gt;
+
+
+	&lt;a name="Click-Here-to-Kickstart-ODE-and-start-documenting-your-own-Open-Source-Hardware"&gt;&lt;/a&gt;
+&lt;h2 &gt;&lt;a href="http://www.kickstarter.com/projects/373493158/open-hardware-needs-a-sourceforge-of-its-own" class="external"&gt;Click Here to Kickstart ODE and start documenting your own Open Source Hardware!&lt;/a&gt;&lt;a href="#Click-Here-to-Kickstart-ODE-and-start-documenting-your-own-Open-Source-Hardware" class="wiki-anchor"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;    </content>
+  </entry>
+  <entry>
+    <title>Progress Report and Schedule Updates</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/1"/>
+    <id>http://opendesignengine.net/news/1</id>
+    <updated>2011-05-12T14:58:15+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;When the Mach 30 Board decided to &lt;a href="http://mach30.org/files/plans/2011/OS2HW_Bus_Route.pdf" class="external"&gt;move forward with implementing ODE in Redmine&lt;/a&gt; at its &lt;a href="http://mach30.org/pub/strategic-plans/2011" class="external"&gt;2011 Planning Meetings&lt;/a&gt;, I laid out a release schedule based on a series of design discussions inside and outside of Mach 30.  This schedule aimed to quickly release v0.1 based on entirely existing code from the Redmine community, so I assumed I could get it up and running in just a few days.  I failed to account for the time it would take to get up to speed with the tools I am using (take a look at the &lt;a href="http://opendesignengine.net/projects/ode/wiki/Installation_Instructions" class="wiki-page"&gt;Installation Instructions&lt;/a&gt; to see the challenges faced in standing up Redmine with svn, etc), and so naturally we are a little behind in the schedule.  The original due date for v0.1 was May 1, 2011.  As I write this, I am 11 days late and counting.  To add insult to injury, my workload outside Mach 30 has shot up dramatically in recent weeks, severely limiting my available hours to work on ODE.  Finally, v0.2, due at the end of June was even more ambitious, including a number of custom plugins for Redmine and a UI facelift.  Given the progress on v0.1, there is no way v0.2 will be released on time.&lt;/p&gt;
+
+
+	&lt;p&gt;Clearly it is time for a new plan.  First, I will be moving the due date for v0.1 out to May 31, 2011.  Given the extra time, I also want to move Issue &lt;a href="http://opendesignengine.net/issues/31" class="issue status-5 priority-4 closed" title="Install SSL support to live ODE server (Closed)"&gt;#31&lt;/a&gt;, which is one of the more pressing security issues, up from v0.2 to v0.1 (we'll have to see if this was a good idea or not as time progresses).  I am also going to limit the scope of v0.2 to just the minimum number of new features (for example, I think it must include Feature &lt;a href="http://opendesignengine.net/issues/11" class="issue status-3 priority-2 closed" title="Add Terms of Service and Privacy Policy to account creation (Resolved)"&gt;#11&lt;/a&gt; and Feature &lt;a href="http://opendesignengine.net/issues/12" class="issue status-5 priority-2 closed" title="Require all projects to have Open Source licenses (Closed)"&gt;#12&lt;/a&gt;, but most of the others can probably wait).  Finally, I will setup quarterly releases through the end of the year, each of which will focus on only one or two core features.  Stay tuned for more updates.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;em&gt;ad astra per civitas&lt;/em&gt;&lt;/p&gt;    </content>
+  </entry>
+</feed>

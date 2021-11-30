@@ -1,0 +1,25 @@
+Holoseat by Model B, LLC
+(c) 2017
+holoseat.com
+dev.holoseat.com
+
+v0.3.1 OSHWA Certified OSHW
+US000058
+
+
+Licenses
+--------
+Hardware: CERN Open Hardware License
+          http://www.ohwr.org/projects/cernohl/wiki
+
+Software: GNU General Public License, version 3.0
+          http://opensource.org/licenses/gpl-3.0.html
+
+Docs:     Creative Commons Attribution-ShareAlike
+          http://creativecommons.org/licenses/by-sa/3.0/
+
+Documentation
+-------------
+Wiki:     https://opendesignengine.net/projects/holoseat/wiki/
+v0.3.1:   https://opendesignengine.net/projects/holoseat/wiki/V0_3Documentation
+SVN:      https://opendesignengine.net/svn/holoseat/

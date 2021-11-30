@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ) - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-159-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-30.html" title="05/30/2012 03:32 am">over 10 years</a> ago</span></p>
+<div class="wiki">
+<p>As I mentioned in the mechanical discussion, this is the other major section in the block diagram. To get things rolling on this DAQ discussion I've posted all of the discussions with related content below. If I've missed any please post them here.</p>
+
+
+	<p>The <a href="https://opendesignengine.net/boards/4/topics/1" class="external">Resources discussion</a> (good idea to review this for ideas and materials)</p>
+
+
+	<p>The <a href="https://opendesignengine.net/boards/4/topics/14" class="external">Hardware compatibility discussion</a></p>
+
+
+	<p>The <a href="https://opendesignengine.net/boards/4/topics/4" class="external">Initial budget discussion</a></p>
+
+
+	<p>The <a href="https://opendesignengine.net/boards/4/topics/129" class="external">Block diagram discussion</a> (Ben mentions signal conditioning, and thermocouple connectors at the bottom)</p>
+
+
+	<p>And of course the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0" class="external">Requirements document</a> has to guide all of the decisions.</p>
+
+
+	<p>It's my understanding that the Arduino Uno has always been the favored DAQ base, so I guess that makes the load cell, thermocouple, and their signal conditioning systems the first major choices. I know that Ben has some thoughts on these items.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (10)</h3>
+
+  <div class="message reply" id="message-169">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=169.html#message-169">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-06-09.html" title="06/09/2012 04:57 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>This would probably end up being its own project if it's a good idea, but I wondered about turning at least part of the analysis and reduction software into a web service. We would still have an offline (lite) version of the software for when people are in the field, but the web service would allow them to upload their data to share with everyone else who's running a Shepard Test Stand. Maybe the web service could do a more in-depth job with analysis and charting?</p>
+
+
+	<p>That's just a thought that came to me. It would be nice to make it easy for all the Shepard users to share and compare their data. That would also be a good opportunity for <a href="http://mach30drawingboard.wikispaces.com/Mach+30+AdvancementSkills+Program+%28Gamification%29" class="external">gamification</a>.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-188">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=188.html#message-188">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-07-03.html" title="07/03/2012 11:54 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>for a tutorial on force sensing resistors see this link on the adafruit learning system: <br /><a class="external" href="http://learn.adafruit.com/force-sensitive-resistor-fsr">http://learn.adafruit.com/force-sensitive-resistor-fsr</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-190">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=190.html#message-190">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-07-29.html" title="07/29/2012 06:02 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've updated the DAQ's preliminary design info in the wiki.</p>
+
+
+	<p><a class="external" href="https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design_v1_0">https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design_v1_0</a></p>
+
+
+	<p>Down in the DAQ section (towards the bottom) you'll see a table with a cost estimate.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-209">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=209.html#message-209">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-19.html" title="08/19/2012 12:22 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've been able to get the Arduino to send data from the Force Sensing Resistor (FSR) to a laptop running a simple Processing app. The next step will be to go through the Adafruit tutorial to see what we need to do to make the FSR useful and to check hysteresis, etc.</p>
+
+
+	<p>This <a href="http://banananan.wordpress.com/2012/01/12/pressure-sensor-arduino-processing-signal-analysis/" class="external">link</a> , that's also in the wiki, shows the basics of getting this setup up and running.</p>
+
+
+	<p>For those like me running Linux (specifically Ubuntu or one of it's variants), the info in the "Ubuntu" section of <a href="http://mtm.cba.mit.edu/machines/mtm_snap-lock/build/software.html" class="external">this page</a> has information you'll need to get Processing set up to where it will communicate over a serial port. Swapping the RXTXcomm.jar files as shown was the only way I could get serial communications to work.</p>
+
+
+	<p>Lastly, I had some trouble getting the code checked in to Shepard's SVN repository, so I uploaded the files (1 Arduino and 1 Processing) to DMSF. You can find those files <a href="https://opendesignengine.net/dmsf/shepard-ts?folder_id=9" class="external">here</a> . These files need to be put in the repository soon, but I wanted to get the code out to other project members ASAP.</p>
+
+
+	<p><img src="../../../attachments/download/102" alt="" /><br />The Processing app on a laptop showing the raw voltage data as I applied force to the FSR.</p>
+
+
+	<p><img src="../../../attachments/download/104" alt="" /><br />The Arduino wiring that made the wavy line in the last image possible.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/102/Processing_App_Shepard_FSR_Test_08_19_12.png" class="icon icon-attachment">Processing_App_Shepard_FSR_Test_08_19_12.png</a>
+  <span class="size">(20 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/104/FSR_Arduino_Wiring.JPG" class="icon icon-attachment">FSR_Arduino_Wiring.JPG</a>
+  <span class="size">(95.8 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-210">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=210.html#message-210">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-23.html" title="08/23/2012 10:53 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>The following is a conversation that I started in Google+ discussing the Force Sensing Resistors (FSRs). I've copied it here so that we don't lose any documentation. Future comments on this post will be added here as well.</p>
+
+
+	<p>+Blaze Sanders - This tutorial on Force Sensing Resistors from Adafruit talks about FSRs being "a bad choice for detecting exactly how many pounds of weight are on them". The question that presents us with is how accurate and repeatable are they, and are we willing to accept that accuracy even if it means backing down on our original design requirements.   <a class="external" href="http://bit.ly/NJyX9d">http://bit.ly/NJyX9d</a></p>
+
+
+	<p>+J. Simmons - The force range of an FSR is spec'd assuming even weight distributed over the contact area. If I'm reading the tutorial right, the contact area would be everything inside of the black spacer layer that you can see as a border around the outside. You can see the same border on the FSR I'm currently testing. <a class="external" href="http://bit.ly/Q6Rn3J">http://bit.ly/Q6Rn3J</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-212">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=212.html#message-212">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-26.html" title="08/26/2012 04:57 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>For the data acquisition pricing sheet towards the bottom of the page <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design_v1_0" class="external">here</a> , I found a thermocouple at Adafruit that would work. The one that was on the sheet before was from SparkFun and was about $4.00 more expensive. I also included separate shipping for the thermocouple amplifier and the thermocouple, but since they are both shipped from Adafruit you can combine the shipping charges into one (their combined weight is below the weight for a rate jump).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-214">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=214.html#message-214">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-27.html" title="08/27/2012 10:28 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I found a note this morning that I wanted to capture here. I talked via phone with John from the NAR (National Association of Rocketry) Standards and Testing Group, and he said that he uses an <a href="http://www.analog.com/en/specialty-amplifiers/instrumentation-amplifiers/products/index.html#Instrumentation_Amplifiers" class="external">AD852x series instrumentation amplifier</a> with their load cells and adjusts the gain to "fill" the resolution of their ADC. The other option of course is just to get a higher resolution ADC.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-215">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=215.html#message-215">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-28.html" title="08/28/2012 09:03 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ok, my FSR testing code is now in the SVN repository for anyone who wants to experiment with it.</p>
+
+
+	<p><a class="external" href="https://opendesignengine.net/projects/shepard-ts/repository">https://opendesignengine.net/projects/shepard-ts/repository</a></p>
+
+
+	<p>I didn't worry too much about creating the proper directory structure at this point. When we get into writing the main application I'll set things up in a more standard way.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-219">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=219.html#message-219">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-01.html" title="09/01/2012 10:45 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here's info on our first integration test using the FSR (Force Sensing Resistor).</p>
+
+
+	<p><a class="external" href="https://opendesignengine.net/boards/4/topics/217?r=218">https://opendesignengine.net/boards/4/topics/217?r=218</a></p>
+
+
+	<p>Even though we're testing now, I feel like this is still covered under preliminary design since the thrust sensor isn't set in stone. If the FSR fails in areas of testing like repeatability we'll have to fall back to a more expensive load cell configuration.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-231">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="159%3Fr=231.html#message-231">RE: v1.0 - SEP Step 4 - Preliminary Design - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-11.html" title="09/11/2012 02:46 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>It looks like a mess, but it works. We now get thrust and temperature measurements. In the upper left corner of the picture you'll see an Arduino Proto Shield. I'm going to attempt to combine everything onto that so we'll have a clean implementation. Again, Radio Shack carries the Arduino and several shields/accessories now. That's where I got both the Arduino Uno and the Proto Shield.</p>
+
+
+	<p><img src="../../../attachments/download/130" alt="" /></p>
+
+
+	<p>There are two main flaws with the DAQ system right now. The second is due in large part to the first.</p>
+
+
+	<p>1. The sample rate of the Arduino-to-serial-to-PC system is slow. I'm not sure how slow exactly yet, but I don't see any way that we'll even meet the 500 samples per second design requirement. There may be some Arduino experts out there who could squeeze out more performance, but I don't think that the Arduino is going to be capable of 1000 samples per second for our setup. Switching to C for the programming language and using a data logger shield might be two options to help deal with this.</p>
+
+
+	<p>2. I'm cheating on the data's time stamp. I had problems getting a reliable stamp from the Arduino to the computer, so I'm using the time when the data comes across the serial line to the PC. Ideally of course we want the time stamp matched to the data on whatever is acquiring the data (the Arduino). It's possible that this issue can be resolved with some more work (and a data logger shield), but with the OHS deadline looming I'm going to call it "good enough" for now.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/130/Shepard_DAQ_Prototype.JPG" class="icon icon-attachment">Shepard_DAQ_Prototype.JPG</a>
+  <span class="size">(106.2 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+<p class="pagination"> (1-10/10)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/159.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+h1. Shepard Test Stand Preliminary Design v1.1
+
+{{toc}}
+
+This is a newer document based on "this one":https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design_v1_0 , and you should refer to that original version if you want to see the revision history.
+
+h3. Introduction
+
+The preliminary design discussion is broken down into two parts in the forums.
+
+# "Mechanical systems":https://opendesignengine.net/boards/4/topics/158
+# "Data Acquisition (DAQ) Systems":https://opendesignengine.net/boards/4/topics/159
+
+Most of this preliminary design work was done via Google+ Hangout. The meeting minutes from those hangouts will be distilled down into a form suitable for this document, but in the meantime you can find links to the raw meeting minutes below. You will most likely need to request permission to view the document.
+
+# "Mechanical Hangout Minutes":https://docs.google.com/document/d/1M5qMFE-SNDYR_yHCI5XGnKLK1Xq17f7NVWNOhb3XkyU/edit
+# "Data Acquisition Hangout Minutes":https://docs.google.com/document/d/1c4HOtpcp2yDxln5aTmMffk5PxDC5d3YM5UA53KJLoi0/edit
+
+A full list of all the meeting minutes pertaining to Shepard can be found "here":https://opendesignengine.net/projects/shepard-ts/wiki/Meeting_Minutes
+
+h3. Preliminary Mechanical Design
+
+* *STSPM 1.1* "FreeCAD":http://sourceforge.net/apps/mediawiki/free-cad/index.php?title=Main_Page will be used as the base CAD program for this project.
+** *STSPM 1.1.1* Files will be stored on "Open Design Engine":https://opendesignengine.net in the default FreeCAD file format.
+** *STSPM 1.1.2* For milestone versions STEP files will also be provided for models, and PDF files will be provided for drafts.
+* *STSPM 2.1* The overall design will be composed of three principle components:
+** *STSPM 2.1.1* The structure will hold the other system elements (both mechanical and DAQ related) with sufficient weight to prevent movement.
+*** *STSPM 2.1.1.1* The structure will be a duplicate of the "version 1.0 structure":https://opendesignengine.net/projects/shepard-ts/wiki/Detailed_Design?version=2 .
+** *STSPM 2.1.2* The rail system will limit the motor's movement to the thrust axis.
+*** *STSPM 2.1.2.1* The rail system will be a duplicate of the "version 1.0 rail system":https://opendesignengine.net/projects/shepard-ts/wiki/Detailed_Design?version=2 .
+*** *STSPM 2.1.2.2* A shield made out of HVAC ductwork material will prevent the rail system from being fouled by motor exhaust particulates.
+** *STSPM 2.1.3* The motor mount will connect the motor under test to the rail system.
+** *STSPM 2.1.3.1* The motor mount will be a duplicate of the "version 1.0 motor mount":https://opendesignengine.net/projects/shepard-ts/wiki/Detailed_Design?version=2 .
+** *STSPM 2.1.3.2* A new contact pad will be used to adapt the surface of the motor mount to the face of the selected force sensor. 
+* *STSPM 2.2* The thermocouple will be attached to the motor casing with metalized foil tape.
+** *STSPM 2.2.1* The thermocouple leads will be routed away from the motor exhaust and in such a way that it won't interfere with the movement of the motor mount on the linear guide.
+* *STSPM 2.3* The selected force sensor will be attached to the structure using double stick tape such that it will interface properly with the motor mount.
+** *STSPM 2.3.1* The type of double stick tape used must not be too thick or have too much elasticity so as to affect the thrust measurements.
+
+You can refer back to the "version 1.0 preliminary design":https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design?version=1 items *STSPM 2.2* through *STSPM 2.4.3* for competing design choices for the structure.
+
+h3. Preliminary Data Acquisition Design
+
+* *STSPD 1.1* An "Arduino Uno":http://www.arduino.cc/ will be used as the data collection platform which includes the ADC interface with the force sensor, and SPI interface for the thermocouple amplifier.
+* *STSPD 1.2* A "Force Sensing Resistor":https://www.sparkfun.com/products/11207 (FSR) will be used for the thrust force sensor. This type of sensor is less expensive than a load cell, but has issues such as drift, thermal vairance, and hysteresis which will need to be compensated for if possible.
+** *STSPD 1.2.1* A "unity gain amplifier":http://banananan.wordpress.com/2012/01/12/pressure-sensor-arduino-processing-signal-analysis/ utilizing a "TLV2370 precision op amp":http://www.ti.com/product/tlv2370 will be used to obtain measurable output from this sensor.
+* *STSPD 1.3* A "type K glass braid insulated thermocouple":http://adafruit.com/products/270 will be used to measure the casing temperature of the motor casing at the throat.
+** *STSPD 1.3.1* An "ADS1118 16-bit ADC":http://www.ti.com/product/ads1118&DCMP=analog_signalchain_mr&HQS=Other+PR+ads1118-pr will be used in thermocouple amplifier mode to condition the thermocouple signal for the Arduino's analog inputs. This requires SPI communication with the Arduino.
+* *STSPD 1.4* The data that is recorded by the Arduino will be streamed over the USB connection between the Arduino and the host computer (laptop).
+** *STSPD 1.4.1* The data send from the Arduino to the host will consist of a thrust measurement data point, a temperature data point, simple time stamp in milliseconds.
+** *STSPD 1.4.2* Data processing will be handled by the computer. This will include the conversion from measured force sensor voltage to a thrust value.
+* *STSPD 1.5* The Wiring programming language will be used to program the Arduino, and Processing will be used for any computer-side code.

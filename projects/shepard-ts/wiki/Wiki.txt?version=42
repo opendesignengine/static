@@ -1,0 +1,27 @@
+h1. Shepard Test Stand Wiki v2.0
+
+{{toc}}
+
+!http://opendesignengine.net/dmsf_files/261?download=! !http://opendesignengine.net/dmsf_files/262?download=!
+
+h2. Introduction
+
+Welcome to the project Wiki for the Mach 30 *Shepard Test Stand*. This test stand holds small model rocket motors fixed (clamped in place) during firings so that things like thrust and casing temperature can be measured. This wiki contains documentation covering the design, development, fabrication, and use of the test stand.
+
+!http://opendesignengine.net/dmsf_files/260?download=!
+
+The *Shepard Test Stand* is named after "Alan Shepard":http://en.wikipedia.org/wiki/Alan_Shepard, America's first astronaut, as it is our first test stand. We are using an Arduino board to provide the physical interface between the data collecting computer and the required sensors. This project is the first in a series of projects to develop the required skills for the practice of safe rocket engine operation, and to develop the capability to measure and record data about a rocket engine's performance. The idea behind the *Shepard Test Stand* project is to start small and simple, and then build on what is learned when moving to larger and more complex stands later on. This is very much in keeping with Mach 30's philosophy of starting (literally) from the ground up to build the infrastructure required to facilitate safe, routine, reliable, and sustained access to space. The second iteration of Shepard only measured the thrust and motor casing temperature of Estes model rocket motors sized A through E. This third iteration (v2.0) will step beyond that to offer higher resolution measurements and an easier to assemble structure, among other things. The Shepard project is structured in a way that should allow anyone to build and improve upon the designs. Everyone from experienced space flight hardware designers to educators and students are encouraged to get involved with the project and share their knowledge and enthusiasm.
+
+If you're interested in getting involved, please introduce yourself in the forums and let us know what your interests and specialties are. There is also the navigation bar at the right to help you browse the documentation to get up-to-speed.
+
+h2. Shepard for Teachers and Scout Leaders
+
+We are currently working with a partner organization, the "Coca-Cola Space Science Center":http://www.ccssc.org to develop curriculum so that Shepard can be used in middle school, high school, and college classrooms. In addition, we intend to have Shepard Test Stand kits available for sale sometime in the first half of 2014. If you're interested in finding out more about Shepard in education, please contact "Mach 30":http://mach30.org/contact . If you're planning to build and operate a Shepard Test Stand on your own, please start by reading the "Safety Procedures.":https://opendesignengine.net/projects/shepard-ts/wiki/Safety_Procedures
+
+h2. Shepard for Makers
+
+Mach 30 believes that Makers and Makerspaces will be a large part of the new spacefaring workforce, partnering with us in our mission "[t]o hasten the advancement of humanity into a spacefaring civilization through sustainable leadership, open design practices, and a bias toward mature technology." If that sounds like something you want to be involved in, we encourage you to jump right in. If you want to start with our design rationale, take a look at the _Systems Engineering Process_ section in the navigation bar at the right. If building, testing, and operating a test stand is more your speed, start with the _Documentation_ section of the navigation bar. Always make sure to read the "Safety Procedures":https://opendesignengine.net/projects/shepard-ts/wiki/Safety_Procedures first so that you can have the safest experience possible with Shepard. Also, don't forget to "register for an Open Design Engine account":https://opendesignengine.net/account/register so you can start posting to the forums.
+
+h2. Shepard for Students
+
+If you're a student who's ready to start working with Shepard, be sure to start with the "Safety Procedures.":https://opendesignengine.net/projects/shepard-ts/wiki/Safety_Procedures Once you're up to speed on those, you'll want to take a look at the "Operating Manual":https://opendesignengine.net/projects/shepard-ts/wiki/Operating_Manual to learn how to operate the test stand. Any other documentation that you may need should be in the navigation bar at the right under _Documentation_. Also, don't forget to "register for an Open Design Engine account":https://opendesignengine.net/account/register so you can start posting to the forums.

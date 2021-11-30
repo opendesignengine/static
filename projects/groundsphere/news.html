@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - News - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../../javascripts/jstoolbar/jstoolbar.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/textile.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/lang/jstoolbar-en.js%3F1359925542" type="text/javascript"></script><link href="../../stylesheets/jstoolbar.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="news.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+  <link href="../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/groundsphere.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../groundsphere%3Fjump=news.html" class="news selected">News</a></li>
+<li><a href="../groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+</div>
+
+<div id="add-news" style="display:none;">
+<h2>Add news</h2>
+<form action="../groundsphere%3Fjump=news.html" class="tabular" id="news-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>
+
+<div class="box tabular">
+<p><label for="news_title">Title<span class="required"> *</span></label><input id="news_title" name="news[title]" size="60" type="text" /></p>
+<p><label for="news_summary">Summary</label><textarea cols="60" id="news_summary" name="news[summary]" rows="2"></textarea></p>
+<p><label for="news_description">Description<span class="required"> *</span></label><textarea class="wiki-edit" cols="60" id="news_description" name="news[description]" rows="15"></textarea></p>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var wikiToolbar = new jsToolBar($('news_description')); wikiToolbar.setHelpLink('<a href="http://opendesignengine.net/projects/groundsphere/\&quot;/help/wiki_syntax.html\&quot;" onclick=\"window.open(&quot;/help/wiki_syntax.html&quot;, &quot;&quot;, &quot;resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes&quot;); return false;\">Text formatting<\/a>'); wikiToolbar.draw();
+//]]>
+</script>
+
+<input name="commit" type="submit" value="Create" />
+<a accesskey="r" href="../groundsphere%3Fjump=news.html#" onclick="new Ajax.Updater('preview', '/news/preview?project_id=groundsphere', {asynchronous:true, evalScripts:true, method:'get', parameters:Form.serialize('news-form') + '&amp;authenticity_token=' + encodeURIComponent('b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=')}); return false;">Preview</a> |
+<a href="../groundsphere%3Fjump=news.html#" onclick="Element.hide(&quot;add-news&quot;)">Cancel</a>
+</form>
+<div id="preview" class="wiki"></div>
+</div>
+
+<h2>News</h2>
+
+
+
+    <h3>
+    <a href="../../news/55.html">Update for LNA production</a>
+    (20 comments)</h3>
+    <p class="author">Added by <a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="activity%3Ffrom=2014-02-07.html" title="02/07/2014 11:35 pm">over 8 years</a> ago</p>
+    <div class="wiki">
+    <p>All parts are in to complete the first batch of production LNAs and we have completed the artwork for the solder mask (template).  Tomorrow will be a warm enough day to etch the aluminum to create the template.  Once it is verified both visually and with the production of a single unit, a small batch (about five units) will be made.  This may happen as early as February 9th (Sunday).</p>
+
+
+	<p>The only part left for the Mk2 unit will be the 3D printed base.  I expect this to be completed and delivered to Quelab by the 12th.  I may have time this weekend to drive down to Quelab to pick up the base and deliver parts for them to build their own Ground Spheres, verifying the build instructions.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/54.html">Testing update for Prototype 1</a>
+    (5 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="activity%3Ffrom=2014-01-04.html" title="01/04/2014 04:21 pm">almost 9 years</a> ago</p>
+    <div class="wiki">
+    <p>This update is based on a couple of emails from Tim at Southern Stars.  The short version of the update is that we have limited access for conducting from orbit testing, so Tim and Scott jumped at a chance this past week to run a from orbit test.  Unfortunately, the results are inconclusive at best, and disappointing at worst.  They were unable to receive signal from the CubeSat in question.  Read on for full details.</p>
+
+
+	<p>The test in question involves attempting to receive signals from <a href="http://space.skyrocket.de/doc_sdat/aerocube-4.htm" class="external">AeroCube 4C</a>.  This CubeSat only broadcasts on 915 MHz when it is over its mission control center, so we have to make special arrangements to conduct the from orbit tests.  Specifically, we need to coordinate with its operators and Southern Stars team members must drive with the <strong>Ground Sphere</strong> to the LA area in order to be under its footprint.</p>
+
+
+	<p>This past Thursday (Jan 2), a test opportunity was arranged.  The operators believe they picked up the CubeSat's signal (they saw what appeared to be the signal on a spectrum analyzer) but were not able to establish a radio lock.  The following from Tim details our even less successful results.</p>
+
+
+<blockquote>
+
+	<p>We were less successful.  We saw a number of "blips" right around the expected 914.7 MHz, but they were all very short.  We saw nothing like a continuous signal that dopper-shifted as the satellite approached and receded.  I suspect the blips were all local.  We recorded about 10 GB worth of raw RF samples from the SDR, and we'll go over these in more detail tomorrow.</p>
+
+
+	<p>I should note: we used Scott's SDR, rather than the SDR that was sent to us.  I didn't realize this until after the pass began.  Scott's SDR does not have the same built-in preamp and has a smaller gain (a few dB difference?  Scott can you put a number on it?)  This was a mistake on our part.</p>
+
+
+	<p>We also noticed that the GS antenna did not seem to produce noticeably any different signal levels when the power supply to the preamp was plugged in, vs. when it was not plugged in.  I don't know what that means.  Something may or may not be broken.  Or we're just not interpreting the SDR output correctly (?)</p>
+
+
+</blockquote>
+
+	<p>Discussions between Aaron and Scott over email confirm there was a hardware issue with Prototype 1.  The preamp's power connection came loose during transport so it was not in use during the test.</p>
+
+
+	<p>It should also be noted that this attempt at a from orbit test, due to the challenges with securing test opportunities, came well out of the established testing order (see <a href="wiki/Testing.html" class="wiki-page">Testing</a> wiki page for more details).  Neither the lab tests nor the field tests have been run, and both need to be run to verify and validate the prototype.  In all likelihood, even the lab tests would have turned up the problem with the pre-amp.</p>
+
+
+	<p>We will be circling the wagons here shortly to continue the testing.  More news as it is available.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/53.html">RTL-SDR Dongle in Linux</a>
+    (15 comments)</h3>
+    <p class="author">Added by <a href="../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="activity%3Ffrom=2014-01-01.html" title="01/01/2014 11:06 am">almost 9 years</a> ago</p>
+    <div class="wiki">
+    <p>I plugged the dongle into my laptop and ran <code>lsusb</code>. The following is the output.</p>
+
+
+<pre>
+Bus 003 Device 005: ID 0bda:2838 Realtek Semiconductor Corp. RTL2838 DVB-T
+</pre>
+
+	<p>The vendor and PID numbers match up with this entry on the <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr" class="external">rtl-sdr page</a>:</p>
+
+
+	<p>0x0bda    0x2838    E4000    ezcap USB 2.0 DVB-T/DAB/FM dongle</p>
+
+
+	<p>Aaron mentioned that <a href="http://sdrsharp.com/" class="external">SDR#</a> has the ability to adjust the dongle's internal preamp gain. It runs on both Windows and Linux (via Mono), so I decided to give that a try using the instructions <a href="http://rtlsdr.org/softwarelinux" class="external">here</a>.</p>
+
+
+	<p>The installation of the udev rules doesn't seem to work properly in the instructions above, but you can follow <a href="http://www.instructables.com/id/rtl-sdr-on-Ubuntu/step3/Setup-udev-rules/" class="external">these</a>.</p>
+
+
+	<p>The kernel also automatically loads the dvb driver module for the dongle to make it available as a TV tuner. This causes <code>rtl_test -t</code> to complain that something is already using the dongle. You can blacklist the offending module in <code>/etc/modprobe.d/blacklist.conf</code> with the line:</p>
+
+
+<pre>
+blacklist dvb_usb_rtl28xxu
+</pre>
+
+	<p>For a quick kill of the driver you can just do:</p>
+
+
+<pre>
+rmmod dvb_usb_rtl28xxu
+</pre>
+
+	<p>SDRSharp should be able to access your dongle then.</p>
+
+
+	<p>What it looks like is that it's rtl-sdr, not SDR# that adjusts the gain of the internal preamp. From what I see in the repo SeeDeR uses rtl-sdr, so it should be possible to adjust the gain through the library without writing code to directly talk to the dongle. Tim and Scott may already know this. I'll start a thread on the forum to ask.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/52.html">SkyCube Launch Delayed</a>
+    (24 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="activity%3Ffrom=2013-12-18.html" title="12/18/2013 09:28 am">almost 9 years</a> ago</p>
+    <div class="wiki">
+    <p>Just saw <a href="http://www.kickstarter.com/projects/880837561/skycube-the-first-satellite-launched-by-you/posts/698304" class="external">the news</a> that the Orbital Cygnus launch SkyCube is manifested on has been postponed until January.  This delay is to give the ISS crew time to make repairs to the <a href="http://abcnews.go.com/Technology/nasa-approves-spacewalks-fix-cooling-system-problem-space/story?id=21253134" class="external">cooling system</a>.</p>
+
+
+	<p>Mach 30 wishes the ISS crew speedy and safe repairs.  And we eagerly await the January launch of SkyCube.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/51.html">Update from Tim</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="activity%3Ffrom=2013-12-09.html" title="12/09/2013 10:43 am">almost 9 years</a> ago</p>
+    <div class="wiki">
+    <p>First, an update on our own launch.  ORB-1 is now pushed back to December 17th, at 10:08 PM EST.  Deets here: <a class="external" href="http://guestops.hq.nasa.gov">http://guestops.hq.nasa.gov</a><br />Scott &#38; myself are both planning to be there.</p>
+
+
+	<p>Second, an update on ORS-3.  I've heard from several sources that more than half of the 28 CubeSats launched on ORS-3 have not been heard from in space.  (This comes to me independently from NPS, Pumpkin, and Spaceflight, so I tend to believe it.)  This is an unusually high failure rate, and it's led to speculation that something went wrong with the deployment in space.  You know as much as I know, now.</p>
+
+
+	<p>Unfortunately, one of the failures was Horus, the NPS Colony-2 satellite that has the same radio as SkyCube.  It hasn't been heard from since launch.  NPS has had intermittent contact with NPS-SCAT, but the problem there seems to be software/firmware instability that reboots the satellite frequently, preventing any kind of robust connection.  On thursday last week, Gio told me they haven't heard from it for a week, and anyhow SCAT apparently downlinks at 2.2 GHz (S-band), contrary to what I'd ben told previously, so it's useless as a 915 MHz target.</p>
+
+
+<hr />
+
+
+	<p>So, this puts us back to only one possible (and difficult to test with) on orbit bird operating at 915 MHz.  The Ground Sphere team will need to look at how this affects <a href="wiki/Testing.html" class="wiki-page">Testing</a>.  More news as it is available.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/50.html">Corrected Link Budget posted</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="activity%3Ffrom=2013-12-09.html" title="12/09/2013 12:28 am">almost 9 years</a> ago</p>
+    <div class="wiki">
+    <p>With the updated data from our partners, I have re-run and refactored the link budget.  We are still good to go.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/49.html">Preliminary Link Budget Calculations</a>
+    (7 comments)</h3>
+    <p class="author">Added by <a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="activity%3Ffrom=2013-12-07.html" title="12/07/2013 02:02 pm">almost 9 years</a> ago</p>
+    <div class="wiki">
+    <p>The rough link budget numbers I used for go/no-go calculations are now available in the DMSF section.  The spreadsheet was originally done for GS001 which was designed to receive transmissions from ISS, so the adaptation was relatively easy.  There is a PDF file and the original spreadsheet in ODS (Open Office) and XLS (Microsoft) formats.  To use the interactive spreadsheet, simply place values (known or guessed) in the value cells.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/48.html">Big news for SkyCube!</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="activity%3Ffrom=2013-10-28.html" title="10/28/2013 03:37 pm">about 9 years</a> ago</p>
+    <div class="wiki">
+    <p>This just in from Southern Stars, <a href="http://www.kickstarter.com/projects/880837561/skycube-the-first-satellite-launched-by-you/posts/642774" class="external">SkyCube will launch on Dec 15</a>.  This is super exciting news on several fronts.  First and foremost, completing qualifying tests and delivering a satellite for launch is a monumental occasion.  Southern Stars and all of their backers deserve a huge round of applause.  Kudos to one and all at the SkyCube team.</p>
+
+
+	<p>Second, it locks <strong>Ground Sphere</strong> into a fixed development schedule.  I will meet with Tim from Southern Stars shortly to make sure everyone is on the same page about the <strong>Ground Sphere</strong> schedule.  Once that is done, I will update our calendar appropriately.  In the mean time, we will press ahead with our original schedule (though we have had a small delay due to shipping of a component for the first prototype, so we won't be exactly on schedule).</p>
+
+
+	<p>With SkyCube on its way to space, it's time for us to get cracking.  Look for more updates soon.</p>
+
+
+	<p><em>ad astra per civitatem</em> - to the stars through community</p>
+    </div>
+
+    <h3>
+    <a href="../../news/47.html">Change of component</a>
+    (4 comments)</h3>
+    <p class="author">Added by <a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="activity%3Ffrom=2013-10-09.html" title="10/09/2013 09:39 pm">about 9 years</a> ago</p>
+    <div class="wiki">
+    <p>I have two pieces of news... first the bad, then the outstanding.</p>
+
+
+	<p>Prior to modifying the preamp circuit, I performed some baseline tests on it in the UHF (435MHz) range.  The noise figure I got was around 5dB, nowhere near the advertized 1dB.  Further the gain I got was closer to 12dB, not 20 as advertized.  Online research shows that this design's quality control was all over the map.  In order to do the calculation for the component change, I first checked the center of the frequency band of the existing filter and found it to be at 167MHz, not in the UHF band at all.  All this leads me to believe that this is a poor design and too much time would have to be spent making sure the kit units worked as advertised.</p>
+
+
+	<p>In looking for a replacement I found this preamp kit: <a class="external" href="http://www.g0mrf.com/432LNA.htm">http://www.g0mrf.com/432LNA.htm</a>  It has 20dB of gain with a noise figure of 0.6 at 915MHz, and is able to amplify signals from 145MHz to 1.5GHz.  Further, it is able to run on 5VDC simply by bypassing the voltage regulator.  This makes it ideal for our uses, and allows the ground station as designed to tune into standard UHF satellites as well by swapping out the aerials and phasing loop.</p>
+
+
+	<p>In the grand tradition of ham radio (who were sharing designs a century before open hardware), this design is free for use, or we can buy a kit, or we can buy the board. I have contacted the designer in order to purchase a kit for $35.00 (including shipping from the UK).  Should this work as well as I expect, the bare board is available for $10.00, and I may be able to source the parts in the US for cheaper.  The other benefit to this design is that it is a single sided PC board with a ground plane on the back, making construction easy (as SMD circuits go) and giving us a shielded place to locate the SDR to further reduce the noise floor.</p>
+
+
+	<p>Project wise, this brings the preamp into a known quantity, and not in need of a redesign.  To that end, I am going to post the antenna component spreadsheet and show the math tasks for this week as complete.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/46.html">Physical calculations</a>
+    (5 comments)</h3>
+    <p class="author">Added by <a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="activity%3Ffrom=2013-10-06.html" title="10/06/2013 08:32 pm">about 9 years</a> ago</p>
+    <div class="wiki">
+    <p>The measurements for antenna components are as follows:</p>
+
+
+	<ul>
+	<li>Phasing line:  2.7745" of RG-62 90 ohm coax cable (I have nearly 1000 feet in stock).</li>
+		<li>Body tube: 4" of 1.5" black ABS tubing (available at Lowes or other hardware store).</li>
+		<li>Ground plane: 6.3" diameter disk of conductive rip stop fabric.</li>
+		<li>Ground plane radial arms: 2.3925" of rigid material (need not be conductive).</li>
+		<li>Aerial length (circumference): 13.7075" of 12ga copper wire or better.</li>
+		<li>Distance between bottom of aerials and ground plane: 1.6475".</li>
+	</ul>
+
+
+	<p>Note:  All parts have some tolerance to variance, the measurements cited were the precise mathematical ideals based upon ideal conditions and materials.  Some tuning will be required.</p>
+    </div>
+
+
+<p class="pagination"></p>
+
+<p class="other-formats">Also available in:
+	<span><a href="news.atom" class="atom" rel="nofollow">Atom</a></span>
+</p>
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

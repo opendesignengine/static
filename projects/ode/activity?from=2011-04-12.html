@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Open Design Engine - Activity - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+<link href="activity.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+</head>
+<body class="controller-activities action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/ode.html" method="get">
+        
+        <a href="../../search/index/ode.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../ode%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../ode%3Fjump=activity.html" class="activity selected">Activity</a></li>
+<li><a href="roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../ode%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../ode%3Fjump=news.html" class="news">News</a></li>
+<li><a href="wiki.html" class="wiki">Wiki</a></li>
+<li><a href="boards.html" class="boards">Forums</a></li>
+<li><a href="../ode%3Fjump=files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/ode/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+<form action="../ode%3Fjump=activity.html" method="get">
+<h3>Activity</h3>
+<p>
+<input checked="checked" id="show_issues" name="show_issues" type="checkbox" value="1" />
+<a href="activity%3Fshow_issues=1.html">Issues</a>
+<br />
+
+<input checked="checked" id="show_changesets" name="show_changesets" type="checkbox" value="1" />
+<a href="activity%3Fshow_changesets=1.html">Changesets</a>
+<br />
+
+<input checked="checked" id="show_news" name="show_news" type="checkbox" value="1" />
+<a href="activity%3Fshow_news=1.html">News</a>
+<br />
+
+<input checked="checked" id="show_files" name="show_files" type="checkbox" value="1" />
+<a href="activity%3Fshow_files=1.html">Files</a>
+<br />
+
+<input id="show_wiki_edits" name="show_wiki_edits" type="checkbox" value="1" />
+<a href="activity%3Fshow_wiki_edits=1.html">Wiki edits</a>
+<br />
+
+<input id="show_messages" name="show_messages" type="checkbox" value="1" />
+<a href="activity%3Fshow_messages=1.html">Messages</a>
+<br />
+</p>
+
+	  <input id="with_subprojects" name="with_subprojects" type="hidden" value="0" />
+    <p><label><input checked="checked" id="with_subprojects" name="with_subprojects" type="checkbox" value="1" /> Subprojects</label></p>
+
+
+<p><input class="button-small" type="submit" value="Apply" /></p>
+</form>
+
+        
+    </div>
+
+    <div id="content">
+				
+        <h2>Activity</h2>
+<p class="subtitle">From 03/14/2011 to 04/12/2011</p>
+
+<div id="activity">
+
+<h3>04/09/2011</h3>
+<dl>
+  <dt class="issue  ">
+	
+  <span class="time">04:23 pm</span>
+  
+  <a href="../../issues/30.html">Feature #30 (New): Add wiki page templates</a></dt>
+  <dd><span class="description">There will be many common types of wiki pages (meeting minutes, Bills of Materials, assembly instructions, etc).  ODE...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:21 pm</span>
+  
+  <a href="../../issues/29.html">Feature #29 (New): Add embedded project IRC support</a></dt>
+  <dd><span class="description">Add web based IRC client with server for hosted projects and have IRC sessions auto-logged to the project space</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:20 pm</span>
+  
+  <a href="../../issues/28.html">Feature #28 (New): Add real-time wiki editing</a></dt>
+  <dd><span class="description">For example, like &quot;Etherpad&quot;:http://etherpad.org/ or google docs.  See &quot;list&quot;:http://en.wikipedia.org/wiki/Collaborat...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-note  ">
+	
+  <span class="time">04:19 pm</span>
+  
+  <a href="../../issues/27.html#change-4">Feature #27: Engineering file management features</a></dt>
+  <dd><span class="description">Additional requirements:<br />* Easily manage very large files (on order of GB)<br />* Easily handle binary files<br />* Find a...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:17 pm</span>
+  
+  <a href="../../issues/27.html">Feature #27 (New): Engineering file management features</a></dt>
+  <dd><span class="description">Source code control for embedded systems or computer based controls, etc should be stored in one of the available Ver...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:17 pm</span>
+  
+  <a href="../../issues/26.html">Feature #26 (New): Native support for Bills of Materials</a></dt>
+  <dd><span class="description">The Bill of Materials (BOM) module should include a BOM tree to visualize the structure. Also, a method to see where ...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:16 pm</span>
+  
+  <a href="../../issues/25.html">Feature #25 (New): Add tagging support to projects and their modules</a></dt>
+  <dd><span class="description">Tagging for issues should be tied to Feature #21. Project tags should be inherited by children and parent projects (t...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:13 pm</span>
+  
+  <a href="../../issues/24.html">Feature #24 (New): Social networking sites support</a></dt>
+  <dd><span class="description">Auto-share buttons for social network sites from project pages (to share on reddit, twitter, etc).  Are there other r...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:12 pm</span>
+  
+  <a href="../../issues/23.html">Feature #23 (New): Add a &quot;fans&quot; page to projects</a></dt>
+  <dd><span class="description">Have a fans page so supporters can show their interest</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:11 pm</span>
+  
+  <a href="../../issues/21.html">Feature #21 (New): Project assistance Bounty System</a></dt>
+  <dd><span class="description">mash up of craigslist, sourceforge, rent-a-coder, and a solution archive. The ideas is to have a website where &quot;custo...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-note  ">
+	
+  <span class="time">04:11 pm</span>
+  
+  <a href="../../issues/20.html#change-3">Feature #20: Add support for shared &quot;engineering&quot; workflows</a></dt>
+  <dd><span class="description">One possible engineering workflow (project features should support following all or part of the workflow as needed by...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">04:10 pm</span>
+  
+  <a href="../../issues/20.html">Feature #20 (New): Add support for shared &quot;engineering&quot; workflows</a></dt>
+  <dd><span class="description">Workflow system should be extensible and allow users to share there workflows with other projects (this way we are no...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+</dl>
+
+<h3>04/08/2011</h3>
+<dl>
+  <dt class="issue  ">
+	
+  <span class="time">07:02 pm</span>
+  
+  <a href="../../issues/18.html">Feature #18 (New): Configure installer to use ODE.net&amp;#x27;s settings for defaults</a></dt>
+  <dd><span class="description">While setting up http://opendesignengine.net, a number of default settings were changed.  It would be nice it the shi...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">06:44 pm</span>
+  
+  <a href="../../issues/17.html">Feature #17 (Closed): Need a logo for ODE</a></dt>
+  <dd><span class="description">I&#x27;d like to develop a logo for ODE to include as part of Issue #10.  It would be cool if we could incorporate the new...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">03:26 am</span>
+  
+  <a href="../../issues/16.html">Feature #16 (New): Improve dashboard</a></dt>
+  <dd><span class="description">Projects should also have dashboard page so members can keep up with progress (&quot;possible example&quot;:http://i.imgur.com/...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">03:25 am</span>
+  
+  <a href="../../issues/15.html">Feature #15 (New): Make project homepage more dynamic</a></dt>
+  <dd><span class="description">Project &quot;home page&quot; should be wiki-like as well to let project owners &quot;sell&quot; their projects, including posting rich m...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">03:19 am</span>
+  
+  <a href="../../issues/14.html">Feature #14 (New): Add support to showcase &quot;featured projects&quot; on the site homepage</a></dt>
+  <dd><span class="description">Site level homepage should highlight best hosted projects (like &quot;wikipedia&quot;:http://en.wikipedia.org/wiki/Main_Page do...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">03:17 am</span>
+  
+  <a href="../../issues/13.html">Feature #13 (Resolved): Create a donation drive module</a></dt>
+  <dd><span class="description">This should be a plugin and work similar to &quot;Pledgie&quot;:http://pledgie.com/ or similar offerings.  May just create it a...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-note  ">
+	
+  <span class="time">03:15 am</span>
+  
+  <a href="../../issues/10.html#change-1">Feature #10: Modernize ODE theme</a></dt>
+  <dd><span class="description">If at all possible, would like to see this in v0.2.</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">03:14 am</span>
+  
+  <a href="../../issues/12.html">Feature #12 (Closed): Require all projects to have Open Source licenses</a></dt>
+  <dd><span class="description">Write plugin to require projects list an approve license (OSI for software, OSHW for hardware).</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">03:13 am</span>
+  
+  <a href="../../issues/11.html">Feature #11 (Resolved): Add Terms of Service and Privacy Policy to account creation</a></dt>
+  <dd><span class="description">Need to write a new plugin for this.  Should work like &quot;Drupal Legal Plugin&quot;:http://drupal.org/project/legal.</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue  ">
+	
+  <span class="time">03:10 am</span>
+  
+  <a href="../../issues/10.html">Feature #10 (New): Modernize ODE theme</a></dt>
+  <dd><span class="description">The available &quot;themes for Redmine&quot;:http://www.redmine.org/projects/redmine/wiki/Theme_List are basically variations o...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:57 am</span>
+  
+  <a href="../../issues/9.html">Feature #9 (Closed): Improve Wiki PDF export</a></dt>
+  <dd><span class="description">Install this &quot;plugin&quot;:http://www.redmine.org/plugins/redmine_doc_pu.  Remember to store in svn for inclusion in the d...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:56 am</span>
+  
+  <a href="http://opendesignengine.net/issues/8">Feature #8 (Resolved): Add support for enhanced document management</a></dt>
+  <dd><span class="description">The idea is to allow users to have an easy and familiar way to control non-source code files.  It should be versioned...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:52 am</span>
+  
+  <a href="http://opendesignengine.net/issues/7">Feature #7 (Resolved): Add Wiki macro to link to issues</a></dt>
+  <dd><span class="description">Install this &quot;plugin&quot;:http://www.redmine.org/projects/redmine/wiki/PluginWikiIssueDetails.  Remember to store in svn ...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:51 am</span>
+  
+  <a href="../../issues/6.html">Feature #6 (Closed): Add wiki external format plugin as basis for wiki enhancements</a></dt>
+  <dd><span class="description">Evaluate this &quot;plugin&quot;:http://www.redmine.org/boards/3/topics/10649 for use in wiki.  Possible features it would supp...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:46 am</span>
+  
+  <a href="http://opendesignengine.net/issues/5">Feature #5 (Resolved): Add Google Analytics to ODE</a></dt>
+  <dd><span class="description">Steps:<br /># Create Analytics account and get key<br /># Install (and on live ODE site, configure) this &quot;plugin&quot;:http://ww...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:43 am</span>
+  
+  <a href="../../issues/4.html">Feature #4 (Resolved): Display SVN checkout or export link on repository page</a></dt>
+  <dd><span class="description">Install this &quot;plugin&quot;:http://dev.holgerjust.de/projects/redmine-checkout/wiki (note need to decide if default behavio...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:40 am</span>
+  
+  <a href="http://opendesignengine.net/issues/3">Feature #3 (Resolved): Configure ODE to hide emails by default</a></dt>
+  <dd><span class="description">Install this &quot;plugin&quot;:https://github.com/splendeo/redmine_hide_emails_by_default/.  Remember to store in svn for incl...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:39 am</span>
+  
+  <a href="http://opendesignengine.net/issues/2">Feature #2 (Resolved): Install available Bot filters</a></dt>
+  <dd><span class="description">Use this &quot;plugin&quot;:http://www.redmine.org/projects/redmine/wiki/PluginBotsFilter.  Remember to store in svn for inclus...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">02:37 am</span>
+  
+  <a href="../../issues/1.html">Feature #1 (Closed): Automatically create SVN Repositories when Repository module is turned on</a></dt>
+  <dd><span class="description">See http://www.redmine.org/projects/redmine/wiki/HowTo_Automate_repository_creation for instructions.  It would be be...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+</dl>
+</div>
+
+
+
+<div style="float:left;">
+<a href="http://opendesignengine.net/projects/ode/activity?from=2011-03-13" title="From 02/12/2011 to 03/13/2011">« Previous</a>
+</div>
+<div style="float:right;">
+<a href="activity%3Ffrom=2011-05-12.html" title="From 04/13/2011 to 05/12/2011">Next »</a>
+</div>
+&nbsp;
+<p class="other-formats">Also available in:
+	<span><a href="activity.atom" class="atom" rel="nofollow">Atom</a></span>
+</p>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms_of_services/ode.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

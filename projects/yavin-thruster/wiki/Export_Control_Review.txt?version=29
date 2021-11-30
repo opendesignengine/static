@@ -1,0 +1,124 @@
+h1. Export Control Review
+
+This review uses Mach 30's draft "Export Control Review Process":https://docs.google.com/document/d/1GnT5CLXZBoSRHVLcsWU3-tOUXXcInvZHPFFrOJri3GY/pub. The "Export Control Task Force":http://mach30.org/activites/oshw-community-support/ectf/ (ECTF) is responsible for the shape of and guidance through the review process.  The project team is responsible for using the review process.
+
+h2. 1. Define the project and related topics in writing for future reference
+
+# Goals
+## What is the vision of the project?
+The Yavin Thruster will be used at at universities across the country to bring hands on experiences into their propulsion courses and by Mach 30 to demonstrate rocket propulsion as part of its educational and outreach goals.
+## What ultimate purpose does it serve?
+To facilitate the education of Mach 30 volunteers,undergraduate aerospace and high level high school students in Newton's laws of motion and rocket propulsion (f = ma, fundamental performance characteristics, fundamental design parameters) in a laboratory setting with instructor involvement. Unit will be able to be built with commonly available components and 3D printed parts.
+## How does it fit into Mach 30’s strategy?
+Continued evolution of Mach30's R&D capabilities in rocket propulsion introducing propulsion system design in addition to the testing capabilities provided by the Shepard Test Stand.
+## To what use will the results of the project be put?
+It will be the one half of a rocket propulsion educational kit, expanding Mach30's portfolio of open source spaceflight hardware projects. 
+# Technologies
+## What is the core technology the project will work on?
+"A cold gas thruster is a rocket engine/thruster that uses a (typically inert) gas as the reaction mass" to propel the thruster and associated craft in a particular direction using Newton's three laws of motion. ("Wikipedia, 2015":https://en.wikipedia.org/wiki/Cold_gas_thruster ) Undergraduate level rocket propulsion, structural mechanics, pneumatic controls, basic embedded systems instrumentation and control are all subsidiary enabling technologies.
+## What other technologies are necessary to accomplish that work?
+3D printing, parametric CAD
+## What words would an expert use to describe these technologies?
+### Rocket Propulsion
+### Additive manufacturing
+### Pneumatic controls
+### Embedded systems
+### Instrumentation and control
+### Parametric CAD
+### Cold gas thruster
+## What words would an average person use to describe these technologies?
+### Rockets
+### 3D Printing
+### Pneumatics
+### Arduino
+### Sensors, valves, and actuators
+### CAD
+# Inputs and Outputs
+## What are the project’s major milestones?
+### Formal EC review
+### Structural analysis of pressure vessel as a Python library. The library should be tested in MTK, producing a document verifying the library. The design should then be implemented in CADQuery.
+### Model threaded connection for nozzle to cold gas source in CADQuery
+### 3D Printed PLA properties test to verify that the material will hold up under pressure.
+### Develop Yavin required calibration process for 3D printers to ensure optimal print quality in PLA. The process will be tested by verifying that it works successfully on another printer.
+### Define the bell nozzle contour as a Python library. The library should be tested in MTK, producing a document verifying the library. The design should then be implemented in CADQuery.
+### Replicate cold gas thruster design case from Space Propulsion Analysis and Design (SPAD) as a Python library. The library should be tested in MTK, producing a document verifying the library. The design should then be implemented in CADQuery (use an assumed thickness and a conical nozzle).
+### Run a Mach 30 volunteer's 3D printer through at least 1 published calibration test and document results in a short report
+## What previous projects does this one build off of?
+Shepard Test Stand
+## What future projects will build off of this one?
+Next generation educational rocket test stand. It will be the one half of a rocket propulsion educational kit referenced in question 1.4 above.
+## Does this project make use of any specialized, pre-existing knowledge?
+Undergraduate and graduate level rocket propulsion technologies as published in commonly available textbooks such as:
+### Sellers, Jerry Jon, and William J. Astore. _Understanding Space: An Introduction to Astronautics._ 3rd ed. New York: McGraw-Hill Companies, 2005.
+### Henry, Gary N. _Space Propulsion Analysis and Design._ "SPAD" New York: McGraw-Hill, 1995.
+### Thomson, William Tyrrell. _Introduction to Space Dynamics._ New York: Dover, 1986.
+### Ruiter, Anton H. J., and Christopher Damaren. _Spacecraft Dynamics and Control: An Introduction._ New York: Wiley, 2013.
+### Wertz, James Richard. _Spacecraft Attitude Determination and Control._ Dordrecht: Kluwer Academic Publishers, 1994.
+## Does this project have any measurable or tangible outcomes?
+Enables the development of the rocket propulsion education kit referenced in 1.4 above. 
+# Keywords
+## What keywords/phrases summarize the previous answers?
+### Rocket
+### Propulsion
+### Cold gas 
+### Nozzle
+### Thruster
+### Reaction
+### Thrust
+### RCS
+### CGT
+## What additional keywords/phrases are relevant?
+### CAD
+### Parametric
+### Valve
+## Put those keywords into a thesaurus; what other relevant keywords appear?
+### Booster
+### Impulse
+
+h2. 2. Research the project’s relationship to relevant EC
+
+# USML
+## Follow the DDTC’s "Order of Review Decision":http://pmddtc.state.gov/licensing/dt_OrderofReview.htm tool
+*No hits*
+## Run all keywords identified in the previous steps through the text of the "USML":https://www.pmddtc.state.gov/regulations_laws/documents/official_itar/ITAR_Part_121.pdf
+## Run all keywords, along with words like “ITAR”, “USML” and “export control” through Google
+# CCL
+## Run all keywords identified in the previous step through the text of the CCL
+## Run all keywords, along with words like “EAR”, “CCL” and “export control” through Google
+# MTCR
+## Run all keywords identified in the previous step through the text of the MTCR
+## Run all keywords, along with words like “MTCR” and “export control” through Google
+
+*All searches outlined above are documented in the "linked spreadsheet":https://docs.google.com/spreadsheets/d/1iFwZptc3YqgfzRV9eH6YTZB_QCIHb8fgPCLb9BT8HCc/edit?usp=sharing*
+
+h2. 3. Document findings
+
+# Summarize the topic(s) that are explicitly mentioned in EC regulations and/or professional analysis/discussion of EC regulations
+*The use of a cold gas thruster not designed for use is a specific vehicle in testing and education is not explicitly mentioned and/or is exempt from all known export control regulations; distribution unlimited.*
+# Explain any additional concerns
+*None*
+# List searches and terms that turned up no relevant results
+## Cold gas
+## Nozzle
+## Reaction
+## Thrust
+## Valve
+## RCS
+## CGT
+## CAD
+## Rocket
+## Propulsion
+## Parametric
+
+h2. 4. Triggers
+
+# If possible, define any measurable limits the project cannot cross and an appropriate margin for error
+*Once Yavin designs and/or technologies are used in a launch vehicle or spacecraft, it becomes export controlled under both ITAR and the EAR.*
+# Specify, or guess at, any future dates when relevant information is expected to be become available
+*N/A*
+# Maintain a clear distinction between information used as-is and any changes, additions, derivations, etc added by Mach 30
+*Provided the CGT technologies are not used on aircraft, launch vehicles, or spacecraft, no restrictions are known to exist.*
+
+h2. 5. Reevaluate if a trigger is flipped. 
+
+Repeat this process if there are any major changes to the project. Update this report at each major milestone.

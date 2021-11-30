@@ -1,0 +1,16 @@
+h1. V0.3 Description
+
+Improved Prototype - this version of the *Holoseat* will apply lessons learned from the previous versions and work to make the *Holoseat* more robust in preparation for a production prototype.  In particular, it will look into the use of "Hall effect":http://playground.arduino.cc/Code/HallEffect sensors in place of the reed switch and it will investigate the use of a desktop application to interact with the *Holoseat* to adjust the configuration and get feedback from the *Holoseat* controller.  Specific development will include:
+
+* Testing the use of Hall effect sensors
+* Support for "reverse walking"
+* -Support for "running" vs "walking" based on step rate in games which support two speeds of movement-
+* Updated documentation including improved instructions (format, drawings from Fritzing instead of photos, etc)
+* Development of a desktop client (Windows only for this version) which will
+** Support updating the controller's firmware
+** Manage configuration (save defaults to the *Holoseat* controller, adjust live settings that reset to defaults on controller restart)
+** -*Holoseat* activity reporting (number of steps in this session, this hour, this day, this week, this month, this year, “life”)-
+** -Potentially tie into website for badges, etc based on activity level and games played-
+** -Support weigh ins?-
+
+Items marked with a -strike through- were dropped in favor of completing v0.3 in time for SyndCon 2016.

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Operating_Instructions/diff/6 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere Mk 3 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="43Xq6MoeofKl64bwP8yiZeGKOcuACSqEZWmEBfM8AhY="/>
+<link rel='shortcut icon' href='../../../../../favicon805e.ico?1359925685' />
+<link href="../../../../../stylesheets/applicationefba.css?1359925542" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../../../javascripts/prototypeefba.js?1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/effectsefba.js?1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/dragdropefba.js?1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/controlsefba.js?1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/applicationefba.js?1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../../../plugin_assets/redmine_legal/stylesheets/terms-of-servicec91c.css?1359925705" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+</head>
+<body class="controller-wiki action-diff">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../../../index.html" class="home">Home</a></li>
+<li><a href="../../../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="http://opendesignengine.net/search/index/groundsphere3" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../../../search/index/groundsphere3.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere Mk 3</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../../groundsphere3.html" class="overview">Overview</a></li>
+<li><a href="../../../activity.html" class="activity">Activity</a></li>
+<li><a href="../../../news.html" class="news">News</a></li>
+<li><a href="../../../../../dmsf/groundsphere3.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../../../boards.html" class="boards">Forums</a></li>
+<li><a href="../../../repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<a href="../history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+<h2>Operating Instructions</h2>
+
+<p>
+Version <a href="../../Operating_Instructions79ee.html?version=5">5</a>
+<em>(Skylar Hoffert, 09/20/2018 05:40 pm)</em>
+&#8594;
+Version <a href="../../Operating_Instructions358e.html?version=6">6</a>/11
+<em>(Skylar Hoffert, 09/20/2018 05:49 pm)</em>
+</p>
+
+<div class="text-diff">
+h1. Operating Instructions <br /><br /> {{&gt;toc}} <br /><br /> h2. Preparing For A Pass <br /><br /> Run WXtoImg. Select *File* -&gt; *Update Keplers*. This will update NOAA satellite TLEs so that your pass times are as up to date as possible. <br /><br /> In WXtoImg, select *File* -&gt; *Satellite Pass List*. This window will display all future passes within a few days. <br /><br /> !preparing_for_a_pass_1.jpg! <br /><br /> Selecting an appropriate pass can be tricky. The most important characteristic for a good pass is the maximum elevation angle. Low maximum elevation angles will have short passes with insufficient gain to complete an image. High maximum elevation angles may have periods of insufficient gain when the satellite is directly overhead. <br /><br /> !preparing_for_a_pass_2.jpg! <br /><br /> *NOTE*: Frequencies in WXtoImg are *INCORRECT*. Use these frequencies for NOAA satellites: <br /><br /> * NOAA 15: 137.6200 MHz 
+<br /> * NOAA 18: 137.9125 MHz 
+<br /> * NOAA 19: 137.1000 MHz <br /><br /> *NOTE*: NOAA 17 is no longer in operation. Do not try to capture an image from NOAA 17. <br /><br /> h2. Placing The Antenna <br /><br /> Ensure that the antenna is perpendicular to the ground so that it is facing directly up (zenith). This will ensure gain is uniform across the radio horizon. <br /><br /> In some cases, when testing the antenna, the top of a vehicle was used. While having height off of the ground may be nice to reduce interference to the horizon, the vehicle may interfere and cause stray multi-path signals to affect the quality of the signal (negatively or positively). For more predictable behavior, place the antenna in the middle of a large field on a flat surface. <br /><br /> !placing_the_antenna_1.jpg! <br /><br /> h2. Receiving An Image <br /><br /> Once you have selected a sufficient pass, place the antenna and connect it to your computer with the *RTL-SDR Dongle*. Run SDR-Sharp and WXtoImg side by side so that you can watch both as the pass occurs. <br /><br /> Shortly before the pass begins, select *File* -&gt; *Record* -&gt; *Auto Record* in WXtoImg. WXtoImg will now wait for a pass to reach a sufficient elevation angle before starting to record. <br /><br /> While you wait for the recording to start, use SDR Sharp to locate the signal. <span class="diff_in">It should appear with low intensity at first and increase over time. The image below is what the signal looks like near maximum. <br /><br /> !receiving_an_image_1.jpg! <br /><br /></span> <span class="diff_out"> Set  <br /><br /></span> h2. Troubleshooting <br /><br /> h3. WXtoImg shows a black screen with no image. <br /><br /> You must ensure VB Cable is transmitting sound to WXtoImg from SDR Sharp. Double check SDR Sharp audio output, ensure your microphone and speakers are not muted, turn up the volume for your VBCable in Audio Settings. <br /><br /> h3. I do not see a signal in SDR Sharp at the time of the pass. <br /><br /> There could be numerous things wrong with your setup. Ensure your ground station coordinates are correct on WXtoImg, double check that you are using the correct frequency (do NOT trust WXtoImg listed frequencies), and be sure that you are using local time and not UTC time. <br /><br />
+</div>
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../../../terms_of_services/Operating_Instructions.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Operating_Instructions/diff/6 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:08 GMT -->
+</html>

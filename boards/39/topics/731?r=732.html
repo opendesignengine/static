@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Predicting ground station performance during testing - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=boards.html" class="boards selected">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/groundsphere%3Fjump=boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/groundsphere/boards/39">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-731-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Predicting ground station performance during testing</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere/activity%3Ffrom=2013-12-24.html" title="12/24/2013 10:50 am">almost 9 years</a> ago</span></p>
+<div class="wiki">
+<p>We are about to begin formal testing of prototype 1.  In preparation for this testing we need to finish documenting our test procedures and conduct any required analysis to support those tests.  For prototype 1, the key tests are covered in the <a href="http://opendesignengine.net/projects/groundsphere/wiki/Test_112_Instructions" class="wiki-page">Test 1.1.2 Instructions</a>.  These tests include a lab test to confirm the completed ground station can receive signals at 915 MHz as expected, a field test to simulate from orbit communications using long distance signals on Earth plus attenuation, and a from orbit test (if possible).  The first two tests require analysis to predict the performance and/or determine test conditions (for example how much attenuation is required during the field test).  Note, the <a href="../../../projects/groundsphere/wiki/Preliminary_Design.html" class="wiki-page">Preliminary Design</a> documentation should include all required values for the ground station and CubeSat radios/antennas.</p>
+
+
+	<p>Wilton has volunteered to provide some of this analysis.  In particular, he is working on determining the predicted performance of the ground station during the lab test so we can compare the actual performance and determine is the system is working as designed.  Below are his comments (and attached is his updated link budget).</p>
+
+
+<blockquote>
+
+	<p>I added some new columns to the Link Budget for calculating power setting for the test transmitter to test/simulate similar signals on the ground station.</p>
+
+
+	<p>I assumed that the test transmitter would be an omni-directional antenna, but the power needed to transmit is pretty small so perhaps using a directional antenna but not aiming it directly at the ground station may make a better test signal.  I know the transmitter can go down to -30dBm but I don't think the side channels are supressed as well so operating the transmitter in the lowest power setting has the worst/noisiest setting as well so it won't be the cleanest signal.</p>
+
+
+	<p>I attached the spreadsheet to this email.</p>
+
+
+	<p>Will</p>
+
+
+</blockquote>
+
+	<p>Wilton or Aaron, can either of you walk me through these calculations to help me understand how we go from the attached link budget to an expected value in SeeDeR during the lab test?  Also, is it possible to adjust the transmit power on the test radio and confirm we get predicted signal values for say 3 signal strengths?</p>
+</div>
+<div class="attachments">
+
+<p><a href="http://opendesignengine.net/attachments/431/Simplified_Link_Budget.ods" class="icon icon-attachment">Simplified_Link_Budget.ods</a>
+  <span class="size">(55 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (1)</h3>
+
+  <div class="message reply" id="message-732">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="731%3Fr=732.html#message-732">RE: Predicting ground station performance during testing</a>
+    -
+    Added by <a href="../../../users/104.html" class="icon icon-contributor-license">Wilton Burke</a> <a href="../../../projects/groundsphere/activity%3Ffrom=2013-12-24.html" title="12/24/2013 02:27 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Couple things on the spreadsheet.  Looking back over it the M is meters. I should have used a m. And the power is actually in Watts not mWatts.</p>
+
+
+	<p>The test radio should be set as close as possible to the power listed in the last 2 columns. For the in lab testing ( 1 meter) the min power setting should be close and at 100 meters it should be set at ~10mW.</p>
+
+
+	<p>For 1 meter <br />The minimum power of 0.001mW should be used but because of near field effects, side channel noise, multipath etc you may have significantly different results so getting an accurate in lab test beyond works/doesn't work will be challenging.  If there is a direction antenna available we could use it to hopefully reduce the other noise effects. In that case we could map out the transmitting antennas gain and boost the transmitter up some and not aim the antennas directly at each other</p>
+
+
+	<p>For 100 meters<br />Theta   Test Tx Power <br />79       0.356mW<br />45       4.89mW<br />0        9.78mW</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-1/1)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/731">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

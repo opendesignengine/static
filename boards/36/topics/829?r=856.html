@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Testing Hall Effect Sensors - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-829-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Testing Hall Effect Sensors</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-09-14.html" title="09/14/2014 05:10 pm">about 8 years</a> ago</span></p>
+<div class="wiki">
+<p>So, I am finally ready to start working on Holoseat again.  I think the place to start is with .  To that end, I have added several links about Hall Effect sensors to the <a href="../../../projects/holoseat/wiki/Resources.html" class="wiki-page">Resources</a> page.  The main lessons I see from these links are:</p>
+
+
+	<ul>
+	<li>There are 3 types of Hall Effect sensors (digital reed switch, latching, and linear).  Watch the video on <a href="http://bildr.org/2011/04/various-hall-effect-sensors/" class="external">this page</a> to see the difference.  I think we should test out both the linear and the digital reed switch.  The linear is what we have been discussing, but the digital reed switch may work just we well for our purposes and require fewer code changes (depending on sensitivity).</li>
+		<li>Many of the demos display the responses of the Hall Effect sensors on real time plots.  This would be super helpful for testing out the behavior of the sensors before integrating into a new revision of the Holoseat.</li>
+	</ul>
+
+
+	<p>Proposed next steps:</p>
+
+
+	<ol>
+	<li>Order a small selection of Hall Effect sensors to compare behavior in lab setting</li>
+		<li>Set up lab tests for various combinations of Hall Effect sensors, magnets, and later pedal setups.  Possible tests include:
+	<ol>
+	<li>plotting sensor readings vs time</li>
+		<li>plotting RPM vs time based on field strength and based on digital reed switches</li>
+	</ol>
+	</li>
+		<li>Extend desktop client to report debug messages using v0.2 hardware (this lays the ground work for both integration testing and for live communication between the Holoseat controller and the desktop app)</li>
+		<li>Select single Hall Effect sensor design to replace reed switch and upgrade Holoseat</li>
+	</ol>
+
+
+	<p>After this, we can come back around to looking at adding a second Hall Effect sensor to calculate the direction of pedaling and start implementing reverse walking.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (7)</h3>
+
+  <div class="message reply" id="message-848">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="829%3Fr=848.html#message-848">RE: Testing Hall Effect Sensors</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-09-25.html" title="09/25/2014 06:02 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>I am jotting down some notes on how I am thinking of implementing step 2 above.  As I have been thinking about my last round of testing and how difficult selecting a decent sensor/magnet combination was, I realized what we need is a test rig that can spin a small wheel at a specified RPM so we have a known quantity we are measuring.  This gives us a repeatable and reliable test framework for evaluating sensor/magnet parings.  The following links/comments are my precursor to developing a block diagram and BOM for the test rig.</p>
+
+
+	<ul>
+	<li>Basic plan
+	<ul>
+	<li>Wooden frame</li>
+		<li>Stepper motor
+	<ul>
+	<li>Small wheel mounted horizontally
+	<ul>
+	<li>Small metal plate on wheel to attach magnets to</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>Arduino
+	<ul>
+	<li>Running <a href="http://www.airspayce.com/mikem/arduino/AccelStepper/ConstantSpeed_8pde-example.html" class="external">AccelStepper</a> to enable stepper motor to be run at user specified constant speed (see also <a href="http://forum.arduino.cc/index.php?topic=75202.0" class="external">this forum post</a> to see how steps can be converted to revolutions since this library uses steps/sec as input for speed setting) </li>
+		<li>Arduino also connected to the sensor under test</li>
+		<li>Arduino runs tests over various speeds commanded vs various speeds detected and reports them to control PC which <a href="http://arduino.stackexchange.com/questions/1180/serial-data-plotting-programs" class="external">plots</a> of commanded and sensed speeds vs time</li>
+	</ul>
+	</li>
+		<li>Use a <a href="http://www.amazon.com/CatEye-Cadence-Bicycle-Computer-CC-RD200/dp/B000R6QR2C" class="external">bike computer with cadence</a> to verify the stepper motor is running at commanded speeds</li>
+		<li>wooden mount for sensor under test with adjustable height so we can vary the distance between the sensor and the magnet</li>
+	</ul></li>
+	</ul>
+
+
+	<p>Plan to use old Arduino when I setup the actual test rig.  Will likely repurpose the test rig when we get to v0.3 prototype to use it to test actual commands sent from Holoseat to computer.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-856">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="829%3Fr=856.html#message-856">RE: Testing Hall Effect Sensors</a>
+    -
+    Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-09-26.html" title="09/26/2014 09:27 am">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Sounds like a good plan.  Nothing really to add to this.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-907">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="829%3Fr=907.html#message-907">RE: Testing Hall Effect Sensors</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-09.html" title="10/09/2014 07:28 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Some additional notes.</p>
+
+
+	<ul>
+	<li><a href="http://www.mouser.com/pdfdocs/Selecting-Hall-Effect-for-DC-Brushless-Motors.pdf" class="external">Article covering how to select a hall effect sensor</a> - one of the interesting points is a "sensitive" hall effect sensor is one that triggers at less than 60 Gauss, with an example high sensitive sensor triggering at 30 Gauss</li>
+		<li>This <a href="http://www.digikey.com/product-search/en?KeyWords=OH090U&#38;WT.z_header=search_go" class="external">digital reed switch</a> sensing range is 90G Trip, 65G Release, so not super sensitive, but might be worth testing to see what a more standard one is like</li>
+		<li>This <a href="http://www.digikey.com/product-detail/en/A1156LUA-T/620-1411-ND/2747096" class="external">digital reed switch</a> is more sensitive: 60G Trip, 10G Release</li>
+		<li>This <a href="http://moderndevice.com/product/a1324-hall-effect-sensor/" class="external">analog hall effect sensor</a> is shown in the video linked above, unfortunately it comes from a different vendor than the first two sensors</li>
+	</ul>
+
+
+	<p>A friend of Bryan's is using <a href="http://www.dx.com/p/hall-magnetic-sensor-module-for-arduino-dc-5v-135033#.VDcmzCldVCd" class="external">this sensor</a>.  Note, the spec sheet does not document its sensitivity, though comments indicate it is a digital reed switch style sensor.  The built-in LED is an interest touch for debugging, but I think we might be better off going with bare sensors and using plots and other debug data to indicate sensing state.  Worst case is we add an LED to the circuit like in the videos (this is probably what the sensor package is doing).</p>
+
+
+	<p>So, I think the next step is to do a BoM for the sensors (they need capacitors and resistors, etc) and then research about magnets.  I have some 1/4" x 1/16" neodymium ones at the house I will include in the tests, but I want to see if we can include a wider range of strengths and sizes.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-910">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="829%3Fr=910.html#message-910">RE: Testing Hall Effect Sensors</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-21.html" title="10/21/2014 08:35 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Bill of Materials (pt.1 - sensors)</p>
+
+
+	<table>
+		<tr>
+			<th>Part # </th>
+			<th style="text-align:left;">Description</th>
+			<th style="text-align:left;">Vendor (linked)</th>
+			<th style="text-align:right;">Unit Cost ($)</th>
+			<th style="text-align:right;">Qty</th>
+			<th style="text-align:right;">Total Cost ($)</th>
+		</tr>
+		<tr>
+			<td>TR 08    </td>
+			<td>90G Trip, 65G Release Sensor   </td>
+			<td><a href="http://www.digikey.com/product-search/en?KeyWords=OH090U&#38;WT.z_header=search_go" class="external">Digi-Key</a></td>
+			<td style="text-align:right;">1.80</td>
+			<td style="text-align:right;"> 3</td>
+			<td style="text-align:right;">5.40</td>
+		</tr>
+		<tr>
+			<td>TR 09    </td>
+			<td>60G Trip, 10G Release Sensor   </td>
+			<td><a href="http://www.digikey.com/product-detail/en/A1156LUA-T/620-1411-ND/2747096" class="external">Digi-Key</a></td>
+			<td style="text-align:right;">1.83</td>
+			<td style="text-align:right;"> 3</td>
+			<td style="text-align:right;">5.49</td>
+		</tr>
+		<tr>
+			<td>TR 10    </td>
+			<td>Analog Sensor   </td>
+			<td><a href="http://moderndevice.com/product/a1324-hall-effect-sensor/" class="external">Modern Device</a></td>
+			<td style="text-align:right;">2.75</td>
+			<td style="text-align:right;"> 3</td>
+			<td style="text-align:right;">8.25</td>
+		</tr>
+		<tr>
+			<td>TR 11    </td>
+			<td>750 Ohm Resistors Pack  </td>
+			<td>Radio Shack</td>
+			<td style="text-align:right;">~3.00</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">3.00</td>
+		</tr>
+		<tr>
+			<td>--       </td>
+			<td>Misc Hardware and Shipping            </td>
+			<td>--                                                                                   </td>
+			<td style="text-align:right;">15.00</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">15.00</td>
+		</tr>
+		<tr>
+			<td><strong>Total</strong>  </td>
+			<td>                          </td>
+			<td>                                                                                     </td>
+			<td style="text-align:right;">    </td>
+			<td style="text-align:right;">  </td>
+			<td style="text-align:right;"><strong>37.14</strong></td>
+		</tr>
+	</table></div>
+  
+  </div>
+
+  <div class="message reply" id="message-911">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="829%3Fr=911.html#message-911">RE: Testing Hall Effect Sensors</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-21.html" title="10/21/2014 08:55 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>On to magnets....</p>
+
+
+	<p>OK, so according to <a href="http://www.allegromicro.com/en/Design-Center/Technical-Documents/Hall-Effect-Sensor-IC-Publications/Unipolar-Hall-Effect-Sensor-IC-Basics.aspx" class="external">this page</a>, very strong magnets will not damage that vendor's hall effect sensors.  I am hoping that this is true of most vendor's sensors.</p>
+
+
+	<p>Found <a href="http://www.gaussboys.com/store/index.php/" class="external">this great site for purchasing magnets</a> (they include pull strength and surface gauss rating).  I am thinking we could buy a set of different size/strength magnets to test.  Possible examples include:</p>
+
+
+	<ul>
+	<li><a href="http://www.gaussboys.com/store/index.php/magnet-shapes/discs/d0602.html" class="external">6 mm diameter, 2 mm thick disc with 2 lb 7 oz pull strength</a></li>
+		<li><a href="http://www.gaussboys.com/store/index.php/magnet-shapes/discs/d0802.html" class="external">8 mm diameter, 2 mm thick disc with 4 lb pull strength</a></li>
+		<li><a href="http://www.gaussboys.com/store/index.php/magnet-shapes/discs/d1002.html" class="external">10 mm diameter, 2 mm thick with 5 lb 5 oz pull strength</a></li>
+		<li><a href="http://www.gaussboys.com/store/index.php/magnet-shapes/discs/d1502.html" class="external">15 mm diameter, 2 mm thick disc with 11 lb pull strength</a></li>
+		<li><a href="http://www.gaussboys.com/store/index.php/magnet-shapes/discs/d1806.html" class="external">18 mm diameter, 6 mm thick with 22 lb pull strength</a></li>
+	</ul>
+
+
+	<p>Ordering 5 of the first two, 3 of the next one, and 2 of the remaining ones, with shipping would cost $16.30 (ordering multiples in case some get lost, more of the smaller ones since they are easier to lose).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-991">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="829%3Fr=991.html#message-991">RE: Testing Hall Effect Sensors</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2015-06-29.html" title="06/29/2015 08:06 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Well, that's disappointing...  The gaussboys site has a busted SSL cert.  Will have to do some more shopping to find a magnet supplier.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-992">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="829%3Fr=992.html#message-992">RE: Testing Hall Effect Sensors</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2015-06-29.html" title="06/29/2015 08:28 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Trying <a href="https://www.kjmagnetics.com" class="external">K&#38;J Magnetics</a> instead.  Their SSL cert is valid and all of their traffic is encrypted.  Here are the updated selections.</p>
+
+
+	<ul>
+	<li>5 x <a href="https://www.kjmagnetics.com/proddetail.asp?prod=D42-N52" class="external">1/4 in dia. x 1/8 in thick, 2.85 lbs pull force [D42-N52]</a></li>
+		<li>5 x <a href="https://www.kjmagnetics.com/proddetail.asp?prod=D52-N52" class="external">5/16 in dia. x 1/8 in thick, 4.15 lbs pull force [D52-N52]</a></li>
+		<li>3 x <a href="https://www.kjmagnetics.com/proddetail.asp?prod=D62-N52" class="external">3/8 in dia. x 1/8 in thick, 5.46 lbs pull force [D62-N52]</a></li>
+		<li>2 x <a href="https://www.kjmagnetics.com/proddetail.asp?prod=DA2-N52" class="external">5/8 in dia. x 1/8 in thick, 10.15 lbs pull force [DA2-N52]</a></li>
+		<li>2 x <a href="https://www.kjmagnetics.com/proddetail.asp?prod=DC3-N52" class="external">3/4 in dia. x 3/16 in thick, 19.19 lbs pull force [DC3-N52]</a></li>
+	</ul>
+
+
+	<p>Total including shipping: $23.03</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-7/7)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/829.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

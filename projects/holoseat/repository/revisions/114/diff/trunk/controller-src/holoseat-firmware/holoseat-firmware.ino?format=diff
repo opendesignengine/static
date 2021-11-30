@@ -1,0 +1,225 @@
+Index: holoseat-firmware.ino
+===================================================================
+--- holoseat-firmware.ino	(revision 113)
++++ holoseat-firmware.ino	(revision 114)
+@@ -51,15 +51,7 @@
+ // Parameter values from holoseat_constants.h
+ char WalkForwardCharacter = DefaultWalkForwardCharacter;
+ char WalkBackwardCharacter = DefaultWalkBackwardCharacter;
+-unsigned int BaseTriggerCadence = 25;       // first interval for trigger cadence
+-unsigned int TriggerCadenceThreshold = 5;   // number of RPM above trigger cadence to step up
+-unsigned int CurrentTriggerCadence = BaseTriggerCadence;
+-unsigned long SlowSingleStepTime = 50;      // duration of keyboad event for a single step
+-unsigned long MediumSingleStepTime = 75;
+-unsigned long FastSingleStepTime = 100;
+-unsigned long CurrentSingleStepTime = SlowSingleStepTime;         
+-//unsigned int ForwardTriggerCadence = DefaultTriggerCadence;
+-//unsigned int BackwardTriggerCadence = DefaultTriggerCadence;
++float SingleStepTime;         
+ unsigned int LoggingEnabled = DefaultLoggingEnabled;
+ unsigned int LoggingInterval = DefaultLoggingInterval;
+ 
+@@ -72,16 +64,21 @@
+ 
+ // calculated values
+ float Cadence;                    // pedalling speed
++float DisplayCadence;             // displayed pedaling speed
++float PreviousCadence;            // previous pedaling speed, so we know when cadence changes
+ volatile float SensedDeltaT;      // deltaT as calculated during interrupt calls
+ volatile boolean WalkingForward;  // walking direction
++boolean PreviousWalkingForward;   // previous walking direction, so we know when cadence changes
++boolean PreviousWalking;
+ volatile boolean StepTriggered;   // have we had an unhandled step event?
+ 
+ // sensor data and functions
+-const int CadencePin = 3;                         // pin used to measure cadence
+-const int DirectionPin = 2;                       // pin to read direction
+-const int NumPoles = 18;                          // number of magnetic pole pairs on the tone ring
+-volatile unsigned long LastStepTime;              // last time the step sensor was triggered
+-volatile unsigned long LastWalkTime;              // last time walking was handled
++const int CadencePin = 3;                     // pin used to measure cadence
++const int DirectionPin = 2;                   // pin to read direction
++const int NumPoles = 18;                      // number of magnetic pole pairs on the tone ring
++float SinglePolePeriod;                       // number of seconds between poles at 1 RPM
++volatile unsigned long LastStepTime;          // last time the step sensor was triggered
++volatile unsigned long LastWalkTime;          // last time walking was handled
+ 
+ // common function to attach/detach interrupts
+ void EnableSensors(unsigned int enable) {
+@@ -105,45 +102,6 @@
+ // Logging data
+ volatile unsigned long LastLogTime;   // time since last log message was sent
+ 
+-// formats status string and sends to serial connection if available
+-// see https://opendesignengine.net/projects/holoseat/wiki/Software_Source_Code#HoloSeat-Serial-Protocol
+-// deprecated
+-void SendStateMessage_old() {
+-  if(!Serial) // if the serial port connection is not available, skip state message
+-    return;
+-  
+-  Serial.print(FirmwareVersionString);
+-  Serial.print(",");
+-  Serial.print(WalkForwardCharacter);
+-  Serial.print("(");
+-  Serial.print(DefaultWalkForwardCharacter);
+-  Serial.print("),");
+-  Serial.print(WalkBackwardCharacter);
+-  Serial.print("(");
+-  Serial.print(DefaultWalkBackwardCharacter);
+-  Serial.print("),");
+-  Serial.print(HoloseatEnabled);
+-  Serial.print("(");
+-  Serial.print(DefaultHoloseatEnabled);
+-  Serial.print("),");
+-  if (!WalkingForward)
+-    Serial.print("-");
+-  Serial.print(round(Cadence));
+-  Serial.print("/");
+-  Serial.print(CurrentTriggerCadence);
+-  Serial.print("(");
+-  //Serial.print(DefaultTriggerCadence);
+-  Serial.print(0);
+-  Serial.print("),");
+-  Serial.print(LoggingEnabled);
+-  Serial.print("(");
+-  Serial.print(DefaultLoggingEnabled);
+-  Serial.print(")/");
+-  Serial.print(LoggingInterval);
+-  Serial.print("(");
+-  Serial.print(DefaultLoggingInterval);
+-  Serial.println(")");
+-}
+ 
+ void SendStateMessage() {
+   const size_t bufferSize = JSON_OBJECT_SIZE(2);
+@@ -248,6 +206,7 @@
+ void LowlevelEventsGet(char * messageId) {
+   // send all of the event messages 
+   sendEnabledChangeEvent();
++  sendCadenceChangeEvent();
+   
+   const size_t bufferSize = JSON_OBJECT_SIZE(2);
+   DynamicJsonBuffer jsonBuffer(bufferSize);
+@@ -359,6 +318,25 @@
+   Serial.println();
+ }
+ 
++void sendCadenceChangeEvent() {
++  const size_t bufferSize = JSON_OBJECT_SIZE(5);
++  DynamicJsonBuffer jsonBuffer(bufferSize);
++
++  int walkDirection = 1;
++  if (!WalkingForward)
++    walkDirection = -1;
++
++  JsonObject& root = jsonBuffer.createObject();
++  root["messageId"] = "event";
++  root["type"] = "cadenceChange";
++  root["cadence"] = DisplayCadence;
++  root["direction"] = walkDirection;
++  root["stepTime"] = SingleStepTime;
++
++  root.printTo(Serial);
++  Serial.println();
++}
++
+ void loop() {
+   // read from enable button
+   debouncer.update();
+@@ -394,59 +372,35 @@
+   float deltaT = max(SensedDeltaT, localDeltaT)/1000; // in seconds
+   Cadence = round(60.0/deltaT/NumPoles);  // in RPM
+ 
+-  if (Cadence <= 10)
+-    CurrentSingleStepTime = SlowSingleStepTime;
+-  else if (Cadence <= 50)
+-    CurrentSingleStepTime = MediumSingleStepTime;
+-  else
+-    CurrentSingleStepTime = FastSingleStepTime;
++  float minCadence = 10.0;
++  DisplayCadence = Cadence>(minCadence-1)?Cadence:0.0;  // events skip from 1-19 RPM
++  SingleStepTime = min(200, (SinglePolePeriod / max(minCadence,Cadence)) * 1000);  // the "* 1000" is to convert from sec to ms
+ 
++  if ((DisplayCadence != PreviousCadence) || (WalkingForward != PreviousWalkingForward))
++    sendCadenceChangeEvent();
++
+   if (StepTriggered) {
+     LastWalkTime = currentTime;
+     SelectKeyBasedOnDirection();
+   }
+     
+-  boolean stillWalking = (currentTime - LastWalkTime) <= CurrentSingleStepTime;
++  boolean walking = (currentTime - LastWalkTime) <= SingleStepTime;
+ 
+   // if we have not seen a step in time, trigger key release
+-  if (!stillWalking) {
++  if (!walking) {
+     DesiredPressedKey = 0;
+-    CurrentSingleStepTime = SlowSingleStepTime;
++    if (PreviousWalking && (Cadence > minCadence)) {
++      SensedDeltaT = 10000;
++      LastStepTime = millis() - SensedDeltaT;
++    }
+   }
+ 
+   StepTriggered = false;
+   PressDesiredKey();
+ 
+-/*
+-  // handle single stepping: single keypress for each cadence event while cadence
+-  // is below BaseTriggerCadence
+-  if (Cadence < BaseTriggerCadence) {
+-    if (StepTriggered) {  // if a step was triggered, do 1 step
+-      SelectKeyBasedOnDirection();
+-      PressDesiredKey();
+-      delay(100);  // approximate pressing and releasing the key
+-    }
+-  }
+-
+-  // calculate CurrentTriggerCadence and handle general walking
+-  if (Cadence >= CurrentTriggerCadence) {   // only adjust trigger cadence when we pedal faster
+-    unsigned int cadenceLevel = Cadence / BaseTriggerCadence;  // e.g. 36 / 15 == 2
+-    unsigned int newTriggerCadence = cadenceLevel * BaseTriggerCadence;
+-    if (Cadence >= (newTriggerCadence + TriggerCadenceThreshold))
+-      CurrentTriggerCadence = newTriggerCadence;  // set new trigger cadence if we meet or exceed threshold
+-
+-    // we know Cadence is fast enough, so select direction
+-    SelectKeyBasedOnDirection();
+-  }
+-  else {  // Cadence is not fast enough, will trigger
+-          // release of key for single step or general walking
+-    DesiredPressedKey = 0;
+-    CurrentTriggerCadence = BaseTriggerCadence;
+-    StepTriggered = false;
+-  }
+-
+-  PressDesiredKey();
+-*/
++  PreviousCadence = DisplayCadence;
++  PreviousWalkingForward = WalkingForward;
++  PreviousWalking = walking;
+   
+   // re-enbale the interrupts now that we are done
+   EnableSensors(true);
+@@ -484,13 +438,17 @@
+ // resets walking state variables, used when holoseat is disabled
+ void InitializeWalkingVariables() {
+   Keyboard.releaseAll();
++  SinglePolePeriod = (60.0/360.0) * (360.0/(NumPoles - 2));  // (period in sec/deg @ 1 RPM) * (deg/pole) gives period for 1 pole @ 1 RPM
+   Cadence = 0.0;
+-  CurrentTriggerCadence = BaseTriggerCadence;
++  DisplayCadence = 0.0;
++  PreviousCadence = 0.0;
+   StepTriggered = false;
+   WalkingForward = true;
+-  SensedDeltaT = 5000;            // initialize sensed deltaT (and the value used to compute it, LastStepTime) to 5 seconds in the past
+-  LastStepTime = millis() - 5000; // as above
+-  LastWalkTime = LastStepTime;    // as above
++  PreviousWalkingForward = true;
++  PreviousWalking = false;
++  SensedDeltaT = 10000;                   // initialize sensed deltaT (and the value used to compute it, LastStepTime) to 10 seconds in the past
++  LastStepTime = millis() - SensedDeltaT; // as above
++  LastWalkTime = LastStepTime;            // as above
+   CurrentPressedKey = 0;
+   DesiredPressedKey = 0;
+ }

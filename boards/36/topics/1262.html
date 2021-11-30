@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Holoseat Firmware Microservices - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1262-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Holoseat Firmware Microservices</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-03-26.html" title="03/26/2017 11:41 am">over 5 years</a> ago</span></p>
+<div class="wiki">
+<p>I have been reading about microservices and how they can be used to isolate functions to make code easier to maintain and develop. Below are some thoughts on how the v0.4 Holoseat firmware could be organized into microservices to separate out the hardware interfaces from the game playing logic.  Additionally, this would allow us to isolate the web UI from all of the other modules to hopefully make it more resilient so the user will always have access to the UI.</p>
+
+
+	<p><a href="../../../dmsf_files/650%3Fdownload="><img src="../../../dmsf_files/651%3Fdownload=" alt="" /></a></p>
+
+
+	<a name="Description-of-the-Microservices"></a>
+<h2 >Description of the Microservices<a href="1262.html#Description-of-the-Microservices" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>UI - implements REST API to review and control Holoseat state and renders the single page application that users interact with from the Configuration Apps on their PCs or from phones/tablets.  The UI interacts with all other microservices to be a service aggregator.
+	<ul>
+	<li>Data - tbd</li>
+		<li>Service endpoints
+	<ul>
+	<li>Enable button events</li>
+		<li>Tbd from other service end points and UI needs</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>Player - manages all of the game play logic.  For example, the Player service determines if the current cadence (as sent by the Pedaler service) is fast enough to trigger walking.  The Player service also determines what HID input to send to the game (e.g 'w' or forward access) when the walking event occurs.  Finally, the Player service is also responsible for passing through (e.g. user pressed 'a' which is passed through to the game as an 'a') and mappping signals (e.g. user pressed left on the analog stick which is mapped to an 'a' sent to the game) from upstream peripherals, which may include masking some peripheral inputs (e.g mask 'w' keys from keyboard) in favor of events from the pedaler
+	<ul>
+	<li>Data - tbd</li>
+		<li>Service endpoints
+	<ul>
+	<li>cadence events (direction, cadence)</li>
+		<li>hid kb/mouse events</li>
+		<li>hid joypad events</li>
+		<li>Enable messages</li>
+		<li>Report current state</li>
+		<li>Set Mappings (in blob and individually)</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>Pedaler - listens to sensor inputs to calculate the cadence and direction.  It sends the cadence and direction to the Player service.  The Pedaler also interacts with the Enable button, sending and recieving messages to the UI service about the Enable button
+	<ul>
+	<li>Data - no stored data (has constants for various physical configuration data</li>
+		<li>Service endpoints
+	<ul>
+	<li>Enable messages</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>HID KB/Mouse In - attaches to keyboard and mouse events with the OS and forwards those events to the Player service for processing 
+	<ul>
+	<li>Data - tbd</li>
+		<li>Service endpoints
+	<ul>
+	<li>Peripheral status - do we have a kb or mouse attached?</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>HID Joypad In - attaches to joypad events with the OS and forwards those events to the Player service
+	<ul>
+	<li>Data - mappings of joypads to internal joypad model (to connect events from specific joypad drivers to Holoseat joypad events</li>
+		<li>Service endpoints 
+	<ul>
+	<li>CRUD for joypad mappings data</li>
+		<li>Select joypad mapping (unless we can auto detect the joypad)</li>
+		<li>Peripheral status - do we have a joypad attached and if so what kind?</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>HID KB/Mouse Out - identifies the Holoseat Controller as a keyboard and mouse to the OS and sends keyboard and mouse events to the OS when signaled to do so
+	<ul>
+	<li>Data - thd</li>
+		<li>Service endpoints- tbd</li>
+	</ul>
+	</li>
+		<li>HID Joypad Out - identifies the Holoseat Controller as a joypad to the OS and sends joypad events to the Os when signaled to
+	<ul>
+	<li>Data - thd</li>
+		<li>Service endpoints- tbd</li>
+	</ul>
+	</li>
+		<li>(Missing in diagram) Mappings Manager - stores and manages all of the mapping data used by the Player service to make decisions (note, the UI sends the currently requested mapping data to the Player service to maintain a separation between services (the Player should only know about the input and output streams it works with to enable game play)
+	<ul>
+	<li>Data - mappings and event triggers by user and by game (e.g. John's joypad to keyboard mapping and cadence trigger speeds for swtor</li>
+		<li>Service endpoints
+	<ul>
+	<li>CRUD for users and their game mappings</li>
+	</ul></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Minimal-Implementation-to-Recreate-v03-Features"></a>
+<h2 >Minimal Implementation to Recreate v0.3 Features<a href="1262.html#Minimal-Implementation-to-Recreate-v03-Features" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Some elements of UI Service (access to Mappings service and current state info)</li>
+		<li>Basic Player - no hid events</li>
+		<li>Pedaler</li>
+		<li>HID KB/mouse out - Keyboard out only</li>
+		<li>Basic mapping service - always returns and stores for hard coded user and game (default:default) and only maps cadence and forward/backward characters</li>
+	</ul>
+
+
+	<a name="Data-storage"></a>
+<h2 >Data storage<a href="1262.html#Data-storage" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Not mongo, too heavy for embedded systems</li>
+		<li>Maybe
+	<ul>
+	<li>JSON files on disk</li>
+		<li><a href="https://github.com/Level/levelup" class="external">Level Up</a> (JSON keys, user:game, and data, mappings)</li>
+	</ul></li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1262.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

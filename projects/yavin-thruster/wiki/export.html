@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Yavin Thruster</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+
+<strong>Index by title</strong>
+<ul>
+
+    <li><a href="export.html#Backers">Backers</a></li>
+
+    <li><a href="export.html#Export_Control_Review">Export Control Review</a></li>
+
+    <li><a href="export.html#Initial_Questions">Initial Questions</a></li>
+
+    <li><a href="export.html#Media">Media</a></li>
+
+    <li><a href="export.html#Meeting_Minutes">Meeting Minutes</a></li>
+
+    <li><a href="export.html#Resources">Resources</a></li>
+
+    <li><a href="export.html#Sidebar">Sidebar</a></li>
+
+    <li><a href="export.html#Wiki">Wiki</a></li>
+
+</ul>
+
+
+<hr />
+<a name="Backers" />
+<a name="Yavin-Backers"></a>
+<h1 >Yavin Backers<a href="export.html#Yavin-Backers" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Mach 30 wishes to thank the following individuals and corporations for their support of the Yavin Thruster.  Click the Donate button below to join them.</p>
+
+
+	<p><em>insert paypal donate button</em></p>
+
+
+	<ul>
+	<li><em>backers here</em></li>
+	</ul>
+
+<hr />
+<a name="Export_Control_Review" />
+<a name="Export-Control-Review"></a>
+<h1 >Export Control Review<a href="export.html#Export-Control-Review" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>This review uses Mach 30's draft <a href="https://docs.google.com/document/d/1GnT5CLXZBoSRHVLcsWU3-tOUXXcInvZHPFFrOJri3GY/pub" class="external">Export Control Review Process</a>. The <a href="http://mach30.org/activites/oshw-community-support/ectf/" class="external">Export Control Task Force</a> (ECTF) is responsible for the shape of and guidance through the review process.  The project team is responsible for using the review process.</p>
+
+
+	<a name="1-Define-the-project-and-related-topics-in-writing-for-future-reference"></a>
+<h2 >1. Define the project and related topics in writing for future reference<a href="export.html#1-Define-the-project-and-related-topics-in-writing-for-future-reference" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Goals
+	<ol>
+	<li>What is the vision of the project?<br />The Yavin Thruster will be used at at universities across the country to bring hands on experiences into their propulsion courses and by Mach 30 to demonstrate rocket propulsion as part of its educational and outreach goals.</li>
+		<li>What ultimate purpose does it serve?<br />To facilitate the education of Mach 30 volunteers,undergraduate aerospace and high level high school students in Newton's laws of motion and rocket propulsion (f = ma, fundamental performance characteristics, fundamental design parameters) in a laboratory setting with instructor involvement. Unit will be able to be built with commonly available components and 3D printed parts.</li>
+		<li>How does it fit into Mach 30’s strategy?<br />Continued evolution of Mach30's R&#38;D capabilities in rocket propulsion introducing propulsion system design in addition to the testing capabilities provided by the Shepard Test Stand.</li>
+		<li>To what use will the results of the project be put?<br />It will be the one half of a rocket propulsion educational kit, expanding Mach30's portfolio of open source spaceflight hardware projects. </li>
+	</ol>
+	</li>
+		<li>Technologies
+	<ol>
+	<li>What is the core technology the project will work on?<br />"A cold gas thruster is a rocket engine/thruster that uses a (typically inert) gas as the reaction mass" to propel the thruster and associated craft in a particular direction using Newton's three laws of motion. (<a href="https://en.wikipedia.org/wiki/Cold_gas_thruster" class="external">Wikipedia, 2015</a> ) Undergraduate level rocket propulsion, structural mechanics, pneumatic controls, basic embedded systems instrumentation and control are all subsidiary enabling technologies.</li>
+		<li>What other technologies are necessary to accomplish that work?<br />3D printing, parametric CAD</li>
+		<li>What words would an expert use to describe these technologies?
+	<ol>
+	<li>Rocket Propulsion</li>
+		<li>Additive manufacturing</li>
+		<li>Pneumatic controls</li>
+		<li>Embedded systems</li>
+		<li>Instrumentation and control</li>
+		<li>Parametric CAD</li>
+		<li>Cold gas thruster</li>
+	</ol>
+	</li>
+		<li>What words would an average person use to describe these technologies?
+	<ol>
+	<li>Rockets</li>
+		<li>3D Printing</li>
+		<li>Pneumatics</li>
+		<li>Arduino</li>
+		<li>Sensors, valves, and actuators</li>
+		<li>CAD</li>
+	</ol>
+	</li>
+	</ol>
+	</li>
+		<li>Inputs and Outputs
+	<ol>
+	<li>What are the project’s major milestones?
+	<ol>
+	<li>Formal EC review</li>
+		<li>Structural analysis of pressure vessel as a Python library. The library should be tested in MTK, producing a document verifying the library. The design should then be implemented in CADQuery.</li>
+		<li>Model threaded connection for nozzle to cold gas source in CADQuery</li>
+		<li>3D Printed PLA properties test to verify that the material will hold up under pressure.</li>
+		<li>Develop Yavin required calibration process for 3D printers to ensure optimal print quality in PLA. The process will be tested by verifying that it works successfully on another printer.</li>
+		<li>Define the bell nozzle contour as a Python library. The library should be tested in MTK, producing a document verifying the library. The design should then be implemented in CADQuery.</li>
+		<li>Replicate cold gas thruster design case from Space Propulsion Analysis and Design (SPAD) as a Python library. The library should be tested in MTK, producing a document verifying the library. The design should then be implemented in CADQuery (use an assumed thickness and a conical nozzle).</li>
+		<li>Run a Mach 30 volunteer's 3D printer through at least 1 published calibration test and document results in a short report</li>
+	</ol>
+	</li>
+		<li>What previous projects does this one build off of?<br />Shepard Test Stand</li>
+		<li>What future projects will build off of this one?<br />Next generation educational rocket test stand. It will be the one half of a rocket propulsion educational kit referenced in question 1.4 above.</li>
+		<li>Does this project make use of any specialized, pre-existing knowledge?<br />Undergraduate and graduate level rocket propulsion technologies as published in commonly available textbooks such as:
+	<ol>
+	<li>Sellers, Jerry Jon, and William J. Astore. <em>Understanding Space: An Introduction to Astronautics.</em> 3rd ed. New York: McGraw-Hill Companies, 2005.</li>
+		<li>Henry, Gary N. <em>Space Propulsion Analysis and Design.</em> "SPAD" New York: McGraw-Hill, 1995.</li>
+		<li>Thomson, William Tyrrell. <em>Introduction to Space Dynamics.</em> New York: Dover, 1986.</li>
+		<li>Ruiter, Anton H. J., and Christopher Damaren. <em>Spacecraft Dynamics and Control: An Introduction.</em> New York: Wiley, 2013.</li>
+		<li>Wertz, James Richard. <em>Spacecraft Attitude Determination and Control.</em> Dordrecht: Kluwer Academic Publishers, 1994.</li>
+	</ol>
+	</li>
+		<li>Does this project have any measurable or tangible outcomes?<br />Enables the development of the rocket propulsion education kit referenced in 1.4 above. </li>
+	</ol>
+	</li>
+		<li>Keywords
+	<ol>
+	<li>What keywords/phrases summarize the previous answers?
+	<ol>
+	<li>Rocket</li>
+		<li>Propulsion</li>
+		<li>Cold gas </li>
+		<li>Nozzle</li>
+		<li>Thruster</li>
+		<li>Reaction</li>
+		<li>Thrust</li>
+		<li>RCS</li>
+		<li>CGT</li>
+	</ol>
+	</li>
+		<li>What additional keywords/phrases are relevant?
+	<ol>
+	<li>CAD</li>
+		<li>Parametric</li>
+		<li>Valve</li>
+	</ol>
+	</li>
+		<li>Put those keywords into a thesaurus; what other relevant keywords appear?
+	<ol>
+	<li>Booster</li>
+		<li>Impulse</li>
+	</ol></li>
+	</ol></li>
+	</ol>
+
+
+	<a name="2-Research-the-project’s-relationship-to-relevant-EC"></a>
+<h2 >2. Research the project’s relationship to relevant EC<a href="export.html#2-Research-the-project’s-relationship-to-relevant-EC" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>USML
+	<ol>
+	<li>Follow the DDTC’s <a href="http://pmddtc.state.gov/licensing/dt_OrderofReview.htm" class="external">Order of Review Decision</a> tool<br /><strong>No hits</strong></li>
+		<li>Run all keywords identified in the previous steps through the text of the <a href="https://www.pmddtc.state.gov/regulations_laws/documents/official_itar/ITAR_Part_121.pdf" class="external">USML</a></li>
+		<li>Run all keywords, along with words like “ITAR”, “USML” and “export control” through Google</li>
+	</ol>
+	</li>
+		<li>CCL
+	<ol>
+	<li>Run all keywords identified in the previous step through the text of the CCL</li>
+		<li>Run all keywords, along with words like “EAR”, “CCL” and “export control” through Google</li>
+	</ol>
+	</li>
+		<li>MTCR
+	<ol>
+	<li>Run all keywords identified in the previous step through the text of the MTCR</li>
+		<li>Run all keywords, along with words like “MTCR” and “export control” through Google</li>
+	</ol></li>
+	</ol>
+
+
+	<p><strong>All searches outlined above are documented in the <a href="https://docs.google.com/spreadsheets/d/1iFwZptc3YqgfzRV9eH6YTZB_QCIHb8fgPCLb9BT8HCc/edit?usp=sharing" class="external">linked spreadsheet</a></strong></p>
+
+
+	<a name="3-Document-findings"></a>
+<h2 >3. Document findings<a href="export.html#3-Document-findings" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Summarize the topic(s) that are explicitly mentioned in EC regulations and/or professional analysis/discussion of EC regulations<br /><strong>The use of a cold gas thruster not designed for use is a specific vehicle in testing and education is not explicitly mentioned and/or is exempt from all known export control regulations; distribution unlimited.</strong></li>
+		<li>Explain any additional concerns<br /><strong>None</strong></li>
+		<li>List searches and terms that turned up no relevant results
+	<ol>
+	<li>Cold gas</li>
+		<li>Nozzle</li>
+		<li>Reaction</li>
+		<li>Thrust</li>
+		<li>Valve</li>
+		<li>RCS</li>
+		<li>CGT</li>
+		<li>CAD</li>
+		<li>Rocket</li>
+		<li>Propulsion</li>
+		<li>Parametric</li>
+	</ol></li>
+	</ol>
+
+
+	<a name="4-Triggers"></a>
+<h2 >4. Triggers<a href="export.html#4-Triggers" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>If possible, define any measurable limits the project cannot cross and an appropriate margin for error<br /><strong>Once Yavin designs and/or technologies are used in a launch vehicle or spacecraft, it becomes export controlled under both ITAR and the EAR.</strong></li>
+		<li>Specify, or guess at, any future dates when relevant information is expected to be become available<br /><strong>N/A</strong></li>
+		<li>Maintain a clear distinction between information used as-is and any changes, additions, derivations, etc added by Mach 30<br /><strong>Provided the CGT technologies are not used on aircraft, launch vehicles, or spacecraft, no restrictions are known to exist.</strong></li>
+	</ol>
+
+
+	<a name="5-Reevaluate-if-a-trigger-is-flipped"></a>
+<h2 >5. Reevaluate if a trigger is flipped.<a href="export.html#5-Reevaluate-if-a-trigger-is-flipped" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Repeat this process if there are any major changes to the project. Update this report at each major milestone.</p>
+
+<hr />
+<a name="Initial_Questions" />
+<a name="Yavin-Thruster-Initial-Questions-v01"></a>
+<h1 >Yavin Thruster Initial Questions v0.1<a href="export.html#Yavin-Thruster-Initial-Questions-v01" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="export.html#Yavin-Thruster-Initial-Questions-v01">Yavin Thruster Initial Questions v0.1</a><ul><li><a href="export.html#Project-Background-Questions">Project Background Questions</a><ul><li><a href="export.html#BQ1-Why-are-we-making-this">BQ1. Why are we making this?</a></li><li><a href="export.html#BQ2-Who-is-this-for">BQ2. Who is this for?</a></li><li><a href="export.html#BQ3-How-will-this-be-used">BQ3. How will this be used?</a></li><li><a href="export.html#BQ4-Whos-going-to-build-this">BQ4. Who's going to build this?</a></li></ul>
+</li><li><a href="export.html#Technical-Requirement-Questions">Technical Requirement Questions</a><ul><li><a href="export.html#TQ1a-What-features-does-it-need-to-have-now">TQ1a. What features does it need to have (now)?</a></li><li><a href="export.html#TQ1b-What-features-does-it-need-to-have-later">TQ1b. What features does it need to have (later)?</a></li><li><a href="export.html#TQ2-What-are-the-legacy-requirements">TQ2. What are the legacy requirements?</a></li></ul>
+</li><li><a href="export.html#Project-Requirement-Questions">Project Requirement Questions</a><ul><li><a href="export.html#PQ1-How-many-do-we-want-to-make">PQ1. How many do we want to make?</a></li><li><a href="export.html#PQ2-What-is-the-budget">PQ2. What is the budget?</a></li><li><a href="export.html#PQ3-What-is-the-timeline">PQ3. What is the timeline?</a></li><li><a href="export.html#PQ4-What-waste-products-will-be-produced-by-the-manufacture-andor-operation-of-this">PQ4. What waste products will be produced by the manufacture and/or operation of this?</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Project-Background-Questions"></a>
+<h2 >Project Background Questions<a href="export.html#Project-Background-Questions" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="BQ1-Why-are-we-making-this"></a>
+<h3 >BQ1. Why are we making this?<a href="export.html#BQ1-Why-are-we-making-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>BA1</strong>. To create an educational project which combines both propulsion design and testing.  In combination with the Shepard Test Stand technology yields a full turnkey package.</p>
+
+
+	<a name="BQ2-Who-is-this-for"></a>
+<h3 >BQ2. Who is this for?<a href="export.html#BQ2-Who-is-this-for" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>BA2.</strong> Undergraduate aerospace and high level high school students and Mach30 Volunteers.</p>
+
+
+	<a name="BQ3-How-will-this-be-used"></a>
+<h3 >BQ3. How will this be used?<a href="export.html#BQ3-How-will-this-be-used" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>BA3</strong>. Demonstrate fundamentals of propulsion systems design and testing of a cold gas thruster to include thrust, specific impulse, expansion ratio, chamber pressure, throat area, and controls.</p>
+
+
+	<a name="BQ4-Whos-going-to-build-this"></a>
+<h3 >BQ4. Who's going to build this?<a href="export.html#BQ4-Whos-going-to-build-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>BA4.</strong>  Mach30 volunteers,undergraduate aerospace and high level high school students with instructor involvement. Unit will be able to be built with commonly available components and 3D printed parts.</p>
+
+
+	<a name="Technical-Requirement-Questions"></a>
+<h2 >Technical Requirement Questions<a href="export.html#Technical-Requirement-Questions" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="TQ1a-What-features-does-it-need-to-have-now"></a>
+<h3 >TQ1a. What features does it need to have (now)?<a href="export.html#TQ1a-What-features-does-it-need-to-have-now" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>TA1a.</strong> <em>The project needs to:</em></p>
+
+
+	<ul>
+	<li>The thruster components from expansion chamber to nozzle are modular to allow experimentation and projects to be tested using the same hardware and parameters.</li>
+		<li>Includes a set of sample CAD models for modification (templates)</li>
+		<li>Gas flow must include a tank of fixed volume, pressure gauge, electrically actuated valve, and timing circuit to make comparison of designs possible.</li>
+		<li>Must be operable indoors</li>
+		<li>Control system must be integrated with test stand controls to synchronize operation with testing.</li>
+	</ul>
+
+
+	<a name="TQ1b-What-features-does-it-need-to-have-later"></a>
+<h3 >TQ1b. What features does it need to have (later)?<a href="export.html#TQ1b-What-features-does-it-need-to-have-later" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>TA1b.</strong> <em>In the future, the project (or related projects) may need to:</em></p>
+
+
+	<ul>
+	<li>Variable gas flow for throttling</li>
+		<li>Variable time valve operation for pulse width modulation and flow characteristics.</li>
+		<li>Demonstrate ideal expansion, under- and overexpansion characteristics.  This may require flow visualization capability (schlieren and/or CO2 vapor)</li>
+	</ul>
+
+
+	<a name="TQ2-What-are-the-legacy-requirements"></a>
+<h3 >TQ2. What are the legacy requirements?<a href="export.html#TQ2-What-are-the-legacy-requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>TA2.</strong> <em>To maintain compatibility with other projects, the system should:</em></p>
+
+
+	<ul>
+	<li>Adaptable to Shepard Test Stand with minimum modifications (ideally just swapping the motor mount at first)</li>
+	</ul>
+
+
+	<a name="Project-Requirement-Questions"></a>
+<h2 >Project Requirement Questions<a href="export.html#Project-Requirement-Questions" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="PQ1-How-many-do-we-want-to-make"></a>
+<h3 >PQ1. How many do we want to make?<a href="export.html#PQ1-How-many-do-we-want-to-make" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>PA1.</strong> For V0.1, there should be at least two units built to demonstrate repeatability.  For V1.0, since this is an easily constructed device with a strong educational component, it should be offered as a kit and would ideally see adoption into the curricula of many educational institutions as well as many interested private parties including Mach30 volunteers.</p>
+
+
+	<a name="PQ2-What-is-the-budget"></a>
+<h3 >PQ2. What is the budget?<a href="export.html#PQ2-What-is-the-budget" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>PA2.</strong> $850.00 for complete V0.1 per Mach30 2015 budget.</p>
+
+
+	<a name="PQ3-What-is-the-timeline"></a>
+<h3 >PQ3. What is the timeline?<a href="export.html#PQ3-What-is-the-timeline" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>PA3.</strong> Complete and demonstrated by the end of calendar year 2015.</p>
+
+
+	<a name="PQ4-What-waste-products-will-be-produced-by-the-manufacture-andor-operation-of-this"></a>
+<h3 >PQ4. What waste products will be produced by the manufacture and/or operation of this?<a href="export.html#PQ4-What-waste-products-will-be-produced-by-the-manufacture-andor-operation-of-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>PA4.</strong> Plastic scraps and 3D printed experimental components.  Note that if PLA is used, these waste products will be biodegradable.</p>
+
+<hr />
+<a name="Media" />
+<a name="Media"></a>
+<h1 >Media<a href="export.html#Media" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="export.html#Media">Media</a><ul><li><a href="export.html#OHS-2015-Presentation">OHS 2015 Presentation</a></li></ul></li></ul>
+
+
+	<a name="OHS-2015-Presentation"></a>
+<h2 >OHS 2015 Presentation<a href="export.html#OHS-2015-Presentation" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><em>insert presentation video here</em></p>
+
+<hr />
+<a name="Meeting_Minutes" />
+<a name="Yavin-Meeting-Minutes"></a>
+<h1 >Yavin Meeting Minutes<a href="export.html#Yavin-Meeting-Minutes" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="export.html#Yavin-Meeting-Minutes">Yavin Meeting Minutes</a><ul><li><ul><li><a href="export.html#Sprint-1">Sprint 1</a></li><li><a href="export.html#Sprint-2">Sprint 2</a></li><li><a href="export.html#Sprint-3">Sprint 3</a></li></ul></li></ul></li></ul>
+
+
+	<p><a href="https://docs.google.com/spreadsheets/d/1MQlgkqkl00CoK-mzC6KOVvsz3fwD8jj-vcdJk0DwwVI/pubhtml" class="external">Sprint Planning Document</a> (perpetually updated)</p>
+
+
+	<a name="Sprint-1"></a>
+<h3 >Sprint 1<a href="export.html#Sprint-1" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="https://docs.google.com/document/d/1LZesRXDzq6UasLzEzNV0UsPFjv0JznaDHqTOuPulDtk/pub" class="external">Planning Meeting 1</a></li>
+		<li><a href="https://docs.google.com/document/d/16lZVJTAGgkhTVlaTN8BL-FRt0iuT9kbf4gD7TfmCL4w/pub" class="external">Planning Meeting 2</a></li>
+		<li><a href="https://docs.google.com/document/d/1KFfrenz-hjIxi8USpebxpYRiX4KNLYx-zRA11O2m_Ak/pub" class="external">Stand Up 1</a></li>
+		<li><a href="https://docs.google.com/document/d/1zBuolm1so_Zff3TXWXvZWjsg2EuL2uCp5eRatVeXpHE/pub" class="external">Stand Up 2</a></li>
+		<li><a href="https://docs.google.com/document/d/1Lmm4Rkx5SLh5590cQqgRJWNg0cTSNcgjuzQPSL6XFJU/pub" class="external">Stand Up 3</a></li>
+		<li><a href="https://docs.google.com/document/d/1Lmm4Rkx5SLh5590cQqgRJWNg0cTSNcgjuzQPSL6XFJU/pub" class="external">Stand Up 4</a></li>
+		<li><a href="https://docs.google.com/document/d/1lZFDor6W96Mhj2UWf1HDVC8unnIK-5WdzuRzycrJcPU/pub" class="external">Stand Up 5</a></li>
+		<li><a href="https://docs.google.com/document/d/1LBCvUxAd9xK_iLLt3A9b7LJFnUmBPwVFZN942gV2QBs/pub" class="external">Stand Up 6 and Sprint Review</a></li>
+		<li><a href="https://docs.google.com/document/d/17mj1SAiN7I47w9UheNEhq59GVXih8_kAaX87i-cqOZw/pub" class="external">Backlog Grooming</a></li>
+	</ul>
+
+
+	<a name="Sprint-2"></a>
+<h3 >Sprint 2<a href="export.html#Sprint-2" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="https://docs.google.com/document/d/15WQAgErReGtJ53Krs6hJAhqi1sTPMVlNQJFtkvXuUKE/pub" class="external">Sprint Planning</a></li>
+		<li><a href="https://docs.google.com/document/d/1fnjWiqtP2TSlIJfdXj9zT1rgbprv9kSi73btBNJBd-E/pub" class="external">Stand Up 1</a></li>
+		<li><a href="https://docs.google.com/document/d/1RcqVwvaUI2TjFhqCYtapBCb3fx8TQFMMYWUlUn4flXo/pub" class="external">Stand Up 2</a></li>
+		<li><a href="https://docs.google.com/document/d/1jpXUI8GLCzRWtPyCtWTGVHgzQ797EkBMA1_SMk2vjQI/pub" class="external">Stand Up 3</a></li>
+		<li>Stand Up 4</li>
+		<li><a href="https://docs.google.com/document/d/11BkpOyYiDye9xN4karAVdQfUaRP_oYswBvCiqwdldr0/pub" class="external">Stand Up 5</a></li>
+		<li><a href="https://docs.google.com/document/d/1nyGGT9p8DfyDttIEltRextcTiAj9tdVEosQhVs7bt3Y/pub" class="external">Stand Up 6 and Sprint Review</a></li>
+		<li><a href="https://docs.google.com/document/d/1YZKjN0so3CnQAi_7p9gVvZpQXZAjL50IkVumDFcYraQ/pub" class="external">Backlog Grooming</a></li>
+	</ul>
+
+
+	<a name="Sprint-3"></a>
+<h3 >Sprint 3<a href="export.html#Sprint-3" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="https://docs.google.com/document/d/1PTonYRlaDBZb4vpNCkZKSO1KUExl2yxgBrQ2cowXt4c/pub" class="external">Sprint Planning</a></li>
+		<li><a href="https://docs.google.com/document/d/1zfs5v5OJTJVVjGZEMPrqKsLxKoIM2D5QFW7YmXhttz4/pub" class="external">Stand Up 1</a></li>
+		<li><a href="https://docs.google.com/document/d/1ETHLRPY5i7Bo0B_9x1KVSDhf21D-2YiuxmnPpek_uDU/pub" class="external">Stand Up 2</a></li>
+		<li><a href="https://docs.google.com/document/d/1mlvW0HSsBLiL5m8ZrmRDvrGX180CDzFCS3AoYDXPKyE/pub" class="external">Stand Up 3</a></li>
+		<li><a href="https://docs.google.com/document/d/1TtUeiyGE56xHWS4BQ2hCuZhJmdZot7F2ZdlmxpawEvc/pub" class="external">Stand Up 4</a></li>
+		<li><a href="https://docs.google.com/document/d/12IaGAevWIR3fT3i9XwbwAlBaHHwZhA_NNbwodv9a4iQ/pub" class="external">Stand Up 5</a></li>
+		<li><a href="https://docs.google.com/document/d/10R04IQNpdy3P_sOJrhqhdBShhk-4Z2dZcr7-FFMHc74/pub" class="external">Stand Up 6 and Sprint Review</a></li>
+		<li>Backlog Grooming</li>
+	</ul>
+
+
+	<ul>
+	<li>End of Sprint Presentation</li>
+		<li>Retrospective</li>
+	</ul>
+
+<hr />
+<a name="Resources" />
+<a name="Resources"></a>
+<h1 >Resources<a href="export.html#Resources" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="Propulsion-Links"></a>
+<h2 >Propulsion Links<a href="export.html#Propulsion-Links" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Cold Gas Thrusters
+	<ul>
+	<li><a href="http://www.lr.tudelft.nl/en/organisation/departments/space-engineering/space-systems-engineering/expertise-areas/space-propulsion/propulsion-options/chemical-rockets/cold-gas/" class="external">Cold gas systems</a>, from <a href="http://www.lr.tudelft.nl/en/" class="external">TU Delft Aerospace Engineering Department</a></li>
+		<li><a href="http://psas.pdx.edu/" class="external">Portland State Aerospace Society</a> Cold Gas Thruster RCS for Roll Control
+	<ul>
+	<li><a href="http://hackaday.com/2015/06/20/steering-high-altitude-rockets-with-cold-gas/" class="external">Steering High Altitude Rockets with Cold Gas</a> - check out the video in this article</li>
+		<li><a href="http://www.instructables.com/id/Using-the-Intel-Edison-on-a-Cold-Gas-Reaction-Cont/" class="external">Using the Intel Edison on a Cold Gas Reaction Control System for a Sounding Rocket</a> (on Instructibles)</li>
+		<li><a href="https://github.com/psas/reaction-control" class="external">PSAS RCS Github Repo</a>
+	<ul>
+	<li><a href="https://github.com/psas/reaction-control/tree/master/3d%20Printing%20nozzles" class="external">3D Printed Nozzles</a></li>
+		<li><a href="https://github.com/psas/reaction-control/blob/master/3d%20Printing%20nozzles/deLaval%20cutaway.STL" class="external">Cutaway Demo Nozzle</a>   </li>
+	</ul>
+	</li>
+		<li>Photos from J's visit to PSAS
+	<ul>
+	<li><a href="https://flic.kr/p/zJNC1U" class="external">Prototype Cold Gas Thruster RCS Module</a></li>
+		<li><a href="https://flic.kr/p/AGPSiR" class="external">Cold Gas Thruster Pod</a></li>
+		<li><a href="https://flic.kr/p/AFQhnH" class="external">Cold Gas Thruster Cross Section</a> (printed from <a href="https://github.com/psas/reaction-control/blob/master/3d%20Printing%20nozzles/deLaval%20cutaway.STL" class="external">Cutaway Demo Nozzle</a>)</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li><a href="../../../dmsf_files/511%3Fdownload=" class="external">Cold Gas Thruster Block Diagram</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="3D-Printing-Links"></a>
+<h2 >3D Printing Links<a href="export.html#3D-Printing-Links" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a class="external" href="https://hackaday.com/2018/04/17/3d-printing-watertight-containers/">https://hackaday.com/2018/04/17/3d-printing-watertight-containers/</a></li>
+		<li><a href="http://www.mattercontrol.com/" class="external">MatterControl</a> Slicer Settings Explained
+	<ul>
+	<li><a href="http://www.matterhackers.com/articles/slice-settings-explained-part-1" class="external">Part 1</a></li>
+		<li><a href="http://www.matterhackers.com/articles/slice-settings-explained-part-2" class="external">Part 2</a></li>
+		<li><a href="https://www.matterhackers.com/articles/slice-settings-explained---part-3" class="external">Part 3</a></li>
+	</ul>
+	</li>
+		<li>Using Support Material Blog Post Series
+	<ul>
+	<li><a href="http://www.matterhackers.com/news/how-to-use-support-material-part-1" class="external">HOW TO USE SUPPORT MATERIAL: PART 1</a></li>
+		<li><a href="https://www.matterhackers.com/news/how-to-use-support-material:-part-2" class="external">HOW TO USE SUPPORT MATERIAL: PART 2</a></li>
+	</ul>
+	</li>
+		<li>Calibration Notes
+	<ul>
+	<li><a class="external" href="https://m.youtube.com/watch?v=0qBteLSJTtU">https://m.youtube.com/watch?v=0qBteLSJTtU</a></li>
+		<li><a href="https://www.matterhackers.com/articles/a-guide-to-understanding-the-tolerances-of-your-3d-printer" class="external">A Guide to Understanding the Tolerances of Your 3D Printer</a></li>
+		<li><a href="http://www.3dbenchy.com" class="external">3DBenchy</a></li>
+		<li><a href="https://www.simplify3d.com/support/print-quality-troubleshooting/#not-extruding-at-start-of-print" class="external">Print Quality Troubleshooting Guide</a></li>
+		<li><a href="http://3dprintingforbeginners.com/troubleshoot-3d-printing-problems/" class="external">How to Solve the Most Common 3D Printing Problems</a></li>
+		<li><a href="http://makezine.com/go/2015-fdm-test-criteria" class="external">2015 Make Magazine FDM Test Models</a> - updated test files that include tests for support material, horizontal surface finish, vertical surface finish, and dimensional accuracy</li>
+		<li><a href="http://www.3ders.org/articles/20151130-kai-parthy-develops-low-bondage-warp-index-for-3d-printing-filaments.html" class="external">Developing a Warp-Index for 3D Printing</a></li>
+		<li><a href="https://www.matterhackers.com/articles/retraction-just-say-no-to-oozing" class="external">Retraction - Just Say No to Oozing</a></li>
+	</ul>
+	</li>
+		<li>3D Printing Material Options
+	<ul>
+	<li><a href="https://www.youtube.com/watch?t=34&#38;v=FSR_v07X92k" class="external">3DPrinting with High Strength Filaments for Drones</a></li>
+		<li><a href="http://taulman3d.com/bridge-features.html" class="external">Taulman 3D 'Bridge' Material</a></li>
+		<li><a href="http://3dprint.com/62343/taulman3d-in-pla-filament" class="external">Taulman In-PLA</a></li>
+	</ul>
+	</li>
+		<li>Techniques
+	<ul>
+	<li><a href="http://3dprint.com/68289/3d-print-any-nut-you-choose/" class="external">Print Any Nut or Washer You Choose</a></li>
+		<li><a href="http://marcuswolschon.blogspot.com/2015/07/printing-working-threads-on-ultimaker.html" class="external">Printing working threads on an Ultimaker II extended</a></li>
+		<li><a href="http://makezine.com/projects/make-34/skill-builder-finishing-and-post-processing-your-3d-printed-objects/" class="external">Make Skill-Builder: Finishing and Post-Processing 3D Prints</a></li>
+		<li><a href="http://formlabs.com/stories/adding-screw-threads-3d-printed-parts/" class="external">Adding screw threads to 3D-printed parts</a></li>
+	</ul>
+	</li>
+		<li>Books
+	<ul>
+	<li><a href="http://www.apress.com/9781484210567" class="external">3D Printing with MatterControl</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="CAD-Links"></a>
+<h2 >CAD Links<a href="export.html#CAD-Links" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://github.com/Buback/ParametricDeLavalModel" title="Conical and Bell" class="external">OpenSCAD Parametric DeLaval Nozzles</a></li>
+	</ul>
+
+<hr />
+<a name="Sidebar" />
+<a name="Navigation"></a>
+<h3 ><a href="export.html#Navigation" class="wiki-page">Navigation</a><a href="export.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Yavin-Thruster"></a>
+<h3 >Yavin Thruster<a href="export.html#Yavin-Thruster" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="export.html#Home" class="wiki-page">Home</a></li>
+		<li><a href="export.html#" class="wiki-page">Media</a></li>
+		<li><a href="export.html#" class="wiki-page">Backers</a></li>
+	</ul>
+
+
+	<a name="Related-Projects"></a>
+<h4 >Related Projects<a href="export.html#Related-Projects" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/shepard-ts" class="external">Shepard Test Stand</a></li>
+		<li><a href="https://opendesignengine.net/projects/MTK" class="external">MTK</a></li>
+		<li><a href="https://github.com/dcowden/cadquery" class="external">CADQuery</a></li>
+	</ul>
+
+
+	<a name="Design-Process"></a>
+<h4 >Design Process<a href="export.html#Design-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="export.html#" class="wiki-page">Initial Questions</a></li>
+		<li><a href="export.html#" class="wiki-page">Export Control Review</a></li>
+		<li><a href="export.html#Meeting Minutes/Notes" class="wiki-page">Meeting Minutes/Notes</a></li>
+		<li><a href="export.html#Resources/Links" class="wiki-page">Resources/Links</a></li>
+	</ol>
+
+<hr />
+<a name="Wiki" />
+<a name="Yavin-Cold-Gas-Thruster-Wiki"></a>
+<h1 >Yavin Cold Gas Thruster Wiki<a href="export.html#Yavin-Cold-Gas-Thruster-Wiki" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Welcome to the the Yavin Thruster wiki.  If you have ever wondered what makes rockets work or how engineers go about designing rocket engines, then this is the project for you.  We are going to demonstrate how you can go from <em>requirements</em> to <em>analysis and conceptual design</em> (1) to <em>detailed design</em> (2) to <em>manufacture</em> (3) and ultimately <em>test</em>.</p>
+
+
+	<p><img src="../../../dmsf_files/480%3Fdownload=" alt="" /></p>
+
+
+	<p>The Yavin Thruster is a cold gas thruster, a kind of rocket engine that creates thrust just from the energy stored in a compressed gas.  Our goal is to make the Yavin Thruster accessible by anyone, so we are using modern design and manufacturing techniques (like parametric modeling, 3D printing) and commonly available components (like consumer grade air compressors).</p>
+
+
+	<p>We are still in the early phases of this project so this is a great time to jump on board.  Introduce yourself on our <strong><a href="https://opendesignengine.net/projects/yavin-thruster/boards" class="external">Forums</a></strong> and then  check out our answers to the list of <strong><a href="export.html#" class="wiki-page">Initial Questions</a></strong> to get an overall sense of where the project is going.  Check out the <strong><a href="export.html#Meeting Minutes/Notes" class="wiki-page">Meeting Minutes/Notes</a></strong> for the latest news on our progress.  Finally, our <strong><a href="export.html#" class="wiki-page">Export Control Review</a></strong> and <strong><a href="export.html#Resources/Links" class="wiki-page">Resources/Links</a></strong> have lots of good background material.</p>
+
+
+</body>
+</html>

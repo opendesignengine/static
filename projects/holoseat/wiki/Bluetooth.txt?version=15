@@ -1,0 +1,84 @@
+h1. Bluetooth
+
+{{>toc}}
+
+h2. Introduction
+
+This page covers research into creating a Bluetooth HID connection from the Holoseat controller to the gaming system (PC or console) and accepting Bluetooth HID connections from user devices (e.g. joypads).  The Holoseat controller will need to be able to present itself as either a keyboard & mouse combination or a joypad.  The material on this page covers some Bluetooth fundamentals (classic vs BLE), the types of Bluetooth hardware used in some of our target platforms (CHIP Pro, PS4, PCs), and available libraries for interacting with Bluetooth hardware in Node.js.  It closes with an interesting (but not usable) example from the maker/hacker community.
+
+h2. Summary of Findings
+
+Based on the following research, it is far too early to implement Bluetooth features in the Holoseat.  Given recent developments in the Bluetooth standard, it is obvious we are only interested in implementing Bluetooth Low Energy (BLE) devices.  However, the gaming platforms we are looking at supporting have widely varying support for Bluetooth in any form, with only one platform fully supporting BLE (MacOS).  Until there is greater support for BLE on our selected gaming platforms we do not need to develop a means of presenting Holoseat as a Bluetooth peripheral.  
+
+The news is only slightly better on the Bluetooth host side of the requirements.  While the CHIP Pro has a Bluetooth stack included in the hardware (which supports BLE), the drivers are not yet ready.  We could shift to an external Bluetooth module, but that would just add cost that we really don't need to add at present. Instead, the recommended path forward is to select the onboard Bluetooth stack to be the Bluetooth host hardware and delay implementation of Bluetooth host features until the driver is released by NEXT Thing Computing.  This will allow us to add support for acting as a Bluetooth host with just a software update at any point in time we decide.
+
+In terms of impact to the 2017 development plan, here are updates to the affected "Product Backlog Items":https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml
+
+* DEV-10: Select BT HID module from CHIP's BT module or an external one
+Deferred indefinitely, but we will be selecting a specific external module when the time comes (this "module":https://www.adafruit.com/product/1327 from Adafruit is used in the Make Bluetooth book for exactly this purpose)
+* DEV-11: Select BT Host module from CHIP's BT module or an external one
+Completed, we will use the CHIP's BT module when the driver is released
+* DEV-12: Demonstrate BT Keyboard HID
+Deferred indefinitely 
+* DEV-13: Demonstrate BT Joypad HID
+Deferred indefinitely 
+
+h2. Bluetooth Fundamentals 
+
+Bluetooth has evolved dramatically in the last few years and now comes in multiple "flavors", classic and Bluetooth Low Energy.  "Classic Bluetooth":https://en.m.wikipedia.org/wiki/Bluetooth is the standard most users are familiar with.  It is used to connect smart phones to cars and headsets.  Classic is the older flavor, it is more common (though that is starting to change in some markets), and it commonly requires pairing.  Also, according to posts from Adafruit on their "forums":https://forums.adafruit.com/viewtopic.php?f=10&t=90851#p457917 making classic devices requires paying costly dues to the Bluetooth SIG.
+
+"BLE":https://en.m.wikipedia.org/wiki/Bluetooth_low_energy is a newer Bluetooth flavor, targeting battery powered devices (often sensors) and widely supported by smart phones.  It appears to be far more maker friendly as well.  It is well supported by Adafruit ("Bluetooth products, overwhelmingly BLE":https://www.adafruit.com/categories/255) and spawned a new book from Make publishing, "Make: Bluetooth":http://shop.oreilly.com/product/0636920031932.do.  
+
+Human Interface Devices (HID) can be built as either classic or BLE devices.  It is not clear if the same device (using the same radio board) can be made to present itself as a classic or BLE device.  However, it seems clear that smaller organizations are moving to BLE only development.
+
+h2. Bluetooth Hardware on Holoseat Platforms
+
+h3. CHIP Pro
+
+From the "CHIP Pro datasheet":https://docs.getchip.com/chip_pro.html#wireless-connectivity, it uses a Realtek 8723DS combination module which provides Wi-Fi B/G/N and Bluetooth 4.2 LE connectivity."  Other documentation has indicated the Bluetooth driver can be set as either a host or a device.  So, it can be used to connect with classic and BLE devices or it can present itself as a BLE device (but not both at the same time).  See notes above about implementing devices that present themselves as classic devices.  
+
+Unfortunately, at present Next Thing Computing has disabled the Bluetooth driver on the CHIP Pro (see this "forum post":https://bbs.nextthing.co/t/chip-pro-bluetooth-driver-not-available/14905 last updated 2017-02-15 for more details).  For the time being we cannot demonstrate any level of Bluetooth connectivity with the CHIP Pro and it is not clear when the driver will be enabled.
+
+h3. PS4
+
+The PS4 "DualShock 4":https://en.m.wikipedia.org/wiki/DualShock#DualShock_4 joypads connect to the PS4 using Bluetooth.  Unfortunately, the "PS4":https://en.m.wikipedia.org/wiki/PlayStation_4 only supports classic Bluetooth.  Specifically, the PS4 supports "Bluetooth 2.1 + EDR":https://en.m.wikipedia.org/wiki/Bluetooth#Bluetooth_2.1_.2B_EDR.
+
+h3. PCs
+
+The following material is from Chapter 1 of Make: Bluetooth.  We will include all three PC platforms in this discussion (Windows, MacOS, and Linux).  Windows supports classic Bluetooth (specifically v2.1) in Windows XP, Vista, and 7.  Windows 8 and 10 support BLE.  Note, the availability of Bluetooth hardware on Windows PCs varies greatly, though modern laptops often have some flavor of Bluetooth hardware.  
+
+All Apple computers built after 2011 include BLE hardware and MacOS fully supports BLE since Mountain Lion.  In short, unlike Windows machines, Macs should just work with the more maker friendly Bluetooth flavor.
+
+Turning to Linux, the results are mixed.  The OS itself supports BLE through the BlueZ service.  However, like Windows machines, the computers people choose to install Linux on vary greatly in terms of available Bluetooth hardware.
+
+h3. Conclusions About Bluetooth Hardware 
+
+At present Bluetooth support on Holoseat related hardware is all over the map.  The CHIP Pro has the hardware for one connection (host or peripheral), but lacks the required drivers.  And on the gaming systems side, the common denominator is classic Bluetooth, which is not very maker friendly according to Adafruit.  In short, it is too early for a device like Holoseat to fully embrace Bluetooth.  At best, we can select the CHIP Pro's onboard Bluetooth stack as the Holoseat's host side Bluetooth implementation, deferring work on it until the drivers are released.  But, until more of the gaming machine market supports BLE controllers, there is no real value in developing support for the Holoseat to act as a Bluetooth peripheral.
+
+h2. Useful Bluetooth Libraries
+
+"Sandeep Mistry":https://github.com/sandeepmistry maintains three Bluetooth libraries which we will likely find useful.  Note, they are all BLE only libraries and they only work with specific Bluetooth hardware.
+
+* Node.js Libraries
+** "Noble":https://github.com/sandeepmistry/noble - library to implement a BLE central module (aka host)
+** "Bleno":https://github.com/sandeepmistry/bleno - a library to implement a BLE peripheral (aka device)
+* Arduino
+** "Arduino BLEPeripheral":https://github.com/sandeepmistry/arduino-BLEPeripheral - a library to implement a BLE peripheral (device)
+
+h2. Maker/Hacker Example
+
+In this example, the firmware from the "RN-42":https://www.sparkfun.com/products/12574 onto the "HC-05":http://cdn.makezine.com/uploads/2014/03/hc_hc-05-user-instructions-bluetooth.pdf.  This kind of hacking, while interesting, is not strictly legal (obtaining the RN-42 firmware is not something one just does), so it is not a recommended approach.  However, it does demonstrate how capable a small system can be at capturing signals from one system (the joypad) and in real time translating them to HID over Bluetooth signals.  Consider this evidence that the kind of inline gameplay translation we want the Holoseat controller to do is possible.  Much of the following research was found by following the links from a Hackaday post - "Convert Any USB Keyboard to Bluetooth":http://hackaday.com/2016/09/04/convert-any-usb-keyboard-to-bluetooth/.
+
+{{youtube(L7lEDS6xj5w)}}
+
+{{youtube(5qXv7TJI324)}}
+
+{{youtube(qyRJgtwX0cY)}}
+
+The video below is a summary of this project - "Bluetooth HID gamepad using HC-05 module":https://mitxela.com/projects/bluetooth_hid_gamepad
+
+{{youtube(fWXJDNcbZAA)}}
+
+h2. ESP32 Wifi Bluetooth Module
+
+"ESP32 Wifi Bluetooth Module":http://www.cnx-software.com/2016/09/05/you-can-now-buy-esp3212-esp32-wifi-bluetooth-module-for-6-95, another Bluetooth module that has people talking.  Need to do more research.

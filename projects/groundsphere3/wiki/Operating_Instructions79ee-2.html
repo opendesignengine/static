@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Operating_Instructions.html?version=5 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:08 GMT -->
+<head>
+<title>Operating Instructions</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Operating-Instructions"></a>
+<h1 >Operating Instructions<a href="#Operating-Instructions" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="#Operating-Instructions">Operating Instructions</a><ul><li><a href="#Preparing-For-A-Pass">Preparing For A Pass</a></li><li><a href="#Placing-The-Antenna">Placing The Antenna</a></li><li><a href="#Receiving-An-Image">Receiving An Image</a></li><li><a href="#Troubleshooting">Troubleshooting</a><ul><li><a href="#WXtoImg-shows-a-black-screen-with-no-image">WXtoImg shows a black screen with no image.</a></li><li><a href="#I-do-not-see-a-signal-in-SDR-Sharp-at-the-time-of-the-pass">I do not see a signal in SDR Sharp at the time of the pass.</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Preparing-For-A-Pass"></a>
+<h2 >Preparing For A Pass<a href="#Preparing-For-A-Pass" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Run WXtoImg. Select <strong>File</strong> -> <strong>Update Keplers</strong>. This will update NOAA satellite TLEs so that your pass times are as up to date as possible.</p>
+
+
+	<p>In WXtoImg, select <strong>File</strong> -> <strong>Satellite Pass List</strong>. This window will display all future passes within a few days.</p>
+
+
+	<p><img src="preparing_for_a_pass_1.html" alt="" /></p>
+
+
+	<p>Selecting an appropriate pass can be tricky. The most important characteristic for a good pass is the maximum elevation angle. Low maximum elevation angles will have short passes with insufficient gain to complete an image. High maximum elevation angles may have periods of insufficient gain when the satellite is directly overhead.</p>
+
+
+	<p><img src="preparing_for_a_pass_2.html" alt="" /></p>
+
+
+	<p><strong>NOTE</strong>: Frequencies in WXtoImg are <strong>INCORRECT</strong>. Use these frequencies for NOAA satellites:</p>
+
+
+	<ul>
+	<li>NOAA 15: 137.6200 MHz</li>
+		<li>NOAA 18: 137.9125 MHz</li>
+		<li>NOAA 19: 137.1000 MHz</li>
+	</ul>
+
+
+	<p><strong>NOTE</strong>: NOAA 17 is no longer in operation. Do not try to capture an image from NOAA 17.</p>
+
+
+	<a name="Placing-The-Antenna"></a>
+<h2 >Placing The Antenna<a href="#Placing-The-Antenna" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Ensure that the antenna is perpendicular to the ground so that it is facing directly up (zenith). This will ensure gain is uniform across the radio horizon.</p>
+
+
+	<p>In some cases, when testing the antenna, the top of a vehicle was used. While having height off of the ground may be nice to reduce interference to the horizon, the vehicle may interfere and cause stray multi-path signals to affect the quality of the signal (negatively or positively). For more predictable behavior, place the antenna in the middle of a large field on a flat surface.</p>
+
+
+	<p><img src="placing_the_antenna_1.html" alt="" /></p>
+
+
+	<a name="Receiving-An-Image"></a>
+<h2 >Receiving An Image<a href="#Receiving-An-Image" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Once you have selected a sufficient pass, place the antenna and connect it to your computer with the <strong>RTL-SDR Dongle</strong>. Run SDR-Sharp and WXtoImg side by side so that you can watch both as the pass occurs.</p>
+
+
+	<p>Shortly before the pass begins, select <strong>File</strong> -> <strong>Record</strong> -> <strong>Auto Record</strong> in WXtoImg. WXtoImg will now wait for a pass to reach a sufficient elevation angle before starting to record.</p>
+
+
+	<p>While you wait for the recording to start, use SDR Sharp to locate the signal. Set</p>
+
+
+	<a name="Troubleshooting"></a>
+<h2 >Troubleshooting<a href="#Troubleshooting" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="WXtoImg-shows-a-black-screen-with-no-image"></a>
+<h3 >WXtoImg shows a black screen with no image.<a href="#WXtoImg-shows-a-black-screen-with-no-image" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>You must ensure VB Cable is transmitting sound to WXtoImg from SDR Sharp. Double check SDR Sharp audio output, ensure your microphone and speakers are not muted, turn up the volume for your VBCable in Audio Settings.</p>
+
+
+	<a name="I-do-not-see-a-signal-in-SDR-Sharp-at-the-time-of-the-pass"></a>
+<h3 >I do not see a signal in SDR Sharp at the time of the pass.<a href="#I-do-not-see-a-signal-in-SDR-Sharp-at-the-time-of-the-pass" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>There could be numerous things wrong with your setup. Ensure your ground station coordinates are correct on WXtoImg, double check that you are using the correct frequency (do NOT trust WXtoImg listed frequencies), and be sure that you are using local time and not UTC time.</p>
+</body>
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Operating_Instructions.html?version=5 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:08 GMT -->
+</html>

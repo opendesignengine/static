@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Spent time</title>
+  <link rel="self" href="http://opendesignengine.net/activity.atom?show_time_entries=1"/>
+  <link rel="alternate" href="http://opendesignengine.net/activity?show_time_entries=1"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2022-10-31T17:39:51+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+</feed>

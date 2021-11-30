@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Errata</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Shepard-Test-Stand-Errata-v11"></a>
+<h1 >Shepard Test Stand Errata v1.1<a href="Errata.html%3Fversion=3.html#Shepard-Test-Stand-Errata-v11" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>There are the problems that have been discovered with the current design.</p>
+
+
+	<ol>
+	<li>It has been mentioned that the cut list has some errors in cut lengths, but the incorrect cuts were not documented. However, these errors cause the cuts to be too long, so no material will be wasted during the build process.</li>
+		<li>The data acquisition (DAQ) system is not capable of sample rates in excess of 15 samples per second. This is due to the fact that the thermocouple amplifier requires 70 to 100 milliseconds to do a temperature conversion (A to D). This is an unacceptably slow sample rate. The target for future iterations up through version 2.x should be a minimum of 200 samples per second.</li>
+		<li>The contact between the Force Sensing Resistor's (FSR's) backing plate and the motor mount's contact plate is not completely parallel. This causes skewed results with the FSR.</li>
+		<li>There was a process breakdown among the Shepard team that caused some Shepard v2.0 DAQ features to be mixed into the development logs and wiki for v1.1. The documentation has been cleaned up, but may still contain some v2.0 contamination that was missed.</li>
+	</ol>
+
+
+	<p>This is a newer document based on <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Errata_v1_0" class="external">this one</a> , and you should refer to that original version if you want to see the revision history.</p>
+</body>
+</html>

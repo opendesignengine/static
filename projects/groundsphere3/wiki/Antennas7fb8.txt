@@ -1,0 +1,7 @@
+h1. Antennas
+
+h2. Quadrifilar Helix (QFH) Antennas
+
+* "Helical Quad Antenna for Weather Satellites":http://www.alternet.us.com/?p=1461
+* "A QFH antenna for the weather satellite band":http://www.g4ilo.com/qfh.html
+* "QFH sizing calculator (online)":http://jcoppens.com/ant/qfh/calc.en.php

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Block Diagram</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Holoseat-Block-Diagram-v03"></a>
+<h1 >Holoseat Block Diagram v0.3<a href="Block&#32;Diagram.html#Holoseat-Block-Diagram-v03" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Block&#32;Diagram.html#Holoseat-Block-Diagram-v03">Holoseat Block Diagram v0.3</a><ul><li><a href="Block&#32;Diagram.html#System-Context">System Context</a></li><li><a href="Block&#32;Diagram.html#Internal-Block-Diagram">Internal Block Diagram</a></li></ul></li></ul>
+
+
+	<p>The following block diagrams capture the architecture for the v0.3 <strong>Holoseat</strong>.</p>
+
+
+	<a name="System-Context"></a>
+<h2 >System Context<a href="Block&#32;Diagram.html#System-Context" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><img src="https://opendesignengine.net/dmsf_files/246?download=723" alt="" /><br />( <a href="https://opendesignengine.net/dmsf_files/247?download=724" class="external">SVG Format</a> )</p>
+
+
+	<p>The Holoseat interacts with three external systems: the Player, the Game, and the Configuration App.  The Player uses Holoseat directly by pedaling to walk forward or backward in the game and by using the Enable button to control the enabled state of the Holoseat (when enabled pedaling causes key presses, when disabled pedaling does not cause key presses).  The Player also uses the Holoseat indirectly through the Configuration App.</p>
+
+
+	<p>The Game and the Configuration App are programs running on the Computer.  Both programs expect input from the Player through HID controls.  The Game provides interactive entertainment to the Player.  Holoseat is currently only compatible with Games utilizing key presses to control walking (e.g wasd). The Configuration App provides controls to change settings in the Holoseat (either live or as new default values).</p>
+
+
+	<p>The Player is connected to the Game and the Configuration App.  The Player interacts with the Game through its standard HID controls for all actions except walking forward and backward (these actions, as mentioned above, are controlled through the Holoseat).  The Player uses the Configuration App through its HID controls to update settings in the Holoseat.</p>
+
+
+	<p>The Holoseat is connected to the Player, as described above, and to both programs running on the Computer.  The Holoseat presents itself as an HID device to the Game and sends the user configured key presses for walking when the Player uses the pedals.  The Holoseat uses a custom serial protocol (HSP) to communicate with the Configuration App.  This protocol allows the Configuration App to interrogate the Holoseat for its current state (covering both settings and activity) and to update settings on the Holoseat (both live and default values).</p>
+
+
+	<a name="Internal-Block-Diagram"></a>
+<h2 >Internal Block Diagram<a href="Block&#32;Diagram.html#Internal-Block-Diagram" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><img src="https://opendesignengine.net/dmsf_files/640?download=726" alt="" /><br />( <a href="https://opendesignengine.net/dmsf_files/639?download=725" class="external">SVG Format</a> )</p>
+
+
+	<p>The Holoseat presents four external interfaces (also shown on the System Context).  They are the Pedals, the Enable Button, an HID interface, and the Holoseat Serial Protocol interface. See the System Context for the uses of these external interfaces.</p>
+
+
+	<p>The Holoseat is composed of four subsystems. They are the Exercise Device (typically an under desk bike or elliptical), the Sensor Triggers, the Sensor Board, and the Controller. The Exercise Device provides the physical interface for the Player (the Pedals) and the required resistance to provide the exercise experience.</p>
+
+
+	<p>The Sensor Triggers and the sensors mounted on the Sensor Board must be matched to provide the required resolution to determine the Player's cadence when pedaling. For example, you could pair Hall effect sensors with magnets for the sensors and Sensor Triggers, making sure to select magnet strength and sensor sensitivity such that they are reliable over the distance between the pedals and the Exercise Device frame.  The Sensor Triggers are mounted on the one of the pedal bars and the Sensor Board (with its sensors) is mounted on the Exercise Device chassis.</p>
+
+
+	<p>Finally, the Controller is the embedded system which implements the Holoseat logic.  On one side of the Controller is the Sensor Data line, reading sensor trigger events. On the other side is an implementation of the HID protocol. The controller computes the Player's cadence from the sensor events.  Using the cadence, the Controller determines when to send key presses to the Game. Additionally, the Controller contains the Enable button, for use by the Player to control the enabled state, and a serial port listening for Holoseat Serial Protocol messages from the Configuration App.  HSP messages can be used to update settings in the Controller such as enabled state, trigger cadence, and assigned keys for forward and backward motion.</p>
+</body>
+</html>

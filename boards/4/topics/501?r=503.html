@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Engine Mount Requirements - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-501-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Engine Mount Requirements</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-20.html" title="06/20/2013 02:52 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>As a result of one of the places that the discussion that took place and was posted to a <a href="https://opendesignengine.net/news/40" class="external">news post</a> today, it seemed prudent to talk about what the design requirements are for the engine mount for Shepard (v2 I suppose).  Below is a list of some of the requirements as I see them thus far.  Feel free to reword/scratch/add, and challenge any assumptions I've made.</p>
+
+
+	<ol>
+	<li>Shall connect to the load sensor</li>
+		<li>Shall prevent movement of the engine undergoing testing</li>
+		<li>Shall have the ability to mount an Estes 1/4A engine</li>
+		<li>Shall have the ability to mount an Estes engine which has a purported maximum thrust output less than the maximum range the load sensor can measure</li>
+		<li>Shall handle catastrophic failure of the engine being tested without damage</li>
+		<li>The engine mount shall be able to be used without a reduction of other requirements after a catastrophic engine failure</li>
+		<li>The resistance of the engine mount to catastrophic failure shall be at least proportional to the maximum output of an Estes motor that reaches the maximum measurement range of the load sensor.</li>
+	</ol>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (8)</h3>
+
+  <div class="message reply" id="message-502">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="501%3Fr=502.html#message-502">RE: Engine Mount Requirements</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-20.html" title="06/20/2013 03:05 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>A few discussion points based upon those "requirements" I've laid out.</p>
+
+
+	<p>3 and 4 show that the mount must be adjustable to hold different diameter/length engines.  I'm assuming this makes more sense than having a 54mm inner diameter mount with adapters for various other sized engines.</p>
+
+
+	<p>5 and 6 do not mean the same thing.  The purpose of 5 is to illustrate that an engine failure should not turn the engine mount into shrapnel, whereas 6 is perhaps a nice-to-have.</p>
+
+
+	<p>Is 6 a nice-to-have, or a legit requirement?</p>
+
+
+	<p>This doesn't specify how the mount should handle a catastrophic engine failure, and purposefully so.  One of the things that I've been thinking about is that one of the easiest to manufacture mount designs that meets these requirements might not contain the fallout from the failure to the long axis of the engine, and may not need to.  If this isn't the case though, it can certainly be revised.</p>
+
+
+	<p>I don't quite like the wording I provided for 7, but I couldn't find a better way to say it.  It's sort-of covered by 5/6, but not entirely.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-503">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="501%3Fr=503.html#message-503">RE: Engine Mount Requirements</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-20.html" title="06/20/2013 05:23 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p><a href="../../../issues/1.html" class="issue status-5 priority-2 closed" title="Automatically create SVN Repositories when Repository module is turned on (Closed)">#1</a> Do we need to specify that, since no reading is possible without connecting it to the sensor?</p>
+
+
+	<p><a href="../../../issues/2.html" class="issue status-3 priority-2 closed" title="Install available Bot filters (Resolved)">#2</a> Makes sense.</p>
+
+
+	<p><a href="../../../issues/3.html" class="issue status-3 priority-2 closed" title="Configure ODE to hide emails by default (Resolved)">#3</a> has a low return and high effort. I can only justify testing A-E motors which have 18mm and 24mm bodies.  There are commercial adapters allowing A-C motors to fly 24mm rockets, and the difference in the D and E motors is length, and an adapter (a ring spacer) can be supplied.  At about a 1/4 sec burn time, they are not a good demonstration of the technology and have a 13mm diameter body.  <a class="external" href="http://exploration.grc.nasa.gov/education/rocket/rktenglab.html">http://exploration.grc.nasa.gov/education/rocket/rktenglab.html</a></p>
+
+
+	<p><a href="../../../issues/4.html" class="issue status-3 priority-2 closed" title="Display SVN checkout or export link on repository page (Resolved)">#4</a> is not a problem.  The sensor is able to handle up to and including an E, the largest motor Estes makes.</p>
+
+
+	<p><a href="http://opendesignengine.net/issues/5" class="issue status-3 priority-2 closed" title="Add Google Analytics to ODE (Resolved)">#5</a> is a tall order, and may prove impossible to test.  It should read that the mount may be damaged, but must remain in ine piece and attached to the test stand.</p>
+
+
+	<p><a href="../../../issues/6.html" class="issue status-5 priority-2 closed" title="Add wiki external format plugin as basis for wiki enhancements (Closed)">#6</a> is an even taller order.  It may be impossible to detect fine variations if the mount built heavily enough to completely shrug off the detonation of an E class motor.  This is due to the increased energy necessary to move a larger mass.</p>
+
+
+	<p><a href="http://opendesignengine.net/issues/7" class="issue status-3 priority-2 closed" title="Add Wiki macro to link to issues (Resolved)">#7</a> I am not entirely sure where you are headed with this.  Is this a restating of <a href="../../../issues/4.html" class="issue status-3 priority-2 closed" title="Display SVN checkout or export link on repository page (Resolved)">#4</a>?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-504">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="501%3Fr=504.html#message-504">RE: Engine Mount Requirements</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-22.html" title="06/22/2013 10:07 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><ol>
+	<li>It's only there because in my experience someone won't see the obvious.  It's become habit to (try to) put the obvious in requirements.</li>
+		<li></li>
+		<li>I'm fine with changing it to be that the min is A motors</li>
+		<li>Of note: Estes in fact does make larger motors than E's (F's and G's): <a class="external" href="http://www.estesrockets.com/rockets/engines/pro-series-ii-motors">http://www.estesrockets.com/rockets/engines/pro-series-ii-motors</a> .  Some of those are 50N engines, which would be in the range of the load sensor if I'm not mistaken.</li>
+		<li>I like your wording better here.</li>
+		<li>This one may in fact be a nice-to-have, and we can de-scope it.  The tricky thing I think is going to be testing it.</li>
+		<li>I'll get rid of this one... the more I think about it, the more I think it's not necessary to specify what I was thinking.</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-505">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="501%3Fr=505.html#message-505">RE: Engine Mount Requirements</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-22.html" title="06/22/2013 10:09 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki">OK, the updated list of requirements per the conversation thus far:
+	<ol>
+	<li><strong>Shall</strong> connect to the load sensor</li>
+		<li><strong>Shall</strong> prevent movement of the engine undergoing testing</li>
+		<li><strong>Shall</strong> have the ability to mount an Estes A engine</li>
+		<li><strong>Shall</strong> have the ability to mount an Estes engine which has a purported maximum thrust output less than the maximum range the load sensor can measure</li>
+		<li><strong>Shall</strong> handle catastrophic failure of the engine being tested while remaining in one piece attached to the test stand.</li>
+		<li>The engine mount <em>may</em> be able to be used without a reduction of other requirements after a catastrophic engine failure</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-506">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="501%3Fr=506.html#message-506">RE: Engine Mount Requirements</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-23.html" title="06/23/2013 06:02 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Just a quick reminder that some of this should have already been covered by the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document" class="external">project requirements</a> (also check out the old forum discussions and meeting minutes on requirements).</p>
+
+
+	<p>If I recall correctly, one of the big things that came out of the design discussion for the first generation motor mount is wanting to produce something that was safe (that is would prevent the motor from escaping the test stand and something that would not produce shrapnel) while following NAR guidelines for model rocket construction as much as possible (in the hope that we would be able to get their support/endorsement for Shepard down the road).  This is how we ended up using an Estes motor mount for a D/E motor as the basis of the Shepard motor mount (safe, reliable, already NAR approved).</p>
+
+
+	<p>Unfortunately, it takes some time to assemble it, and as was shown during the Ft Wayne Maker Faire, if a motor fails, the motor mount must be replaced.  From an operations standpoint, motor failures requiring significant repairs or backup components is pretty undesirable.  In the case of the Maker Faire, the failure happened toward the end of day 1 of 2, and without spare motor mounts, we had to end our demos prematurely.</p>
+
+
+	<p>If you go back and look at the completed Shepard motor mount assembly, the Estes motor mount is attached to the test stand with two 50 lbf zip ties.  It turns out these zip ties were unharmed by the motor failure (see below).</p>
+
+
+	<p><img src="http://farm9.staticflickr.com/8170/8064831154_5d170a24cf_c.jpg" alt="" /></p>
+
+
+	<p>This got me thinking.  What if we just hold the motor onto a flat plate with U-Bolts in place of the zip ties?  We could place movable raised stops on the plate to hold the motor in position horizontally (this would replace the clip in the Estes motor mount), and use wing nuts on the U-bolts so motors could be quickly inserted and removed.  This design has the following advantages:</p>
+
+
+	<ul>
+	<li>No elements enclose the motor, so motor failure does not produce any non-card board shrapnel</li>
+		<li>Easy to switch out motors, just loosen two pair of wing nuts, remove motor, insert motor, tighten wing nuts</li>
+		<li>No motor adapters required, we just move the stops to adjust for motor length, and tighten the U-bolts down more for smaller diameter motors (or possibly swap out the U-bolts)</li>
+	</ul>
+
+
+	<p>If we permanently mount the temp sensor, we could adjust the location of the sensor relative to the motor by having different positions for the stops for different motors based on where we need to take the temperature reading on the motor in question.</p>
+
+
+	<p>One final comment on requirements.  I believe we will find that calibration is something that is done before most firings (certainly as part of setup).  As a training and education tool, I expect many users will run calibrations more frequently than in standard operations might ordinarily require.  After all, most lab classes (physics, chemistry, etc) start off with lab assignments where the students calibrate their instruments (scales, thermometers, etc).  So, I would encourage the team to make a new requirement that calibration be possible without any configuration changes to the test stand (such as removing the motor mount).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-507">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="501%3Fr=507.html#message-507">RE: Engine Mount Requirements</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-24.html" title="06/24/2013 06:49 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>A few things:</p>
+
+
+	<ol>
+	<li>Chris had an idea for the motor mount design somewhere (maybe on Google+) that I haven't been able to find again. I was having a hard time visualizing his idea, and so haven't given it proper consideration.</li>
+		<li>I like J's concept for the most part, but have a few suggestions/thoughts.
+	<ol>
+	<li>I would not suggest mounting a round (cylindrical) motor down to a flat plate. It's better to clamp a round object in a v-block. The U-bolts could still be used with the V-block. Aaron has suggested this elsewhere (email or G+ I think).</li>
+		<li>I like the idea of using wing nuts for quick changes, but want to make sure the final design does in fact use the end stop to keep the motor from launching and not the U-bolts. It will be harder to repeatably set the torque on a wing nut, and so you could be skewing your test results by deforming a motor differently each time you attach one. The balance between holding the motor in place and deforming it would have to be found, and then the U-bolts would have to be torqued to that before each test. Using the U-bolts only to keep the motor going straight against the end stop (as J has suggested I think) is the way to go for this concept.</li>
+		<li>From what I've heard, Misumi has an engineering applications department. It's likely that they would have something that would work, and since we're looking at using they're extruded aluminum for Shepard kits, they should be willing to help us. They may have some handy dandy thing that meet all of our motor mounting requirements with a minimal amount of manufacturing.</li>
+	</ol></li>
+	</ol>
+
+
+	<p>I'm not opposed to there being design discussions on Google+ (or other social media), but I personally would prefer if we make ODE the hub and central repository for documentation. One way to do that is to post things to ODE first, and link to them in G+/FB/whatever with a teaser image. There have been a few threads lately that I've had trouble finding again because I couldn't remember whether they started on email, G+ or ODE, and copying a long discussion that originated on G+ to ODE is not ideal.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-508">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="501%3Fr=508.html#message-508">RE: Engine Mount Requirements</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-24.html" title="06/24/2013 07:39 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Oh, and I also agree with J that the stand needs to make it convenient to calibrate.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-524">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="501%3Fr=524.html#message-524">RE: Engine Mount Requirements</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-05.html" title="07/05/2013 01:53 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Slightly off topic...  I found a simple circuit that would let an arduino or Beaglebone light off the engine under test while maintaining safety:  <a class="external" href="http://www.w6pql.com/high_current_solid-state_dc_switch.htm">http://www.w6pql.com/high_current_solid-state_dc_switch.htm</a></p></div>
+  
+  </div>
+
+<p class="pagination"> (1-8/8)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/501.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

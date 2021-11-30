@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - PY18 Sprint 1A Stand Up 1 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/holoseat.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/holoseat/news.html" class="news selected">News</a></li>
+<li><a href="../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/holoseat/boards.html" class="boards">Forums</a></li>
+<li><a href="../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-96-watcher"></span>
+
+
+</div>
+
+<h2>PY18 Sprint 1A Stand Up 1</h2>
+
+
+
+<p><em>Very busy and productive first week of Spring 1A.  Lots of progress on the new tone ring, the controller, and the desktop app.</em><br />
+<span class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-11-02" title="11/02/2017 10:13 pm">almost 5 years</a> ago</span></p>
+<div class="wiki">
+<p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did 
+	<ul>
+	<li>Posted sprint plan to Holoseat news channel</li>
+		<li>RAT-12: Ask legal aid about collecting health data and verify requirements for data security
+	<ul>
+	<li>Looked into DC legal aid (it was a bust)</li>
+		<li>Organized questions for legal aid </li>
+	</ul>
+	</li>
+		<li>PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat
+	<ul>
+	<li>Researched application for CrowdSupply (discovered, again, we need a price point for the application)</li>
+		<li>Prepared a Google Doc to capture answers to CrowdSupply application</li>
+	</ul>
+	</li>
+		<li>V04-51: Implement Serial Monitor feature
+	<ul>
+	<li>Designed common elements for Holoseat app (enable button, profile selector, and cadence display)</li>
+		<li>Designed Serial Monitor UI</li>
+		<li>Started implementing Serial Monitor UI</li>
+		<li>Implemented REST API framework</li>
+		<li>Implemented first few REST API methods (and their counterparts in HSP)</li>
+	</ul>
+	</li>
+		<li>V04-49: Implement python serial library for accessing new version of HSP
+	<ul>
+	<li>Replaced old manual string parsing code in firmware with Arduino JSON library</li>
+		<li>Developed first draft of Holoseat serial library (nearly feature complete, need to discuss versioning scheme to finalize board checks)</li>
+	</ul>
+	</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step
+	<ul>
+	<li>Provided feedback and test prints for tone ring development</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>V04-51: Implement Serial Monitor feature - Finish implementing Serial Monitor</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step - Continue supporting tone ring development (including review about injection molding and printing on TechShop 3D printer)</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>no</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did 
+	<ul>
+	<li>V04-26: Assemble a test Wings to verify design (on proto-wing) - partially assembled test wing, focused on layout this week</li>
+		<li>V04-71: Branding on keycap - done and key caps ordered</li>
+		<li>V04-59: Design scheme for checking the hardware version so the software can find compatibility - discussed hardware versioning with volunteer</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step
+	<ul>
+	<li>Worked with volunteer on design</li>
+		<li>ordered magnets</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwors securely for social media</li>
+		<li>SME-02: Split social media accounts out into a seperate folder</li>
+		<li>SME-03: share only the social media folder with Jazmint</li>
+		<li>V04-26: Assemble a test Wings to verify design (on proto-wing)</li>
+		<li>V04-59: Design scheme for checking the hardware version so the software can find compatibility</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step</li>
+		<li>Other branding work while we have volunteer available</li>
+		<li>Write a blog post and/or a message to alpha testers</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>traveling for work</li>
+	</ul></li>
+	</ul>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/755" class="icon icon-contributor-license">Maddison  Strehlow</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2019-01-17" title="01/17/2019 01:51 pm">almost 4 years</a> ago</h4>
+    <p>Colleges have also changed many things for the students in classrooms and in examination top assignment writing service":https://www.essayontime.co.uk/assignment_help/ like there are technical things. Technical things lessened many problematic issues of college as well as students of schools and universities.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/794" class="icon icon-contributor-license">Jiphu iphu</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2019-03-15" title="03/15/2019 01:34 pm">over 3 years</a> ago</h4>
+    <p>I have known many facts on holoseat engine designs and <a href="https://www.resumeshelpservice.com/" class="external">highest rated resume writers</a> news. That info may help you to gather different resources and essays for every content writer.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/96">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Future Design Discussion - v2.0 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-428-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Future Design Discussion - v2.0</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-01.html" title="04/01/2013 03:07 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>This has been copied from an email conversation about Shepard requirements.</p>
+
+
+	<p>Aaron Harper wrote:</p>
+
+
+	<p>I think the NAR measurement was concerned about burn-thru, otherwise there is no reason to measure temperature at those two points.  I didn't see anything about sensor specs, lag and slew rates, measurement resolution, or time resolution, and I get the feeling that these may have been outside the skill set of the NAR spec writers.  This means we will probably have to write our own.</p>
+
+
+	<p>Some possible specs to yield a usable dataset:</p>
+
+
+	<p>1. The temperature sensor must be used in accordance with it's design.  A contact sensor such as a thermocouple must be put in contact with the motor casing, while a non-contact (IR) sensor may need to be placed a minimum distance away from the casing to form a valid thermal image.</p>
+
+
+	<p>2. The temperature sensor must be able to read 50% or more of the temperature which would destroy the motor casing, ie. if the casing will ignite at 500F, the sensor must be able to measure to 250F as a minimum.  This refers to the sensor's specification, not the calibration of the measurement circuit's full scale.</p>
+
+
+	<p>3. The temperature sensor must be read as an analog value with a minimum of 8 bit precision.  This will allow a very small change to be spotted even if it were to occur in a destructive event since the system could register a change as small as 0.004 degrees in the above example.</p>
+
+
+	<p>4. The temperature measurement system must read the temperature at least 32 times during the engine thrust cycle.  In a 1/2A3-2T, the system must measure the temperature at least 32 times during the 3 second propellant burn.  This is a measurment every 93mS or a frequency of 10.67Hz.</p>
+
+
+	<p>5. The sensor must be able to yield valid data at least 1/8 of the way through the test.  This means that in the example above, the sensor may not lag more than 375mS.</p>
+
+
+	<p>Thoughts?</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (30)</h3>
+
+  <div class="message reply" id="message-429">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=429.html#message-429">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-01.html" title="04/01/2013 03:12 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>With the exception of the IR sensor, this seems like a good requirements discussion for Shepard 2.0.</p>
+
+
+	<p>Here's the IR setup that Aaron had in mind: <a class="external" href="http://www.ti.com/product/tmp006">http://www.ti.com/product/tmp006</a></p>
+
+
+	<p>In reference to <a href="../../../issues/4.html" class="issue status-3 priority-2 closed" title="Display SVN checkout or export link on repository page (Resolved)">#4</a>, what do we do if we sample at 800 or 1000 samples per second? Do we throw away the in-between samples where the response of the thermocouple is still catching up? How do we even figure that out? Do we just go by the published response time of the thermocouple?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-430">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=430.html#message-430">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-01.html" title="04/01/2013 03:48 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>The figures were to define the minimum resolution.  If you can pull 1000 samples per second at 16 bit resolution, that would be even better!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-431">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=431.html#message-431">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 09:52 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks Aaron. I didn't realize you were referring to the minimum resolution.</p>
+
+
+	<p>Switching gears:</p>
+
+
+	<p>An idea that's been rattling around in my head for awhile is that it might be cool to have some sort of client-server model in the software for this version. What I'm thinking is that the software would run as it does now, with the charts, and control buttons, etc, but that the program would also act as a server. What I thought would be really cool would be for people to be able to connect with their smartphones, tablets, and laptops, and pull up a read-only web interface where they could watch the test run. Then maybe they'd have a button that would allow them to download the last run's test results. This would give students a great tool to watch and analyze test results in almost real time, and would be very cool when the test stand is being demo'd at events like OHS (Open Hardware Summit). If there wasn't a WIFI connection available at the event center, we could have an open wireless AP set up connected to the laptop running the software, and people could hop on it with their mobile devices and watch as we touch the sensors.</p>
+
+
+	<p>Are there any thoughts on that? I can't guarantee that it would be done in time for OHS, but I think it would be a cool addition to a kit that's being built primarily as an educational tool.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-432">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=432.html#message-432">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 12:29 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Yaknow, I had a similar thought, though I was not thinking about Shepard... It makes sense though, as this would give us the ability to do a much richer presentation.  To accomplish this, you will need something with a lot more horsepower than an Arduino or MSP430.  For not much more money we could use a RaspberryPi which not only has a full fledged ARM processor and TCP/IP stack, it also runs Linux allowing the server implementation to be easy and powerful.  The down side to the Pi is their perennial supply issues (though these are clearing up) and the fact that their Ethernet implementation runs off the USB bus.  Another possibility is using a Beaglebone for this task.  While they originally ran $89.00, the new version will have more memory, run faster, have built in HDMI, and be cheaper, though by how much is currently a well guarded secret.</p>
+
+
+	<p>Both of these solutions have I/O headers with I2C and SPI capabilities, so it wouldn't represent any major redesign of the sensor suite.  The gotcha is the voltage levels... and I don't remember off the top of my head what they are for the Pi and Bone.  I2C signaling defines the protocol, not necessarily the levels, and I have seen them range from 1.8 to 12V, though 3.3 and 5V are the most common for our purposes.  My recommendation goes with the Bone, primarily because I already have one.  When you get ready to play with this, let me know and I'll send it to ya unless it's in another project by then.  I doubt it will be since it is overkill for most things that I do; the MSP430s I have been playing with do fine.</p>
+
+
+	<p>Programming both the Pi and Bone are considerably easier than dealing with the oddities of the arduino or sometimes stubbornness of the MSP430 (C was never a strong point with me).  Since it is a Linux system, programming can be accomplished by anything from C++ to shell scripting.  The bone's I/O can be operated directly form the OS file system, and this really makes things easy... plus it has it's own built in web based IDE.  Have a look at these videos:  <a class="external" href="http://youtu.be/Y0uqRVxismQ">http://youtu.be/Y0uqRVxismQ</a> and <a class="external" href="http://youtu.be/z6b4zlh0IrE">http://youtu.be/z6b4zlh0IrE</a>.  The challenge will be making an extensible set of gauges, buttons, strip charts, and other widgets so that the interface we build can be plugged into any other project we come up with, cutting dev time considerably.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-433">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=433.html#message-433">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 01:57 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I was actually thinking that the laptop that's receiving the data from the Arduino would be the server, but combining everything into one unit is an interesting idea.</p>
+
+
+	<p>I would agree that the supply issues with the Pi is a downside. In my mind it's a deal killer, and I dropped the Pi on one of my business projects for that reason. I do like the Beaglebone idea though. I haven't used one yet, but I've read quite a bit about it. There's some additional cost over the Arduino with the Bone, but one of the thrust sensors we're looking at using for version 2.0 is only $5, which would free up some of the budget.</p>
+
+
+	<p>My thought is that we not get too wrapped up in this (by not building a test setup) until version 1.1 is out of the way, but I would like to continue the conversation. I think there are some interesting things we can do here. J has brought up the idea before of people paying a few dollars at events to press the ignition button and get the data from "their" test run. We could do some really cool things with crowd participation with this kind of model.</p>
+
+
+	<p>If we used a Bone with a hardware control panel (safety switch, ignition button, recording enabled switch, etc) we could divorce the test stand from a directly connected laptop completely if we wanted.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-434">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=434.html#message-434">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 03:00 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Quote:<br />"2. The temperature sensor must be able to read 50% or more of the temperature which would destroy the motor casing, ie. if the casing will ignite at 500F, the sensor must be able to measure to 250F as a minimum.  This refers to the sensor's specification, not the calibration of the measurement circuit's full scale."</p>
+
+
+	<p>Thoughts:</p>
+
+
+	<p>How does <a href="../../../issues/2.html" class="issue status-3 priority-2 closed" title="Install available Bot filters (Resolved)">#2</a> make any sense?  Temperature scales are arbitrary, except the "Thermodynamic Kelvin Scale", where "50% or more of the temperature..." makes even less sense.</p>
+
+
+	<p>It seems to me that a case temperature sensor should be able to read case temperature up to, and including the temperature at which the case could be reasonably expected to fail.  Philosophically, in any test setup where the D-U-T might fail destructively, all sensors should remain functional a far as practical through the failure process.  After all, the whole idea of testing is to analyze potential and actual failure modes in addition to characterizing performance.</p>
+
+
+	<p>My $.02,<br />Ben</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-435">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=435.html#message-435">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 03:26 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Divorcing the control system from the Laptop is probably the biggest advantage to this topology.  The trouble is that a web interface on the arduino or MSP430 is simply not capable of serving the page(s) to multiple users.  One or two may be okay, but beyond that things slow to a crawl.  It's also a colossal PITA to code the TCP/IP stack or implement someone else's.  What I would like to see is a web server and framework in which pages can be configured for open access, multiple login, or single login.  Example: a public access page with the real time run data (non-interactive) and an administrative page where only one person can be logged in, but is capable of running calibration routines, moving/purging data, and initiating the test.</p>
+
+
+	<p>Kinda figured that this would be a V2.0 discussion, but the advantage is that any development done on such a system would pay off with web based control for any other projects, spooling them up with a polished interface within days or weeks instead of months or years.  I lean hard toward the Bone, but I didn't want my prejudice on the subject to flavor this discussion.  Even aside from the supply issues, the Pi has 1 I2C bus, 2SPI, a UART and 8 GPIO pins as opposed to the Bone with 2 I2C, 5 UART (which can be configured as I2C, SPI, CAN or serial), 7 ADC channels, and 66 3.3V GPIO.  While I recommend the Pi for middle and high school education, the Bone is kind of a no-brainer for serious applications as far as I am concerned.</p>
+
+
+	<p>The other thing I was thinking about for version 2.0 is moving toward a much smaller 3D printed frame using linear bearings on short shafts for the test carriage.  With a 3D printed solution we could put all the sensors on the carriage; the temp sensors on a small PC board mount below the motor mount and the FSR mounts to the nose where the motor drives the carriage into the end stop.  Communication between the sensor board and the Bone could be as simple as IRDA on as UART channel.  This design would be tiny... overall length only a couple of inches longer than the engine under test, 4" tall, and 6" wide to accommodate the bone with some protection.  A minimalist design like this would solve a few issues, but would require a different method to secure the test stand to the ground.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-436">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=436.html#message-436">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 03:34 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Hi Ben,</p>
+
+
+	<p>While I would see the wisdom of going the whole range to destructive, the trouble is that sensors which can withstand both the forces and temperatures of the event would be massive and thus have a slow slew rate.  The other issue is that during a burn through event, due to the pressures and temperatures involved, the event would happen incredibly fast.  I figure it is more important to get the data leading up to the destructive event at the highest possible resolution rather than record the whole thing.  Anything designed with a safety margin like what I would expect from a rocket engine sold to minors would have at least a 200% redundancy, so the 50% would measure the full scale of what was expected as well as show the trends just before things went south.</p>
+
+
+	<p>Best,</p>
+
+
+	<p>Aaron</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-437">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=437.html#message-437">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 03:35 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>My thought was that there would be no Ethernet interface at all on the Arduino or MSP430. The Arduino would dump its data over serial to the laptop, and then the laptop would handle serving that data out to multiple clients through websockets or something similar. The Arduino is completely isolated from the clients. I agree with you though that if you try to make the Arduino the web server that you're asking for trouble.</p>
+
+
+	<p>I'm with you on all the interfaces except the one to initiate the test. It's hard enough for me to trust that to a C++ app running on a laptop connected over USB/serial, let alone something that has to communicate back through a web server to the microcontroller. Anything where reliability is key should probably be more directly connected, in my opinion. Do you disagree Aaron?</p>
+
+
+	<p>I've got some thoughts on the mechanical design for 2.0 too, and I'm looking forward to hashing through all our thoughts and coming up with something really solid. I'm not sure I have the bandwidth for that yet though.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-438">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=438.html#message-438">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 04:56 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>The only way I would trust a web interface for something like this is to have a mechanical interlock or safety pin and a buzzer to indicate that the unit is attempting to fire while the pin is in or interlock is disabling the firing circuit.  This would give us two layers of physical security in addition to the security of the interface and page login.  That said, this would not be that hard to implement.</p>
+
+
+	<p>I don't really have the bandwidth for that discussion either, so no worries.  Perhaps such a discussion would also be better suited to moving forward with Glenn anyway.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-439">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=439.html#message-439">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 09:17 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Aaron Harper wrote:</p>
+
+
+<blockquote>
+
+	<p>Hi Ben,</p>
+
+
+	<p>While I would see the wisdom of going the whole range to destructive, the trouble is that sensors which can withstand both the forces and temperatures of the event would be massive and thus have a slow slew rate.  The other issue is that during a burn through event, due to the pressures and temperatures involved, the event would happen incredibly fast.  I figure it is more important to get the data leading up to the destructive event at the highest possible resolution rather than record the whole thing.  Anything designed with a safety margin like what I would expect from a rocket engine sold to minors would have at least a 200% redundancy, so the 50% would measure the full scale of what was expected as well as show the trends just before things went south.</p>
+
+
+	<p>Best,</p>
+
+
+	<p>Aaron</p>
+
+
+</blockquote>
+
+	<p>Hi Aaron,</p>
+
+
+	<p>OK, point taken.  To eliminate the arbitrary nature of temperature scales, the "50%" part of 2. should read: "...50% of the difference between the expected ambient temperature and the temperature at which the case would be damaged or destroyed..."</p>
+
+
+	<p>With regard to the speed and resolution issues, fine-wire thermocouples are fast, and small bead thermistors have much higher resolution, with only a slight penalty in speed.  For small bead thermistors see:<br /><a class="external" href="http://www.meas-spec.com/downloads/Miniature_Radial_Glass_Thermistor_Series.pdf">http://www.meas-spec.com/downloads/Miniature_Radial_Glass_Thermistor_Series.pdf</a><br /><a class="external" href="http://www.redfishsensors.com/PDFs/VECO%20PICO%20BEAD.pdf">http://www.redfishsensors.com/PDFs/VECO%20PICO%20BEAD.pdf</a><br /><a class="external" href="http://www.sensorsci.com/index.php?option=com_content&#38;view=article&#38;id=14&#38;Itemid=23">http://www.sensorsci.com/index.php?option=com_content&#38;view=article&#38;id=14&#38;Itemid=23</a><br />It looks like "redfishsensors" has picked up the VECO line from Meas-Spec, and "sensorsci" has picked up the Thermometrics line from GE.  The thermistor market that I knew so well just 6 years ago is all different now.  Note that the small bead thermistors, like fine thermocouples, are NOT electrically isolated.  In most cases, high speed temperature sensors are attached to the D-U-T so intimately that they must be considered disposable.  Less intimate attachment means much slower response.  Another note: Teflon is about useless as electrical insulation with fast temperature sensors because its thermal mass is close to that of aluminum (high) while its thermal conductivity is about 1/1000 that of aluminum (low) = long time constant.</p>
+
+
+	<p>Hope this is useful,<br />Ben</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-450">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=450.html#message-450">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-07.html" title="05/07/2013 09:38 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>We're currently in a situation where version 1.1 is not completely finished, but we're needing to work on version 2.0 ASAP due to what might become a hard deadline. We have a partner organization that has named Mach 30 on a NASA grant. If they are awarded that grant, we will be required to provide them with between 5 and 10 Shepard v2.0 kits by Q4 2013 or Q1 2014. Since we have a small team on this project with Aaron and I being the only DAQ hardware builders, we need to make sure that we have enough time to have the kits designed, built, and thoroughly tested by then. I believe that this is going to require stopping version 1.1, documenting it to the point it's at, and noting why the version is being stopped.</p>
+
+
+	<p>After some discussions with Aaron, and considering some input in the past from Ben, here are some items I'm looking at purchasing to experiment with for version 2.0. None of these prices include shipping.</p>
+
+
+	<p>Needed for project:<br />1. Next Gen BeagleBone: $45 - <a class="external" href="http://www.adafruit.com/products/1278">http://www.adafruit.com/products/1278</a><br />2. BeagleBone Proto Cape Kit: $9.95 - <a class="external" href="http://www.adafruit.com/products/572">http://www.adafruit.com/products/572</a><br />3. 5 Kg Load Cell: $6.80 - <a class="external" href="http://www.robotshop.com/micro-load-cell-5-kg-2.html">http://www.robotshop.com/micro-load-cell-5-kg-2.html</a><br />4. Non-contact temperature sensor: $3.94 - <a class="external" href="http://www.newark.com/texas-instruments/tmp006aiyzft/ic-infared-thermopile-sensor-14bit/dp/48T2174?CMP=AFC-JY6146109556">http://www.newark.com/texas-instruments/tmp006aiyzft/ic-infared-thermopile-sensor-14bit/dp/48T2174?CMP=AFC-JY6146109556</a><br />5. 12-bit ADC (SPI interface): $11.81 (x2) - <a class="external" href="http://www.ti.com/product/tlc2555">http://www.ti.com/product/tlc2555</a></p>
+
+
+	<p>Purchased by Jeremy for convenience:<br />1. Beagle Bone proto plate: $7.95 - <a class="external" href="http://www.adafruit.com/product/702">http://www.adafruit.com/product/702</a></p>
+
+
+	<p>Any thoughts on this? Anything to add Aaron?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-451">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=451.html#message-451">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-07.html" title="05/07/2013 10:20 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>I concur with the move to close out v1.1.  In the time since we proposed that version too many things have changed in the DAQ design for it to teach us any more lessons than we have already learned.  Note, I think we need to make sure we capture any costs associated with v1.1 components as Mach 30 expenses (there is a line item for v1.1 in the budget, this is just making sure we dot our i's and cross our t's with the expense reports, etc).</p>
+
+
+	<p>I do have a couple of questions concerning the experimental parts list.  Can you tell me more about the non-contact temp sensor and the 12bit ADC?  When I went to look at the temp sensor, it looked like it only reads up to 125C.  I forget, is that enough for the case temperature we expect to see (with some room for out of range runs)?  And, which sensor(s) will be hooked up to the ADC?</p>
+
+
+	<p>Just one more detail, it looks like these experimental parts will cost around $86+shipping (so call it around $100 or so) out of the budget of $200 for the v2.0 DAQ design and testing.  Do folks feel comfortable enough with the larger ticket items that we should expect to stay on budget for the v2.0 DAQ?</p>
+
+
+	<p>Thanks Jeremy and Aaron for getting this going.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-452">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=452.html#message-452">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-07.html" title="05/07/2013 11:13 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>J,</p>
+
+
+	<p>The <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">NAR testing guidelines</a> outline the following in section 8.6:</p>
+
+
+	<p>"The external casing temperature will be measured on at least one motor of a given type during initial certification testing, to ensure that this temperature does not exceed 200°C during or after firing, as required by NFPA 1125."</p>
+
+
+	<p>So, we are a somewhat below the range that the NAR testing and standards group cares about. If the casing temp exceeds 200°C, it sounds like they consider it to be a failed motor. We need to decide if that's a deal breaker that we're 75° below. Good catch J. I hadn't looked carefully enough at the specs yet. Aaron, have you seen any of that type of temp sensor with a 200°C max or more?</p>
+
+
+	<p>I think I may have made a mistake on the ADC. We should only need one ADC for just the thrust sensor since the non-contact temp sensor has it's own serial interface. In that case, the cost would drop to around $78 plus shipping.</p>
+
+
+	<p>With the structural designs that we've unofficially discussed for version 2.0, I feel like we could come in on budget to $20 or so over.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-453">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=453.html#message-453">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-08.html" title="05/08/2013 12:14 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>First, Jeremy you are correct that the temp sensor has it's own pre-calibrated ADC and serial interface.  This simplifies things a great deal eliminating instrumentation amps and ADCs for each sensor and the calibration necessary.</p>
+
+
+	<p>While I would agree with NAR that 200C is a failed motor, I get the feeling that it is more important to see the rate of rise on the motor's surface than to go all the way to 200C.  I will continue to look around for a 200C sensor, but that is what we have at the moment.  The nice thing is that with a serial interface which reads directly, all we have to do is change out the sensor and the board it is on.  I should also point out that this type of sensor will be one to play with of HAB and Satellite projects, since it reads thermal radiation of an object directly; it requires neither air or contact to work.  Designed to measure the temp of CPUs in laptops and communications gear, the price is in the basement ($3.94 with free prototyping samples) compared to similar devices due to production volume... but this also has defined its range of measurement.</p>
+
+
+	<p>Finally, the TI TLC2555 ADC is needed specifically for the load cell sensor, and only one is needed for the test stand.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-454">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=454.html#message-454">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-08.html" title="05/08/2013 11:58 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Hey guys,</p>
+
+
+	<p>Thanks for the clarifications.  Those helped a lot.  It sounds to me like we should spend maybe one more day looking for a wider range temp sensor just to see if one can be easily found.  If not, $4.00 for a test unit to experiment with sounds like a good deal, and an easily affordable expense to see how this class of sensor works for us.</p>
+
+
+	<p>Also, just a side note, the DAQ, mechanical, and kitification steps each have their own $200 budget this year (they are in some ways separate "kites" leading up to the Shepard kit).  Based on Jeremy's post, it sounds like we should have plenty of budget left after this round of experimentation to address any lessons learned with another iteration of the DAQ if necessary.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-455">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=455.html#message-455">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-08.html" title="05/08/2013 12:39 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>J - We're still shooting for $200 material cost on the Shepard 2.x test stand design that gets kitted though, right? It's my understanding that the kitting costs, labor, etc will be above and beyond that.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-456">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=456.html#message-456">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-08.html" title="05/08/2013 12:48 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Yes (per the estimates used to put together our part of the NASA grant application).  So, to just get everything budget wise all in one place.</p>
+
+
+	<ul>
+	<li>Target cost for Shepard kit materials:  $200</li>
+		<li>v2.0 DAQ kite budget: $200 (allows for some experimentation leading up to final design and shipping of components)</li>
+		<li>v2.0 Structure: $200 (allows for some experimentation leading up to final design and shipping of components)</li>
+		<li>v2.0 Kit development: $200 (guessing this will be used to cover materials for a complete kit build based on development of DAQ and structure)</li>
+		<li>v1.1 components: $50 (covers cost of parts ordered for the testing and building of v1.1)</li>
+		<li>v1.0 repairs: $25 (replacement parts for the motor mount we blew up at Ft Wayne Maker Faire)</li>
+	</ul>
+
+
+	<p>That all jive with people's expectations/understanding?</p>
+
+
+	<p>Sources:</p>
+
+
+	<ul>
+	<li>Internal emails concerning the NASA grant proposal</li>
+		<li><a href="https://docs.google.com/a/mach30.org/spreadsheet/ccc?key=0Ah84I9KIdhPkdDZsWTZZcGxmOVZRZGU3aVZWSmtWWmc#gid=0" class="external">Mach 30 2013 projected expenses</a></li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-458">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=458.html#message-458">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-10.html" title="05/10/2013 02:16 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've researched the infrared thermopile sensors some, and while I didn't find any that would go over 125 C, I did find this:</p>
+
+
+	<p><a class="external" href="http://www.adafruit.com/products/1296">http://www.adafruit.com/products/1296</a></p>
+
+
+	<p>It's $20, but it would allow us to test the TMP006 quickly without the painful soldering/reflowing of the TMP006's tiny package. It would also make the Shepard kit easier for anyone to assemble, while driving up the cost only a little bit by the time you factor in the labor and materials to build a breakout board ourselves.</p>
+
+
+	<p>If I don't hear anything to the negative, I will probably try to get the first wave of components for testing on order this evening. After that, I'll keep all of my work in dev logs through ODE's news feature until we have enough information to tell if our ideas are going to pan out for the final design.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-459">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=459.html#message-459">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-10.html" title="05/10/2013 02:20 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>There's also this for the DIY angle.</p>
+
+
+	<p><a class="external" href="http://dangerousprototypes.com/docs/Marie_:_Infrared_Thermopile_sensor">http://dangerousprototypes.com/docs/Marie_:_Infrared_Thermopile_sensor</a></p>
+
+
+	<p>We still need to figure out the break even point between our labor and materials vs just buying the thing already finished from somewhere like Adafruit though.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-460">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=460.html#message-460">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-10.html" title="05/10/2013 02:33 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>First, in general, I am good with ordering the first wave of parts for testing, with the possible exception of the temp sensor.  Which takes me to my second point, which is to admit, I am still a little lost about the temp sensor.  Does ordering the $4 part in the post with the original list of parts mean we have to do a bunch of reflow soldering?  If so, I am not sure even at $4 it is such a good buy given our current fabrication constraints.  But, the Adafruit part seems to be a little too expensive for a sensor which we know does not have nearly enough operating range.</p>
+
+
+	<p>How about we focus on the force sensing fir this first round of testing (after all, this involves a new sensor type and a new DAQ board, so we have plenty of things to work out during the testing right now already)?  And then continue researching temp sensors for something which will meet our needs range, response, integration, and cost wise.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-461">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=461.html#message-461">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-10.html" title="05/10/2013 04:02 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>It's going to be very hard (if not impossible) to get away from having to reflow at least something for this version of Shepard. As the functionality of Shepard becomes more sophisticated, the selection of ICs gets more sophisticated with smaller and harder to solder packages.</p>
+
+
+	<p>To get meaningful temperature information I think we've decided here on the forums that thermocouples will probably not cut it due to their slower response times. To get useful temperature profile information, we'll probably have to go with a highly responsive IR temperature sensor (like the TMP006). This <a href="http://www.robotshop.com/phidget-usb-ir-temperature-sensor.html" class="external">Phidgets sensor</a> has a range of -70C to 380C, so maybe we can research what sensor it uses.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-462">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=462.html#message-462">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-10.html" title="05/10/2013 08:05 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>As Jeremy noted, it's hard to get away from integration as the complexity of Shepard goes up, but there is another factor.  Non-SMD parts, particularly ICs are getting scarce as vendors retire old designs and don't bother to make a DIP version of their new device.  I detest working with the small stuff, particularly the BGAs like the thermopile, but it is what it is.  Another reason they do it, is that as measurements come closer to RF frequencies, the leads for thru-hole components can act like antennas causing, or receiving interference.</p>
+
+
+	<p>Now, if our budget will allow for $25.00 for both temp sensors, I have found just the thing: <a class="external" href="http://www.melexis.com/Infrared-Thermometer-Sensors/Infrared-Thermometer-Sensors/MLX90614-615.aspx">http://www.melexis.com/Infrared-Thermometer-Sensors/Infrared-Thermometer-Sensors/MLX90614-615.aspx</a>  This sensor is available at <a href="http://www.digikey.com/product-detail/en/MLX90614ESF-BAA-000-TU/MLX90614ESF-BAA-000-TU-ND/1647941" class="external">Digikey</a> for $12.49 and <a href="http://www.futureelectronics.com/en/technologies/semiconductors/analog/sensors/temperature/Pages/4179966-MLX90614ESF-BAA-000-TU.aspx?IM=0" class="external">Future Electronics</a> for $9.17 in single quantities.</p>
+
+
+	<p>It has a digital (SmBus which is I2C compatible) output meaning that it needs no calibration and has a range of -70 to 380C (it's the same sensor as the Phidgits module without the shroud).  Best yet, it's a 4 pin through-hole TO-39 can that we all can solder without going blind!</p>
+
+
+	<p>While I see the wisdom of holding off on the temperature measurement for this reason and to avoid too much change, I must point out that this would be the second time we walk away from a design criteria on Shepard, and in the same area.  Changes would be pretty much across the board in the data system anyway due to the different controller... we might as well do a complete redesign with little more work and get everything we want.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-464">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=464.html#message-464">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-13.html" title="05/13/2013 12:45 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Just a couple of quick comments.  First, this latest sensor looks very promising.  If everyone else is good with ordering it, I would be as well.</p>
+
+
+	<p>Second, I want to clarify that I was not proposing that we drop the temp sensor from the v2.0 design work, merely that we not let spec'ing the temp sensor hold up ordering the other components we already knew we wanted.  It was starting to sound like we may need considerably more time to find the right temp sensor, and since there was plenty of work to be done with the new board and thrust sensor, I would have hated to see us loose testing time because we hadn't found a temp sensor we could use yet.</p>
+
+
+	<p>Thanks for all the hard work!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-465">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=465.html#message-465">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-13.html" title="05/13/2013 01:00 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I believe this latest sensor is exactly what the doctor ordered.  The only gotcha is that we will need to create an aperture in the motor mount for each sensor so that it can read the surface temp, and each sensor needs to be shrouded so that it will <strong>only</strong> read the motor casing, not the exhaust plume or frame.</p>
+
+
+	<p>With this, I believe our sensor suite is complete with all specified measurements made at an accuracy and speed higher than what is needed, and with the types of technology necessary for development of future versions.  Bottom line:  Nothing is orphaned, especially the experience and coding.</p></div>
+  
+  </div>
+
+<p class="pagination">1 <a href="http://opendesignengine.net/boards/4/topics/428?page=2&amp;r=430">2</a>  <a href="http://opendesignengine.net/boards/4/topics/428?page=2&amp;r=430">Next »</a> (1-25/30)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/428.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

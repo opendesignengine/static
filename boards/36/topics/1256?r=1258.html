@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - DEV-02: Determine if we should use a tone ring vs. existing single magnet design - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1256-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>DEV-02: Determine if we should use a tone ring vs. existing single magnet design</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-03-14.html" title="03/14/2017 11:03 pm">over 5 years</a> ago</span></p>
+<div class="wiki">
+<p>This thread will track the research/testing related to 2017 PBI DEV-02.  This PBI is about the sensitivity of Holoseat to the user's pedaling. While the v0.3 Hall effect based sensors are a significant step forward over previous reed switch designs, Holoseat's responsiveness in game play was still a major concern from testers at last year's SyndCon.  We are considering whether the use of a tone ring (an arrangement of multiple magnets passing by "one" sensor to increase the frequency of signaling events) as a means of improving the sensitivity.</p>
+
+
+	<p>Note, this PBI is just about determining if changing to a tone ring is justified.  It is not about developing a tone ring implementation.  The determination should be backed up by technical evidence.  This evidence could come in the form of testing, research, or a combination of the two.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (6)</h3>
+
+  <div class="message reply" id="message-1257">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1256%3Fr=1257.html#message-1257">RE: DEV-02: Determine if we should use a tone ring vs. existing single magnet design</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-03-14.html" title="03/14/2017 11:20 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>While I have some ideas for a quick and cheap modification to Holoseat to test the idea of a tone ring, I thought I would begin this PBI by conducting a little research.  A google search for "tone ring" quickly pointed me to the Wikipedia article on <a href="https://en.m.wikipedia.org/wiki/Wheel_speed_sensor" class="external">wheel speed sensors</a> which consist of a "toothed ring and a pickup".</p>
+
+
+	<p>According to the wiki article, wheel speed sensors based on Hall effect sensors can get between 60 and 300 pulses per revolution (compared to Holoseat's current pulse rate of 1 per revolution).  With players typically pedaling at 60+ RPM, even the low end of performance quoted in the wiki article could take us up to 3600 Hz pedaling signals (versus about 60 Hz today).  This alone is enough to warrant further research, with special consideration for commercial wheel speed sensors.</p>
+
+
+	<p>For reference, here is a short video describing how wheel speed sensors work.</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/f6-tgcOYBzw?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/f6-tgcOYBzw?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1258">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1256%3Fr=1258.html#message-1258">RE: DEV-02: Determine if we should use a tone ring vs. existing single magnet design</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-03-14.html" title="03/14/2017 11:40 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>A little more googling, this time for wheel speed sensors with direction yields this interesting find: the <a href="http://www.infineon.com/dgdl/Speed+and+direction+sensor+TLE4966_pb.pdf?fileId=db3a3043372d5cc801376ea740283def" class="external">TLE4966</a>.  This is a <a href="http://www.mouser.com/ProductDetail/Infineon-Technologies/TLE4966-3K/?qs=HwMeRNENlMZ5VFf9CiV4%2FQ%3D%3D" class="external">$1.02</a> to <a href="http://www.mouser.com/ProductDetail/Infineon-Technologies/TLE4966L/?qs=OWKQh20churC29TnuGhtjQ%3D%3D" class="external">$1.45</a> Hall effect based wheel speed sensor that has "built in direction detection ... [that] provides with each index step a valid direction signal."  Including the direction as part of the sensor signals greatly simplifies the controller firmware, and $1.02 is far cheaper than our current sensor configuration. Plus, where there is one product there may be many more.</p>
+
+
+	<p>For reference, here are some more links about the TLE4996</p>
+
+
+	<ul>
+	<li><a href="http://www.infineon.com/cms/en/product/sensor/magnetic-position-sensor/hall-switch/TLE4966L/productType.html?productType=db3a30441441f8c00114641779db04e9#ispnTab1" class="external">TLE4966L Product Page</a></li>
+		<li><a href="http://www.infineon.com/cms/en/product/sensor/magnetic-position-sensor/hall-switch/channel.html?channel=db3a30433afc7e3e013b3c0361f95a15" class="external">Infineon Hall Switch Page</a></li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1259">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1256%3Fr=1259.html#message-1259">RE: DEV-02: Determine if we should use a tone ring vs. existing single magnet design</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-03-14.html" title="03/14/2017 11:44 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>One last note tonight, another name for the toothed wheel used with a wheel speed sensor is a pole wheel. Here is an <a href="http://www.esters.de/en/download/ds/POLEWHEELS-DS%20107%20E-V0.2-web-2009-08-14.pdf" class="external">example pole wheel data sheet</a>.  I still need to research how to match up a pole wheel with a wheel speed sensor before I can do much more work.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1260">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1256%3Fr=1260.html#message-1260">RE: DEV-02: Determine if we should use a tone ring vs. existing single magnet design</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-03-21.html" title="03/21/2017 09:26 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>OK, I think I have finally found an example of the type of pole wheel we are looking for (after googling for "magnetic pole wheel"):  <a href="http://www.phoenixamerica.com/products/targets/magnetic/magnet_wheels-2.html" class="external">magnetic target wheels</a>.  Check out the schematic for the <a href="http://www.phoenixamerica.com/products/targets/magnetic/Magnet_Wheels/P58A_Magnet_Target_Wheel.html" class="external">Phoenix America target wheel</a> (scroll to the bottom of the page).  While that is not the wheel we are looking for (it is too large), it is clearly the type of wheel we are looking for.  Just compare it to the pole wheel image in the <a href="http://www.infineon.com/dgdl/Speed+and+direction+sensor+TLE4966_pb.pdf?fileId=db3a3043372d5cc801376ea740283def" title="pg 2" class="external">sensor product brief</a>, it is the same class of component.</p>
+
+
+	<p>These <a href="http://store.phoenixamerica.com/mm5/merchant.mvc?Screen=PROD&#38;Product_Code=P16A25R60" class="external">target wheels are not cheap</a> (this is closer to the scale of the wheel we would need, and it costs $3-$9 depending on quantity).  So, part of the question becomes what is a reasonable estimate for what it would cost us for the target wheel we need.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1261">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1256%3Fr=1261.html#message-1261">RE: DEV-02: Determine if we should use a tone ring vs. existing single magnet design</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-03-21.html" title="03/21/2017 09:38 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Just a quick note, we are spending over $5.50 for our sensor configuration in v0.3 (this includes the sensors, the board, other components, and the magnet).  Any improvement in this design will require additional magnets (@ $0.77) and structure to hold the magnets.  These costs could easily account for an additional $5-$10 plus require custom design and not yield the sensitivity or simplicity we would get with commercial wheel speed sensors.</p>
+
+
+	<p>My recommendation (and the conclusion of this PBI) is two-fold:</p>
+
+
+	<ol>
+	<li>We move to commercial wheel speed sensors for v0.4 and beyond</li>
+		<li>At our earliest opportunity we contact some vendors to get firm details on requirements and pricing for appropriate wheel speed sensors and target wheels</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1289">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1256%3Fr=1289.html#message-1289">RE: DEV-02: Determine if we should use a tone ring vs. existing single magnet design</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-07-16.html" title="07/16/2017 02:20 am">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>I am going to close out this thread by posting the results of my initial testing of our selected sensor (<a href="http://www.infineon.com/cms/en/product/sensor/magnetic-position-sensor/hall-switch/TLE4966L/productType.html?productType=db3a30441441f8c00114641779db04e9" class="external">TLE4966L</a>).  The target wheel (see below) was designed by Bryan and a volunteer and 3D printed, with magnets inserted with alternating poles face up per the sensor documentation.</p>
+
+
+	<p><img src="../../../attachments/download/634" alt="" /></p>
+
+
+	<p>I then modified one of the CAD models used with the test rig to design an <a href="https://opendesignengine.net/dmsf_files/653" class="external">adapter</a> for the target wheel so it could be mounted on the test rig.  The fit was just about right, the target wheel just needed some filing in a couple of high spots and the adapter needed a layer of painters tape to make the friction fit tight.</p>
+
+
+	<p><img src="../../../attachments/download/633" alt="" /></p>
+
+
+	<p>With the target wheel mounted, it was time to turn to the sensor.  This new sensor has four pins, which include direction and speed pins (see image and table below).  I proceeded to wire the sensor up using 3.3v for supply voltage, since the sensor works as low as 2.7v and our hardware is 3.3v logic not 5v logic, and the same input pins as we used in v0.3 (see table below).</p>
+
+
+	<p><a href="https://www.infineon.com/dgdl/Infineon-TLE4966L-DS-v02_00-en.pdf?fileId=db3a304319c6f18c0119cd85b86f7ad7"><img src="../../../attachments/download/635" alt="" /></a></p>
+
+
+	<table>
+		<tr>
+			<td>Sensor Pin</td>
+			<td>Function</td>
+			<td>Arduino Pin</td>
+		</tr>
+		<tr>
+			<td>1  </td>
+			<td>Supply Voltage</td>
+			<td>3.3v </td>
+		</tr>
+		<tr>
+			<td>2  </td>
+			<td>Direction</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3  </td>
+			<td>Speed</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4  </td>
+			<td>Ground</td>
+			<td>GND</td>
+		</tr>
+	</table>
+
+
+
+
+	<p>However, when I tried to take readings from the sensor, I was getting very odd results.  The direction pin worked in one direction, but not the other (it would oscillate reported directions for CW rotations).  And the speed pin would not report any values.</p>
+
+
+	<p>I tried a number of variations of the wiring and input reading code with no consistent luck.  Then I reviewed the internal diagram for the sensor again and realized the speed pin was basically the raw output from one of the built-in hall effect sensors.  So, I went back to the <a href="https://opendesignengine.net/projects/holoseat/wiki/Schematics_and_PCB_Files#Sensor-Board" class="external">v0.3 sensor schematics</a> and remembered the 750 ohm resistor between the data line and the supply voltage on the hall effect sensors.</p>
+
+
+	<p>Once I added the correct resistor to the speed pin it started working.  So, I tried the same fix on the direction pin and it also starting working.  I will work with Bryan to update the v0.4 schematics to reflect the pair of resistors required in the sensor circuit.</p>
+
+
+	<p>The code is much simpler with the new sensor (see below).  We only have to count timing for the cadence calculation.  The direction is read directly from the new sensor.  Also note the <code>NumPoles</code> variable.  This accounts for the 12 pair of alternating magnets in the 24 magnet target wheel.</p>
+
+
+<pre>
+#include &lt;math.h&gt;
+
+const int CadencePin = 3;                         // pin used to measure cadence
+const int DirectionPin = 2;                       // pin to read direction
+const int NumPoles = 12;                          // number of magnetic pole pairs on the tone ring
+
+volatile unsigned long LastStepTime;              // last time the step sensor was triggered
+volatile float SensedDeltaT;                      // deltaT as calculated during interrupt calls
+volatile boolean WalkingForward;                  // walking direction state
+
+float Cadence;                                    // pedalling speed
+
+// common function to attach/detach interrupts
+void EnableSensors(unsigned int enable) {
+  if (enable) {
+    attachInterrupt(digitalPinToInterrupt(CadencePin), DetectCadence, FALLING);
+    //attachInterrupt(DirectionInterruptNumber, DetermineDirection, FALLING);
+  }
+  else {
+    detachInterrupt(digitalPinToInterrupt(CadencePin));
+    //detachInterrupt(DirectionInterruptNumber);
+  }
+}
+
+// interrupt function used to measure cadence
+void DetectCadence() {
+  unsigned long currentTime = millis();
+  SensedDeltaT = (currentTime - LastStepTime);
+  LastStepTime = currentTime;
+  WalkingForward = digitalRead(DirectionPin);  // CCW is forward
+}
+
+// resets walking state variables, used when holoseat is disabled
+void InitializeWalkingVariables() {
+  Cadence = 0.0;
+  SensedDeltaT = 5000;            // initialize sensed deltaT (and the value used to compute it, LastStepTime) to 5 seconds in the past
+  LastStepTime = millis() - 5000; // as above
+  WalkingForward = true;  
+}
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  pinMode(DirectionPin, INPUT);
+  pinMode(CadencePin, INPUT);
+  InitializeWalkingVariables();
+  EnableSensors(true);
+  Serial.begin(57600); 
+  Serial.println("r"); // send ready signal
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  delay(10);
+  EnableSensors(false);
+
+  // calculate the Cadence
+  unsigned long currentTime = millis();
+  float localDeltaT = (currentTime - LastStepTime);  
+  float deltaT = max(SensedDeltaT, localDeltaT)/1000; // in seconds
+  Cadence = round(60.0/deltaT/NumPoles);  // in RPM
+
+  if (WalkingForward)
+    Serial.print("+");
+  else
+    Serial.print("-");
+
+  Serial.print((int)Cadence);
+  Serial.println("");  
+  EnableSensors(true);                  
+}
+</pre></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/633/tonering-on-testrig_sm.jpg" class="icon icon-attachment">tonering-on-testrig_sm.jpg</a>
+  <span class="size">(25.9 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/634/tonering_sm.jpg" class="icon icon-attachment">tonering_sm.jpg</a>
+  <span class="size">(22.5 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/635/TLE4966L-pinout_sm.png" class="icon icon-attachment">TLE4966L-pinout_sm.png</a>
+  <span class="size">(18.4 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+<p class="pagination"> (1-6/6)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1256.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+{% from "macros.html" import nav_link with context %}
+{% from "macros.html" import nav_menu with context %}
+<!doctype html>
+<html lang="en" style="overflow-y: scroll;">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>{% block title %}{% endblock %}</title>
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='css/bootstrap.min.css')&#32;}}">
+    <link rel="stylesheet" href="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='css/font-awesome.min.css')&#32;}}">
+    <link rel="stylesheet" href="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='css/bootstrap-select.min.css')&#32;}}">
+    <link rel="stylesheet" href="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='css/bootstrap-select-fixes.css')&#32;}}">
+
+</head>
+<body style="padding-top: 60px;">
+  <nav class="navbar navbar-expand-md fixed-top rounded navbar-dark bg-primary py-0 py-md-0">
+    <div class="container">
+      <a class="navbar-brand" href="../../../../../../../../../../../index.html">
+        <img src="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='assets/holoseat-logo.jpg')&#32;}}"
+             height="35"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsingNavbar">
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          {% if request.endpoint.startswith('help') %}
+            <!-- Help Pages Nav Bar -->
+            {{ nav_link('help', 'Help') }}
+            {{ nav_link('helpApp', 'App') }}
+            {{ nav_link('helpHardware', 'Hardware') }}
+          {% else %}
+            <!-- UI Pages Nav Bar -->
+            {{ nav_link('controls', 'Controls') }}
+            {{ nav_link('profiles', 'Profiles') }}
+            {% if debug %}
+              {{ nav_menu('Settings', [('hwDefaults', 'Hardware Defaults', ''),
+                                       ('serialMonitor', 'Serial Monitor', ''),
+                                       ('---', '', ''),
+                                       ('mobileAddress', 'Mobile Address', '')]) }}
+            {% else %}
+              {{ nav_menu('Settings', [('hwDefaults', 'Hardware Defaults', ''),
+                                       ('---', '', ''),
+                                       ('mobileAddress', 'Mobile Address', '')]) }}
+            {% endif %}
+            {{ nav_menu('Help', [('help', 'Help', '_new'), ('about', 'About', '')]) }}
+          {% endif %}
+        </ul>
+
+        <span class="navbar-text d-none d-md-block">
+          <em>Exerfy your games.</em>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Top display for enable button and current cadence -->
+    {% if not request.endpoint.startswith('help') %}
+    <div class="card mb-2">
+      <div class="card-block">
+        <div class="row align-items-center px-1">
+          <div class="col-md-1 col-6 my-1">
+            <!--
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-outline-primary active">
+                <input type="checkbox" checked autocomplete="off">
+                <span class="h4">h</span>
+              </label>
+            </div>
+            -->
+            <button id="holoseatEnableButton" type="button" class="btn btn-outline-primary active" data-toggle="button" aria-pressed="true" autocomplete="off">
+              <span class="h4">h</span>
+            </button>
+          </div>
+          <div class="col d-none d-md-block my-1 pr-0">
+            <select class="selectpicker show-tick" data-width="100%">
+              <option value="1" data-content="<span class='h4'>&nbsp;</span><span class='h5'>[default]</span>">[default]</option>
+              <option value="2" data-content="<span class='h4'>&nbsp;</span><span class='h5'>Mass Effect: Andromeda</span>">Mass Effect: Andromeda</option>
+              <option selected value="3" data-content="<span class='h4'>&nbsp;</span><span class='h5'>Shroud of the Avatar</span>">Shroud of the Avatar</option>
+              <option value="4" data-content="<span class='h4'>&nbsp;</span><span class='h5'>Star Wars: The Old Republic</span>">Star Wars: The Old Republic</option>
+            </select>
+          </div>
+          <div class="col-md-3 col-6 my-1">
+            <button class="btn btn-outline-primary disabled float-right">
+              <span class="h4">
+                <strong><i class="fa fa-angle-left text-white" aria-hidden="true"></i><i class="fa fa-angle-left text-white" aria-hidden="true"></i><i class="fa fa-angle-left text-white" aria-hidden="true"></i><i class="fa fa-angle-left text-white" aria-hidden="true"></i></strong>
+                <span class="px-0">088</span>
+                <strong><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-angle-right text-white" aria-hidden="true"></i></strong>
+              </span>
+            </button>
+          </div>
+          <div class="col-12 d-block d-md-none d-lg-none d-xl-none my-1">
+            <select class="selectpicker show-tick px-1" data-width="100%">
+              <option value="1" data-content="<span class='h4'>&nbsp;</span><span class='h5'>[default]</span>">[default]</option>
+              <option value="2" data-content="<span class='h4'>&nbsp;</span><span class='h5'>Mass Effect: Andromeda</span>">Mass Effect: Andromeda</option>
+              <option selected value="3" data-content="<span class='h4'>&nbsp;</span><span class='h5'>Shroud of the Avatar</span>">Shroud of the Avatar</option>
+              <option value="4" data-content="<span class='h4'>&nbsp;</span><span class='h5'>Star Wars: The Old Republic</span>">Star Wars: The Old Republic</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- alert boxes -->
+    <div id="alertArea">
+      {% for category, message in get_flashed_messages(with_categories=true) %}
+        <div class="alert alert-{{category}} alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% block content %}{% endblock %}
+  </div>
+
+	<!-- jQuery first, then Bootstrap JS. -->
+	<script type="text/javascript" src="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='js/jquery-3.2.1.min.js')&#32;+&#32;'?v='&#32;+&#32;jsVersionString&#32;}}"></script>
+  <script type="text/javascript" src="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='js/popper.min.js')&#32;+&#32;'?v='&#32;+&#32;jsVersionString&#32;}}"></script>
+	<script type="text/javascript" src="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='js/bootstrap.min.js')&#32;+&#32;'?v='&#32;+&#32;jsVersionString&#32;}}"></script>
+  <script type="text/javascript" src="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='js/bootstrap-select.min.js')&#32;+&#32;'?v='&#32;+&#32;jsVersionString&#32;}}"></script>
+  <script type="text/javascript" src="http://opendesignengine.net/projects/holoseat/repository/revisions/108/raw/trunk/app-src/holoseat/ui/templates/{{&#32;url_for('static',&#32;filename='js/holoseat-app.js')&#32;+&#32;'?v='&#32;+&#32;jsVersionString&#32;}}"></script>
+
+  <!-- websocket code -->
+  <script>
+    holoseatEventListeners = [];
+
+    var hostname = window.location.hostname;
+    var ws = new WebSocket('ws://'+hostname+':' + {{apiPort}} + '/ws');
+
+    ws.onopen = function() {
+      {% if debug %}
+      console.log('Connected to WebSocket');
+      {% endif %}
+    };
+
+     ws.onmessage = function(ev) {
+       {% if debug %}
+       console.log(ev.data);
+       {% endif %}
+       var message = JSON.parse(ev.data);
+       if ("messageId" in message) {
+         {% if debug %}
+         console.log(holoseatEventListeners);
+         {% endif %}
+         holoseatEventListeners.forEach( function (listener) {
+           {% if debug %}
+           console.log(listener);
+           {% endif %}
+           if ((listener.eventType === '*') || (listener.eventType === message.type)) {
+            listener.handle(message);
+           }
+         });
+       }
+       else {
+         console.log("Could not find messageId in: " + ev.data);
+       }
+     };
+
+     ws.onclose = function(ev) {
+       {% if debug %}
+       console.log('Disconnected from WebSocket: ' + JSON.stringify(ev));
+       {% endif %}
+     };
+
+     ws.onerror = function(ev) {
+       {% if debug %}
+       console.log('WebSocket Error');
+       {% endif %}
+     };
+
+     $(document).ready(function() {
+       // set up enabled button event listener
+       holoseatEventListeners.push({eventType : "enabledChange",
+                                    handle : function(message) {
+                                      setHoloseatEnableButton(message.enabled);
+                                    }});
+                      });
+  </script>
+  {% block scriptCode %}{% endblock %}
+</body>
+</html>

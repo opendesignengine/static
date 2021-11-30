@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Open Design Engine - Bug #249: Receive 403 Error After Creating New Project - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+    <link href="http://opendesignengine.net/issues/249.atom" rel="alternate" title="Open Design Engine - Bug #249: Receive 403 Error After Creating New Project" type="application/atom+xml" />
+    <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="../javascripts/context_menu.js%3F1359925542" type="text/javascript"></script>
+    <link href="../stylesheets/context_menu.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+    
+</head>
+<body class="controller-issues action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/ode.html" method="get">
+        <input name="issues" type="hidden" value="1" />
+        <a href="../search/index/ode.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/ode%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/ode%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/ode/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/ode%3Fjump=issues.html" class="issues selected">Issues</a></li>
+<li><a href="../projects/ode/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/ode%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../projects/ode/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/ode/boards.html" class="boards">Forums</a></li>
+<li><a href="../projects/ode%3Fjump=files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/ode/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+  <h3>Issues</h3>
+<a href="../projects/ode/issues%3Fset_filter=1.html">View all issues</a><br />
+
+<a href="../projects/ode/issues/report.html">Summary</a><br />
+
+
+
+
+
+	<a href="../projects/ode/issues/gantt.html">Gantt</a><br />
+
+
+
+
+
+
+
+  
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="issue-249-watcher"></span>
+
+
+
+
+</div>
+
+
+<h2>Bug #249</h2>
+
+<div class="issue status-5 priority-2 closed child details">
+        
+      
+<div class="subject">      
+<div><p><a href="217.html" class="issue status-1 priority-2 parent">Milestone #217</a>: Migrate ODE source code to match current version of Redmine</p><div><h3>Receive 403 Error After Creating New Project</h3></div></div>
+</div>
+        <p class="author">
+        Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/ode/activity%3Ffrom=2014-07-09.html" title="07/09/2014 01:30 pm">over 8 years</a> ago.
+        
+        Updated <a href="http://opendesignengine.net/projects/ode/activity?from=2014-09-02" title="09/02/2014 10:25 am">about 8 years</a> ago.
+        
+        </p>
+
+<table class="attributes">
+<tr>
+    <th class="status">Status:</th><td class="status">Closed</td>
+    <th class="start-date">Start date:</th><td class="start-date">07/09/2014</td>
+</tr>
+<tr>
+    <th class="priority">Priority:</th><td class="priority">Normal</td>
+    <th class="due-date">Due date:</th><td class="due-date"></td>
+</tr>
+<tr>
+    <th class="assigned-to">Assignee:</th><td class="assigned-to"><a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a></td>
+    <th class="progress">% Done:</th><td class="progress"><table class="progress" style="width: 80px;"><tr><td class="todo" style="width: 100%;"></td></tr></table><p class="pourcent">0%</p></td>
+</tr>
+<tr>
+    <th class="category">Category:</th><td class="category">-</td>
+    
+</tr>
+<tr>
+    <th class="fixed-version">Target version:</th><td class="fixed-version"><a href="../versions/10.html">v0.2.1 - Public Beta Enhancements</a></td>
+    
+</tr>
+
+
+</table>
+
+<hr />
+
+	<div class="contextual">
+	
+	</div>
+	
+	<p><strong>Description</strong></p>
+	<div class="wiki">
+	<p>OS: Linux (Ubuntu 14.04)<br />Browser: Chrome 35.0.1916.153</p>
+
+
+	<p>After clicking the "Create" button on a new project, I see a 403 (not authorized) message (see attached image).</p>
+
+
+	<p><img src="http://opendesignengine.net/attachments/download/512" alt="" /></p>
+	</div>
+
+<div class="attachments">
+
+<p><a href="http://opendesignengine.net/attachments/512/RC_1_1_403_Error_Linux_Chrome.png" class="icon icon-attachment">RC_1_1_403_Error_Linux_Chrome.png</a>
+  <span class="size">(22.8 kB)</span>
+  
+  
+    <span class="author">Jeremy Wright, 07/09/2014 01:30 pm</span>
+  
+  </p>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div id="history">
+<h3>History</h3>
+
+  <div id="change-471" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-1">#1</a></div>
+    
+    <a name="note-1"></a>
+		Updated by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/ode/activity%3Ffrom=2014-07-09.html" title="07/09/2014 01:33 pm">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-471-notes"><p>I just noticed that the project is created and shows up in the project list, and I can get to the settings page after it's been created.</p></div>
+  </div>
+  
+
+  <div id="change-472" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-2">#2</a></div>
+    
+    <a name="note-2"></a>
+		Updated by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/ode/activity%3Ffrom=2014-07-09.html" title="07/09/2014 01:39 pm">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-472-notes"><p>Clicking the "Create and Continue" button does not cause the error, presumably because it does not forward me to the settings page for the project.</p></div>
+  </div>
+  
+
+  <div id="change-473" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-3">#3</a></div>
+    
+    <a name="note-3"></a>
+		Updated by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/ode/activity%3Ffrom=2014-07-09.html" title="07/09/2014 01:56 pm">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-473-notes"><p>This also happens in Firefox 30.0 on Ubuntu 14.04.</p></div>
+  </div>
+  
+
+  <div id="change-475" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-4">#4</a></div>
+    
+    <a name="note-4"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-10" title="07/10/2014 09:44 pm">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-475-notes"><p>This appears to be in all browsers.</p></div>
+  </div>
+  
+
+  <div id="change-485" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-5">#5</a></div>
+    
+    <a name="note-5"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-27" title="07/27/2014 11:11 am">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-485-notes"><p>I've finally tracked down what the overall issue with this is. It seems in this version of Redmine, after a new project is created the cached project memberships for the user is not updated. I'll be looking in to whether this is fixed in newer versions of Redmine a little bit, but ultimately submit a patch to our current copy to resolve the issue (not update to a newer version of Redmine; that will be a future task).</p></div>
+  </div>
+  
+
+  <div id="change-486" class="journal has-details">
+    <h4><div class="journal-link"><a href="249.html#note-6">#6</a></div>
+    
+    <a name="note-6"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-27" title="07/27/2014 11:11 am">over 8 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Status</strong> changed from <i>New</i> to <i>In Progress</i></li>
+      
+    </ul>
+    
+    
+  </div>
+  
+
+  <div id="change-487" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-7">#7</a></div>
+    
+    <a name="note-7"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-27" title="07/27/2014 02:16 pm">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-487-notes"><p>As far as I can tell without actually standing up and configuring a new instance of Redmine, it looks like this would be an issue with the latest as well.</p></div>
+  </div>
+  
+
+  <div id="change-488" class="journal has-notes has-details">
+    <h4><div class="journal-link"><a href="249.html#note-8">#8</a></div>
+    
+    <a name="note-8"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-27" title="07/27/2014 02:27 pm">over 8 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Status</strong> changed from <i>In Progress</i> to <i>Feedback</i></li>
+      
+       <li><strong>Assignee</strong> set to <i>Jeremy Wright</i></li>
+      
+    </ul>
+    
+    <div class="wiki" id="journal-488-notes"><p>Posted a fix under SVN, revision 82. Updated the test server, so this should be good to go to verify it's working (which it seems to be on my end).</p></div>
+  </div>
+  
+
+  <div id="change-490" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-9">#9</a></div>
+    
+    <a name="note-9"></a>
+		Updated by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-28" title="07/28/2014 06:50 am">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-490-notes"><p>Now when I click the Create button, Firefox and Chrome both get stuck waiting for the server. It never redirects to the settings page, the loading indicator(s) just spin forever.</p>
+
+
+	<p>OS: Ubuntu 14.04</p></div>
+  </div>
+  
+
+  <div id="change-491" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-10">#10</a></div>
+    
+    <a name="note-10"></a>
+		Updated by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-28" title="07/28/2014 06:54 am">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-491-notes"><p>I cleared the browser cache on Chrome just to make sure that wasn't the problem. It still says that it's waiting for the server forever.</p></div>
+  </div>
+  
+
+  <div id="change-492" class="journal has-notes">
+    <h4><div class="journal-link"><a href="249.html#note-11">#11</a></div>
+    
+    <a name="note-11"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-28" title="07/28/2014 09:21 am">over 8 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-492-notes"><p>I think it getting stuck is some how related to the validation bug fix. When I updated the test server yesterday with that fix it started to hang on new project creation. Oddly, reverting that change didn't seem to fix it. I'll update this ticket when that issue appears to be resolved.</p></div>
+  </div>
+  
+
+  <div id="change-493" class="journal has-details">
+    <h4><div class="journal-link"><a href="249.html#note-12">#12</a></div>
+    
+    <a name="note-12"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-07-28" title="07/28/2014 09:21 am">over 8 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Status</strong> changed from <i>Feedback</i> to <i>In Progress</i></li>
+      
+       <li><strong>Assignee</strong> changed from <i>Jeremy Wright</i> to <i>Christopher Sigman</i></li>
+      
+    </ul>
+    
+    
+  </div>
+  
+
+  <div id="change-495" class="journal has-notes has-details">
+    <h4><div class="journal-link"><a href="249.html#note-13">#13</a></div>
+    
+    <a name="note-13"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../projects/ode/activity%3Ffrom=2014-07-29.html" title="07/29/2014 06:20 pm">over 8 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Status</strong> changed from <i>In Progress</i> to <i>Feedback</i></li>
+      
+       <li><strong>Assignee</strong> changed from <i>Christopher Sigman</i> to <i>Jeremy Wright</i></li>
+      
+    </ul>
+    
+    <div class="wiki" id="journal-495-notes"><p><a href="http://opendesignengine.net/projects/ode/repository/revisions/84" class="changeset" title="#251 - removed a mistakenly committed call to the debugger that would halt servers where the debu...">r84</a> just pushed to test should fix the lingering issues.</p></div>
+  </div>
+  
+
+  <div id="change-501" class="journal has-details">
+    <h4><div class="journal-link"><a href="249.html#note-14">#14</a></div>
+    
+    <a name="note-14"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../projects/ode/activity%3Ffrom=2014-07-29.html" title="07/29/2014 06:27 pm">over 8 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Target version</strong> set to <i>v0.2.1 - Public Beta Enhancements</i></li>
+      
+    </ul>
+    
+    
+  </div>
+  
+
+  <div id="change-515" class="journal has-details">
+    <h4><div class="journal-link"><a href="249.html#note-15">#15</a></div>
+    
+    <a name="note-15"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-09-02" title="09/02/2014 08:37 am">about 8 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Status</strong> changed from <i>Feedback</i> to <i>Closed</i></li>
+      
+    </ul>
+    
+    
+  </div>
+  
+
+  <div id="change-516" class="journal has-details">
+    <h4><div class="journal-link"><a href="249.html#note-16">#16</a></div>
+    
+    <a name="note-16"></a>
+		Updated by <a href="../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2014-09-02" title="09/02/2014 10:25 am">about 8 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Parent task</strong> set to <i>#217</i></li>
+      
+    </ul>
+    
+    
+  </div>
+  
+
+
+
+
+</div>
+
+
+
+<div style="clear: both;"></div>
+<div class="contextual">
+
+
+<span class="issue-249-watcher"></span>
+
+
+
+
+</div>
+
+
+<div style="clear: both;"></div>
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/issues/249.atom" class="atom" rel="nofollow">Atom</a></span>
+	<span><a href="http://opendesignengine.net/issues/249.pdf" class="pdf" rel="nofollow">PDF</a></span>
+</p>
+
+
+
+
+
+
+<div id="context-menu" style="display: none;"></div>
+<script type="text/javascript">
+//<![CDATA[
+new ContextMenu('/issues/context_menu')
+//]]>
+</script>
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/249">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

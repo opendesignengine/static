@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Latest projects</title>
+  <link rel="self" href="http://opendesignengine.net/projects.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2018-08-21T14:56:11+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Audio Frequency Function Generator - Project: Audio Frequency Function Generator</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/ny-sq-tri-sine-gen-20hz-20khz"/>
+    <id>http://opendesignengine.net/projects/ny-sq-tri-sine-gen-20hz-20khz</id>
+    <updated>2018-08-21T14:56:11+00:00</updated>
+    <content type="html">
+&lt;p&gt;An analog function generator with 20 Hz - 20kHz frequency band. Outputs sine, triangular and square waveforms with frequency, amplitude and offset adjustment.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Holoseat Test Stand - Project: Holoseat Test Stand</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts"/>
+    <id>http://opendesignengine.net/projects/holoseat-ts</id>
+    <updated>2017-12-03T01:04:41+00:00</updated>
+    <content type="html">
+&lt;p&gt;The Holoseat Test Stand is a development and manufacturing resource for Model B's &lt;a href="http://holoseat.com" class="external"&gt;Holoseat&lt;/a&gt;.  Developers can use it to simulate user activities in predictable and repeatable testing.  And the manufacturing team can use the test stand to verify the key sub-systems (sensor, tone ring, and controller) are assembled correctly and work according to their specifications.&lt;/p&gt;
+
+
+	&lt;p&gt;Key resources for the test stand are:&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;The &lt;a href="http://opendesignengine.net/projects/holoseat-ts/wiki/Wiki" class="wiki-page"&gt;Wiki&lt;/a&gt;&lt;br /&gt;  Source for project documentation&lt;/li&gt;
+		&lt;li&gt;The &lt;a href="https://opendesignengine.net/dmsf/holoseat-ts" class="external"&gt;File Repository&lt;/a&gt;&lt;br /&gt;  Source for design files (CAD/CAM, BoM, MBSE)&lt;/li&gt;
+		&lt;li&gt;The &lt;a href="https://opendesignengine.net/projects/holoseat-ts/repository" class="external"&gt;Source Code Repository&lt;/a&gt;&lt;br /&gt;  Source for software files (firmware and apps)&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Ground Sphere Mk 3 - Project: Ground Sphere Mk 3</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3"/>
+    <id>http://opendesignengine.net/projects/groundsphere3</id>
+    <updated>2016-03-15T20:31:39+00:00</updated>
+    <content type="html">
+&lt;p&gt;&lt;div style="float:right"&gt;&lt;img src="/attachments/download/591" alt="" /&gt;&lt;/div&gt;&lt;br /&gt;Ground Sphere Mk 3 is the 2016 Mach 30 development project.  Our mission objective is to listen to &lt;a href="https://en.wikipedia.org/wiki/Amateur_Radio_on_the_International_Space_Station" class="external"&gt;radio signals from NASA's International Space Station&lt;/a&gt;. Since the project began, we&#8217;ve learned that this HAM radio downlink was all but shut down, except for large pre-coordinated events with NASA.  While that&#8217;s unfortunate, our system is &#8220;reconfigurable&#8221; and we&#8217;re now testing it by downlinking images from &lt;a href="https://en.wikipedia.org/wiki/NOAA-19" class="external"&gt;NOAA weather satellites&lt;/a&gt;.&lt;/p&gt;
+
+
+	&lt;p&gt;We are running this project using a modified Agile/Scrum process with 6 week sprints, and we&#8217;re managing ourselves as an Integrated Product Team where there are volunteers for a variety of backgrounds and fields all working together.  We have graphics designers, communications/electrical engineers, systems engineers, and social media marketers.  This real-time collaboration produces great progress each week. Check out the &lt;strong&gt;&lt;a href="http://opendesignengine.net/projects/groundsphere3/wiki/Wiki" class="wiki-page"&gt;wiki&lt;/a&gt;&lt;/strong&gt; to learn more!&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Perpetum mobile - Project: Perpetum mobile</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mobinimr"/>
+    <id>http://opendesignengine.net/projects/mobinimr</id>
+    <updated>2015-10-26T17:22:12+00:00</updated>
+    <content type="html">
+&lt;p&gt;kugla, ki se nimr vrti&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Source Lidar - Project: Open Source Lidar</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/open-source-lidar"/>
+    <id>http://opendesignengine.net/projects/open-source-lidar</id>
+    <updated>2015-07-06T03:56:39+00:00</updated>
+    <content type="html">
+&lt;p&gt;The idea of this project is the conceptual development of a modularized open source lidar system. The&lt;br /&gt;possibility of realizing an open source lidar system should be evaluated by defining a modularized&lt;br /&gt;framework with interface definitions. The goal of this modularized open lidar system is to have a&lt;br /&gt;platform which can be used in academia and research tailored to the individual requirements of&lt;br /&gt;different applications as well as a platform for commercial research and development of the&lt;br /&gt;technology. Furthermore, the developed concept should be presented in an online platform where&lt;br /&gt;everyone can contribute to the idea of open source development. The project is very close to research&lt;br /&gt;projects and shall be carried out in cooperation with international partner institutes to cover their needs&lt;br /&gt;and ideas, too. It includes a lot of &#8220;market analysis&#8221; and gathering of background information and is&lt;br /&gt;planned to be only the starting point for the OPENLIDAR idea.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Mathematics Tool Kit - Project: Mathematics Tool Kit</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk"/>
+    <id>http://opendesignengine.net/projects/mtk</id>
+    <updated>2015-01-22T21:09:38+00:00</updated>
+    <content type="html">
+&lt;p&gt;&lt;div style="float:right"&gt;&lt;a href="https://opendesignengine.net/projects/mtk/"&gt;&lt;img src="/attachments/download/578" alt="" /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Mach 30 believes documentation is essential to creating high quality engineering analysis and that integrating documentation steps into the engineering process is the key to ensuring documentation is created and maintained.  The Mathematics Tool Kit (MTK) is a unified engineering analysis and documentation tool created to address these needs.&lt;/p&gt;
+
+
+	&lt;p&gt;MTK is built on existing open source tools including &lt;a href="http://ipython.org/" class="external"&gt;IPython&lt;/a&gt;, &lt;a href="https://jupyter.org/" class="external"&gt;Jupyter&lt;/a&gt; (and &lt;a href="https://github.com/ipython-contrib/IPython-notebook-extensions" class="external"&gt;several extensions&lt;/a&gt;), &lt;a href="http://pint.readthedocs.org/" class="external"&gt;Pint&lt;/a&gt;, and &lt;a href="https://pythonhosted.org/spyder/" class="external"&gt;Spyder&lt;/a&gt; (coming soon).  The goal is to create a tool that makes it easy to switch between (and focus on) engineering analysis and documentation tasks, all in an environment optimized for engineers (e.g. built in support for units as first class mathematical constructs via Pint).  Check out the &lt;strong&gt;&lt;a href="http://opendesignengine.net/projects/mtk/wiki/Wiki" class="wiki-page"&gt;wiki&lt;/a&gt;&lt;/strong&gt; to learn more.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Yavin Thruster - Project: Yavin Thruster</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster</id>
+    <updated>2015-01-17T18:55:35+00:00</updated>
+    <content type="html">
+&lt;p&gt;Welcome to Mach 30's Yavin Thruster project.  If you have ever wondered what makes rockets work or how engineers go about designing rocket engines, then this is the project for you.  We are going to demonstrate how you can go from &lt;em&gt;requirements&lt;/em&gt; to &lt;em&gt;analysis and conceptual design&lt;/em&gt; (1) to &lt;em&gt;detailed design&lt;/em&gt; (2) to &lt;em&gt;manufacture&lt;/em&gt; (3) and ultimately &lt;em&gt;test&lt;/em&gt;.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/dmsf_files/480?download=" alt="" /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;The Yavin Thruster is a cold gas thruster, a kind of rocket engine that creates thrust just from the energy stored in a compressed gas.  Our goal is to make the Yavin Thruster accessible by anyone, so we are using modern design and manufacturing techniques (like parametric modeling, 3D printing) and commonly available components (like consumer grade air compressors).  Check out our &lt;a href="http://opendesignengine.net/projects/yavin-thruster/wiki/Wiki" class="wiki-page"&gt;Wiki&lt;/a&gt; and our &lt;a href="https://opendesignengine.net/projects/yavin-thruster/boards" class="external"&gt;Forums&lt;/a&gt; for all the latest news.  And be sure to download the design files and try making your own Yavin Thruster.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>High Altitude Rocket Project (HARP) - Project: High Altitude Rocket Project (HARP)</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/harp"/>
+    <id>http://opendesignengine.net/projects/harp</id>
+    <updated>2014-10-02T10:29:37+00:00</updated>
+    <content type="html">
+&lt;p&gt;A community based effort to develop, design, build and fly a rocket capable of reaching the Stratosphere and returning to earth in whole, or in part as a glider.  The glider and/or booster are to have onboard telemetry, First Person Video (FPV) and OSD capabilities to transmit live video and data as well as autonomously fly back in close proximity to either the launch point or a designated landing area based on GPS coordinates.  The glider should be able to loiter over an area for an extended period of time (1 or more hours) power-pack permitting by gently spiraling down and riding thermals or deploying a small electric motor turning a folding propeller.  The glider, when providing FPV and OSD data should also optionally be R/C controllable by a human operator during the final 300-400 feet of descent to landing.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Mach 30 Technical Roadmap - Project: Mach 30 Technical Roadmap</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/m30roadmap"/>
+    <id>http://opendesignengine.net/projects/m30roadmap</id>
+    <updated>2014-09-13T17:49:35+00:00</updated>
+    <content type="html">
+&lt;p&gt;This is the home of the Mach 30 Technical Roadmap describing the technical path of open source spaceflight hardware required to support Mach 30's mission of &lt;em&gt;"hastening the advancement of humanity into a spacefaring civilization."&lt;/em&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;We are currently working on version 1.0 of the roadmap.  The Board of Directors requested the Mach 30 engineering community develop a roadmap focused on launch vehicle technology and free of export controlled projects to last 1+ years.  This request supports the engineering community, the marketing team, and the &lt;a href="http://mach30.org/activites/oshw-community-support/ectf/" class="external"&gt;Export Control Task Force&lt;/a&gt; (ECTF).   The engineering community can use the roadmap for guidance in how it can best spend its time developing open source spaceflight hardware and to measure its progress.  The marketing team gets a rallying point to share with Mach 30 fans, spaceflight enthusiasts, open source hardware developers, and makers.  And the ECTF can rest assured the engineering community is not in impending danger of running afoul of export control regulations.&lt;/p&gt;
+
+
+	&lt;p&gt;Please see the &lt;a href="http://opendesignengine.net/projects/m30roadmap/wiki/Wiki" class="wiki-page"&gt;Wiki&lt;/a&gt; and Forums for more details on the development of the roadmap and for how you can join Mach 30 in developing and implementing it.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;em&gt;ad astra per civitatem - to the stars through community&lt;/em&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Pedal Bus - Project: Pedal Bus</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/pedalbus"/>
+    <id>http://opendesignengine.net/projects/pedalbus</id>
+    <updated>2014-09-03T19:56:28+00:00</updated>
+    <content type="html">
+&lt;p&gt;This is space for GR Makers to work on a pedal powered vehicle. Two to four people please....  Sorry fourteen....  Should have called pedal bus.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Visual Guide to 3D Printing - Project: Visual Guide to 3D Printing</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/vg3dp"/>
+    <id>http://opendesignengine.net/projects/vg3dp</id>
+    <updated>2014-08-16T11:31:14+00:00</updated>
+    <content type="html">
+&lt;p&gt;There needs to be a from-scratch, step-by-step, visual set of instructions that makes 3D printing as easy to understand as possible.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Ground Sphere CadQuery CAD - Project: Ground Sphere CadQuery CAD</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/ground-sphere-cad"/>
+    <id>http://opendesignengine.net/projects/ground-sphere-cad</id>
+    <updated>2014-07-29T21:03:11+00:00</updated>
+    <content type="html">
+&lt;p&gt;This is an experiment to see how (and if) CadQuery can be used to create a parametric model of Ground Sphere that varies solely based on the frequency.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Wave Articulation Matrix - Project: Wave Articulation Matrix</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/wam"/>
+    <id>http://opendesignengine.net/projects/wam</id>
+    <updated>2014-02-17T23:06:09+00:00</updated>
+    <content type="html">
+&lt;p&gt;Log Periodic Nested Waveguide&lt;br /&gt;Articulated Cavity Resonator&lt;br /&gt;Hyperbolic Geometry, Projective Geometry, Pulsed Power&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Ground Sphere Test Transmitter - Project: Ground Sphere Test Transmitter</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere-test-rig"/>
+    <id>http://opendesignengine.net/projects/groundsphere-test-rig</id>
+    <updated>2014-01-13T10:45:36+00:00</updated>
+    <content type="html">
+&lt;p&gt;This is a test rig for the Ground Sphere Ground Station to do a "smoke test" which will ensure correct general operation of the station's hardware.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Push Button Switch - Project: Push Button Switch</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/pbswtich"/>
+    <id>http://opendesignengine.net/projects/pbswtich</id>
+    <updated>2014-01-08T09:39:39+00:00</updated>
+    <content type="html">
+&lt;p&gt;A simple push button switch that can come in various sizes.&lt;/p&gt;
+
+
+	&lt;p&gt;IMPORTANT: This switch should not be used in an situation where safety is an issue or damage could result. See the license terms for the limits of liability.&lt;/p&gt;    </content>
+  </entry>
+</feed>

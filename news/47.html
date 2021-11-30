@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Change of component - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/groundsphere.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/groundsphere%3Fjump=news.html" class="news selected">News</a></li>
+<li><a href="../projects/groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-47-watcher"></span>
+
+
+</div>
+
+<h2>Change of component</h2>
+
+
+
+<p><em>The preamp selected did not even come close to the advertized noise figure, so a different preamp design had to be selected.</em><br />
+<span class="author">Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/groundsphere/activity%3Ffrom=2013-10-09.html" title="10/09/2013 09:39 pm">about 9 years</a> ago</span></p>
+<div class="wiki">
+<p>I have two pieces of news... first the bad, then the outstanding.</p>
+
+
+	<p>Prior to modifying the preamp circuit, I performed some baseline tests on it in the UHF (435MHz) range.  The noise figure I got was around 5dB, nowhere near the advertized 1dB.  Further the gain I got was closer to 12dB, not 20 as advertized.  Online research shows that this design's quality control was all over the map.  In order to do the calculation for the component change, I first checked the center of the frequency band of the existing filter and found it to be at 167MHz, not in the UHF band at all.  All this leads me to believe that this is a poor design and too much time would have to be spent making sure the kit units worked as advertised.</p>
+
+
+	<p>In looking for a replacement I found this preamp kit: <a class="external" href="http://www.g0mrf.com/432LNA.htm">http://www.g0mrf.com/432LNA.htm</a>  It has 20dB of gain with a noise figure of 0.6 at 915MHz, and is able to amplify signals from 145MHz to 1.5GHz.  Further, it is able to run on 5VDC simply by bypassing the voltage regulator.  This makes it ideal for our uses, and allows the ground station as designed to tune into standard UHF satellites as well by swapping out the aerials and phasing loop.</p>
+
+
+	<p>In the grand tradition of ham radio (who were sharing designs a century before open hardware), this design is free for use, or we can buy a kit, or we can buy the board. I have contacted the designer in order to purchase a kit for $35.00 (including shipping from the UK).  Should this work as well as I expect, the bare board is available for $10.00, and I may be able to source the parts in the US for cheaper.  The other benefit to this design is that it is a single sided PC board with a ground plane on the back, making construction easy (as SMD circuits go) and giving us a shielded place to locate the SDR to further reduce the noise floor.</p>
+
+
+	<p>Project wise, this brings the preamp into a known quantity, and not in need of a redesign.  To that end, I am going to post the antenna component spreadsheet and show the math tasks for this week as complete.</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/567" class="icon icon-contributor-license">Opeese Mesere</a> <a href="../projects/groundsphere/activity%3Ffrom=2018-07-19.html" title="07/19/2018 10:40 am">over 4 years</a> ago</h4>
+    <p><a href="https://mailto.space/" class="external">Add a comment</a> good post.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/567" class="icon icon-contributor-license">Opeese Mesere</a> <a href="../projects/groundsphere/activity%3Ffrom=2018-07-19.html" title="07/19/2018 10:42 am">over 4 years</a> ago</h4>
+    <p><a href="http://opendesignengine.net/projects/groundsphere/wiki/Sadfasdfasdf" class="wiki-page new">sadfasdfasdf</a> <a href="https://facebook.com/waleedrajpoot61" class="external">need of a redesign</a> nice psot</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/735" class="icon icon-contributor-license">Liam William</a> <a href="http://opendesignengine.net/projects/groundsphere/activity?from=2019-05-15" title="05/15/2019 08:50 pm">over 3 years</a> ago</h4>
+    <p>Prior to adopting the preamp tour, he did some starting point tests on it in the UHF assortment. The noise figure he got was close to 5dB, nowhere near the publicized 1dB. More the gain he achieved was closer to 12dB, not 20 as marketed. Find out much more at <a href="https://www.assignmenthelper.com.au/buy-assignment/" class="external">www.assignmenthelper.com.au/buy-assignment/</a>. Online research displays that this design's quality control was on the map.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/701" class="icon icon-contributor-license">April Roman</a> <a href="http://opendesignengine.net/projects/groundsphere/activity?from=2019-09-01" title="09/01/2019 06:40 am">about 3 years</a> ago</h4>
+    <p>No questions, I read your everything steps that you composed on life. I acknowledge with you and your thoughts. You share all your great musings and feeling of existence with us which we can take to make our life lovely and this <a class="external" href="https://www.australian-writings.org/">https://www.australian-writings.org/</a> provide me unique work. In these things Valentine is extremely uncommon for me. Much obliged to you for it.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/47">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

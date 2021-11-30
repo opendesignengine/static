@@ -1,0 +1,17 @@
+h1. Operating Instructions
+
+{{>toc}}
+
+h2. Preparing For A Pass
+
+TODO
+
+h2. Placing The Antenna
+
+TODO
+
+h2. Troubleshooting
+
+h3. WXtoImg shows a black screen with no image.
+
+You must ensure VB Cable is transmitting sound to WXtoImg from SDR Sharp. Double check SDR Sharp audio output, ensure your microphone and speakers are not muted, turn up the volume for your VBCable in Audio Settings.

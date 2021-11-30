@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link rel="self" href="http://opendesignengine.net/issues/272.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2017-01-13T21:45:30+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <entry>
+    <title>Holoseat - Bug #272: Walking forward is sometimes interrupted by one or two backward steps</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/272"/>
+    <id>http://opendesignengine.net/issues/272?journal_id=535</id>
+    <updated>2017-01-13T21:45:30+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;I believe I have figured out what is causing this issue.  In &lt;code&gt;void HandleWalking()&lt;/code&gt; I decided to reuse the &lt;code&gt;void InitializeWalkingVariables()&lt;/code&gt; method to implement the branch of code that handles the case when a user stops walking.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;code&gt;InitializeWalkingVariables()&lt;/code&gt; has several side effects I did not consider when I made this decision, not the least of which is it wipes out all data about the cadence and its direction.  So, if a user is pedaling very close to the trigger cadence and happens to slow down below the trigger cadence while the magnet is between the sensors, then the cadence and its direction are zeroed out.  The next events the Holoseat sees are the direction sensor followed by the cadence sensor.  This condition indicates walking backwards and tada you get a step or two backwards.  Once the user gets back up to the trigger cadence the walking forward state is established again and their character moves forward.&lt;/p&gt;
+
+
+	&lt;p&gt;I tested this theory last night by ensuring I was always pedaling faster than I needed to.  At no point during that testing did I see this issue.  However, later I resumed normal play and this issue presented itself.&lt;/p&gt;
+
+
+	&lt;p&gt;I believe the fix is to simplify the response to the state transitioning to stopped walking since we want to hold on to cadence and direction to avoid this issue.  My first test will be to simply release all of the keys and set the walking state to false.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Holoseat - Bug #272: Walking forward is sometimes interrupted by one or two backward steps</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/272"/>
+    <id>http://opendesignengine.net/issues/272?journal_id=536</id>
+    <updated>2017-01-13T23:05:16+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;Probable fix committed to revision &lt;a href="http://opendesignengine.net/projects/holoseat/repository/revisions/54" class="changeset" title="Probable fix for issue #272.  Updated what values get reset when walking state transitions to sto..."&gt;r54&lt;/a&gt; per comment above.  New side effect of pedaling near the trigger cadence is the occasional stop and go motion (which is exactly what should happen when you pedal around and below the trigger cadence).&lt;/p&gt;
+
+
+	&lt;p&gt;Going to leave this issue open for a few days while Bryan and I both test out the fix.  But, I am feeling very good about it.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Holoseat - Bug #272: Walking forward is sometimes interrupted by one or two backward steps</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/272"/>
+    <id>http://opendesignengine.net/issues/272?journal_id=537</id>
+    <updated>2017-01-19T05:29:40+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; changed from &lt;i&gt;New&lt;/i&gt; to &lt;i&gt;Resolved&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Bryan and I have done more testing with no sign of this bug. Marking it as resolved.&lt;/p&gt;    </content>
+  </entry>
+</feed>

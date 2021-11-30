@@ -1,0 +1,1086 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - v1.0 - SEP Step 2 - Requirements Document - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-72-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>v1.0 - SEP Step 2 - Requirements Document</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-03-03.html" title="03/03/2012 03:40 am">over 10 years</a> ago</span></p>
+<div class="wiki">
+<p>I thought I'd get a discussion started on this. The three requirements that I've added are from the original wiki content, and I've tried to match them to the questions that they most likely fall under. Other questions will be pulled from the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Initial_Questions_v1_0" class="external">Initial Questions</a> SEP document.</p>
+
+
+<blockquote>
+
+	<p><strong>Q2. Who is this for?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Document the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q3. How will this be used?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Verify that we can measure the Estes motor performance data (thrust vs time for various motors as published here: <a class="external" href="http://estes.aptinet.com/images/page%2033.pdf">http://estes.aptinet.com/images/page%2033.pdf</a>)</li>
+		<li>Measure and record exhaust temperature of the Estes motors which means using a computer.</li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (30)</h3>
+
+  <div class="message reply" id="message-73">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=73.html#message-73">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-03-06.html" title="03/06/2012 04:19 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here's my very rough draft of the requirements for the answered "Initial Questions". At this time there's an issue with question (4) that's still unresolved.</p>
+
+
+	<p>Answers to all questions can be found <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Initial_Questions_v1_0" class="external">here</a></p>
+
+
+<blockquote>
+
+	<p><strong>Q1. Why are we making this?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Must accommodate low power, commercially available amateur rocket motors sized A through E.</li>
+		<li>Must be mobile enough to enable live demonstrations as part of educational and outreach activities.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q2. Who is this for?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Must be well documented so as to meet the needs of open source spaceflight designers who will design and build future test stands (at Mach 30 or elsewhere).</li>
+		<li>The documentation and procedures must be complete enough that Mach 30 operators, students and educators who want to bring rocket engineering into the classroom, and anyone else interested in how rockets are tested can learn how to use it.</li>
+		<li>The answer for Q2 above.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q3. How will this be used?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Must be useful for the verification of Estes thrust vs time <a href="http://estes.aptinet.com/images/page%2033.pdf" class="external">motor performance data</a> .</li>
+		<li>Must be able to record exhaust temperature vs time of Estes motors and transport that data to a laptop computer.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q5. What features does it need to have (later)?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>I believe that requirements related to this question are beyond the scope of this document. However, future features are still useful as a guide to make sure that we don't design ourselves into a corner.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q6. What are the legacy requirements?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Any desktop computer based control software should run on all three major PC platforms (MS Windows, Mac OS X, and Linux).</li>
+		<li>Must use standard connections to the computer running the control software (for example, USB, Ethernet, or similar connections).</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q7. Who's going to build this?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>All design documentation must be open and complete enough so that ANYONE, without necessarily a technical education in rocketry, propulsion, or engineering, would be able to build and operate a Shepard test stand.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q8. How many do we want to make?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>The design must enable the completion of at least one operational test stand.</li>
+		<li>Whenever and wherever possible, considerations should be made so that this design can be used as a kit in the future.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q9. What is the budget?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>The cost of the first operational test stand must not exceed $200 excluding "consumables" and tools.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q10. What is the timeline?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>If at all possible, the test stand should be completed within 3 months of formal launch as an exercise of agile design.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q11. What waste products will be produced by the manufacture and/or operation of this?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Disposal of the spent Estes motors should conform to all local, state, and federal guidelines.</li>
+		<li>Electronic waste items, including batteries and circuit boards, must also be disposed of according to all local, state, and federal guidelines. </li>
+		<li>If the frame of the test stand is damaged beyond repair during operation, proper disposal/recycling guidelines must be followed for the materials used in its construction.</li>
+		<li>Wherever possible, the design should make it as easy as possible to replace components which are consumable or relatively easy to damage.</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-75">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=75.html#message-75">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-03-10.html" title="03/10/2012 11:09 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>These are requirements are really coming along.  I saw one part that looks like a typo to me.  It is part of the answer to question 2.</p>
+
+
+<blockquote>
+
+	<ul>
+	<li>The answer for Q2 above.</li>
+	</ul>
+
+
+</blockquote>
+
+	<p>Jeremy, was this just a typo?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-76">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=76.html#message-76">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-03-11.html" title="03/11/2012 03:56 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I actually meant that I wanted to include the answer from the first post's Q2 in my own answers as-is. I modified the answers from Q3, which is why I didn't add an inclusion statement. I wondered at the time if I had made my intent clear enough, and obviously I hadn't. My goal was to create a comprehensive list of answers (minus Q4) in my second post.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-77">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=77.html#message-77">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-03-11.html" title="03/11/2012 11:04 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Gotcha.  Plus it looks like more refinement happened while preparing the actual document for this material in the wiki.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-80">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=80.html#message-80">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-03-12.html" title="03/12/2012 02:14 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>That's correct. For the final edits that I made on the wiki I also did my best to incorporate what we had discussed in the Google+ hangout.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-92">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=92.html#message-92">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-04-27.html" title="04/27/2012 04:08 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Now that we have FINALLY come to an agreement on the safety guidelines, here's my first shot at creating a "strawman" (as J says) based on the Answer to question <a href="../../../issues/4.html" class="issue status-3 priority-2 closed" title="Display SVN checkout or export link on repository page (Resolved)">#4</a> (someone should go back and update the answer to question 4 where it references our safety guidelines <a class="external" href="https://opendesignengine.net/boards/4/topics/38">https://opendesignengine.net/boards/4/topics/38</a>).</p>
+
+
+	<p>Here are a few quick examples of how I interpret the safety requirements to be written.</p>
+
+
+Shepheard Test Stand Requirements (STSR):
+	<ul>
+	<li>STSR 10 - The design and operations of the Shepherd Test Stand (STS) shall be conducted in compliance with The National Association of Rocketry (NAR) Standards &#38; Testing Committee Motor Testing Manual, Version 1.5, Effective Date: July 1, 2011, henceforth referred to as the NAR testing manual.</li>
+	</ul>
+
+
+	<ul>
+	<li>STSR 20 - In accordance with (IAW) NAR testing manual requirements specified in Section 8.5, the STS shall use a load cell calibrated with a NIST traceable weight standard.</li>
+	</ul>
+
+
+	<ul>
+	<li>STSR 30 - In accordance with (IAW) NAR testing manual requirements specified in Section 8.5, the STS shall use a data collection system where the least significant bit(LSB) has a value that is _<em><i></em></i> (less than 0.33% percent of the average thrust of the motor under test).</li>
+	</ul>
+
+
+	<p>...</p>
+
+
+	<ul>
+	<li>STSR xx - In accordance with (IAW) NAR testing manual requirements specified in Section 8.6, the STS shall measure the external casing temperature of the motor under test.</li>
+	</ul>
+
+
+	<p>...</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-94">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=94.html#message-94">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-04-29.html" title="04/29/2012 03:35 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>It seems like these example guidelines include quite a bit of text directly from the NAR testing manual. Are we bordering on having to get their permission to write our requirements this way?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-95">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=95.html#message-95">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-04-29.html" title="04/29/2012 08:33 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy Wright wrote:</p>
+
+
+<blockquote>
+
+	<p>It seems like these example guidelines include quite a bit of text directly from the NAR testing manual. Are we bordering on having to get their permission to write our requirements this way?</p>
+
+
+</blockquote>
+
+	<p>This is a good question.  Looking over Greg's example requirements, I think we are ok because the parts that a lifted directly are the technical phrases ("measure external casing temperature") which there are limited ways to express (copyright is all about original expression of ideas, not the ideas themselves). And we are citing the source, so fair use comes into play.  We may want to use quotes around the technical bits that are directly copied and include an end note to be on the safe side, but I think we are ok.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-98">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=98.html#message-98">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-04-30.html" title="04/30/2012 07:21 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><blockquote>
+
+	<p>STSR xx - In accordance with (IAW) NAR testing manual requirements specified in Section 8.6, the STS shall measure the external casing temperature of the motor under test.</p>
+
+
+</blockquote>
+
+	<p>I'm assuming that this is an example requirement for a future version of Shepard. Up to this point the only temperature measurement we've talked about has been exhaust. If I'm missing something please fill me in.</p>
+
+
+	<p>I've started a page for these requirements on the wiki. <a class="external" href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0">https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0</a></p>
+
+
+	<p>You'll notice the "Draft" marker at the top of the document, and this is still very much a living document that will change significantly over time. We can still discuss the changes that need to be made here, but I wanted to start capturing some of our more solidified requirements on the wiki.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-100">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=100.html#message-100">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-04-30.html" title="04/30/2012 10:16 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here's where I see Greg's first 3 example requirements fitting into the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0" class="external">requirements document</a> . This doesn't count the quoting and footnoting to give the NAR proper credit (as suggested by J above).</p>
+
+
+<blockquote>
+
+	<p>STSR 10 - The design and operations of the Shepherd Test Stand (STS) shall be conducted in compliance with The National Association of Rocketry (NAR) Standards &#38; Testing Committee Motor Testing Manual, Version 1.5, Effective Date: July 1, 2011, henceforth referred to as the NAR testing manual.</p>
+
+
+</blockquote>
+
+	<p>I would place this one under initial question 3 as-is, so the ID would become "STSR 3.1" and the other requirements associated with question 3 would be bumped down. See the requirements document above for an explanation of this numbering scheme.</p>
+
+
+<blockquote>
+
+	<p>STSR 20 - In accordance with (IAW) NAR testing manual requirements specified in Section 8.5, the STS shall use a load cell calibrated with an NIST traceable weight standard.</p>
+
+
+</blockquote>
+
+	<p>I would place this under question 3 as well, which would make it something like "STSR 3.4". The issue that I have with this requirement is one of potential cost. With a budget of $200, I'm wondering if an NIST traceable calibrated load cell will be too expensive. Should this requirement have a trap door clause so that if it causes the load cell to cost over a certain percentage of the project, the requirement no long applies?</p>
+
+
+<blockquote>
+
+	<p>STSR 30 - In accordance with (IAW) NAR testing manual requirements specified in Section 8.5, the STS shall use a data collection system where the least significant bit(LSB) has a value that is _ (less than 0.33% percent of the average thrust of the motor under test).</p>
+
+
+</blockquote>
+
+	<p>Again, under question 3 ("STSR 3.5"). Will the space that Greg left be filled in by finding 0.33% of the average thrust of an A size motor?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-103">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=103.html#message-103">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-03.html" title="05/03/2012 12:27 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've modified Greg's "STSR 20" and "STSR 30" examples and added them to the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0" class="external">requirements document</a> (STSR 4.6 and STSR 4.7).</p>
+
+
+	<p>The requirement to measure the casing temperature seems like more of a Shepard 2.0+ feature, so I'm thinking that needs to go under the "Version 2.0" or "Beyond Version 2.0" subsections in the requirements doc. All of the other items that I could find in the NAR motor testing manual seemed to be operational in nature. I'm going to go back through and rework the requirements document to match the language Greg has established in the examples, and then I'll take one last pass through the NAR testing manual looking for additional requirements. If I don't find any, and if there's no discussion on what's been done in the requirements document, I'll start working on the block diagram.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-106">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=106.html#message-106">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-05.html" title="05/05/2012 06:51 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>I need to sit down and give one last detailed review, but on first pass these look great.  I think this is a good adaptation of the process of answering the high level design questions into a requirements document.  The one comment I do have is about the temperature measurement.  I think I might have been the first one to suggest we measure the exhaust temperature based on a project I saw in a book I bought for Greg as a graduation gift.  I mostly suggested this because I felt we should if at all possible include two channels of data collection in the test stand to ensure we had an architecture that supported multiple channels.  Now that we have seen e NAR guidelines include case temperature, I would be in favor of making the exhaust temperature a future requirement and making the case temperature the second channel we collect data for in version 1.0.</p>
+
+
+	<p>I will sit down and do a full read through of the requirements document this weekend and post my questions, concerns, or approval by tomorrow.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-111">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=111.html#message-111">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-06.html" title="05/06/2012 09:06 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p><ins>Comments:</ins></p>
+
+
+	<p><strong>STSR 1.1</strong> - I commented on the resources discussion that we may want to scope down the range of motors we support for this version to keep the motor mount simple.  If we do decide to do that, we would need to adjust this requirement accordingly.</p>
+
+
+	<p><strong>STSR 3.3</strong> - I commented in another thread that I would support swapping out case temperature for exhaust temperature since the NAR testing procedure requires case temperature measurements.  If we make this change, this is the requirement which would need to be updated to reflect that change.</p>
+
+
+	<p><strong>STSR 4.4</strong> - This is a duplicate of STSR 1.1 and is not needed.</p>
+
+
+	<p><strong>STSR 4.5</strong> - I would change the text to read "Keep an accurate timestamp for each data point collected during the test."  This change eliminates the redundant mention of the motor characteristics to be measured.</p>
+
+
+	<p>Otherwise, I think this looks great.  I think we are very close to locking the requirements in, and should be able to make the deadline in the <a href="https://opendesignengine.net/boards/4/topics/93" class="external">proposed timeline</a>.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-113">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=113.html#message-113">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-06.html" title="05/06/2012 11:19 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><blockquote>
+
+	<p>STSR 1.1 - I commented on the resources discussion that we may want to scope down the range of motors we support for this version to keep the motor mount simple. If we do decide to do that, we would need to adjust this requirement accordingly.</p>
+
+
+</blockquote>
+
+	<p>In the resources discussion you mentioned plugs/adapters to make D size motors work in an E size mount. Would it be possible to make plugs for the other size motors and run them all? How much would that complicate the build stage of the stand? It seems like a hackerspace could crank some out on a 3D printer. <a class="external" href="http://www.estesrockets.com/rockets/accessories/engine-mounting/302317-engine-adapters-standard-to-d">http://www.estesrockets.com/rockets/accessories/engine-mounting/302317-engine-adapters-standard-to-d</a></p>
+
+
+	<p>We would need to check to see if the Estes engine adapters will have to be modified in order to accommodate the casing temperature thermocouple.</p>
+
+
+<blockquote>
+
+	<p>STSR 3.3 - I commented in another thread that I would support swapping out case temperature for exhaust temperature since the NAR testing procedure requires case temperature measurements. If we make this change, this is the requirement which would need to be updated to reflect that change.</p>
+
+
+</blockquote>
+
+	<p>I also support this change. I'm hesitant to change it right now though since only two of us have weighed in on it (that I know of).</p>
+
+
+<blockquote>
+
+	<p>STSR 4.4 - This is a duplicate of STSR 1.1 and is not needed.</p>
+
+
+</blockquote>
+
+	<p>I deleted this and renumbered the rest of the requirements in that section.</p>
+
+
+<blockquote>
+
+	<p>STSR 4.5 - I would change the text to read "Keep an accurate timestamp for each data point collected during the test." This change eliminates the redundant mention of the motor characteristics to be measured.</p>
+
+
+</blockquote>
+
+	<p>Done.</p>
+
+
+<blockquote>
+
+	<p>Otherwise, I think this looks great. I think we are very close to locking the requirements in, and should be able to make the deadline in the proposed timeline.</p>
+
+
+</blockquote>
+
+	<p>Do you think any of the language needs to be changed to better match Greg's additions (STSR 4.5 and STSR 4.6), or is it fine the way it is?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-117">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=117.html#message-117">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-08.html" title="05/08/2012 03:26 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I was looking through the <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">NAR motor testing manual</a> again  and noticed 2 new potential requirements related to the thermocouple(s).</p>
+
+
+	<p>8.6.1 States that the thermocouple(s) must have a low thermal mass, and including the amplifier and readout system still be accurate to 10 degrees C. The thermal response also needs to be 5 seconds or less.</p>
+
+
+	<p>8.6.2 States that the thermocouples must make good contact with the motor casing in two places. The first is where the propellant and nozzle meet, and the second is 3/4 of the way down the motor casing as measured from the nozzle end.</p>
+
+
+	<p>Any thoughts?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-118">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=118.html#message-118">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-10.html" title="05/10/2012 03:07 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I adjusted the language of the requirements wiki doc so that it more closely matches the NAR testing manual entries.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-120">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=120.html#message-120">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-11.html" title="05/11/2012 03:27 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy Wright wrote:</p>
+
+
+<blockquote><blockquote>
+
+	<p>STSR 1.1 - I commented on the resources discussion that we may want to scope down the range of motors we support for this version to keep the motor mount simple. If we do decide to do that, we would need to adjust this requirement accordingly.</p>
+
+
+</blockquote>
+
+	<p>In the resources discussion you mentioned plugs/adapters to make D size motors work in an E size mount. Would it be possible to make plugs for the other size motors and run them all? How much would that complicate the build stage of the stand? It seems like a hackerspace could crank some out on a 3D printer. <a class="external" href="http://www.estesrockets.com/rockets/accessories/engine-mounting/302317-engine-adapters-standard-to-d">http://www.estesrockets.com/rockets/accessories/engine-mounting/302317-engine-adapters-standard-to-d</a></p>
+
+
+	<p>We would need to check to see if the Estes engine adapters will have to be modified in order to accommodate the casing temperature thermocouple.</p>
+
+
+</blockquote>
+
+	<p>This is a great find.  I'd be happy to leave the supported motor sizes at the stated "A-E" sizes and see if we can make something like this work.  Then we can design the motor mount for D/E and if the adapters work we get all of the motor sizes, and if not, we still have a working test stand, just with a reduced set of motors it will work with.  And for a version 1 design, that is far from a terrible outcome either way.</p>
+
+
+<blockquote>
+
+	<p>Do you think any of the language needs to be changed to better match Greg's additions (STSR 4.5 and STSR 4.6), or is it fine the way it is?</p>
+
+
+</blockquote>
+
+	<p>I am comfortable with this language (STSR 4.5 and STSR 4.6) the way it is, but let's make sure Greg is also comfortable with it, too.</p>
+
+
+<blockquote>
+
+	<p>I was looking through the <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">NAR motor testing manual</a> again  and noticed 2 new potential requirements related to the thermocouple(s).</p>
+
+
+</blockquote>
+
+	<p>Nice catch.  I think we need to add these if we switch the thermocouple from measuring thrust to measuring case temperature.  Greg and Wilton, any thoughts on making this switch?</p>
+
+
+	<p>Finally, as far as I can tell, double checking the language for STSR 4.5 &#38; 4.6, and deciding on which temperature we are going to measure look to be the last open issues on the requirements.  Does that sound right?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-123">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=123.html#message-123">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-11.html" title="05/11/2012 03:44 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Wow!  Amazing job with translating the Q&#38;A into requirements.  I have 2 procedural thoughts.</p>
+
+
+	<p>1) There is a distinction between the Technical Requirements and the Project Requirements.  If it's a technical requirement, you usually want to verify by testing (eg. Verify that the test stand can accommodate testing of Estes commercial motors A through E by actually running tests with each motor type).  These technical requirements are usually traceable to a specific part of the system block diagram in the next ste p of the Systems Engineering process.  That way you know you are designing the "right" system.  Can we reorganize the Requirements wiki in this manner to separate the technical from the project requirements?  I think it will make future design work much simpler to capture each requirement type separately.  I'd recommend keeping the existing requirement numbering scheme, but simply reorganizing/reordering the list now.</p>
+
+
+	<p>2) I've been taught to make each technical requirement verifiable.  That means that there should be some metric or process by which we can confirm that the requirement has been met.  Usually this means taking ALL ambiguity out of the requirement language.  Requirement STSR 4.6 and 6.1 are absolutely correct in this sense, but there are a few others that I am concerned about not having enough definition yet (eg. What do you mean by "easily set up and torn down" or "easily packaged for shipment" or "accurate time stamp for each data point").  When do we know that we've met these requirements?  I think being more specific here would be appropriate.</p>
+
+
+	<p>Do you want me to take a shot at reorganizing and adding definition?  Jeremy, you've make an awesome list here and I absolutely think we are on the right track for conducting Open Source Systems Engineering processes!  These comments are really about the more sophisticated (read: Nit picky) aspects of Requirements Definition, so please understand that you've done a great job with the process so far.  Congratz!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-124">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=124.html#message-124">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-11.html" title="05/11/2012 03:58 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><blockquote>
+
+	<p>Do you want me to take a shot at reorganizing and adding definition?</p>
+
+
+</blockquote>
+
+	<p>I think that will be faster than the process of me making changes and then asking if that's what you had in mind (especially with a deadline a few days away). Making the requirements more verifiable is a smart move. Like you said, otherwise how do you know when you've met a requirement?</p>
+
+
+<blockquote>
+
+	<p>This is a great find. I'd be happy to leave the supported motor sizes at the stated "A-E" sizes and see if we can make something like this work. Then we can design the motor mount for D/E and if the adapters work we get all of the motor sizes, and if not, we still have a working test stand, just with a reduced set of motors it will work with. And for a version 1 design, that is far from a terrible outcome either way.</p>
+
+
+</blockquote>
+
+	<p>I do like the idea of designing the stand in that top down manner (D/E and using adapters for the rest). I'd like to see the stand cover the full range of motors if possible to make it useful to the largest group of people.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-125">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=125.html#message-125">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-14.html" title="05/14/2012 04:04 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ditto on wanting to support all size of motors, and ultimately, I think the test stand will cover all sizes.  I was just commenting above that if we run out of time/money/etc on this iteration, getting D/E covered is a pretty good start and we can always take another swing at the motor mount in later version(s) to address this issue if needed.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-126">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=126.html#message-126">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-14.html" title="05/14/2012 11:16 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Greg, I think this re-org was a good idea.  I made some formatting changes just to make the document more parallel in physical layout.  I also filled in the questions Greg had (mostly around data collection and thermal measurements), and added one or two more small things (like file formats for data collected).</p>
+
+
+	<p>Per discussion above, I have gone ahead and switched the temperature measurement to the case temperature (I needed to assume this to address some of Greg's performance questions).  Obviously, this is non-binding until we all agree to the change.</p>
+
+
+	<p>One more thought for later, it looks like certain questions are tending to generate technical requirements vs project requirements.  I wonder if we can reorganize the order of the initial questions to more easily break out the final requirements.  We don't have to answer this now, it is just an observation to discuss when we have had some time to reflect on the requirements generation process.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-127">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=127.html#message-127">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-14.html" title="05/14/2012 11:19 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>One more formatting thing... do we need the "(IAW)" references through out the requirements?  Or can we add that to the glossary (or maybe just drop this acronym)?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-128">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=128.html#message-128">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-15.html" title="05/15/2012 04:45 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>The requirements look good to me. It sounds like we won't be able to gel them for awhile yet, but I think the consensus is that we should be able to move on to the block diagram.</p>
+
+
+	<p>Here are a few notes about the doc.</p>
+
+
+	<p>1. I'm not sure 45 minutes will be enough time for one person to set up, but I don't have anything to back that up so I'd say 45 minutes is good until proven otherwise.</p>
+
+
+	<p>2. I would have no problem moving "IAW" to the glossary or just dropping it. The way it's being used now I don't think it's adding to the doc's clarity.</p>
+
+
+	<p>3. I added a few footnote references back in that looked like they got lost in the reordering process.</p>
+
+
+	<p>4. I made a couple of grammar corrections including a sic.</p>
+
+
+	<p>5. Do we need to add a definition for "consumables" to the glossary? Most people reading the requirements in the future aren't going to know what that term means.</p>
+
+
+	<p>6. I noticed that the draft date had been taken off of the top of the document. Are we not going to keep draft, gelled, and frozen dates on the docs?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-130">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=130.html#message-130">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-15.html" title="05/15/2012 02:16 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy Wright wrote:</p>
+
+
+<blockquote>
+
+	<p>The requirements look good to me. It sounds like we won't be able to gel them for awhile yet, but I think the consensus is that we should be able to move on to the block diagram.</p>
+
+
+</blockquote>
+
+	<p>Ditto.  Though, I would still like to hear from Wilton and Greg on the change from measuring exhaust temp to case temp.</p>
+
+
+<blockquote>
+
+	<p>Here are a few notes about the doc.</p>
+
+
+	<p>1. I'm not sure 45 minutes will be enough time for one person to set up, but I don't have anything to back that up so I'd say 45 minutes is good until proven otherwise.</p>
+
+
+</blockquote>
+
+	<p>Based on setup and tear down time of model rocket launches, I think this is a pretty good first estimate.  I would not want to consider the STS a failure if we needed more time though.</p>
+
+
+<blockquote>
+
+	<p>2. I would have no problem moving "IAW" to the glossary or just dropping it. The way it's being used now I don't think it's adding to the doc's clarity.</p>
+
+
+</blockquote>
+
+	<p>I'll see of I can find some time to work on this change today or tomorrow.</p>
+
+
+<blockquote>
+
+	<p>3. I added a few footnote references back in that looked like they got lost in the reordering process.</p>
+
+
+	<p>4. I made a couple of grammar corrections including a sic.</p>
+
+
+</blockquote>
+
+	<p>Thanks and thanks!</p>
+
+
+<blockquote>
+
+	<p>5. Do we need to add a definition for "consumables" to the glossary? Most people reading the requirements in the future aren't going to know what that term means.</p>
+
+
+</blockquote>
+
+	<p>It wouldn't hurt (I am a fan of adding clarity, both for other users and for ourselves in 2 months time).</p>
+
+
+<blockquote>
+
+	<p>6. I noticed that the draft date had been taken off of the top of the document. Are we not going to keep draft, gelled, and frozen dates on the docs?</p>
+
+
+</blockquote>
+
+	<p>I removed the date stamp because I realized it was redundant information.  The wiki system tracks the date, time, and user for each revision to the document, and it does so better than we do (we have to remember to manually update the date when we make "major revisions").  So, I think we do not want to keep "drafted" dates.  I do think we need to keep gelled and frozen dates, but instead of just including the dates for these versions, I think we should also include the version number from the page history and link to it (here is an example url: <a class="external" href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0?version=34">https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0?version=34</a>), that way users can jump straight to the version of the text that was gelled or frozen.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-132">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=132.html#message-132">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-17.html" title="05/17/2012 02:32 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><blockquote><blockquote>
+
+	<p>2. I would have no problem moving "IAW" to the glossary or just dropping it. The way it's being used now I don't think it's adding to the doc's clarity.</p>
+
+
+</blockquote></blockquote>
+
+<blockquote>
+
+	<p>I'll see of I can find some time to work on this change today or tomorrow.</p>
+
+
+</blockquote>
+
+	<p>I made the change IAW what we've been discussing. I'm not sure if it's what everyone will want though.</p>
+
+
+<blockquote><blockquote>
+
+	<p>5. Do we need to add a definition for "consumables" to the glossary? Most people reading the requirements in the future aren't going to know what that term means.</p>
+
+
+</blockquote></blockquote>
+
+<blockquote>
+
+	<p>It wouldn't hurt (I am a fan of adding clarity, both for other users and for ourselves in 2 months time).</p>
+
+
+</blockquote>
+
+	<p>Done.</p>
+
+
+<blockquote>
+
+	<p>I think we should also include the version number from the page history and link to it (here is an example url: <a class="external" href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0?version=34">https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0?version=34</a>), that way users can jump straight to the version of the text that was gelled or frozen.</p>
+
+
+</blockquote>
+
+	<p>If you look at the bottom of the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Initial_Questions_v1_0" class="external">initial questions</a> doc you'll see I've done this. There's the gelled date with a version designation at the end. That designation is also a link to the version of the page that was gelled.</p></div>
+  
+  </div>
+
+<p class="pagination">1 <a href="http://opendesignengine.net/boards/4/topics/72?page=2&amp;r=95">2</a>  <a href="http://opendesignengine.net/boards/4/topics/72?page=2&amp;r=95">Next »</a> (1-25/30)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/72.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

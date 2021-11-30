@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Issues</title>
+  <link rel="self" href="http://opendesignengine.net/projects/ode/issues.atom?set_filter=1&amp;amp;tracker_id=3"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/ode/issues?set_filter=1&amp;amp;tracker_id=3"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-05-21T08:28:03+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Support #131 (New): No Notification of Comments on News Items</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/131"/>
+    <id>http://opendesignengine.net/issues/131</id>
+    <updated>2013-05-21T08:28:03+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I have my email notifications set to "For any event on all my projects", but a comment was posted to one of my dev logs (using the news module) and I never got any notification. I checked and it did not go to spam. Is there a separate setting somewhere for this? If not, I would like to add it as a feature request.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Support #91 (New): Publish ODE specific plugins as separate sub-projects with their own repositories</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/91"/>
+    <id>http://opendesignengine.net/issues/91</id>
+    <updated>2012-11-18T13:46:35+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Need to pull out the following plugins so we can list them on the &lt;a href="http://www.redmine.org/plugins" class="external"&gt;Redmine site&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Redmine Funding wiki macro plugin&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Redmine Legal&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Redmine Licensing&lt;/strong&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;We should also look into offering the code changes in &lt;strong&gt;Redmine Video wiki macro plugin&lt;/strong&gt; to &lt;strong&gt;&lt;a href="http://jwm.slavitica.net/p/projects/redmine-youtube" class="external"&gt;Redmine Youtube wiki macro plugin&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Support #36 (In Progress): Research how Redmine uses RMagick</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/36"/>
+    <id>http://opendesignengine.net/issues/36</id>
+    <updated>2011-09-22T17:10:25+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It looks like Redmine can use RMagick according to the Info screen on the ODE admin console.  This may be part of the image resize capability in the wiki (which is not working right now).  Need to research how Redmine uses RMagick and install/config it if necessary.&lt;/p&gt;    </content>
+  </entry>
+</feed>

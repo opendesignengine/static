@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>SoftwareFirmware Summary</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Shepard-Test-Stand-Software-and-Firmware-Summary-v11"></a>
+<h1 >Shepard Test Stand Software and Firmware Summary v1.1<a href="SoftwareFirmware_Summary.html%3Fversion=3.html#Shepard-Test-Stand-Software-and-Firmware-Summary-v11" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>This is a newer document based on <a href="https://opendesignengine.net/projects/shepard-ts/wiki/SoftwareFirmware_Summary_v1_0" class="external">this one</a> , and you should refer to that original version if you want to see the revision history.</p>
+
+
+The software for the test stand consists of two main components:
+	<ol>
+	<li>The Processing software that runs on the laptop or desktop computer.</li>
+		<li>The Arduino Wiring software that runs on the Arduino Uno.</li>
+	</ol>
+
+
+	<a name="Processing-Desktop-Software"></a>
+<h2 >Processing (Desktop) Software<a href="SoftwareFirmware_Summary.html%3Fversion=3.html#Processing-Desktop-Software" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Contained within <em>/trunk/ShepardDCS/ShepardDCS_Processing</em> in the repository, this software is responsible for receiving the data from the Arduino and displaying it for the user. In order to run, the code depends on the controlP5 library that is in <em>/trunk/libraries/controlP5</em> . This must be installed according to the instructions found <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Operating_Manual_v1_0#Processing-Desktop-Software" class="external">here</a> before the desktop software will run. The software is not designed to run stand-alone in the current iteration, and instead is run through the Processing Integrated Development Environment (IDE).</p>
+
+
+	<a name="Wiring-Arduino-Software"></a>
+<h2 >Wiring (Arduino) Software<a href="SoftwareFirmware_Summary.html%3Fversion=3.html#Wiring-Arduino-Software" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Contained within <em>/trunk/ShepardDCS/ShepardDCS_Arduino</em> in the repository, this software runs on the Arduino and is responsible for collecting the sensor data and sending it to the Processing desktop application. The Arduino software requires the installation of a third-party library from Adafruit for the MAX31855 thermocouple amplifier. You can find those installation instructions <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Operating_Manual_v1_0#Wiring-Arduino-Software" class="external">here</a></p>
+</body>
+</html>

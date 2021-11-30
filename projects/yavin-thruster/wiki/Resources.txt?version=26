@@ -1,0 +1,52 @@
+h1. Resources
+
+h2. Propulsion Links
+
+* Cold Gas Thrusters
+** "Cold gas systems":http://www.lr.tudelft.nl/en/organisation/departments/space-engineering/space-systems-engineering/expertise-areas/space-propulsion/propulsion-options/chemical-rockets/cold-gas/, from "TU Delft Aerospace Engineering Department":http://www.lr.tudelft.nl/en/
+** "Portland State Aerospace Society":http://psas.pdx.edu/ Cold Gas Thruster RCS for Roll Control
+*** "Steering High Altitude Rockets with Cold Gas":http://hackaday.com/2015/06/20/steering-high-altitude-rockets-with-cold-gas/ - check out the video in this article
+*** "Using the Intel Edison on a Cold Gas Reaction Control System for a Sounding Rocket":http://www.instructables.com/id/Using-the-Intel-Edison-on-a-Cold-Gas-Reaction-Cont/ (on Instructibles)
+*** "PSAS RCS Github Repo":https://github.com/psas/reaction-control
+**** "3D Printed Nozzles":https://github.com/psas/reaction-control/tree/master/3d%20Printing%20nozzles
+**** "Cutaway Demo Nozzle":https://github.com/psas/reaction-control/blob/master/3d%20Printing%20nozzles/deLaval%20cutaway.STL   
+*** Photos from J's visit to PSAS
+**** "Prototype Cold Gas Thruster RCS Module":https://flic.kr/p/zJNC1U
+**** "Cold Gas Thruster Pod":https://flic.kr/p/AGPSiR
+**** "Cold Gas Thruster Cross Section":https://flic.kr/p/AFQhnH (printed from "Cutaway Demo Nozzle":https://github.com/psas/reaction-control/blob/master/3d%20Printing%20nozzles/deLaval%20cutaway.STL)
+** "Cold Gas Thruster Block Diagram":http://opendesignengine.net/dmsf_files/511?download=
+
+h2. 3D Printing Links
+
+* https://hackaday.com/2018/04/17/3d-printing-watertight-containers/
+* "MatterControl":http://www.mattercontrol.com/ Slicer Settings Explained
+** "Part 1":http://www.matterhackers.com/articles/slice-settings-explained-part-1
+** "Part 2":http://www.matterhackers.com/articles/slice-settings-explained-part-2
+** "Part 3":https://www.matterhackers.com/articles/slice-settings-explained---part-3
+* Using Support Material Blog Post Series
+** "HOW TO USE SUPPORT MATERIAL: PART 1":http://www.matterhackers.com/news/how-to-use-support-material-part-1
+** "HOW TO USE SUPPORT MATERIAL: PART 2":https://www.matterhackers.com/news/how-to-use-support-material:-part-2
+* Calibration Notes
+** https://m.youtube.com/watch?v=0qBteLSJTtU
+** "A Guide to Understanding the Tolerances of Your 3D Printer":https://www.matterhackers.com/articles/a-guide-to-understanding-the-tolerances-of-your-3d-printer
+** "3DBenchy":http://www.3dbenchy.com
+** "Print Quality Troubleshooting Guide":https://www.simplify3d.com/support/print-quality-troubleshooting/#not-extruding-at-start-of-print
+** "How to Solve the Most Common 3D Printing Problems":http://3dprintingforbeginners.com/troubleshoot-3d-printing-problems/
+** "2015 Make Magazine FDM Test Models":http://makezine.com/go/2015-fdm-test-criteria - updated test files that include tests for support material, horizontal surface finish, vertical surface finish, and dimensional accuracy
+** "Developing a Warp-Index for 3D Printing":http://www.3ders.org/articles/20151130-kai-parthy-develops-low-bondage-warp-index-for-3d-printing-filaments.html
+** "Retraction - Just Say No to Oozing":https://www.matterhackers.com/articles/retraction-just-say-no-to-oozing
+* 3D Printing Material Options
+** "3DPrinting with High Strength Filaments for Drones":https://www.youtube.com/watch?t=34&v=FSR_v07X92k
+** "Taulman 3D 'Bridge' Material":http://taulman3d.com/bridge-features.html
+** "Taulman In-PLA":http://3dprint.com/62343/taulman3d-in-pla-filament
+* Techniques
+** "Print Any Nut or Washer You Choose":http://3dprint.com/68289/3d-print-any-nut-you-choose/
+** "Printing working threads on an Ultimaker II extended":http://marcuswolschon.blogspot.com/2015/07/printing-working-threads-on-ultimaker.html
+** "Make Skill-Builder: Finishing and Post-Processing 3D Prints":http://makezine.com/projects/make-34/skill-builder-finishing-and-post-processing-your-3d-printed-objects/
+** "Adding screw threads to 3D-printed parts":http://formlabs.com/stories/adding-screw-threads-3d-printed-parts/
+* Books
+** "3D Printing with MatterControl":http://www.apress.com/9781484210567
+
+h2. CAD Links
+
+* "OpenSCAD Parametric DeLaval Nozzles (Conical and Bell)":https://github.com/Buback/ParametricDeLavalModel

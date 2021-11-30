@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Accounting for Doppler Shift - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=boards.html" class="boards selected">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/groundsphere%3Fjump=boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/groundsphere/boards/39">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-676-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Accounting for Doppler Shift</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/groundsphere/activity?from=2013-10-27" title="10/27/2013 07:04 pm">about 9 years</a> ago</span></p>
+<div class="wiki">
+<p>There was some discussion over email about accounting for Doppler shift.  If I recall correctly, Southern Stars has some code to handle this, but they need the <a href="http://en.wikipedia.org/wiki/Two-line_element_set" title="TLE" class="external">Two Line Element set</a> for the satellite as an input to their algorithm.  I believe someone mentioned trying to get the TLEs from <a href="http://gpredict.oz9aec.net/" class="external">GPredict</a> through its API.  But, I wonder if it would be simpler to download the TLEs from the online updates that GPredict uses.  The code for its update process is available (GPredict is open source after all), and then we don't have to worry about library calls out to GPredict, we can just handle it all through network calls.</p>
+
+
+	<p>Just a thought.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (4)</h3>
+
+  <div class="message reply" id="message-677">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/39/topics/676?r=677#message-677">RE: Accounting for Doppler Shift</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/groundsphere/activity?from=2013-10-27" title="10/27/2013 08:43 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>The interchange on Gmail follows:</p>
+
+
+	<p>Aaron Harper</p>
+
+
+	<p>Oct 9</p>
+
+
+	<p>to Tim, Simmons, Scott, Jeremy, Greg</p>
+
+
+	<p>I probably won't be able to attend this week due to being on the road, and if I do show up it will be later in the evening.  Because of this, I will post the biggest question here and now.</p>
+
+
+	<p>What are we doing about the doppler shift during the satellite pass, which can be as high as +/-20kHz off 915 MHz (<a class="external" href="http://vkradio.com/doppler.html">http://vkradio.com/doppler.html</a>)?  The tracking software I use (<a class="external" href="http://gpredict.oz9aec.net/">http://gpredict.oz9aec.net/</a>) can output the appropriate offset, but is not set up to do so by default, nor is the SDR# software set up to tweak the frequency based on an outside data source from what I have seen.  Can we link and/or bundle the two to do so?  One of the best papers on doppler issues pertaining to LEO satellites is attached to this email.</p>
+
+
+	<p>Best,</p>
+
+
+	<p>Aaron<br />...</p>
+
+
+	<p>Tim DeBenedictis</p>
+
+
+	<p>Oct 9</p>
+
+
+	<p>to me, Simmons, Scott, Jeremy, Greg</p>
+
+
+	<p>Aaron-</p>
+
+
+	<p>This is one of the very few areas where my coding abilities can actually help you.</p>
+
+
+	<p>I've imlemented a super-lightweight implementation of the SGP orbit model in C.  If you know the satellite's orbit (i.e. if you have TLEs) then you can compute its position/velocity relative to ground, and hence doppler, at any time.  Presumably, this can be used to "tweak" the frequency that SeeDeR is listening on, as the satellite zips over, on the fly.</p>
+
+
+	<p>It's going to be some amount of work to integrate the code pieces, but I'm happy to donate my SGP orbit implementation to the project.</p>
+
+
+	<p>-Tim DeBenedictis</p>
+
+
+	<p>--</p>
+
+
+	<p>"Success is the ability to stumble from failure to failure with no loss of enthusiasm."  -Winston Churchill</p>
+
+
+	<p>...</p>
+
+
+	<p>Aaron Harper</p>
+
+
+	<p>Oct 9</p>
+
+
+	<p>to Tim, Simmons, Scott, Jeremy, Greg</p>
+
+
+	<p>That would be awesome, particularly if we could code the doppler compensation algorithm into the SDR software.</p>
+
+
+	<p>This would mean that we would have to have a method of updating the sat's TLE over the net when it is known... having the software check a small file on an unlinked page of a website on execution would do the job.</p>
+
+
+	<p>Best,</p>
+
+
+	<p>Aaron<br />...</p>
+
+
+	<p>Scott Cutler</p>
+
+
+	<p>Oct 9</p>
+
+
+	<p>to me, Tim, Simmons, Jeremy, Greg</p>
+
+
+	<p>My SeeDeR program handles a pretty wide range of allowable input frequencies.  And we can conceivably tweak it to accept input from GPredict (or use use Tim's software).</p>
+
+
+	<p>There is another problem, which is that in non-telemetry tweet mode we don't send preamble/postamble flag bytes.  I use these to get a lock on the frequency (among other things) before the actual data comes down.  It works fine for telemetry tweets and general purpose data, which both use the bytes.  But without the flag bytes the data is lost before I get the lock.</p>
+
+
+	<p>I have some ideas on how to solve this (basically use a large bank of detectors), but I'm pretty far away from having the time to work on that.</p>
+
+
+	<p>-Scott</p>
+
+
+	<p>...</p>
+
+
+	<p>Aaron Harper</p>
+
+
+	<p>Oct 9</p>
+
+
+	<p>to Scott</p>
+
+
+	<p>Since we would be grabbing the TLEs from an online source, all client machines would need to connect to the net... therefore, in addition to giving the person access to the received data, the data can be concatenated to the same server the TLEs are available from, giving you the large bank of detectors you seek to get the lock.  It would also act as a failover to those with the software to receive tweets when the sat is over another client's head, though not theirs.  This could be a feature of the next software rev.</p>
+
+
+	<p>Best,</p>
+
+
+	<p>Aaron</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-682">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/39/topics/676?r=682#message-682">RE: Accounting for Doppler Shift</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere/activity%3Ffrom=2013-10-28.html" title="10/28/2013 02:49 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, it sounds like getting the TLEs from GPredict's source is in line with what others are thinking, I just missed it when I was reading the thread.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-713">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/39/topics/676?r=713#message-713">RE: Accounting for Doppler Shift</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/groundsphere/activity%3Ffrom=2013-12-07.html" title="12/07/2013 12:20 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think the most elegant solution would be for the software to both account for doppler and predict the pass.  This is done with largely the same data and basic calculations anyway, and the integration of all the data in a single application window would give the final result more polish.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-714">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="676%3Fr=714.html#message-714">RE: Accounting for Doppler Shift</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere/activity%3Ffrom=2013-12-07.html" title="12/07/2013 02:07 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Aaron,</p>
+
+
+	<p>While I agree in concept that predicting the pass and accounting for doppler shift in the same code base is the most straight forward solution, in practice I believe this creates undo burden on the project team.  Part of the reason so use <a href="http://gpredict.oz9aec.net/" class="external">GPredict</a> for our pass prediction requirement is it is feature complete.  It has a powerful GUI and its ground track and flyover prediction features are well tested.  If we wanted to unify radio control with pass prediction we would either have to integrate the radio control with GPredict (which I am sure is possible, but adds complexity to our work) or reimplement major features from GPredict in the radio control software.  Plus, Southern Stars reports that they already have code which can handle the doppler shift given the TLEs, so we are actually very close to implementing the solution separately.</p>
+
+
+	<p>Now, do I think we should revisit this discussion in the larger context of ground station architecture.  Oh, yes!  But, there are lots of things to discuss about overall architecture, and I don't want an already tight project timeline to get bogged down by discussions which are about a higher level of our work.  So, I would like to see us put the discussion about integrating the various software features on hold for a while.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-4/4)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/676">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

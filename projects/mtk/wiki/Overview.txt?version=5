@@ -1,0 +1,18 @@
+h1. Overview
+
+{{toc}}
+
+h2. The Need for MTK
+
+As Mach 30 moves into more complex engineering projects, its development community will have a greater need to perform up front mathematical analysis to design, size, and predict the performance of those projects.  Engineering analysis of this type should be well documented (both in principle and in order to follow Mach 30's commitment to its OSHW values).  Documenting engineering analysis makes it clear why and how it works as well as providing verification of the analysis (in implementation and results).  
+
+This is where MTK comes in.  MTK is a single environment for creating and documenting mathematical analyses using Python to code the analysis.  As an added bonus, the use of Python allows Mach 30 to take the analyses created and documented in MTK and use them directly in "CadQuery":https://github.com/dcowden/cadquery to drive our parametric CAD models when designing and making physical components.
+
+h2. MTK's Approach to Documentation
+
+MTK's approach to integrating engineering analysis and documentation is based on three core principles of engineering documentation:
+
+# *Document before you act* - In preparation for engineering analysis, engineers must find the correct mathematical models, identify the key equations from those models, and demonstrate why the selected models are the correct ones to use. This involves writing narratives and the equations covering these items and citing sources used to arrive at the selected equations. This phase should also identify test cases for later verification efforts. MTK's integrated documentation environment (with support for units, equations, calculations, and plots) makes it easy for users to capture this information in a format that supports adding additional information as the project progresses.
+# *Document as you act* - During engineering analysis, modern engineers spend their time coding up the equations from selected mathematical models, preferably into reusable modules (functions, classes, etc). Rigorous verification of engineering analysis should provide commentary on the critical sections of this code, showing how specific lines of code implement the required equations or methodologies (such as solver algorithms). MTK's unified analysis and documentation environment is critical to documenting in this way as it provides for seamless transition between coding and documenting.
+# *Document after you act* - Once the engineering analysis is complete, it needs to be verified. Verification should include the commentary mentioned above plus inspection of test case results.  This commentary can include plots and tables showing those results and narrative commentary to prove to readers that the analysis is ready to be used. MTK's ability to run engineering analyses directly within its documentation environment is essential to this part of the documentation process.
+

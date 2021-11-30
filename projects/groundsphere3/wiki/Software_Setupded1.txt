@@ -1,0 +1,54 @@
+h1. Software Setup
+
+{{>toc}}
+
+h2. Introduction
+
+These instructions cover the software set up of the Ground Sphere Mk3.
+
+Note, these steps are for Windows (tested on Windows 10).
+
+h2. 1. Download required Software
+
+# Download the following files
+## "Windows SDR Package - SDR Sharp": https://airspy.com/download/ (ver 1.0.0.1443)
+## "WXtoImg": https://wxtoimgrestored.xyz/downloads/ (ver 2.10.11)
+## "VBCable": https://www.vb-audio.com/Cable/ (pack 43)
+
+h2. 2. Install SDR Tools
+
+The purpose of these SDR tools is to allow the user to interact with his/her SDR Dongle. Without the necessary drivers and SDR Sharp, it wouldn't be possible to receive images from NOAA satellites.
+
+# Download the latest revision of the Windows SDR Software Package found at the link above.
+# Extract the zipped folder to another directory.
+# Open SDR Sharp.
+# Select *WFM* in the *Radio* section.
+# Set the bandwidth to 40000 in the *Radio* section.
+
+!setup_sdrsharp_1.jpg!
+
+h2. 3. Install WXtoImg
+
+WXtoImg is the software used in this project that processes the received audio signal and generates the image. WXtoImg also has a feature that receives the audio signal via audio input and plots the image in real time as it is being received. This is the significant advantage over doing the processing manually.
+
+# Download the Windows version of WXtoImg from the link above.
+# Run the installer program.
+# Open WXtoImg after installing it.
+# Modify your location in WXtoImg.
+## Select *Options* -> *Ground Station Location*.
+## Modify latitude and longitude to match your ground station location.
+### Using Google Maps, right click on a location near the desired ground station operating location.
+### Choose the "What's Here?" option. The coordinates appear at the bottom of the screen as (latitude, longitude).
+### So long as the coordinates are within a mile or so of your location, enter them into the lat/lon boxes in WXtoImg.
+# Select *File* -> *Update Keplers* to update NOAA satellite TLEs.
+
+h2. 4. Install VBCable
+
+VBCable allows the user to pipe audio directly into WXtoImg, and plot an image in real time. This software creates a virtual audio cable that leads from SDR Sharp to WXtoImg.
+
+# Download VBCable from the link above.
+# Run the VBCable_Setup executable for your given operating system (_64 for 64 bit Windows OS).
+# Modify a setting in SDR Sharp.
+## Run SDR Sharp (if not already open).
+## In the *Audio* section, select the *Output* selector to *CABLE Input*.
+

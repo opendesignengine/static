@@ -1,0 +1,35 @@
+h1. Link Budget References
+
+{{>toc}}
+
+h2. Background Material
+
+* "Link Budget Calculation":http://www.piscespacific.org/livesite/files/Link_Budget_Calculation.pdf
+* "Tutorial on Basic Link Budget Analysis":http://www.sss-mag.com/pdf/an9804.pdf
+
+h2. Example Calculations
+
+Much of this material was reviewed with the stakeholders and the IPT at the "Sprint 1 Stand Up 3 meeting":https://docs.google.com/document/d/17Wc4sMqlUissR5am6ANDcKP-psRQ41ysxOV0vrcgHJA/pub
+
+* Online Forms - useful for one off calculations, source code/math not necessarily available to Mach 30
+** "Satellite Link Budget Calculator":http://www.satsig.net/linkbugt.htm - simple online form for uplink and downlink calculations
+** "Satellite Link Budget Calculator page":http://www.tutorialsweb.com/satcom/satellite-link-budget-calculator.htm - a mor complete set of calculations for uplink and downlink
+** "Geostationary Satellite Link Budget Calculations (Downlink)":http://www.satcom-services.com/VSAT/downlink.html - Geo calculations, not really useful for us, but nice user experience
+* Spreadsheets - require correct software to run, but Mach 30 can investigate the implementation to use as a source for porting to Python library
+** "KickSat Ground Station Link Budget":https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx (MS Excel)
+** "Jan King's AMSAT link budget +extensive+":http://www.amsatuk.me.uk/iaru/AMSAT-IARU_Link_Model_Rev2.5.3.xls (MS Excel)
+
+h2. Video Tutorials
+
+These vidoes are proof of concept video tutorials, and will be replaced with a more polished version as time permits.
+* "Link Budgets Part 1, Intro to Satellite Link Budgets":https://youtu.be/WLhLYSvHmNY
+* "Link Budget part 2, Transmission Segment":https://youtu.be/x8Jsyc0CYLU
+* "Link Budget part 3, Trigonometry Refresher":https://youtu.be/pexhLdsp9J0
+* "Link Budget part 4, Propagation Loss":https://youtu.be/nFxdoXbmURw
+* "Link Budget part 5, Ground Segment":
+* "Link Budget part 6, Putting It All Together":
+* "Link Budget part 7, Software Solutions":
+
+h2. Selected Link Budget Source Document
+
+The Ground Sphere Mk 3 team has decided to build its Python Link Budget library on the calculations used in the "KickSat Ground Station Link Budget":https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx.  This spreadsheet includes nearly all of the required transmission effects and has been verified by "comparing its results to manual calculations":http://opendesignengine.net/dmsf_files/523?download=.

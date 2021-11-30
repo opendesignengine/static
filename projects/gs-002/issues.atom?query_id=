@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Groundstation v.2.0: Issues</title>
+  <link rel="self" href="http://opendesignengine.net/projects/gs-002/issues.atom?query_id="/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/gs-002/issues?query_id="/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-07-02T17:59:48+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Milestone #146 (New): Create body of documentation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/146"/>
+    <id>http://opendesignengine.net/issues/146</id>
+    <updated>2013-07-02T17:59:48+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Write, collect, concatenate, and publish all documentation.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Milestone #145 (New): Connect Receiver and test satellite reception</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/145"/>
+    <id>http://opendesignengine.net/issues/145</id>
+    <updated>2013-07-02T17:57:55+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Connect Receiver and test satellite reception, overall system shakedown.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Milestone #144 (New): Computer control</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/144"/>
+    <id>http://opendesignengine.net/issues/144</id>
+    <updated>2013-07-02T17:56:08+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Connect to PC and control through Gpredict&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Milestone #143 (New): Assemble ground station Az-El mount</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/143"/>
+    <id>http://opendesignengine.net/issues/143</id>
+    <updated>2013-07-02T17:54:39+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Build Az-El mount and document&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Milestone #142 (New): Order components and prepare preliminary assemblies</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/142"/>
+    <id>http://opendesignengine.net/issues/142</id>
+    <updated>2013-07-02T17:47:28+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Component specification, ordering, and final preparation&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Milestone #141 (New): Ground Station Design</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/141"/>
+    <id>http://opendesignengine.net/issues/141</id>
+    <updated>2013-07-02T17:45:06+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Milestone #140 (New): Feature requests and design requirements (SEP)</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/140"/>
+    <id>http://opendesignengine.net/issues/140</id>
+    <updated>2013-07-02T17:43:08+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;All major project description, parameters, and guidelines.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Milestone #139 (New): Ground station overview</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/139"/>
+    <id>http://opendesignengine.net/issues/139</id>
+    <updated>2013-07-02T17:38:24+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Research:  Major components of ground stations and their function.&lt;/p&gt;    </content>
+  </entry>
+</feed>

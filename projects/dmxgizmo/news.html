@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DMX Gizmo - News - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../../javascripts/jstoolbar/jstoolbar.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/textile.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/lang/jstoolbar-en.js%3F1359925542" type="text/javascript"></script><link href="../../stylesheets/jstoolbar.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="http://opendesignengine.net/projects/dmxgizmo/news.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+  <link href="../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/dmxgizmo.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../../search/index/dmxgizmo.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>DMX Gizmo</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../dmxgizmo.html" class="overview">Overview</a></li>
+<li><a href="activity.html" class="activity">Activity</a></li>
+<li><a href="issues.html" class="issues">Issues</a></li>
+<li><a href="issues/calendar.html" class="calendar">Calendar</a></li>
+<li><a href="news.html" class="news selected">News</a></li>
+<li><a href="documents.html" class="documents">Documents</a></li>
+<li><a href="wiki.html" class="wiki">Wiki</a></li>
+<li><a href="files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/dmxgizmo/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+</div>
+
+<div id="add-news" style="display:none;">
+<h2>Add news</h2>
+<form action="news.html" class="tabular" id="news-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>
+
+<div class="box tabular">
+<p><label for="news_title">Title<span class="required"> *</span></label><input id="news_title" name="news[title]" size="60" type="text" /></p>
+<p><label for="news_summary">Summary</label><textarea cols="60" id="news_summary" name="news[summary]" rows="2"></textarea></p>
+<p><label for="news_description">Description<span class="required"> *</span></label><textarea class="wiki-edit" cols="60" id="news_description" name="news[description]" rows="15"></textarea></p>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var wikiToolbar = new jsToolBar($('news_description')); wikiToolbar.setHelpLink('<a href="http://opendesignengine.net/projects/dmxgizmo/\&quot;/help/wiki_syntax.html\&quot;" onclick=\"window.open(&quot;/help/wiki_syntax.html&quot;, &quot;&quot;, &quot;resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes&quot;); return false;\">Text formatting<\/a>'); wikiToolbar.draw();
+//]]>
+</script>
+
+<input name="commit" type="submit" value="Create" />
+<a accesskey="r" href="news.html#" onclick="new Ajax.Updater('preview', '/news/preview?project_id=dmxgizmo', {asynchronous:true, evalScripts:true, method:'get', parameters:Form.serialize('news-form') + '&amp;authenticity_token=' + encodeURIComponent('b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=')}); return false;">Preview</a> |
+<a href="news.html#" onclick="Element.hide(&quot;add-news&quot;)">Cancel</a>
+</form>
+<div id="preview" class="wiki"></div>
+</div>
+
+<h2>News</h2>
+
+
+
+    <h3>
+    <a href="../../news/37.html">Current BOM</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/30.html" class="icon icon-contributor-license">Derek Bever</a> <a href="activity%3Ffrom=2013-05-26.html" title="05/26/2013 05:21 pm">over 9 years</a> ago</p>
+    <div class="wiki">
+    <p>I'm currently using an <a href="http://www.amazon.com/Arduino-UNO-board-DIP-ATmega328P/dp/B006H06TVG/ref=sr_1_1?ie=UTF8&#38;qid=1369605440&#38;sr=8-1&#38;keywords=arduino+uno" class="external">Arduino Uno</a> for development. This will probably run on later versions, but don't take my word for it.</p>
+
+
+	<p>The other major component is the <a href="http://www.tinkerkit.com/dmx-master-shield/" class="external">Tinkerkits DMX Master Shield</a>. I purchased mine at Radio Shack, it's available for purchase online in the Arduino store. It isn't, unfortunately, available on Amazon just yet.</p>
+
+
+	<p>Some kind of <a href="http://www.amazon.com/Universial-Switch-Keypad-Keyboard-Arduino/dp/B008A30NW4/ref=sr_1_2?ie=UTF8&#38;qid=1369605129&#38;sr=8-2&#38;keywords=keypad" class="external">4x4 keypad</a>. I like this one on Amazon because it's cheap, it's a sticker, and requires (in my experience) no debouncing whatsoever.</p>
+
+
+	<p>I'm currently using this <a href="https://www.sparkfun.com/products/9393" class="external">16x2 serial LCD</a> from Sparkfun. I will likely be changing this before too long, though I will definitely continue to provide a version of the firmware that supports this screen, because these small serial LCDs are ubiquitous. I just think the size is a little large.</p>
+
+
+	<p>You'll also need, for the current firmware, four momentary pushbutton switches (though I currently have five hooked up), some hookup wire, and some pullup resistors (the value here isn't super important, I think I'm using 20kOhm).</p>
+
+
+	<p>To assemble the gizmo as it stands, you'll connect the four row pins of the keypad to arduino pins 6, 13, 12 and 11; connect the column lines to pins 10, 9, 8, and 7. This can easily change if you want, just remember to re-assign the pins in the code.</p>
+
+
+	<p>I arranged my pushbuttons onto a convenient piece of masonite for now, and tied one of the pins of each of them together. This common terminal goes to ground, and each of the other terminals is connected to Vcc via a pullup resistor, and pins A0-A4 on the arduino. The firmware currently implements software debouncing, so this is all that's needed (though you may or may not need to tweak settings for your specific switches, it's currently set at a very generous 250ms).</p>
+
+
+	<p>Connect the LCD to +5v and GND as marked on its PCB, and the data line goes to arduino pin A5.</p>
+
+
+	<p>You'll need to download the <a href="http://arduino.cc/en/Main/Software" class="external">Arduino IDE</a></p>
+
+
+	<p>You will need the following libraries:</p>
+
+
+	<p><a href="http://www.tinkerkit.com/dmxmaster-library/" class="external">DMXMaster</a></p>
+
+
+	<p><a href="http://playground.arduino.cc/Code/SerLCD" class="external">SerLCD</a></p>
+
+
+	<p><a href="http://playground.arduino.cc/code/Keypad" class="external">Keypad</a></p>
+
+
+	<p>There's instructions on how to install these on those webpages.</p>
+
+
+	<p>You'll then need the <a href="http://pastie.org/7968466" class="external">Sketch</a></p>
+
+
+	<p>If this isn't enough to get you started, please ask questions and I'll do it better.</p>
+    </div>
+
+    <h3>
+    <a href="../../news/35.html">Project is in progress.</a>
+    (4 comments)</h3>
+    <p class="author">Added by <a href="../../users/30.html" class="icon icon-contributor-license">Derek Bever</a> <a href="activity%3Ffrom=2013-05-21.html" title="05/21/2013 06:29 am">over 9 years</a> ago</p>
+    <div class="wiki">
+    <p>The project is currently at version 0.1 and running well. Currently the device has direct control over a full universe of DMX, allowing active modification of a single channel's value at a time. The interface is basic, allowing an arbitrary level to be set, for the active channel to be directly set to full or zero, or allowing all channels to be released. There's also a clear button in the event of incorrect values, and input sanitation to prevent impossible values from being entered.</p>
+
+
+	<p><img src="http://i.imgur.com/C5sGtXw.jpg" alt="" /></p>
+
+
+	<p><a class="external" href="https://www.youtube.com/watch?v=8oGVmMjnNsI">https://www.youtube.com/watch?v=8oGVmMjnNsI</a></p>
+
+
+	<p><a class="external" href="https://www.youtube.com/watch?v=x4itowiFaRY">https://www.youtube.com/watch?v=x4itowiFaRY</a></p>
+
+
+	<p>The hardware currently consists of an Arduino, an off-the-shelf DMX shield from Tinkerkits, a 4x4 keypad and a 16x2 serial LCD.</p>
+
+
+	<p>The current state of the project is pretty far from where I hope to end up, but it's going to be a journey. Ultimately the device will likely be running on a Raspberry Pi or similar ARM-based single-core computer, with a user interface written in Python or Processing, but until I actually hit the limits of the Arduino I'd like to see how far I can get.</p>
+
+
+	<p>Next steps, currently, are interface design. There are a few more basic features (next/last channel, 5% up/down buttons, some way to view active channels) that need to be implemented. I'll need to locate a graphical LCD (I'm thinking about perhaps trying one of those 1.8" LCDs) that's suitable, and figure out how to design a UI.</p>
+
+
+	<p>Thanks for reading,<br />Derek</p>
+    </div>
+
+    <h3>
+    <a href="../../news/5.html">Semi-Hold</a>
+    (2 comments)</h3>
+    <p class="author">Added by <a href="../../users/30.html" class="icon icon-contributor-license">Derek Bever</a> <a href="activity%3Ffrom=2011-11-14.html" title="11/14/2011 11:25 pm">almost 11 years</a> ago</p>
+    <div class="wiki">
+    <p>So while I (Derek) am on the road, until mid-December at the least, probably very little will be happening. My other primary collaborator on this project is still settling in with a new job, so he probably won't be doing a lot for a while anyway. I'll try and get our various discussions and writings transferred over here at some point.</p>
+
+
+	<p>Right now the project isn't much of anything but ideas, but we're all really excited to carry it forward.</p>
+    </div>
+
+
+<p class="pagination"></p>
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/dmxgizmo/news.atom" class="atom" rel="nofollow">Atom</a></span>
+</p>
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

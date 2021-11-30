@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link href="http://opendesignengine.net/issues/134.atom" rel="self"/>
+  <link href="http://opendesignengine.net/" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-07-30T10:38:50+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <entry>
+    <title>Shepard Test Stand - Bug #134: Shepard Data Collection Software Will Not Run On Processing 2.0+</title>
+    <link href="http://opendesignengine.net/issues/134" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/134?journal_id=225</id>
+    <updated>2013-07-30T10:38:50+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; changed from &lt;i&gt;New&lt;/i&gt; to &lt;i&gt;Closed&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;I updated the ControlP5 GUI library to the newest version (2.0.4) and it fixed this issue.&lt;/p&gt;    </content>
+  </entry>
+</feed>

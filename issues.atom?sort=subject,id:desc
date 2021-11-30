@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Issues</title>
+  <link rel="self" href="http://opendesignengine.net/issues.atom?sort=subject%2Cid%3Adesc"/>
+  <link rel="alternate" href="http://opendesignengine.net/issues?sort=subject%2Cid%3Adesc"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2014-10-07T20:04:16+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Mach 30 Technical Roadmap - Support #269 (New): Add brief description to launch vehicle sub-syste...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/269"/>
+    <id>http://opendesignengine.net/issues/269</id>
+    <updated>2014-10-07T20:04:16+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;For each sub-system listed in &lt;a href="http://opendesignengine.net/boards/45/topics/815" class="message"&gt;Choosing the technology branch for the v 1.0 roadmap&lt;/a&gt;, please post a brief description of the sub-system's purpose, related scientific principles, and examples from real systems.  The focus of these descriptions should be to introduce them to volunteers without a specific aerospace background.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #267 (New): Add Companies Plugin</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/267"/>
+    <id>http://opendesignengine.net/issues/267</id>
+    <updated>2014-09-11T19:10:50+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It would be nice to have the companies plugin (with additional features for users to register their own companies directly) so orgs like Mach 30 could group their projects together.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://github.com/splendeo/chiliproject_companies"&gt;https://github.com/splendeo/chiliproject_companies&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #182 (New): Add a requirements management system to ODE</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/182"/>
+    <id>http://opendesignengine.net/issues/182</id>
+    <updated>2013-09-18T16:00:31+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Lightweight, standards based requirements management would go a long way to helping OSHW projects create and track requirements.  ODE should have an option which can be linked to wiki pages, issues, files in DMSF, files in software repositories, etc.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #180 (New): Add 3D rendering support to wiki syntax and DMSF file de...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/180"/>
+    <id>http://opendesignengine.net/issues/180</id>
+    <updated>2013-09-18T15:53:07+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Use &lt;a href="http://n0r.org/thingiview.js/examples/index.html" class="external"&gt;Thingiview.js&lt;/a&gt; to add a wiki macro which can render 3D objects (STL for now) inline on wiki pages.  Take look at &lt;a href="http://n0r.org/thingiview.js/examples/pre_parsed_json_inline.html" class="external"&gt;this example&lt;/a&gt; to see how useful this could be.&lt;/p&gt;
+
+
+	&lt;p&gt;Also look at embedding this directly into DMSF file detail pages so user can preview the file from DMSF file details.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #176 (New): Add Compulsory Version Matching Between Arduino and Java...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/176"/>
+    <id>http://opendesignengine.net/issues/176</id>
+    <updated>2013-09-18T10:58:51+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Version matching between the Arduino code and the Java UI is going to be important. In most cases they'll need to be lock-stepped to ensure proper operation.&lt;/p&gt;
+
+
+	&lt;p&gt;I think it would be ideal if we could embed the compiled Arduino code with the Java UI, have the UI check the software version on the Arduino, and then upload the embedded code if the Arduino is out of date. This would make software version matching completely transparent to the user, and would take us another step closer to passing the "Grandma Test" with Shepard.&lt;/p&gt;
+
+
+	&lt;p&gt;A trick for getting at the compiled Arduino code:&lt;br /&gt;&lt;a class="external" href="http://stackoverflow.com/questions/8189306/command-line-arduino-compiling-and-downloading"&gt;http://stackoverflow.com/questions/8189306/command-line-arduino-compiling-and-downloading&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #173 (New): Add a "wizard" mode for the Shepard GUI</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/173"/>
+    <id>http://opendesignengine.net/issues/173</id>
+    <updated>2013-09-12T22:20:03+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+The current GUI is set up in more of an "expert" format, where all of the options for controlling the hardware and GUI are immediately available.  It would be good for many situations though to have the control options simplified into a guided, step-by-step format.  The steps would be:
+	&lt;ol&gt;
+	&lt;li&gt;Connect&lt;/li&gt;
+		&lt;li&gt;Calibrate&lt;/li&gt;
+		&lt;li&gt;Set Test Notations&lt;/li&gt;
+		&lt;li&gt;Record&lt;/li&gt;
+		&lt;li&gt;Stop Recording&lt;/li&gt;
+		&lt;li&gt;Clear&lt;br /&gt;After the last step, this test "wizard" would put the user back at step 3 for another test.&lt;/li&gt;
+	&lt;/ol&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #152 (New): Add "Create new page" button to wiki system</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/152"/>
+    <id>http://opendesignengine.net/issues/152</id>
+    <updated>2013-07-24T12:41:11+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;From a user:  "I just realized (as I was writing this email) that I can create a new wiki page by simply entering /wiki/newpage into the URL and vioala it pops up.  I save and can then link to it.  While that's great, it took me a while to figure that out.  It may be good to add a "add new page" button somewhere, so it's a little more obvious."&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #147 (New): Add Mach 30 Branding To Software Interface</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/147"/>
+    <id>http://opendesignengine.net/issues/147</id>
+    <updated>2013-07-14T13:01:34+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Version 1.1 of the ShepardDCS software says "Shepard Test Stand", but should also include something that shows the Mach 30 brand.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #135 (In Progress): Ability to Set Aliases for Module Tab Names</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/135"/>
+    <id>http://opendesignengine.net/issues/135</id>
+    <updated>2013-06-24T08:55:09+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The DMSF module has a non descriptive name that's confusing for people who come to a page looking for information. It would be nice to be able to set aliases for tab names so that ambiguity could be cleared up. I would think this would have to be done on a site-wide administrative level though. Otherwise every project would have their own, possibly incompatible, names for the DMSF plugin.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #112 (New): Add Current and All Revisions Deletion of Images</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/112"/>
+    <id>http://opendesignengine.net/issues/112</id>
+    <updated>2013-01-28T16:08:54+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;ODE currently allows project managers to delete images from wiki docs. The problem is that this deletes the images for all previous revisions of the doc, and not just the current revision. This makes the creation of versioning schemes which link back to older revisions ineffective because some of the original content is lost. Managers do still need the ability to permanently and completely delete offensive images that have been posted to the wiki though. Because of this, ODE needs two types of image deletion. The first could be called "Delete In This Revision", which only deletes the image for the current revision. The other type of deletion could be called "Delete In All Revisions", which would purge the image from the wiki history completely.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #106 (New): Ability to Collapse Subprojects List</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/106"/>
+    <id>http://opendesignengine.net/issues/106</id>
+    <updated>2013-01-13T23:00:14+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The Projects page would be cleaned up considerably if the sub-projects listed under each main project could be collapsed. It would be similar to the way sub-directories are listed in a file manager program on Linux, Windows, or MacOS, and can be collapsed so that you only see the parent directory.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #45 (New): Add license usage stats to a public page </title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/45"/>
+    <id>http://opendesignengine.net/issues/45</id>
+    <updated>2012-01-09T22:27:13+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;During a public discussion on the set of licenses currently available on ODE, we received the following comment.&lt;/p&gt;
+
+
+	&lt;p&gt;"This would be great.  Are you going to publish stats on which licenses are the most popular?  That would really help get a better sense of which licenses are working for (or at least appealing to) people."&lt;/p&gt;
+
+
+	&lt;p&gt;Since we are already storing license selections, it should be pretty easy to generate a real time (or nearly real time) report.  I think it should be included on some sort of about page on the site which is publicly available.  Maybe also include other cool stats:&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;total number of projects&lt;/li&gt;
+		&lt;li&gt;date/time of last created project&lt;/li&gt;
+		&lt;li&gt;license stats&lt;/li&gt;
+		&lt;li&gt;number of projects broken down by category/tag once we have categories or tags&lt;/li&gt;
+		&lt;li&gt;total number of users&lt;/li&gt;
+		&lt;li&gt;date/time of last active user&lt;/li&gt;
+		&lt;li&gt;over all sales stats of kits/projects once we have a shopping cart system&lt;/li&gt;
+		&lt;li&gt;etc&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #32 (Feedback): Add embedded video support to wiki</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/32"/>
+    <id>http://opendesignengine.net/issues/32</id>
+    <updated>2011-05-13T18:35:41+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Take a look at this &lt;a href="http://projects.plural.cc/projects/redmine-youtube" class="external"&gt;plugin&lt;/a&gt;  It could be a good start, but we should expand it to support other hosting services (like &lt;a href="http://vimeo.com/" class="external"&gt;vimeo&lt;/a&gt;) and locally hosted videos.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #29 (New): Add embedded project IRC support</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/29"/>
+    <id>http://opendesignengine.net/issues/29</id>
+    <updated>2011-04-09T16:21:00+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Add web based IRC client with server for hosted projects and have IRC sessions auto-logged to the project space&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #23 (New): Add a "fans" page to projects</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/23"/>
+    <id>http://opendesignengine.net/issues/23</id>
+    <updated>2011-04-09T16:12:54+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Have a fans page so supporters can show their interest&lt;/p&gt;    </content>
+  </entry>
+</feed>

@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Pyrometer - Project Planning - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/pyr-001.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/pyr-001.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Pyrometer</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/pyr-001.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/pyr-001/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/pyr-001/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/pyr-001/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/pyr-001/issues/calendar.html" class="calendar">Calendar</a></li>
+<li><a href="../../../projects/pyr-001/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/pyr-001.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/pyr-001/documents.html" class="documents">Documents</a></li>
+<li><a href="http://opendesignengine.net/projects/pyr-001/wiki" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/pyr-001/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/pyr-001/files.html" class="files">Files</a></li>
+<li><a href="../../../projects/pyr-001/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/pyr-001/boards.html">Forums</a> » <a href="../../../projects/pyr-001/boards/19.html">General</a> » </p>
+
+<div class="contextual">
+    <span class="message-347-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Project Planning</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/pyr-001/activity%3Ffrom=2013-01-13.html" title="01/13/2013 05:42 pm">almost 10 years</a> ago</span></p>
+<div class="wiki">
+<a name="Open-Hardware-Pyrometer"></a>
+<h1 >Open Hardware Pyrometer<a href="347%3Fr=356.html#Open-Hardware-Pyrometer" class="wiki-anchor">&para;</a></h1>
+
+
+	<p><strong>Purpose</strong><br />To produce a method of measuring and displaying the discharge exhaust temperature of a rocket engine for future versions of the Shepard Test Stand.</p>
+
+
+<strong>Construction Process</strong>
+	<ol>
+	<li>Take a webcam and remove the IR blocking filter. </li>
+		<li>Add an optical low pass filter to allow the IR to pass, but none of the visible light.</li>
+		<li>Optically split the image with a prism</li>
+		<li>On the bottom half of the image let it image a regulated heat source where the temp is known, possibly a small light bulb with a thermocouple and regulator.</li>
+		<li>Feed the upper half of the image with the filtered optical image of the rocket engine's plume.</li>
+	</ol>
+
+
+	<p><strong>Principle of Operation</strong><br />The brightness of the upper image, relative to the intensity of the lower image will give you a ratio to multiply the known temp of the regulated source by to derive the temp of the plume at a scan rate of 30-60 readings per sec.  Note that as the brightness changes, the camera will electronically iris down, but will do so on both halves of the image, which preserves the ratio.  This data could be displayed as a value in real time with the rest of the readings from the control system.  If the image were automatically cropped to include only the top image and normalized to register the peak temperature as the maximum scale in a post production process, this would provide a 30-60 fps movie of the thermal energy during the engine run.  This image analysis and storage is something a Beaglebone or other ARM processor running Linux can handle.  For something similar, but without the reference or normalization, have a look at <a class="external" href="http://youtu.be/qeuJKUIw220">http://youtu.be/qeuJKUIw220</a>.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (6)</h3>
+
+  <div class="message reply" id="message-348">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="347%3Fr=348.html#message-348">Mach 30 Standard Engineering Process (SEP) Step 1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/pyr-001/activity%3Ffrom=2013-01-13.html" title="01/13/2013 09:33 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><a name="Questions-and-Answers"></a>
+<h1 >Questions and Answers<a href="347%3Fr=356.html#Questions-and-Answers" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="Q1-Why-are-we-making-this"></a>
+<h3 >Q1. Why are we making this?<a href="347%3Fr=356.html#Q1-Why-are-we-making-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A1.</strong> The average reading time of .17-.22 sec determined by the physical characteristics of a thermocouple capable of being placed directly in the discharge stream of a high power rocket as well as the sense time of the amplifier is just too slow to yield any kind of real data on a 6-12 second burn;  we'd only get 30 to 35 readings.  This could give us a max temp reading, but the resolution across the time domain is simply not high enough to see a sudden drop or "chugging" as the result of a poor burn, nor would it give us data we could reconcile to a real time event. Clearly another measurement technique is needed to yield data useful in the evaluation and troubleshooting of rocket engines.</p>
+
+
+	<a name="Q2-Who-is-this-for"></a>
+<h3 >Q2. Who is this for?<a href="347%3Fr=356.html#Q2-Who-is-this-for" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A2.</strong> Besides the Shepard Test Stand, this device would be of use in furnaces, kilns, casting, and a number of industrial processes.  Other uses include emergency services such as firefighting and industrial maintenance.</p>
+
+
+	<a name="Q3-How-will-this-be-used"></a>
+<h3 >Q3. How will this be used?<a href="347%3Fr=356.html#Q3-How-will-this-be-used" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A3.</strong> The instrument will be used in a standalone configuration to visualize the temperature of objects through the use of optics or may be mounted on or within another device such as the Shepard test stand.  Where the radiant thermal energy would be destructive to the device the temperature may be measured using indirect sighting such as a prism, mirror, or fiber optic cable.  These readings are thermal maps which can be reconciled with real time sensor data.</p>
+
+
+	<a name="Q4-What-features-does-it-need-to-have-now"></a>
+<h3 >Q4. What features does it need to have (now)?<a href="347%3Fr=356.html#Q4-What-features-does-it-need-to-have-now" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A4.</strong> For now, the instrument needs to be able to detect a range of thermal energy from a 100 to 1000 degrees C and measure it with no more than a 1% absolute error, .01% relative error.  The minimum scan rate should be 15Hz with no more than a 5mS lag.  A thermal map or image would be preferable to point readings.</p>
+
+
+	<a name="Q5-What-features-does-it-need-to-have-later"></a>
+<h3 >Q5. What features does it need to have (later)?<a href="347%3Fr=356.html#Q5-What-features-does-it-need-to-have-later" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A5.</strong> The design should split once packaging concerns start.  One will be built into a device such as the Shepard test stand and will remotely sense, another version will be stand alone for general scientific use.  The ability to analyse and apply mathematical filters to the data such as auto-ranging and normalizing the data on the instrument would save time in the field.</p>
+
+
+	<a name="Q6-What-are-the-legacy-requirements"></a>
+<h3 >Q6. What are the legacy requirements?<a href="347%3Fr=356.html#Q6-What-are-the-legacy-requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A6.</strong> As a 1.0 design, the design has little if any legacy.  Given that the primary use will likely be the Shepard test stand, it will likely need to be as small as possible and mount solidly to a bulkhead.</p>
+
+
+	<a name="Q7-Whos-going-to-build-this"></a>
+<h3 >Q7. Who's going to build this?<a href="347%3Fr=356.html#Q7-Whos-going-to-build-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A7.</strong> Initially a prototype will be built by Mach 30 and it's volunteers for it's own (internal) uses.  This design may be presented and demonstrated to the academic and aerospace communities for their use allowing Mach 30 to gain influence and clout where it can be leveraged most.  Since the design is open, it becomes possible for anyone to build one.</p>
+
+
+	<a name="Q8-How-many-do-we-want-to-make"></a>
+<h3 >Q8. How many do we want to make?<a href="347%3Fr=356.html#Q8-How-many-do-we-want-to-make" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A8.</strong> Two, a built in version for the Shepard test stand and one self-contained unit for other projects where readings are needed, for test stand readings at angles impossible with the built in readings, or for confirmation of the test stand unit's readings.  After this, if there is a market for the assembled units, a volunteer may construct these for sale or Mach 30 may "kitify" them for a revenue stream.</p>
+
+
+	<a name="Q9-What-is-the-budget"></a>
+<h3 >Q9. What is the budget?<a href="347%3Fr=356.html#Q9-What-is-the-budget" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A9.</strong> Version 1.0 of this instrument will be the result of several level 1 kites.  The first is the detector, the second is the processor/programming including the software based on OpenCV <a class="external" href="http://opencv.org/">http://opencv.org/</a>, and the third is the enclosure and optics.  Each may be completed within the $200.00 mark.  The total budget should be under $600.00 and under no circumstances should it rise above $800 (hard limit).</p>
+
+
+	<a name="Q10-What-is-the-timeline"></a>
+<h3 >Q10. What is the timeline?<a href="347%3Fr=356.html#Q10-What-is-the-timeline" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A10.</strong> Provided the funds are available, and sufficient expertise may be brought to bear to run the three level 1 kites concurrently, Version 1.0 should be complete within a year of starting.</p>
+
+
+	<a name="Q11-What-waste-products-will-be-produced-by-the-manufacture-andor-operation-of-this"></a>
+<h3 >Q11. What waste products will be produced by the manufacture and/or operation of this?<a href="347%3Fr=356.html#Q11-What-waste-products-will-be-produced-by-the-manufacture-andor-operation-of-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>A11.</strong> The modular construction and utility of this instrument allows full reuse, in whole or in part, after the experiment is complete.  Some of the components, not lending themselves to other uses, or not recognized as having further utility by non-technical people, would end up as e-waste.  This could include any module, particularly the batteries in the stand-alone version.  During runs, the ceramic shroud or fiber-optic cable could become damaged or fouled requiring cleaning or replacement.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-349">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="347%3Fr=349.html#message-349">RE: Project Inception</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/pyr-001/activity%3Ffrom=2013-01-13.html" title="01/13/2013 10:43 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Next question for the pyrometer:<br />What wavelengths are needed to determine the temperature of the exhaust stream?  Do the red and green data from a web-cam provide sufficient data?</p>
+
+
+	<p>I analyzed a frame from the video "Shepard Mechanical Prototype 1 Test 4".  A typical pixel in the "flame" was R=255, G=251, B=220.  Obviously red is saturated, green is close to saturated, and blue is still above 85%.  Clearly, the video camera would need to "stop-down" a couple of F stops to get the red out of saturation.  But if the flame really looks that yellow, the black-body temperature is more like 2500 C than 1000 C.  From my experience, 625 C is very dim red, and 1250 C is a fairly bright orange.  But this is highly subjective.  It still suggests that the rocket exhaust may well exceed the limit of a K thermocouple and push the upper limit of really expensive thermocouples like type R.</p>
+
+
+	<p>This leads to the next question:  Has anyone searched the global marketplace for a cheap optical pyrometer for the temperature range that could use visible light data, like maybe 700 to 3000 C?  Note that old-fashioned incandescent light bulbs run color-temperature around 2900 K which provides just enough blue to get a reasonable photographic image with an R-G-B digital sensor.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-350">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="347%3Fr=350.html#message-350">RE: Project Inception</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/pyr-001/activity%3Ffrom=2013-01-13.html" title="01/13/2013 10:50 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Aaron - This looks good. I do have a couple of thoughts.</p>
+
+
+	<p>1. The Shepard Test Stand is the first (entry level) in a series of test stand designs that will get larger and measure more powerful motors (and engines) as time goes on. While Shepard will most likely be the test bed for the early versions of this pyrometer, it's big brothers/sisters is where I can see this device really starting to shine.</p>
+
+
+	<p>2. The statement "...to the academic and aerospace communities for their use allowing Mach 30 to gain influence and clout where it can be leveraged most" in Q7 above may need some clarification. Mach 30 isn't just interested in increasing it's influence and clout with larger organizations in the academic and aerospace industries. We are continually working to build deep win-win relationships with partners that include small Makerspaces and individuals spread around the U.S and world as well. We recognize the critical contribution of each group to our mission, and want to make sure that we not only get value from partnerships, but provide value as well. That probably didn't have to be clarified, but I want to make sure that we don't leave anyone with the wrong impression.</p>
+
+
+	<p>I like the thought of a heat map where you can pull the instantaneous value from any part of the plume. This could be incredibly helpful.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-356">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="347%3Fr=356.html#message-356">RE: Project Inception</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/pyr-001/activity%3Ffrom=2013-01-14.html" title="01/14/2013 12:52 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Hi Jeremy,</p>
+
+
+	<p>1. While Shepard is probably a good place to test early versions of the pyrometer, I can't see where the pyrometer adds value to Shepard in that this class of test stand will be testing small, short running engines with a known chemical composition.  A K-type thermocouple would provide similar information through repetitive measurements, and do so at a much more agreeable price point.</p>
+
+
+	<p>2. I would agree that this requires clarification.  While useful to the hobby community, the type of measurements the pyrometer is capable of giving would be useful to the professionals and academia as well.  If the basic device pans out, it can be used at a scale which enables continuous monitoring or experimentation where the budget wouldn't otherwise permit it.  In such a scenario, the same design used by hobbyists, makers, academic and government labs, as well as industry would make a powerful statement about ODE, Mach 30's other projects, and the concept of open hardware itself.  This is what I meant by clout and influence... "organizational gravitas" was another way it was put.  I am still looking for the perfect way convey the thought of inclusive value and the resulting ability to be noticed and listened to when we (meaning from us working on this project, all the way up to the open hardware community) make other things.  What is the opposite of "discredit"?</p>
+
+
+	<p>If we get into liquid and hybrids, the heat map will be worth it's weight in gold, but most commercial offerings cannot respond fast enough to help diagnose combustion issues.  Most rely on high speed photography to do so, but if we pull this off, it will help a lot.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-357">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="347%3Fr=357.html#message-357">RE: Project Inception</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/pyr-001/activity%3Ffrom=2013-01-14.html" title="01/14/2013 02:59 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I found an interesting data sheet here:<br /><a class="external" href="http://www.melexis.com/Assets/MLX75006--75007-CMOS-Camera-IC-4752.aspx">http://www.melexis.com/Assets/MLX75006--75007-CMOS-Camera-IC-4752.aspx</a><br />This appears to be a CMOS camera with no color filter(s) and usable sensitivity from &lt;400 to at least 1000nm.</p>
+
+
+	<p>I was sniffing around surveillance cameras because they have a night-vision mode with LED illumination at 850 or 940nm.  I haven't figured out yet how they switch from day to night mode, but the sample video kinda looks like the color filter on the green pixel element excludes visible blue and red, but passes IR for the night mode.  (The night-vision image looks green on the sample video.)  It sure would get interesting if the surveillance sensors actually have 4 elements/pixel.  The only problem would be hacking the firmware to output video with Ir-R-G instead of R-G-B.</p>
+
+
+	<p>Aaron – have you looked at the R-G-B data from a web-cam with the IR filter removed?  What does the color data look like with only IR illumination?  It seems to me that the IR image should come from the red pixel element, not green like the surveillance video tends to indicate.  Find out how surveillance cameras switch from day to night mode, and we might be a giant step closer to a pyrometer sensor.</p>
+
+
+	<p>Do you have any video where the rocket exhaust doesn't saturate the sensor's red output?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-358">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="347%3Fr=358.html#message-358">RE: Project Inception</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/pyr-001/activity%3Ffrom=2013-01-14.html" title="01/14/2013 04:42 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I am still concerned about colors from the metal ions influencing the readings <a class="external" href="http://youtu.be/jJvS4uc4TbU">http://youtu.be/jJvS4uc4TbU</a> , but if I have gauged this correctly, the reason red gets saturated is the flame's heat output moving into the 650 to 600nM range.  I do have some other videos on tap that may be of use:</p>
+
+
+	<p><a class="external" href="http://youtu.be/Hf_YbpZn5xI">http://youtu.be/Hf_YbpZn5xI</a><br /><a class="external" href="http://youtu.be/wHLvlm72cMc">http://youtu.be/wHLvlm72cMc</a><br /><a class="external" href="http://youtu.be/TLPWqCMb7DE">http://youtu.be/TLPWqCMb7DE</a></p></div>
+  
+  </div>
+
+<p class="pagination"> (1-6/6)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/347.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

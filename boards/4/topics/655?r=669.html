@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - v2.0 - SEP - Requirements - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-655-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>v2.0 - SEP - Requirements</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-10-09.html" title="10/09/2013 01:17 pm">about 9 years</a> ago</span></p>
+<div class="wiki">
+<p>I've pulled out the current structure related <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document" class="external">requirements</a> for review below. After these are set we'll make another pass for the software requirements. Ideally, I'd like to have some discussion here so that we're well prepared to wrap these requirements up at the next Shepard focused Hangout.</p>
+
+
+	<a name="Technical-Requirements"></a>
+<h3 >Technical Requirements<a href="655%3Fr=669.html#Technical-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>STSR 1.1</strong> The STS must accommodate low power, commercially available amateur rocket motors sized A through E.</li>
+		<li><strong>STSR 1.2</strong> The STS must be mobile enough to enable live demonstrations as part of educational and outreach activities.
+	<ul>
+	<li><strong>STSR 1.2.1</strong> The STS total weight shall be less than 25 pounds (11.3 Kg), or be able to break into components that weigh no more than 25 pounds (11.3 Kg) each (based on OSHA recommendations).</li>
+		<li><strong>STSR 1.2.2</strong> The STS must be transportable by 1 person.</li>
+	</ul></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 3.1</strong> The design and operation of the STS shall be conducted in compliance with <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">The National Association of Rocketry (NAR) Standards &#38; Testing Committee Motor Testing Manual, Version 1.5, Effective Date: July 1, 2011</a>, henceforth referred to as the "NAR testing manual". </li>
+		<li><strong>STSR 3.2</strong> The STS must be useful for the verification of Estes thrust vs time <a href="http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf" class="external">motor performance data</a> and to acquire casing temperature vs time data.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 4.1</strong> The STS shall be easily set up and torn down for demonstration purposes.
+	<ul>
+	<li><strong>STSR 4.1.1</strong> Unpack and set up time should be less than 45 min.</li>
+		<li><strong>STSR 4.1.2</strong> Clean up and storage time should be less than 90 min.</li>
+	</ul>
+	</li>
+		<li><strong>STSR 4.2</strong> The STS shall be easy to package for shipment to any event at which it will be used, meaning the whole test stand system shall fit in the backseat or trunk of a standard 4-door sedan.
+	<ul>
+	<li><strong>STSR 4.5.1</strong> IAW NAR testing manual requirements specified in Section 8.5.1, it must be possible to calibrate the load cell with a "NIST traceable weight standard such as an Instron". <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">1</a></li>
+		<li><strong>STSR 4.5.3</strong> The force sensor shall have a measurement range of no less than 33 Newtons.</li>
+	</ul>
+	</li>
+		<li><strong>STSR 4.6</strong> Temperature sensor requirements
+	<ul>
+	<li><strong>STSR 4.6.3</strong> IAW (partial) NAR testing manual requirements specified in Section 8.6, a temperature sensor will be attached to the motor under test "where the propellant and nozzle meet" (the "throat" in Mach 30 parlance). <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">1</a> Full compliance with this requirement has been moved to the future requirements section below.</li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Project-Requirements"></a>
+<h3 >Project Requirements<a href="655%3Fr=669.html#Project-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>STSR 2.1</strong> The STS must be well documented so as to meet the needs of open source spaceflight designers who will design and build future test stands (at Mach 30 and elsewhere).</li>
+		<li><strong>STSR 2.2</strong> The STS documentation and procedures must be complete enough that Mach 30 operators, students and educators who want to bring rocket engineering into the classroom, and anyone else interested in how rockets are tested can learn how to use it.</li>
+		<li><strong>STSR 2.3</strong> The STS documentation must cover the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 3.3</strong> The STS must be designed in a way that the structure can be slid down over a heavier object, such as a concrete block, to hold it in place. Whoever builds the test stand structure should not be required to permanently fasten it down to an object to keep it stationary.</li>
+		<li><strong>STSR 3.4</strong> The STS shall be operated IAW the safety procedures which are outlined in Section 8 of the NAR testing manual.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 4.3</strong> The STS shall provide a fixed base on which to test model rocket motors.  
+	<ul>
+	<li><strong>STSR 4.3.1</strong> The test stand will remain stationary during motor firings.</li>
+		<li><strong>STSR 4.3.2</strong> The test stand components will not experience undo vibration during motor firings.</li>
+	</ul></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 7.1</strong> All STS design documentation must be open and complete enough so that ANYONE, without necessarily a technical education in rocketry, propulsion, or engineering, would be able to build and operate the test stand.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 8.1</strong> The design of the STS must enable the completion of at least one operational test stand.</li>
+		<li><strong>STSR 8.2</strong> Whenever and wherever possible, considerations should be made so that the design of this STS can be used as a kit in the future.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 9.1</strong> The cost of the first operational STS must not exceed $200 excluding "consumables" and tools.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 10.1</strong> If at all possible, the STS should be completed within 3 months of formal launch as an exercise in agile design.</li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (6)</h3>
+
+  <div class="message reply" id="message-665">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="655%3Fr=665.html#message-665">RE: v2.0 - SEP - Requirements</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-10-14.html" title="10/14/2013 02:46 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here are my thoughts (based on reviewing our revisions to the <a href="../../../projects/shepard-ts/wiki/Initial_Questions.html" class="wiki-page">Initial Questions</a>.</p>
+
+
+	<ul>
+	<li><strong>STSR 1.2</strong> The STS must be <del>mobile enough to enable live demonstrations as part of educational and outreach activities</del> compact and light weight enough to accommodate shipping to conferences and other demonstration events or transporting up to ten copies in the same passenger car.
+	<ul>
+	<li> <strong>STSR 1.2.1</strong> The STS total weight (structure and DAQ) shall be less than <del>25</del> 5.0 pounds (<del>11.3</del> 2.7 Kg). <del>, or be able to break into components that weigh no more than 25 pounds (11.3 Kg) each (based on OSHA recommendations).</del> <- <em>guessing at a revised weight, need to check Aaron's prototype weight to see if this is realistic</em></li>
+		<li><strong>STSR 1.2.3</strong> The STS structure shall be no larger than <em>&lt;insert reasonable dimensions to support low cost shipping here&gt;</em></li>
+	</ul></li>
+	</ul>
+
+
+	<ul>
+	<li>Strike <strong>STSR 4</strong> or move the <strong>STSR 1.2.x</strong> requirements to <strong>STSR 4.x</strong></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 4.6.4</strong> The temperature sensor will have two mounting options: a) mounting for measurement of the case temperature as specified above, b) mounting for measuring the flame temperature</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 4.10</strong> The motor mount must be able to survive catastrophic motor failure (eg motors exploding during a test)
+	<ul>
+	<li><strong>STSR 4.10.1</strong> The motor mount must not create metal or plastic shrapnel when exposed to an exploding motor during test</li>
+		<li><strong>STSR 4.10.2</strong> The motor mount must be repairable within 60 minutes after a motor explosion and repairs must cost less than $10 (US)</li>
+	</ul></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 4.11</strong> The STS structure will include space to display identifying marks (eg Mach 30 logo, STS logo, OSHW logo, etc) and safety information (eg warnings, safety instructions, etc)</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 8.1</strong> The design of the STS must enable the <del>completion of at least one operational test stand</del> sale of dozens to hundreds of kits per year (and possibly more as demand warrants).</li>
+	</ul>
+
+
+	<ul>
+	<li>Strike <strong>STSR 8.2</strong></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 9.1</strong> The cost of the materials for the STS (not including consumables or user purchased computational equipment) must not exceed $80. <- <em>the "computational equipment" is a backdoor to allow us to offload the price of the Arduino Uno from the kit price by making it a separate purchase like the PC.</em></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 10.1</strong> The v2.0 prototype of the STS should be completed and undergo initial test firing no later than Dec 31, 2013.</li>
+	</ul>
+
+
+<hr />
+
+
+	<p>OK, so I have not captured what it means to be "hackable" and I may have missed something else, but hopefully this gets the ball rolling.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-666">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="655%3Fr=666.html#message-666">RE: v2.0 - SEP - Requirements</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-10-14.html" title="10/14/2013 10:25 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>A couple things have come up as I've been working on this.</p>
+
+
+	<p>1. Our requirement statements usually only cover the "what", not the "why" or the "who". Should those aspects be included in the statements, or is that non-standard for a requirements document?<br />2. I think that J is touching on this in the comment to strike STSR 4 or move STSR 1.2.x, but I think that we've had some of our requirements placed under technical requirements that should be project requirements, and vice versa. Also, some requirements seem to be mapped to the wrong initial questions and our technical requirements don't always seem to have measurable (quantifiable) outcomes to them.</p>
+
+
+	<p>Below is an attempt I made on reorganization and the creation of templates to include the why, what, and who aspects. It only covers initial questions 1 through 3 and part of 4. Before I put any more time into it I want to see if I'm headed in the wrong direction.</p>
+
+
+	<p>As a reminder, technical requirements have measurable outcomes attached to them, and project requirements do not.</p>
+
+
+	<a name="Q1-Why-are-we-making-this-Project-Requirements"></a>
+<h3 >Q1. Why are we making this? (Project Requirements)<a href="655%3Fr=669.html#Q1-Why-are-we-making-this-Project-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>STSR 1.x</strong> The STS should [task/focus] so that [organization/individual] can [goal/accomplishment].</li>
+	</ul>
+
+
+	<p>Example taken from the initial question:</p>
+
+
+	<ul>
+	<li><strong>STSR 1.1</strong> The STS should focus on low power, commercially available amateur rocket motors so that Mach 30 and partner organizations can provide a safe first experience for both designers and operators.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 1.2</strong> The STS should provide a platform for performing live demonstrations so that Mach 30 and its educational partners can conduct educational and outreach activities.</li>
+	</ul>
+
+
+	<a name="Q2-Who-is-this-for-Project-Requirements"></a>
+<h3 >Q2. Who is this for? (Project Requirements)<a href="655%3Fr=669.html#Q2-Who-is-this-for-Project-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>STSR 2.x</strong> The STS should provide a(n) [organization/individual] with [ability/activity] so that [goal/accomplishment].</li>
+	</ul>
+
+
+	<p>Example taken from the initial question.</p>
+
+
+	<ul>
+	<li><strong>STSR 2.1</strong> The STS should provide a middle school (6th through 8th grade in the U.S.) teacher who does not have the support of an IT department, and who does not have computer expertise beyond how to connect a USB cable and install software, with the ability to introduce their students to rocket science in a safe and hands-on way.</li>
+		<li><strong>STSR 2.2</strong> The STS should provide open source spaceflight designers with the ability to learn about measuring the performance of rocket motors in a low risk way so that they can progress to larger motors and engines safely.</li>
+	</ul>
+
+
+	<a name="Q3-How-will-this-be-used-Project-Requirements"></a>
+<h3 >Q3. How will this be used? (Project Requirements)<a href="655%3Fr=669.html#Q3-How-will-this-be-used-Project-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>STSR 3.x</strong> The STS must allow [organization/individual] to [activity] so that [goal/accomplishment].</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 3.1</strong> The STS must allow Mach 30 and its partner organizations to collect motor thrust and casing temperature data to be compared against the published <a href="http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf" class="external">Estes motor documentation</a> so that test stand users know when their test has been run correctly.</li>
+	</ul>
+
+
+	<a name="Q4-What-features-does-it-need-to-have-now-Technical-Requirements"></a>
+<h3 >Q4. What features does it need to have (now)? (Technical Requirements)<a href="655%3Fr=669.html#Q4-What-features-does-it-need-to-have-now-Technical-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>STSR 4.x</strong> The STS needs to [function] so that a user can [ability/activity].</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 4.1</strong> The STS needs to provide a stable base on which to test rocket motors with a maximum of 35 Newtons of thrust so that a user I can reliably and safely measure motor thrust.</li>
+		<li><strong>STSR 4.2</strong> The STS nneds to accommodate Estes rocket motor sizes A through E with a peak thrust range of approximately 6 Newtons up to 33 Newtons so that a user can record measurements which can be compared against the published Estes documentation.</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-667">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="655%3Fr=667.html#message-667">RE: v2.0 - SEP - Requirements</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-10-15.html" title="10/15/2013 01:13 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>When I was working on my previous post, I started pondering some of the same questions you brought up.  On reflection, I am starting to think the Initial Questions actually break down into three categories.</p>
+
+
+	<ul>
+	<li>Project Background Questions - questions which help set the stage for the questions which turn into technical and project requirements.  They are also good places to look for narrative which can be used in promotional material for the project.  This would cover questions 1, 2, 3, &#38; 7.</li>
+		<li>Technical Requirement Questions - questions which when answered lead to technical requirements (those that can be measured and deal with the performance of the hardware being developed).  This covers questions 4, 5 (after a fashion, but I almost think this should become a question 4b with what we call question 4 being question 4a), &#38; 6.</li>
+		<li>Project Requirement Questions - questions which when answered lead to project requirements (requirements are the remaining requirements which are not tied to specific performance values).  This would cover questions 8, 9, 10, &#38; 11.</li>
+	</ul>
+
+
+	<p>Assuming something like this structure made sense to other people, I would want to discuss reorganizing the Initial Questions (including renumbering them) to look something like this:</p>
+
+
+<hr />
+
+
+	<a name="ltProject-Namegt-Initial-Questions-vXx"></a>
+<h1 >&lt;Project Name&gt; Initial Questions vX.x<a href="655%3Fr=669.html#ltProject-Namegt-Initial-Questions-vXx" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="Project-Background-Questions"></a>
+<h2 >Project Background Questions<a href="655%3Fr=669.html#Project-Background-Questions" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="BQ1-Why-are-we-making-this"></a>
+<h3 >BQ1. Why are we making this?<a href="655%3Fr=669.html#BQ1-Why-are-we-making-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>BA1</strong>. <em>...</em></p>
+
+
+	<a name="BQ2-Who-is-this-for"></a>
+<h3 >BQ2. Who is this for?<a href="655%3Fr=669.html#BQ2-Who-is-this-for" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>BA2.</strong> <em>...</em></p>
+
+
+	<a name="BQ3-How-will-this-be-used"></a>
+<h3 >BQ3. How will this be used?<a href="655%3Fr=669.html#BQ3-How-will-this-be-used" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>BA3</strong>. <em>....</em></p>
+
+
+	<a name="BQ4-Whos-going-to-build-this"></a>
+<h3 >BQ4. Who's going to build this?<a href="655%3Fr=669.html#BQ4-Whos-going-to-build-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>BA4.</strong>  <em>...</em></p>
+
+
+	<a name="Technical-Requirement-Questions"></a>
+<h2 >Technical Requirement Questions<a href="655%3Fr=669.html#Technical-Requirement-Questions" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="TQ1a-What-features-does-it-need-to-have-now"></a>
+<h3 >TQ1a. What features does it need to have (now)?<a href="655%3Fr=669.html#TQ1a-What-features-does-it-need-to-have-now" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>TA1a.</strong> The test stand needs to:</p>
+
+
+	<ul>
+	<li><em>....</em></li>
+	</ul>
+
+
+	<a name="TQ1b-What-features-does-it-need-to-have-later"></a>
+<h3 >TQ1b. What features does it need to have (later)?<a href="655%3Fr=669.html#TQ1b-What-features-does-it-need-to-have-later" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>TA1b.</strong> <em>These features will not necessarily make it into any version of the project, but should be kept in mind for any of its larger sibling test stands later on.</em></p>
+
+
+	<ul>
+	<li><em>...</em></li>
+	</ul>
+
+
+	<a name="TQ2-What-are-the-legacy-requirements"></a>
+<h3 >TQ2. What are the legacy requirements?<a href="655%3Fr=669.html#TQ2-What-are-the-legacy-requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>TA2.</strong> <em>...</em></p>
+
+
+	<a name="Project-Requirement-Questions"></a>
+<h2 >Project Requirement Questions<a href="655%3Fr=669.html#Project-Requirement-Questions" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="PQ1-How-many-do-we-want-to-make"></a>
+<h3 >PQ1. How many do we want to make?<a href="655%3Fr=669.html#PQ1-How-many-do-we-want-to-make" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>PA1.</strong> <em>...</em></p>
+
+
+	<a name="PQ2-What-is-the-budget"></a>
+<h3 >PQ2. What is the budget?<a href="655%3Fr=669.html#PQ2-What-is-the-budget" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>PA2.</strong> <em>...</em></p>
+
+
+	<a name="PQ3-What-is-the-timeline"></a>
+<h3 >PQ3. What is the timeline?<a href="655%3Fr=669.html#PQ3-What-is-the-timeline" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>PA3.</strong> <em>...</em></p>
+
+
+	<a name="PQ4-What-waste-products-will-be-produced-by-the-manufacture-andor-operation-of-this"></a>
+<h3 >PQ4. What waste products will be produced by the manufacture and/or operation of this?<a href="655%3Fr=669.html#PQ4-What-waste-products-will-be-produced-by-the-manufacture-andor-operation-of-this" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>PA4.</strong> <em>...</em></p>
+
+
+<hr />
+
+
+	<p>This would then naturally lead to a requirements document setup like this:</p>
+
+
+<hr />
+
+
+	<a name="ltProject-Namegt-Requirements-vXx"></a>
+<h1 >&lt;Project Name&gt; Requirements vX.x<a href="655%3Fr=669.html#ltProject-Namegt-Requirements-vXx" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="Technical-Requirements"></a>
+<h2 >Technical Requirements<a href="655%3Fr=669.html#Technical-Requirements" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><strong>TR 1.1</strong> ....</li>
+		<li><strong>TR 1.2</strong> ....</li>
+		<li><strong>TR 2.1</strong> ....</li>
+		<li><strong>TR 2.2</strong> ....</li>
+	</ul>
+
+
+	<a name="Project-Requirements"></a>
+<h2 >Project Requirements<a href="655%3Fr=669.html#Project-Requirements" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><strong>PR 1.1</strong> ....</li>
+		<li><strong>PR 1.2</strong> ....</li>
+		<li><strong>PR 2.1</strong> ....</li>
+		<li><strong>PR 2.2</strong> ....</li>
+		<li><strong>PR 3.1</strong> ....</li>
+		<li><strong>PR 3.2</strong> ....</li>
+		<li><strong>PR 4.1</strong> ....</li>
+		<li><strong>PR 4.2</strong> ....</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-668">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="655%3Fr=668.html#message-668">RE: v2.0 - SEP - Requirements</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-10-16.html" title="10/16/2013 12:56 am">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Howdy all, This post was a conversation topic between J and I on the drive down to Las Cruces, NM.  I'm really excited about this small (yet potentially impactful) tweak of the Initial Questions and the Requirements Document.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-669">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="655%3Fr=669.html#message-669">RE: v2.0 - SEP - Requirements</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-10-16.html" title="10/16/2013 07:05 am">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I like where this is going. I think this structure addresses all of my concerns except whether or not to add the "who" and "why" to the existing wording of the requirements.</p>
+
+
+	<p>Do we want template sentences like I created above for people to reference when they're converting initial questions to requirements?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-670">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="655%3Fr=670.html#message-670">RE: v2.0 - SEP - Requirements</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-10-17.html" title="10/17/2013 08:57 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>I am just now getting around to looking at your comment (attending conferences always makes it hard to keep up with communications).   Requirements, as a rule of thumb, are inherently answer the whats of a project ("what must it do?  what must it measure?  what must it accept?  what must it produce?).  The who and why type questions are really about a different aspect of the project.  And having captured the who and why in the initial questions, I don't think we need to capture them anywhere else.</p>
+
+
+	<p>As for why then do we have requirements to recapture the what type questions...  We do this for requirements so we can add the next level of detail to the what type questions by including measurable performance specifications (preferably with both thresholds, minimum acceptable performance, and objectives, highly desired performance).  Also, by capturing these measurable aspects of the hardware or management of the project in one place, we can more easily reference them when reviewing a project for completeness.</p>
+
+
+	<p>Hope that helps.</p>
+
+
+	<p>In terms of the template sentences, I think I missed your examples (this thread is getting pretty dense with all the formatting I threw in around the new layout of the questions and requirements docs).  Can you comment on just that part below?</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-6/6)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/655.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

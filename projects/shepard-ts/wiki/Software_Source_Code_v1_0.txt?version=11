@@ -1,0 +1,17 @@
+h1. Software Source Code v1.0
+
+This document has been relinked to the Software Source Code document "here":https://opendesignengine.net/projects/shepard-ts/wiki/Software_Source_Code as part of our versioning system update.
+
+In order to download the latest source code for the data acquisition (DAQ) software, you will need a subversion client.
+
+On Linux, you can install the subversion package and then execute the following on a command line.
+
+<pre>
+svn co https://opendesignengine.net/svn/shepard-ts
+</pre>
+
+This will download the source tree to the current directory. The top level directory will be @shepard-ts@ and the most current version will be in the @trunk@ directory.
+
+There will also be milestone versions available for download from "DMSF":https://opendesignengine.net/dmsf/shepard-ts?folder_id=16 . These versions will not necessarily be up-to-date though.
+
+For instructions on how to use the software, please see the "Operating Manual":https://opendesignengine.net/projects/shepard-ts/wiki/Operating_Manual_v1_0

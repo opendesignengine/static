@@ -1,0 +1,12 @@
+h1. Timeline v1.0
+
+This document has been relinked to the Timeline document "here":https://opendesignengine.net/projects/shepard-ts/wiki/Timeline as part of our versioning system update.
+
+h3. Overview
+
+The goal is to complete the project within three months of formal launch as an exercise of agile design. However, given the project is also an experiment in open source hardware development and is all volunteer based, we need to recognize the need to be flexible in this requirement.
+
+See the "Gantt chart":https://opendesignengine.net/projects/shepard-ts/issues/gantt if you would like to track the progress of this project. The best way to see the entire timeline of the project is to set the *Status* pull down menu to *All*, and set the filters to be *12* months from *May 2012* (Figure 1). Then click "Apply".
+
+*Figure 1 - Filter Settings to See the Complete Shepard v1.0 Timeline*
+!Gantt_Filters_Shepard_v1.0.png!

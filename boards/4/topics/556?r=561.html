@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Arduino vs Beagle Bone Black Discussion - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-556-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Arduino vs Beagle Bone Black Discussion</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-07-27" title="07/27/2013 02:40 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>For awhile, we've been discussing the use of the BeagleBone Black for Shepard 2.0. While Aaron and I had been leaning towards the Bone, J has been pushing back some. J. is attending the NewSpace Conference right now, and it's pushed him even more into the Arduino camp. Aaron has been thinking a lot about the Arduino recently as well, and is now also (mostly) in the Arduino camp. I wanted to capture some of the reasoning here on why this shift has happened.</p>
+
+
+	<p>1. Almost every educator that J. has met at NewSpace is teaching the Arduino, which makes sense. Staying with the Arduino would allow us to offer those educators a system that's already familiar to them and their students. Aaron also feels that "[t]he educational component of the experience...from engaging students with fire and smoke all the way to problem solving with a microcontroller, is the service Shepard as a product is most ideally suited for." As Aaron and J both point out, using the BeagleBone would carry us away from this introductory market, which is really where the Shepard 2.0 kit needs to be targeted. The commercial testing of Estes motors is a market segment that's well covered, and there is little need to try to commercialize Shepard in that way. Shepard was never intended for this use anyway, since it's always been an educational and training tool.</p>
+
+
+	<p>2. Related to number 1 is the concept of what J calls a "Grandma Test", and I would call a "Slightly Technology Literate Grandma Test". Shepard 2.0 should be as close to plug-and-play as we can make it so that your grandma, who knows just enough about computers to be dangerous, could use it in her classroom. So far the Shepard DAQ has failed on this front, but largely because we haven't been able to put the care and feeding into the software we would have liked. As we move towards Shepard 2.0 we can take a serious look at making the software more grandpa/grandma friendly.</p>
+
+
+	<p>There's quite a bit of discussion that has to happen surrounding this discussion, including:</p>
+
+
+	<p>1. The 30 foot safety radius specified in the NAR safety manual for an E motor. We can't reach 30 feet with an Arduino's USB cable, but we can (barely) reach 15 feet, which is the minimum safety radius for motor sizes A through D. If the 30 foot radius is there only to protect against "landsharking" (the rocket travelling horizontally instead of vertically), we should be able to reduce it to 15 feet.</p>
+
+
+	<p>2. The reliability of UBS/serial communications between the Arduino and the laptop. So far there have been some ease-of-use issues surrounding the communications, but this should be addressed (at least partially) in future commits to the Shepard software repository.</p>
+
+
+	<p>3. Stick with Processing for the front end, or move to a new language/platform? We've done quite a bit of work on Shepard's Processing app already, and the Arduino community seems to be very comfortable with Processing, but we need to make sure that it's the best fit for Shepard 2.0.</p>
+
+
+	<p>J and Aaron, did I miss anything?</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (6)</h3>
+
+  <div class="message reply" id="message-557">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="556%3Fr=557.html#message-557">RE: Arduino vs Beagle Bone Black Discussion</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-07-27" title="07/27/2013 03:29 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>One thing I would note is that the 15 ft can easily be doubled by using a USB extender, which normally run ~$20 I think.  There's also more expensive options, but they give you much longer range (such as USB over IP, which gives you 100m range).</p>
+
+
+	<p>In terms of the software, I'm willing to help hone it if there's the need; I've got a bit of Processing and Arduino experience.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-558">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="556%3Fr=558.html#message-558">RE: Arduino vs Beagle Bone Black Discussion</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-07-27" title="07/27/2013 04:22 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks Chris. Are there any USB extenders that run don't require an external power supply?</p>
+
+
+	<p>I'll be in touch on help with Processing. If we're going to stick with Processing there are quite a few upgrades I want to make. The current software was thrown together by just me to get ready for OHS 2012 and needs much more thought put into it. It would be nice to hold a code review Hangout where we can talk about things like architecture.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-559">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="556%3Fr=559.html#message-559">RE: Arduino vs Beagle Bone Black Discussion</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-28.html" title="07/28/2013 08:17 am">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've done a bit more research into USB extenders, and it seems virtually all of them are USB over IP, and most are limited to USB 1.1 (i.e. 12Mb/s).  They seem to start at around $10, but I'm not so sure about quality for the lower priced ones.  There are some that do USB 2.0, but they all seem to be powered, and the good ones seem to start at $50.  I'm wondering at this point whether it might make sense to use the arduino ethernet board (although you loose a couple of pins I think), or to use an XBEE and its adapter instead.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-560">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="556%3Fr=560.html#message-560">RE: Arduino vs Beagle Bone Black Discussion</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-28.html" title="07/28/2013 11:25 am">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think the question of whether or not we need to switch away from the basic USB interface will be answered by answering the 15' vs 30' safety radius question. I know J has some thoughts on this, and I'd like to include this discussion in a code review Hangout. I'm drafting a forum post that can serve as a starting point for a Hangout agenda. I'll hopefully have that posted by the end of the day.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-561">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="556%3Fr=561.html#message-561">RE: Arduino vs Beagle Bone Black Discussion</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-28.html" title="07/28/2013 11:25 am">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think the question of whether or not we need to switch away from the basic USB interface will be answered by answering the 15' vs 30' safety radius question. I know J has some thoughts on this, and I'd like to include this discussion in a code review Hangout. I'm drafting a forum post that can serve as a starting point for a Hangout agenda. I'll hopefully have that posted by the end of the day.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-565">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="556%3Fr=565.html#message-565">RE: Arduino vs Beagle Bone Black Discussion</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-30.html" title="07/30/2013 09:58 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy, the only thing I can think to add are Aaron's comments from his email on this topic.  I am quoting those comments below.</p>
+
+
+<blockquote>
+
+	<p>Hi Folks,</p>
+
+
+	<p>After some thinking over the past couple of weeks, I feel that sticking with the arduino is the best, "most correct" solution.  While the teaching and "grandma test" logic is sound, there is another point that convinced me.  Shepard isn't just a test stand, and testing rocket motors is not it's primary function.  Estes motors really don't need tested; we will never be able to sell shepard runs as a service for example.  The educational component of the experience on the other hand, from engaging students with fire and smoke all the way to problem solving with a microcontroller, is the service Shepard as a product is most ideally suited for.  Switching to the bone now would have us walking away from our experience for no real reason, give us a new learning curve when we can least afford it, and move Shepard away from it's target market.</p>
+
+
+	<p>Once we hit Grissom, Glenn, and beyond, we will have to revisit this simply because the arduino cannot read that many sensors without slowing the scan rate.  At that point the service offering of the product changes as well.  When we hit that scale, the purpose becomes some education at a college level perhaps, but these will be used to test rocket motors of various types as well as gain experience working with a test stand.  From an EC standpoint, that means that Shepard, Grissom, and Glenn really won't hit any EC boundaries due to their focus and perceived use.  A scaled up Glenn, Carpenter, Schirra, or Cooper, assuming the capability goes up with powers of 10 like the kites, will be rocket test stands where their primary reason for existance is to provide reliability and/or parametric data about the device under test.  This is where we need to be concerned about scale, and provide a common DAQ architecture.</p>
+
+
+	<p>I have a couple of ideas on how to use the arduino with an E motor safely as well as improving the safety of the design and process, and I want to hear what you guys have come up with.  I think this is a topic we need to have a meeting about, or at least a lively round of emails, since it directly impacts the service offering to our target market.</p>
+
+
+	<p>Best,</p>
+
+
+	<p>Aaron</p>
+
+
+</blockquote></div>
+  
+  </div>
+
+<p class="pagination"> (1-6/6)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/556.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+h1. V1.1 Description
+
+The second iteration of the Shepard rocket motor test stand. This is an incremental update over 1.0 where only the major issues are fixed, and the requirements are scaled back appropriately for the level of the project.
+
+There was a little bit of a process breakdown on this version, so some version 2.0 DAQ documentation got mixed in with the version 1.1 docs. Because of this, the wiki and dev logs may be a little hard to follow but have been cleaned up as much as possible.
+
+Please refer instead to the Shepard v2.0 documentation to make sure that you are building the latest iteration.

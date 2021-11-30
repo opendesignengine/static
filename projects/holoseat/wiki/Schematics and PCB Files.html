@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Schematics and PCB Files</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Schematics-and-PCB-Files"></a>
+<h1 >Schematics and PCB Files<a href="Schematics&#32;and&#32;PCB&#32;Files.html#Schematics-and-PCB-Files" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="Schematics&#32;and&#32;PCB&#32;Files.html#Schematics-and-PCB-Files">Schematics and PCB Files</a><ul><li><a href="Schematics&#32;and&#32;PCB&#32;Files.html#Sensor-Connectivity">Sensor Connectivity</a></li></ul>
+</li><li><a href="Schematics&#32;and&#32;PCB&#32;Files.html#Deprecated">Deprecated</a><ul><li><a href="Schematics&#32;and&#32;PCB&#32;Files.html#Introduction">Introduction</a></li><li><a href="Schematics&#32;and&#32;PCB&#32;Files.html#Holoseat-Controller">Holoseat Controller</a></li><li><a href="Schematics&#32;and&#32;PCB&#32;Files.html#Sensor-Board">Sensor Board</a></li><li><a href="Schematics&#32;and&#32;PCB&#32;Files.html#Notes">Notes</a></li></ul></li></ul>
+
+
+	<a name="Sensor-Connectivity"></a>
+<h2 >Sensor Connectivity<a href="Schematics&#32;and&#32;PCB&#32;Files.html#Sensor-Connectivity" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Proposed connectivity (chosen to place supply voltage on TRRS tip).</p>
+
+
+	<table>
+		<tr>
+			<td>Sensor Pin</td>
+			<td>Function</td>
+			<td>TRRS Jack Postion</td>
+			<td>Arduino Pin</td>
+		</tr>
+		<tr>
+			<td>1  </td>
+			<td>Supply Voltage</td>
+			<td>Tip</td>
+			<td>3.3v </td>
+		</tr>
+		<tr>
+			<td>2  </td>
+			<td>Direction</td>
+			<td>Ring 1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3  </td>
+			<td>Speed</td>
+			<td>Ring 2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4  </td>
+			<td>Ground</td>
+			<td>Sleeve</td>
+			<td>GND</td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="Deprecated"></a>
+<h1 >Deprecated<a href="Schematics&#32;and&#32;PCB&#32;Files.html#Deprecated" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="Introduction"></a>
+<h2 >Introduction<a href="Schematics&#32;and&#32;PCB&#32;Files.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Holoseat uses two boards:  the Controller (an <a href="https://www.adafruit.com/product/2771" class="external">Adafruit Feather 32u4 Basic Proto</a> running the Holoseat firmware) and the Sensor Board (a custom board to connect the sensors to a Cat5 jack so the sensors can be mounted on the exercise pedals and the Controller can be close to the user, typically next to the user's keyboard).  For the current version, the boards are built from proto-boards, so there are no Holoseat specific PCBs.  Later versions will migrate to Holoseat specific PCBs.</p>
+
+
+	<a name="Holoseat-Controller"></a>
+<h2 >Holoseat Controller<a href="Schematics&#32;and&#32;PCB&#32;Files.html#Holoseat-Controller" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><img src="../../../dmsf_files/637%3Fdownload=" alt="" /></p>
+
+
+	<p>The Holoseat Controller electronics are simple enough to fit onto the prototyping area of the <a href="https://www.adafruit.com/product/2771" class="external">Adafruit Feather 32u4 Basic Proto</a>.  The key components are the Cat5 jack and an LED push button (<a href="https://www.adafruit.com/products/1440" class="external">HS008</a>).  The Cat5 jack is connected to pins 2 and 3 (for reading interrupts from the two Hall effect sensors), ground, and the USB power (to provide 5v to the sensors).  The LED push button is treated as a separate button and LED.  The button portion is connected to pin 10 and uses the Feather's internal pull-up resistor.  Finally, the LED portion is connected to pin 13 (per the <a href="https://www.arduino.cc/en/tutorial/blink" class="external">Arduino Blink tutorial</a>).</p>
+
+
+	<a name="Sensor-Board"></a>
+<h2 >Sensor Board<a href="Schematics&#32;and&#32;PCB&#32;Files.html#Sensor-Board" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><img src="../../../dmsf_files/638%3Fdownload=" alt="" /></p>
+
+
+	<p>The Sensor Board electronics are built on a perfboard.  The key components are the Cat5 jack and two sensor/LED modules.  The Cat5 jack is used to connect the sensors to the Controller board using a Cat5e cable.  The sensor/LED modules are composed of an OH090U Hall Effect Sensor (<a href="http://www.digikey.com/product-search/en?keywords=365-1001-ND" class="external">HS004</a>) and a Diffused Blue 3mm LED (<a href="https://www.adafruit.com/products/780" class="external">HS005</a>).  The LED is wired directly to the sensor to provide low level diagnostic information without using the Controller.  As long as the sensor is receiving power and is untriggered (that is no magnet is within sensing range) the LED will be lit.  The LED will turn off when the sensor is triggered by a magnet indicating the sensor is working correctly.  Note, the sensors have a polarity like magnets and will only be triggered by a magnet if the correct pole is facing the sensor.</p>
+
+
+	<a name="Notes"></a>
+<h2 >Notes<a href="Schematics&#32;and&#32;PCB&#32;Files.html#Notes" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Design work is currently being done in <a href="http://fritzing.org/" class="external">Fritzing</a>. | <a href="https://opendesignengine.net/dmsf/holoseat?folder_id=74" class="external">Fritzing Source Files</a></p>
+</body>
+</html>

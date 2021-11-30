@@ -1,0 +1,9 @@
+h1. Yavin Cold Gas Thruster Wiki
+
+Welcome to the the Yavin Thruster wiki.  If you have ever wondered what makes rockets work or how engineers go about designing rocket engines, then this is the project for you.  We are going to demonstrate how you can go from _requirements_ to _analysis and conceptual design_ (1) to _detailed design_ (2) to _manufacture_ (3) and ultimately _test_.
+
+!http://opendesignengine.net/dmsf_files/480?download=!
+
+The Yavin Thruster is a cold gas thruster, a kind of rocket engine that creates thrust just from the energy stored in a compressed gas.  Our goal is to make the Yavin Thruster accessible by anyone, so we are using modern design and manufacturing techniques (like parametric modeling, 3D printing) and commonly available components (like consumer grade air compressors).  
+
+We are still in the early phases of this project so this is a great time to jump on board.  Introduce yourself on our *"Forums":https://opendesignengine.net/projects/yavin-thruster/boards* and then  check out our answers to the list of *[[Initial Questions]]* to get an overall sense of where the project is going.  Check out the *[[Meeting Minutes|Meeting Minutes/Notes]]* for the latest news on our progress.  Finally, our *[[Export Control Review]]* and *[[Resources|Resources/Links]]* have lots of good background material.

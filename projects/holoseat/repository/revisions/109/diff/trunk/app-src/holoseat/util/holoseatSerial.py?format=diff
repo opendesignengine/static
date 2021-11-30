@@ -1,0 +1,25 @@
+Index: holoseatSerial.py
+===================================================================
+--- holoseatSerial.py	(revision 108)
++++ holoseatSerial.py	(revision 109)
+@@ -98,7 +98,7 @@
+     # we iterated over all available com ports and did not find Holoseat
+     return None
+ 
+-def connect(expectedHspVer=None):
++def connect():
+     holoseatPort = findHoloseatPort()
+     if not(holoseatPort):
+         return False  # no Holoseat Controllers connected to USB
+@@ -137,10 +137,7 @@
+ 
+         # TODO - is this a compatible FW version?
+ 
+-        # is this the compatible HSP version (must match exactly)?
+-        if expectedHspVer and (versionResults['hspVer'] != expectedHspVer):
+-            disconnect()
+-            return False
++        # TODO - is this the compatible HSP version?
+ 
+         # tell holoseat to echo out all status events to sync up any connected clients
+         eventsResults = json.loads(execCommand({"uri":"/lowlevel/events","verb":"GET"}))

@@ -1,0 +1,19 @@
+h1. Antennas
+
+{{>toc}}
+
+TODO: Explain what this page is, and give some context to each section
+
+h2. Design Tools
+
+* "4nec2":http://www.qsl.net/4nec2/
+
+h2. Quadrifilar Helix (QFH) Antennas
+
+* "Helical Quad Antenna for Weather Satellites":http://www.alternet.us.com/?p=1461
+* "A QFH antenna for the weather satellite band":http://www.g4ilo.com/qfh.html
+* "QFH sizing calculator (online)":http://jcoppens.com/ant/qfh/calc.en.php
+
+h2. J-Pole Antenna
+
+* "Dual-band 2m/70cm portable J-pole Antenna":https://plus.google.com/103325124303499719264/posts/ckJhzUWFvZ1?iem=4&gpawv=1&hl=en-US

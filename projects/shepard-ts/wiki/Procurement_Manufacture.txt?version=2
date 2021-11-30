@@ -1,0 +1,30 @@
+h1. Shepard Test Stand Procurement/Manufacture
+
+This is a newer document based on "this one":https://opendesignengine.net/projects/shepard-ts/wiki/Procurement_Manufacture_v1_0 , and you should refer to that original version if you want to see the revision history.
+
+h3. Mechanical System
+
+All of the items in the mechanical system are described on the "wiki":https://opendesignengine.net/projects/shepard-ts/wiki/Detailed_Design_v1_0#Mechanical-System , and detailed information including measurements can be found in the "BoM (Bill of Material)":http://opendesignengine.net/dmsf_files/18?download= .
+
+* The lumber used to build version 1.0 of the test stand was standard English unit stock, and could be purchased anywhere including "Lowes":http://www.lowes.com and "Home Depot":http://www.homedepot.com in the U.S.
+* The coarse thread drywall screws used as fasteners were standard English unit stock, and could be purchased anywhere including "Lowes":http://www.lowes.com and "Home Depot":http://www.homedepot.com in the U.S.
+* The drawer slide used as a linear guide is PN "D80614C-ZP-W":http://www.libertyhardware.com/search/detail/?searchType=retail&ID=D80614C-ZP-W&FIN=ZP from "Liberty Hardware":http://www.libertyhardware.com .
+* Several COTS (Commercial Off The Shelf) items were purchased as part of an "engine mount kit":http://www.estesrockets.com/rockets/accessories/engine-mounting/303159-d-and-e-engine-mount-kit from "Estes Rockets":http://www.estesrockets.com/ :
+** Estes E Engine Mount Tube (PN 30463)
+** Estes E Engine Retainer Ring (PN 30160)
+** Estes E Spacer Ring (PN 35005)
+** Estes E Engine Block (PN 30174-S) - modified
+** Estes E Engine Hook (PN 35022)
+
+h3. Data Acquisition (DAQ) System
+
+The items in the DAQ system are described on the "wiki":https://opendesignengine.net/projects/shepard-ts/wiki/Detailed_Design_v1_0#Data-Acquisition-DAQ-System .
+
+* The "Arduino Uno":http://arduino.cc/en/Main/ArduinoBoardUno used in this project was purchased from "Radio Shack":http://www.radioshack.com/product/index.jsp?productId=12268262 , but can also be purchased from vendors like "SparkFun":https://www.sparkfun.com/products/11021 . It can also be purchased from the "Arduino Store":http://store.arduino.cc/ww/index.php?main_page=product_info&cPath=11_12&products_id=195 for around the same price if you are willing to wait 15 days shipping time. The Uno used in the version 1.0 test stand was purchased at Radio Shack.
+* The "Arduino ProtoShield":http://arduino.cc/en/Main/ArduinoProtoShield used in the version 1.0 of the test stand was a true Arduino product, and was purchased at Radio Shack for about $20. Not all Radio Shacks will have the ProtoShield in stock though. The ProtoShield can be purchased from the "Arduino Store":http://store.arduino.cc/ww/index.php?main_page=product_info&cPath=11_5&products_id=203 for around $10 more than you'd pay from U.S. based vendors. Similar boards can be purchased from many vendors including "AdaFruit":https://www.adafruit.com/products/51 for $20 including shipping. 
+* The "Force Sensing Resistor (FSR)":http://www.trossenrobotics.com/store/p/6496-1-5-Inch-Force-Sensing-Resistor-FSR-.aspx used in version 1.0 of the test stand was purchased from "Trossen Robotics":http://www.trossenrobotics.com
+* The "Type K Thermocouple":http://adafruit.com/products/270 used in version 1.0 of the test stand was purchased from "Adafruit Industries":http://adafruit.com
+* The "operational amplifier":http://www.mouser.com/ProductDetail/Texas-Instruments/TLV2374IN/?qs=st7IWvlL5/gZGpqMaJgalj%252bttKJ3M/YPFWapqS2bl%252bg%3D used to amplify the signal from the FSR in version 1.0 of the test stand was purchased from "Mouser Electronics":http://www.mouser.com .
+* The two 560 Ohm resistors used in version 1.0 were also purchased from "Mouser Electronics":http://www.mouser.com so that shipping costs could be combined.
+* The "thermocouple amplifier":http://adafruit.com/products/269 used in version 1.0 was purchased from "Adafruit":http://adafruit.com .
+* The FSR cable was made from a left over CAT 5e cable that was on hand. Any inexpensive Ethernet cable should work fine to be disassembled for this purpose. The wires used in soldering the ProtoShield were "breadboard jumper wire":http://www.radioshack.com/product/index.jsp?productId=2103801 available from Radio Shack.

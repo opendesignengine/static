@@ -1,0 +1,42 @@
+h1. NodeBots Resources
+
+{{>toc}}
+
+J. is investigating how to automate the test rig to minimize user induced error during sensor comparison tests and later performance tests.  This plan was inspired by working with Nodebots.
+
+h2. Examples
+
+* "Practical Introduction to iot with Arduino + Node.js + Plotly":http://adilmoujahid.com/posts/2015/07/practical-introduction-iot-arduino-nodejs-plotly/ - older plot.ly info, but still a good resource
+* "Tutorial that uses sqlite and Node.js":https://cozy.io/en/hack/getting-started/first-app.html - really about "Cozy":https://cozy.io/en/, but covers sqlite with Node.js which looks like a good choice if we run the test rig from an RPi
+* "Real Time Weather Data Visualizations with socket.io and D3.js":http://www.bmc.med.utoronto.ca/bmcwiki/doku.php/technology:media_technologies:technology:dataviz_d3
+* "Realtime Data Visualization Using D3, serial port, & socket.io":http://shivganesh.com/2015/08/realtime-data-visualization-using-d3-serial-port-socket-io/
+* "System load monitoring with nodejs+socket.io+flot":https://ricochen.wordpress.com/2012/02/12/system-load-monitoring-with-nodejssocket-ioflot/
+
+h2. Raspberry Pi and NodeBots
+
+* "Building Raspberry Pi nodebots":http://www.slideshare.net/RiaanCornelius1/building-raspberry-pi-nodebots
+* "Loading I2C, SPI and 1-Wire drivers on the Raspberry Pi under Raspbian wheezy":http://www.modmypi.com/blog/loading-i2c-spi-and-1-wire-drivers-on-the-raspberry-pi-under-raspbian-wheezy
+* "raspi-io":https://github.com/nebrius/raspi-io - An IO plugin for Johnny-Five that provides support for the Raspberry Pi
+
+h2. C.H.I.P. and NodeBots
+
+* "Node CHIP IO":https://github.com/sandeepmistry/node-chip-io
+
+h2. Tools/Libraries
+
+* "Nodebots":http://nodebots.io/
+* "Node Serial":https://github.com/voodootikigod/node-serialport - for connecting from NodeBots code to the already built Arduino device for running test rig at specified speed
+* "Plot.ly Open Source Announcement":https://plot.ly/javascript/open-source-announcement/
+* "Backbone.js":http://backbonejs.org/ - MVC JavaScript single page app environment
+* "Socket.io":http://socket.io/
+* "Arduino Experimenter's Guide for NodeJS":http://node-ardx.org/
+* "NodeSchool":http://nodeschool.io/
+
+h2. Hardware
+
+* "How to Use a Breadboard":https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard
+
+h2. General Tutorials
+
+* "Arduino Experimenter's Guide for NodeJS":http://node-ardx.org
+* "JavaScript Powered Arduino with Johnny-Five":https://www.safaribooksonline.com/blog/2013/07/16/javascript-powered-arduino-with-johnny-five/

@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Assembly Instructions</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Assembly-Instructions"></a>
+<h1 >Assembly Instructions<a href="Assembly&#32;Instructions.html#Assembly-Instructions" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Assembly&#32;Instructions.html#Assembly-Instructions">Assembly Instructions</a><ul><li><a href="Assembly&#32;Instructions.html#Introduction">Introduction</a></li><li><a href="Assembly&#32;Instructions.html#Sensor-Board-Assembly">Sensor Board Assembly</a><ul><li><a href="Assembly&#32;Instructions.html#Tools-Sensor-Board">Tools - Sensor Board</a></li><li><a href="Assembly&#32;Instructions.html#Materials-Sensor-Board">Materials - Sensor Board</a></li><li><a href="Assembly&#32;Instructions.html#Safety-Issues-Sensor-Board">Safety Issues - Sensor Board</a></li><li><a href="Assembly&#32;Instructions.html#Product-Sensor-Board">Product - Sensor Board</a></li><li><a href="Assembly&#32;Instructions.html#Procedure-Sensor-Board">Procedure - Sensor Board</a></li></ul>
+</li><li><a href="Assembly&#32;Instructions.html#Controller-Assembly">Controller Assembly</a><ul><li><a href="Assembly&#32;Instructions.html#Tools--Controller">Tools- Controller</a></li><li><a href="Assembly&#32;Instructions.html#Materials--Controller">Materials- Controller</a></li><li><a href="Assembly&#32;Instructions.html#Safety-Issues--Controller">Safety Issues- Controller</a></li><li><a href="Assembly&#32;Instructions.html#Product--Controller">Product- Controller</a></li><li><a href="Assembly&#32;Instructions.html#Procedure--Controller">Procedure- Controller</a></li></ul>
+</li><li><a href="Assembly&#32;Instructions.html#Holoseat-Final-Assembly">Holoseat Final Assembly</a><ul><li><a href="Assembly&#32;Instructions.html#Tools-Holoseat-Final-Assembly">Tools - Holoseat Final Assembly</a></li><li><a href="Assembly&#32;Instructions.html#Materials-Holoseat-Final-Assembly">Materials - Holoseat Final Assembly</a></li><li><a href="Assembly&#32;Instructions.html#Safety-Issues-Holoseat-Final-Assembly">Safety Issues - Holoseat Final Assembly</a></li><li><a href="Assembly&#32;Instructions.html#Product-Holoseat-Final-Assembly">Product - Holoseat Final Assembly</a></li><li><a href="Assembly&#32;Instructions.html#Procedure-Holoseat-Final-Assembly">Procedure - Holoseat Final Assembly</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h2 >Introduction<a href="Assembly&#32;Instructions.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Below are the assembly instructions for the v0.3 <strong>Holoseat</strong>.  The controller for this version is built using an <a href="https://www.adafruit.com/product/2771" class="external">AdaFruit Feather 32u4 Basic Proto</a>.  The sensors are on a remotely mountable board. Final assembly requires an appropriate set of under desk exercise pedals (we recommend <strong><a href="https://www.amazon.com/DeskCycle-Exercise-Pedal-Exerciser-White/dp/B00B1VDNQA/" class="external">DeskCycle</a></strong> or <strong><a href="https://www.amazon.com/FitDesk-Under-Desk-Elliptical/dp/B00Y1FRULM/" class="external">FitDesk</a></strong> ). Note, you will need to use your soldering skills on this build.</p>
+
+
+	<a name="Sensor-Board-Assembly"></a>
+<h2 >Sensor Board Assembly<a href="Assembly&#32;Instructions.html#Sensor-Board-Assembly" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools-Sensor-Board"></a>
+<h3 >Tools - Sensor Board<a href="Assembly&#32;Instructions.html#Tools-Sensor-Board" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Diagonal Cutters</li>
+		<li>Wire Strippers</li>
+		<li>Needle Nose Pliers</li>
+		<li>Soldering Iron</li>
+		<li>Punch Down Tool</li>
+	</ul>
+
+
+	<a name="Materials-Sensor-Board"></a>
+<h3 >Materials - Sensor Board<a href="Assembly&#32;Instructions.html#Materials-Sensor-Board" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>(1) HS001 - Double-Side Prototype PCB</li>
+		<li>(1) HS002 - Category 5e Jack</li>
+		<li>(2) HS003 - 750 OHM 1/2W 1% Axial Resistor</li>
+		<li>(2) HS004 - OH090U Hall Effect Sensor</li>
+		<li>(2) HS005 - Diffused Blue 3mm LED</li>
+		<li>Hook up wire</li>
+		<li>Solder</li>
+	</ul>
+
+
+	<a name="Safety-Issues-Sensor-Board"></a>
+<h3 >Safety Issues - Sensor Board<a href="Assembly&#32;Instructions.html#Safety-Issues-Sensor-Board" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Care must be taken when using sharp hand tools to avoid cuts</li>
+		<li>Care must be taken when using the soldering iron, the tip is very hot</li>
+		<li>Always wear safety glasses while working with soldering irons</li>
+		<li>Avoid breathing in the soldering fumes, use a vent or hood if needed to provide adequate ventilation</li>
+	</ul>
+
+
+	<a name="Product-Sensor-Board"></a>
+<h3 >Product - Sensor Board<a href="Assembly&#32;Instructions.html#Product-Sensor-Board" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>(1) Holoseat Sensor Board</p>
+
+
+	<a name="Procedure-Sensor-Board"></a>
+<h3 >Procedure - Sensor Board<a href="Assembly&#32;Instructions.html#Procedure-Sensor-Board" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Prepare Sensor/LED sub-assemblies<br />Repeat this procedure twice to assemble (2) <strong>Sensor/LED sub-assemblies</strong>
+	<ol>
+	<li>Take (1) <strong>HS004 - OH090U Hall Effect Sensor</strong> and (1) <strong>HS005 - Diffused Blue 3mm LED</strong> from your supplies<br /><img src="../../../attachments/download/593" alt="" /></li>
+		<li>Solder the LED's anode (long leg) to pin 3 of the sensor (the data pin) and solder the LED's cathode (short leg) to pin 2 of the sensor (the ground pin) using the following steps<br /><img src="../../../attachments/download/594" alt="" />
+	<ol>
+	<li>Align the LED to it sits on top of the sensor with the long leg next to pin 3 and the short leg next to pin 2</li>
+		<li>Wrap the LED's long leg around pin 3 to create a secure physical connection</li>
+		<li>Wrap the LED's short leg around pin 2 to create a secure physical connection</li>
+		<li>Apply solder to the two joints formed in the steps above to secure the connections between the LED and the sensor</li>
+	</ol>
+	</li>
+		<li>Cut approximately 40 cm lengths of black, red, and green hook up wire</li>
+		<li>Strip both ends of the (3) lengths of hookup wire</li>
+		<li>Solder the hookup wire to the ends of the sensor pins (red to pin 1, black to pin 2, and green to pin 3) using the following steps<br /><img src="../../../attachments/download/595" alt="" />
+	<ol>
+	<li>Wrap one end of the red hook up wire around pin 1 to create a secure physical connection</li>
+		<li>Apply solder to the joint formed in the step above to secure the connections between the red hookup wire and pin 1</li>
+		<li>Wrap one end of the black hook up wire around pin 2 to create a secure physical connection</li>
+		<li>Apply solder to the joint formed in the step above to secure the connections between the black hookup wire and pin 2</li>
+		<li>Wrap one end of the green hook up wire around pin 3 to create a secure physical connection</li>
+		<li>Apply solder to the joint formed in the step above to secure the connections between the green hookup wire and pin 3</li>
+	</ol>
+	</li>
+		<li>Apply sufficient heat shrink to the red and green joints to cover them completely</li>
+		<li>Apply sufficient heat shrink to assembly to completely cover the solder joints of all three leads, leaving some overlapping the LED to give it strain releaf</li>
+		<li>Apply larger heat shrink to the three leads made from the hookup wire to complete the <strong>Sensor/LED sub-assembly</strong></li>
+	</ol>
+	</li>
+		<li>Prepare the <strong>HS002 - Category 5e Jack</strong>
+	<ol>
+	<li>Cut approximately 20 cm each of the following colors of hookup wire: (2) green, (1) red, (1) black</li>
+		<li>Strip one end of each length of hookup wire</li>
+		<li>Use a punch down tool to connect the hookup wires to their corresponding positions on the <strong>HS002 - Category 5e Jack</strong> for pinout option A
+	<ol>
+	<li>Punch down the stripped end of the red hookup wire to Brown wire position of the Cat5e Jack</li>
+		<li>Punch down the stripped end of the black hookup wire to Brown/White wire position of the Cat5e Jack</li>
+		<li>Punch down the stripped end of a green hookup wire to Green wire position of the Cat5e Jack</li>
+		<li>Punch down the stripped end of the other green hookup wire to Blue/White wire position of the Cat5e Jack<br /><img src="../../../attachments/download/596" alt="" /></li>
+	</ol>
+	</li>
+	</ol>
+	</li>
+		<li>Finish Assembling the Sensor Board<br />Reference the image below for the following steps<br /><img src="../../../attachments/download/597" alt="" />
+	<ol>
+	<li>Connect the black leads
+	<ol>
+	<li>Test fit the black leads from both <strong>Sensor/LED sub-assemblies</strong> and the <strong>HS002 - Category 5e Jack</strong>, cutting the wires to length as necessary (remember to leave room for the stripped wire)</li>
+		<li>Strip the three black wires from the step above</li>
+		<li>Position the three black wires above in the correct holes of the <strong>HS001 - Double-Side Prototype PCB</strong> and bend them over to create a secure physical connection</li>
+		<li>Apply solder to the joint formed in the step above to secure the connection among the three black leads</li>
+	</ol>
+	</li>
+		<li>Connect the red leads
+	<ol>
+	<li>Take the (2) <strong>HS003 - 750 OHM 1/2W 1% Axial Resistors</strong> and position them according to the diagram (making sure to bend their leads to secure them in place</li>
+		<li>Test fit the red leads from both <strong>Sensor/LED sub-assemblies</strong> and the <strong>HS002 - Category 5e Jack</strong>, cutting the wires to length as necessary (remember to leave room for the stripped wire)</li>
+		<li>Strip the three red wires from the step above</li>
+		<li>Position the three red wires above in the correct holes of the <strong>HS001 - Double-Side Prototype PCB</strong> and bend them over to create a secure physical connection</li>
+		<li>Cut a short length of red hookup wire to bridge the red leads according to the diagram</li>
+		<li>Strip both ends of this additional length of red wire and place it according to the diagram, bending its ends over to create a secure physical connection</li>
+		<li>Apply solder to the joint formed in the step above to secure the connection among the three red leads</li>
+	</ol>
+	</li>
+		<li>Connect each of the green leads<br />Repeat these steps for each of the sensors' green leads according to the diagram
+	<ol>
+	<li>Test fit the green leads from one of the <strong>Sensor/LED sub-assemblies</strong> and the <strong>HS002 - Category 5e Jack</strong>, cutting the wires to length as necessary (remember to leave room for the stripped wire)</li>
+		<li>Strip the two green wires from the step above</li>
+		<li>Position the two green wires above in the correct holes of the <strong>HS001 - Double-Side Prototype PCB</strong> and bend them over to create a secure physical connection</li>
+		<li>Apply solder to the joint formed in the step above to secure the connection among the two green leads</li>
+	</ol>
+	</li>
+		<li>Cap the <strong>HS002 - Category 5e Jack</strong></li>
+	</ol></li>
+	</ol>
+
+
+	<p>The Sensor Board is now complete.</p>
+
+
+	<a name="Controller-Assembly"></a>
+<h2 >Controller Assembly<a href="Assembly&#32;Instructions.html#Controller-Assembly" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools--Controller"></a>
+<h3 >Tools- Controller<a href="Assembly&#32;Instructions.html#Tools--Controller" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Diagonal Cutters</li>
+		<li>Wire Strippers</li>
+		<li>Needle Nose Pliers</li>
+		<li>Soldering Iron</li>
+		<li>Punch Down Tool</li>
+	</ul>
+
+
+	<a name="Materials--Controller"></a>
+<h3 >Materials- Controller<a href="Assembly&#32;Instructions.html#Materials--Controller" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>(1) HS002 - Category 5e Jack</li>
+		<li>(1) HS007 - Adafruit Feather 32u4 Basic Proto</li>
+		<li>(1) HS008 - 16mm Illuminated Pushbutton - Green Momentary</li>
+		<li>(1) HS011 - 220 ohm 1/2W 5% Carbon Film Resistor</li>
+		<li>Hook up wire</li>
+		<li>Solder</li>
+	</ul>
+
+
+	<a name="Safety-Issues--Controller"></a>
+<h3 >Safety Issues- Controller<a href="Assembly&#32;Instructions.html#Safety-Issues--Controller" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Care must be taken when using sharp hand tools to avoid cuts</li>
+		<li>Care must be taken when using the soldering iron, the tip is very hot</li>
+		<li>Always wear safety glasses while working with soldering irons</li>
+		<li>Avoid breathing in the soldering fumes, use a vent or hood if needed to provide adequate ventilation</li>
+	</ul>
+
+
+	<a name="Product--Controller"></a>
+<h3 >Product- Controller<a href="Assembly&#32;Instructions.html#Product--Controller" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>(1) Holoseat Controller</p>
+
+
+	<a name="Procedure--Controller"></a>
+<h3 >Procedure- Controller<a href="Assembly&#32;Instructions.html#Procedure--Controller" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Connect the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong>
+	<ol>
+	<li>Prepare the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong>
+	<ol>
+	<li>Cut approximately 20 cm each of the following colors of hookup wire: (1) green, (1) red, (2) black</li>
+		<li>Strip both ends of all (5) lengths of hookup wire</li>
+		<li>Physically connect one end of the black hookup wire to the (-) terminal of the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong> (this is the negative terminal of the embedded LED)</li>
+		<li>Solder this joint to complete the connection</li>
+		<li>Physically connect one end of a green hookup wire to the (+) terminal of the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong> (this is the positive terminal of the embedded LED)</li>
+		<li>Solder this joint to complete the connection</li>
+		<li>Physically connect one end of the black hookup wire to one of the remaining terminals of the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong> (this is one of the leads for the switch)</li>
+		<li>Solder this joint to complete the connection</li>
+		<li>Physically connect one end of the red hookup wire to one of the remaining terminals of the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong> (this is one of the leads for the switch)</li>
+		<li>Solder this joint to complete the connection</li>
+	</ol>
+	</li>
+		<li>Connect the LED portion of the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong>
+	<ol>
+	<li>Take (1) <strong>HS011 - 220 ohm 1/2W 5% Carbon Film Resistor</strong> and place it in the proto area of the <strong>HS007 - Adafruit Feather 32u4 Basic Proto</strong>, with one pin through a Ground hole and the other toward an edge of the proto area</li>
+		<li>Solder these joints to complete the connection</li>
+		<li>Take the black hookup wire connected to the (-) terminal of the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong> and put it through a hole next in the proto field next to the <strong>HS011 - 220 ohm 1/2W 5% Carbon Film Resistor</strong></li>
+		<li>Take the green hook up wire connected to the (+) terminal of the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong> and put it through the hole for pin 13 on the <strong>HS007 - Adafruit Feather 32u4 Basic Proto</strong></li>
+		<li>Solder these joints to complete the connection, making sure to bridge the black wire to the <strong>HS011 - 220 ohm 1/2W 5% Carbon Film Resistor</strong><br /><img src="../../../attachments/download/608" alt="" /></li>
+	</ol>
+	</li>
+		<li>Connect the switch portion of the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong>
+	<ol>
+	<li>Insert the red hookup wire from the <strong>HS008 - 16mm Illuminated Pushbutton - Green Momentary</strong> into pin 10 (we will be using the built in pullup resistor, so we can simplify the wiring)</li>
+		<li>Insert the remaining black hookup wire into a ground hole</li>
+		<li>Solder these joints to complete the connection<br /><img src="../../../attachments/download/610" alt="" /></li>
+	</ol>
+	</li>
+	</ol>
+	</li>
+		<li>Prepare the <strong>HS002 - Category 5e Jack</strong>
+	<ol>
+	<li>Cut approximately 20 cm each of the following colors of hookup wire: (2) green, (1) red, (1) black</li>
+		<li>Strip one end of each length of hookup wire</li>
+		<li>Use a punch down tool to connect the hookup wires to their corresponding positions on the <strong>HS002 - Category 5e Jack</strong> for pinout option A
+	<ol>
+	<li>Punch down the stripped end of the red hookup wire to Brown wire position of the Cat5e Jack</li>
+		<li>Punch down the stripped end of the black hookup wire to Brown/White wire position of the Cat5e Jack</li>
+		<li>Punch down the stripped end of a green hookup wire to Green wire position of the Cat5e Jack</li>
+		<li>Punch down the stripped end of the other green hookup wire to Blue/White wire position of the Cat5e Jack<br /><img src="../../../attachments/download/606" alt="" /></li>
+	</ol>
+	</li>
+	</ol>
+	</li>
+		<li>Connect the <strong>HS002 - Category 5e Jack</strong>
+	<ol>
+	<li>Insert the black hookup wire from the <strong>HS002 - Category 5e Jack</strong> into a ground hole</li>
+		<li>Solder this joint to complete the connection</li>
+		<li>Insert the red hookup wire from the <strong>HS002 - Category 5e Jack</strong> into USB hole</li>
+		<li>Solder this joint to complete the connection</li>
+		<li>Insert the green hookup wire connected to the Blue/White connection from the <strong>HS002 - Category 5e Jack</strong> into a pin 3</li>
+		<li>Solder this joint to complete the connection</li>
+		<li>Insert the other green hookup wire from the <strong>HS002 - Category 5e Jack</strong> into pin 2</li>
+		<li>Solder this joint to complete the connection</li>
+		<li>Cap the <strong>HS002 - Category 5e Jack</strong><br /><img src="../../../attachments/download/611" alt="" /></li>
+	</ol></li>
+	</ol>
+
+
+	<p>The Controller is now complete.</p>
+
+
+	<a name="Holoseat-Final-Assembly"></a>
+<h2 >Holoseat Final Assembly<a href="Assembly&#32;Instructions.html#Holoseat-Final-Assembly" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools-Holoseat-Final-Assembly"></a>
+<h3 >Tools - Holoseat Final Assembly<a href="Assembly&#32;Instructions.html#Tools-Holoseat-Final-Assembly" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>none</li>
+	</ul>
+
+
+	<a name="Materials-Holoseat-Final-Assembly"></a>
+<h3 >Materials - Holoseat Final Assembly<a href="Assembly&#32;Instructions.html#Materials-Holoseat-Final-Assembly" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>(1) Holoseat Sensor Board</li>
+		<li>(1) Holoseat Controller</li>
+		<li>(1) Exercise pedals (e.g <strong><a href="https://www.amazon.com/DeskCycle-Exercise-Pedal-Exerciser-White/dp/B00B1VDNQA/" class="external">DeskCycle</a></strong> or <strong><a href="https://www.amazon.com/FitDesk-Under-Desk-Elliptical/dp/B00Y1FRULM/" class="external">FitDesk</a></strong> )</li>
+		<li>(1) HS006 - Cat5e cable</li>
+		<li>(1) HS009 - USB cable</li>
+		<li>(1) HS010 - 3/8 in dia. x 1/8 in thick magnet</li>
+		<li>Cloth Tape (Gaf, duct, or similar)</li>
+		<li>Computer</li>
+	</ul>
+
+
+	<a name="Safety-Issues-Holoseat-Final-Assembly"></a>
+<h3 >Safety Issues - Holoseat Final Assembly<a href="Assembly&#32;Instructions.html#Safety-Issues-Holoseat-Final-Assembly" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>HS010 (magnet) is small, ensure children and animals do not accidentally swallow it</li>
+	</ul>
+
+
+	<a name="Product-Holoseat-Final-Assembly"></a>
+<h3 >Product - Holoseat Final Assembly<a href="Assembly&#32;Instructions.html#Product-Holoseat-Final-Assembly" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>(1) Completed Holoseat Final Assembly</p>
+
+
+	<a name="Procedure-Holoseat-Final-Assembly"></a>
+<h3 >Procedure - Holoseat Final Assembly<a href="Assembly&#32;Instructions.html#Procedure-Holoseat-Final-Assembly" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The primary objective for the final assembly is to mount the Sensor Board and the HS010 (magnet) on your chosen under desk exercise pedals.  At this point in the development we are using easily reversible assembly processes (read tape) so we do not damage the exercise pedals.  Note, for convenience these instructions show the Sensor Board and Controller mounted in small plastic containers (e.g. travel toothbrush holders or similar).</p>
+
+
+	<ol>
+	<li>Use the <strong>HS006 - Cat5e cable</strong> to connect the Sensor Board to the Controller</li>
+		<li>Plug the Controller into the computer using the <strong>HS009 - USB cable</strong>, the sensor lights should both light up</li>
+		<li>Place the Sensor Board on top the exercise pedals so the sensors can be placed along the path of the right hand bar of the pedals</li>
+		<li>Tack in place with two strips of tape</li>
+		<li>Place the sensors in position.  Tacking them down with tape as needed.  Be sure to mount them in the same orientation (e.g. the writing faces out for both sensors) to ensure they will both read the magnet as the sensors have a polarity.<br />The cadence sensor (connected to the Blue/White striped lead on the Sensor Board) should be placed ahead of the direction sensor (connected to the Green lead on the Sensor Board) when pedaling.  This will be to the left if looking at the sensors from the side of the exercise pedals.  Be sure both sensor are in the same arc of the pedal bar so they can both be triggered when the magnet is in place.</li>
+		<li>Place the <strong>HS010 - magnet</strong> on the right hand bar of the pedals in line with the arc of the two sensors (it should attach to the pedal bar through its magnetic field)</li>
+		<li>Adjust the position of the sensors and <strong>HS010 - magnet</strong> such that each sensor is triggered (indicated by the light switching off as the pedal bar passes the sensor) one at a time (see image below)<br />If neither sensor is triggered try flipping the magnet over (in case of a polarity mismatch) or moving the magnet closer to the arc of the sensors (in case the magnet is beyond the range of the sensors).  If both sensors are triggered at the same time try separating the sensors along the path of the arc.<br /><img src="../../../attachments/download/631" alt="" /></li>
+		<li>Once the sensors and <strong>HS010 - magnet</strong> are in position, add sufficient tape to permanently mount the sensors and then the Sensor Board</li>
+	</ol>
+
+
+	<p>The Holoseat Final Assembly is complete.  Proceed to the <strong><a href="Software&#32;Set&#32;Up.html" class="wiki-page">Software Set Up</a></strong> instructions to install the firmware and desktop configuration app.</p>
+</body>
+</html>

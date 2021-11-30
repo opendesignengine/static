@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Walk Sensor Test Rig Development Log - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-901-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Walk Sensor Test Rig Development Log</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-08.html" title="10/08/2014 06:06 pm">about 8 years</a> ago</span></p>
+<div class="wiki">
+<p>As part of the development of v0.3 of the Holoseat, we want to improve the sensitivity of the "walk sensor(s)".  See <a href="829.html" class="message">Testing Hall Effect Sensors</a> for more details.</p>
+
+
+	<p>I am planning to build a sensor test rig to simplify the testing procedure and eliminate variation in test results. This thread will serve as a live "lab notebook" documenting the design and development of the test rig.  The actual test process (including selection of sensors and magnets to test) will be captured in <a href="829.html" class="message">Testing Hall Effect Sensors</a>.</p>
+
+
+	<p>Below is the block diagram for the test rig.  It will use a stand alone Arduino to control a rotation source (planning to use a re-purposed stepper motor as that source) to run a small wheel over a range of speeds and then plot the values calculated with the sensor/magnet under test to the driven speeds (in RPMs).  Note, a bike computer with cadence measurement (not shown) will be used to verify the stepper motor is driving the wheel to the correct speed.</p>
+
+
+	<p><a href="https://drive.google.com/file/d/0BzOPMhBGrtSXejVwWWpBeU1tdFU/view?usp=sharing"><img src="../../../attachments/download/537" alt="" /></a></p>
+</div>
+<div class="attachments">
+
+<p><a href="../../../attachments/537/sensor_test_rig_block_diagram.png" class="icon icon-attachment">sensor_test_rig_block_diagram.png</a>
+  <span class="size">(120.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (28)</h3>
+
+  <div class="message reply" id="message-1190">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1190.html#message-1190">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-06-15.html" title="06/15/2016 10:36 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Documenting the test definition file format.  It is a JSON file of the following format.</p>
+
+
+<pre>
+{
+  "ID": "CHAR01",
+  "Description": "TR 08 characterization low rpm",
+  "Sensor": "TR 08",
+  "Magnet": "MAG.375",
+  "Distance": "1.0",
+  "Duration": "60",
+  "Cadence": "20" 
+}
+</pre></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1193">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1193.html#message-1193">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-06-16.html" title="06/16/2016 09:29 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Posting link to <a href="https://docs.google.com/document/d/1zeh99EmtvrGLfbwrsqR9f86PpvnCU2PX6vd2faXcMRA/pub" class="external">Test Plan</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1196">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1196.html#message-1196">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-06-25.html" title="06/25/2016 08:34 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Testing is complete.  Here is a link to the <a href="https://docs.google.com/document/d/1B6IVmwIm8mjcR2hGM-9ZORMSijLtisy5iOKN1xq2rgk/pub" class="external">full report</a>.  But, for those who just want to know the answer, here are the results.</p>
+
+
+	<ul>
+	<li>Sensor = TR 08 (90G Trip, 65G Release Digital Hall Effect Sensor)</li>
+		<li>Magnet = MAG.375 (3/8" dia. x 1/8 thick, 5.46 lbs pull force magnet)</li>
+		<li>Max supported distance = 2.5 cm</li>
+	</ul>
+
+
+	<p>I still need to capture the electronics for the test rig in Fritzing and I need to upload some analysis files to DMSF.  Other than that, this task is finally wrapped up.</p></div>
+  
+  </div>
+
+<p class="pagination"><a href="http://opendesignengine.net/boards/36/topics/901?page=1&amp;r=1190">« Previous</a> <a href="http://opendesignengine.net/boards/36/topics/901?page=1&amp;r=1190">1</a> 2  (26-28/28)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/901.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mach 30 Technical Roadmap: Discussion</title>
+  <link rel="self" href="http://opendesignengine.net/projects/m30roadmap/boards?format=atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/m30roadmap/boards"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2014-10-23T20:36:12+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Propulsion Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/816?r=913#message-913"/>
+    <id>http://opendesignengine.net/boards/45/topics/816?r=913#message-913</id>
+    <updated>2014-10-23T20:36:12+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;@Matt M. - can you clarify this entry (staging hobby and high-powered rocket motors) from the &lt;a href="http://opendesignengine.net/projects/m30roadmap/wiki/Propulsion_Card_Storming" class="wiki-page"&gt;Propulsion Card Storming&lt;/a&gt; page?&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/828?r=909#message-909"/>
+    <id>http://opendesignengine.net/boards/45/topics/828?r=909#message-909</id>
+    <updated>2014-10-21T20:07:20+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Howdy all,&lt;/p&gt;
+
+
+	&lt;p&gt;I was busier than I expected to be this weekend, so I just got a chance to follow up with the next step in the roadmap process.  Per the Oct 16 #EngineerSpeak, I have created wiki pages for each of the remaining subsystem categories (aerodynamics, propulsion, structures/mechanisms) for use with the card storming exercise.  You can reach these pages from the &lt;a href="http://opendesignengine.net/projects/m30roadmap/wiki/Technology_Evaluation" class="wiki-page"&gt;Technology Evaluation&lt;/a&gt; wiki page.  To see how the process works at this stage, take a look at the &lt;a href="http://opendesignengine.net/projects/m30roadmap/wiki/Structures_and_Mechanisms_Card_Storming" class="wiki-page"&gt;Structures and Mechanisms Card Storming&lt;/a&gt; page where I ported over the content from Thursday's meeting.&lt;/p&gt;
+
+
+	&lt;p&gt;The basic idea is to list one idea per bullet.   Just login to ODE and edit the wiki page you want to add one or more items to (you do need an account, but you don't need to be a member of this project).  Add you items and click the Submit button.  Couldn't be easier.  We will work some more at the next #EngineerSpeak hangout.&lt;/p&gt;
+
+
+	&lt;p&gt;Happy Card Storming!&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: export control stuff</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/852?r=898#message-898"/>
+    <id>http://opendesignengine.net/boards/45/topics/852?r=898#message-898</id>
+    <updated>2014-10-07T22:30:20+00:00</updated>
+    <author>
+      <name>Matt Maier</name>
+    </author>
+    <content type="html">
+&lt;p&gt;model rockets&lt;br /&gt;&lt;a class="external" href="http://www.nfpa.org/catalog/product.asp?title=2013-NFPA-1122-Model-Rocketry&amp;#38;category_name=&amp;#38;pid=112213&amp;#38;target_pid=112213&amp;#38;src_pid=&amp;#38;link_type=search&amp;#38;icid=&amp;#38;Page=1"&gt;http://www.nfpa.org/catalog/product.asp?title=2013-NFPA-1122-Model-Rocketry&amp;#38;category_name=&amp;#38;pid=112213&amp;#38;target_pid=112213&amp;#38;src_pid=&amp;#38;link_type=search&amp;#38;icid=&amp;#38;Page=1&lt;/a&gt;&lt;br /&gt;high powered rockets&lt;br /&gt;&lt;a class="external" href="http://www.nfpa.org/catalog/product.asp?title=&amp;#38;category_name=&amp;#38;pid=112713&amp;#38;target_pid=112713&amp;#38;src_pid=&amp;#38;link_type=search&amp;#38;icid=&amp;#38;Page=1"&gt;http://www.nfpa.org/catalog/product.asp?title=&amp;#38;category_name=&amp;#38;pid=112713&amp;#38;target_pid=112713&amp;#38;src_pid=&amp;#38;link_type=search&amp;#38;icid=&amp;#38;Page=1&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;and this one's about the difference between model rocket and high power motors and how to manufacture them&lt;br /&gt;&lt;a class="external" href="http://www.nfpa.org/catalog/product.asp?title=&amp;#38;category_name=&amp;#38;pid=112512&amp;#38;target_pid=112512&amp;#38;src_pid=&amp;#38;link_type=search&amp;#38;icid=&amp;#38;Page=1"&gt;http://www.nfpa.org/catalog/product.asp?title=&amp;#38;category_name=&amp;#38;pid=112512&amp;#38;target_pid=112512&amp;#38;src_pid=&amp;#38;link_type=search&amp;#38;icid=&amp;#38;Page=1&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Thermal Management Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/823?r=897#message-897"/>
+    <id>http://opendesignengine.net/boards/45/topics/823?r=897#message-897</id>
+    <updated>2014-10-07T20:57:14+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Thermal management can be tricky (some might even call it a dark art, at lease from the design and simulation side of things), and I am not aware of any particular expertise in this field at Mach 30.  Engineering expertise rating = 0?&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Thermal Protection Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/824?r=896#message-896"/>
+    <id>http://opendesignengine.net/boards/45/topics/824?r=896#message-896</id>
+    <updated>2014-10-07T20:53:18+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Extending on my previous comment, I will just call engineering expertise a 0-1 (Jason D. has some background in this, but I am not sure if he will be working on hardware projects given his interest in CodeCAD).&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Propulsion Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/816?r=895#message-895"/>
+    <id>http://opendesignengine.net/boards/45/topics/816?r=895#message-895</id>
+    <updated>2014-10-07T20:50:17+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;
+	&lt;li&gt;Engineering expertise: 4 - we have a number of folks (Greg, Aaron, myself) with some interest/background in propulsion plus enough structures folks (Matt, Jeremy, etc) that I think we could do a nice long series of test stands, small propulsions systems, etc&lt;/li&gt;
+		&lt;li&gt;Fabrication: 4 - same basic details as above, and I am hopeful that electronics for test hardware could mostly be surface mount so that most of us can do any required soldering&lt;/li&gt;
+		&lt;li&gt;Mission: 5 - propulsion is a key technology to any launch system, expanding our own (and other's) capabilities with respect to propulsion is an essential step in becoming a spacefaring civilization (besides, tackling propulsion early on is a long standing tradition in space development firms)&lt;/li&gt;
+		&lt;li&gt;Income: ? - I really want to believe there are educational opportunities for kits from test stands and other propulsion related projects, but I am not experienced in the kind of market analysis required to make a good estimate &lt;/li&gt;
+		&lt;li&gt;Admin: 3 - so, it looks like we can clearly steer away from ITAR just by limiting the scale and application of our projects to model rockets (including high powered ones), but insurance still looks tricky...&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Structure and Mechanisms Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/821?r=894#message-894"/>
+    <id>http://opendesignengine.net/boards/45/topics/821?r=894#message-894</id>
+    <updated>2014-10-07T20:43:06+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Matt, these are great points.  And I think your scores sound in line with what I might give (I will think about it tonight and try to score it fresh tomorrow).  I am glad to see a system with higher scores (I have been looking at some of the other systems that are harder for us to work on right now).&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Trajectory (launch and reentry) Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/825?r=893#message-893"/>
+    <id>http://opendesignengine.net/boards/45/topics/825?r=893#message-893</id>
+    <updated>2014-10-07T20:38:51+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Yeah, it seems likely that export controls would put a significant limit on the nature of projects we could develop.  Even just doing simulations could run into trouble (some software related to trajectory design and analysis is export controlled).&lt;/p&gt;
+
+
+	&lt;p&gt;I am also not aware of much engineering expertise in the Mach 30 community related to this subsystem beyond Jason D - score = 1.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: export control stuff</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/852?r=892#message-892"/>
+    <id>http://opendesignengine.net/boards/45/topics/852?r=892#message-892</id>
+    <updated>2014-10-07T20:34:58+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Can you post links to where we can acquire copies so I can discuss this with the board?&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Aerodynamics Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/822?r=891#message-891"/>
+    <id>http://opendesignengine.net/boards/45/topics/822?r=891#message-891</id>
+    <updated>2014-10-07T20:32:15+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We have actually seen some examples of DIY wind tunnels, so yes I would agree that one or more wind tunnel projects could fit in nicely with our current scale of projects.  I do not believe there are any special rocket wind tunnels, beyond just the eventual need for very high speed (read super and hyper sonic) tunnels.&lt;/p&gt;
+
+
+	&lt;p&gt;I think we have some of the expertise to do wind tunnels and possibly some CFD depending on how involved Jason D. gets.  So, I might got as high as a 3 for engineering expertise.  But, I would want to list out more potential projects to see of there is enough depth that is within our reach to make this a viable project area for a longer term roadmap.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Navigation, Guidance, and Control Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/817?r=890#message-890"/>
+    <id>http://opendesignengine.net/boards/45/topics/817?r=890#message-890</id>
+    <updated>2014-10-07T20:27:33+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Following the conversation from last week's #EngineerSpeak, here are some thoughts on engineering expertise.  GNC is a very controls and sensors heavy field.  I am not really sure where our volunteers stand in terms of expertise in controls, but if we have controls experts, I doubt we have more than one or two, so I am going to make a conservative estimate and call this a 1 for now, with the understanding that I would be happy to revise this up if we have several controls folks and I just didn't realize it.&lt;/p&gt;
+
+
+	&lt;p&gt;But, the potential for export control issues (as evidenced by the need to research where we would cross the line) probably puts this category out of the running for this round of development.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Electrical Power Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/820?r=889#message-889"/>
+    <id>http://opendesignengine.net/boards/45/topics/820?r=889#message-889</id>
+    <updated>2014-10-07T20:18:18+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Thanks, Matt.&lt;/p&gt;
+
+
+	&lt;p&gt;Per our discussion at the last #EngineerSpeak hangout, I am going to start with just commentary on engineering expertise.&lt;/p&gt;
+
+
+	&lt;p&gt;This is a field that will revolve around electrical engineering (batteries, solar cells, power conversion, power monitoring, etc), and my understanding is that we are pretty heavily weighted toward mechanical and systems (Aaron has a EE background iirc).  So, I would call this a 1-2 in terms of current engineering expertise.  If there are other EEs hiding in our active community, please speak up and I would be happy to revise my score.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/828?r=888#message-888"/>
+    <id>http://opendesignengine.net/boards/45/topics/828?r=888#message-888</id>
+    <updated>2014-10-07T20:07:50+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Yes, you did.  I just got side tracked with creating the issue and working with Aaron (he volunteered to do the heavy lifting for this) over the weekend.  It has since been created - &lt;a href="/projects/m30roadmap"&gt;Mach 30 Technical Roadmap&lt;/a&gt; - &lt;a href="/issues/269" class="issue status-1 priority-3"&gt;Support &lt;a href="http://opendesignengine.net/issues/269" class="issue status-1 priority-3" title="Add brief description to launch vehicle sub-systems to introduce them as discussion topics (New)"&gt;#269&lt;/a&gt;&lt;/a&gt;: Add brief description to launch vehicle sub-systems to introduce them as discussion topics - &lt;strong&gt;Needs estimate&lt;/strong&gt; (New).  Hopefully Aaron will have some time to help with this soon.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: v 1.0 Roadmap Evaluation of Communication and Data Handling Subsystem</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/818?r=887#message-887"/>
+    <id>http://opendesignengine.net/boards/45/topics/818?r=887#message-887</id>
+    <updated>2014-10-06T11:31:22+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Engineering Expertise - 1 - Aaron is our only core community member with enough experience in this area.&lt;br /&gt;Fabrication - 1 - Aaron is the only one with the right gear to build the radio hardware if surface mount parts are needed (and they almost certainly will). We can probably do antenna fabrication in most cases though.&lt;br /&gt;Mission - 5&lt;br /&gt;Income - ? - Not enough market research has been done yet.&lt;br /&gt;Admin - ? to 1 - Aaron seemed to have concerns around the active tracking systems he's worked with in the past.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/45/topics/828?r=886#message-886"/>
+    <id>http://opendesignengine.net/boards/45/topics/828?r=886#message-886</id>
+    <updated>2014-10-06T11:24:51+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Did I hear right that someone was going to add "Spaceflight for Dummies" examples to each of the subsystems to help those of us who are not spaceflight engineers? The only one I see examples for so far is the Communication and Data Handling Subsystem disucssion.&lt;/p&gt;    </content>
+  </entry>
+</feed>

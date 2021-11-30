@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Preliminary Design - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../groundsphere%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../../groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Navigation</a><a href="Preliminary_Design.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Ground-Sphere-CubeSat-Ground-Station"></a>
+<h3 >Ground Sphere CubeSat Ground Station<a href="Preliminary_Design.html#Ground-Sphere-CubeSat-Ground-Station" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="Wiki.html" class="wiki-page">Start Here</a></li>
+		<li><a href="Versions.html" class="wiki-page">Versions</a></li>
+	</ul>
+
+
+	<a name="User-Manuals"></a>
+<h4 >User Manuals<a href="Preliminary_Design.html#User-Manuals" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>End user manuals, including how to assemble from kit and operating instructions for predicting flyovers and receiving "space tweets".</p>
+
+
+	<ul>
+	<li><a href="Kit_Assembly_Instructions.html" class="wiki-page">Kit Assembly Instructions</a></li>
+		<li><a href="Software_Installation.html" class="wiki-page">Software Installation</a></li>
+		<li><a href="Operating_Manual.html" class="wiki-page">Operating Manual</a></li>
+		<li><a href="Safety_Procedures.html" class="wiki-page">Safety Procedures</a></li>
+	</ul>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="Preliminary_Design.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>Full OSHW project documentation - covers component acquisition and assembly, packaging of kits, and other project level documentation needed to replicate the Ground Sphere from source.</p>
+
+
+	<ul>
+	<li><a href="BoM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Software Source Code</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/SoftwareFirmware_Summary" class="wiki-page new">Software/Firmware Summary</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Errata" class="wiki-page new">Errata</a></li>
+	</ul>
+
+
+	<a name="Systems-Engineering-Process"></a>
+<h4 >Systems Engineering Process<a href="Preliminary_Design.html#Systems-Engineering-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>Full OSHW project design documentation - covers design from concept through final design.</p>
+
+
+	<ol>
+	<li><a href="Initial_Questions.html" class="wiki-page">Initial Questions</a></li>
+		<li><a href="Requirements_Document.html" class="wiki-page">Requirements Document</a></li>
+		<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="Budget.html" class="wiki-page">Budget</a></li>
+		<li><a href="Timeline.html" class="wiki-page">Timeline</a></li>
+		<li><a href="Preliminary_Design.html" class="wiki-page">Preliminary Design</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Detailed_Design" class="wiki-page new">Detailed Design</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Design_Review" class="wiki-page new">Design Review</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Procurement" class="wiki-page new">Procurement</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Manufacture" class="wiki-page new">Manufacture</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Integration" class="wiki-page new">Integration</a></li>
+		<li><a href="Testing.html" class="wiki-page">Testing</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Disposal" class="wiki-page new">Disposal</a></li>
+		<li><a href="Meeting_Minutes.html" class="wiki-page">Meeting Minutes/Notes</a></li>
+		<li><a href="Resources.html" class="wiki-page">Resources/Links</a></li>
+	</ol>
+
+<h3>Wiki</h3>
+
+<a href="../../groundsphere%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-237-watcher"></span>
+
+
+
+
+
+
+<a href="http://opendesignengine.net/projects/groundsphere/wiki/Preliminary_Design/history" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <a name="Ground-Sphere-Preliminary-Design-v01-OUTDATED"></a>
+<h1 >Ground Sphere Preliminary Design v0.1 (OUTDATED)<a href="Preliminary_Design.html#Ground-Sphere-Preliminary-Design-v01-OUTDATED" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Preliminary_Design.html#Ground-Sphere-Preliminary-Design-v01-OUTDATED">Ground Sphere Preliminary Design v0.1 (OUTDATED)</a><ul><li><ul><li><a href="Preliminary_Design.html#Introduction">Introduction</a></li><li><a href="Preliminary_Design.html#SkyCube-Radio-Details">SkyCube Radio Details</a></li><li><a href="Preliminary_Design.html#Hardware-Design-of-Ground-Sphere">Hardware Design of Ground Sphere</a></li><li><a href="Preliminary_Design.html#Software-Design-of-Ground-Sphere">Software Design of Ground Sphere</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h3 >Introduction<a href="Preliminary_Design.html#Introduction" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>This document covers the preliminary design decisions for the <strong>Ground Sphere</strong> ground station.  The document includes three sections: technical background on <strong>SkyCube's</strong> radio, hardware design of <strong>Ground Sphere</strong>, and software design of <strong>Ground Sphere</strong>.  The design is structured in parallel with the <a href="Requirements_Document.html" class="wiki-page">Requirements Document</a> to ensure all requirements are satisfied.</p>
+
+
+	<a name="SkyCube-Radio-Details"></a>
+<h3 >SkyCube Radio Details<a href="Preliminary_Design.html#SkyCube-Radio-Details" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>SkyCube</strong> uses a Colony 2 (CII) radio from <a href="http://www.astrodev.com/public_html2/" class="external">AstroDev</a>.  The specific radio is the Boeing variation as documented in the following PDF (<a href="http://www.astrodev.com/public_html2/downloads/datasheet/CIIUserManual.pdf" class="external">CII_Specification_08042010.pdf</a>).</p>
+
+
+	<p>The <strong>SkyCube</strong> radio operates at 915 MHz with a transmit power of 2 W.  It has an omni-directional antenna which adds negligible gain.</p>
+
+
+	<a name="Hardware-Design-of-Ground-Sphere"></a>
+<h3 >Hardware Design of Ground Sphere<a href="Preliminary_Design.html#Hardware-Design-of-Ground-Sphere" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>TR 1.1 Enable users to receive "space tweets" 
+	<ul>
+	<li>TR 1.1.2 Receive radio signals on 915 MHz (<a href="https://opendesignengine.net/news/50" class="external">link budget</a>)
+	<ul>
+	<li><a href="http://on6wg.pagesperso-orange.fr/Page%201.html" class="external">Antenna</a>
+	<ul>
+	<li>Dimensions (<a href="https://opendesignengine.net/news/46" class="external">source</a>)
+	<ul>
+	<li>Phasing line: 2.7745" of RG-62 90 ohm coax cable</li>
+		<li>Ground plane: 6.3" diameter disk of conductive rip stop fabric</li>
+		<li>Ground plane radial arms: 2.3925" of rigid material (need not be conductive)</li>
+		<li>Aerial length (circumference): 13.7075" of 12ga copper wire or better</li>
+		<li>Distance between bottom of aerials and ground plane: 1.6475" </li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li><a href="http://www.g0mrf.com/432LNA.htm" class="external">Preamp</a></li>
+		<li><a href="http://www.realtek.com.tw/products/productsView.aspx?Langid=1&#38;PFid=35&#38;Level=4&#38;Conn=3&#38;ProdID=257" class="external">RTL2832U SDR</a></li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>TR 1.2 Be easy to assemble from kit components
+	<ul>
+	<li>TR 1.2.1 Time to assemble
+	<ul>
+	<li>Ground station will be shipped as a kit</li>
+	</ul>
+	</li>
+		<li>TR 1.2.2 Tools for assembly
+	<ul>
+	<li>Preamp will ship already assembled, ground station structure will include all drill holes and all other component fabrications steps </li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>TR 1.3 Have low shipping costs for the packaged kit
+	<ul>
+	<li>&lt;insert max dimensions here?&gt;</li>
+	</ul>
+	</li>
+		<li>TR 1.4 Operate using a modern Windows PC
+	<ul>
+	<li>TR 1.4.3 Hardware must connect to PC using standard port(s)
+	<ul>
+	<li>The SDR connects to host computer through USB 2.0</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>TR 1.5 Hardware must be robust
+	<ul>
+	<li>All connectors will be designed to ensure long life (internally mounted, have adequate strain relief, etc)</li>
+	</ul>
+	</li>
+		<li>PR 2.1 Budget
+	<ul>
+	<li>PR 2.1.1 Unit cost
+	<ul>
+	<li>&lt;insert current materials cost here from BoM&gt;</li>
+	</ul></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Software-Design-of-Ground-Sphere"></a>
+<h3 >Software Design of Ground Sphere<a href="Preliminary_Design.html#Software-Design-of-Ground-Sphere" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>TR 1.1 Enable users to receive "space tweets" 
+	<ul>
+	<li>TR 1.1.1 Predict SkyCube flyover opportunities
+	<ul>
+	<li>Using <a href="http://gpredict.oz9aec.net" class="external">GPredict</a> for flyover prediction</li>
+	</ul>
+	</li>
+		<li>TR 1.1.2 Receive radio signals on 915 MHz
+	<ul>
+	<li>SeeDeR software (provided by Southern Stars) can tune SDR to 915 MHz</li>
+	</ul>
+	</li>
+		<li>TR 1.1.3 Decode "space tweet" message from SkyCube
+	<ul>
+	<li>SeeDeR software (provided by Southern Stars) can decode the BPSK-modulated, unencrypted AX.25 data packets sent at 9600 baud "space tweets" sent out by <strong>SkyCube</strong></li>
+	</ul>
+	</li>
+		<li>TR 1.1.4 Account for Doppler shift
+	<ul>
+	<li>SeeDeR software (provided by Southern Stars) will be updated to account for Doppler shift</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>TR 1.4 Operate using a modern Windows PC
+	<ul>
+	<li>TR 1.4.1 Software must run on Windows
+	<ul>
+	<li>GPredict runs on Windows 7</li>
+		<li>SDR drivers &lt;get link from Aaron&gt; run on Windows 7</li>
+		<li>SeeDeR runs on Windows 7</li>
+	</ul>
+	</li>
+		<li>TR 1.4.2 Software must be easy to install
+	<ul>
+	<li>GPredict includes a Windows installer</li>
+		<li>SDR drivers include a Windows installer</li>
+		<li>Southern Stars will provide a Windows installer for SeeDeR</li>
+	</ul></li>
+	</ul></li>
+	</ul>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/groundsphere/wiki/Preliminary_Design.html?version=11" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/groundsphere/wiki/Preliminary_Design.txt?version=11" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/Preliminary_Design">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

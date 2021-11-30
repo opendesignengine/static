@@ -1,0 +1,11 @@
+h1. General Technical Resources
+
+{{>toc}}
+
+h2. Alternate Wireless Communication
+
+* "Arduino + NRF24L01: Simple Bidirectional Wireless Communication":http://www.instructables.com/id/Arduino-NRF24L01-Simple-Bidirectional-Wireless-Com/#intro
+
+h2. Security
+
+* "Practical Internet of Things Security":https://www.packtpub.com/hardware-and-creative/practical-internet-things-security (in library on Google Drive)

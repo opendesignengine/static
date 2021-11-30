@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Far Horizons Project: News</title>
+  <link rel="self" href="http://opendesignengine.net/projects/far-horizons-project/news.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/far-horizons-project/news"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2012-06-26T20:45:17+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Mission Planning and Analysis Hangout</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/10"/>
+    <id>http://opendesignengine.net/news/10</id>
+    <updated>2012-06-26T20:45:17+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Check out the video of our hangout below.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;object width="600" height="400"&gt;
+  &lt;param name="movie" value="https://www.youtube.com/v/UNcIbMnTpR8?rel=1&amp;fs=1"&gt;&lt;/param&gt;
+  &lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;
+  &lt;param name="allowScriptAccess" value="always"&gt;&lt;/param&gt;
+  &lt;embed src="https://www.youtube.com/v/UNcIbMnTpR8?rel=1&amp;fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"&gt;&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Initial Design Review Hangout Video</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/8"/>
+    <id>http://opendesignengine.net/news/8</id>
+    <updated>2012-06-17T19:46:13+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We recorded the meeting using Google+ Hangouts On-Air.  Watch the video below for a step by step walk though of the HAB design.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;object width="600" height="400"&gt;
+  &lt;param name="movie" value="https://www.youtube.com/v/uDm4W5Pquyo?rel=1&amp;fs=1"&gt;&lt;/param&gt;
+  &lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;
+  &lt;param name="allowScriptAccess" value="always"&gt;&lt;/param&gt;
+  &lt;embed src="https://www.youtube.com/v/uDm4W5Pquyo?rel=1&amp;fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"&gt;&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Getting started</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/7"/>
+    <id>http://opendesignengine.net/news/7</id>
+    <updated>2012-06-15T15:08:36+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Watch the project wiki for &lt;a href="https://opendesignengine.net/projects/far-horizons-project/wiki/Meeting_Minutes_v1_0" class="external"&gt;meeting minutes&lt;/a&gt; throughout the day.&lt;/p&gt;    </content>
+  </entry>
+</feed>

@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Operating Manual</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Shepard-Test-Stand-Operating-Manual-v11"></a>
+<h1 >Shepard Test Stand Operating Manual v1.1<a href="Operating_Manual.html%3Fversion=2.html#Shepard-Test-Stand-Operating-Manual-v11" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Operating_Manual.html%3Fversion=2.html#Shepard-Test-Stand-Operating-Manual-v11">Shepard Test Stand Operating Manual v1.1</a><ul><li><a href="Operating_Manual.html%3Fversion=2.html#Hardware-Operation">Hardware Operation</a><ul><li><a href="Operating_Manual.html%3Fversion=2.html#Unpacking-After-Transport">Unpacking After Transport</a></li><li><a href="Operating_Manual.html%3Fversion=2.html#Test-Stand-Setup">Test Stand Setup</a></li><li><a href="Operating_Manual.html%3Fversion=2.html#Prepare-For-Test">Prepare For Test*</a></li><li><a href="Operating_Manual.html%3Fversion=2.html#Perform-Test-Fire-Motor-and-Take-Data">Perform Test (Fire Motor and Take Data)*</a></li><li><a href="Operating_Manual.html%3Fversion=2.html#Post-Test-Duties">Post Test Duties*</a></li><li><a href="Operating_Manual.html%3Fversion=2.html#Post-Operations-Duties-After-Firing-All-Motors">Post Operations Duties (After Firing All Motors)</a></li></ul>
+</li><li><a href="Operating_Manual.html%3Fversion=2.html#Software-Operation">Software Operation</a><ul><li><a href="Operating_Manual.html%3Fversion=2.html#Wiring-Arduino-Software">Wiring (Arduino) Software</a></li><li><a href="Operating_Manual.html%3Fversion=2.html#Processing-Desktop-Software">Processing (Desktop) Software</a></li><li><a href="Operating_Manual.html%3Fversion=2.html#Integrated-Operation">Integrated Operation</a></li></ul></li></ul></li></ul>
+
+
+	<p>This is a newer document based on <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Operating_Manual_v1_0" class="external">this one</a> , and you should refer to that original version if you want to see the revision history.</p>
+
+
+	<a name="Hardware-Operation"></a>
+<h2 >Hardware Operation<a href="Operating_Manual.html%3Fversion=2.html#Hardware-Operation" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Unpacking-After-Transport"></a>
+<h3 >Unpacking After Transport<a href="Operating_Manual.html%3Fversion=2.html#Unpacking-After-Transport" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Check shipping container(s) for:
+	<ol>
+	<li>Test stand</li>
+		<li>Concrete block</li>
+		<li>Box of accessories
+	<ol>
+	<li>Launch controller</li>
+		<li>D motor spacer ring</li>
+		<li>Motor mount adapters (A, B, and C to D/E size)</li>
+		<li>Thermocouple attachment tape (high temp)</li>
+	</ol>
+	</li>
+		<li>Computer and USB cable</li>
+		<li>Motors to test (with igniters and igniter plugs)</li>
+		<li>Fire extinguisher and maybe a bucket for water</li>
+	</ol></li>
+	</ol>
+
+
+	<a name="Test-Stand-Setup"></a>
+<h3 >Test Stand Setup<a href="Operating_Manual.html%3Fversion=2.html#Test-Stand-Setup" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Place concrete block in location where test stand will be operated</li>
+		<li>Set test stand on concrete block</li>
+		<li>Create the safety perimeter.
+	<ol>
+	<li>Delineate no stand zone for both proximity and positions
+	<ol>
+	<li>Use length of cord for the igniter (radius of operations)</li>
+		<li>Exclusion zones exist behind where exhaust escapes (30 degree cone), and in front on each side of the exhaust T (30 degree cone on each side)</li>
+	</ol>
+	</li>
+	</ol>
+	</li>
+		<li>Set up the management area for test.
+	<ol>
+	<li>Igniter
+	<ol>
+	<li>Clip the igniter to a part of the test stand and deploy the cable to its full length and place it where the test(s) will be run from</li>
+	</ol>
+	</li>
+		<li>Computer
+	<ol>
+	<li>Set up computer</li>
+		<li>Boot computer</li>
+		<li>Run USB cable from computer to test stand</li>
+		<li>Connect Arduino-based DAQ system to USB cable at test stand</li>
+		<li>Start the Test Stand App</li>
+		<li>Ensure DAQ system and Computer are both running and connected</li>
+	</ol></li>
+	</ol></li>
+	</ol>
+
+
+	<a name="Prepare-For-Test"></a>
+<h3 >Prepare For Test*<a href="Operating_Manual.html%3Fversion=2.html#Prepare-For-Test" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Check the following areas of the test stand for fatigue damage and good fit.
+	<ol>
+	<li>Motor mount</li>
+		<li>Zip ties holding motor mount</li>
+		<li>Linear guide rail system</li>
+	</ol>
+	</li>
+		<li>Clear any debris from linear guide rail system and ejection charge exhaust ports</li>
+		<li>Test sensors
+	<ol>
+	<li>Push on thrust sensor and confirm current value slider responds</li>
+		<li>Put fingers around thermocouple(s) (after ensuring it is not hot) and confirm plot responds</li>
+	</ol>
+	</li>
+		<li>Install motor in test stand
+	<ol>
+	<li>A-C Motors
+	<ol>
+	<li>Attach thermocouple(s)</li>
+		<li>Insert igniter into motor and cap with igniter plug, making sure to space leads</li>
+		<li>Install the motor in an adapter</li>
+		<li>Insert D spacer ring into the motor mount</li>
+		<li>Insert the motor assembly into the motor mount so a notch from the adapter lines up with the clip on the motor mount so it clicks into place</li>
+	</ol>
+	</li>
+		<li>D Motors
+	<ol>
+	<li>Attach thermocouple(s)</li>
+		<li>Insert igniter into motor and cap with igniter plug, making sure to space leads</li>
+		<li>Insert D spacer ring into the motor mount</li>
+		<li>Insert the motor into the motor mount, pushing it all the way into the the motor mount, note the clip should close</li>
+	</ol>
+	</li>
+		<li>E Motors
+	<ol>
+	<li>Attach thermocouple(s)</li>
+		<li>Insert igniter into motor and cap with igniter plug, making sure to space leads</li>
+		<li>Insert the motor into the motor mount, pushing it all the way into the the motor mount, note the clip should close</li>
+	</ol>
+	</li>
+	</ol>
+	</li>
+		<li>Double check that the range is actually clear</li>
+		<li>Set up igniter
+	<ol>
+	<li>Make sure the firing pin is not in place</li>
+		<li>Connect alligator clips from Launch Controller to the igniter (one to each lead)
+	<ol>
+	<li>At this point the range is hot (ready to fire)</li>
+	</ol></li>
+	</ol></li>
+	</ol>
+
+
+	<a name="Perform-Test-Fire-Motor-and-Take-Data"></a>
+<h3 >Perform Test (Fire Motor and Take Data)*<a href="Operating_Manual.html%3Fversion=2.html#Perform-Test-Fire-Motor-and-Take-Data" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Hit button to <strong>Enable Recording</strong></li>
+		<li>Insert firing pin into Launch Controller</li>
+		<li>Check for continuity by pressing on firing pin (light will turn on)</li>
+		<li>Count down</li>
+		<li>Press ignition button (may have to hold it down for a second)</li>
+		<li>At the end of the firing, remove the firing pin from the Launch Controller</li>
+	</ol>
+
+
+	<a name="Post-Test-Duties"></a>
+<h3 >Post Test Duties*<a href="Operating_Manual.html%3Fversion=2.html#Post-Test-Duties" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Remove motor and prepare for disposal
+	<ol>
+	<li>Wait several minutes before removing the motor to allow it to cool down to a safe handling temperature</li>
+		<li>Remember to also remove the D space ring if the motor was D size or smaller</li>
+		<li>Remember to find the igniter (it should still be attached to the alligator clips) so it can be properly disposed</li>
+		<li>For C size motors and smaller, be sure to recover the motor adapter</li>
+		<li>Store spent motors away from flammable material during future tests</li>
+	</ol>
+	</li>
+		<li>Check to make sure that data was autosaved to the "data" directory.</li>
+		<li>Click the <strong>Clear</strong> button on the software once you have finished viewing the data.</li>
+	</ol>
+
+
+	<a name="Post-Operations-Duties-After-Firing-All-Motors"></a>
+<h3 >Post Operations Duties (After Firing All Motors)<a href="Operating_Manual.html%3Fversion=2.html#Post-Operations-Duties-After-Firing-All-Motors" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Dispose of motor(s), being careful to observe all state, federal, and local guidelines.
+	<ol>
+	<li>Rinse motors in water to ensure they are completely cooled before disposal</li>
+		<li>Throw the motors away according the manufacturer’s recommendation</li>
+	</ol>
+	</li>
+		<li>Pack up the accessories</li>
+		<li>Pack up the computer</li>
+		<li>Pack up the test stand and block</li>
+	</ol>
+
+
+	<p><strong>Note:</strong> If performing multiple tests during the same setup, repeat the steps with an asterisk (*) for each test.</p>
+
+
+	<a name="Software-Operation"></a>
+<h2 >Software Operation<a href="Operating_Manual.html%3Fversion=2.html#Software-Operation" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>For instructions on how to download and install the Shepard data acquisition (DAQ) software, please see the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Software_Source_Code_v1_0" class="external">Software Source Code</a> section of the wiki.</p>
+
+
+	<a name="Wiring-Arduino-Software"></a>
+<h3 >Wiring (Arduino) Software<a href="Operating_Manual.html%3Fversion=2.html#Wiring-Arduino-Software" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Inside the <code>ShepardDCS_Arduino</code> directory within the repository (/trunk/ShepardDCS/ShepardDCS_Arduino), you will find the <code>ShepardDCS_Arduino.ino</code> file. Before this file can be opened and run using the Arduino IDE, there is a third-party library from Adafruit that must be installed for the MAX31855 thermocouple amplifier breakout board. The library should already be included in the <code>trunk/libraries</code> directory, but if it's not, the library can be downloaded from Github <a href="https://github.com/adafruit/MAX6675-library" class="external">here</a> , and instructions to install the library are included under the "Arduino Library" section <a href="http://learn.adafruit.com/thermocouple/using-a-thermocouple" class="external">here</a> . To make sure that the library gets inluded, set the <code>shepard-ts/trunk</code> directory to be the <strong>Sketchbook location</strong> under <strong>File -> Preferences</strong> in the Arduino IDE.</p>
+
+
+	<a name="Processing-Desktop-Software"></a>
+<h3 >Processing (Desktop) Software<a href="Operating_Manual.html%3Fversion=2.html#Processing-Desktop-Software" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>When you've downloaded the source code via subversion, you descend through the directory tree until you end up in the <code>ShepardDCS</code> directory (see <strong>Listing 1</strong>). Inside this directory you will find a directory holding the Arduino code, and one holding the Processing (PC-side) code. There is a file named <code>ShepardDCS_Arduino.ino</code> inside the <code>ShepardDCS_Arduino</code> directory. You open this file with the Arduino IDE and compile/upload it to the Arduino Uno. The <code>ShepardDCS_Processing</code> directory includes the <code>ShepardDCS_Processing.pde</code> file, which you open and run with the Processing IDE on your PC to display the data dashboard for Shepard.</p>
+
+
+	<p><strong>Listing 1</strong><br /><pre>
+├── branches
+├── tags
+└── trunk
+    ├── libraries
+    │   └── controlP5
+    └── ShepardDCS
+        ├── ShepardDCS_Arduino
+        └── ShepardDCS_Processing
+</pre></p>
+
+
+	<p>You'll notice that there is a <code>libraries</code> directory at the same level as the <code>ShepardDCS</code> directory. <code>libraries</code> contains the ControlP5 library which provides the graphical elements for the ShepardDCS user interface. In order for this library to be found, you will either need to move the <code>libraries</code> directory into the already configured Processing sketchbook directory, or you'll have to reconfigure the sketchbook directory to point to the <code>trunk</code> directory. This option is found under File -> Preferences in the Processing IDE (<strong>Figure 1</strong> and <strong>Figure 2</strong>).</p>
+
+
+	<p><strong>Figure 1</strong><br /><img src="http://opendesignengine.net/projects/shepard-ts/wiki/Preferences_Location.png" alt="" /></p>
+
+
+	<p><strong>Figure 2</strong><br /><img src="http://opendesignengine.net/projects/shepard-ts/wiki/Arduino_Processing_Preferences.png" alt="" /></p>
+
+
+	<p>Once you're connected the PC to the Arduino Uno with a USB cable, open and run the <code>ShepardDCS_Arduino.ino</code> file from the Arduino IDE first. This will load and start the program on the Uno. When the Arduino program is running and ready to transmit data, the TX LED for the serial port will be lighted continuously.</p>
+
+
+	<p>Start the Processing application and the TX LED on the Arduino Uno should start to flash. If you have the sensors attached, you should be able to apply pressure to the thrust sensor to change the "CUR" (current thrust value) slide on the user interface as a simple test. To check temperature monitoring, you can hold the thermocouple between your thumb and index finger to see if the "CUR" value for the temperature rises.</p>
+
+
+	<p>There are several components of the user interface, and those are numbered for reference in <strong>Figure 3</strong>.</p>
+
+
+	<p><strong>Figure 3</strong><br /><img src="http://opendesignengine.net/projects/shepard-ts/wiki/Shepard_DCS_Overview.png" alt="" /></p>
+
+
+	<ol>
+	<li>The <strong>SERIAL PORT</strong> dropdown box allows you to set the serial port that the Arduino is attached to. This dropdown box will be populated with the serial ports (including the Arduino) that are attached to your system. For Windows it will be a serial port designation such as "COM5", and for Linux it will be something like <code>/dev/ttyACM0</code> . Linux users may have to add themselves to a group that has access to serial ports such as <code>dialout</code>.</li>
+		<li>The text that you enter in the <strong>MOTOR MODEL</strong> field will be prepended to the output file name. The rest of the file name will consist of a time stamp. For instance, if you enter "B1-6" in the <strong>MOTOR MODEL</strong> text field and then record data at 8:42:38 AM, you will end up with a file name of <strong>B1-6_8_42_32.csv</strong>. If you leave this field blank the file name will start with an underscore followed by the time stamp (<strong>_8_42_32.csv</strong>).</li>
+		<li>The <strong>ENABLE RECORDING</strong> button allows you to control whether or not the application keeps track of the thrust and temperature on the chart, and the max/peak and average sliders. This button also controls whether or not the data is written to a CSV file. When this button is enabled (clicked so that it becomes highlighted) and the thrust value goes above a value of 0.0, data will be collected. Once the <strong>ENABLE RECORDING</strong> button is disabled (clicked so that it is no longer highlighted) and the thrust value has been above 0.0, the data will be written to a file.</li>
+		<li>The <strong>CLEAR</strong> button clears the charts, averages, and maxes to prepare for the next run. Do not click this until you are finished looking at the data from the previous test.</li>
+		<li>The <strong>Thrust</strong> chart has Newtons (N) on the Y-axis, and time on the X-axis. The X-axis will auto scale as the time (seconds) increases, and new values feed from the right side to the left side of the chart.</li>
+		<li>The <strong>CUR</strong> (current value) sliders provide a graphical and numeric representation of either the thrust (top slider), or the temperature (bottom slider). The slider will fill from the bottom to the top as the value increases.</li>
+		<li>The <strong>PEAK</strong> or <strong>MAX</strong> value sliders show the same thing, but different terminology is used for the thrust (<strong>PEAK</strong>) than for the temperature (<strong>MAX</strong>). Both of these sliders show the highest value that is reached during a test run. This is either the peak thrust of the motor, or the highest temperature that was seen on the motor casing.</li>
+		<li>The <strong>AVG</strong> (average) sliders keep track of a running average of the values reported by the thrust and temperature sensors. This average is influenced by how long you leave the <strong>ENABLE RECORDING</strong> button enabled (clicked so that it is highlighted), so it's best to stop the recording soon after the motor has exhausted its fuel and ejected the parachute charge.</li>
+		<li>The <strong>Temperature</strong> chart works in the same way as the <strong>Thrust</strong> chart above. The Y-axis is in degrees Celsius (C), and the X-axis is again in seconds. The X-axis auto-scales as time increases, and new values feed from the right side of the chart to the left.</li>
+	</ol>
+
+
+	<p>For a normal test run, you would follow all of the steps shown in "Hardware Operation" above. Two software related items that are called out is clicking the <strong>Enable Recording</strong> button and clicking the <strong>Clear</strong> button. If the <strong>Enable Recording</strong> button is not clicked when you preform a test run, you will only see the current value slider change, and no data will be recorded. On the other hand, you do not want the <strong>Enable Recording</strong> button to be clicked/enabled when you're testing sensors or you may end up with a false trigger and useless data. Keep the <strong>Enable Recording</strong> button toggled to disabled until you're ready to perform a test fire. Failure to click the <strong>Clear</strong> button before doing another test run will cause the new data to be combined with the old data, causing tandem curves on the charts, and incorrect averages and maxes.</p>
+
+
+	<p>The test stand's data is stored in CSV (comma delimited) format, so you can copy the files to any computer to perform an analysis. Applications like Microsoft Office and Libre Office will allow you to create line charts and do much more with the data.</p>
+
+
+	<a name="Integrated-Operation"></a>
+<h3 >Integrated Operation<a href="Operating_Manual.html%3Fversion=2.html#Integrated-Operation" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Once the third-party library is installed, you should be able to compile and upload the Arduino program. You can then close the Arduino IDE, restart the Arduino Uno, and launch the Processing app to start collecting the data.</p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Shepard Test Stand: Issues</title>
+  <link href="http://opendesignengine.net/projects/shepard-ts/issues.atom?set_filter=1&amp;amp;sort=id&amp;amp;tracker_id=2" rel="self"/>
+  <link href="http://opendesignengine.net/projects/shepard-ts/issues?set_filter=1&amp;amp;sort=id&amp;amp;tracker_id=2" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-12-10T10:34:42+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Feature #234 (New): Arduino - Move Timestamp Zero Control to Arduino Instead of Client</title>
+    <link href="http://opendesignengine.net/issues/234" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/234</id>
+    <updated>2013-12-10T10:34:42+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Look at the conversation starting at 12-05-13 for details on this feature request.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://opendesignengine.net/boards/4/topics/387"&gt;https://opendesignengine.net/boards/4/topics/387&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;The summary is that currently, the client decides when to set the 0 point for the time stamp (essentially starting the timer). The current thought is that this should be done on the Arduino's side to keep the timestamp control as close to the data source as possible. There may be a performance trade-off for adding this overhead to the Arduino though.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #176 (New): Add Compulsory Version Matching Between Arduino and Java App</title>
+    <link href="http://opendesignengine.net/issues/176" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/176</id>
+    <updated>2013-09-18T10:58:51+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Version matching between the Arduino code and the Java UI is going to be important. In most cases they'll need to be lock-stepped to ensure proper operation.&lt;/p&gt;
+
+
+	&lt;p&gt;I think it would be ideal if we could embed the compiled Arduino code with the Java UI, have the UI check the software version on the Arduino, and then upload the embedded code if the Arduino is out of date. This would make software version matching completely transparent to the user, and would take us another step closer to passing the "Grandma Test" with Shepard.&lt;/p&gt;
+
+
+	&lt;p&gt;A trick for getting at the compiled Arduino code:&lt;br /&gt;&lt;a class="external" href="http://stackoverflow.com/questions/8189306/command-line-arduino-compiling-and-downloading"&gt;http://stackoverflow.com/questions/8189306/command-line-arduino-compiling-and-downloading&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #173 (New): Add a "wizard" mode for the Shepard GUI</title>
+    <link href="http://opendesignengine.net/issues/173" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/173</id>
+    <updated>2013-09-12T22:20:03+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+The current GUI is set up in more of an "expert" format, where all of the options for controlling the hardware and GUI are immediately available.  It would be good for many situations though to have the control options simplified into a guided, step-by-step format.  The steps would be:
+	&lt;ol&gt;
+	&lt;li&gt;Connect&lt;/li&gt;
+		&lt;li&gt;Calibrate&lt;/li&gt;
+		&lt;li&gt;Set Test Notations&lt;/li&gt;
+		&lt;li&gt;Record&lt;/li&gt;
+		&lt;li&gt;Stop Recording&lt;/li&gt;
+		&lt;li&gt;Clear&lt;br /&gt;After the last step, this test "wizard" would put the user back at step 3 for another test.&lt;/li&gt;
+	&lt;/ol&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #154 (New): Return 0.0 For Temperature if IR Sensor is Not Connected</title>
+    <link href="http://opendesignengine.net/issues/154" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/154</id>
+    <updated>2013-07-30T22:17:02+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Currently the Arduino will hang if it's can't address the MLX90614 IR temperature sensor. Most of the time this is what you want since you want to make sure you're getting good temperature data. However, there are cases where you may want to run the test stand without a temperature sensor, or have damaged a temperature sensor and need it to run with only thrust measurements. The easiest way to do this would be to just give the caller a value of 0.0. For use with Shepard the temperature should never be 0.0 degrees C, so the user will be able to easily tell that they need to make sure the MLX sensor is connected if they want temperature measurements.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #153 (In Progress): Switch to 5 Volt Version of MLX90614 IR Sensor</title>
+    <link href="http://opendesignengine.net/issues/153" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/153</id>
+    <updated>2013-07-30T10:35:08+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;There are both 3.3 volt and 5 volt versions of the MLX non-contact IR sensor we're using. We currently have the 3.3 volt version for Shepard v1.1. We need to switch to the 5 volt version so that it and the load cell can be on a common voltage.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #147 (New): Add Mach 30 Branding To Software Interface</title>
+    <link href="http://opendesignengine.net/issues/147" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/147</id>
+    <updated>2013-07-14T13:01:34+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Version 1.1 of the ShepardDCS software says "Shepard Test Stand", but should also include something that shows the Mach 30 brand.&lt;/p&gt;    </content>
+  </entry>
+</feed>

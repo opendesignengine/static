@@ -1,0 +1,738 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mathematics Tool Kit - Experimenting with IPython - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="6BofmwnlGqRkkG4J2XmPSnANvUqYqK/JFDSmhU8vN7Q="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/mtk.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/mtk.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Mathematics Tool Kit</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/mtk.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/mtk/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/mtk/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/mtk/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/mtk.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/mtk/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/mtk/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/mtk/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/mtk/boards.html">Forums</a> » <a href="../../../projects/mtk/boards/49.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-949-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Experimenting with IPython</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-03-15.html" title="03/15/2015 02:04 pm">over 7 years</a> ago</span></p>
+<div class="wiki">
+<p>So, a couple of weeks ago Jeremy posted a link on G+ that talked about <a href="https://jakevdp.github.io/blog/2015/02/24/optimizing-python-with-numpy-and-numba/" class="external">optimizing Python code</a>.  The article itself was interesting, but what really drew my eye was the way in which the page wove discussion with Python source code and results of running the Python code.  It was strikingly similar to what I am trying to achieve with MTK.  So, I did some digging, and found out the blog post was written in <a href="http://ipython.org/" class="external">IPython</a>.  IPython is another Python based math analysis package (similar to Sage).  I get the feeling it includes fewer libraries than Sage, but unlike Sage IPython runs on Windows (as well as Mac and Linux).  And clearly, it is already capable of generating clean and professionally formatted documents mixing math and discussion.  So, before we get locked into a particular architecture, I am going to take some time to evaluate IPython in case it would make a better foundation for MTK than Sage.  Here are a couple of quick notes about this evaluation before I get started.</p>
+
+
+	<ul>
+	<li>The effort to deliver an initial cut of MTK using Sage was well spent even if we switch to another math package under the hood
+	<ul>
+	<li>We worked fast and efficiently to get a first draft of MTK to evaluate (think agile development)</li>
+		<li>That first cut of MTK generated far better requirements in the form of example documents and helped refine what MTK should be when it is done (more on that in another post)</li>
+	</ul>
+	</li>
+		<li>On first blanche, IPython is not exactly what we want for the totality of MTK (though it may be far closer in some areas than Sage)</li>
+	</ul>
+
+
+	<p>I will use this thread to capture some notes and running commentary about my evaluation of MTK.  I plan to work in both Mac and Windows to get a sense of just how well the Windows port works.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (23)</h3>
+
+  <div class="message reply" id="message-950">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=950.html#message-950">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-03-15.html" title="03/15/2015 02:11 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Some notes on setting up IPython on Mac.</p>
+
+
+	<ol>
+	<li>Install pip if you don't already have it (forgot to capture link to this step)</li>
+		<li><a href="http://ipython.org/install.html" class="external">Install IPython with Notebook support</a> (notebooks are the web based UI in IPython that provides an interface for working in text and math)<br />pip install "ipython[notebook]" </li>
+		<li><a href="http://johnmacfarlane.net/pandoc/installing.html" class="external">Install Pandoc</a> (Pandoc provides the PDF export capability for the IPython notebook)</li>
+		<li>Install Pint in IPython (<a href="http://pint.readthedocs.org/en/0.6/getting.html" class="external">Pint Installation using pip</a> and <a href="http://stackoverflow.com/questions/8663046/how-to-install-a-python-package-from-within-ipython" class="external">Using pip in IPython</a>) - be sure to do this inside an IPython session in the terminal<br />!pip install pint</li>
+	</ol>
+
+
+	<p>Other general notes:</p>
+
+
+	<ul>
+	<li><a href="http://stackoverflow.com/questions/21539928/unicode-output-in-ipython-notebook" class="external">Using unicode in Python strings in IPython</a></li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-951">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=951.html#message-951">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-03-19.html" title="03/19/2015 08:27 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><a name="Getting-IPython-set-up-on-Win7"></a>
+<h2 >Getting IPython set up on Win7.<a href="949%3Fr=1037.html#Getting-IPython-set-up-on-Win7" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Install pip if you need it.<br />So, I had Python 3 and pip installed on my Win7 computer at one point, but some later install broke the path.  So, the first thing I had to do was restore the path for Python 3.4.1 by placing "C:\Python34;C:\Python34\scripts" in my system path (note, I had to put it in before other Python installs).</li>
+		<li>Install IPython with Notebook support<br />pip3 install "ipython[notebook]" </li>
+		<li>Install Pandoc<br />Downloaded and ran pandoc-1.13.2-windows.msi.  Note, I already had <a href="http://miktex.org/" class="external">MiKTeX</a> installed due to previous LaTeX installation</li>
+		<li>Install Pint<br />ipython<br />In [1]: !pip3 install pint</li>
+	</ol>
+
+
+	<a name="Smoke-Testing"></a>
+<h2 >Smoke Testing<a href="949%3Fr=1037.html#Smoke-Testing" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Testing Pint, run the following commands before exiting ipython from Pint installation<br />In [2]: from pint import UnitRegistry<br />In [3]: ureg = UnitRegistry()<br />In [4]: distance = 24.0 * ureg.meter<br />In [5]: print(distance)<br />24.0 meter</li>
+		<li>Testing PDF export from notebook
+	<ol>
+	<li>Save <a href="http://jakevdp.github.io/downloads/notebooks/NUFFT.ipynb" class="external">sample notebook</a> to a scratch directory<br />c:\test\NUFFT.ipynb</li>
+		<li>Open a command prompt and change to the scratch directory<br />cd \test\</li>
+		<li>Launch IPython Notebook server<br />ipython notebook</li>
+		<li>Select the NUFFT.ipynb in the web browser when it opens, dismissing the dialog about the file being converted to the current format</li>
+		<li>Select File>Download As>PDF<br />I got an error at this step: "nbconvert failed: you need to have pywin32 installed for this to work"</li>
+	</ol></li>
+	</ol>
+
+
+	<a name="Correcting-Installation"></a>
+<h2 >Correcting Installation<a href="949%3Fr=1037.html#Correcting-Installation" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Clean up steps
+	<ol>
+	<li>Close export notebook tab</li>
+		<li>Save notebook</li>
+		<li>Exit IPython tabs</li>
+		<li>Exit IPython Notebook server</li>
+	</ol>
+	</li>
+		<li>Install pywin32
+	<ol>
+	<li>Download pywin32 for correct version of Python (3.4.x) and Windows (x32 to match Python version)</li>
+		<li>Run pywin32 installer</li>
+	</ol>
+	</li>
+		<li>Repeat Notebook export test (after closing the command prompt and opening a new one), received an error that Pandoc was not installed
+	<ol>
+	<li>Repeated clean up steps</li>
+		<li>Unistalled Pandoc</li>
+		<li>Installed Pandoc</li>
+		<li>Repeated notebook test again, same error</li>
+		<li><a href="http://stackoverflow.com/questions/23620321/convert-ipython-2-0-notebook-to-html-from-the-file-menu" class="external">Fix for cannot find Pandoc error on Windows</a></li>
+		<li>Repeated notebook test again, took a really long time to run (as of the last save the export was still running, looked like it might be stalled)</li>
+		<li>Rebooted, reran test again, this time it worked (after miktek asked to install several packages...  will need to capture what packages IPython is using if we proceed to use it)</li>
+	</ol></li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-952">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=952.html#message-952">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-03-26.html" title="03/26/2015 10:17 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Started working on implementing the test cases tonight.  I started with the <a href="../../../dmsf_files/476%3Fdownload=" class="external">first test case</a>.  I ran into a missing feature right off the bat: including values computed in code inside of text commentary (see the end of Section 1 of the test file).  The good news is it looks like there is a package that already adds in this functionality, <a href="https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/" class="external">IPython Notebook Extensions</a>.</p>
+
+
+	<a name="Attempting-to-Install-IPython-Notebook-Extensions"></a>
+<h2 >Attempting to Install IPython Notebook Extensions<a href="949%3Fr=1037.html#Attempting-to-Install-IPython-Notebook-Extensions" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Referencing <a href="https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Home_3x#general-installation-instruction" class="external">installation instructions for IPython 3</a>.</p>
+
+
+	<ol>
+	<li>start IPython CLI<br />ipython</li>
+		<li>In IPython, run <a href="https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Home_3x#1install-the-notebook-extension-repository" class="external">Step 1 instructions</a><br />In [1]: import IPython.html.nbextensions as nb<br />In [2]: ext= 'https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip'<br />In [3]: nb.install_nbextension(ext)</li>
+		<li>Exit IPython</li>
+	</ol>
+
+
+	<a name="Testing-Notebook-Extensions"></a>
+<h2 >Testing Notebook Extensions<a href="949%3Fr=1037.html#Testing-Notebook-Extensions" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Referencing <a href="https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Home_3x#2-loading-an-extension" class="external">Loading an Extension</a></p>
+
+
+	<ol>
+	<li>Launch IPython notebook<br />ipython notebook</li>
+		<li>Add a code block to activate the markdown extension<br />%%javascript<br />IPython.load_extensions('IPython-notebook-extensions-master/usability/python-markdown');</li>
+		<li>Include output from Python in a markdown cell
+{{x1}} + {{x2}} = {{y}}</li>
+	</ol>
+
+
+	<p>Initial results did not render the values.  Upon inspection, I cannot find the installed files.  So, need to investigate the installation process.  Also, note that the PDF export needs to be <a href="https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/python-markdown_v3#installation" class="external">updated to support this feature</a> (see the last paragraph of installation process).</p>
+
+
+	<p>Found the installation files under C:\Python34\share\jupyter\nbextensions\.  Looking at <a href="http://nbviewer.ipython.org/gist/juhasch/d8f73f5fd32a66ce7444" class="external">this page</a> for help trying to get the extension to load.  Getting an error in the JS console that looks like this:</p>
+
+
+	<p>Failed to load extension(s): ["nbextensions/IPython-notebook-extensions-master/usability/python-markdown"]</p>
+
+
+	<p>I tried copying the install files to my profile directory, but no luck there.  Will have to try more later...</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-953">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=953.html#message-953">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-03-26.html" title="03/26/2015 10:53 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>And, figured out the Notebook Extensions issue.  There were 4 problems I had to resolve.</p>
+
+
+	<ol>
+	<li>The installation instructions put the extension files in the wrong place.  I had to copy the files manually to my IPython profile.  Given my other issues, I elected to get the files from the zip download of the <a href="https://github.com/ipython-contrib/IPython-notebook-extensions/tree/3.x" class="external">IPython 3 branch</a>.<br />C:\Users\&lt;username&gt;\.ipython\nbextensions\IPython-notebook-extensions-master\</li>
+		<li>The include path was wrong for the python-markdown extension<br />%%javascript<br />IPython.load_extensions('IPython-notebook-extensions-master/usability/python-markdown/main');</li>
+		<li>I had to trust the notebook (only trusted notebooks would render the desired output)<br />File>Trust in the IPython UI</li>
+		<li>I had to remember to run the markdown cell, not the code cell above it.  Contrary to a comment I saw somewhere, the values do refresh even when the markdown is not dirty.</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1003">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1003.html#message-1003">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-25.html" title="07/25/2015 09:45 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>We had discussed an OS to use as our basis for working on iPython, but I don't think that was ever quite resolved. I propose we go with Ubuntu 14.04. I also propose that we stick with the latest version of Python on there, which is 3.4. What is everyone's thoughts on that?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1004">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1004.html#message-1004">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-25.html" title="07/25/2015 09:48 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ubuntu 14.04 is what I would suggest as well. The Python version is most often dictated by what version is supported by the libraries we need to use. I would check into Pint, Minted, IPython, etc to see what they need.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1005">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1005.html#message-1005">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-25.html" title="07/25/2015 10:35 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy, I was browsing through my many and varied notes above and IPython itself definitely runs in Python 3.  It looks like Pint works from my early tests. And I don't think we need to worry about Minted (that works with Python 3 and is mostly a hack for rendering code nicely in plain LaTeX). I think the bigger question is do all of the core math/science libraries run in Python 3 now. I get the feeling they do, but I would feel better seeing it in writing.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1006">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1006.html#message-1006">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-25.html" title="07/25/2015 10:48 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>One more thing, here is an <a href="http://bikulov.org/blog/2014/05/14/install-up-to-date-scientific-environment-in-ubuntu-14-dot-04-with-python-3-dot-4/" class="external">interesting post about setting up IPython</a>.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1007">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1007.html#message-1007">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-25.html" title="07/25/2015 11:00 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>CadQuery is still Python 2.7.x, but we can decouple that somewhat by writing the output libraries in a 2.x/3.x compatible way.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1011">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1011.html#message-1011">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-27.html" title="07/27/2015 08:21 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p><cite>One more thing, here is an interesting post about setting up IPython.</cite></p>
+
+
+	<p>Do we want all of those scientific packages that are being installed in the post? I'm not sure if IPython requires them all, but even if it doesn't, it may not hurt for MTK to have all of those accessible out of the box.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1013">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1013.html#message-1013">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-27.html" title="07/27/2015 05:42 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Looking at the list of iPython extensions, some that we'll probably want to use:</p>
+
+
+	<ul>
+	<li><a href="https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering" class="external">Section numbering</a></li>
+		<li><a href="https://github.com/lebedov/idisplay" class="external">idisplay</a> - not entirely sure this one will be useful, but I get the feeling it might be due to the functionality in the examples being basically duplicate functionality</li>
+		<li><a href="https://github.com/jrjohansson/ipython-asymptote" class="external">IPython magic for Asymptote</a> - vector graphics language for diagrams</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1015">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1015.html#message-1015">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-27.html" title="07/27/2015 10:44 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>The instructions to get IPython working on Ubuntu 14.04 are missing some things. First, you have to install the <code>jsonschema</code> package as well. However, <code>jsonschema</code> seems to be invisible to IPython even after it's installed, so I'll need to figure that out.</p>
+
+
+	<p>Also, there is no <code>~/.ipython/profile\_[name]/ipython\_notebook\_config.py</code> file created by default with IPython anymore. There's a long conversation about it <a href="https://github.com/ipython/ipython/issues/2974" class="external">here</a> that ended with the comment that it will be fixed sometime in the future as part of another upgrade. I'm still investigating whether the <code>ipython_config.py</code> file will do all that we need.</p>
+
+
+	<p>Chris did something similar to <code>pip3 install "ipython[all]"</code> which worked for him, and I'm wondering if that would be a better starting point for the script than what's in the blog post above.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1025">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1025.html#message-1025">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-29.html" title="07/29/2015 07:41 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>That is very interesting news, Jeremy and Chris.  I was talking to Chris on the drive down about this, but I wonder if we should also investigate <a href="https://store.continuum.io/cshop/anaconda/" class="external">Anaconda</a>.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1030">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1030.html#message-1030">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-30.html" title="07/30/2015 10:11 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jason D. has much more experience with Anaconda than I do. He might be someone to ask about it.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1037">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1037.html#message-1037">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-01.html" title="08/01/2015 01:14 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, here's the 3 cells of my notebook right now:</p>
+
+
+	<p>code:<br />    "%%javascript\n",<br />    "IPython.load_extensions('IPython-notebook-extensions-3.x/usability/python-markdown/main')"</p>
+
+
+	<p>code:<br />    a = 2<br />    b = 5<br />    c = a * b</p>
+
+
+	<p>markdown:
+    {{a}} * {{b}} = {{c}}</p>
+
+
+	<p>and it shows 2 * 5 = 10 as expected.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1040">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1040.html#message-1040">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 02:45 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I just loaded IPython via Anaconda, and was able to get the python-markdown extension to load properly.<br /><pre>
+%%javascript
+IPython.load_extensions('IPython-notebook-extensions-3.x/usability/python-markdown/main');
+</pre><br />Gave me console output of...<br /><pre>
+"Loaded extension: IPython-notebook-extensions-3.x/usability/python-markdown/main" 
+</pre><br />So now here's where I'm at.<br /><pre>
+%%javascript
+IPython.load_extensions('IPython-notebook-extensions-3.x/usability/python-markdown/main');
+a = 2
+b = 5
+c = a * b
+{{a}} * {{b}} = {{c}}
+File "&lt;ipython-input-12-d8535d30375b&gt;", line 1
+    {{a}} * {{b}} = {{c}}
+                         ^
+SyntaxError: can't assign to operator
+</pre><br />Which would suggest to me that the markdown still isn't working. Thoughts?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1042">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1042.html#message-1042">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 02:50 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Just remembered you guys saying that a cell has to be set as markdown. It works now.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1043">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1043.html#message-1043">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 03:10 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Awesome!  I can't wait to restore my VM to a previous snapshot and give it a try. This plus Pint should get test case 3 basically working.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1045">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1045.html#message-1045">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 03:25 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>The install script includes Pint.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1046">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1046.html#message-1046">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 03:27 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Woot!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1064">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1064.html#message-1064">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 09:35 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have a good news/bad news sort of situation.</p>
+
+
+	<ul>
+	<li>Good News 1: I don't think we will need to mess with the formatting.  The first attachment shows that the document title and the section headers get report style formatting when exported to PDF.</li>
+		<li>Good News 2: I got a pretty close copy of the units example working locally (complete with short units formatting).</li>
+		<li>Bad News 1: Exporting a PDF of a NB with Python Markdown extension turned on does not render the embedded python values in the exported PDF (see second attachment).</li>
+		<li>Bad News 2: Once I got the Python Markdown loading into my NB, I had to manually trust it (I thought this was no longer an issue, but it looks like it is).</li>
+	</ul></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/574/This_Is_a_Format_Test.pdf" class="icon icon-attachment">This_Is_a_Format_Test.pdf</a>
+  <span class="size">(53.3 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/575/MTK_Basic_Test_03_-_Units_with_Pint.pdf" class="icon icon-attachment">MTK_Basic_Test_03_-_Units_with_Pint.pdf</a>
+  <span class="size">(77.6 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1075">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1075.html#message-1075">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-09-17.html" title="09/17/2015 03:02 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>With newer version of IPython the older form of <code>IPython.load_extensions</code> may not work. Instead, try the following.</p>
+
+
+<pre>
+require(['base/js/utils'],
+function(utils) {
+    utils.load_extensions('IPython-notebook-extensions-3.x/usability/python-markdown/main');
+});
+</pre></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1079">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="949%3Fr=1079.html#message-1079">RE: Experimenting with IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-10-15.html" title="10/15/2015 10:29 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here's an updated notebook with the new nbexternsion load method from above done correctly for the installer and Jupyter 4.0.4.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/577/MTK_Basic_Test_03_-_Units_with_Pint.ipynb" class="icon icon-attachment">MTK_Basic_Test_03_-_Units_with_Pint.ipynb</a>
+  <span class="size">(3.1 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+<p class="pagination"> (1-23/23)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/949.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

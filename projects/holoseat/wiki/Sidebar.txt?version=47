@@ -1,0 +1,78 @@
+h2. Holoseat
+
+* "LICENSE.txt":https://opendesignengine.net/projects/holoseat/repository/entry/trunk/LICENSE.txt
+* [[Wiki|Home]]
+* [[Versions|Versions]]
+** [[Versioning Scheme]]
+* +Agile Process Docs+
+_See *"News":https://opendesignengine.net/projects/holoseat/news* feed for weekly status reports_
+** *+PY 2018+*
+ "Sprints":https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml
+ "Alpha Test Program Prep User Stories":https://docs.google.com/spreadsheets/d/e/2PACX-1vRCZuJwnYll_TmSo-xetofzjQEt3Z7iNpluPzayWbqm2HfYWLipouTmh1opgfWy-x-3OGeM2Cf1irWh/pubhtml
+ "Run Alpha Test User Stories":https://docs.google.com/spreadsheets/d/e/2PACX-1vRlnq6BIMuJN-t3uKjflf_q9u3dXzvch0zEVz9O3335_fPiGyPcJxaRJ8IHz4ErCTIw7QrtPh5d_b50/pubhtml
+ "Finalize v1.0 Design User Stories":https://docs.google.com/spreadsheets/d/e/2PACX-1vRyBqnWyXACEEoG5dThw5szRkVltrdHNvFpyaPqF1sNXHrS_fG1w1g861yqTjjyoL1b9xP2xUtNsFz3/pubhtml
+ "Social Media Engagement User Stories":https://docs.google.com/spreadsheets/d/e/2PACX-1vT-DTjsHW_DTbR0hbIvS1Gl_9ItytNimWamw5wmEJ-8K44NpYyw0eQ4GM91nVI-ZRs2-BbQr-S9EA6Z/pubhtml
+ "Prep Initial Crowdsource Campaign User Stories":https://docs.google.com/spreadsheets/d/e/2PACX-1vTAt6mXMp1lwvffT9mNiNCXENC3wI47ofl_sATVjadmkgGnJroKbMCChzkZctD-wlNnsREUa0c0YqA-/pubhtml
+ "SyndCon 2018 Prep User Stories":https://docs.google.com/spreadsheets/d/e/2PACX-1vQWsqkwJTsFScDjahnQ6AhIpC5Qk-BMsfurWkfxy7SmtSotXtgSvEgCC6uB2d_Hch9PUc41MRd4cwm2/pubhtml
+** *+2017+*
+"Sprints":https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml
+"Development User Stories":https://docs.google.com/spreadsheets/d/1j_eza96PgV3tMuTy_fypZ4SuCLWP2jLKIEG1HgXg5LA/pubhtml
+"SyndCon User Stories":https://docs.google.com/spreadsheets/d/1Q1mnwN-Um-nn47k3GF9SzAEblP1sw7Lwtpq4snxCEXk/pubhtml
+"Biz User Stories":https://docs.google.com/spreadsheets/d/1GGMKfctxfgl5Ath5ld7SL3lvXx7fN759DRMKXVEJSR4/pubhtml
+"Crowd Source User Stories":https://docs.google.com/spreadsheets/d/1UKTSqLvZyH9EIJBt7YSVZoF8krdZYmHjoK1yx6pesQs/pubhtml
+** *+2016+* 
+"Sprints":https://docs.google.com/spreadsheets/d/e/2PACX-1vTnBFoFpZA4rAainOlzv4E7-PW3-BwjTg9SP0iXHz1XZUCjVF_4WYIWttJyHtO5EhO24pYazn8sL7Jh/pubhtml
+"User Stories":https://docs.google.com/document/d/e/2PACX-1vSVLmaORZab4QV0ZSy5OUl6lSPx2lNc3gud5nB6WSxNrrxkMu7Kz5zObKeKnP8pw7eghYJY3h_xs99L/pub
+
+h4. Instructions
+
+* [[User's Guide]]
+** [[First Time Setup]]
+** [[Operating Instructions]]
+** [[Alpha Patches]]
+* +Assembly Information+
+** [[BOM|Bill of Materials]]
+** [[Assembly Instructions|Assembly Instructions]]
+*** [[Controller Assembly]]
+*** [[Sensor Assembly]]
+*** [[Snap Fit Tone Ring Assembly|Tone Ring Half Assembly]]
+[[Tone Ring Assembly]] (deprecated)
+*** [[Final Assembly]]
+** [[Software Set Up|Software Set Up]]
+
+h4. Design Data
+
+* [[Block Diagram|Block Diagram]]
+* "USB PID (via pid.codes)":http://pid.codes/1209/B058/
+** VID: 0x1209
+** PID: 0xB058
+* [[Schematics and PCB Files|Schematics and PCB Files]]
+* [[Software Source Code|Project Software]]
+** [[HSP|Holoseat Serial Protocol]] 
+("Legacy REST Implementation":https://opendesignengine.net/projects/holoseat/wiki/HSP?version=26)
+** [[HSP Over REST API]] 
+* [[Vendor Documentation]]
+
+h4. Dev Team Links
+
+* [[Dev Team On Boarding]] (outline)
+* [[C.H.I.P. Setup Instructions]]
+
+h4. Research
+
+* [[Resources|General Resources]]
+* +Technical Resources+
+** [[General Technical Resources|General]]
+** [[ME Resources|Mech Eng Resources]]
+** [[Arduino Resources]]
+** [[Bluetooth]]
+** [[HID]]
+** -[[NodeBots Resources]]-
+** -[[Raspbery Pi Resources]]-
+** [[Python Resources]]
+** [[C.H.I.P. Resources]]
+* +Biz Resources+
+** [[Marketing Resources]]
+** [[Start Up Resources]]
+
+h3. [[Sidebar|Edit Navigation]]

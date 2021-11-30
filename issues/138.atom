@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link href="http://opendesignengine.net/issues/138.atom" rel="self"/>
+  <link href="http://opendesignengine.net/" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-06-27T20:46:33+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <entry>
+    <title>Shepard Test Stand - Bug #138: Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1</title>
+    <link href="http://opendesignengine.net/issues/138" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/138?journal_id=197</id>
+    <updated>2013-06-27T20:46:33+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Subject&lt;/strong&gt; changed from &lt;i&gt;Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1&lt;/i&gt; to &lt;i&gt;Serial.list Doesn&amp;amp;#x27;t Work on Versions of Processing Newer than 1.5.1&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This should probably be added to the errata for Shepard 1.1, and a version restriction warning should be placed in the operating manual.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Bug #138: Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1</title>
+    <link href="http://opendesignengine.net/issues/138" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/138?journal_id=223</id>
+    <updated>2013-07-30T10:36:48+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;We might be able to work around this issue by using an embedded Java jar that would ship with the exported applications from the Processing IDE. Research needs to be done on this though to see how well it works in practice.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Bug #138: Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1</title>
+    <link href="http://opendesignengine.net/issues/138" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/138?journal_id=266</id>
+    <updated>2013-09-12T22:26:17+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Parent task&lt;/strong&gt; set to &lt;i&gt;#174&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This should be resolved by the jssc library used by the new Java based GUI (that this task is now a child of)&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Bug #138: Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1</title>
+    <link href="http://opendesignengine.net/issues/138" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/138?journal_id=267</id>
+    <updated>2013-09-12T22:26:41+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; changed from &lt;i&gt;New&lt;/i&gt; to &lt;i&gt;Feedback&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Target version&lt;/strong&gt; set to &lt;i&gt;v1.1 Shepard Test Stand - Prototype&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Bug #138: Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1</title>
+    <link href="http://opendesignengine.net/issues/138" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/138?journal_id=274</id>
+    <updated>2013-09-15T08:39:24+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Target version&lt;/strong&gt; changed from &lt;i&gt;v1.1 Shepard Test Stand - Prototype&lt;/i&gt; to &lt;i&gt;v2.0 Shepard Test Stand - Prototype&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Bug #138: Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1</title>
+    <link href="http://opendesignengine.net/issues/138" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/138?journal_id=278</id>
+    <updated>2013-09-15T11:50:58+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;I'm thinking that this should stay with the v1.1 prototype and not be a child of the JSSC library for a few reasons.&lt;/p&gt;
+
+
+	&lt;ol&gt;
+	&lt;li&gt;The Java UI is going to replace the Processing UI. Processing will not be used in Shepard v2.0.&lt;/li&gt;
+		&lt;li&gt;The JSSC library was researched and picked up specifically for the Java UI.&lt;/li&gt;
+		&lt;li&gt;This issue has been resolved in the Shepard Processing code that now runs on Processing 2.0.1 in Linux. It hasn't been tested on Windows yet though, so this should stay in Feedback status for v1.1.&lt;/li&gt;
+	&lt;/ol&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Bug #138: Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1</title>
+    <link href="http://opendesignengine.net/issues/138" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/138?journal_id=279</id>
+    <updated>2013-09-15T13:08:35+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Target version&lt;/strong&gt; changed from &lt;i&gt;v2.0 Shepard Test Stand - Prototype&lt;/i&gt; to &lt;i&gt;v1.1 Shepard Test Stand - Prototype&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Parent task&lt;/strong&gt; deleted (&lt;strike&gt;&lt;i&gt;#174&lt;/i&gt;&lt;/strike&gt;)&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Bug #138: Serial.list Doesn&amp;#x27;t Work on Versions of Processing Newer than 1.5.1</title>
+    <link href="http://opendesignengine.net/issues/138" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/138?journal_id=414</id>
+    <updated>2013-12-10T10:26:43+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; changed from &lt;i&gt;Feedback&lt;/i&gt; to &lt;i&gt;Closed&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;% Done&lt;/strong&gt; changed from &lt;i&gt;0&lt;/i&gt; to &lt;i&gt;100&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This was fixed by updating ShepardDCS's GUI library so that it would run in newer version of Processing.&lt;/p&gt;    </content>
+  </entry>
+</feed>

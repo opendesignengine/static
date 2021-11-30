@@ -1,0 +1,2609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - DMSF - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery-ui/jquery-ui-1.8.13.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/plupload/jquery.ui.plupload.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery.dataTables/jquery-ui.dataTables.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/dmsf.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-1.6.1.min.js%3F1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-ui-1.8.13.min.js%3F1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/jquery.dataTables.min.js%3F1359925705" type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function() {
+			jQuery("#browser").dataTable({
+				"bJQueryUI": true,
+				"oLanguage": {
+					'sUrl': '/plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/en.json'	
+				},
+				"bAutoWidth": false,
+				"bPaginate": false,
+				"aaSorting": [[1,'asc']],
+				"aaSortingFixed": [[7,'asc']],
+				"aoColumnDefs": [
+					{ "bSearchable": false, "aTargets": [0, 6, 7, 8] },
+					{ "bSortable": false, "aTargets": [0, 6, 7] },
+					{ "iDataSort": 8, "aTargets": [ 2 ] }
+				],
+				"fnInitComplete": function() {
+					jQuery("div.controls").prependTo(jQuery("#browser_wrapper div.fg-toolbar")[0]);
+				},
+				"fnInfoCallback": function( oSettings, iStart, iEnd, iMax, iTotal, sPre ) {
+					return "Folders: 2, Documents: 58";
+				}
+			});
+			
+			jQuery("[data-downloadurl]").each(function() {
+		        var url = this.getAttribute("data-downloadurl");
+		        if (this.addEventListener) {
+		          this.addEventListener("dragstart", function(e) {
+		            if (e.dataTransfer) {
+		              e.dataTransfer.setData("DownloadURL", url);
+		            }
+		          },false);
+		        }
+	      	});
+		});
+	</script>
+</head>
+<body class="controller-dmsf action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/holoseat.html" method="get">
+        
+        <a href="../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../projects/holoseat%3Fjump=dmsf.html" class="dmsf selected">DMSF</a></li>
+<li><a href="../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/holoseat/boards.html" class="boards">Forums</a></li>
+<li><a href="../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        
+
+<div class="contextual">
+	
+</div>
+
+
+<h2>
+	<a href="../projects/holoseat%3Fjump=dmsf.html">Documents</a>
+
+ / 
+ <a href="holoseat%3Ffolder_id=69.html">Sensor-Magnet Tests</a>
+ 
+
+
+</h2>
+
+<div class="wiki">
+<p>Storage area for test definitions, results, and reports related to the tests of new hall effect sensors and magnets.</p>
+</div>
+
+<form action="http://opendesignengine.net/dmsf/entries_operation/holoseat?folder_id=69" class="dmfs_entries" id="entries_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>
+	<input id="action" name="action" type="hidden" />
+	<div class="controls" style="float: left">
+		<input name="download_entries" title="Download checked in Zip archive" type="submit" value="Download" />
+		<input name="email_entries" title="Send checked by email" type="submit" value="Email" />
+		
+	</div> 
+	<table class="display entries" id="browser">
+		<thead>
+			<tr id="root">
+				<th class="check">
+					<input id="check_all_entries" title="Check/Uncheck all for zip download or email" type="checkbox" />
+				</th>
+				<th>Title</th>
+				<th>Size</th>
+				<th>Modified</th>
+				<th>Ver.</th>
+				<th>Author</th>
+				<th></th>
+				<th class="hidden"></th>
+				<th class="hidden"></th>
+			</tr>
+		</thead>
+	<tbody>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="71" /></td>
+			<td class="title">
+				<a href="http://opendesignengine.net/dmsf/holoseat?folder_id=71" class="icon icon-folder">DOE Analysis</a>
+				<div class="filename" title="Number of files in directory">[27]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">1023.7 kB</td>
+			<td class="modified">2016-06-25 20:37</td>
+			<td class="version"></td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">1048221</td>
+		</tr>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="70" /></td>
+			<td class="title">
+				<a href="http://opendesignengine.net/dmsf/holoseat?folder_id=70" class="icon icon-folder">Scratch Data</a>
+				<div class="filename" title="Number of files in directory">[3]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">2 kB</td>
+			<td class="modified">2016-06-20 22:36</td>
+			<td class="version"></td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">2092</td>
+		</tr>
+	
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="546" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/546?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR_DIST_20160620-2132.csv:http://opendesignengine.net/dmsf_files/546?download=" title="CHAR DIST 20160620-2132 version 0.1 download">CHAR DIST 20160620-2132</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR_DIST_20160620-2132.csv</div>
+			</td>
+			<td class="size">13 kB</td>
+			<td class="modified">
+				2016-06-20 20:36
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/546" title="CHAR DIST 20160620-2132 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/546" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">13296</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="547" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/547?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR_DIST_20160620-2143.csv:http://opendesignengine.net/dmsf_files/547?download=" title="CHAR DIST 20160620-2143 version 0.1 download">CHAR DIST 20160620-2143</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR_DIST_20160620-2143.csv</div>
+			</td>
+			<td class="size">13 kB</td>
+			<td class="modified">
+				2016-06-20 20:44
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/547" title="CHAR DIST 20160620-2143 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/547" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">13280</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="548" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/548?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR_DIST_20160620-2148.csv:http://opendesignengine.net/dmsf_files/548?download=" title="CHAR DIST 20160620-2148 version 0.1 download">CHAR DIST 20160620-2148</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR_DIST_20160620-2148.csv</div>
+			</td>
+			<td class="size">13 kB</td>
+			<td class="modified">
+				2016-06-20 20:49
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/548" title="CHAR DIST 20160620-2148 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/548" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">13317</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="533" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/533?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR01_20160617-1659.csv:http://opendesignengine.net/dmsf_files/533?download=" title="CHAR01 20160617-1659 version 0.1 download">CHAR01 20160617-1659</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR01_20160617-1659.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 16:08
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/533" title="CHAR01 20160617-1659 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/533" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27168</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="534" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/534?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR02_20160617-1656.csv:http://opendesignengine.net/dmsf_files/534?download=" title="CHAR02 20160617-1656 version 0.1 download">CHAR02 20160617-1656</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR02_20160617-1656.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 16:08
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/534" title="CHAR02 20160617-1656 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/534" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27179</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="535" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/535?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR03_20160617-1653.csv:http://opendesignengine.net/dmsf_files/535?download=" title="CHAR03 20160617-1653 version 0.1 download">CHAR03 20160617-1653</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR03_20160617-1653.csv</div>
+			</td>
+			<td class="size">26.6 kB</td>
+			<td class="modified">
+				2016-06-17 16:08
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/535" title="CHAR03 20160617-1653 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/535" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27248</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="542" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/542?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR10_20160617-1744.csv:http://opendesignengine.net/dmsf_files/542?download=" title="CHAR10 20160617-1744 version 0.1 download">CHAR10 20160617-1744</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR10_20160617-1744.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 16:51
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/542" title="CHAR10 20160617-1744 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/542" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27173</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="541" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/541?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR11_20160617-1746.csv:http://opendesignengine.net/dmsf_files/541?download=" title="CHAR11 20160617-1746 version 0.1 download">CHAR11 20160617-1746</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR11_20160617-1746.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 16:51
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/541" title="CHAR11 20160617-1746 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/541" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27169</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="540" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/540?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR12_20160617-1749.csv:http://opendesignengine.net/dmsf_files/540?download=" title="CHAR12 20160617-1749 version 0.1 download">CHAR12 20160617-1749</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR12_20160617-1749.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 16:51
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/540" title="CHAR12 20160617-1749 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/540" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27170</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="545" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/545?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR13_20160617-1800.csv:http://opendesignengine.net/dmsf_files/545?download=" title="CHAR13 20160617-1800 version 0.1 download">CHAR13 20160617-1800</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR13_20160617-1800.csv</div>
+			</td>
+			<td class="size">26.6 kB</td>
+			<td class="modified">
+				2016-06-17 17:07
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/545" title="CHAR13 20160617-1800 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/545" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27256</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="544" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/544?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR14_20160617-1802.csv:http://opendesignengine.net/dmsf_files/544?download=" title="CHAR14 20160617-1802 version 0.1 download">CHAR14 20160617-1802</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR14_20160617-1802.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 17:07
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/544" title="CHAR14 20160617-1802 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/544" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27147</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="543" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/543?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR15_20160617-1804.csv:http://opendesignengine.net/dmsf_files/543?download=" title="CHAR15 20160617-1804 version 0.1 download">CHAR15 20160617-1804</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR15_20160617-1804.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 17:07
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/543" title="CHAR15 20160617-1804 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/543" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27163</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="539" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/539?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR16_20160617-1733.csv:http://opendesignengine.net/dmsf_files/539?download=" title="CHAR16 20160617-1733 version 0.1 download">CHAR16 20160617-1733</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR16_20160617-1733.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 16:40
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/539" title="CHAR16 20160617-1733 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/539" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27139</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="538" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/538?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR17_20160617-1736.csv:http://opendesignengine.net/dmsf_files/538?download=" title="CHAR17 20160617-1736 version 0.1 download">CHAR17 20160617-1736</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR17_20160617-1736.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 16:40
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/538" title="CHAR17 20160617-1736 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/538" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27145</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="537" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/537?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:CHAR18_20160617-1738.csv:http://opendesignengine.net/dmsf_files/537?download=" title="CHAR18 20160617-1738 version 0.1 download">CHAR18 20160617-1738</a>
+				<div class="filename" title="Filename used for download or in Zip archive">CHAR18_20160617-1738.csv</div>
+			</td>
+			<td class="size">26.5 kB</td>
+			<td class="modified">
+				2016-06-17 16:40
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/537" title="CHAR18 20160617-1738 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/537" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">27178</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="552" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/552?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE01_20160625-1349.csv:http://opendesignengine.net/dmsf_files/552?download=" title="DOE01 20160625-1349 version 0.1 download">DOE01 20160625-1349</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE01_20160625-1349.csv</div>
+			</td>
+			<td class="size">251 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/552" title="DOE01 20160625-1349 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/552" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">251</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="582" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/582?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE02_20160625-1351.csv:http://opendesignengine.net/dmsf_files/582?download=" title="DOE02 20160625-1351 version 0.1 download">DOE02 20160625-1351</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE02_20160625-1351.csv</div>
+			</td>
+			<td class="size">670 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/582" title="DOE02 20160625-1351 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/582" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">670</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="570" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/570?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE03_20160625-1354.csv:http://opendesignengine.net/dmsf_files/570?download=" title="DOE03 20160625-1354 version 0.1 download">DOE03 20160625-1354</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE03_20160625-1354.csv</div>
+			</td>
+			<td class="size">252 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/570" title="DOE03 20160625-1354 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/570" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">252</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="569" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/569?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE04_20160625-1355.csv:http://opendesignengine.net/dmsf_files/569?download=" title="DOE04 20160625-1355 version 0.1 download">DOE04 20160625-1355</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE04_20160625-1355.csv</div>
+			</td>
+			<td class="size">673 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/569" title="DOE04 20160625-1355 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/569" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">673</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="568" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/568?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE05_20160625-1358.csv:http://opendesignengine.net/dmsf_files/568?download=" title="DOE05 20160625-1358 version 0.1 download">DOE05 20160625-1358</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE05_20160625-1358.csv</div>
+			</td>
+			<td class="size">253 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/568" title="DOE05 20160625-1358 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/568" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">253</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="567" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/567?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE06_20160625-1359.csv:http://opendesignengine.net/dmsf_files/567?download=" title="DOE06 20160625-1359 version 0.1 download">DOE06 20160625-1359</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE06_20160625-1359.csv</div>
+			</td>
+			<td class="size">669 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/567" title="DOE06 20160625-1359 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/567" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">669</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="564" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/564?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE06_20160625-1406.csv:http://opendesignengine.net/dmsf_files/564?download=" title="DOE06 20160625-1406 version 0.1 download">DOE06 20160625-1406</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE06_20160625-1406.csv</div>
+			</td>
+			<td class="size">664 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/564" title="DOE06 20160625-1406 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/564" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">664</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="566" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/566?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE07_20160625-1402.csv:http://opendesignengine.net/dmsf_files/566?download=" title="DOE07 20160625-1402 version 0.1 download">DOE07 20160625-1402</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE07_20160625-1402.csv</div>
+			</td>
+			<td class="size">235 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/566" title="DOE07 20160625-1402 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/566" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">235</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="565" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/565?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE08_20160625-1403.csv:http://opendesignengine.net/dmsf_files/565?download=" title="DOE08 20160625-1403 version 0.1 download">DOE08 20160625-1403</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE08_20160625-1403.csv</div>
+			</td>
+			<td class="size">670 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/565" title="DOE08 20160625-1403 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/565" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">670</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="563" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/563?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE09_20160625-1408.csv:http://opendesignengine.net/dmsf_files/563?download=" title="DOE09 20160625-1408 version 0.1 download">DOE09 20160625-1408</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE09_20160625-1408.csv</div>
+			</td>
+			<td class="size">248 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/563" title="DOE09 20160625-1408 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/563" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">248</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="562" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/562?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE10_20160625-1409.csv:http://opendesignengine.net/dmsf_files/562?download=" title="DOE10 20160625-1409 version 0.1 download">DOE10 20160625-1409</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE10_20160625-1409.csv</div>
+			</td>
+			<td class="size">644 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/562" title="DOE10 20160625-1409 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/562" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">644</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="580" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/580?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE11_20160625-1412.csv:http://opendesignengine.net/dmsf_files/580?download=" title="DOE11 20160625-1412 version 0.1 download">DOE11 20160625-1412</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE11_20160625-1412.csv</div>
+			</td>
+			<td class="size">247 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/580" title="DOE11 20160625-1412 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/580" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">247</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="579" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/579?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE12_20160625-1414.csv:http://opendesignengine.net/dmsf_files/579?download=" title="DOE12 20160625-1414 version 0.1 download">DOE12 20160625-1414</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE12_20160625-1414.csv</div>
+			</td>
+			<td class="size">639 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/579" title="DOE12 20160625-1414 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/579" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">639</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="578" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/578?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE13_20160625-1417.csv:http://opendesignengine.net/dmsf_files/578?download=" title="DOE13 20160625-1417 version 0.1 download">DOE13 20160625-1417</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE13_20160625-1417.csv</div>
+			</td>
+			<td class="size">253 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/578" title="DOE13 20160625-1417 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/578" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">253</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="577" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/577?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE14_20160625-1419.csv:http://opendesignengine.net/dmsf_files/577?download=" title="DOE14 20160625-1419 version 0.1 download">DOE14 20160625-1419</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE14_20160625-1419.csv</div>
+			</td>
+			<td class="size">669 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/577" title="DOE14 20160625-1419 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/577" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">669</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="576" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/576?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE14_20160625-1421.csv:http://opendesignengine.net/dmsf_files/576?download=" title="DOE14 20160625-1421 version 0.1 download">DOE14 20160625-1421</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE14_20160625-1421.csv</div>
+			</td>
+			<td class="size">669 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/576" title="DOE14 20160625-1421 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/576" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">669</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="575" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/575?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE15_20160625-1424.csv:http://opendesignengine.net/dmsf_files/575?download=" title="DOE15 20160625-1424 version 0.1 download">DOE15 20160625-1424</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE15_20160625-1424.csv</div>
+			</td>
+			<td class="size">250 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/575" title="DOE15 20160625-1424 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/575" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">250</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="574" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/574?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE16_20160625-1426.csv:http://opendesignengine.net/dmsf_files/574?download=" title="DOE16 20160625-1426 version 0.1 download">DOE16 20160625-1426</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE16_20160625-1426.csv</div>
+			</td>
+			<td class="size">670 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/574" title="DOE16 20160625-1426 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/574" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">670</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="573" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/573?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE17_20160625-1429.csv:http://opendesignengine.net/dmsf_files/573?download=" title="DOE17 20160625-1429 version 0.1 download">DOE17 20160625-1429</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE17_20160625-1429.csv</div>
+			</td>
+			<td class="size">247 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/573" title="DOE17 20160625-1429 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/573" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">247</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="572" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/572?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE18_20160625-1430.csv:http://opendesignengine.net/dmsf_files/572?download=" title="DOE18 20160625-1430 version 0.1 download">DOE18 20160625-1430</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE18_20160625-1430.csv</div>
+			</td>
+			<td class="size">673 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/572" title="DOE18 20160625-1430 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/572" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">673</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="571" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/571?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE19_20160625-1433.csv:http://opendesignengine.net/dmsf_files/571?download=" title="DOE19 20160625-1433 version 0.1 download">DOE19 20160625-1433</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE19_20160625-1433.csv</div>
+			</td>
+			<td class="size">243 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/571" title="DOE19 20160625-1433 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/571" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">243</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="581" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/581?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE19_20160625-1435.csv:http://opendesignengine.net/dmsf_files/581?download=" title="DOE19 20160625-1435 version 0.1 download">DOE19 20160625-1435</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE19_20160625-1435.csv</div>
+			</td>
+			<td class="size">248 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/581" title="DOE19 20160625-1435 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/581" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">248</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="561" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/561?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE20_20160625-1438.csv:http://opendesignengine.net/dmsf_files/561?download=" title="DOE20 20160625-1438 version 0.1 download">DOE20 20160625-1438</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE20_20160625-1438.csv</div>
+			</td>
+			<td class="size">648 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/561" title="DOE20 20160625-1438 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/561" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">648</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="560" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/560?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE21_20160625-1441.csv:http://opendesignengine.net/dmsf_files/560?download=" title="DOE21 20160625-1441 version 0.1 download">DOE21 20160625-1441</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE21_20160625-1441.csv</div>
+			</td>
+			<td class="size">253 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/560" title="DOE21 20160625-1441 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/560" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">253</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="559" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/559?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE22_20160625-1442.csv:http://opendesignengine.net/dmsf_files/559?download=" title="DOE22 20160625-1442 version 0.1 download">DOE22 20160625-1442</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE22_20160625-1442.csv</div>
+			</td>
+			<td class="size">668 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/559" title="DOE22 20160625-1442 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/559" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">668</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="558" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/558?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE23_20160625-1444.csv:http://opendesignengine.net/dmsf_files/558?download=" title="DOE23 20160625-1444 version 0.1 download">DOE23 20160625-1444</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE23_20160625-1444.csv</div>
+			</td>
+			<td class="size">249 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/558" title="DOE23 20160625-1444 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/558" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">249</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="557" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/557?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE24_20160625-1445.csv:http://opendesignengine.net/dmsf_files/557?download=" title="DOE24 20160625-1445 version 0.1 download">DOE24 20160625-1445</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE24_20160625-1445.csv</div>
+			</td>
+			<td class="size">670 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/557" title="DOE24 20160625-1445 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/557" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">670</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="556" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/556?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE25_20160625-1448.csv:http://opendesignengine.net/dmsf_files/556?download=" title="DOE25 20160625-1448 version 0.1 download">DOE25 20160625-1448</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE25_20160625-1448.csv</div>
+			</td>
+			<td class="size">248 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/556" title="DOE25 20160625-1448 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/556" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">248</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="555" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/555?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE26_20160625-1449.csv:http://opendesignengine.net/dmsf_files/555?download=" title="DOE26 20160625-1449 version 0.1 download">DOE26 20160625-1449</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE26_20160625-1449.csv</div>
+			</td>
+			<td class="size">663 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/555" title="DOE26 20160625-1449 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/555" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">663</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="554" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/554?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE27_20160625-1451.csv:http://opendesignengine.net/dmsf_files/554?download=" title="DOE27 20160625-1451 version 0.1 download">DOE27 20160625-1451</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE27_20160625-1451.csv</div>
+			</td>
+			<td class="size">251 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/554" title="DOE27 20160625-1451 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/554" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">251</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="553" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/553?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE28_20160625-1452.csv:http://opendesignengine.net/dmsf_files/553?download=" title="DOE28 20160625-1452 version 0.1 download">DOE28 20160625-1452</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE28_20160625-1452.csv</div>
+			</td>
+			<td class="size">669 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/553" title="DOE28 20160625-1452 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/553" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">669</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="591" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/591?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE29_20160625-1454.csv:http://opendesignengine.net/dmsf_files/591?download=" title="DOE29 20160625-1454 version 0.1 download">DOE29 20160625-1454</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE29_20160625-1454.csv</div>
+			</td>
+			<td class="size">245 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/591" title="DOE29 20160625-1454 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/591" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">245</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="590" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/590?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE30_20160625-1455.csv:http://opendesignengine.net/dmsf_files/590?download=" title="DOE30 20160625-1455 version 0.1 download">DOE30 20160625-1455</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE30_20160625-1455.csv</div>
+			</td>
+			<td class="size">666 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/590" title="DOE30 20160625-1455 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/590" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">666</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="589" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/589?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE31_20160625-1458.csv:http://opendesignengine.net/dmsf_files/589?download=" title="DOE31 20160625-1458 version 0.1 download">DOE31 20160625-1458</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE31_20160625-1458.csv</div>
+			</td>
+			<td class="size">251 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/589" title="DOE31 20160625-1458 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/589" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">251</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="588" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/588?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE32_20160625-1459.csv:http://opendesignengine.net/dmsf_files/588?download=" title="DOE32 20160625-1459 version 0.1 download">DOE32 20160625-1459</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE32_20160625-1459.csv</div>
+			</td>
+			<td class="size">666 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/588" title="DOE32 20160625-1459 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/588" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">666</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="587" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/587?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE33_20160625-1502.csv:http://opendesignengine.net/dmsf_files/587?download=" title="DOE33 20160625-1502 version 0.1 download">DOE33 20160625-1502</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE33_20160625-1502.csv</div>
+			</td>
+			<td class="size">235 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/587" title="DOE33 20160625-1502 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/587" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">235</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="586" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/586?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE34_20160625-1503.csv:http://opendesignengine.net/dmsf_files/586?download=" title="DOE34 20160625-1503 version 0.1 download">DOE34 20160625-1503</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE34_20160625-1503.csv</div>
+			</td>
+			<td class="size">640 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/586" title="DOE34 20160625-1503 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/586" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">640</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="585" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/585?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE34_20160625-1504.csv:http://opendesignengine.net/dmsf_files/585?download=" title="DOE34 20160625-1504 version 0.1 download">DOE34 20160625-1504</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE34_20160625-1504.csv</div>
+			</td>
+			<td class="size">670 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/585" title="DOE34 20160625-1504 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/585" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">670</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="584" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/584?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE35_20160625-1510.csv:http://opendesignengine.net/dmsf_files/584?download=" title="DOE35 20160625-1510 version 0.1 download">DOE35 20160625-1510</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE35_20160625-1510.csv</div>
+			</td>
+			<td class="size">252 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/584" title="DOE35 20160625-1510 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/584" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">252</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="583" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/583?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:DOE36_20160625-1511.csv:http://opendesignengine.net/dmsf_files/583?download=" title="DOE36 20160625-1511 version 0.1 download">DOE36 20160625-1511</a>
+				<div class="filename" title="Filename used for download or in Zip archive">DOE36_20160625-1511.csv</div>
+			</td>
+			<td class="size">640 Bytes</td>
+			<td class="modified">
+				2016-06-25 14:15
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/583" title="DOE36 20160625-1511 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/583" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">640</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="549" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/549?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:Test Definitions - DOE 2.1.csv:http://opendesignengine.net/dmsf_files/549?download=" title="Test Definitions - DOE 2.1 version 0.1 download">Test Definitions - DOE 2.1</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Test Definitions - DOE 2.1.csv</div>
+			</td>
+			<td class="size">1.4 kB</td>
+			<td class="modified">
+				2016-06-20 21:04
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/549" title="Test Definitions - DOE 2.1 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/549" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">1434</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="532" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/532?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:Test Definitions - Phase 1.1.csv:http://opendesignengine.net/dmsf_files/532?download=" title="Test Definitions - Phase 1.1 version 0.1 download">Test Definitions - Phase 1.1</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Test Definitions - Phase 1.1.csv</div>
+			</td>
+			<td class="size">618 Bytes</td>
+			<td class="modified">
+				2016-06-12 22:03
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/532" title="Test Definitions - Phase 1.1 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/532" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">618</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="536" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/536?download=" class="icon icon-file text-csv" data-downloadurl="text/csv:Test Definitions - Phase 1.2.csv:http://opendesignengine.net/dmsf_files/536?download=" title="Test Definitions - Phase 1.2 version 0.1 download">Test Definitions - Phase 1.2</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Test Definitions - Phase 1.2.csv</div>
+			</td>
+			<td class="size">1 kB</td>
+			<td class="modified">
+				2016-06-17 16:10
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/536" title="Test Definitions - Phase 1.2 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/536" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">1031</td>
+		</tr>
+	
+	</tbody>
+	</table>
+	<br />
+</form>
+
+<script type="text/javascript">
+	jQuery("a.delete-link").click(function(event) {
+		if(!window.confirm("Do you really want to delete this entry?")) event.preventDefault();
+	})
+	
+	jQuery("#entries_delete_button").click(function(event) {
+		if(window.confirm("Do you really want to delete checked entries?")) {
+			jQuery("#entries_form").attr("action", "/dmsf/delete_entries/holoseat?folder_id=69");
+			jQuery("#entries_form").submit();
+		}
+	})
+	
+	jQuery("#check_all_entries").click(function(event) {
+		var $this = jQuery(this);
+		if($this.prop("checked")) {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", true);
+		} else {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", false);
+		}
+	})			
+</script>
+
+
+
+
+
+
+<br />
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/holoseat.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

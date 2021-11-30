@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Yavin Thruster - Implementing Pressure Vessel Wall Sizing Calculations - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/yavin-thruster.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/yavin-thruster.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Yavin Thruster</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/yavin-thruster.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/yavin-thruster/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/yavin-thruster/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/yavin-thruster/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/yavin-thruster.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/yavin-thruster/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/yavin-thruster/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/yavin-thruster/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/yavin-thruster/boards.html">Forums</a> » <a href="../../../projects/yavin-thruster/boards/50.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-960-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Implementing Pressure Vessel Wall Sizing Calculations</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-05-10.html" title="05/10/2015 02:33 pm">over 7 years</a> ago</span></p>
+<div class="wiki">
+<p><em>This thread contains the reference material and discussions for a PBI from the Yavin Thruster Sprint 1 development work.</em></p>
+
+
+	<p>The chamber for the Yavin Thruster is modeled structurally as a thick walled pressure vessel as it must contain the cold gas at a pressure greater than the ambient environment.  I implemented these calculations in my dissertation research according to material from:</p>
+
+
+	<p>Shigley, J. and Mischke, C., <em>Mechanical Engineering Design</em>, McGraw-Hill, fifth edition ed., 1989.</p>
+
+
+	<p>The attached PDF is the excerpt from my dissertation covering the related calculations (Section A.4.2).  I will post the relevant source code in a reply below.  Note, the dissertation includes a switch to compute the stress for pressure vessels under tension or under compression.  We only need to worry about a pressure vessel under tension for Yavin as it is containing high pressure from within (versus withstanding high pressure from outside which would be a compression case).</p>
+
+
+	<p>The objective of this PBI is to replicate these calculations (without the complexity of switching between tension and compression) in a Python library, verifying and validating the new Python library in MTK, then using the Python library to drive CAD in CadQuery to render a model of a chamber.</p>
+</div>
+<div class="attachments">
+
+<p><a href="../../../attachments/545/pressure_vessel_calcs.pdf" class="icon icon-attachment">pressure_vessel_calcs.pdf</a>
+  <span class="size">(119.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (16)</h3>
+
+  <div class="message reply" id="message-961">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=961.html#message-961">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-05-10.html" title="05/10/2015 03:00 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here is the source code (in JavaScript) for the thick walled cylinder wall sizing calculations.  Note, I have removed some of the complexity shown in the documentation (for example the tension flag since we are not switching between tension and compression in the Yavin calculations) and I have not had a chance to test those changes, so it is very likely that there are some bugs in this code.  Should make it good for testing.</p>
+
+
+<pre>
+// calculate chamber wall thickness
+var ri;               // inner radius, needs a value assigned
+var t;                // initial guess for thickness, needs value assigned
+var P_c;              // chamber pressure, needs value assigned
+var P_amb;            // ambient pressure, needs value assigned
+var materialStrength; // target maximum allowable strength (for example yield or ultimate), needs value assigned
+var fs;               // factor of safety
+
+// call the calculate wall thickness function for our chamber conditions
+var chamberThickness = calculateWallThickness(ri, ri + t, t, P_c, P_amb, materialStrength, fs);
+
+// calculate wall thickness function, uses simple additive solver (may want to look into a smarter solver in new library)
+function calculateWallThickness(ri, ro, t, Pi, Po, stressLimit, fs) {
+  // initialize variables
+  var r = 0.0;
+  var stepSize = 0.001;
+  if (tension == 1) {
+    r = ri;
+  }
+  else {
+    r = ro;
+  }
+
+  var maxStress = 0.0;
+  maxStress = fs.value * Math.max(sigma_tan(ri, ro, r, Pi, Po), sigma_rad(ri, ro, r, Pi, Po)) / 1000;
+
+  if (maxStress &lt; stressLimit) {  
+    while (maxStress &lt; stressLimit) {
+      t = t - stepSize;
+      ro = ri + t;
+      maxStress = fs * Math.max(sigma_tan(ri, ro, r, Pi, Po), sigma_rad(ri, ro, r, Pi, Po)) / 1000;
+    }
+  }
+  else {
+    while (maxStress &gt; stressLimit) {
+      t = t + stepSize;
+      ro = ri + t;
+      maxStress = fs * Math.max(sigma_tan(ri, ro, r, Pi, Po), sigma_rad(ri, ro, r, Pi, Po)) / 1000;
+    }
+  }
+
+  return t;
+}
+
+// calculate the tangential stress in thick walled cylinder
+function sigma_tan(ri, ro, r, Pi, Po) {
+return (Pi*Math.pow(ri,2)-Po*Math.pow(ro,2)-Math.pow(ri,2)*Math.pow(ro,2)*(Po-Pi)/Math.pow(r,2))/(Math.pow(ro,2)-Math.pow(ri,2));
+}
+
+// calculate the radial stress in thick walled cylinder
+function sigma_rad(ri, ro, r, Pi, Po) {
+return (Pi*Math.pow(ri,2)-Po*Math.pow(ro,2)+Math.pow(ri,2)*Math.pow(ro,2)*(Po-Pi)/Math.pow(r,2))/(Math.pow(ro,2)-Math.pow(ri,2));
+}
+</pre></div>
+  
+  </div>
+
+  <div class="message reply" id="message-962">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=962.html#message-962">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-05-21.html" title="05/21/2015 11:06 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>The Python port of the Javascript code above is in the repo: <a href="https://opendesignengine.net/projects/yavin-thruster/repository/show/trunk/chamber" class="external">trunk/chamber/pressure_vessel_calcs.py</a></p>
+
+
+	<p>I have added TODO comments to denote questions or needed improvements.</p>
+
+
+	<p>To use this module, cd into the <code>chamber</code> directory, start a Python console, and enter the following.</p>
+
+
+<pre>
+&gt;&gt;&gt; from pressure_vessel_calcs import PressureVessel
+&gt;&gt;&gt; pv = PressureVessel(10, 1, 100, 10, 800)
+&gt;&gt;&gt; pv.calculate_wall_thickness()
+0.001999999999999119
+</pre>
+
+	<p>The numbers I've used in the instantiation of the PressureVessel are pseudo-random.</p>
+
+
+	<p>Let the debugging and refactoring begin.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-963">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=963.html#message-963">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-05-28.html" title="05/28/2015 10:48 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've roughed out a <a href="https://opendesignengine.net/projects/yavin-thruster/repository/changes/trunk/chamber/hello_world_chamber.py" class="external">hello_world_chamber.py</a> CadQuery model. The math for the inside radius of the taper is a little off, but it revolves the chamber as expected. The next steps will be to straighten the math for the inside of the taper out, clean the code up, and integrate Pint units. I also want to run through the code with the rocket scientists in the room to get the terminology in the code right.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-964">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=964.html#message-964">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-05-29.html" title="05/29/2015 08:39 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I was thinking this morning that it would be interesting to try to wrap a CadQuery solid so that it could hold things like material type, yield strength, BOM info, etc. It would be trivial after that to generate CSV output of a BOM, material data sheet, and so forth.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-965">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=965.html#message-965">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-07.html" title="06/07/2015 03:39 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Finished the implementation section in the MTK document (current draft of PDF attached) and resolved code formatting block by upgrading local MTK install to use <a href="https://www.ctan.org/pkg/minted?lang=en" class="external">minted v2.0</a>.  Minted 2.0 has a <a href="http://stackoverflow.com/a/28422473" class="external">linebreaks option</a>.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/546/pressure_vessel_doc.pdf" class="icon icon-attachment">pressure_vessel_doc.pdf</a>
+  <span class="size">(151.6 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-966">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=966.html#message-966">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-07.html" title="06/07/2015 09:00 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks J. It should be pretty easy to reformat the code to give you cleaner line breaks without the line continuation symbol.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-967">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=967.html#message-967">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-07.html" title="06/07/2015 09:49 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>No problem.  It seemed like a useful upgrade to MTK in general.  Speaking of which, we should add installing minted 2.0 to the MTK Linux installer script.  I will go post a feature request over in that project so we don't lose track of it.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-981">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=981.html#message-981">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-17.html" title="06/17/2015 09:39 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think that we should get in the habit early on of implementing unit tests with libraries like this. That's going to become increasingly important as we scale this project, and other projects, up. We can't afford to break the library and have the widget make it all the way through manufacturing or (worst case) operations before we realize it. Even subtle errors can lead to mode 2 operation (boom) when dealing with rockets.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-982">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=982.html#message-982">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-17.html" title="06/17/2015 09:43 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Agreed.  In general, I would strongly urge us to demonstrate completed test results before going anywhere near manufacture, let alone test and operation.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-983">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=983.html#message-983">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-18.html" title="06/18/2015 05:02 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>If you can give me some established inputs and outputs, I should be able to implement tests for what we've done on Yavin so far in about 15 or 20 minutes.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-984">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=984.html#message-984">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-18.html" title="06/18/2015 06:12 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>The source code for the MTK document includes all of inputs and the expected outputs for ten test cases (including units). There are the nine test cases from my dissertation plus the inputs for the hello world design point (its output is known to be 3.8 mm). The test cases are declared in a sagesilent block so the repetitive code doesn't take up space in the report.</p>
+
+
+	<p>We should figure out a way to put the unit tests into the MTK document to drive the test results table in Section 4 so we don't have the tests multiply defined.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-988">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=988.html#message-988">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-18.html" title="06/18/2015 10:21 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've stubbed in a unit test structure, and added a few test cases for the pressure vessel calculations. The test cases came directly out of the Sage source code.</p>
+
+
+	<p><a class="external" href="https://opendesignengine.net/projects/yavin-thruster/repository/show/trunk/chamber">https://opendesignengine.net/projects/yavin-thruster/repository/show/trunk/chamber</a></p>
+
+
+	<p>The main source file of interest will be <code>chamber/tests/test_math.py</code>. I haven't added a readme yet, but the current set of tests can be run by changing into the chamber directory and running:</p>
+
+
+<pre>
+python runtests.py
+</pre></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1000">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=1000.html#message-1000">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-25.html" title="07/25/2015 07:50 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Added an abstract to the MTK report for PressureVessel class per YVN-09.  See attached PDF for updated report.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/566/pressure_vessel_doc.pdf" class="icon icon-attachment">pressure_vessel_doc.pdf</a>
+  <span class="size">(224.4 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1001">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=1001.html#message-1001">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-25.html" title="07/25/2015 08:50 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Looks great, thanks J.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1002">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=1002.html#message-1002">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-25.html" title="07/25/2015 08:57 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Glad you like and thanks for reviewing it so quickly.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1008">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="960%3Fr=1008.html#message-1008">RE: Implementing Pressure Vessel Wall Sizing Calculations</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-26.html" title="07/26/2015 07:39 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>One question that just occurred to me. Should "class" be defined for the layreader, or should it be implicitly understood since it's an MTK document?</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-16/16)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/960.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

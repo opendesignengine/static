@@ -1,0 +1,31 @@
+Index: socketHandler.py
+===================================================================
+--- socketHandler.py	(revision 109)
++++ socketHandler.py	(revision 110)
+@@ -1,7 +1,7 @@
+ from tornado import websocket
+ from holoseat.util import getHost
+ from holoseat.api import apiConfig, connectedOrConnect
+-from holoseat.util import holoseatSerial
++from holoseat.util import holoseatDevice
+ from tornado import web, gen
+ 
+ socketClients = []
+@@ -23,13 +23,13 @@
+ def SendMessages():
+     # make sure we have all the data in the serial buffer
+     connectedOrConnect()
+-    data = holoseatSerial.readData()
++    data = holoseatDevice.readData()
+     while (data):
+-        data = holoseatSerial.readData()
++        data = holoseatDevice.readData()
+ 
+     # for each line of data, send a message to each socket client
+-    message = holoseatSerial.popData()
++    message = holoseatDevice.popData()
+     while (message):
+         for client in socketClients:
+             client.write_message(message)
+-        message = holoseatSerial.popData()
++        message = holoseatDevice.popData()

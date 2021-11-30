@@ -1,0 +1,135 @@
+Index: trunk/app-src/holoseat/api/socketHandler.py
+===================================================================
+--- trunk/app-src/holoseat/api/socketHandler.py	(revision 111)
++++ trunk/app-src/holoseat/api/socketHandler.py	(revision 112)
+@@ -1,12 +1,35 @@
+-from tornado import websocket
+-from holoseat.util import getHost
+-from holoseat.api import apiConfig, connectedOrConnect
+-from holoseat.util import holoseatDevice
+-from tornado import web, gen
++from tornado import websocket, web, gen
++from concurrent.futures import ThreadPoolExecutor
++from tornado.concurrent import run_on_executor
++from holoseat.util import getHost, holoseatDevice
++from holoseat.api import apiConfig, connectedOrConnect, apiThreadPool
++import json
++import serial
+ 
+ socketClients = []
+ 
+ class SocketHandler(websocket.WebSocketHandler):
++    _threadPool = apiThreadPool
++
++    @run_on_executor(executor="_threadPool")
++    def connectedOrConnect(self):
++        return connectedOrConnect()
++
++    @run_on_executor(executor="_threadPool")
++    def execCommand(self, command):
++        return json.loads(holoseatDevice.execCommand(command))
++
++    @web.asynchronous
++    @gen.coroutine
++    def getEvents(self):
++        holoseatConnected = yield self.connectedOrConnect()
++        if (holoseatConnected):
++            try:
++                command = {"uri":"/lowlevel/events","verb":"GET"}
++                results = yield self.execCommand(command)
++            except serial.serialutil.SerialException as e:
++                pass
++
+     def check_origin(self, origin):
+         uiLocalhost = "http://%s:%s" % ("localhost", apiConfig['uiPort'])
+         uiIpAddress = "http://%s:%s" % (getHost(), apiConfig['uiPort'])
+@@ -16,6 +39,11 @@
+         if self not in socketClients:
+             socketClients.append(self)
+ 
++    def on_message(self, message):
++        print("Received message: %s" % message)
++        if message == 'getEvents':
++            self.getEvents()
++
+     def on_close(self):
+         if self in socketClients:
+             socketClients.remove(self)
+Index: trunk/app-src/holoseat/ui/templates/layout.html
+===================================================================
+--- trunk/app-src/holoseat/ui/templates/layout.html	(revision 111)
++++ trunk/app-src/holoseat/ui/templates/layout.html	(revision 112)
+@@ -74,7 +74,7 @@
+               </label>
+             </div>
+             -->
+-            <button id="holoseatEnableButton" type="button" class="btn btn-outline-primary active" data-toggle="button" aria-pressed="true" autocomplete="off">
++            <button id="holoseatEnableButton" type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+               <span class="h4">h</span>
+             </button>
+           </div>
+@@ -176,13 +176,63 @@
+        {% endif %}
+      };
+ 
++     // sendMessage() and waitForSocketConnection() from https://stackoverflow.com/a/21394730
++     function sendMessage(msg){
++         // Wait until the state of the socket is not ready and send the message when it is...
++         waitForSocketConnection(ws, function(){
++             {% if debug %}
++             console.log("message sent!!!");
++             {% endif %}
++             ws.send(msg);
++         });
++     }
++
++     // Make the function wait until the connection is made...
++     function waitForSocketConnection(socket, callback){
++         setTimeout(
++             function () {
++                 if (socket.readyState === 1) {
++                     {% if debug %}
++                     console.log("Connection is made")
++                     {% endif %}
++                     if(callback != null){
++                         callback();
++                     }
++                     return;
++
++                 } else {
++                     {% if debug %}
++                     console.log("wait for connection...")
++                     {% endif %}
++                     waitForSocketConnection(socket, callback);
++                 }
++
++             }, 5); // wait 5 milisecond for the connection...
++     }
++
+      $(document).ready(function() {
+-       // set up enabled button event listener
++       // set up event listeners
++       // 1. enabled button event listener
+        holoseatEventListeners.push({eventType : "enabledChange",
+                                     handle : function(message) {
+                                       setHoloseatEnableButton(message.enabled);
+                                     }});
++        // TODO: cadence event listener
++        // TODO: profile event listener
++
++        // now that all event listeners are set up, request socket
++        // send out events to Initialize controls
++        try {
++          sendMessage("getEvents");
++        } catch (err) {
++          addAlert(err.message, "danger");
++        }
+                       });
++
++      window.onbeforeunload = function() {
++        ws.onclose = function() {};
++        ws.close();
++      }
+   </script>
+   {% block scriptCode %}{% endblock %}
+ </body>

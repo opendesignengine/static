@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yavin Thruster: Discussion</title>
+  <link rel="self" href="http://opendesignengine.net/projects/yavin-thruster/boards?format=atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/boards"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2015-11-19T12:20:58+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1107#message-1107"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1107#message-1107</id>
+    <updated>2015-11-19T12:20:58+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I'd also like to talk tonight at the #EngineerSpeak Hangout about encoding other things like "expected volume" into the test case datasets so that I can check some extra aspects of the models.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1106#message-1106"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1106#message-1106</id>
+    <updated>2015-11-19T12:04:32+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Ok, so after some digging I figured out that the chamber just looks wrong, but is fine. It's the total length of the chamber not being long enough that makes it look that way. If I increase the length of the chamber I get a better looking result.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/attachments/download/581" alt="" /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;I also figured out that I was just doing the math wrong on the ri and ro of the model. It matches the numbers given by the tests.&lt;/p&gt;
+
+
+	&lt;p&gt;Is there a way we can objectively (and automatically) choose the total chamber length?&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1105#message-1105"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1105#message-1105</id>
+    <updated>2015-11-18T22:42:19+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This isn't going to be straightened out by the stand up tomorrow. The PressureVessel class is giving back a large ro, which I think is what's making the tapered opening look too large. Troubleshooting this has also highlighted a couple of issues with the geometry.&lt;/p&gt;
+
+
+	&lt;p&gt;1. The ro when measured on the model is only within about 10% of what the PressureVessel class gives, and ri is almost exact. Our math for figuring out how to draw the profiles before revolving probably has a flaw in it.&lt;br /&gt;2. Probably related to &lt;a href="http://opendesignengine.net/issues/1" class="issue status-5 priority-2 closed" title="Automatically create SVN Repositories when Repository module is turned on (Closed)"&gt;#1&lt;/a&gt;, some of the test cases lead to bad geometry when the solid is revolved. I haven't looked into it too closely, but it looks like self-intersecting geometry on first glance.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1104#message-1104"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1104#message-1104</id>
+    <updated>2015-11-18T16:48:59+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I tried allowing all the variables to stay in their native units (inches), and the proportions stay the same.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1103#message-1103"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1103#message-1103</id>
+    <updated>2015-11-18T15:53:02+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Looks like you're supposed to be able to change units in the newer versions, but it seems like we hit a snag with Shepard when trying to do that. I'll test it out.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="http://forum.freecadweb.org/viewtopic.php?t=5177"&gt;http://forum.freecadweb.org/viewtopic.php?t=5177&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1102#message-1102"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1102#message-1102</id>
+    <updated>2015-11-18T15:48:32+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;That's dataset 1 by the way. I suspect that it's an issue with converting between inches and mm, which are FreeCAD's native units.&lt;/p&gt;
+
+
+	&lt;p&gt;I've run out of time for now, but will check that theory out later unless this chamber somehow looks spot-on.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1101#message-1101"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1101#message-1101</id>
+    <updated>2015-11-18T15:28:31+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I wanted to do a sanity check of the test dataset chambers before I started adding the automated checks. All of them are a variation of this shape, which doesn't seem right.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/attachments/download/580" alt="" /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;I stepped back and tried the original Hello World Chamber dimensions and it looks the same as it did before.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1097#message-1097"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1097#message-1097</id>
+    <updated>2015-11-13T17:44:20+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Do you want to do that, or should I?&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1096#message-1096"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1096#message-1096</id>
+    <updated>2015-11-13T17:31:45+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We can just create a singleton wrapper around the units registry. That way all we'd have to do is change our import and maybe the call to load it, and not have to pass it around.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094?r=1095#message-1095"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094?r=1095#message-1095</id>
+    <updated>2015-11-13T15:13:22+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I started changing the CAD unit tests to be dataset driven like the math tests are. However, this highlighted an issue that we need to talk through.&lt;/p&gt;
+
+
+	&lt;p&gt;The CAD tests are complaining that I'm using different unit registries, and I noticed that the math test has the same issue although no conversions are being done so the error isn't raised. I think I remember J saying that it's a requirement of Pint that you use the same units registry all the way through your code.&lt;/p&gt;
+
+
+	&lt;p&gt;So, I'm thinking that we need to adjust our code so that a single Pint units registry can be passed around. Any classes/functions that need to work with units would need to have a units registry passed in. For the unit tests, that registry could potentially live in the dataset class.&lt;/p&gt;
+
+
+	&lt;p&gt;Thoughts?&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: CAD Unit Tests</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1094"/>
+    <id>http://opendesignengine.net/boards/50/topics/1094</id>
+    <updated>2015-11-12T22:24:37+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I changed the CAD unit test so that it's skipped if the tests are being run with a version of Python newer than 2.7.x.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://opendesignengine.net/projects/yavin-thruster/repository/entry/trunk/tests/chamber/test_cad.py"&gt;https://opendesignengine.net/projects/yavin-thruster/repository/entry/trunk/tests/chamber/test_cad.py&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;I'll clean that code up a little and then flesh out the actual tests of the geometry next week.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: Interactive Design Optimization</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/1092"/>
+    <id>http://opendesignengine.net/boards/50/topics/1092</id>
+    <updated>2015-11-04T07:57:32+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This &lt;a href="https://www.youtube.com/watch?v=-KJUVJAUY8o" class="external"&gt;video&lt;/a&gt; and &lt;a href="http://www.nobuyuki-umetani.com/GliderDesign/2014_siggraph_GliderDesign.pdf" class="external"&gt;paper&lt;/a&gt; outline a method for integrating real-world test results into design constraints for foam board gliders. The researchers built and flew many glider designs while collecting the data. They plug that data into the software and the user can see in real-time what the effects of their design changes have on the glider's trajectory.&lt;/p&gt;
+
+
+	&lt;p&gt;One of the feature requests for CadQuery's FreeCAD module has been to add interactive parameters like there are on ParametricParts.com. This would basically tie a slider control to a variable so that you can slide it around to change parameters. Due to the nature of CadQuery (being Python-based and scripted), it's not beyond the realm of possibility that we could collect data from multiple variations of Yavin's thruster design and use that data to give the user real time feedback on both the theoretical and measured (but interpolated) characteristics of the thruster model.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/954?r=1086#message-1086"/>
+    <id>http://opendesignengine.net/boards/50/topics/954?r=1086#message-1086</id>
+    <updated>2015-10-26T15:46:03+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Pint has been embedded with the CadQuery module for FreeCAD to ensure that users have easy access to units handling.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://github.com/jmwright/cadquery-freecad-module/issues/64"&gt;https://github.com/jmwright/cadquery-freecad-module/issues/64&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Everyone who wants to work on the CAD for Yavin should upgrade to the latest commit of the module. You can download the latest commit &lt;a href="https://github.com/jmwright/cadquery-freecad-module/archive/master.zip" class="external"&gt;here&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/954?r=1078#message-1078"/>
+    <id>http://opendesignengine.net/boards/50/topics/954?r=1078#message-1078</id>
+    <updated>2015-10-13T10:43:04+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;CQ-02 was created to address a shortfall in CadQuery that would have kept us from properly drawing the outline of the entire thruster nozzle-chamber assembly. The fix for that is now waiting for comment in a CadQuery pull request, and I expect it to be merged with only minor adjustments, if any.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://github.com/dcowden/cadquery/issues/102#issuecomment-147520375"&gt;https://github.com/dcowden/cadquery/issues/102#issuecomment-147520375&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/50/topics/954?r=1029#message-1029"/>
+    <id>http://opendesignengine.net/boards/50/topics/954?r=1029#message-1029</id>
+    <updated>2015-07-29T22:52:25+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Had a doh! moment after I posted the last section. FreeCAD couldn't section the injector plate/ring because it wasn't an enclosed solid. Here's a better section view of everything.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/attachments/download/573" alt="" /&gt;&lt;/p&gt;    </content>
+  </entry>
+</feed>

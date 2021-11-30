@@ -1,0 +1,19 @@
+Index: layout.html
+===================================================================
+--- layout.html	(revision 107)
++++ layout.html	(revision 108)
+@@ -175,6 +175,14 @@
+        console.log('WebSocket Error');
+        {% endif %}
+      };
++
++     $(document).ready(function() {
++       // set up enabled button event listener
++       holoseatEventListeners.push({eventType : "enabledChange",
++                                    handle : function(message) {
++                                      setHoloseatEnableButton(message.enabled);
++                                    }});
++                      });
+   </script>
+   {% block scriptCode %}{% endblock %}
+ </body>

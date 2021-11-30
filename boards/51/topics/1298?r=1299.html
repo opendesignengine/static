@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere Mk 3 - Comments from technical review - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere3.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere3.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere Mk 3</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/groundsphere3.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/groundsphere3/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/groundsphere3/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/groundsphere3.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/groundsphere3/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/groundsphere3/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/groundsphere3/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/groundsphere3/boards.html">Forums</a> » <a href="../../../projects/groundsphere3/boards/51.html">Main</a> » </p>
+
+<div class="contextual">
+    <span class="message-1298-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Comments from technical review</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/392.html" class="icon icon-contributor-license">Skylar Hoffert</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2017-12-06.html" title="12/06/2017 01:38 am">almost 5 years</a> ago</span></p>
+<div class="wiki">
+<p>Review was performed based on revision 74 found here: <a class="external" href="https://opendesignengine.net/projects/groundsphere3/repository/revisions/74">https://opendesignengine.net/projects/groundsphere3/repository/revisions/74</a></p>
+
+
+	<p>Updated version is revision 76 found here: <a class="external" href="https://opendesignengine.net/projects/groundsphere3/repository/revisions/76">https://opendesignengine.net/projects/groundsphere3/repository/revisions/76</a></p>
+
+
+	<p>Notes from review with Zach Leffke on December 5, 2017<br />Participants: Sky Hoffert, Monty Noblezada, Zach Leffke<br />Date:         December 5, 2017<br />Time:         1:30 p.m.</p>
+
+
+	<p>Shoutout for an additional antenna design<br /> - Quadrafiler Helical Antenna (QFHA) (SRQFHA)<br /> - > Closer to circular polarization at low elevation angles (less loss)<br /> - > Polarization harness (exotic coax impedance) is not needed compared to eggbeater<br /> - > though this antenna is very narrowband</p>
+
+
+	<p>Comments:<br />Implementation loss should be in the receiver, not the transmitter</p>
+
+
+	<p>Assumed values<br />Receiver antenna gain should be better referenced (include "Reasonable Assumption")<br /> - M^2 has a site<br /> - > model # EB144<br /> - Same for required ebno<br /> - Same for system noise figure</p>
+
+
+	<p>Maybe define noise bandwidth a little better</p>
+
+
+	<p>Maybe another section for specific notes on values in the first test case docs</p>
+
+
+	<p>Add a reference section<br /> - Zach (as a hobbyist) is interested in references</p>
+
+
+	<p>Equation for required ebno<br /> - Should be minus a negative value - modify above</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (1)</h3>
+
+  <div class="message reply" id="message-1299">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1298%3Fr=1299.html#message-1299">RE: Comments from technical review</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2017-12-06.html" title="12/06/2017 02:17 am">almost 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>You are correct, but the tradeoff was that a quadrafilar (QFHA) antenna has a dip in the gain at the top (top blind), and while the antenna does have better performance at lower elevations, the free space propagation loss (FSPL) made reception at this angle largely impossible.</p>
+
+
+	<p>If a better LNA was available, such as a 2 stage unit at +30dB a piece with a sufficiently low noise figure, the dip in antenna gain at zenith would offset the reduction of FSPL, while the higher preamp gain would allow the QFHA to pull in the signals at low elevation angles.  This equipment is available at 2.4GHz or higher, but at the 915MHz ISM band, which Skycube used, the preamps available were the limiting factor, as was the cost.</p>
+
+
+	<p>Anyone who wants the 90 ohm cable, email me at <a class="email" href="mailto:aharper@aheadmaterials.com">aharper@aheadmaterials.com</a> with the desired length.  I have 442 feet available, all you need to do is cover postage.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-1/1)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1298.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

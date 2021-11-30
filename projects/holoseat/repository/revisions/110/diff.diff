@@ -1,0 +1,423 @@
+Index: trunk/app-src/holoseat/api/__init__.py
+===================================================================
+--- trunk/app-src/holoseat/api/__init__.py	(revision 109)
++++ trunk/app-src/holoseat/api/__init__.py	(revision 110)
+@@ -4,7 +4,7 @@
+ # other imports
+ import threading
+ from concurrent.futures import ThreadPoolExecutor
+-from holoseat.util import holoseatSerial
++from holoseat.util import holoseatDevice
+ 
+ apiConfig = { 'uiPort' : 8000,
+               'apiPort' : 8080,
+@@ -13,7 +13,7 @@
+ apiThreadPool = ThreadPoolExecutor()
+ 
+ def connectedOrConnect():
+-    return holoseatSerial.connected() or holoseatSerial.connect()
++    return holoseatDevice.connected() or holoseatDevice.connect()
+ 
+ # package imports now that the package variables are declared
+ from holoseat.api.apiHandler import apiHandler
+Index: trunk/app-src/holoseat/api/socketHandler.py
+===================================================================
+--- trunk/app-src/holoseat/api/socketHandler.py	(revision 109)
++++ trunk/app-src/holoseat/api/socketHandler.py	(revision 110)
+@@ -1,7 +1,7 @@
+ from tornado import websocket
+ from holoseat.util import getHost
+ from holoseat.api import apiConfig, connectedOrConnect
+-from holoseat.util import holoseatSerial
++from holoseat.util import holoseatDevice
+ from tornado import web, gen
+ 
+ socketClients = []
+@@ -23,13 +23,13 @@
+ def SendMessages():
+     # make sure we have all the data in the serial buffer
+     connectedOrConnect()
+-    data = holoseatSerial.readData()
++    data = holoseatDevice.readData()
+     while (data):
+-        data = holoseatSerial.readData()
++        data = holoseatDevice.readData()
+ 
+     # for each line of data, send a message to each socket client
+-    message = holoseatSerial.popData()
++    message = holoseatDevice.popData()
+     while (message):
+         for client in socketClients:
+             client.write_message(message)
+-        message = holoseatSerial.popData()
++        message = holoseatDevice.popData()
+Index: trunk/app-src/holoseat/api/apiHandler.py
+===================================================================
+--- trunk/app-src/holoseat/api/apiHandler.py	(revision 109)
++++ trunk/app-src/holoseat/api/apiHandler.py	(revision 110)
+@@ -2,7 +2,7 @@
+ from concurrent.futures import ThreadPoolExecutor
+ from tornado.concurrent import run_on_executor
+ from tornado import web, gen, escape
+-from holoseat.util import holoseatSerial
++from holoseat.util import holoseatDevice
+ import json
+ import serial
+ 
+@@ -16,7 +16,7 @@
+ 
+     @run_on_executor(executor="_threadPool")
+     def execCommand(self, command):
+-        return json.loads(holoseatSerial.execCommand(command))
++        return json.loads(holoseatDevice.execCommand(command))
+ 
+     @web.asynchronous
+     @gen.coroutine
+@@ -30,7 +30,7 @@
+ 
+                 # check for errors
+                 if ('Error' in results):
+-                    holoseatSerial.disconnect()
++                    holoseatDevice.disconnect()
+                     self.set_status(status.HTTP_500_INTERNAL_SERVER_ERROR)
+                     self.write(results)
+                     self.finish()
+@@ -41,7 +41,7 @@
+                 self.finish()
+                 return
+             except serial.serialutil.SerialException as e:
+-                holoseatSerial.disconnect()
++                holoseatDevice.disconnect()
+                 self.set_status(status.HTTP_503_SERVICE_UNAVAILABLE)
+                 response = {
+                     'ConnectionError': 'Lost connection to Holoseat',
+Index: trunk/app-src/holoseat/util/restserial.py
+===================================================================
+--- trunk/app-src/holoseat/util/restserial.py	(revision 0)
++++ trunk/app-src/holoseat/util/restserial.py	(revision 110)
+@@ -0,0 +1,127 @@
++"""REST Serial - client class to map REST style API to serial protocols.
++
++TODO
++    Add info on mapping, examples, and requirements on the serial protocols.
++"""
++
++import serial
++from serial.tools import list_ports
++from collections import deque
++import json
++import threading
++from uuid import uuid4
++
++class RestSerialDevice:
++    def __init__(self):
++        self.device = serial.Serial()
++        self.lock = threading.RLock()
++        self.data = deque([])
++
++    def sendCommand(self, cmd):
++        return self.device.write(cmd.encode('utf-8'))
++
++    def readResultLine(self):
++        return self.device.readline().decode("utf-8").strip()
++
++    def connected(self):
++        # check to see if we think the com port is connected
++        if self.device.is_open:
++            try:
++                # then check to see if we can actually talk to device
++                temp = self.device.in_waiting
++            except serial.serialutil.SerialException as e:
++                # if not, then close the device
++                disconnect()
++
++        # either way, is_open is now the true state of the device
++        return self.device.is_open
++
++    def readData(self, messageId=None):
++        with self.lock:
++            result = None
++            while (self.connected() and self.device.in_waiting):
++                tempResult = self.readResultLine()
++                if (tempResult):
++                    tempResultJson = json.loads(tempResult)
++                    if ('Error' in tempResultJson):
++                        result = tempResult
++                    if (messageId and ('messageId' in tempResultJson)
++                        and (tempResultJson['messageId'] == messageId)):
++                        result = tempResult
++                    self.data.append(tempResult)
++
++            # return None if we did not read a result matching the messageId
++            return result
++
++    def popData(self):
++        with self.lock:
++            if (len(self.data)):
++                return self.data.popleft()
++            return None
++
++    def execCommand(self, cmd):
++        with self.lock:
++            messageId = ""
++            if ('messageId' in cmd):
++                messageId = cmd['messageId']
++            else:
++                messageId = uuid4().hex
++                cmd['messageId'] = messageId
++
++            self.sendCommand(json.dumps(cmd))
++
++            # wait for the result to come back
++            result = None
++            while not(result):
++                result = self.readData(messageId)
++
++            return result
++
++    def findDevicePort(self):
++        comPorts = list_ports.comports()
++        for comPort in comPorts:
++            vid = format(comPort.vid, 'X')
++            pid = format(comPort.pid, 'X')
++
++            # check for Alpha Controller (aka - Adafruit Feather 324u)
++            deviceIdCheck = self.checkDeviceId(vid, pid)
++            if deviceIdCheck:
++                deviceIdCheck['comPort'] = comPort.device
++                return deviceIdCheck
++
++        # we iterated over all available com ports and did not find device
++        return None
++
++    def checkDeviceId(self, vid, pid):
++        """Override this method to provide expected version data from device
++        based on USB VID/PID pair.  VID and PID are formatted as upper case hex
++        values without leading 0x (e.g. 0x1234 is 1234)."""
++        return None
++
++    def connect(self):
++        devicePortInfo = self.findDevicePort()
++        if not(devicePortInfo):
++            return False  # no appropriate devices connected to USB
++
++        self.device.port = devicePortInfo['comPort']
++        try:
++            self.device.open()
++            ready = self.checkDeviceInfo(devicePortInfo)
++            if not ready:
++                self.disconnect()
++            return ready
++
++        except serial.serialutil.SerialException as e:
++            return False  # device not accessible
++
++    def checkDeviceInfo(self, devicePortInfo):
++        """Override this method to provide to verify expect version info and
++        perform other application specific initialization.
++
++        Note:
++            Do not disconnect on error in this method."""
++        return False
++
++    def disconnect():
++        self.device.close()
++        self.device.port = None
+Index: trunk/app-src/holoseat/util/holoseatSerial.py
+===================================================================
+--- trunk/app-src/holoseat/util/holoseatSerial.py	(revision 109)
++++ trunk/app-src/holoseat/util/holoseatSerial.py	(revision 110)
+@@ -1,138 +1,53 @@
++from holoseat.util import restserial
+ import serial
+-from serial.tools import list_ports
+-from collections import deque
+ import json
+-import threading
+-from uuid import uuid4
+ 
+-# set up the serial port for Holoseat comms
+-holoseat = serial.Serial()
+-holoseat.baudrate = 115200
+-holoseat.bytesize = serial.EIGHTBITS
+-holoseat.parity = serial.PARITY_NONE
+-holoseat.stopbits = serial.STOPBITS_ONE
+-holoseat.timeout = 5 # 5 second timeout for comms with Holoseat
++class holoseatSerialDevice(restserial.RestSerialDevice):
++    def __init__(self):
++        super().__init__()
++        self.device.baudrate = 115200
++        self.device.bytesize = serial.EIGHTBITS
++        self.device.parity = serial.PARITY_NONE
++        self.device.stopbits = serial.STOPBITS_ONE
++        self.device.timeout = 5 # 5 second timeout for comms with Holoseat
+ 
+-# data queue objects
+-lock = threading.RLock()
+-data = deque([])
+-
+-def sendCommand(cmd):
+-    return holoseat.write(cmd.encode('utf-8'))
+-
+-def readResultLine():
+-    return holoseat.readline().decode("utf-8").strip()
+-
+-def connected():
+-    # check to see if we think the com port is connected
+-    if holoseat.is_open:
+-        try:
+-            # then check to see if we can actually talk to holoseat
+-            temp = holoseat.in_waiting
+-        except serial.serialutil.SerialException as e:
+-            # if not, then close the connection
+-            disconnect()
+-
+-    # either way, is_open is now the true state of the connection
+-    return holoseat.is_open
+-
+-def readData(messageId=None):
+-    with lock:
+-        result = None
+-        while (connected() and holoseat.in_waiting):
+-            tempResult = readResultLine()
+-            if (tempResult):
+-                tempResultJson = json.loads(tempResult)
+-                if ('Error' in tempResultJson):
+-                    result = tempResult
+-                if (messageId and ('messageId' in tempResultJson)
+-                    and (tempResultJson['messageId'] == messageId)):
+-                    result = tempResult
+-                data.append(tempResult)
+-
+-        # return None if we did not read a result matching the messageId
+-        return result
+-
+-def popData():
+-    with lock:
+-        if (len(data)):
+-            return data.popleft()
+-        return None
+-
+-def execCommand(cmd):
+-    with lock:
+-        messageId = ""
+-        if ('messageId' in cmd):
+-            messageId = cmd['messageId']
+-        else:
+-            messageId = uuid4().hex
+-            cmd['messageId'] = messageId
+-
+-        sendCommand(json.dumps(cmd))
+-
+-        # wait for the result to come back
+-        result = None
+-        while not(result):
+-            result = readData(messageId)
+-
+-        return result
+-
+-def findHoloseatPort():
+-    comPorts = list_ports.comports()
+-    for comPort in comPorts:
+-        vid = format(comPort.vid, 'X')
+-        pid = format(comPort.pid, 'X')
+-
++    def checkDeviceId(self, vid, pid):
+         # check for Alpha Controller (aka - Adafruit Feather 324u)
+         if (vid == '239A' and pid == '800C'):
+-            return { 'comPort': comPort.device,
+-                     'expectedHwVer' : ['v0.4'],
++            return { 'expectedHwVer' : ['v0.4'],
+                      'expectedDevice': 'Holoseat Alpha' }
+ 
+         # check for v1.0+ (aka Holoseat vid/pid)
+         if (vid == '1209' and pid == 'B058'):
+-            return { 'comPort': comPort.device,
+-                     'expectedHwVer' : ['v1.0'],
++            return { 'expectedHwVer' : ['v1.0'],
+                      'expectedDevice' : 'Holoseat' }
+ 
+-    # we iterated over all available com ports and did not find Holoseat
+-    return None
++        # no valid device, return None
++        return None
+ 
+-def connect():
+-    holoseatPort = findHoloseatPort()
+-    if not(holoseatPort):
+-        return False  # no Holoseat Controllers connected to USB
+-
+-    holoseat.port = holoseatPort['comPort']
+-    try:
+-        holoseat.open()
+-
++    def checkDeviceInfo(self, devicePortInfo):
+         # get device name
+-        deviceResults = json.loads(execCommand({"uri":"/main/devicename","verb":"GET"}))
++        deviceResults = json.loads(self.execCommand({"uri":"/main/devicename","verb":"GET"}))
+ 
+         # check for errors
+         if ('Error' in deviceResults):
+-            disconnect()
+             print('Error: %s' % deviceResults['Error'])
+             return False
+ 
+         # check result, is this Holoseat?
+-        if (deviceResults['deviceName'] != holoseatPort['expectedDevice']):
+-            disconnect()
++        if (deviceResults['deviceName'] != devicePortInfo['expectedDevice']):
+             return False
+ 
+         # retrieve version info
+-        versionResults = json.loads(execCommand({"uri":"/main/version","verb":"GET"}))
++        versionResults = json.loads(self.execCommand({"uri":"/main/version","verb":"GET"}))
+ 
+         # check for errors
+         if ('Error' in versionResults):
+-            disconnect()
+             print('Error: %s' % versionResults['Error'])
+             return False
+ 
+         # is this the expected HW version?
+-        if not(versionResults['hwVer'] in holoseatPort['expectedHwVer']):
+-            disconnect()
++        if not(versionResults['hwVer'] in devicePortInfo['expectedHwVer']):
+             return False
+ 
+         # TODO - is this a compatible FW version?
+@@ -140,18 +55,10 @@
+         # TODO - is this the compatible HSP version?
+ 
+         # tell holoseat to echo out all status events to sync up any connected clients
+-        eventsResults = json.loads(execCommand({"uri":"/lowlevel/events","verb":"GET"}))
++        eventsResults = json.loads(self.execCommand({"uri":"/lowlevel/events","verb":"GET"}))
+         if ('Error' in eventsResults):
+-            disconnect()
+             print('Error: %s' % eventsResults['Error'])
+             return False
+ 
+         # passed all tests, we can talk to this Holoseat
+         return True
+-    except serial.serialutil.SerialException as e:
+-        return False  # Holoseat not accessible
+-
+-
+-def disconnect():
+-    holoseat.close()
+-    holoseat.port = None
+Index: trunk/app-src/holoseat/util/__init__.py
+===================================================================
+--- trunk/app-src/holoseat/util/__init__.py	(revision 109)
++++ trunk/app-src/holoseat/util/__init__.py	(revision 110)
+@@ -1,8 +1,10 @@
+ import socket
+ from contextlib import closing
+ 
+-from holoseat.util import holoseatSerial
++from holoseat.util import holoseatSerial, restserial
+ 
++holoseatDevice = holoseatSerial.holoseatSerialDevice()
++
+ # from https://stackoverflow.com/a/45690594
+ def findFreePort():
+     with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:

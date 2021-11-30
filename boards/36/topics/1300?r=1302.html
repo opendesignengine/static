@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Design notes on development of v1 Alpha Housings - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1300-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Design notes on development of v1 Alpha Housings</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-01-23" title="01/23/2018 12:15 am">almost 5 years</a> ago</span></p>
+<div class="wiki">
+<p>This post will be my running notebook of work to desig prototype housings for the v1 Holoseat Alpha.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (6)</h3>
+
+  <div class="message reply" id="message-1301">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1300%3Fr=1301.html#message-1301">RE: Design notes on development of Sensor Housing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-01-23" title="01/23/2018 12:25 am">almost 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Initial research</p>
+
+
+	<ul>
+	<li><a href="https://en.wikipedia.org/wiki/Engineering_fit#Types_of_fit" class="external">Wiki article including info on tolerances</a></li>
+		<li>Some Links on 3D printed parts
+	<ul>
+	<li><a class="external" href="https://i.materialise.com/3d-printing-materials/abs/design-guide">https://i.materialise.com/3d-printing-materials/abs/design-guide</a></li>
+		<li><a class="external" href="http://www.printrbottalk.com/forum/viewtopic.php?f=20&#38;t=4912">http://www.printrbottalk.com/forum/viewtopic.php?f=20&#38;t=4912</a></li>
+	</ul></li>
+	</ul>
+
+
+	<p>Some quick conclusions</p>
+
+
+	<ul>
+	<li>Looking to create a transition fit for the two parts of the sensor housing</li>
+		<li>Going to start with the i.materialize min wall thickness (1mm) and min clearance (0.3mm in narrative vs design specs table)</li>
+		<li>Going to start with a base thickness of 2mm for added structure</li>
+		<li>If needed, will increase thicknesses in 0.5mm steps</li>
+		<li>Plan to print with my standard settings (may switch to 100% fill)</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1302">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1300%3Fr=1302.html#message-1302">RE: Design notes on development of Sensor Housing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-01-23" title="01/23/2018 12:33 am">almost 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>After taking some initial measurements, going to use 1.5mm wall thicknesses to match dimensions related to the jack.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1303">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1300%3Fr=1303.html#message-1303">RE: Design notes on development of Sensor Housing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-01-23" title="01/23/2018 12:38 am">almost 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Board dimensions = 12.8mm x 17.8mm<br />Total clearance = 0.3mm<br />Wall thickness = 1.5mm * 2 = 3mm<br />Total outer dimensions for box around board = 16.1mm x 21.1mm<br />Total inner dimensions for box around board = 13.1mm x 18.1mm</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1304">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1300%3Fr=1304.html#message-1304">RE: Design notes on development of Sensor Housing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-01-23" title="01/23/2018 01:35 pm">almost 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Clearance for upper half = 1mm</p>
+
+
+	<p>Finished first revision last night. Still to do:</p>
+
+
+	<ol>
+	<li>consider reducing upper half clearance</li>
+		<li>determine required height to align with tone ring when mounted on pedals</li>
+		<li>document printer/slicer settings (first in this thread)</li>
+		<li>publish cad files</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1306">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1300%3Fr=1306.html#message-1306">RE: Design notes on development of Sensor Housing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2018-01-26.html" title="01/26/2018 09:21 pm">almost 5 years</a> ago
+  </h4>
+  <div class="wiki"><p><a href="https://knowledge.autodesk.com/support/fusion-360/troubleshooting/caas/sfdcarticles/sfdcarticles/How-to-share-a-Fusion-360-design.html" class="external">How to share a Fusion 360 design</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1311">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1300%3Fr=1311.html#message-1311">RE: Design notes on development of v1 Alpha Housings</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2018-02-24.html" title="02/24/2018 09:37 pm">over 4 years</a> ago
+  </h4>
+  <div class="wiki"><p>Some helpful tutorials on modeling snapfit cases in Fusion 360</p>
+
+
+	<a name="Square-Cases"></a>
+<h2 >Square Cases<a href="1300%3Fr=1302.html#Square-Cases" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/VVmOtM60VWw?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/VVmOtM60VWw?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+
+
+	<a name="Round-Cases"></a>
+<h2 >Round Cases<a href="1300%3Fr=1302.html#Round-Cases" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/iF_P5ie_b8o?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/iF_P5ie_b8o?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-6/6)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1300.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+h1. History
+
+{{>toc}}
+
+The Ground Sphere projects have a rich history at Mach 30, starting with a question from Mach 30 contributor Aaron Harper leading all the way to the current generation Ground Sphere intended for receiving signals from the International Space Station.
+
+h2. Mk 1
+
+<insert brief history (with photos) of the first GS that Aaron built and shipped to New Space>
+
+h2. Mk 2
+
+<insert continued story (with photos and link to project) of the SkyCube GS>
+
+h2. Mk 3
+
+<insert story and goal of Mk 3 (with logo), happy hour, Perigee, etc>

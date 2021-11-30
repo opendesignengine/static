@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - v1.0 - SEP Step 10 - Testing - Data Acquisition (DAQ) - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-237-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>v1.0 - SEP Step 10 - Testing - Data Acquisition (DAQ)</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-13.html" title="09/13/2012 11:16 pm">about 10 years</a> ago</span></p>
+<div class="wiki">
+<p>The Shepard DAQ setup now writes it's data to disk, and the total sample rate for the thrust and temperature sensors being sent over serial is 15 samples/second. J has commented that number sounds reasonable based on another test that he saw with an Arduino at Dayton Diode. This should get us a representative thrust curve, but is nowhere near the 500 to 1000 samples per second that are in the requirements document for version 1.0.</p>
+
+
+	<p>The last thing to do before our tests at Club Cyberia on Saturday is calibration. To that end, I've created a simple Processing app that just displays the raw 0-1023 value from the FSR, and also scales it to the voltage. Hopefully I'll get a chance to do the calibration tomorrow.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (6)</h3>
+
+  <div class="message reply" id="message-241">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="237%3Fr=241.html#message-241">RE: v1.0 - SEP Step 10 - Testing - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-14.html" title="09/14/2012 11:18 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Well I'm not very happy with the calibration, but we've got one now. You can see the data <a href="https://docs.google.com/spreadsheet/pub?key=0Al8J64MIFuTbdGI1SVVFNEtVME51S0NUVHY1czBYOFE&#38;single=true&#38;gid=0&#38;output=html" class="external">here</a></p>
+
+
+	<p>I didn't have a proper mass set, so I used heavy bolt washers. This only took me up to 0.5 kg which is only a fraction of the FSR's range, and trying to add more weight with whatever I had laying around left me with the suspicious outlier in row 16.</p>
+
+
+	<p>The FSR exhibited the same upward drift in its values that J and I noticed the first time we worked with it at Club Cyberia. This makes it harder to calibrate precisely.</p>
+
+
+	<p>Once I had the values, I dropped the outlier, did an X-Y scatter chart in Libre Office, and fit a linear equation to the values. I then used that equation in the Processing app to convert between the raw 0-1023 value and the number of Newtons.</p>
+
+
+	<p>It seems like the FSR is reading low, but we'll find out for sure tomorrow. I never have been able to max out the raw value for the FSR on the Arduino, so maybe that's what I'm seeing. Before any serious motor testing is preformed with this test stand the FSR needs to be calibrated with a proper mass set that can get us up to the equivalent of 30 Newtons. Then we can see if we can fit a better equation to the the FSRs output.</p>
+
+
+	<p>Obviously, a lot more time needs to be spent with this than I have right now.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-242">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="237%3Fr=242.html#message-242">RE: v1.0 - SEP Step 10 - Testing - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-15.html" title="09/15/2012 07:30 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I didn't really think my statement through about maxing out the FSR's raw value last night. We're feeding the ADC's max voltage into a voltage divider (to be able to sample the FSR's change in resistance) before the ADC reads it, so of course we're never going to see the max value.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-243">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="237%3Fr=243.html#message-243">RE: v1.0 - SEP Step 10 - Testing - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-15.html" title="09/15/2012 08:48 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Good work.  I think this just puts the nail in the coffin for the FSR (even on a low cost demo test stand).  After we get back from the Summit, we will need to look at other alternatives for the thrust sensor.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-245">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="237%3Fr=245.html#message-245">RE: v1.0 - SEP Step 10 - Testing - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-15.html" title="09/15/2012 07:08 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I  have been watching the progress here, and it looks like you have been doing a great job of keeping cost down and keeping construction simple.  Replacing the FSR with a real load-cell type sensor increases the cost by ~$50.  Have you tested the hysteresis of the drawer slide?  That should be a simple matter of determining the mass of the moving assembly, then carefully measuring the angle to which the base can be tilted before the slide moves.  Several trials in each direction at several positions near the senor (but without hitting it) should give a good look at the magnitude and variability of slide hysteresis.  If the slide is a problem, the engine mount assembly could be suspended from 4 pieces of small music wire, which would totally eliminate hysteresis, somewhat at the expense of lateral stability.</p>
+
+
+	<p>Another possibility would be to suspend the engine mount assembly with strips of spring-steel with strain gauges.</p>
+
+
+	<p>A collection of links:<br />Force Sensor:<br /><a class="external" href="http://www.digikey.com/product-detail/en/FC2231-0000-0010-L/MSP6948-ND/809394">http://www.digikey.com/product-detail/en/FC2231-0000-0010-L/MSP6948-ND/809394</a></p>
+
+
+	<p>Strain Gauge:<br /><a class="external" href="http://www.digikey.com/product-detail/en/CEA-06-250UN-350/1033-1009-ND/2503700">http://www.digikey.com/product-detail/en/CEA-06-250UN-350/1033-1009-ND/2503700</a><br /><a class="external" href="http://www.omega.com/ppt/pptsc.asp?ref=Prewired_GP_Strain_KFG&#38;Nav=pree02">http://www.omega.com/ppt/pptsc.asp?ref=Prewired_GP_Strain_KFG&#38;Nav=pree02</a></p>
+
+
+	<p><a class="external" href="http://www.meas-spec.com/force-sensors.aspx">http://www.meas-spec.com/force-sensors.aspx</a></p>
+
+
+	<p>Sales Representatives<br />D-M Associates, LLC<br />Brian Sanford<br />105 N. State St.<br />Westerville, OH 43081<br />United States<br />+1-614-682-5000<br />+1-614-682-5290 fax<br /><a class="external" href="http://www.dmassociatesllc.com">www.dmassociatesllc.com</a><br /><a class="email" href="mailto:sales@dmassociatesllc.com">sales@dmassociatesllc.com</a><br />Products: Fluid, Force, Humidity, Photo Optic, Piezo, Position, Pressure, Temperature, Torque, Traffic<br />Territories: Indiana, Kentucky, Michigan, Ohio, Western Pennsylvania (zip codes 15000-16799), West Virginia</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-246">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="237%3Fr=246.html#message-246">RE: v1.0 - SEP Step 10 - Testing - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-15.html" title="09/15/2012 10:28 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks Ben.</p>
+
+
+	<p>I'm not quite sure why the hysteresis of the drawer slide would affect the measurements. Can you explain that a little more?</p>
+
+
+	<p>Thanks for the links. J and I were just talking today about the fact that we're going to need to switch out the FSR for something like a strain gauge. I still feel that the FSR was worth trying, but the drift under static load (during calibration) is enough to take it out of the running.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-248">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="237%3Fr=248.html#message-248">RE: v1.0 - SEP Step 10 - Testing - Data Acquisition (DAQ)</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-09-15.html" title="09/15/2012 11:22 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>It is true that the FSR requires very little motion to sense force.  But still, some displacement is required, else there would be no need for a slide mechanism at all.  So is the motion of the drawer slide elastic or rolling?  If elastic then the modulus will affect calibration, if rolling then hysteresis will be a problem if the magnitude of the force vector in line with the slide is significant with respect to the force being measured. Elastic response can be compensated in calibration, but I suspect that the the drawer slide response is more rolling than elastic even though the displacement is very small. Try feeling the motion of the drawer slide with very light touch of a single finger.  Is it smooth, and is the force &lt;0.03n? I can easily imagine a drawer slide being a major contributor to instability and non-linearity.</p>
+
+
+	<p>On the other hand, consider 4 pieces of 0.25mm music wire, each about an inch long and terminated with small ring-type electrical lugs.  Construct a frame above the engine mount assembly and hang the engine mount assembly from the frame using the 4 pieces of music wire at the corners so that the engine mount is just touching the FSR, and the terminals on the music wire are rigidly mounted to their respective components (all 8 of the screws are tight).  That would guarantee elastic response and the modulus would be small enough to have only a slight effect upon calibration.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-6/6)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/237.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

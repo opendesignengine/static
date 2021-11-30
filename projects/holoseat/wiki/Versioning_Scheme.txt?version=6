@@ -1,0 +1,104 @@
+h1. Versioning Scheme
+
+{{toc}}
+
+h2. Terms
+
+|hw|Hardware|The physical components of Holoseat which are encumbered with version related compatibility concerns|
+|sw|Software|The user application and the REST API|
+|fw|Firmware|The code running on the controller itself interacting with the sensors and the game|
+
+h2. Goals
+
+# Ensure only compatible versions of hw/sw/fw are connected to one another so users do not experience issues stemming from compatibility mismatch
+# It should be easy to identify a compatible set of hw/sw/fw from version their numbers
+# Bring consistency and rigor to versioning process moving forward
+
+h2. Assumptions
+
+# hw rarely changes
+# hw changes only occur as part of production runs
+# hw includes all electro-mechanical elements of the system (so sensor and tone ring are hw, but bike pedals are generally not since they are interchangeable)
+# fw is coupled to hw (hw must support the fw access to sensors, etc) and to sw (sw uses the HSP in the fw to implement REST API and to interact with the hw)
+# Looking for a scheme where parallel version numbers across hw/sw/fw indicate compatibility
+
+h2. Defining Levels of Versioning
+
+* Version numbers may be multi-digit, aka, v1.0.9 does not automatically become v1.1.0 on next patch, it becomes v1.0.10
+* Product - the top most level of compatibility grouping, defined by the principle capability set.  There is no expectation of hw/sw/fw compatibility between products.  Each product has its own version history.  Examples of products:
+** Holoseat (standard) - current development effort, requires a PC for use, emulates HID devices but does not proxy for HID devices.  Not suitable for consoles.  May require additional software (such as key mapper) for users who wish to achieve similar results to proxying HID devices
+** Holoseat Advanced - next major development effort, utilizes system on a chip to replace need for PC and to implement HID proxy.  Will enable use of Holoseat with consoles.
+* Major - a version of a product with significant feature changes from the previous version of the same product.  There is no expectation of hw/sw/fw compatibility between major versions.  Major versions should be reserved for introduing changes that require hardware upgrades (e.g. changing the type of sensor used or the number of poles in a tone ring) but don’t fundamentally change the nature of the product (e.g. the same capability but implemented in a new manor or adding new way to support the capability, specifically in a way that does not require a new architecture for the system).  
+** Adding BLE to the standard Holoseat so it can connect to tablets or phones would be a major version change as it requires a hardware upgrade, but that upgrade just means adding a new outbound HID path which is in line with the existing architecture. 
+** Supporting proxy for HID devices would be a product change as it means adding an inbound HID path and all the code and potential hw needed to implement the proxy behavior.
+* Minor - a version of a product with incremental feature changes (e.g. additions or marking of existing features as deprecated) not requiring a hardware change.  Used to bring improved experience to existing users.
+* Patch - a version which does not add any new behaviors.  Used to introduce bug fixes or refinements.  Patch level should never impact compatibility.
+
+h2. Versioning Matrix
+
+||*Product*|*Major*|*Minor*|*Patch*|
+|hw|Determined by USB VID/PID|Identified in hardware by version resistor|Not Used|Identified by physical markings|
+|sw|Identified by string constant|\3. Identified by string constant of form Major.Minor.Patch| 
+|fw|Identified by string constant|\3. Identified by string constant of form Major.Minor.Patch| 
+
+h2. Compatibility Rules
+
+* sw/fw is compatible with hw if and only if the product and major version match
+* sw and fw are compatible iif their product, major, and minor versions all match.  In other words, any new features in sw or fw will require cutting new version of the other even if it is just to keep versions in sync (though most new features not requiring hw changes, and in turn a major version release, are expected to require updates to the sw and fw, so  this requirement is not expected to be a burden)
+* Patch releases must always be compatible based on the above rules and will not be used in compatibility verification
+* At a glance, hw/sw/fw are a compatible set if
+** Product ID matches across all three elements
+** Major version matches across all three elements
+** Major and minor versions match between sw and fw
+** Example of compatible hw/sw/fw 
+*** hw reports: Holoseat v1
+*** sw reports: Holoseat v1.2.1
+*** fw reports: Holoseat v1.2.2
+** Example of incompatible hw/sw/fw 
+*** hw reports: Holoseat v2
+*** sw reports: Holoseat Advanced v1.0.0
+*** fw reports: Holoseat Advanced v1.0.1
+
+h2. Compatibility verification
+
+* hw will include a resistor to electrically identify its major version number and its product ID will be determined from "the USB VID/PID":https://arduino.stackexchange.com/questions/4709/get-board-vid-and-board-pid-value-in-code
+** Product identification can include an optional release level string to designate alpha, beta, and release hardware (also managed by vid/pid combos)
+** Patch and lot number will be stamped on case and pcb
+* Initial flashing of fw will be a bootstrap fw to return product ID and version number of the hardware to support using standard fw installers that will only run on compatible hw by verifying product ID and major version before installing the fw
+* After initial flashing operation, fw installers will ensure the fw version being installed matches the product and the major version of the hw using the HSP before installing upgrade fw (this is mostly a statement about customer experience, but as noted above we will also rely on it in house after installing bootstrap fw0
+* fw will report product (based on USB VID/PID), hw version (based on hw electrical value), and fw version (based on constant values in fw code)
+* fw will throw an error if its product (also captured as constant value in fw code) does not match hw product or if hw and fw versions are incompatible during calls to get deviceName or get version
+* sw will ensure hw/fw versions are compatible as part of establishing serial connection to hw and throw errors if the hw/fw are incompatible 
+* HSP version will no longer be separately tracked, it will be considered the fw API and in turn tracked by the fw version string
+* The REST API version will not be separately tracked, it will be considered the sw API and in turn tracked by the sw version string
+
+h2. Examples
+
+* Holoseat Alpha - we want Alpha to be fully compatible with the first released product.  Therefore, it must identify itself as the same product ID.  We also want the initial release to be v1, so the Alpha will be v1 so that the sw and fw will remain compatible.  Note, these versions will only be allowed from feather vid/pid combos
+** Hand soldered wing - v1.x.0 on physical labels and v1 electrically
+** Custom pcb wing - v1.x.1 on physical lables (may have additional patch releases if the wings require updates during the Alpha) and still v1 electrically
+* Holoseat initial release - this will be the completely custom pcb in place of feather and wings.  This is the first full commercial release.  All of the following versions must be associated with Holoseat vid/pid combo
+** Initial release - v1.x.? (Where ? is the next number in the patch series) on physical labels, and still v1 electrically
+* sw/fw will immediately begin reporting v1.0.0 as their version numbers and begin enforcing compatibility as possible based on the rules above
+
+h2. Other Notes
+
+* Should collapse device name and version info into a single get versions method reporting (all three report product for easy debugging of incompatibilities, and they are reported even when an error is detected).  Drop v from version strings in API, add it back when displaying to user in UI
+** hw
+*** product
+*** version
+** fw
+*** product
+*** version
+** sw (added by REST call, requires dedicated handler)
+*** product
+*** version
+* Need to work on error propagation/handling in JsonSerial class and fw
+* About page URLs
+** Need to generate URL to wiki version page based on product ID (including secondary id) and major and minor version numbers (to account for sw/fw docs).  Means have to generate a new version page for each release of software, but only certify with Oswha at major versions (so hold off until releases?)
+** Looking for urls like 
+*** wiki/version1_0_Alpha
+*** wiki/version1_0
+*** wiki/version1_1
+*** wiki/version2_0_Alpha
+* Then organize page with anchor tags for hw data, sw data, and fw data and use the version page plus anchor tags to send users to docs about this version of hw, sw, fw.  This new org will also be reflected in the wiki nav bar.

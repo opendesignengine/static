@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Schematics and PCB Files - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../holoseat%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Holoseat"></a>
+<h2 >Holoseat<a href="Schematics_and_PCB_Files%3Fversion=6.html#Holoseat" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/holoseat/repository/entry/trunk/LICENSE.txt" class="external">LICENSE.txt</a></li>
+		<li><a href="Wiki.html" class="wiki-page">Home</a></li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Versions" class="wiki-page">Versions</a>
+	<ul>
+	<li><a href="Versioning_Scheme.html" class="wiki-page">Versioning Scheme</a></li>
+	</ul>
+	</li>
+		<li><ins>Agile Process Docs</ins><br /><em>See <strong><a href="https://opendesignengine.net/projects/holoseat/news" class="external">News</a></strong> feed for weekly status reports</em>
+	<ul>
+	<li><strong><ins>PY 2018</ins></strong><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external">Sprints</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRCZuJwnYll_TmSo-xetofzjQEt3Z7iNpluPzayWbqm2HfYWLipouTmh1opgfWy-x-3OGeM2Cf1irWh/pubhtml" class="external">Alpha Test Program Prep User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlnq6BIMuJN-t3uKjflf_q9u3dXzvch0zEVz9O3335_fPiGyPcJxaRJ8IHz4ErCTIw7QrtPh5d_b50/pubhtml" class="external">Run Alpha Test User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyBqnWyXACEEoG5dThw5szRkVltrdHNvFpyaPqF1sNXHrS_fG1w1g861yqTjjyoL1b9xP2xUtNsFz3/pubhtml" class="external">Finalize v1.0 Design User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-DTjsHW_DTbR0hbIvS1Gl_9ItytNimWamw5wmEJ-8K44NpYyw0eQ4GM91nVI-ZRs2-BbQr-S9EA6Z/pubhtml" class="external">Social Media Engagement User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAt6mXMp1lwvffT9mNiNCXENC3wI47ofl_sATVjadmkgGnJroKbMCChzkZctD-wlNnsREUa0c0YqA-/pubhtml" class="external">Prep Initial Crowdsource Campaign User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQWsqkwJTsFScDjahnQ6AhIpC5Qk-BMsfurWkfxy7SmtSotXtgSvEgCC6uB2d_Hch9PUc41MRd4cwm2/pubhtml" class="external">SyndCon 2018 Prep User Stories</a></li>
+		<li><strong><ins>2017</ins></strong><br /><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/spreadsheets/d/1j_eza96PgV3tMuTy_fypZ4SuCLWP2jLKIEG1HgXg5LA/pubhtml" class="external">Development User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1Q1mnwN-Um-nn47k3GF9SzAEblP1sw7Lwtpq4snxCEXk/pubhtml" class="external">SyndCon User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1GGMKfctxfgl5Ath5ld7SL3lvXx7fN759DRMKXVEJSR4/pubhtml" class="external">Biz User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1UKTSqLvZyH9EIJBt7YSVZoF8krdZYmHjoK1yx6pesQs/pubhtml" class="external">Crowd Source User Stories</a></li>
+		<li><strong><ins>2016</ins></strong> <br /><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTnBFoFpZA4rAainOlzv4E7-PW3-BwjTg9SP0iXHz1XZUCjVF_4WYIWttJyHtO5EhO24pYazn8sL7Jh/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/document/d/e/2PACX-1vSVLmaORZab4QV0ZSy5OUl6lSPx2lNc3gud5nB6WSxNrrxkMu7Kz5zObKeKnP8pw7eghYJY3h_xs99L/pub" class="external">User Stories</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Instructions"></a>
+<h4 >Instructions<a href="Schematics_and_PCB_Files%3Fversion=6.html#Instructions" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="User's_Guide.html" class="wiki-page">User&#x27;s Guide</a>
+	<ul>
+	<li><a href="First_Time_Setup.html" class="wiki-page">First Time Setup</a></li>
+		<li><a href="Operating_Instructions.html" class="wiki-page">Operating Instructions</a></li>
+		<li><a href="Alpha_Patches.html" class="wiki-page">Alpha Patches</a></li>
+	</ul>
+	</li>
+		<li><ins>Assembly Information</ins>
+	<ul>
+	<li><a href="BOM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a>
+	<ul>
+	<li><a href="Controller_Assembly.html" class="wiki-page">Controller Assembly</a></li>
+		<li><a href="Sensor_Assembly.html" class="wiki-page">Sensor Assembly</a></li>
+		<li><a href="Snap_Fit_Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Half Assembly</a><br /><a href="Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Assembly</a> (deprecated)</li>
+		<li><a href="Final_Assembly.html" class="wiki-page">Final Assembly</a></li>
+	</ul>
+	</li>
+		<li><a href="Software_Set_Up.html" class="wiki-page">Software Set Up</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Design-Data"></a>
+<h4 >Design Data<a href="Schematics_and_PCB_Files%3Fversion=6.html#Design-Data" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="http://pid.codes/1209/B058/" title="via pid.codes" class="external">USB PID</a>
+	<ul>
+	<li>VID: 0x1209</li>
+		<li>PID: 0xB058</li>
+	</ul>
+	</li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Project Software</a>
+	<ul>
+	<li><a href="HSP.html" class="wiki-page">Holoseat Serial Protocol</a> <br />(<a href="https://opendesignengine.net/projects/holoseat/wiki/HSP?version=26" class="external">Legacy REST Implementation</a>)</li>
+		<li><a href="HSP_Over_REST_API.html" class="wiki-page">HSP Over REST API</a> </li>
+	</ul>
+	</li>
+		<li><a href="Vendor_Documentation.html" class="wiki-page">Vendor Documentation</a></li>
+	</ul>
+
+
+	<a name="Dev-Team-Links"></a>
+<h4 >Dev Team Links<a href="Schematics_and_PCB_Files%3Fversion=6.html#Dev-Team-Links" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Dev_Team_On_Boarding" class="wiki-page new">Dev Team On Boarding</a> (outline)</li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/CHIP_Setup_Instructions" class="wiki-page new">C.H.I.P. Setup Instructions</a></li>
+	</ul>
+
+
+	<a name="Research"></a>
+<h4 >Research<a href="Schematics_and_PCB_Files%3Fversion=6.html#Research" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Resources.html" class="wiki-page">General Resources</a></li>
+		<li><ins>Technical Resources</ins>
+	<ul>
+	<li><a href="General_Technical_Resources.html" class="wiki-page">General</a></li>
+		<li><a href="ME_Resources.html" class="wiki-page">Mech Eng Resources</a></li>
+		<li><a href="Arduino_Resources.html" class="wiki-page">Arduino Resources</a></li>
+		<li><a href="Bluetooth.html" class="wiki-page">Bluetooth</a></li>
+		<li><a href="HID.html" class="wiki-page">HID</a></li>
+		<li><del><a href="NodeBots_Resources.html" class="wiki-page">NodeBots Resources</a></del></li>
+		<li><del><a href="Raspbery_Pi_Resources.html" class="wiki-page">Raspbery Pi Resources</a></del></li>
+		<li><a href="Python_Resources.html" class="wiki-page">Python Resources</a></li>
+		<li><a href="CHIP_Resources.html" class="wiki-page">C.H.I.P. Resources</a></li>
+	</ul>
+	</li>
+		<li><ins>Biz Resources</ins>
+	<ul>
+	<li><a href="Marketing_Resources.html" class="wiki-page">Marketing Resources</a></li>
+		<li><a href="Start_Up_Resources.html" class="wiki-page">Start Up Resources</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Edit-Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Edit Navigation</a><a href="Schematics_and_PCB_Files%3Fversion=6.html#Edit-Navigation" class="wiki-anchor">&para;</a></h3>
+
+<h3>Wiki</h3>
+
+<a href="../../holoseat%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-190-watcher"></span>
+
+
+
+
+
+
+<a href="Schematics_and_PCB_Files/history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+
+    <p>
+    <a href="Schematics_and_PCB_Files%3Fversion=5.html">« Previous</a> - 
+    Version 6/7
+    (<a href="http://opendesignengine.net/projects/holoseat/wiki/Schematics_and_PCB_Files/diff/6">diff</a>) - 
+    <a href="Schematics_and_PCB_Files%3Fversion=7.html">Next »</a> - 
+    <a href="Schematics_and_PCB_Files.html">Current version</a>
+    <br />
+    <em><a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a>, 12/23/2016 02:04 pm </em><br />
+    
+    </p>
+    <hr />
+
+
+<div class="wiki">
+  <a name="Schematics-and-PCB-Files"></a>
+<h1 >Schematics and PCB Files<a href="Schematics_and_PCB_Files%3Fversion=6.html#Schematics-and-PCB-Files" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="Schematics_and_PCB_Files%3Fversion=6.html#Schematics-and-PCB-Files">Schematics and PCB Files</a><ul><li><a href="Schematics_and_PCB_Files%3Fversion=6.html#Introduction">Introduction</a></li><li><a href="Schematics_and_PCB_Files%3Fversion=6.html#Holoseat-Controller">Holoseat Controller</a></li><li><a href="Schematics_and_PCB_Files%3Fversion=6.html#Sensor-Board">Sensor Board</a></li><li><a href="Schematics_and_PCB_Files%3Fversion=6.html#Notes">Notes</a></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h2 >Introduction<a href="Schematics_and_PCB_Files%3Fversion=6.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Holoseat uses two boards:  the Controller (an <a href="https://www.adafruit.com/product/2771" class="external">Adafruit Feather 32u4 Basic Proto</a> running the Holoseat firmware) and the Sensor Board (a custom board to connect the sensors to a Cat5 jack so the sensors can be mounted on the exercise pedals and the Controller can be close to the user, typically next to the user's keyboard).  For the current version, the boards are built from proto-boards, so there are no Holoseat specific PCBs.  Later versions will migrate to Holoseat specific PCBs.</p>
+
+
+	<a name="Holoseat-Controller"></a>
+<h2 >Holoseat Controller<a href="Schematics_and_PCB_Files%3Fversion=6.html#Holoseat-Controller" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><img src="../../../dmsf_files/637%3Fdownload=" alt="" /></p>
+
+
+	<p>The Holoseat Controller electronics are simple enough to fit onto the prototyping area of the <a href="https://www.adafruit.com/product/2771" class="external">Adafruit Feather 32u4 Basic Proto</a>.  The key components are the Cat5 jack and an LED push button (<a href="https://www.adafruit.com/products/1440" class="external">HS008</a>).  The Cat5 jack is connected to pins 2 and 3 (for reading interrupts from the two Hall effect sensors), ground, and the USB power (to provide 5v to the sensors).  The LED push button is treated as a separate button and LED.  The button portion is connected to pin 10 and uses the Feather's internal pull-up resistor.  Finally, the LED portion is connected to pin 13 (per the <a href="https://www.arduino.cc/en/tutorial/blink" class="external">Arduino Blink tutorial</a>).</p>
+
+
+	<a name="Sensor-Board"></a>
+<h2 >Sensor Board<a href="Schematics_and_PCB_Files%3Fversion=6.html#Sensor-Board" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><img src="../../../dmsf_files/638%3Fdownload=" alt="" /></p>
+
+
+	<p>The Sensor Board electronics are built on a perfboard.  The key components are the Cat5 jack and two sensor/LED modules.  The Cat5 jack is used to connect the sensors to the Controller board using a Cat5e cable.  The sensor/LED modules are composed of an OH090U Hall Effect Sensor (<a href="http://www.digikey.com/product-search/en?keywords=365-1001-ND" class="external">HS004</a>) and a Diffused Blue 3mm LED (<a href="https://www.adafruit.com/products/780" class="external">HS005</a>).  The LED is wired directly to the sensor to provide low level diagnostic information without using the Controller.  As long as the sensor is receiving power and is untriggered (that is no magnet is within sensing range) the LED will be lit.  The LED will turn off when the sensor is triggered by a magnet indicating the sensor is working correctly.  Note, the sensors have a polarity like magnets and will only be triggered by a magnet if the correct pole is facing the sensor.</p>
+
+
+	<a name="Notes"></a>
+<h2 >Notes<a href="Schematics_and_PCB_Files%3Fversion=6.html#Notes" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Design work is currently being done in <a href="http://fritzing.org/" class="external">Fritzing</a>. | <a href="https://opendesignengine.net/dmsf/holoseat?folder_id=74" class="external">Fritzing Source Files</a></p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/Schematics_and_PCB_Files.html?version=6" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/Schematics_and_PCB_Files.txt?version=6" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/Schematics_and_PCB_Files.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

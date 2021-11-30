@@ -1,0 +1,235 @@
+h1. Holoseat Controller Communications Protocol
+
+{{>toc}}
+
+h2. Introduction
+
+The Holoseat controller has a two layer communication stack.  The lower (private) layer is a custom serial protocol, implemented in JSON messages.  The upper (public) layer is a "Socket.io":https://socket.io/ event/message API wrapping around the serial protocol.  This architecture places the bulk of the responsibility for implementation on the firmware, accessed using the private layer.  The public layer is then only responsible for passing messages in/out of the private API and reporting when the Holoseat is disconnected.
+
+This page serves to document both layers.  Each event/message will be covered at a conceptual level followed by layer specific information and examples.
+
+h2. Serial Port Configuration
+
+|*Field*|*Value*|
+|Baud Rate|115200|
+|Data Bits|8|
+|Parity|None|
+|Stop Bit|1|
+
+h2. Controller Events/Messages
+
+This section covers the events and message that the controller responds to (aka those sent to the controller by clients).
+
+Note, the various set_* events only broadcast their corresponding client events when they receive data that leads to an actual state change.  So, if the Holoseat is already enabled and set_enabled is called with a value of True, then no state change will occur and in turn the enabled event will not be broadcast to the clients.
+
+h3. connect (event)
+
+*Purpose:*  Used to establish client connection
+
+*Event Specific Inputs*
+
+* none
+
+*Response*
+
+# controller-version message sent to connecting client
+# enabled event sent to connecting client
+# cadence event sent to connecting client
+# configuration event sent to connecting client
+# resistance event sent to connecting client FUTURE DEVELOPMENT
+
+h4. Public Layer Details
+
+*Event Name:* connect
+*Event Data:* none
+
+h4. Private Layer Details
+
+*Serial Message:* @{"event_name":"connect", "client_id":<socket.id>}@
+
+h3. set_enabled (event)
+
+*Purpose:*  Used to toggle enabled state
+
+*Event Specific Inputs*
+
+* enabled: boolean - new enabled state for the holoseat controller
+
+*Response*
+
+# enabled event sent to all clients
+
+h4. Public Layer Details
+
+*Event Name:* set_enabled
+*Event Data:* @{"enabled":<True|False>}@
+
+h4. Private Layer Details
+
+*Serial Message:* @{"event_name":"set_enabled", "client_id":<socket.id>, "data":{"enabled":<True|False>}}@
+
+h3. set_configuration (event)
+
+*Purpose:* Used to give Holoseat a new configuration (aka tell it how to react to cadences)
+
+*Event Specific Inputs*
+
+* configuration: configuration data (see below) or an empty dictionary to reset Holoseat to hardware default configuration (*wasd*)
+
+*Response*
+
+# configuration event sent to connecting client
+
+h4. Configuration Schema
+
+* name(string): label for the current configuration 
+* forward = dictionary: how to respond to forward pedaling
+** hid(string <"keyboard" | "mouse" | "joypad">): what device is being emulated for this direction (v1.0.x will only support keyboard)
+** responses(array of dictionaries): list of responses keyed off of trigger cadences
+*** triggerCadence(int): action occurs when current cadence >= triggerCadence; use 0 for at all cadences
+*** actions(array): set of discrete hid actions to take (e.g. [“shift”, “w”] could indicate pressing the shift+w on keyboard); specifics are device emulation dependent, will be specified in a separate doc; actions are always to hold some hid signal until cadence changes and action is reevaluated (in other words actions cannot be single press/click)
+* reverse(dictionary): how to respond to reverse pedaling (same structure as forward)
+
+h5. Hardware defaults in configuration JSON 
+
+@{"name":"wasd", "forward":{"hid":"keyboard", "responses":[{"triggerCadence":0, "actions":["w"]}]}, "reverse":{"hid":"keyboard", "responses":[{"triggerCadence":0, "actions":["s"]}]}}@
+
+This string would be hard coded into the firmware and used to initialize the default configuration object.
+
+h5. The No Op configuration JSON 
+
+Used by games responding to the cadence stream instead of hid actions.
+
+@{"name":"noop", "forward":{"hid":"keyboard", "responses":[]}, "reverse":{"hid":"keyboard", "responses":[]}}@
+
+Note the use of empty arrays for the responses.  This can be used separately for configurations where only one direction makes sense.
+
+h4. Public Layer Details
+
+*Event Name:* set_configuration
+*Event Data:* @{"configuration":<configuration object>}@
+
+h4. Private Layer Details
+
+*Serial Message:* @{"event_name":"set_configuration", "client_id":<socket.id>, "data":{"configuration":<configuration object>}}@
+
+h3. set_resistance (event) FUTURE DEVELOPMENT
+
+*Purpose:* Manage the resistance level of the execise equipment Holoseat is connected to
+
+h4. Public Layer Details
+
+TBD
+
+h4. Private Layer Details
+
+TBD
+
+
+h2. Client Events/Messages
+
+This section covers the events and message that clients must respond to (aka those sent by the controller to clients).  
+
+Note, events and messages read from the private layer may leave out the client_id.  No client_id indicate public layer shoud broadcast the event/message to all connects clients (this ia the typcial behavior).  Otherwise, the event/message should be sent only to th specified client.
+
+h3. enabled (event)
+
+*Purpose:* Updates clients of enabled state when it changes
+
+*Event Specific Inputs*
+
+* state: string indicating state <"enabled" | "disabled" | "disconnected">
+
+h4. Public Layer Details
+
+*Event Name:* enabled
+*Event Data:* @{"state":<"enabled" | "disabled" | "disconnected">}@
+
+Note, The public layer is the layer which determines if the state is "disconnected". This determination is made every time an event is handled by the public layer.  If Holoseat is disconnectd, this event will be broadcast to all clients regardless of value in the client_id field or the original event received.
+
+h4. Private Layer Details
+
+*Serial Message:* @{"event_name":"enabled", "client_id":<socket.id>, "data":{"state":<"enabled" | "disabled">}}@
+
+h3. cadence (event)
+
+*Purpose:* Updates clients of cadence when it changes
+
+*Event Specific Inputs*
+
+* cadence: integer indicating how fast user is pedalling/stepping
+
+h4. Public Layer Details
+
+*Event Name:* cadence
+*Event Data:* @{"cadence":<current cadence>}@
+
+h4. Private Layer Details
+
+*Serial Message:* @{"event_name":"cadence", "client_id":<socket.id>, "data":{"cadence":<current cadence>}}@
+
+h3. configuration (event)
+
+*Purpose:* Updates clients of cadence when it changes
+
+*Event Specific Inputs*
+
+* configuration: configuruation data (see above)
+
+h4. Public Layer Details
+
+*Event Name:* configuration
+*Event Data:* @{"configuration":<configuration object>}@
+
+h4. Private Layer Details
+
+*Serial Message:* @{"event_name":"configuration", "client_id":<socket.id>, "data":{"configuration":<configuration object>}}@
+
+h3. resistance (event) FUTURE DEVLOPMENT
+
+*Purpose:* Updates clients on exercise equipment resistance
+
+h4. Public Layer Details
+
+TBD
+
+h4. Private Layer Details
+
+TBD
+
+h3. controller_version (message)
+
+*Purpose:* Inform clients of attached Holoseat device and its hardware and firmare versions (see Version Scheme for details).
+
+*Message Specific Inputs*
+
+* type: "controller_version"
+* message (dictionary): 
+** device (string): name of connected device (e.g. "Holoseat", "Holoseat Alpha")
+** hwVer (string): major version number of hardware (e.g. 1)
+** fwVer (string): major.minor.patch version number of firmware (e.g. 1.0.0)
+
+h4. Public Layer Details
+
+*Message Data:* @{"type":"controller_version", "message":{"device":"<device name>", "hwVer":"<major version number>", "fwVer":"<major.minor.patch version number>"}}@
+
+h4. Private Layer Details
+
+*Serial Message:* @{"event_name":"message", "client_id":<socket.id>, "data":{"type":"controller_version", "message":{"device":"<device name>", "hwVer":"<major version number>", "fwVer":"<major.minor.patch version number>"}}}@
+
+h3. controller_error (message)
+
+*Purpose:* Inform clients of error message
+
+*Message Specific Data*
+
+* type: contoller_error
+* message (string): the error message from the controller
+
+h4. Public Layer Details
+
+*Message Data:* @{"type":"controller_error", "message":"<error message>"}@
+
+h4. Private Layer Details
+
+*Serial Message:* @{"event_name":"message", "client_id":<socket.id>, "data":{"type":"controller_error", "message":"<error message>"}}@

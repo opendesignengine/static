@@ -1,0 +1,62 @@
+h1. Firmware Notes
+
+{{>toc}}
+
+The firmware for the *Holoseat* can be found in the SVN Repository.  Its basic function is to detect pedal events from the sensor, use the timing of those events to determine the cadence (in RPM), and then send the walk command (generally by pressing the 'w' key) when the pedal speed is greater than the specified trigger speed.
+
+h2. Default Parameter Values
+
+The default parameters for the firmware are stored in the @holoseat_constants.h@ file so they will be available at start up without the need for a connection to the desktop control application.  The desktop control application modifies the default values by updating the values of the corresponding constants in this file and then flashing updated firmware to the Holoseat.  The following parameters have default values in the constants file.
+
+* Default Walk Forward Character - what key is sent to move the character forward in the game
+* Default Walk Backward Character - what key is sent to move the character backward in the game
+* Default Holoseat Enabled - is the Holoseat enabled by default?
+* Default Trigger Cadence - how fast does the user need to pedal (in RPM) to trigger walking?
+* Default Logging Enabled - is serial logging enabled by default?
+* Default Logging Interval - how long between messages in serial logging in deci-seconds (0.1 of a second)
+
+h2. HoloSeat Serial Protocol
+
+The HoloSeat firmware has a serial protocol, the Holoseat Serial Protocol (HSP), to enable the desktop control application to modify all key parameters and to determine the current configuration of the Holoseat.
+
+h3. Protocol Commands
+
+The HSP supports three commands.  Each command is made up of a single upper case character indicating the statement type.  One command, the (S)et statement, also takes an input string.
+
+* @?@ - Ready(?) command; used to determine if the HoloSeat is ready to receive commands over the HSP (will reply with the (R)eady message followed by one standard state message if the HoloSeat is ready)
+* @S <config string>@ - (S)et command; used to send updated configuration to HoloSeat (HoloSeat will reply with @OK@ on success).  The config string has the following format:
+@<WFC>,<WBC>,<E>,<TC>,<L>,<LI>@ - example: @S w,s,0,60,0,20@
+** @<WFC>@ - Walk forward character (example: w)
+** @<WBC>@ - Walk backward character (example: s)
+** @<E>@ - Enabled? Must be a @0@ (disabled) or a @1@ (enabled) (example: 1)
+** @<TC>@ - Trigger cadence (example: 65)
+** @<L>@ - Logging enabled? Must be a @0@ (disabled) or a @1@ (enabled) (example: 1)
+** @<LI>@ - Logging interval in deci-seconds (example: 10)
+* @Q@ - (Q)uery command; used to request the HoloSeat send one standard state message (see *Protocol Messages* below)
+
+h3. Protocol Messages
+
+The HSP has two messages.  One is a single character message similar to the commands and one is the HSP standard state message which is sent after initialization, in reply to a (Q)uery command, and as the serial logging message.
+
+* @R@ - (R)eady; sent by the HoloSeat to indicate it is ready for serial communication; sent in reply to the Ready(?) command and when serial port is attached in debug mode (to be added)
+* @<VER>,<WFC>(<DWFC>),<WBC>(<DWBC>),<E>(<DE>),<C>/<TC>(<DTC>),<L>(<DL>)/<LI>(<DLI>)@ - standard state message, see below for key; example: @1.2.3,w(w),s(s),1(1),70/65(75),1(0)/10(10)@
+** @<VER>@ - Firmware version string (example: 1.2.3)
+** @<WFC>@ - Walk forward character (example: w)
+** @<DWFC>@ - Default walk forward character (example: w)
+** @<WBC>@ - Walk backward character (example: s)
+** @<DWBC>@ - Default walk backward character (example: s)
+** @<E>@ - Enabled? Must be a @0@ (disabled) or a @1@ (enabled) (example: 1)
+** @<DE>@ - Default enabled state, same format as @<E>@ (example: 1)
+** @<C>@ - Current cadence rounded to whole number; positive value means direction is forward, negative value means direction is backward (example: 70)
+** @<TC>@ - Trigger cadence (example: 65)
+** @<DTC>@ - Default trigger cadence (example: 75)
+** @<L>@ - Logging enabled? Must be a @0@ (disabled) or a @1@ (enabled) (example: 1)
+** @<DL>@ - Default logging enabled,  same format as @<L>@ (example: 0)
+** @<LI>@ - Logging interval in deci-seconds (example: 10)
+** @<DLI>@ - Default logging interval in deci-seconds (example: 10)
+
+h3. Usage
+
+Always start a serial session by sending a Ready(?) command.  If a (R)eady message is not received, wait and try again until a timeout is reached or a (R)eady message is received.  Be sure to check the version string sent in the initial standard state message to ensure your app is compatible with the version of the HoloSeat firmware.  
+
+After you have initialized your connection, you can then use the (Set) and (Q)uery commands as necessary to control and observe the HoloSeat's state.

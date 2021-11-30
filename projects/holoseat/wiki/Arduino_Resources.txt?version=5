@@ -1,0 +1,19 @@
+h1. Arduino Resources
+
+h2. Programming Links
+
+* "Writing a Library for Arduino":https://www.arduino.cc/en/Hacking/LibraryTutorial
+* "The Well-Automated Arduino Library":https://learn.adafruit.com/the-well-automated-arduino-library?view=all
+
+h2. USB Links
+
+* "Unique USB identifier":https://hackaday.io/project/26078-4chord-midi/log/64610-unique-usb-identifier
+** http://pid.codes/
+
+h2. Circuits
+
+* "How to Make an Arduino Ohm Meter":http://www.circuitbasics.com/arduino-ohm-meter/
+
+h2. Installer Resources
+
+* "Pocket AVR Programmer Hookup Guide":https://learn.sparkfun.com/tutorials/pocket-avr-programmer-hookup-guide/using-avrdude

@@ -1,0 +1,1785 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../../../favicon.ico%3F1359925685' />
+<link href="../../../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+<link href="../../../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-annotate">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../../../index.html" class="home">Home</a></li>
+<li><a href="../../../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../../../search/index/holoseat.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../news.html" class="news">News</a></li>
+<li><a href="../../../../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../../holoseat%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../../../boards.html" class="boards">Forums</a></li>
+<li><a href="../../../../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<a href="http://opendesignengine.net/projects/holoseat/wiki/HSP/edit" class="icon icon-edit">Edit</a>
+<a href="../history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+<h2>HSP</h2>
+
+<p>
+Version <a href="http://opendesignengine.net/wiki/show/HSP?version=27">27</a>
+<em>(J. Simmons, 06/10/2018 05:32 pm)</em>
+</p>
+
+
+
+<table class="filecontent annotate">
+<tbody>
+
+<tr class="bloc-0">
+    <th class="line-num">1</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h1. Holoseat Controller Communications Protocol</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">2</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">3</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>{{&gt;toc}}</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">4</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">5</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h2. Introduction</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">6</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">7</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>The Holoseat controller has a two layer communication stack.  The lower (private) layer is a custom serial protocol, implemented in JSON messages.  The upper (public) layer is a &quot;Socket.io&quot;:https://socket.io/ event/message API wrapping around the serial protocol.  This architecture places the bulk of the responsibility for implementation on the firmware, accessed using the private layer.  The public layer is then only responsible for passing messages in/out of the private API and reporting when the Holoseat is disconnected.</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">8</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">9</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>This page serves to document both layers.  Each event/message will be covered at a conceptual level followed by layer specific information and examples.</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">10</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">11</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h2. Serial Port Configuration</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">12</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">13</th>
+    <td class="revision"><a href="../../HSP%3Fversion=2.html">2</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>|*Field*|*Value*|</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">14</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>|Baud Rate|115200|</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">15</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>|Data Bits|8|</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">16</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>|Parity|None|</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">17</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>|Stop Bit|1|</pre></td>
+</tr>
+
+<tr class="bloc-2">
+    <th class="line-num">18</th>
+    <td class="revision"><a href="../../HSP%3Fversion=2.html">2</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">19</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h2. Controller Events/Messages</pre></td>
+</tr>
+
+<tr class="bloc-3">
+    <th class="line-num">20</th>
+    <td class="revision"><a href="../../HSP%3Fversion=4.html">4</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">21</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>This section covers the events and message that the controller responds to (aka those sent to the controller by clients).</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">22</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">23</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>Note, the various set_* events only broadcast their corresponding client events when they receive data that leads to an actual state change.  So, if the Holoseat is already enabled and set_enabled is called with a value of True, then no state change will occur and in turn the enabled event will not be broadcast to the clients.</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">24</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">25</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. connect (event)</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">26</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">27</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:*  Used to establish client connection</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">28</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">29</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Specific Inputs*</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">30</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">31</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* none</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">32</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">33</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Response*</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">34</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">35</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre># controller-version message sent to connecting client</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">36</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre># enabled event sent to connecting client</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">37</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre># cadence event sent to connecting client</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">38</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre># configuration event sent to connecting client</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">39</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre># resistance event sent to connecting client FUTURE DEVELOPMENT</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">40</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">41</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-1">
+    <th class="line-num">42</th>
+    <td class="revision"><a href="../../HSP%3Fversion=1.html">1</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">43</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Name:* connect</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">44</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Data:* none</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">45</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">46</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">47</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">48</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Serial Message:* @{&quot;event_name&quot;:&quot;connect&quot;, &quot;client_id&quot;:&lt;socket.id&gt;}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">49</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">50</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. set_enabled (event)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">51</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">52</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:*  Used to toggle enabled state</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">53</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">54</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Specific Inputs*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">55</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">56</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* enabled: boolean - new enabled state for the holoseat controller</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">57</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">58</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Response*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">59</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">60</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre># enabled event sent to all clients</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">61</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">62</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">63</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">64</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Name:* set_enabled</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">65</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Data:* @{&quot;enabled&quot;:&lt;True|False&gt;}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">66</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">67</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">68</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">69</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Serial Message:* @{&quot;event_name&quot;:&quot;set_enabled&quot;, &quot;client_id&quot;:&lt;socket.id&gt;, &quot;data&quot;:{&quot;enabled&quot;:&lt;True|False&gt;}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">70</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">71</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. set_configuration (event)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">72</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">73</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:* Used to give Holoseat a new configuration (aka tell it how to react to cadences)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">74</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">75</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Specific Inputs*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">76</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">77</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* configuration: configuration data (see below) or an empty dictionary to reset Holoseat to hardware default configuration (*wasd*)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">78</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">79</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Response*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">80</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">81</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre># configuration event sent to connecting client</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">82</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">83</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Configuration Schema</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">84</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">85</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* name(string): label for the current configuration </pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">86</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* forward = dictionary: how to respond to forward pedaling</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">87</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>** hid(string &lt;&quot;keyboard&quot; | &quot;mouse&quot; | &quot;joypad&quot;&gt;): what device is being emulated for this direction (v1.0.x will only support keyboard)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">88</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>** responses(array of dictionaries): list of responses keyed off of trigger cadences</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">89</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*** triggerCadence(int): action occurs when current cadence &gt;= triggerCadence; use 0 for at all cadences</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">90</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*** actions(array): set of discrete hid actions to take (e.g. [“shift”, “w”] could indicate pressing the shift+w on keyboard); specifics are device emulation dependent, will be specified in a separate doc; actions are always to hold some hid signal until cadence changes and action is reevaluated (in other words actions cannot be single press/click)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">91</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* reverse(dictionary): how to respond to reverse pedaling (same structure as forward)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">92</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">93</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h5. Hardware defaults in configuration JSON </pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">94</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">95</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>@{&quot;name&quot;:&quot;wasd&quot;, &quot;forward&quot;:{&quot;hid&quot;:&quot;keyboard&quot;, &quot;responses&quot;:[{&quot;triggerCadence&quot;:0, &quot;actions&quot;:[&quot;w&quot;]}]}, &quot;reverse&quot;:{&quot;hid&quot;:&quot;keyboard&quot;, &quot;responses&quot;:[{&quot;triggerCadence&quot;:0, &quot;actions&quot;:[&quot;s&quot;]}]}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">96</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">97</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>This string would be hard coded into the firmware and used to initialize the default configuration object.</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">98</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">99</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h5. The No Op configuration JSON </pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">100</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">101</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>Used by games responding to the cadence stream instead of hid actions.</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">102</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">103</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>@{&quot;name&quot;:&quot;noop&quot;, &quot;forward&quot;:{&quot;hid&quot;:&quot;keyboard&quot;, &quot;responses&quot;:[]}, &quot;reverse&quot;:{&quot;hid&quot;:&quot;keyboard&quot;, &quot;responses&quot;:[]}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">104</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">105</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>Note the use of empty arrays for the responses.  This can be used separately for configurations where only one direction makes sense.</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">106</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">107</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">108</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">109</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Name:* set_configuration</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">110</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Data:* @{&quot;configuration&quot;:&lt;configuration object&gt;}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">111</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">112</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">113</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">114</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Serial Message:* @{&quot;event_name&quot;:&quot;set_configuration&quot;, &quot;client_id&quot;:&lt;socket.id&gt;, &quot;data&quot;:{&quot;configuration&quot;:&lt;configuration object&gt;}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">115</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">116</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. set_resistance (event) FUTURE DEVELOPMENT</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">117</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">118</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:* Manage the resistance level of the execise equipment Holoseat is connected to</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">119</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">120</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">121</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">122</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>TBD</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">123</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">124</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">125</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">126</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>TBD</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">127</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">128</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">129</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h2. Client Events/Messages</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">130</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">131</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>This section covers the events and message that clients must respond to (aka those sent by the controller to clients).  </pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">132</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">133</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>Note, events and messages read from the private layer may leave out the client_id.  No client_id indicate public layer shoud broadcast the event/message to all connects clients (this ia the typcial behavior).  Otherwise, the event/message should be sent only to th specified client.</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">134</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">135</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. enabled (event)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">136</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">137</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:* Updates clients of enabled state when it changes</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">138</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">139</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Specific Inputs*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">140</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">141</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* state: string indicating state &lt;&quot;enabled&quot; | &quot;disabled&quot; | &quot;disconnected&quot;&gt;</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">142</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">143</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">144</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">145</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Name:* enabled</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">146</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Data:* @{&quot;state&quot;:&lt;&quot;enabled&quot; | &quot;disabled&quot; | &quot;disconnected&quot;&gt;}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">147</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">148</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>Note, The public layer is the layer which determines if the state is &quot;disconnected&quot;. This determination is made every time an event is handled by the public layer.  If Holoseat is disconnectd, this event will be broadcast to all clients regardless of value in the client_id field or the original event received.</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">149</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">150</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">151</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">152</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Serial Message:* @{&quot;event_name&quot;:&quot;enabled&quot;, &quot;client_id&quot;:&lt;socket.id&gt;, &quot;data&quot;:{&quot;state&quot;:&lt;&quot;enabled&quot; | &quot;disabled&quot;&gt;}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">153</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">154</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. cadence (event)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">155</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">156</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:* Updates clients of cadence when it changes</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">157</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">158</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Specific Inputs*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">159</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">160</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* cadence: integer indicating how fast user is pedalling/stepping</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">161</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">162</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">163</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">164</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Name:* cadence</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">165</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Data:* @{&quot;cadence&quot;:&lt;current cadence&gt;}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">166</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">167</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">168</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">169</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Serial Message:* @{&quot;event_name&quot;:&quot;cadence&quot;, &quot;client_id&quot;:&lt;socket.id&gt;, &quot;data&quot;:{&quot;cadence&quot;:&lt;current cadence&gt;}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">170</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">171</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. configuration (event)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">172</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">173</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:* Updates clients of cadence when it changes</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">174</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">175</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Specific Inputs*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">176</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">177</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* configuration: configuruation data (see above)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">178</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">179</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">180</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">181</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Name:* configuration</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">182</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Event Data:* @{&quot;configuration&quot;:&lt;configuration object&gt;}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">183</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">184</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">185</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">186</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Serial Message:* @{&quot;event_name&quot;:&quot;configuration&quot;, &quot;client_id&quot;:&lt;socket.id&gt;, &quot;data&quot;:{&quot;configuration&quot;:&lt;configuration object&gt;}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">187</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">188</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. resistance (event) FUTURE DEVLOPMENT</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">189</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">190</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:* Updates clients on exercise equipment resistance</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">191</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">192</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">193</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">194</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>TBD</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">195</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">196</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">197</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">198</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>TBD</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">199</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">200</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. controller_version (message)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">201</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">202</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:* Inform clients of attached Holoseat device and its hardware and firmare versions (see Version Scheme for details).</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">203</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">204</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Message Specific Inputs*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">205</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">206</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* type: &quot;controller_version&quot;</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">207</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* message (dictionary): </pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">208</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>** device (string): name of connected device (e.g. &quot;Holoseat&quot;, &quot;Holoseat Alpha&quot;)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">209</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>** hwVer (string): major version number of hardware (e.g. 1)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">210</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>** fwVer (string): major.minor.patch version number of firmware (e.g. 1.0.0)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">211</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">212</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">213</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">214</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Message Data:* @{&quot;type&quot;:&quot;controller_version&quot;, &quot;message&quot;:{&quot;device&quot;:&quot;&lt;device name&gt;&quot;, &quot;hwVer&quot;:&quot;&lt;major version number&gt;&quot;, &quot;fwVer&quot;:&quot;&lt;major.minor.patch version number&gt;&quot;}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">215</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">216</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">217</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">218</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Serial Message:* @{&quot;event_name&quot;:&quot;message&quot;, &quot;client_id&quot;:&lt;socket.id&gt;, &quot;data&quot;:{&quot;type&quot;:&quot;controller_version&quot;, &quot;message&quot;:{&quot;device&quot;:&quot;&lt;device name&gt;&quot;, &quot;hwVer&quot;:&quot;&lt;major version number&gt;&quot;, &quot;fwVer&quot;:&quot;&lt;major.minor.patch version number&gt;&quot;}}}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">219</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">220</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h3. controller_error (message)</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">221</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">222</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Purpose:* Inform clients of error message</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">223</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">224</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Message Specific Data*</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">225</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">226</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* type: contoller_error</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">227</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>* message (string): the error message from the controller</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">228</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">229</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Public Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">230</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">231</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Message Data:* @{&quot;type&quot;:&quot;controller_error&quot;, &quot;message&quot;:&quot;&lt;error message&gt;&quot;}@</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">232</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">233</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>h4. Private Layer Details</pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">234</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre></pre></td>
+</tr>
+
+<tr class="bloc-0">
+    <th class="line-num">235</th>
+    <td class="revision"><a href="../../HSP%3Fversion=27.html">27</a></td>
+    <td class="author">J. Simmons</td>
+    <td class="line-code"><pre>*Serial Message:* @{&quot;event_name&quot;:&quot;message&quot;, &quot;client_id&quot;:&lt;socket.id&gt;, &quot;data&quot;:{&quot;type&quot;:&quot;controller_error&quot;, &quot;message&quot;:&quot;&lt;error message&gt;&quot;}}@</pre></td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../../../terms_of_services/HSP.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

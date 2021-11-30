@@ -1,0 +1,763 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere Mk 3 - Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build) - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="nV8PNPvpDTvNop/c7qgPAI5NYptC5U4EN3elfQuecv4="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere3.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere3.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere Mk 3</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/groundsphere3.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/groundsphere3/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/groundsphere3/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/groundsphere3.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/groundsphere3/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/groundsphere3/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/groundsphere3/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/groundsphere3/boards.html">Forums</a> » <a href="../../../projects/groundsphere3/boards/51.html">Main</a> » </p>
+
+<div class="contextual">
+    <span class="message-1149-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-04.html" title="04/04/2016 07:00 am">over 6 years</a> ago</span></p>
+<div class="wiki">
+<p>Running notes and commentary of ISS signal reception based on <a href="http://blog.nobugware.com/post/2015/listening_to_satellites_for_30_dollars/" class="external">Listening to satellites for 30 dollars</a>.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (13)</h3>
+
+  <div class="message reply" id="message-1152">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1152.html#message-1152">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-18.html" title="04/18/2016 06:59 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>My first step is to go through the blog post and generate BoMs (bills of materials) for the hardware and software to make sure I understand what I need and as part of creating simpler to follow instructions.</p>
+
+
+	<a name="Hardware-BoM"></a>
+<h2 >Hardware BoM<a href="1149%3Fr=1152.html#Hardware-BoM" class="wiki-anchor">&para;</a></h2>
+
+
+	<table>
+		<tr>
+			<th>Item #            </th>
+			<th>Description                                                                                               </th>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.HW01 </td>
+			<td> <a href="http://www.amazon.com/NESDR-Mini-Compatible-Packages-Guaranteed/dp/B00P2UOU72" title="RTL2832 + R820T2" class="external">NooElec NESDR Mini 2 SDR &#38; DVB-T USB Stick</a> </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.HW02 </td>
+			<td> Unspecified antenna - "sometimes a simple wire antenna is enough for great results" (see note 1) </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.HW03 </td>
+			<td> Mac or Linux Laptop (OS choice slightly modifies software BoM) </td>
+		</tr>
+	</table>
+
+
+
+
+	<p><strong>Note 1:</strong> From <a href="../../../projects/groundsphere3/wiki/Similar_Projects.html" class="wiki-page">Similar Projects</a> research, <a href="http://amsat-uk.org/beginners/how-to-hear-the-iss/" class="external">How to Hear the ISS</a> recommends a <a href="https://en.wikipedia.org/wiki/Whip_antenna" class="external">1/4 wave whip antenna</a> and a <a href="http://www.hamuniverse.com/2metergp.html" class="external">1/4 wave ground plane</a> for receiving signals from ISS.  Other recommendations can be found on the <a href="http://www.wxtoimg.com/hardware/#comms" class="external">image processor website</a>.</p>
+
+
+	<p>That looks like it.  Not much in the way of required hardware (beyond a pre-existing laptop or pc), but that is not surprising given the goal is to receive satellite signals for under $30.</p>
+
+
+	<a name="Software-BoM"></a>
+<h2 >Software BoM<a href="1149%3Fr=1152.html#Software-BoM" class="wiki-anchor">&para;</a></h2>
+
+
+	<table>
+		<tr>
+			<th>Item #            </th>
+			<th>Description    </th>
+			<th>OS X Software </th>
+			<th>Linux Software </th>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW01 </td>
+			<td> Software Receiver (see note 2) </td>
+			<td> <a href="http://gqrx.dk/" class="external">GQRX</a> </td>
+			<td> <a href="http://gqrx.dk/" class="external">GQRX</a> </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW02 </td>
+			<td> Audio Capture Tool </td>
+			<td> <a href="http://www.audacityteam.org/" class="external">Audacity</a> </td>
+			<td> <a href="http://www.audacityteam.org/" class="external">Audacity</a> </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW03 </td>
+			<td> Audio Router </td>
+			<td> <a href="http://rogueamoeba.com/freebies/soundflower/" class="external">Soundflower</a> </td>
+			<td> <a href="https://www.freedesktop.org/wiki/Software/PulseAudio/" class="external">PulseAudio</a> </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW04 </td>
+			<td> Satellite Pass Predictor </td>
+			<td> (see note 3) </td>
+			<td> (see note 3) </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW05 </td>
+			<td> Image Processor </td>
+			<td> <a href="http://www.wxtoimg.com/" class="external">WXtoImg</a> </td>
+			<td> <a href="http://www.wxtoimg.com/" class="external">WXtoImg</a> </td>
+		</tr>
+	</table>
+
+
+
+
+	<p><strong>Note 2:</strong>  Need to verify <a href="http://gqrx.dk/supported-hardware" class="external">supported hardware</a> for the software receiver.<br /><strong>Note 3:</strong>  Blog post promotes author's iOS app, <a href="https://itunes.apple.com/us/app/satsat/id1017063968?ls=1&#38;mt=8" class="external">SatSat</a>.  Going to look at other options, including web sites.</p>
+
+
+	<p>Note, all of this software is free, but not all of it is open source apparently.  I need to review a few more details.  Still, after initially capturing the signal, it looks like the next trick is making all of the software run end to end to give you an image.  I think I will work the demo in two stages.</p>
+
+
+	<ol>
+	<li>Live reception of satellite signal to laptop speakers</li>
+		<li>Repeating step 1 plus audio capture and processing</li>
+	</ol>
+
+
+	<p>Next step will be to check where I am in terms of meeting the hardware and software BoMs.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1153">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1153.html#message-1153">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-18.html" title="04/18/2016 09:55 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Regarding Note 3:</p>
+
+
+	<p>I recommend GPredict <a class="external" href="http://gpredict.oz9aec.net/">http://gpredict.oz9aec.net/</a> for satellite tracking.  Besides being free and GPL, it supports Debian, Ubuntu, Fedora Core, Suse, Mandriva, Tiny Core, BSD, Mac OS X, and Windows.  It directly interfaces with a number of radios (<a class="external" href="https://sourceforge.net/p/hamlib/wiki/Supported%20Radios">https://sourceforge.net/p/hamlib/wiki/Supported%20Radios</a>) and antenna rotators (<a class="external" href="https://sourceforge.net/p/hamlib/wiki/Supported%20Rotators">https://sourceforge.net/p/hamlib/wiki/Supported%20Rotators</a>).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1154">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1154.html#message-1154">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-19.html" title="04/19/2016 07:03 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks @Aaron.  GPredict is definitely on my short list.  One of the features I am looking for is the ability to key in your location and a satellite ID and get a list of upcoming passes.  I seem to recall that is not GPredict's strong suit (I can't quite remember what we did when we last used it, but I thought we fiddled with the clock to look at upcoming passes).  No matter what, I will be downloading and evaluating it at some point in this process (since I have iOS devices, I might try out the author's app first in the interest of fully replicating their results).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1155">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1155.html#message-1155">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-19.html" title="04/19/2016 10:54 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Tonight I am evaluating where I stand in terms of meeting the requirements for this project based on the hardware and software BoMs.  Given the material from my previous post, I expect this process will mostly be about installing software and confirming hardware compatibility.</p>
+
+
+	<a name="Hardware-Evaluation"></a>
+<h2 >Hardware Evaluation<a href="1149%3Fr=1152.html#Hardware-Evaluation" class="wiki-anchor">&para;</a></h2>
+
+
+	<table>
+		<tr>
+			<th>Item #            </th>
+			<th>Status </th>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.HW01  </td>
+			<td> Possess a previous version (NooElec R820T SDR); appears to be supported by the software receiver as "Osmocom rtl-sdr and rtl_tcp", may need to adjust the buflen parameter </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.HW02 </td>
+			<td> Going to use the included antenna for the first tests; note, I believe I saw an indication that placing the included antenna on a steel surface (like a car body - it has a magnetic base) can improve the signal strength by providing a ground plane, so I may add a steel panel to my tests </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.HW03  </td>
+			<td> Possess a MacBook Air running OS X: El Capitan </td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="Software-Evaluation"></a>
+<h2 >Software Evaluation<a href="1149%3Fr=1152.html#Software-Evaluation" class="wiki-anchor">&para;</a></h2>
+
+
+	<table>
+		<tr>
+			<th>Item #           </th>
+			<th>Status </th>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW01 </td>
+			<td> Installed v. 2.5.3-2; Easily detected SDR dongle, received local FM radio station, and used built in record audio feature to capture the received audio (demo video/audio coming tomorrow) </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW02 </td>
+			<td> Installed v. 2.1. </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW03 </td>
+			<td> So, Soundflower has moved to <a href="https://github.com/mattingalls/Soundflower" class="external">GitHub</a> and undergone a couple of handoffs.  I also had an old version.  Before proceeding, I uninstalled the old version per instructions on GitHub.  Based on <a href="https://github.com/mattingalls/Soundflower/releases/tag/2.0b2" class="external">current release notes</a>, the controller app (SoundflowerBed) is retired.  The alternative tool chain, <a href="http://rogueamoeba.com/loopback/" class="external">Loopback</a>, is not free.  Given the software receiver software has a file save feature, going to skip this element for now and see how things go.  </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW04 </td>
+			<td> Going to start by using SatSat to replicate original results and then investigate alternatives </td>
+		</tr>
+		<tr>
+			<td> GS-Mk3_ENG-02.SW05 </td>
+			<td> Installed v. 2.10.11 (note, in OS X the pkg file is unsigned, so I had to override the security settings on my MacBook); the blog post author posted a link to a soundcloud file of a satellite pass, so I tried to download it and run it through WXtoImg, but that did not work (the image was very distorted, I think it was caused by all of the audio processing - converted to mp3 on soundcloud then back to wav on my MacBook). </td>
+		</tr>
+	</table>
+
+
+
+
+	<p>So, looks like I have most or all of the parts I need.  I will capture some tests on video and images tomorrow and post those.  I will also start looking for satellite passes to try and observe and work through the actual operation instructions.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1156">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1156.html#message-1156">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-23.html" title="04/23/2016 04:06 pm">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>With the software installed, it is time to test the individual elements to make sure things are working before running an integrated test.  Based on the initial smoke tests during software installation, there are three key elements to test.</p>
+
+
+	<ul>
+	<li>GS-Mk3_ENG-02.SW01 - software receiver (GQRX) - this tool connects to GS-Mk3_ENG-02.HW01 (the SDR) to receive the radio signals and includes a built-in audio recording function, so we may be able to skip the requirements for GS-Mk3_ENG-02.SW02 (audio capture tool) and GS-Mk3_ENG-02.SW03 (audio router).</li>
+		<li>GS-Mk3_ENG-02.SW04 - satellite pass predictor (tbd) - for now I am using the author's iOS app (SatSat), but it will still be good to test it out some and make sure I can use it</li>
+		<li>GS-Mk3_ENG-02.SW05 - image processor (WXtoImg) - going to use sample audio file(s) from the internet to verify the steps required to use WXtoImg</li>
+	</ul>
+
+
+	<a name="Testing-GQRX"></a>
+<h2 >Testing GQRX<a href="1149%3Fr=1152.html#Testing-GQRX" class="wiki-anchor">&para;</a></h2>
+
+
+	<ol>
+	<li>Connect the antenna to the SDR</li>
+		<li>Plug in SDR</li>
+		<li>Launch GQRX</li>
+		<li>Configure the SDR
+	<ol>
+	<li>Select <strong>File>I/O Devices</strong>, the <strong>Configure I/O devices</strong> dialog will open</li>
+		<li>Click the <strong>Device</strong> drop down and select the matching item (typically ending in 00000001)<br /><img src="../../../attachments/download/583" alt="" /></li>
+		<li>Click the <strong>OK</strong> button</li>
+	</ol>
+	</li>
+		<li>Enter the frequency in the frequency field in the upper left corner of GQRX to set the frequency to a test source. I am using a local FM radio station (e.g. 101.100 000 MHz)<br /><img src="../../../attachments/download/585" alt="" /></li>
+		<li>Click the <strong>Mode</strong> drop down and select the appropriate mode (e.g. WFM (stereo) for a local FM radio station)</li>
+		<li>Click the <strong>Power</strong> button (in the far upper left corner of GQRX) to start the receiver<br /><img src="../../../attachments/download/584" alt="" /></li>
+		<li>Test the audio recording feature
+	<ol>
+	<li>Click the <strong>Rec</strong> button (in the far lower right of GQRX) to start capturing audio</li>
+		<li>Click the <strong>Rec</strong> button again (in the far lower right of GQRX) to stop capturing audio</li>
+		<li>Click the <strong>Power</strong> button to stop the receiver</li>
+		<li>Browse the file system to the user's home directory and look for a new wav file (e.g. gqrx_20160423_202958_101100000.wav)</li>
+		<li>Play the file back to confirm it recorded properly</li>
+	</ol></li>
+	</ol>
+
+
+	<p>Note, GQRX has a configuration save/load feature.  This feature should be investigated further to simplify reproduction of known configurations for specific satellites.</p>
+
+
+	<a name="Testing-SatSat"></a>
+<h2 >Testing SatSat<a href="1149%3Fr=1152.html#Testing-SatSat" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>This test was conducted after an inital smoke test.  During the smoke test initial configuration steps were conducted, including adding satellites of interest.  That process is straight forward and will not be covered in these steps.</p>
+
+
+	<p>Note, be sure to go to the settings tab and enable the <strong>Use GPS</strong> option to ensure data is for your current location.</p>
+
+
+	<ol>
+	<li>Start SatSat on your iOS device, the <strong>My Sats</strong> tab will display showing your list of satellites; each satellite will include the next Acquisition of Signal (AOS), when you can start receiveing signals from the satellite, and the duration of the pass<br /><img src="../../../attachments/download/586" alt="" /></li>
+		<li>Click on one of the satellite entries to see more details about that satellite (inlcuding frequency) and several upcoming AOS events<br /><img src="../../../attachments/download/587" alt="" /></li>
+	</ol>
+
+
+	<a name="Testing-WXtoImg"></a>
+<h2 >Testing WXtoImg<a href="1149%3Fr=1152.html#Testing-WXtoImg" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Since we have not captured our own data, this test will use the <a href="http://www.fredvandenbosch.nl/APT-testfiles.zip" class="external">sample files</a> from <a href="http://www.fredvandenbosch.nl/index.html" class="external">Fred van den Bosch's website</a>.</p>
+
+
+	<ol>
+	<li>Download the <a href="http://www.fredvandenbosch.nl/APT-testfiles.zip" class="external">sample files</a> </li>
+		<li>Extract the wav files from the zip file</li>
+		<li>Launch WXtoImg</li>
+		<li>Select <strong>File>Open Audio File</strong></li>
+		<li>Browse to one of the sample audio files, select the file, and click the <strong>Open</strong> button</li>
+		<li>Wait while the audio file is processed, an image should appear<br /><img src="../../../attachments/download/588" alt="" /></li>
+		<li>You can change the rendering style by selectinging different options in the <strong>Enhancements</strong> menu</li>
+	</ol></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/583/GQRX_Config_IO_Devices.png" class="icon icon-attachment">GQRX_Config_IO_Devices.png</a>
+  <span class="size">(63.1 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/584/GQRX_FM_StationTest.png" class="icon icon-attachment">GQRX_FM_StationTest.png</a>
+  <span class="size">(300.9 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/585/GQRX_SetFrequency.png" class="icon icon-attachment">GQRX_SetFrequency.png</a>
+  <span class="size">(126.6 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/586/SatSat_MySats.png" class="icon icon-attachment">SatSat_MySats.png</a>
+  <span class="size">(85.2 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/587/SatSat_SatelliteDetails.png" class="icon icon-attachment">SatSat_SatelliteDetails.png</a>
+  <span class="size">(141.6 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/588/WXtoImg_SampleImage_8bitAudio.png" class="icon icon-attachment">WXtoImg_SampleImage_8bitAudio.png</a>
+  <span class="size">(497.6 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1157">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1157.html#message-1157">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-23.html" title="04/23/2016 05:44 pm">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Video demo of some of the software above.</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/dLKgvn9Fu3o?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/dLKgvn9Fu3o?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1158">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1158.html#message-1158">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-24.html" title="04/24/2016 09:55 am">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>With the software tested, it is time to sort out the operations instructions (aka - what are the steps to prepare for, setup, conduct, and pack up after capturing an image).</p>
+
+
+	<a name="Draft-Operations-instructions"></a>
+<h2 >Draft Operations instructions<a href="1149%3Fr=1152.html#Draft-Operations-instructions" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Preparation"></a>
+<h3 >Preparation<a href="1149%3Fr=1152.html#Preparation" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Ensure all equipment is ready to use (SDR, antenna, laptop, software) and packed for transport to the location where you will operate the receiver</li>
+		<li>Pick a location for the operation (look for somewhere with clear line of site and preferably away from cities to avoid excess RF noise)</li>
+		<li>Determine operation opportunities
+	<ol>
+	<li>Open the satellite prediction pass </li>
+		<li>Ensure it is set to use your current location (preferably by GPS fix)</li>
+		<li>Select one or more passes from the list of upcoming satellite passes (I am favoring passes with max elevation (Max El) values greater than 45 degrees to reduce the <a href="https://en.wikipedia.org/wiki/Slant_range" class="external">slant range</a>)</li>
+		<li>For each pass you selected, record the times for Acquisition of Signal (AOS), Loss of Signal (LOS) plus the downlink frequency (ATP for NOAA satellites, FM voice repeater for ISS, etc); you will need these during the satellite pass</li>
+	</ol></li>
+	</ol>
+
+
+	<p>You should now be ready to capture an image from your selected satellite(s)</p>
+
+
+	<a name="Setup"></a>
+<h3 >Setup<a href="1149%3Fr=1152.html#Setup" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Take all equipment to selected location</li>
+		<li>Take laptop out and login</li>
+		<li>Take out SDR and antenna</li>
+		<li>Connect antenna to the SDR</li>
+		<li>Plug in the SDR into the laptop's USB port</li>
+		<li>Start the software receiver</li>
+		<li>Select the SDR module in the software receiver</li>
+		<li>Configure the software receiver for the first pass
+	<ol>
+	<li>Set the receiver frequency to the downlink frequency for the first pass</li>
+		<li>Set the mode to Narrow FM</li>
+		<li>Set the mode options (accessed in WQRX from the <strong>...</strong> button next to the <strong>Mode</strong> drop down), being sure to click the <strong>OK</strong> button after setting the following options
+	<ol>
+	<li>Max Dev: <ins>APT 17k</ins> </li>
+		<li>Tau: <ins>OFF</ins></li>
+	</ol>
+	</li>
+	</ol>
+	</li>
+		<li>Verify the SDR is working by powering the software receiver on and off, observing the noise in the waterfall and in the audio output</li>
+	</ol>
+
+
+	<p>You should now be ready for your first pass.</p>
+
+
+	<a name="Capturing-an-image"></a>
+<h3 >Capturing an image<a href="1149%3Fr=1152.html#Capturing-an-image" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Click the <strong>Power</strong> button in the software receiver shortly before AOS to start listening for the satellite's signal</li>
+		<li>Listen for the satellite's signal over the laptop's speakers or headphones</li>
+		<li>Click the <strong>Rec</strong> button when you hear the signal to start capturing the image data</li>
+		<li>Click the <strong>Rec</strong> button again to stop capturing image data after LOS</li>
+		<li>Click the <strong>Power</strong> button to stop receiving signals</li>
+		<li>Use WxtoImg to process the image data (see notes above for specific instructions)</li>
+	</ol>
+
+
+	<p>Repeat the software configuration and capture steps for each additional pass.</p>
+
+
+	<a name="Pack-up"></a>
+<h3 >Pack up<a href="1149%3Fr=1152.html#Pack-up" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Shutdown all software</li>
+		<li>Remove the SDR dongle from the laptop's USB port</li>
+		<li>Disconnect the antenna from the SDR</li>
+		<li>Pack up the antenna, SDR, and laptop</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1159">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1159.html#message-1159">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-04-25.html" title="04/25/2016 10:23 pm">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><a name="End-to-end-tests"></a>
+<h2 >End to end tests<a href="1149%3Fr=1152.html#End-to-end-tests" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>I used the procedures above several times (four I believe, the passes overlapped some) over the weekend.  I was not able to capture any video because there was a loud party going on all afternoon when and where I was conducting my tests.</p>
+
+
+	<p>All but one test attempted to receive signals from NOAA satellites (15, 18, and 19).  The other test used modified a procedure in an attempt to receive voice traffic from ISS (this was a test that merely took advantage of a timely opportunity and was not necessarily expected to work).</p>
+
+
+	<p>None of the tests resulted in any audio heard over the speakers.  During one test I recorded audio but only captured static (the image processor reported no image data was present).  Given some of the other resources, and the comment on the original blog post that "sometimes a simple wire antenna is enough for great results" I have to wonder if at least part of the problem is not having a suitable (let alone the "right") antenna.</p>
+
+
+	<p>At this point, I believe I have replicated the material covered in the blog post.  Unfortunately, in doing so I have not replicated the results (yet).  I propose we consider this PBI done (though the results are only partially successful, see the software tests) and then we create a PBI to "try this again" with the expectation that:</p>
+
+
+	<ul>
+	<li>we review the test instructions with Aaron and/or other ham radio operators who have listened to satellites to ensure we have not missed any details about the operation steps</li>
+		<li>repeat the test procedure (with any required corrections) using a more appropriate antenna (to be sourced as soon as the PBI is accepted on a sprint)</li>
+	</ul>
+
+
+	<p>I believe this is still worth pursuing as all indications are the poster was able to receive NOAA images for far less than we spent on earlier versions of Ground Sphere.  Completing the documentation to replicate these results is valuable both for its own sake (complete instructions are a maker project in their own right) and as a means of informing the stakeholders (along with the link budget) about the direction Ground Sphere should go.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1179">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1179.html#message-1179">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/314.html" class="icon icon-contributor-license">Ryan McKnight</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-05-22.html" title="05/22/2016 03:02 pm">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Below are screenshots of the errors I encountered when trying to install the SDR software receiver Gqrx on my Mac. I ended up using a different open source software – CubicSDR: <a class="external" href="https://github.com/cjcliffe/CubicSDR">https://github.com/cjcliffe/CubicSDR</a></p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/589/unnamed-1.png" class="icon icon-attachment">unnamed-1.png</a>
+  <span class="size">(50.5 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/590/unnamed.png" class="icon icon-attachment">unnamed.png</a>
+  <span class="size">(56.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1180">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1180.html#message-1180">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-05-22.html" title="05/22/2016 03:54 pm">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks for posting your results, Ryan.  I am not sure if I have seen the first error you saw, but that second one shows up in my demo video.  I think GQRX can get "stuck" between sessions and when it does it throws that error.  In the video I clicked "Yes" and then re-selected my SDR and re-configured it.  What happens for you if you click "Yes" and set things up again?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1181">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1181.html#message-1181">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/314.html" class="icon icon-contributor-license">Ryan McKnight</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-05-22.html" title="05/22/2016 04:12 pm">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Currently at work, so I just installed GQRX on my work MBP to see if I could reproduce the error. Nada. Seems to work fine. My personal computer won't install or open GQRX. Clicking "Yes" just quits the setup.</p>
+
+
+	<p>Home MBP is Mountain Lion. Work one is El Capitan. Not sure if the OS is the issue or something else. Might need a different version of GQRX for the older OS. Got the DMG file from here: <a class="external" href="http://gqrx.dk/download">http://gqrx.dk/download</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1184">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1184.html#message-1184">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-05-22.html" title="05/22/2016 06:48 pm">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>The OS version is almost certainly the issue.  I am running El Capitan on my MBA and a quick Google search shows Mountain Lion is old (real old, released July 25, 2012).  I doubt the GQRX developers are supporting OS versions that old.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1186">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1149%3Fr=1186.html#message-1186">RE: Project Notebook for JRS Build for ENG-02 (Listening to satellites for 30 dollars build)</a>
+    -
+    Added by <a href="../../../users/314.html" class="icon icon-contributor-license">Ryan McKnight</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2016-05-22.html" title="05/22/2016 09:19 pm">about 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Just double-checked my personal MBP. Actually have Mavericks installed–June 2014 version. Still probably the same issue, but it'll be important to list the oldest supported OS versions in the minimum requirements for the build.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-13/13)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1149.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

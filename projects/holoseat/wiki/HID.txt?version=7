@@ -1,0 +1,38 @@
+h1. HID Resources 
+
+{{toc}}
+
+h2. Arduino HID Libraries
+
+* "Mouse and Keyboard libraries":https://www.arduino.cc/en/Reference/MouseKeyboard
+* "Keyboard Modifiers":https://www.arduino.cc/en/Reference/KeyboardModifiers
+* Joystick Library
+** "Arduino Joystick Library":https://github.com/MHeironimus/ArduinoJoystickLibrary
+** "Joystick Library Tutorial":http://mheironimus.blogspot.com/2015/11/arduino-joystick-library.html
+** "Joystick Library v2.0 Tutorial":http://mheironimus.blogspot.com/2016/11/arduino-joystick-library-version-20.html
+
+h2. Custom USB PID 
+
+TL;DR - This is something we will want to do for v1.0 not v0.4.  It will allow use to identify Holoseat as Holoseat and not a Feather, Arduino, etc.  This will be important for drivers on Windows and to make it easier for the serial client to identify the Holoseat via the description.  We should still go ahead and register for a PID now so we have it reserved.
+
+* "PID.Codes How To":http://pid.codes/howto/
+* "is it possible to Rename the HID Controller":https://github.com/MHeironimus/ArduinoJoystickLibrary/issues/14
+* "Simple Arduino-based USB VID & PID tester":https://learn.adafruit.com/simple-arduino-based-usb-vid-and-pid-tester?view=all
+* "Compiling Arduino Caterina with New VID/PID":http://steven.casagrande.io/articles/compiling-arduino-caterina-with-new-vidpid/
+* "OSHWA FAQ: What’s a USB vendor ID (VID) and product ID (PID) and what should I do about them?":https://www.oshwa.org/2013/11/19/new-faq-on-usb-vendor-id-and-product-id/
+* "How to obtain an USB VID/PID for your project":https://www.voti.nl/docs/usb-pid.html
+* 
+
+h2. Embedding Leonardo for HID
+
+* "Installing Arduino Bootloader on Leonardo. Atmel Chip":http://electronut.in/bootloader-atmega32u4/
+
+h2. Connecting Joypads to Controller Boards
+
+* "Control your Raspberry Pi by using a wireless Xbox 360 controller":https://tutorials-raspberrypi.com/raspberry-pi-xbox-360-controller-wireless/
+* https://pimylifeup.com/xbox-controllers-raspberry-pi/
+
+h2. HID in Node.js. (deprecated)
+
+* "node-hid":https://github.com/node-hid/node-hid - "Access USB HID devices through Node.JS"
+* "hidstream":https://github.com/emilyrose/hidstream - "Streaming HID events in Node.js"

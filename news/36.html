@@ -1,0 +1,713 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Shepard v1.1 Dev Log (Temperature DAQ) Started: 05-21-13 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/shepard-ts.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/shepard-ts/news.html" class="news selected">News</a></li>
+<li><a href="../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/shepard-ts/boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-36-watcher"></span>
+
+
+</div>
+
+<h2>Shepard v1.1 Dev Log (Temperature DAQ) Started: 05-21-13</h2>
+
+
+
+<p><em>All of the work done on the temperature portion of the Shepard v1.1 DAQ system. This dev log was started on 05-21-13</em><br />
+<span class="author">Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-21.html" title="05/21/2013 11:31 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>I had to wait awhile to go get parts to mount the load cell on the v1.1 structure, so I started to research communicating with the ADS1118 via an Arduino to get the thermocouple data.</p>
+
+
+	<p>I found <a href="http://www.arduino.si/blog/talking-with-ads1118/" class="external">this blog post</a> which at least shows how to get a single ended voltage (single shot, high speed). I then got the register settings for temperature monitoring from <a href="http://e2e.ti.com/support/data_converters/precision_data_converters/f/73/t/255692.aspx" class="external">this source</a> .</p>
+
+
+	<p>Using these resources, I came up with the following simple source code for the Arduino:</p>
+
+
+<pre>
+#include &lt;SPI.h&gt;
+
+void setup() {
+  Serial.begin(9600);
+
+  // Set up and start the SPI serial interface
+  SPI.begin();
+  SPI.setBitOrder(MSBFIRST); // Most significant bit first
+  SPI.setClockDivider(SPI_CLOCK_DIV8); // Step down the arduino clock by 8
+  SPI.setDataMode(SPI_MODE1); //Serial interface timing
+}
+
+void loop()
+{ 
+  Serial.println(readRaw());
+  delay(1000);
+}
+
+/* Allows the caller to read the raw value from the ADS1118 */
+int readRaw(void) {
+  int rawValue; // Raw value received back from the ADS1118
+  byte MSB, LSB; //The most and least significant bits read from the ADS1118
+  byte MSBConf=B10001011; // Most Significant Bit configuration register
+  //11010001
+  byte LSBConf=B11110010; // Least Significant Bit configuration register
+  //10000010
+
+  // Read the ADS1118's channel's A0 and A1 as temperature in single-shot mode
+  MSB = SPI.transfer(MSBConf);
+  LSB = SPI.transfer(LSBConf);
+  //SPI.transfer(MSBConf);
+  //SPI.transfer(LSBConf);
+
+  // Build the raw value from the most and least significant bits
+  rawValue = (MSB &lt;&lt; 8) | LSB;
+
+  return rawValue;
+}
+
+/* Allows the caller to read the raw voltage */
+double readVoltage(void) {
+  int rawValue; // Raw value received back from the ADS1118
+  double volts; // Converted voltage from the raw value
+  const double amp = 0.256; // FS multiplier in register (check data sheet)
+
+  // Get the raw value so that we can convert it to a voltage
+  rawValue = readRaw();
+
+  // Convert the raw value to the corresponding voltage (16 bits = 0 to 32767)
+  volts = amp * (double)(rawValue / 32768);
+
+  return volts;
+}
+</pre>
+
+	<p>Using the following resources, I then came up with the circuit below:</p>
+
+
+	<ol>
+	<li><a class="external" href="http://www.ti.com/lit/ds/sbas457c/sbas457c.pdf">http://www.ti.com/lit/ds/sbas457c/sbas457c.pdf</a></li>
+		<li><a class="external" href="http://arduino.cc/en/Reference/SPI">http://arduino.cc/en/Reference/SPI</a></li>
+	</ol>
+
+
+	<p><strong>Fritzing Diagram</strong><br /><img src="http://opendesignengine.net/dmsf_files/95?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/94?download=" class="external">Large</a> ) ( <a href="http://opendesignengine.net/dmsf_files/98?download=" class="external">Real Life Breadboard Photo</a> )</p>
+
+
+	<p>The blue terminal block on the breadboard is what the thermocouple leads attach to.</p>
+
+
+	<p><strong>Fritzing Generated Schematic</strong><br /><img src="http://opendesignengine.net/dmsf_files/97?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/96?download=" class="external">Large</a> )</p>
+
+
+	<p>The two open terminals on AIN0 and AIN1 represent the attachment points for the thermocouple leads.</p>
+
+
+	<p>For anyone reading this after the fact, keep in mind that this was my first time using <a href="http://fritzing.org" class="external">Fritzing</a> and I did a horrible job of routing. I really like Fritzing so far though.</p>
+
+
+	<p>When I tested the ADS1118 circuit with the source code above, I found that it wouldn't display any value except -1. I'm not sure yet what is causing this problem. If anyone reading this figures it out before I do, please feel free to leave a comment and let me know.</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-22" title="05/22/2013 12:17 pm">over 9 years</a> ago</h4>
+    <p>Cool stuff.  Fritzing looks awesome... something I should probably learn everything considered. :)  I just installed it and played around...  not bad!</p>
+
+
+	<p>Question:  why are we using the thermocouple and amp system instead of the MLX90614 IR sensors for 1.1?  On one hand they are relatively expensive and will requite some work to give them a window to look through, but on the other hand, since it is I2C (SMBus actually, but compatible), I get the feeling that they would be simpler to wire and code, possibly saving time for 1.1 which would leverage to 2.0.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-22" title="05/22/2013 03:37 pm">over 9 years</a> ago</h4>
+    <p>I think the major holdup for me on the MLX90614 was that it would require a new mounting mechanism (as well as the addition of that field of vision window you mentioned) to get it in position. With that said, I wouldn't be opposed to discussing the use of it if we can come up with a simple solution. If it's mounted close enough to the motor casing we risk damage in an explosion, but eliminate the need for a sight window, right?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-22" title="05/22/2013 04:45 pm">over 9 years</a> ago</h4>
+    <p>Just had a thought on using the non-contact MLX90614. If we cut a short length of a motor mount tube, we could mount the IR sensor in it and then slide the tube on before each run. This would help precisely and repeatably position the sensor for each run as well. In the event of an explosion, the sensor would become a tethered projectile in the same way the thermocouple is. The difference there is that the thermocouple is somewhat lighter. We should probably add a safety requirement that the sensor must be positioned on the bottom side of the motor, so that if there is an explosion the sensor is pushed down into the stand and not out laterally.</p>
+
+
+	<p>Would this work? Does that sensor have any sort of minimum focal length requirements?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-22" title="05/22/2013 04:48 pm">over 9 years</a> ago</h4>
+    <p>One drawback that just came to me is that you'd have to drill a hole in the plastic motor adapters used for A and B motors. I don't think that's a huge deal though.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-22" title="05/22/2013 06:41 pm">over 9 years</a> ago</h4>
+    <p>The sensors have no real focal length to speak of, though the sensor has a single sigma sensor cone of about +/-40 degrees and a detection limit of about +/-75 degrees.  You can limit the field of view by putting the sensor close or shrouding the sensor in a tube or cone.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-28" title="05/28/2013 10:01 am">over 9 years</a> ago</h4>
+    <p>After the discussion on the MLX90614 sensor here, I decided to give it a try to see if it would be practical for version 1.1.</p>
+
+
+	<p>Using the resources below, I was able to build the following circuit. I used the example code from resource <a href="http://opendesignengine.net/issues/3" class="issue status-3 priority-2 closed" title="Configure ODE to hide emails by default (Resolved)">#3</a> to test whether or not I had everything working properly. An important thing to note is that there's a 5 volt version of the sensor, as well as a 3 volt (3.3 volt) version. We're using the 3 volt version.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/101?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/100?download=" class="external">Large</a> )</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/103?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/102?download=" class="external">Large</a> )</p>
+
+
+	<ol>
+	<li><a class="external" href="http://www.melexis.com/Assets/IR-sensor-thermometer-MLX90614-Datasheet-5152.aspx">http://www.melexis.com/Assets/IR-sensor-thermometer-MLX90614-Datasheet-5152.aspx</a></li>
+		<li><a class="external" href="http://bildr.org/2011/02/mlx90614-arduino/">http://bildr.org/2011/02/mlx90614-arduino/</a></li>
+		<li><a class="external" href="http://interface.khm.de/index.php/lab/experiments/infrared-thermometer-mlx90614/">http://interface.khm.de/index.php/lab/experiments/infrared-thermometer-mlx90614/</a></li>
+	</ol>
+
+
+	<p>Here's a picture of the circuit IRL (in real life).</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/105?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/104?download=" class="external">Large</a> )</p>
+
+
+	<p>The sensor gave values that made sense, and the sample rate seemed pretty decent. I'm going to start working on how to mount the sensor to the v1.0/v1.1 structure now.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-28" title="05/28/2013 10:14 am">over 9 years</a> ago</h4>
+    <p>That looks fantastic!  Can you mount a second temp sensor on the same bus and read it?  This would give Shepard 1.1 full NAR compliance!</p>
+
+
+	<p>Aaron</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-28" title="05/28/2013 12:44 pm">over 9 years</a> ago</h4>
+    <p>I haven't tried running two temperature sensors on the same bus yet, but it shouldn't be too hard. Our DAQ software isn't set up for more than one sensor though. If we could find longer motor mount tube material, we could permanently mount the sensors in the proper locations. Whenever you slide the motor in, the sensors are automatically in the right spot.</p>
+
+
+	<p>Another thing holding us back from full NAR compliance (which probably always will) is the need for a NIST calibrated load cell. I think that our use case and budget will probably always preclude this. That's just my opinion though.</p>
+
+
+	<p>What I'm thinking about for the test mounting of the MLX sensor is this:</p>
+
+
+	<p>1. Get another cardboard motor mount tube like the one in this picture.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/106?download=" alt="" /></p>
+
+
+	<p>2. Cut a 0.5 to 0.75 inch length of the tube.</p>
+
+
+	<p>3. Put a hole in the tube just large enough so that the first shoulder of the sensor body (shown in picutre) will not fit through.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/107?download=" alt="" /></p>
+
+
+	<p>4. Glue the sensor shoulder to the tube body. This will require some filler because gaps are not desired between the sensor body and the curvature of the tube.</p>
+
+
+	<p>5. Slide this ring over the end of the motor in the mount before each test.</p>
+
+
+	<p>6. Make sure that the ring is rotated so that the MLX sensor is between the motor and the structure's slide. This will help lessen the chance of the sensor becoming a projectile in the case of an motor explosion.</p>
+
+
+	<p>7. Here's an rough, exaggerated, and out-of-scale sketch of what I have in mind.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/109?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/108?download=" class="external">Large</a> )</p>
+
+
+	<p>Perhaps a better alternative would be to use a small cardboard standoff tube for the MLX, where the shoulder closest to the pins would rest against the standoff tube.</p>
+
+
+	<p>I do have a couple of concerns about the design.</p>
+
+
+	<p>1. How do I make clean holes in the tube material so that temp sensor (or the standoff) mounts cleanly?</p>
+
+
+	<p>2. Will mounting the temp sensor in this way affect its ambient temperature readings?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-28" title="05/28/2013 02:27 pm">over 9 years</a> ago</h4>
+    <p>Nicely done!  To stabilize the MLX you may wish to mount it in a short tube as you mentioned, and this would hide ugly edges of the body tube hole, especially if the tube were mounted to the body tube with epoxy.  As long as the hole does not affect the structure of the body tube and stray bits do not appear in the viewing area of the sensor, it should be fine.  If the short tube used for the MLX is notched to match the body tube curve and mounted with epoxy, the resulting assembly should be stronger than the original.</p>
+
+
+	<p>Mounting the sensor like this will ensure the only thing it sees in its field of view (+/- 45 degrees) is the engine casing.  This is exactly where we want to be.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-24" title="06/24/2013 09:11 am">over 9 years</a> ago</h4>
+    <p>I spent some time last week writing an I2C library to specifically work with our implementation of the MLX60914 non-contact sensor on Shepard. It shouldn't be hard to expand it to work with an I2C interface for Shepard's load cell when needed on version 2.0.</p>
+
+
+	<p>I started today by gathering the materials that I expected to need to build leads and connectors for the MLX sensor. I'm also expecting to go to the hardware store to purchase a longer length of shrink tubing to help contain and protect the sensor leads.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/220?download=" alt="" /></p>
+
+
+Part List:
+	<ol>
+	<li>CAT-5 Ethernet cable</li>
+		<li>Heat shrink tubing</li>
+		<li>40-pin 2.54mm male long header (I'll only use 4 of the pins)</li>
+		<li>0.1 uF Tantalum capacitor</li>
+		<li>MLX60914 non-contact IR temperature sensor</li>
+	</ol>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-24" title="06/24/2013 01:05 pm">over 9 years</a> ago</h4>
+    <p>1. The first thing I did was remove the CAT-5 wires from the sheathing. I chose orange for +3.3v (Vdd), green for ground (Vss), and blue and blue-white for the SCL and SDA pins respectively.<br />2. I clipped 2 contiguous header pins for the SCL and SDA leads, and 2 separate pins for the +3.3v and GND leads.<br />3. I soldered the capacitor directly between the MLX sensor's Vdd (3.3v) and Vss (GND) pins, making sure that the capacitor's leads stuck out far enough to attach the CAT-5 leads to. I used to spring clip heat sink attached to one of the alligator clips of my hands-free soldering station to hold things for the soldering. Not an ideal setup, but it worked. During this free form soldering, I was careful not to let the capacitor body come to rest against the MLX sensor body.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/221?download=" alt="" /></p>
+
+
+	<p>4. I stripped the ground and 3.3v leads and soldered them next.<br />5. I then stripped the leads for the SLC and SDA pins and soldered them.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/222?download=" alt="" /></p>
+
+
+	<p>Before doing anything else, I wanted to test to make sure that the sensor was working properly. I hooked it up to the Arduino and ran the sample program I had written last week (available in the <a href="https://opendesignengine.net/projects/shepard-ts/repository" class="external">repository</a> by the end of the day today). The Arduino would pull sensor readings from the MLX for awhile and then stop. I coded the Mach 30 I2C library to wait on the device if it was busy, so I'm guessing that my test leads are too long and not connected solidly. I'll cut them to length and make sure the connections are good and try again.</p>
+
+
+	<p>I felt that the sensor leads should be about 4 inches longer than the leads for the load cell since this temperature sensor has to reach the back of the motor. That left the leads being 1 foot too long. I shortened those up and tried again. That seems to have fixed the problem, but it's still something to keep an eye on.</p>
+
+
+	<p>The next step will be adding some heat shrink tubing, but I think I'll post this dev log segment first to give people a chance to comment.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-24" title="06/24/2013 01:51 pm">over 9 years</a> ago</h4>
+    <p>Does the I2C bus you are connecting to have a terminator?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-24" title="06/24/2013 04:13 pm">over 9 years</a> ago</h4>
+    <p>I started by adding heat shrink tubing to keep the connections on the MLX sensor separate.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/223?download=" alt="" /></p>
+
+
+	<p>Then I added the sheathing shrink tube to keep all the leads manageable. I left 3 inches of the leads loose on the Arduino end of the cable so that the leads could be run to their perspective female headers on the Arduino.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/224?download=" alt="" /></p>
+
+
+	<p>Next I was ready to start soldering the header pins on the Arduino's end of the leads, but I needed to get heat shrink tubing on the leads first because I couldn't fit them over the pins after.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/225?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-25" title="06/25/2013 11:25 am">over 9 years</a> ago</h4>
+    <p>I figured out this morning that I've been transposing a couple of the numbers in the MLX sensor's part number. It's actually MLX90614.</p>
+
+
+	<p>After a discussion I had with Aaron, I decided to take another look and make sure that the Arduino's internal pull-up resistors were really being activated by our new library code. They were not. I fixed that bug and now I think we should be in the clear on any read stalls due to the MLX sensor appearing not to be ready on the I2C bus.</p>
+
+
+	<p>At this point, I was ready to shrink the tubing on the connectors and do a longer test to make sure everything was working well.</p>
+
+
+	<p>I let the setup run for about 2 hours with no problems. I was then ready to integrate the new I2C library into the main body of the ShepardDCS code. This required only minor changes to both the Arduino and Processing programs, and were done in a few minutes. They need to be tested of course though.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/226?download=" alt="" /></p>
+
+
+	<p>Before posting this part of the dev log, I wanted to do a sample rate check with the Arduino sampling both the load cell channel and the MLX sensor. I hooked the load cell back up and did a test run by simply pushing on the load cell with my finger. When I looked at the data I ended up with 357 samples per second.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-07-09" title="07/09/2013 02:22 pm">over 9 years</a> ago</h4>
+    <p>The next step was mounting the temperature sensor in a way that would allow us to consistently measure the temperature of a motor casing at the throat of the nozzle. I got another section of motor mount tube from a local hobby store, and a 1 foot length of 3/8 I.D. x 9/16 O.D. vinyl tubing from a local hardware store. The main part of the body of the MLX90614 sensor fits down inside the tubing, and the shoulder of the sensor body rests on the outside wall of the tubing. A little bit of clear silicone should hold the sensor in place.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/229?download=" alt="" /></p>
+
+
+	<p>Aaron has told me that the throat of the nozzle on the Estes motors should be 10 mm from the exhaust end of the motor. My thought is to cut a section of motor mount tube the length of the motor (or adapter) which sticks out of the back of Shepard's motor mount tube.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/230?download=" alt="" /></p>
+
+
+	<p>Then I'll measure back 10 mm from the end of the tube section and try to put a hole in it with a single hole punch. Then I'll try to match the curve of the cardboard sensor mount tube with a curve cut in the end of the vinyl tubing.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-07-15" title="07/15/2013 12:58 pm">over 9 years</a> ago</h4>
+    <p>The red motor adapter sticks out approximately 23 mm from the end of the motor mount tube, so I think I'll cut the sensor's tube to 23 mm. To keep from crushing the tube I'll insert an adapter inside of it while I mark and cut the tube. I'll also use an old circle template to try to get the circumference of the tube marked as straight as possible.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/231?download=" alt="" /></p>
+
+
+	<p>Since the circle template was flexible and had a hard edge, I wrapped it around the tube and lined it up with multiple 23 mm markings. You could use any flexible material with a hard edge, the circle template is just what I had on hand.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/232?download=" alt="" /></p>
+
+
+	<p>I then started cutting along the marked line with a fine bladed knife.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/233?download=" alt="" /></p>
+
+
+	<p>The cut wasn't the prettiest, but it works for my uses.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/234?download=" alt="" /></p>
+
+
+	<p>I tried a dry fit with the tube and found that it covered the notches for the engine retainer clip. The notches are a couple of millimeters deep, so I'll need to knock the length of the mount tube down to 20 mm.</p>
+
+
+	<p>With the tube cut to the right length, I wanted to measure from the clean end of the temperature mount tube to find the position to put the hole for the sensor with a hole punch. Since the length from the motor mount tube to the end of the motor is 23 mm, if I measure 13 mm from the end of the motor mount tube that should put me at 10 mm (the location of the nozzle throat) from the end of the motor. I put a mark there and then used the hole punch to put a clean hole in the tube.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/236?download=" alt="" /></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/235?download=" alt="" /></p>
+
+
+	<p>Next, I needed to put a curve in the end of the vinyl tubing to match the curve of the cardboard tube body. There was no clean way for me to cut the curve, so I tried using a pair of scissors. The scissors couldn't make a tight enough curve in the tubing. I ended up cutting a V in the end of the tubing with the intention of filling any gaps with adhesive later.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/237?download=" alt="" /></p>
+
+
+	<p>I then cut the tubing to about the length of the MLX90614 sensor (~3 mm).</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/238?download=" alt="" /></p>
+
+
+	<p>The next step is to go to the local hardware store for some adhesives. Chris has suggested 3M Scotch Weld for the bond between the vinyl tubing and the cardboard tube, and I'm thinking about putting a small amount of clear silicon on the sensor to hold it in the tubing. The idea is to let the sensor pop out of the tubing easily in the event of a motor explosion so that it doesn't become a projectile as easily.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-07-15" title="07/15/2013 02:30 pm">over 9 years</a> ago</h4>
+    <p>I wasn't able to find 3M Scotch Weld locally, and I'm too impatient to wait. The only thing I could find that looked like it would work within the temperature range I needed with Elmer's Stix-All Hot/Cold Extreme Cement. I'm going to do a test to see if it sticks well at all before I try it on the final piece. The adhesive is fairly tacky, so it's easy to stick the two parts together while you work on a clamping method. I glued an extra piece of vinyl tubing to an extra piece of cardboard tubing and I'll wait to see how well they bond. It should be set within 24 hours. If it looks promising tomorrow morning I'll probably go ahead and finish the temperature probe for our partner CCSSC and get it shipped.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-07-15" title="07/15/2013 04:48 pm">over 9 years</a> ago</h4>
+    <p>Looks great.  The mount needs to hold the sensor and make sure it's looking in the right direction, not necessarily be the physical bond or limit the field of view.   Great job!</p>
+
+
+	<p>-Aaron</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-07-17" title="07/17/2013 02:08 pm">over 9 years</a> ago</h4>
+    <p>The test parts adhered well together, so I went ahead and glued (and clamped) the vinyl tubing and cardboard tube together.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/239?download=" alt="" /></p>
+
+
+	<p>After letting the clamped mount sit overnight, it looked like this.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/240?download=" alt="" /></p>
+
+
+	<p>With the sensor dry fit, the assembly looked like this.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/241?download=" alt="" /></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/242?download=" alt="" /></p>
+
+
+	<p>I tested the sensor and it seemed to work fine, so I went ahead and put clear silicone on opposite sides of the sensor housing to hold the sensor in the vinyl tube.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/243?download=" alt="" /></p>
+
+
+	<p>The temperature sensor will be ready to use once the silicone has set up, and the adhesive between the vinyl should technically have a couple of more days to reach full strength. I was wanting to get this shipped out today, but I think I'll hold off. I don't expect to be able to get back to this before Monday of next week, but I'll try a test firing and ship it then.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-09-03" title="09/03/2013 10:36 pm">about 9 years</a> ago</h4>
+    <p>We still owe our educational partner CCSSC a temperature sensor. The one that I built above ended up going to the NewSpace conference and will be going to the Open Hardware Summit.</p>
+
+
+	<p>I've been trying to find enough free time to build another probe with a few changes that I thought of while building the first one. The build was the same as above except for the changes listed below.</p>
+
+
+	<p>1. I wanted to bend the pins on the MLX sensor 90 degrees so that the sensor can be tucked up between the motor mount tube and guide rail. That way if there's a motor failure it reduces the risk even more that the sensor will become a projectile.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/248?download=" alt="" /></p>
+
+
+	<p>2. I re-used the sheathing of the CAT5e cable that I tore down for the wire instead of heat shrink tubing.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/249?download=" alt="" /></p>
+
+
+	<p>This also had the effect of making the finished cable slightly more flexible, which was a welcome improvement over the somewhat stiff cable I made for the first sensor.</p>
+
+
+	<p>3. Instead of only using 2 pins on the headers for the sensor lead connections to the Arduino, I used several contiguous pins to reduce twisting and loosening. J had a little trouble with the connections at NewSpace which prompted this change. I clipped the unused outlet pins to reduce the risk of them being shorted out.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/250?download=" alt="" /></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/251?download=" alt="" /></p>
+
+
+	<p>The finished connections on the Arduino side looked like this:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/252?download=" alt="" /></p>
+
+
+	<p>And the overall setup looks like this when finished:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/253?download=" alt="" /></p>
+
+
+	<p>The next step is to build a duplicate of the sensor housing (shown above).</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-09-11" title="09/11/2013 11:35 am">about 9 years</a> ago</h4>
+    <p>I built the temperature sensor housing the same way I did above and glued the MLX90614 in place with two small rounds of the high temperature Stix-All glue on opposite sides. I was trying to avoid completely sealing the sensor body to the inside of the tube so that pressure could escape around the sensor body during a motor explosion, and not propel the sensor outward with as much force. I also oriented the sensor leads so that they run towards the load cell at what I believe J calls the "back" of the test stand (towards the back plate where the load cell is mounted). This will allow the user to route the temperature sensor leads cleanly with the load cell leads if desired. My hope is that it also helps users remember to rotate the sensor to the underside of the motor mount tube. In that orientation a motor explosion would push the sensor down into the linear guide rail and not out laterally into potential observers.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/256?download=" alt="" /></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/257?download=" alt="" /></p>
+
+
+	<p>It will take 24 hours before the glue is set up enough to ship this sensor assembly, so I'll hopefully get it tested and shipped tomorrow.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-09-14" title="09/14/2013 04:47 pm">about 9 years</a> ago</h4>
+    <p>We had a bit of an engineering process breakdown and the dev log entries beginning with the non-contact IR sensor should have been published under the Shepard v2.0 target version and not Shepard v1.1.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/648" class="icon icon-contributor-license">amir ali</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-10-18" title="10/18/2018 12:28 pm">about 4 years</a> ago</h4>
+    <p>I think another way or strategy bombs, scrap it... or on the other hand change it, be that as it may, share your experiences and continue ahead. Your valiance and your straightforwardness will energize diverse teachers to break out of their own furrows. Advancement prospers in schools where teachers are permitted to fail. In any case, I endeavor to get a site like <a href="https://www.paperwritingpro.com/" class="external">professional assignment writers</a> and that I extremely like the subject and format of that site.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/678" class="icon icon-contributor-license">Kylie Williams</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-11-10" title="11/10/2018 10:18 am">almost 4 years</a> ago</h4>
+    <p>Such an amazing method you have applied here. I really got so impressed with your invention. Want to create sites then use [[<a class="external" href="https://www.webhostingonedollar.com/">https://www.webhostingonedollar.com/</a>]] deals given here and save your cash. Thank you</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/712" class="icon icon-contributor-license">Sivaji Raja</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-12-04" title="12/04/2018 10:14 am">almost 4 years</a> ago</h4>
+    <p>Thanks for sharing very valuable and great post and i will impressed thanks for the opportunity,<br /><a class="external" href="https://www.sbrgroup.in/residential-projects">https://www.sbrgroup.in/residential-projects</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/774" class="icon icon-contributor-license">woodlab interiors</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2019-02-08" title="02/08/2019 09:16 am">over 3 years</a> ago</h4>
+    <p>Such an amazing method you have applied here.<br /><a class="external" href="https://woodlabinteriors.com/">https://woodlabinteriors.com/</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/963" class="icon icon-contributor-license">William Riley</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2020-06-19" title="06/19/2020 09:08 am">over 2 years</a> ago</h4>
+    <p>I would like to share this informative blog with my students who are taking different subjects dissertation writing help <a class="external" href="http://www.eliteassignment.co.uk/business-dissertation-help/">http://www.eliteassignment.co.uk/business-dissertation-help/</a> from me at affordable price.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/36">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

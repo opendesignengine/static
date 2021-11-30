@@ -1,0 +1,822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - v1.0 - SEP Step 4 - Preliminary Design - Mechanical - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-158-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>v1.0 - SEP Step 4 - Preliminary Design - Mechanical</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-30.html" title="05/30/2012 03:17 am">over 10 years</a> ago</span></p>
+<div class="wiki">
+<p>The block diagram is one day away from being gelled, and today is the deadline to start this step. The block diagram is separated into two main parts - mechanical and Data Acquisition (DAQ), so I thought I'd get preliminary design discussions rolling on each of them.</p>
+
+
+	<p>Two questions that come to mind on the mechanical side of things are:</p>
+
+
+	<ol>
+	<li>Do we want to build Shepard in a vertical orientation, horizontal orientation, or in such a way that it can be switched?</li>
+		<li>What materials do we want to evaluate for this design?</li>
+	</ol>
+
+
+	<p>When going through this I think it would be good to review the <a href="https://opendesignengine.net/boards/4/topics/1" class="external">Resources discussion</a></p>
+
+
+	<p>There is a little bit of mechanical discussion starting with Ben's first comment <a href="https://opendesignengine.net/boards/4/topics/49" class="external">here</a></p>
+
+
+	<p>And of course we always need to keep the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0" class="external">requirements doc</a> in mind.</p>
+
+
+	<p>If I've missed any other discussions that contain mechanical items, please post them here.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (25)</h3>
+
+  <div class="message reply" id="message-161">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=161.html#message-161">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-30.html" title="05/30/2012 11:19 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I'm on vacation this week, but I do want to say I feel very strongly that we should use a horizontal orientation for Shepard.  Vertical test stands for motors have to account for the change in mass of the motor during the burn when calculating the performance because the thrust and the weight are in the same axis.  A horizontal test stand will eliminate this complication.  Plus, I believe we have seen some photos in the resources section that show s mall horizontal test stands, leaving me encouraged about the level of difficulty involved in building a horizontal test stand.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-162">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=162.html#message-162">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-31.html" title="05/31/2012 03:30 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>That's where I thought we were headed but I don't think we've ever documented it. I agree that a horizontal design is the way to go.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-165">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=165.html#message-165">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-06-02.html" title="06/02/2012 03:49 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>The first page of the <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">NAR motor testing manual</a> shows several pictures, including some of their test stand in use. In two of the pictures, it looks like the test stand is most of the width of a cinder block, and is 1-1/2 cinder blocks in length. I measured a cinder block that I had and it was 15.5 inches long by 7.5 inches wide.</p>
+
+
+	<p>One possible design that came to mind is the following.</p>
+
+
+	<ol>
+	<li>An L-shaped frame made of <a href="http://www.mcmaster.com/#standard-aluminum-sheets/=hsnip9" class="external">aluminum bar</a> . If the bar was purchased in enough length, it would be possible to cut triangular pieces for angle brackets as well. Buying from McMaster-Carr, a 1/4" thick bar that's 6" wide by 3 ft long would be approximately $41.51. You could put counter-sunk clearance holes in the bottom plate so that the stand could be mounted to a heavier object to keep it stationary.</li>
+		<li>A <a href="http://www.mcmaster.com/#sleeve-bearing-carriages/=hsnneg" class="external">linear guide rail with nylon cage</a> . Gives a low friction slide to mount the motor adapter to. Approximately $21.34. A simpler/cheaper alternative to this would be to have the motor adapters (see next item) be held in place inside a nylon (delrin, etc) mount that's drilled to have a slip fit with the rod. This might require some sort of safety catch so that the motor could never eject itself backwards away from the load cell and thus slip out of the mounts.</li>
+		<li><a href="http://www.mcmaster.com/#standard-aluminum-rods/=hsno29" class="external">Aluminum rod</a> to use as the motor adapters. I was thinking that if we used large enough rod to accommodate the largest motor's diameter, then we could use the same size rod for all motors. We would make several motor adapters, simply boring the correct size hole in each adapter for the motor. That way the center line of contact between the adapter and the load cell never moves no matter what size motor we're testing. That would also allow the motor mount to be standard for all motor sizes. A 1-1/2" diameter bar 1 ft in length would run $12.78.</li>
+	</ol>
+
+
+	<p>That's a total for mechanical (with the linear slide) of roughly $76, not including fasteners and other incidentals. If we went with the slip fit nylon motor mounts, that would probably knock about $15 off. There's a lot of room for discussion including materials and less expensive sources.</p>
+
+
+	<p>Any thoughts on this preliminary design idea? My thought was to keep it as simple as possible while allowing us to test multiple motors without having to do much reconfiguration of the stand. Using the slip fit mount would allow extremely quick changes of motor sizes.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-166">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=166.html#message-166">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-06-08.html" title="06/08/2012 03:16 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Test post from my phone... With a photo too.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/71/2012-06-04_15.09.06.jpg" class="icon icon-attachment">2012-06-04_15.09.06.jpg</a>
+  <span class="size">(1.5 MB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-167">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=167.html#message-167">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-06-08.html" title="06/08/2012 04:21 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Great! For anyone who wasn't in the Google+ Hangout tonight, we were discussing ways to incorporate things like hand drawn sketches into these forum posts. It looks like Greg's phone handled the ODE interface without any trouble. The idea being that you could take a picture of a napkin sketch in a restaurant and post it here for the rest of us.</p>
+
+
+	<p>Don't laugh, the SR-71 Blackbird was first sketched on a napkin. Or so the story goes...</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-175">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=175.html#message-175">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-06-16.html" title="06/16/2012 03:57 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Sorry I missed the "hangout".  I don't know how to access Google+ and have been very busy lately dealing with my Mother-in-law's medical issues.  It doesn't help that she lives up in Greenville, which is about 50 miles from our home.</p>
+
+
+	<p>Cheryl and I are supposed to be down in Tennessee next week, after which I might be able to devote some time to this project.</p>
+
+
+	<p>Among the many aluminum extrusions that are available are large angle sections with unequal sides.  I will see if I can find anything big enough for the main frame.  Also among aluminum extrusions is "hollow rod" which is another way of describing tubing with a wall thickness that is a major portion of the total radius.  Starting with a hole through the center of the "rod" saves a drilling step and also reduces material cost.</p>
+
+
+	<p>I hope that I will get time to think seriously about ways to reduce the cost of force measurement.  But "there is no such thing as a free lunch" in the sense that reducing material cost will significantly increase assembly and calibration time, and probably increase the complexity of signal conditioning.  Among the low-cost, high-complexity force measurement methods is, for example, measuring the inductance of a coil spring (as the spring is compressed the inductance will increase.  This will decrease the resonant frequency with a fixed capacitor, and frequency is a relatively easy measurement.  It would be sort of like running a freq' counter in "period-average" mode.</p>
+
+
+	<p>Ben</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-182">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=182.html#message-182">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-07-01.html" title="07/01/2012 10:22 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks for the input Ben. We have had a few hangouts about the preliminary design, and I've started to dump the decisions into the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design_v1_0" class="external">wiki</a> . I'm stalled out on the mechanical part of the design right now though because we need to discuss a concern that Greg has about using balsa wood and cardboard in the motor mount. Until I get all of the notes cleanly integrated into the wiki doc you can read the hangout meeting minutes via the links at the top.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-183">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=183.html#message-183">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-07-03.html" title="07/03/2012 01:25 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>After reading through the preliminary mechanical design (<a class="external" href="https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design_v1_0">https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design_v1_0</a>)  I'm kinda lost.  I couldn't tell if there was agreement on the vertical vs horizontal configuration... Being a visual person I need a picture or sketch to understand what is being described.  I'll take a shot at doing some sketches (probably on Wednesday) to see if I can understand what is being described.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-184">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=184.html#message-184">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-07-03.html" title="07/03/2012 01:31 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Nevermind... I didnt go back far enough in this thread... Found the mention of the preference for horizontal configuration.  <br />Greg Moran wrote:</p>
+
+
+<blockquote>
+
+	<p>... I couldn't tell if there was agreement on the vertical vs horizontal configuration...</p>
+
+
+</blockquote></div>
+  
+  </div>
+
+  <div class="message reply" id="message-185">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=185.html#message-185">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-07-03.html" title="07/03/2012 01:56 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ok, here are some numbers based on Estes thrust-vs-time plots (<a class="external" href="http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf">http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf</a>).  <br />From looking at A through E sized motors:</p>
+
+
+	<p>overall Max thrust:  30 Newtons (6.75 lbs) for a duration of 0.05 secs<br />largest Average thrust: 10 Newtons (2.25 lbs) for a duration of ~3 secs.<br />shortest duration burn: 0.7 secs</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-186">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=186.html#message-186">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-07-03.html" title="07/03/2012 02:48 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Question:  Why are we using an assembly similar to the Rep Rap? (<a class="external" href="http://reprap.org/wiki/File:Plumb-1.jpg">http://reprap.org/wiki/File:Plumb-1.jpg</a>).  I think this makes the design unnecessarily complicated and increases the number of piece parts required.  It also requires know how to use a 3-D printer, or the purchase of parts from someone who knows how.  I would prefer to use parts that are readily available in any local hardware store.  In principle, the fewer specialized tools required the better, and don't forget to K.I.S.S.  <img src="https://lh5.googleusercontent.com/-7g_Oh9iY94E/T_KiaNjAzXI/AAAAAAAABp8/8_6TBhH77Og/s721/12+-+1" alt="" /> ... (you can see that I got lost pretty quick)</p>
+
+
+	<p>I also took a shot at sketching a simpler design using just wood and 2 smooth rails.  <img src="https://lh6.googleusercontent.com/-EL0FCBNC7TU/T_KiaPZghdI/AAAAAAAABqA/IPtEM64lX5E/s801/12+-+2" alt="" /></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-191">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=191.html#message-191">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-02.html" title="08/02/2012 08:44 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>After talking through some design changes over a Google+ Hangout, Greg set out to run some calculations. His task was to make sure that an aluminum (6061-T6) motor mount tube could contain the force of an explosive motor failure. This discussion started out being held over email, so I wanted to copy everything here for documentation's sake.</p>
+
+
+	<p>Below is a snapshot of Greg's spreadsheet at the time I'm writing this, and <a href="https://docs.google.com/spreadsheet/ccc?key=0ApSwPP73xNvwdDljdEcwYV9KeGk5NmFsTXd5ei0xNEE#gid=0" class="external">here is a link</a> to the spreadsheet on Google Docs.</p>
+
+
+	<p><img src="../../../attachments/download/98" alt="" /></p>
+
+
+	<p><strong>Greg said:</strong> <em>I did some rough calculations of the safety factor using a metal (aluminum) motor casing for the Shephard Test Stand.  All source information and assumptions should be documented in the spreadsheet.  Please let me know when you'd like to go over this calculation.</em></p>
+
+
+	<p><strong>J. said:</strong> <em>I think the part you missed to include the role thickness plays in the design is the hoop stress calculation (<a class="external" href="http://en.wikipedia.org/wiki/Cylinder_stresses">http://en.wikipedia.org/wiki/Cylinder_stresses</a>).  I believe you will need to calculate the force on the inner walls of the motor mount and then apply that force to the hoop stress equation to get the stress in the motor mount walls.  (Note, my mechanics is a bit rusty, so someone else should weigh in as well.)</em></p>
+
+
+	<p><strong>Ethan said:</strong> <br /><img src="../../../attachments/download/99" alt="" /><br /><em>Back when one of my projects did hydrostatic testing for cylindrical tanks and motor cases for rockets, the governing stress for case failure under internal pressure was the hoop stress (the case failed in hoop first).  We used the above equation to calculate the stress at which failure would occur.  <br />       Our methodology for calculating internal pressure was to use rocket propulsion equations for the propellant chemistry, temperature as well as throat diameter of the nozzle.  A rundown of the equations can be found in Sutton's 'Rocket Propulsion Elements' (<a class="external" href="http://www.amazon.com/Rocket-Propulsion-Elements-7th-Edition/dp/0471326429">http://www.amazon.com/Rocket-Propulsion-Elements-7th-Edition/dp/0471326429</a>).  <br />       Please let me know if this helps.</em></p>
+
+
+	<p><strong>J said:</strong> <em>Ethan, thanks for the info.  This looks like what we are looking for.</em></p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/98/Gregs_Safety_Calcs.png" class="icon icon-attachment">Gregs_Safety_Calcs.png</a>
+  <span class="size">(95.5 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/99/Ethans_Equation.png" class="icon icon-attachment">Ethans_Equation.png</a>
+  <span class="size">(489 Bytes)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-192">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=192.html#message-192">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/4.html" class="icon icon-contributor-license">Greg Moran</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-05.html" title="08/05/2012 10:48 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>RE:  Ethan's suggestions for Hoop Stress calculation.  <br />@Ethan, I think the method/equation that you're recommending assumes a "thin-walled" pressure vessel, which in this case may not be a valid assumption.  Typically, the rule of thumb for this is thickness is &lt;10% of the radius (in our case thickness=0.133" and radius=0.5").  If we make that assumption anyway, our safety factor is &gt;4.6.</p>
+
+
+	<p>If we do not assume the cylinder is "thin-walled" then the equation gets more complicated (Wikipedia started talking about constants of integration!)  I think at this point, I'm going to put together a quick test:<br /> - cut open an Estes E-size engine and extract the propellant, <br /> - grind the propellant and pour into the specified pipe with one end sealed off, <br /> - and ignite it. <br /> - taking video documentation the whole time.  <br />(is this an accurate enough demo to simulate a catastrophic motor failure?)</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/100/hoop_stress.png" class="icon icon-attachment">hoop_stress.png</a>
+  <span class="size">(57 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-193">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=193.html#message-193">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-08.html" title="08/08/2012 11:24 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>@Greg - In the interest of expediting this part of the project, I would say your plan of action seems like a reasonable test. Hopefully we can get a hangout put together about the equations too soon though.</p>
+
+
+	<p>Can you get the same sort of failure by plugging the nozzle of the motor (with something like a screw) and then igniting it? That would save you the work of extracting and grinding the propellant.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-194">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=194.html#message-194">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-09.html" title="08/09/2012 09:33 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I agree we should test this to confirm the analysis results, but I am not sure the loosely packed powder from the motor will explode (at least not in the same way as a motor failure).  As I recall, the pressure in the motor is a key driver of the explosive force, and the mostly empty motor mount will probably be a very different pressure environment.  I also wonder how we can trigger a motor failure (plugging the nozzle seems obvious, but I wonder if a screw would be sufficient, or if it would just fly out at some point as an impromptu projectile).</p>
+
+
+	<p>I did some looking around for a firework that we could consider using as a substitute for the motor, but so far I have not found anything that looks equivalent to the 35.8 g of powder in the E size motor.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-195">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=195.html#message-195">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-09.html" title="08/09/2012 03:55 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>The screw probably would become an impromptu projectile, but I wonder if the pressure inside the motor would build so quickly that even a momentary blockage of the nozzle would result in an explosive failure. If you're looking for a safer plug, maybe some epoxy in and over the nozzle might work. My concern with the firework substitute is that the powder mix inside may vary significantly from what's in an Estes motor. Unless you analyze the mix you'll never be able to be sure if you're generating even close to the same pressures with the firework.</p>
+
+
+	<p>This is all just conjecture on my part though.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-196">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=196.html#message-196">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-09.html" title="08/09/2012 06:46 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I'm still waiting on a copy of Rocket Propulsion Elements to come in, so I had a look around to try to find another source.</p>
+
+
+	<p><a class="external" href="http://www.ewp.rpi.edu/hartford/~ernesto/SPR/Gandia-FinalReport.pdf">http://www.ewp.rpi.edu/hartford/~ernesto/SPR/Gandia-FinalReport.pdf</a></p>
+
+
+	<p>Have a look at page 14 under "Chamber Pressure and Hoop Stress".</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-198">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=198.html#message-198">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-09.html" title="08/09/2012 06:58 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I reading through the document that I just posted, it looks like page 6 gets to the heart of the matter for us.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-199">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=199.html#message-199">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-09.html" title="08/09/2012 07:35 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>It's a little hard to read, but here's my cheat sheet of what we need from that document.</p>
+
+
+	<p><img src="../../../attachments/download/101" alt="" /></p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/101/Hoop_Stress_Cheat_Sheet.png" class="icon icon-attachment">Hoop_Stress_Cheat_Sheet.png</a>
+  <span class="size">(673.8 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-200">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=200.html#message-200">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-09.html" title="08/09/2012 07:37 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>The more I look into the fireworks that exist, the more I tend to agree with you about not getting an apples-to-apples comparison.  In terms of getting the motor to fail, tthe epoxy might be a good idea.  We should be able to mount an igniter in the motor and then cover the end of the motor with the epoxy.  (Oh, how it pains me to be discussing how to purposely cause a catastrophic motor failure of a reliable and safe commercial motor.)  I think the forced motor failure needs a little testing of its own (from a very big distance, and possibly on smaller motors than E size) to make sure we have that process working before relying on it for component level testing for the design (ugh, more work).</p>
+
+
+	<p>Back to calculating the required thickness of the motor mount, I think the challenge here is that most of the equations we will find will be for calculating the stress on the chamber walls during operation (when the chamber pressure is well behaved) vs what we need which is to calculate the stress on the motor mount when the motor explodes.  I have some text books with me on my trip, I will see if I can find anything that will help shed some light on this in any of them.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-201">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=201.html#message-201">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-09.html" title="08/09/2012 07:56 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ah, gotcha. Looking at the equations above in light of what you've said about well behaved operation vs failure, I can see multiple values that might become unknowns when the motor casing explodes. It seems to me like you'd have too many of those unknowns during an explosive failure to get a reasonable level of accuracy. It will be interesting to see what you find in your text books about this.</p>
+
+
+	<p>If Ethan is allowed to talk about it, I'd like to hear how his project group handled this.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-205">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=205.html#message-205">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-10.html" title="08/10/2012 08:46 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have been staying out of the explosion/containment discussion due to lack of knowledge on that subject.  What is the probability that a standard rocket motor will explode?  From my limited experience, it seems that the probability is VERY low.  I have never seen, nor heard about such an event.</p>
+
+
+	<p>OTOH, I have seen 2 events that looked like off-axis thrust right at the end of the main burn, well before the ejection charge detonated.  Visually, the exhaust plume looked like it went off-axis by about 30-45 degrees causing the rocket to tumble before deploying the parachute.  I saw this several years ago when model rockets were launched at Twin Towers Park, which is also the local site for R-C gliders, and R-C electric aircraft.  Is off-axis thrust still a failure mode with significant probability?  Should we be doing anything to detect it?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-206">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=206.html#message-206">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-11.html" title="08/11/2012 10:06 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ben,</p>
+
+
+	<p>I am not sure what the probability of a catastrophic motor failure (read nozzle becomes blocked and the motor explodes) is, but the fallout from such a failure would be significant if it led to any injuries (especially if that included any public viewers).  So, we want to ensure any such failure is completely contained.</p>
+
+
+	<p>The other failure mode you bring up is a good one to consider as well.  I think there are two things we need to consider with an off axis burn.  The first is we want to make sure the guide rails will keep the motor from coming loose. The second is we want to make sure the off axis thrust is unlikely to damage the test stand itself.  I think our current design concept should address the first item, but I am not quite as confident about the second (I can imagine an off axis burn could damage data lines for the thermocouples if it went the wrong way).  Anyone have any other concerns about the kind of damage an off axis burn could cause or comments on these concerns?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-207">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=207.html#message-207">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-13.html" title="08/13/2012 11:13 am">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>My guess is that we will see some patters resulting from off-axis burn in the thrust curve, and we'll just have to learn what that looks like. Depending on what's causing the off-axis burn, maybe the casing temperature will increase as well?</p>
+
+
+	<p>I think that the high-speed video system that we've proposed for Shepard 2.0+ would be ideal for detecting this sort of thing. I would be interested in keeping track of the thrust curves when off-axis burn is observed by a test stand operator.</p>
+
+
+	<p>As far as the potential for damage to the stand itself - I was hoping the mechanical team would route any thermocouple wiring out of the safest area in the load cell end of the motor mount tube, away from the nozzle. The Arduino will probably be attached near that area, so I think running the thermocouple wires that way would be the cleanest solution, and would decrease the risk of problems from things like off-axis burn. We need to make sure not to route the wires near/through the proposed exhaust ports for the parachute charge though.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-208">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="158%3Fr=208.html#message-208">RE: v1.0 - SEP Step 4 - Preliminary Design - Mechanical</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-08-16.html" title="08/16/2012 10:36 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here are some videos that Greg took when he did testing to see if an aluminum tube could hold the chamber pressure generated from an explosive Estes motor failure. Notice that using epoxy to block the nozzle does not necessarily induce explosive failure of the motor.</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/0BT0dhvtJiw?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/0BT0dhvtJiw?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+
+<object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/qebBKtRIen0?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/qebBKtRIen0?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+
+<object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/uorI-bNXBJQ?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/uorI-bNXBJQ?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+
+<object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/yL0qFNLw8GA?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/yL0qFNLw8GA?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+
+<object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/Fm-56viH3RU?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/Fm-56viH3RU?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+
+<object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/AnFbW9EJcpU?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/AnFbW9EJcpU?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+
+<object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/L6FcDASIRR8?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/L6FcDASIRR8?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+
+<object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/VtaoyVMi3_A?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/VtaoyVMi3_A?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+
+<object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/ZL-lEGSg9vU?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/ZL-lEGSg9vU?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-25/25)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/158">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

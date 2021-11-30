@@ -1,0 +1,53 @@
+h1. Tone Ring Assembly
+
+{{>toc}}
+
+h2. Tools
+
+* Holoseat Test Stand
+
+h2. Materials
+
+* (optional) Instant/super glue (prefer Loctite Super Glue Ultragel Control)
+* (1) 18PTR-01: 18 Pole Tone Ring Base
+* (1) 18PTR-02: Tone Ring Cover
+* (36) 18PTR-03: N52 3/16" x 3/16" Neodymium Cylinder Magnets
+
+h2. Safety Issues
+
+* Use safety glasses when working with small, high powered magnets to avoid eye injury from flying magnets  
+* Be sure to maintain physical control of magnets (those being placed and those already placed) to avoid flying magnets
+
+h2. Product
+
+HS-03: 18 Pole Tone Ring
+
+h2. Procedure
+
+h3. 1. Place Magnets
+
+# Select a *18PTR-03: N52 3/16" x 3/16" Neodymium Cylinder Magnet* and place it length wise into one of the slots in the *18PTR-01: 18 Pole Tone Ring Base*
+!step1.1-sm.jpg!
+# Select another magnet and find its polarity by placing it along the outside edge so that it becomes attracted to the previous magnet
+# Rotate the magnet from the previous step 180 degrees (so that the pole attracted to the previous magnet is facing out to create a pole pair) and place it in the next slot in the base
+!step1.3-sm.jpg!
+# Repeat the previous two steps until the tone ring is fully populated
+!step1.4-sm.jpg! 
+
+h3. 3. Verify Magnet Placement
+
+# Set up the Holoseat Test Stand
+## Ensure the calibrated sensor is attached to the sensor controller
+## Ensure the power and USB connections are all configured according to the test stand operating instructions
+## Place the new tone ring onto the tone ring adapter
+# Run test
+## Clear the sensor stats
+## Run the stepper motor 1 revolution, in a CW direction, at 30 RPM
+## Get the sensor stats and verify the number of reported poles is 18
+# Remove the tone ring from the tone ring adapter
+
+h3. 4. Complete the Tone Ring
+
+# Align and place the *18PTR-02: Tone Ring Cover* over the *18PTR-01: 18 Pole Tone Ring Base*
+# Press the parts firmly to secure the cover to the base
+!step4.2-sm.jpg!

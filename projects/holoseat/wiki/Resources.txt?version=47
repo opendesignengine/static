@@ -1,0 +1,32 @@
+h1. Resources
+
+{{>toc}}
+
+
+h2. Moving from keyboard to joystick interface
+
+* "Support thread on joysticks and CHIP plus NodeBots":https://github.com/sandeepmistry/node-chip-io/issues/14
+* "Turning an Arduino Leonardo into a joystick":http://www.imaginaryindustries.com/blog/?p=80  
+* "USB Host Shield":http://arduino.cc/en/Main/ArduinoUSBHostShield
+* "Gameport to USB Joystick using 32U4":https://github.com/tloimu/adapt-ffb-joy/blob/wiki/
+* "How to sign Windows drivers and executables":https://learn.adafruit.com/how-to-sign-windows-drivers-installer
+
+h2. Dealing with Data/Signals
+
+* "USB Tester from Adafruit":http://www.adafruit.com/products/1456 - might be useful for later prototype development
+* "Data Smoothing":http://arduino.cc/en/Tutorial/Smoothing - Arduino tutorial dealing with smoothing out noisy data
+
+
+h2. Sensors considered
+
+* *"Hall Effect Sensor":http://en.wikipedia.org/wiki/Hall_effect_sensor* - selected for v0.3+
+** "Arduino Playground":http://playground.arduino.cc/Code/HallEffect
+** "Blog post covering three types of Hall Effect Sensors":http://bildr.org/2011/04/various-hall-effect-sensors/ - this is a very good resource, especially with respect to the types of sensors to consider
+** "Arduino post on using Hall Effect sensor to measure RPM":http://playground.arduino.cc/Main/ReadingRPM
+** "Forum post about measuring RPM and resetting to 0 when motion stops":http://forum.arduino.cc/index.php?topic=208227.0 - lengthy discussion and covers many of our goals
+** "Forum post about calculating RPM on a bike":http://forum.arduino.cc/index.php?topic=185174.0 - not really enough details here, but still documenting it
+* Reed switch ("Link 1":http://www.instructables.com/id/Arduino-Based-Optical-Tachometer/ | "Link 2":http://www.instructables.com/id/Arduino-Bike-Speedometer/) - v0.1 and v0.2 used reed switches (originally off of an old Bike Computer, now purpose selected)
+* Rotary Encoder
+** "Rotary Encoders":http://playground.arduino.cc/Main/RotaryEncoders
+** "Homemade Rotary Encoder":http://christian.liljedahl.dk/guides/simple-rotary-encoder - used in very first prototype, but quickly abandoned because the mechanical interface was difficult to maintain
+

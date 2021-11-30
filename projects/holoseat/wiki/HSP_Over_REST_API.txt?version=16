@@ -1,0 +1,95 @@
+h1. HSP Over REST API
+
+{{>toc}}
+
+*TODO* - port all of this data over to the HSP page (except /api/debug) and explain how the REST API is mapped to the HSP.  Then link to HSP for full details of the calls.
+
+h2. Meaning of HTTP Verbs
+
+|_.Verb|_.Meaning|
+|GET|Read value from controller|
+|PUT|Write value to controller (volatile) |
+|POST|Write value to controller (non-volatile)|
+|DELETE|Clear value from controller (volatile)|
+
+h2. REST API
+
+Items in _italics_ are for future development.  These methods will return a 501 not implemented status code (see "status codes":http://www.django-rest-framework.org/api-guide/status-codes/ for more details).
+
+|_.URI |_.Verb|_.Operation|
+|/api/main/devicename|GET|Returns the name of the Holoseat device attached to the system|
+|/api/main/enabled|GET|Returns current enabled state|
+|/api/main/enabled|PUT|Update enabled state|
+|/api/main/stepsize|GET|Returns current step size [1-4]|
+|/api/main/stepsize|PUT|Update current step size [1-4]|
+|/api/main/profile|GET|Returns current profile name (will end in a * if settings have been updated since profile was set)|
+| _/api/main/profile_ | _PUT_ | _Sets current profile name (cannot end in a '*')  Note: sending an empty string as the profile name will suspend configuration update messages until a non-empty profile name is set._ |
+|/api/main/cadence|GET|Returns current cadence (>0 means forward, <0 means reverse) and cadence level [0-4].  See firmware notes for definition of cadence level.|
+|/api/main/version|GET|Returns hardware, firmware, and HSP version data|
+|/api/forward|GET|Returns current forward action (see below), returns 404 status if no forward action is active|
+|/api/forward|PUT|Sets current forward action (see below)|
+| _/api/forward_ | _DELETE_ | _Clears current forward action_ |
+| _/api/forward/sprint_ | _GET_ | _Returns current forward sprint action (see below), returns 404 status if no forward sprint action is active_ |
+| _/api/forward/sprint_ | _PUT_ | _Sets current forward sprint action (see below)_| 
+| _/api/forward/sprint_ | _DELETE_ | _Clears current forward sprint action_ |
+|/api/reverse|GET|Returns current reverse action (see below), returns 404 status if no reverse action is active|
+|/api/reverse|PUT|Sets current reverse action (see below)|
+| _/api/reverse_ | _DELETE_ | _Clears current reverse action_ |
+| _/api/reverse/sprint_ | _GET_ | _Returns current reverse sprint action (see below), returns 404 status if no forward sprint action is active_ |
+| _/api/reverse/sprint_ | _PUT_ | _Sets current reverse sprint action (see below)_ |
+| _/api/reverse/sprint_ | _DELETE_ | _Clears current reverse sprint action_ |
+|/api/defaults|GET|Returns current defaults (see below)|
+|/api/defaults|POST|Sets new defaults (see below)|
+|/api/defaults|DELETE|Restore factory defaults (see below)|
+| _/api/resistance_ | _GET_ | _Returns current resistance setting of the pedals_ |
+| _/api/resistance_ | _PUT_ | _Sets current resistance setting of the pedals_ |
+|/api/debug|GET|Returns current debug state (True/False) as defined by the service configuration|
+|/api/debug/serial|PUT|Sends a serial message to Holoseat (returns result as JSON string or status 401 not authorized if debug state is false)|
+
+h2. Specifying an Action
+
+Actions are composed of 4 parts:
+# Device [keyboard|mouse|joypad] - what device is being emulated to implement this action
+#Input - what input value (e.g. key on a keyboard or button on a mouse) is being activated by the command
+# Command [press|hold] - how the input value should be sent:
+	press = press and release the input (e.g. press a key on a keyboard or click a mouse button)
+	hold = press and hold the input (e.g. hold down a key on a keyboard or a button on a mouse)
+# End [release|repeat|noop] - how to end the action
+	release = release the held input (requires command == 'hold')
+	repeat = repeat the action to end the action (requires command == 'press')
+	noop = no steps required to end the action, it will timeout in game (requires command == 'press') 
+
+The JSON format for an action is show below for the default forward action (hold down the 'w' key down on a keyboard)
+
+<pre>
+{
+"device": "keyboard",
+"input": 'w',
+"command": "hold",
+"end": "release"
+}
+</pre>
+
+h2. Defaults	
+
+The default settings for the Holoseat are those settings which are persisted in non-volatile memory.  They represent the most generic use case for the Holoseat and as such make a number of assumptions about the default actions associated with pedaling forward and backward.
+
+Specifically, the default settings assume the only device being emulated is a keyboard, with a command/end pairing of hold/release for both the forward and backward actions.  Further, the default settings assume there are no sprint actions.  These assumptions leave the following minimum set of default settings.
+
+# Enabled [True|False] - whether the Holoseat starts in the enabled state or not
+# Step Size [1-4] - the relative length of single steps (smaller values yield shorter steps)
+# Forward Character [alphanumeric character] - the key to press as the default forward action
+# Reverse Character [alphanumeric character] - the key to press as the default reverse action
+
+The JSON format for default settings is show below for the factory defaults.
+
+<pre>
+{
+"enabled": "True",
+"stepsize": 2,
+"forward": 'w',
+"reverse": 's'
+}
+</pre>
+
+Note, the default settings are written to the Holoseat controller’s EEPROM which has an expected life of approximately 100,000 write operations.  While this should allow for more than sufficient lifespan for the Holoseat controller, we still want to take precautions to avoid malicious code burning through the available write operations.  To that end, the POST method on /api/defaults will be protected to only support calls from the application GUI.  Additionally, there will be a minimum 5 second timeout that must elapse between calls to update the default settings.

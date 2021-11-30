@@ -1,0 +1,36 @@
+h3. [[Sidebar|Navigation]]
+
+h3. Shepard Test Stand
+
+* [[Wiki|Start Here]]
+* [[Versions|Versions]]
+
+h4. Documentation
+
+# [[BOM|BOM]]
+# [[Schematics and PCB Files|Schematics and PCB Files]]
+# [[Software Source Code|Software Source Code]]
+# [[Assembly Instructions|Assembly Instructions]]
+# [[Operating Manual|Operating Manual]]
+# [[Safety Procedures|Safety Procedures]]
+# [[Software/Firmware Summary|Software/Firmware Summary]]
+# [[Errata|Errata]]
+
+h4. Systems Engineering Process
+
+# [[Initial Questions|Initial Questions]]
+# [[Requirements Document|Requirements Document]]
+# [[Block Diagram|Block Diagram]]
+# [[Budget|Budget]]
+# [[Timeline|Timeline]]
+# [[Preliminary Design|Preliminary Design]]
+# [[Detailed Design|Detailed Design]]
+# [[Design Review|Design Review]]
+# [[Procurement|Procurement]]
+# [[Assembly_Instructions|Manufacture]]
+# [[Assembly|Assembly]]
+# [[Integration|Integration]]
+# [[Testing|Testing]]
+# [[Disposal|Disposal]]
+# [[Development Logs|Development Logs]]
+# [[Meeting Minutes|Meeting Minutes]]

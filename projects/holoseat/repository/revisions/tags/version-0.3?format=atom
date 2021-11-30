@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Holoseat: Revisions</title>
+  <link rel="self" href="http://opendesignengine.net/projects/holoseat/repository/revisions/tags/version-0.3?format=atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/tags/version-0.3"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2018-08-20T00:35:17+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Revision 117: Tagging Alpha Test Release as v1.0.0.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/117"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/117</id>
+    <updated>2018-08-20T00:35:17+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 116: Removed deprecated Windows App in prep to tag v1.0.0 release.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/116"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/116</id>
+    <updated>2018-08-20T00:28:58+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 115: correcting const-ness of arguments to SerialReturnError.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/115"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/115</id>
+    <updated>2018-04-03T00:21:05+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 114: More experimental code working with the 18 pole tone ring.  Moved most magic number...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/114"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/114</id>
+    <updated>2018-03-22T00:32:17+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 113: Experimental code for use with 18 pole tone rings.  Shifts from cadence tracking (t...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/113"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/113</id>
+    <updated>2018-03-18T17:15:03+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 112: Added support for client to request event sync up after connecting to it.  This ens...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/112"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/112</id>
+    <updated>2017-12-07T23:31:00+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 111: Updating naming for the refactored serial device class and added doc strings in pre...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/111"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/111</id>
+    <updated>2017-12-05T01:13:26+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 110: First pass at refactoring the serial device code so it can be reused in the test st...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/110"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/110</id>
+    <updated>2017-12-03T21:16:50+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 109: Refactored API handlers to delegate all responsibility for the API (outside of /api...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/109"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/109</id>
+    <updated>2017-12-03T19:20:01+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 108: Adding a file I missed last commit (holoseat/api/socketHandler.py) and implementing...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/108"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/108</id>
+    <updated>2017-11-12T03:01:34+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 107: First pass at implementing async serial monitor (included roughing in websocket bas...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/107"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/107</id>
+    <updated>2017-11-12T00:58:04+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 106: Small code clean up:</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/106"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/106</id>
+    <updated>2017-11-11T20:34:09+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;
+	&lt;li&gt;Stopped Tornado from auto-reloading on file changes (which was creating multiple system tray icons)&lt;/li&gt;
+		&lt;li&gt;Set the js imports to use a version string generated on app launch to ensure all js code is refreshed on app launch&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Revision 105: First pass at getting Serial Monitor working.  Lots of refactoring left to do.  Plu...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/105"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/105</id>
+    <updated>2017-11-05T05:13:50+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 104: Updated the Holoseat app code to be a Python package (yay all of the __init__.py fi...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/104"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/104</id>
+    <updated>2017-11-05T00:06:49+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 103: renaming app folder to holoseat to so we can run the app using python -m holoseat o...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/repository/revisions/103"/>
+    <id>http://opendesignengine.net/projects/holoseat/repository/revisions/103</id>
+    <updated>2017-11-04T22:01:32+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+</feed>

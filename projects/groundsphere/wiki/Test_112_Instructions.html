@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Test 112 Instructions - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../groundsphere%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../../groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Navigation</a><a href="Test_112_Instructions.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Ground-Sphere-CubeSat-Ground-Station"></a>
+<h3 >Ground Sphere CubeSat Ground Station<a href="Test_112_Instructions.html#Ground-Sphere-CubeSat-Ground-Station" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="Wiki.html" class="wiki-page">Start Here</a></li>
+		<li><a href="Versions.html" class="wiki-page">Versions</a></li>
+	</ul>
+
+
+	<a name="User-Manuals"></a>
+<h4 >User Manuals<a href="Test_112_Instructions.html#User-Manuals" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>End user manuals, including how to assemble from kit and operating instructions for predicting flyovers and receiving "space tweets".</p>
+
+
+	<ul>
+	<li><a href="Kit_Assembly_Instructions.html" class="wiki-page">Kit Assembly Instructions</a></li>
+		<li><a href="Software_Installation.html" class="wiki-page">Software Installation</a></li>
+		<li><a href="Operating_Manual.html" class="wiki-page">Operating Manual</a></li>
+		<li><a href="Safety_Procedures.html" class="wiki-page">Safety Procedures</a></li>
+	</ul>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="Test_112_Instructions.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>Full OSHW project documentation - covers component acquisition and assembly, packaging of kits, and other project level documentation needed to replicate the Ground Sphere from source.</p>
+
+
+	<ul>
+	<li><a href="BoM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Software Source Code</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/SoftwareFirmware_Summary" class="wiki-page new">Software/Firmware Summary</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Errata" class="wiki-page new">Errata</a></li>
+	</ul>
+
+
+	<a name="Systems-Engineering-Process"></a>
+<h4 >Systems Engineering Process<a href="Test_112_Instructions.html#Systems-Engineering-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>Full OSHW project design documentation - covers design from concept through final design.</p>
+
+
+	<ol>
+	<li><a href="Initial_Questions.html" class="wiki-page">Initial Questions</a></li>
+		<li><a href="Requirements_Document.html" class="wiki-page">Requirements Document</a></li>
+		<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="Budget.html" class="wiki-page">Budget</a></li>
+		<li><a href="Timeline.html" class="wiki-page">Timeline</a></li>
+		<li><a href="Preliminary_Design.html" class="wiki-page">Preliminary Design</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Detailed_Design" class="wiki-page new">Detailed Design</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Design_Review" class="wiki-page new">Design Review</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Procurement" class="wiki-page new">Procurement</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Manufacture" class="wiki-page new">Manufacture</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Integration" class="wiki-page new">Integration</a></li>
+		<li><a href="Testing.html" class="wiki-page">Testing</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Disposal" class="wiki-page new">Disposal</a></li>
+		<li><a href="Meeting_Minutes.html" class="wiki-page">Meeting Minutes/Notes</a></li>
+		<li><a href="Resources.html" class="wiki-page">Resources/Links</a></li>
+	</ol>
+
+<h3>Wiki</h3>
+
+<a href="../../groundsphere%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-233-watcher"></span>
+
+
+
+
+
+
+<a href="http://opendesignengine.net/projects/groundsphere/wiki/Test_112_Instructions/history" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <a name="Test-112-Instructions"></a>
+<h1 >Test 1.1.2 Instructions<a href="Test_112_Instructions.html#Test-112-Instructions" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Test_112_Instructions.html#Test-112-Instructions">Test 1.1.2 Instructions</a><ul><li><a href="Test_112_Instructions.html#Test-Hardware">Test Hardware</a></li><li><a href="Test_112_Instructions.html#Test-1-Lab-Test">Test 1: Lab Test</a></li><li><a href="Test_112_Instructions.html#Test-2-Field-Test">Test 2: Field Test</a></li><li><a href="Test_112_Instructions.html#Test-3-From-Orbit-Test">Test 3: From Orbit Test</a></li><li><a href="Test_112_Instructions.html#Second-From-Orbit-test">Second From Orbit test</a></li><li><a href="Test_112_Instructions.html#Future-Attempts">Future Attempts</a></li></ul></li></ul>
+
+
+	<a name="Test-Hardware"></a>
+<h2 >Test Hardware<a href="Test_112_Instructions.html#Test-Hardware" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/groundsphere-test-rig" class="external">Ground Sphere Test Rig</a></li>
+		<li>Computer, min system reqs: Windows 7, 1GHz, 1GB RAM</li>
+	</ul>
+
+
+	<a name="Test-1-Lab-Test"></a>
+<h2 >Test 1: Lab Test<a href="Test_112_Instructions.html#Test-1-Lab-Test" class="wiki-anchor">&para;</a></h2>
+
+
+Lab test using low power transmitter at 915 MHz to confirm signal reception and system gain (not an AX.25 signal, but close enough).  These instructions assume that the receiver is already assembled and most recent software is installed.  If not, accomplish the next 2 steps.
+	<ol>
+	<li>Follow the instruction for "GroundSphere Kit assembly" </li>
+		<li>Follow the instructions for Operations Manual - "Getting Started and Set up"</li>
+	</ol>
+
+
+	<p><strong>Test Date:</strong> <br />04JUN14@2057-2146MST   Test Location: MSL / Issyroo Lab, Walsenburg, CO</p>
+
+
+	<p><strong>Record Test Conditions:</strong> <br />23C ambient, indoor test, metal fixtures to hold test gear, moderately noisy RF environment, Cell phones off and batteries removed.</p>
+
+
+	<p><strong>Additional Tools Needed:</strong><br />Tape Measure</p>
+
+
+	<p><strong>Safety concerns:</strong><br />Standard lab safety; standard procedures reviewed.</p>
+
+
+<strong>Outcome:</strong>
+	<ul>
+	<li>Partial verification of technical requirement 1.1.2, </li>
+		<li>Confirmation of Ground Sphere performance in best case laboratory conditions</li>
+		<li>Confirmation of Ground Sphere performance in simulated orbital conditions</li>
+	</ul>
+
+
+<strong>Instructions:</strong>
+	<ol>
+	<li>[X] Turn on computer</li>
+		<li>[X] Turn on the transmitter</li>
+		<li>[X] Plug the GroundSphere USB data connector into an open USB port</li>
+		<li>[X] Plug the GroundSphere power cord into a standard 120v power outlet</li>
+		<li>[X] Measure and record the distance between transmitter and receiver: 1 meter <strong>Used standard tape measure at 36 inches</strong></li>
+		<li>[X] Launch the SeeDeR version 0.1 software <strong>Used SDR# for the ability to freeze the display</strong></li>
+		<li>[X] Tune the SeeDeR version 0.1 software to receive 915 MHz</li>
+		<li>[X] Position the cursor (red vertical bar) at 915 MHz on the horizontal axis</li>
+		<li>[X] Record the noise floor signal level: <strong>-53.89 dBm</strong></li>
+		<li>[X] Tune the transmitter to 915 MHz.  <a href="https://opendesignengine.net/projects/groundsphere-test-rig/wiki/Operating_Manual" class="external">Instructions</a></li>
+		<li>[X] Set transmitter power to -20dBm. <a href="https://opendesignengine.net/projects/groundsphere-test-rig/wiki/Operating_Manual" class="external">Instructions</a> _NOTE: (This is a reasonably strong terrestrial signal, and is an unrealistically high power to expect from SkyCube.  See Lab Test Link Budget figures <a href="https://docs.google.com/spreadsheet/ccc?key=0Aptu2_0_mvfAdDBzUHBkaTBKOWMzYVVhT0pxSTlhNEE&#38;usp=sharing)_" class="external">here</a></li>
+		<li>[X] Observe and capture/record the transmitted signal received by GroundSphere.  <strong>Set to -18dBm as closest equivalent</strong></li>
+		<li>[X] Position the cursor (red vertical bar) at the center peak of the displayed radio signal on the horizontal axis</li>
+		<li>[X] The signal should be plainly obvious as a strong peak above the noise floor.  If this is not the case, abort the test and troubleshoot. Signal was measured at -11.91dBm, 41.98dBm above the noise floor</li>
+		<li>[X] Measure and move the transmitter 3 meters from the GroundSphere antenna ensuring a clear line of sight.</li>
+		<li>[X] Set the transmitter power level to -60dBm.  <em>NOTE: (at this power level, the intent is to get as close as possible to the signal strength that we expect to receive form SkyCube as it flies directly overhead of the antenna, given its orbital parameters.  See the <a href="https://docs.google.com/spreadsheet/ccc?key=0Aptu2_0_mvfAdHhfU2JMSFdhamYtVTRHcmRpTXEzRmc&#38;usp=sharing" class="external">link budget</a>  )</em></li>
+		<li>[X] Observe the transmitted signal received by GroundSphere</li>
+		<li>[X] Position the cursor (red vertical bar) at the center peak of the displayed radio signal on the horizontal axis</li>
+		<li>[X] Record the radio signal level: <strong>-33.88 dBm</strong></li>
+		<li>[X] Subtract the noise floor figure recorded earlier from the radio signal level recorded in the step above.</li>
+		<li>[X] Record the difference between the signals: <strong>20.01 dB</strong></li>
+		<li>[X] The difference between the signal and noise floor should be at least 17dBm.  If this is not the case, abort the test and troubleshoot.</li>
+	</ol>
+
+
+	<p>NOTE:  All tests have been completed 3 times with result variances below 0.01%.  Screenshots and pictures are included below, and the raw I and Q dataset is available on the shared project Google Drive Folder.  Warning: it is over 220MB in size and only works with an SDR program like GNU Radio, SDR#, or SeeDeR.  The audio file is linked below as well.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/459?download=" alt="" /></p>
+
+
+	<p><strong>One meter test setup (Step 5)</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/470?download=" alt="" /></p>
+
+
+	<p><strong>Noise floor measurement (Step 9)</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/472?download=" alt="" /></p>
+
+
+	<p><strong>Satellite Simulator Settings (Step 11)</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/473?download=" alt="" /></p>
+
+
+	<p><strong>Strong signal test (Step 12)</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/461?download=" alt="" /></p>
+
+
+	<p><strong>Three meter test setup (Step 15)</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/458?download=" alt="" /></p>
+
+
+	<p><strong>Satellite simulator settings (Step 16)</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/457?download=" alt="" /></p>
+
+
+	<p><strong>Final lab test (Step 17)</strong></p>
+
+
+	<p><a href="http://opendesignengine.net/dmsf_files/442?download=" class="external">Audio output of final lab test</a></p>
+
+
+	<p><a href="https://drive.google.com/file/d/0B5tu2_0_mvfAXzhzb3JLM2dVR1E/edit?usp=sharing" class="external">Raw baseline (I/Q) data of final lab test</a></p>
+
+
+	<p><strong>LAB TEST PROCEDURE COMPLETE</strong></p>
+
+
+<hr />
+
+
+	<a name="Test-2-Field-Test"></a>
+<h2 >Test 2: Field Test<a href="Test_112_Instructions.html#Test-2-Field-Test" class="wiki-anchor">&para;</a></h2>
+
+
+Long range field test using low power transmitter at 915 MHz to verify the predicted link budget (which comes from &lt;insert link to spreadsheet&gt; analysis) and confirm signal reception.  It is recommended to conduct this test with at least 2 individuals.  These instructions assume that the receiver is already assembled and most recent software is installed.  If not, accomplish the next 2 steps.
+	<ol>
+	<li>Follow the instruction for "GroundSphere Kit assembly" </li>
+		<li>Follow the instructions for Operations Manual - "Getting Started and Set up"</li>
+	</ol>
+
+
+	<p><strong>Test Date:</strong><br />20JUN2014@2115-2145MST  Test Location: MSL / Issyroo RF test range at 37°43'04.8"N 104°47'16.9"W, 10 miles North of Walsenburg, CO</p>
+
+
+	<p><strong>Record Test Conditions:</strong><br />26C ambient, outdoor test with full horizon to horizon window, ground station mounted to truck roof, fairly clean RF environment, though some RF energy may come from activities at a small airport located at 37°41'49.2"N 104°47'34.8"W.  No planes were observed to be in operation. Cell phones were turned off and batteries removed.</p>
+
+
+	<p><strong>NOTE:</strong> This series of tests were run at 0 degrees elevation, which means that the performance is higher in the cone shaped reception pattern beginning at 30 degrees elevation.  Computer simulation places the tested area at -5dB compared to the peak lobe with a small amount of interference from the close proximity to the ground (ground effect).  This means that actual performance will be higher for any satellite within reception range.  The reason for performing these tests in this manner was that in the low light conditions, it was against the use agreement for the facility to climb the tower.</p>
+
+
+	<p><strong>Additional Tools Needed:</strong><br />Laptop computer meeting or exceeding the minimum system requirements.<br />Portable table or truck bed (on which to set up receiver equip and computer)<br />Access to 120V a/c power for preamp (generator or car inverter) or DC adapter (vehicle power jack to 2.1mm preamp power jack).<br />Tape measure or distance finding equipment (GPS?)</p>
+
+
+	<p><strong>Safety concerns:</strong><br />Weather caution<br />Traffic caution<br />Portable power for equipment(?)</p>
+
+
+<strong>Outcome</strong>
+	<ul>
+	<li>Partial verification of technical requirement 1.1.2, </li>
+		<li>Confirmation of Ground Sphere performance in optimal fielded conditions</li>
+		<li>Confirmation of Ground Sphere performance at a far distance to simulate orbital conditions</li>
+	</ul>
+
+
+	<p><strong>Instructions:</strong></p>
+
+
+<blockquote>
+
+	<p>Mission Control Set Up</p>
+
+
+</blockquote>
+
+	<ol>
+	<li>[X] Set up receiver and computer on portable table or in a vehicle with the antenna outside.</li>
+		<li>[X] Turn on computer</li>
+		<li>[X] Plug the GroundSphere USB data connector into an open USB port</li>
+		<li>[X] Plug the GroundShpere power cord into a standard 120v power outlet <strong>Used automotive DC power jack, vehicle supply measured 13.9VDC</strong></li>
+		<li>[X] Launch the SeeDeR version 0.1 software <strong>Used SDR# for the ability to freeze the display</strong></li>
+		<li>[X] Tune the SeeDeR version 0.1 software to receive 915 MHz </li>
+		<li>[X] Position the cursor (red vertical bar) at 915 MHz on the horizontal axis</li>
+		<li>[X] Record the noise floor signal level: <strong>-42.6 dBm</strong> Seems to be fairly noisy even though the location is away from most sources.  Grounding issue?</li>
+		<li>[X] Move to a distance 2650 meters away from the receiver set up with a clear line of sight, then set up the transmitter</li>
+		<li>[X] If not exactly the above distance, record the distance between transmitter and receiver (in m): <strong>N/A</strong></li>
+	</ol>
+
+
+<blockquote>
+
+	<p>Remote transmit site Set Up</p>
+
+
+</blockquote>
+
+	<ol>
+	<li>[X] Power on and tune the transmitter to 915 MHz. <a href="https://opendesignengine.net/projects/groundsphere-test-rig/wiki/Operating_Manual" class="external">Instructions</a></li>
+		<li>[X] Set transmitter power to 0dBm <em>NOTE: (This is a reasonably strong terrestrial signal, and is an unrealistically high power to expect from SkyCube)</em></li>
+		<li>[X] Tune the SeeDeR software to receive 915 MHz</li>
+		<li>[X] Observe and capture/record the transmitted signal received by GroundSphere from the test transmitter</li>
+		<li>[X] Position the cursor (red vertical bar) at the center peak of the displayed radio signal on the horizontal axis</li>
+		<li>[X] The signal should be plainly obvious as a strong peak above the noise floor.  If this is not the case, abort the test and troubleshoot. </li>
+		<li>[X] Set the transmitter power level to -20dBm.  _NOTE: (at this power level, we are simulating the signal that we expect to receive form SkyCube as it flies directly overhead of the antenna, given its orbital parameters.  See the Outdoor Test Link Budget <a href="https://docs.google.com/spreadsheet/ccc?key=0Aptu2_0_mvfAdEZLRWNaQ2lmWHBzSzJiTkFYZHhKZ1E&#38;usp=sharing)_" class="external">here</a></li>
+	</ol>
+
+
+<blockquote>
+
+	<p>Testing</p>
+
+
+</blockquote>
+
+	<ol>
+	<li>[X] Observe and capture/record the transmitted signal received by GroundSphere from the test transmitter</li>
+		<li>[X] Position the cursor (red vertical bar) at the center peak of the displayed radio signal on the horizontal axis</li>
+		<li>[X] Record the radio signal level: <strong>-22.3 dBm</strong></li>
+		<li>[X] Subtract the noise floor figure recorded earlier from the radio signal level recorded in the step above.</li>
+		<li>[X] Record the difference between the signals: <strong>20.3 dBm</strong></li>
+		<li>[X] The difference between the signal and noise floor should be at least 17dBm.  If this is not the case, abort the test and troubleshoot.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/465?download=" alt="" /></p>
+
+
+	<p><strong>Setting up SDR# for the field test</strong></p>
+
+
+	<p>&lt;insert image of transmitter setup&gt; Camera battery failed after taking above picture.</p>
+
+
+	<p>&lt;insert screenshot image of computer screen showing high power 915 MHz signal&gt; None taken during the procedure listed above.  Signal showed around -9dBm.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/463?download=" alt="" /></p>
+
+
+	<p><strong>Low power test showing peaks. (Testing step 1)</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/464?download=" alt="" /></p>
+
+
+	<p><strong>Low power test East to West.  Peaks shown in waterfall display.</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/462?download=" alt="" /></p>
+
+
+	<p><strong>Low power test West to East.  Peaks shown in waterfall display.</strong></p>
+
+
+	<p><strong>FIELD TEST PROCEDURE COMPLETE</strong></p>
+
+
+<hr />
+
+
+	<a name="Test-3-From-Orbit-Test"></a>
+<h2 >Test 3: From Orbit Test<a href="Test_112_Instructions.html#Test-3-From-Orbit-Test" class="wiki-anchor">&para;</a></h2>
+
+
+Acquire signal from orbiting cubesat operating on 915 MHz (NPS just launched two cubesats which use the same radio and configuration as SkyCube).  Orbital prediction software will need to be used to calculate the appropriate timing for this test.  It is only possible to conduct the steps below in anticipation of a 915 MHz signal source flying overhead.  These instructions assume that the receiver is already assembled and most recent software is installed.  If not, accomplish the next 2 steps.
+	<ol>
+	<li>Follow the instruction for "GroundSphere Kit assembly" </li>
+		<li>Follow the instructions for Operations Manual - "Getting Started and Set up"</li>
+	</ol>
+
+
+	<p><strong>Test Date:</strong><br />20JUN2014@2055-2110MST  Test Location: MSL / Issyroo RF test range at 37°43'04.8"N 104°47'16.9"W, 10 miles North of Walsenburg, CO</p>
+
+
+	<p><strong>Record Test Conditions:</strong><br />28C ambient, outdoor test with full horizon to horizon window, ground station mounted to truck roof, fairly clean RF environment, though some RF energy may come from activities at a small airport located at 37°41'49.2"N 104°47'34.8"W.  No planes were observed to be in operation. Cell phones were turned off and batteries removed.</p>
+
+
+	<p><strong>Tools Needed:</strong><br />Ground Sphere test rig<br />Computer meeting min system reqs<br />Skycube satellite pass within range of receiving station.</p>
+
+
+	<p><strong>Safety concerns:</strong><br />Weather caution<br />Traffic caution</p>
+
+
+	<p><strong>Outcome:</strong><br />Verification and completion of Technical requirement 1.1.2</p>
+
+
+<strong>Instructions:</strong>
+	<ol>
+	<li>[X] Set up receiver and computer on portable table or in a vehicle with the antenna outside</li>
+		<li>[X] Turn on computer</li>
+		<li>[X] Plug the GroundSphere USB data connector into an open USB port</li>
+		<li>[X] Plug the GroundShpere power cord into a standard 120v power outlet</li>
+		<li>[X] Launch the SeeDeR version 0.1 software</li>
+		<li>[X] Tune the SeeDeR software to receive 915 MHz</li>
+		<li>[X] Position the cursor (red vertical bar) at 915 MHz on the horizontal axis</li>
+		<li>[X] Record the noise floor signal level: <strong>-42.4 dBm</strong> Seems to be fairly noisy even though the location is away from most sources.  Grounding issue?</li>
+		<li>[X] Await Skycube satellite pass as predicted by gpredict or other prediction software</li>
+		<li>[X] Observe and capture/record the transmitted signal received by GroundSphere</li>
+		<li>[X] Record the closest approach as shown by the polar plot (sky view) on GPredict: <strong>86.00 degrees elevation at 21:03:29</strong></li>
+		<li>[X] Position the cursor (red vertical bar) at the center peak of the displayed radio signal on the horizontal axis</li>
+		<li>[X] Record the radio signal level: N/A No signal received.  <strong>Not even a twitch or blush on the screen which would have occurred even if the signal was too weak to be decoded</strong>.</li>
+		<li>[X] Subtract the noise floor figure recorded earlier from the radio signal level recorded in the step above</li>
+		<li>[X] Record the difference between the signals: <strong>N/A No signal received.</strong></li>
+		<li>[X] If the difference between the signal received from Sky Cube and noise floor is 17dBm or greater, the AX-25 packet should be decoded by the SeeDeR software.  Save a screenshot of this event.</li>
+		<li>[X] Find the anticipated signal strength in the <a href="https://docs.google.com/spreadsheet/ccc?key=0Aptu2_0_mvfAdHhfU2JMSFdhamYtVTRHcmRpTXEzRmc&#38;usp=sharing" class="external">link budget</a> given the elevation of the closest approach and compare this figure to the received signal.  </li>
+		<li>[X] Record any substantial difference: <strong>N/A No signal received.  Should have received a signal of +24.19dBm at highest elevation.</strong></li>
+	</ol>
+
+
+	<p>&lt;insert screenshot image of computer screen showing signal received from satellite&gt; <strong>N/A No signal received.</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/471?download=" alt="" /></p>
+
+
+	<p><strong>Setting up SeeDeR v0.1 for anticipated satellite pass</strong></p>
+
+
+	<a name="Second-From-Orbit-test"></a>
+<h2 >Second From Orbit test<a href="Test_112_Instructions.html#Second-From-Orbit-test" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>There was another pass at 24JUN14@1231-1240 with a max elevation of 78.93 degrees.  I drove ENE to maximize the elevation of the pass and repeated the test.  The results are posted below.</p>
+
+
+	<p><strong>Test Date:</strong><br />24JUN14@1231-1240MST  Test Location: 37°55'14.2"N 104°02'28.4"W, 44 miles East of Walsenburg, CO</p>
+
+
+	<p><strong>Record Test Conditions for  event:</strong><br />34C ambient, outdoor test with full horizon to horizon window, ground station mounted to truck roof, clean RF environment. Cell phones were turned off and batteries removed.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/474?download=" alt="" /></p>
+
+
+	<p><strong>On Orbit Test Setup</strong></p>
+
+
+	<p><strong>Noise floor:</strong><br />-53.2dBm</p>
+
+
+	<p><strong>Signal strength at peak elevation:</strong><br />N/A, No signal received.</p>
+
+
+	<a name="Future-Attempts"></a>
+<h2 >Future Attempts<a href="Test_112_Instructions.html#Future-Attempts" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>I plan to find another satellite in frequency range for a field test.  Should no satellite be available, the Soyuz TMA-M ISS personnel ferry and Progress M-M ISS supply craft both transmit a carrier on 922.763MHz, which is well within the range of the receiver.</p>
+
+
+	<p><strong>FROM ORBIT TEST PROCEDURE COMPLETE</strong></p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/groundsphere/wiki/Test_112_Instructions.html?version=50" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/groundsphere/wiki/Test_112_Instructions.txt?version=50" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/Test_112_Instructions">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

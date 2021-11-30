@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Bluetooth - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../holoseat%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Holoseat"></a>
+<h2 >Holoseat<a href="Bluetooth%3Fversion=14.html#Holoseat" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/holoseat/repository/entry/trunk/LICENSE.txt" class="external">LICENSE.txt</a></li>
+		<li><a href="Wiki.html" class="wiki-page">Home</a></li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Versions" class="wiki-page">Versions</a>
+	<ul>
+	<li><a href="Versioning_Scheme.html" class="wiki-page">Versioning Scheme</a></li>
+	</ul>
+	</li>
+		<li><ins>Agile Process Docs</ins><br /><em>See <strong><a href="https://opendesignengine.net/projects/holoseat/news" class="external">News</a></strong> feed for weekly status reports</em>
+	<ul>
+	<li><strong><ins>PY 2018</ins></strong><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external">Sprints</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRCZuJwnYll_TmSo-xetofzjQEt3Z7iNpluPzayWbqm2HfYWLipouTmh1opgfWy-x-3OGeM2Cf1irWh/pubhtml" class="external">Alpha Test Program Prep User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlnq6BIMuJN-t3uKjflf_q9u3dXzvch0zEVz9O3335_fPiGyPcJxaRJ8IHz4ErCTIw7QrtPh5d_b50/pubhtml" class="external">Run Alpha Test User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyBqnWyXACEEoG5dThw5szRkVltrdHNvFpyaPqF1sNXHrS_fG1w1g861yqTjjyoL1b9xP2xUtNsFz3/pubhtml" class="external">Finalize v1.0 Design User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-DTjsHW_DTbR0hbIvS1Gl_9ItytNimWamw5wmEJ-8K44NpYyw0eQ4GM91nVI-ZRs2-BbQr-S9EA6Z/pubhtml" class="external">Social Media Engagement User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAt6mXMp1lwvffT9mNiNCXENC3wI47ofl_sATVjadmkgGnJroKbMCChzkZctD-wlNnsREUa0c0YqA-/pubhtml" class="external">Prep Initial Crowdsource Campaign User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQWsqkwJTsFScDjahnQ6AhIpC5Qk-BMsfurWkfxy7SmtSotXtgSvEgCC6uB2d_Hch9PUc41MRd4cwm2/pubhtml" class="external">SyndCon 2018 Prep User Stories</a></li>
+		<li><strong><ins>2017</ins></strong><br /><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/spreadsheets/d/1j_eza96PgV3tMuTy_fypZ4SuCLWP2jLKIEG1HgXg5LA/pubhtml" class="external">Development User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1Q1mnwN-Um-nn47k3GF9SzAEblP1sw7Lwtpq4snxCEXk/pubhtml" class="external">SyndCon User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1GGMKfctxfgl5Ath5ld7SL3lvXx7fN759DRMKXVEJSR4/pubhtml" class="external">Biz User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1UKTSqLvZyH9EIJBt7YSVZoF8krdZYmHjoK1yx6pesQs/pubhtml" class="external">Crowd Source User Stories</a></li>
+		<li><strong><ins>2016</ins></strong> <br /><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTnBFoFpZA4rAainOlzv4E7-PW3-BwjTg9SP0iXHz1XZUCjVF_4WYIWttJyHtO5EhO24pYazn8sL7Jh/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/document/d/e/2PACX-1vSVLmaORZab4QV0ZSy5OUl6lSPx2lNc3gud5nB6WSxNrrxkMu7Kz5zObKeKnP8pw7eghYJY3h_xs99L/pub" class="external">User Stories</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Instructions"></a>
+<h4 >Instructions<a href="Bluetooth%3Fversion=14.html#Instructions" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="User's_Guide.html" class="wiki-page">User&#x27;s Guide</a>
+	<ul>
+	<li><a href="First_Time_Setup.html" class="wiki-page">First Time Setup</a></li>
+		<li><a href="Operating_Instructions.html" class="wiki-page">Operating Instructions</a></li>
+		<li><a href="Alpha_Patches.html" class="wiki-page">Alpha Patches</a></li>
+	</ul>
+	</li>
+		<li><ins>Assembly Information</ins>
+	<ul>
+	<li><a href="BOM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a>
+	<ul>
+	<li><a href="Controller_Assembly.html" class="wiki-page">Controller Assembly</a></li>
+		<li><a href="Sensor_Assembly.html" class="wiki-page">Sensor Assembly</a></li>
+		<li><a href="Snap_Fit_Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Half Assembly</a><br /><a href="Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Assembly</a> (deprecated)</li>
+		<li><a href="Final_Assembly.html" class="wiki-page">Final Assembly</a></li>
+	</ul>
+	</li>
+		<li><a href="Software_Set_Up.html" class="wiki-page">Software Set Up</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Design-Data"></a>
+<h4 >Design Data<a href="Bluetooth%3Fversion=14.html#Design-Data" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="http://pid.codes/1209/B058/" title="via pid.codes" class="external">USB PID</a>
+	<ul>
+	<li>VID: 0x1209</li>
+		<li>PID: 0xB058</li>
+	</ul>
+	</li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Project Software</a>
+	<ul>
+	<li><a href="HSP.html" class="wiki-page">Holoseat Serial Protocol</a> <br />(<a href="https://opendesignengine.net/projects/holoseat/wiki/HSP?version=26" class="external">Legacy REST Implementation</a>)</li>
+		<li><a href="HSP_Over_REST_API.html" class="wiki-page">HSP Over REST API</a> </li>
+	</ul>
+	</li>
+		<li><a href="Vendor_Documentation.html" class="wiki-page">Vendor Documentation</a></li>
+	</ul>
+
+
+	<a name="Dev-Team-Links"></a>
+<h4 >Dev Team Links<a href="Bluetooth%3Fversion=14.html#Dev-Team-Links" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Dev_Team_On_Boarding" class="wiki-page new">Dev Team On Boarding</a> (outline)</li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/CHIP_Setup_Instructions" class="wiki-page new">C.H.I.P. Setup Instructions</a></li>
+	</ul>
+
+
+	<a name="Research"></a>
+<h4 >Research<a href="Bluetooth%3Fversion=14.html#Research" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Resources.html" class="wiki-page">General Resources</a></li>
+		<li><ins>Technical Resources</ins>
+	<ul>
+	<li><a href="General_Technical_Resources.html" class="wiki-page">General</a></li>
+		<li><a href="ME_Resources.html" class="wiki-page">Mech Eng Resources</a></li>
+		<li><a href="Arduino_Resources.html" class="wiki-page">Arduino Resources</a></li>
+		<li><a href="Bluetooth.html" class="wiki-page">Bluetooth</a></li>
+		<li><a href="HID.html" class="wiki-page">HID</a></li>
+		<li><del><a href="NodeBots_Resources.html" class="wiki-page">NodeBots Resources</a></del></li>
+		<li><del><a href="Raspbery_Pi_Resources.html" class="wiki-page">Raspbery Pi Resources</a></del></li>
+		<li><a href="Python_Resources.html" class="wiki-page">Python Resources</a></li>
+		<li><a href="CHIP_Resources.html" class="wiki-page">C.H.I.P. Resources</a></li>
+	</ul>
+	</li>
+		<li><ins>Biz Resources</ins>
+	<ul>
+	<li><a href="Marketing_Resources.html" class="wiki-page">Marketing Resources</a></li>
+		<li><a href="Start_Up_Resources.html" class="wiki-page">Start Up Resources</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Edit-Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Edit Navigation</a><a href="Bluetooth%3Fversion=14.html#Edit-Navigation" class="wiki-anchor">&para;</a></h3>
+
+<h3>Wiki</h3>
+
+<a href="../../holoseat%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-322-watcher"></span>
+
+
+
+
+
+
+<a href="Bluetooth/history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+
+    <p>
+    <a href="Bluetooth%3Fversion=13.html">« Previous</a> - 
+    Version 14/15
+    (<a href="http://opendesignengine.net/projects/holoseat/wiki/Bluetooth/diff/14">diff</a>) - 
+    <a href="Bluetooth%3Fversion=15.html">Next »</a> - 
+    <a href="Bluetooth.html">Current version</a>
+    <br />
+    <em><a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a>, 03/11/2017 09:38 am </em><br />
+    
+    </p>
+    <hr />
+
+
+<div class="wiki">
+  <a name="Bluetooth"></a>
+<h1 >Bluetooth<a href="Bluetooth%3Fversion=14.html#Bluetooth" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="Bluetooth%3Fversion=14.html#Bluetooth">Bluetooth</a><ul><li><a href="Bluetooth%3Fversion=14.html#Introduction">Introduction</a></li><li><a href="Bluetooth%3Fversion=14.html#Summary-of-Findings">Summary of Findings</a></li><li><a href="Bluetooth%3Fversion=14.html#Bluetooth-Fundamentals">Bluetooth Fundamentals</a></li><li><a href="Bluetooth%3Fversion=14.html#Bluetooth-Hardware-on-Holoseat-Platforms">Bluetooth Hardware on Holoseat Platforms</a><ul><li><a href="Bluetooth%3Fversion=14.html#CHIP-Pro">CHIP Pro</a></li><li><a href="Bluetooth%3Fversion=14.html#PS4">PS4</a></li><li><a href="Bluetooth%3Fversion=14.html#PCs">PCs</a></li><li><a href="Bluetooth%3Fversion=14.html#Conclusions-About-Bluetooth-Hardware">Conclusions About Bluetooth Hardware</a></li></ul>
+</li><li><a href="Bluetooth%3Fversion=14.html#Useful-Bluetooth-Libraries">Useful Bluetooth Libraries</a></li><li><a href="Bluetooth%3Fversion=14.html#MakerHacker-Example">Maker/Hacker Example</a></li><li><a href="Bluetooth%3Fversion=14.html#ESP32-Wifi-Bluetooth-Module">ESP32 Wifi Bluetooth Module</a></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h2 >Introduction<a href="Bluetooth%3Fversion=14.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>This page covers research into creating a Bluetooth HID connection from the Holoseat controller to the gaming system (PC or console) and accepting Bluetooth HID connections from user devices (e.g. joypads).  The Holoseat controller will need to be able to present itself as either a keyboard &#38; mouse combination or a joypad.  The material on this page covers some Bluetooth fundamentals (classic vs BLE), the types of Bluetooth hardware used in some of our target platforms (CHIP Pro, PS4, PCs), and available libraries for interacting with Bluetooth hardware in Node.js.  It closes with an interesting (but not usable) example from the maker/hacker community.</p>
+
+
+	<a name="Summary-of-Findings"></a>
+<h2 >Summary of Findings<a href="Bluetooth%3Fversion=14.html#Summary-of-Findings" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Based on the following research, it is far too early to implement Bluetooth features in the Holoseat.  Given recent developments in the Bluetooth standard, it is obvious we are only interested in implementing Bluetooth Low Energy (BLE) devices.  However, the gaming platforms we are looking at supporting have widely varying support for Bluetooth in any form, with only one platform fully supporting BLE (MacOS).  Until there is greater support for BLE on our selected gaming platforms we do not need to develop a means of presenting Holoseat as a Bluetooth peripheral.</p>
+
+
+	<p>The news is only slightly better on the Bluetooth host side of the requirements.  While the CHIP Pro has a Bluetooth stack included in the hardware (which supports BLE), the drivers are not yet ready.  We could shift to an external Bluetooth module, but that would just add cost that we really don't need to add at present. Instead, the recommended path forward is to select the onboard Bluetooth stack to be the Bluetooth host hardware and delay implementation of Bluetooth host features until the driver is released by NEXT Thing Computing.  This will allow us to add support for acting as a Bluetooth host with just a software update at any point in time we decide.</p>
+
+
+	<p>In terms of impact to the 2017 development plan, here are updates to the affected <a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Product Backlog Items</a></p>
+
+
+	<ul>
+	<li>DEV-10: Select BT HID module from CHIP's BT module or an external one<br />Deferred indefinitely, but we will be selecting a specific external module when the time comes</li>
+		<li>DEV-11: Select BT Host module from CHIP's BT module or an external one<br />Completed, we will use the CHIP's BT module when the driver is released</li>
+		<li>DEV-12: Demonstrate BT Keyboard HID<br />Deferred indefinitely </li>
+		<li>DEV-13: Demonstrate BT Joypad HID<br />Deferred indefinitely</li>
+	</ul>
+
+
+	<a name="Bluetooth-Fundamentals"></a>
+<h2 >Bluetooth Fundamentals<a href="Bluetooth%3Fversion=14.html#Bluetooth-Fundamentals" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Bluetooth has evolved dramatically in the last few years and now comes in multiple "flavors", classic and Bluetooth Low Energy.  <a href="https://en.m.wikipedia.org/wiki/Bluetooth" class="external">Classic Bluetooth</a> is the standard most users are familiar with.  It is used to connect smart phones to cars and headsets.  Classic is the older flavor, it is more common (though that is starting to change in some markets), and it commonly requires pairing.  Also, according to posts from Adafruit on their <a href="https://forums.adafruit.com/viewtopic.php?f=10&#38;t=90851#p457917" class="external">forums</a> making classic devices requires paying costly dues to the Bluetooth SIG.</p>
+
+
+	<p><a href="https://en.m.wikipedia.org/wiki/Bluetooth_low_energy" class="external">BLE</a> is a newer Bluetooth flavor, targeting battery powered devices (often sensors) and widely supported by smart phones.  It appears to be far more maker friendly as well.  It is well supported by Adafruit (<a href="https://www.adafruit.com/categories/255" class="external">Bluetooth products, overwhelmingly BLE</a>) and spawned a new book from Make publishing, <a href="http://shop.oreilly.com/product/0636920031932.do" class="external">Make: Bluetooth</a>.</p>
+
+
+	<p>Human Interface Devices (HID) can be built as either classic or BLE devices.  It is not clear if the same device (using the same radio board) can be made to present itself as a classic or BLE device.  However, it seems clear that smaller organizations are moving to BLE only development.</p>
+
+
+	<a name="Bluetooth-Hardware-on-Holoseat-Platforms"></a>
+<h2 >Bluetooth Hardware on Holoseat Platforms<a href="Bluetooth%3Fversion=14.html#Bluetooth-Hardware-on-Holoseat-Platforms" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="CHIP-Pro"></a>
+<h3 >CHIP Pro<a href="Bluetooth%3Fversion=14.html#CHIP-Pro" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>From the <a href="https://docs.getchip.com/chip_pro.html#wireless-connectivity" class="external">CHIP Pro datasheet</a>, it uses a Realtek 8723DS combination module which provides Wi-Fi B/G/N and Bluetooth 4.2 LE connectivity."  Other documentation has indicated the Bluetooth driver can be set as either a host or a device.  So, it can be used to connect with classic and BLE devices or it can present itself as a BLE device (but not both at the same time).  See notes above about implementing devices that present themselves as classic devices.</p>
+
+
+	<p>Unfortunately, at present Next Thing Computing has disabled the Bluetooth driver on the CHIP Pro (see this <a href="https://bbs.nextthing.co/t/chip-pro-bluetooth-driver-not-available/14905" class="external">forum post</a> last updated 2017-02-15 for more details).  For the time being we cannot demonstrate any level of Bluetooth connectivity with the CHIP Pro and it is not clear when the driver will be enabled.</p>
+
+
+	<a name="PS4"></a>
+<h3 >PS4<a href="Bluetooth%3Fversion=14.html#PS4" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The PS4 <a href="https://en.m.wikipedia.org/wiki/DualShock#DualShock_4" class="external">DualShock 4</a> joypads connect to the PS4 using Bluetooth.  Unfortunately, the <a href="https://en.m.wikipedia.org/wiki/PlayStation_4" class="external">PS4</a> only supports classic Bluetooth.  Specifically, the PS4 supports <a href="https://en.m.wikipedia.org/wiki/Bluetooth#Bluetooth_2.1_.2B_EDR" class="external">Bluetooth 2.1 + EDR</a>.</p>
+
+
+	<a name="PCs"></a>
+<h3 >PCs<a href="Bluetooth%3Fversion=14.html#PCs" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The following material is from Chapter 1 of Make: Bluetooth.  We will include all three PC platforms in this discussion (Windows, MacOS, and Linux).  Windows supports classic Bluetooth (specifically v2.1) in Windows XP, Vista, and 7.  Windows 8 and 10 support BLE.  Note, the availability of Bluetooth hardware on Windows PCs varies greatly, though modern laptops often have some flavor of Bluetooth hardware.</p>
+
+
+	<p>All Apple computers built after 2011 include BLE hardware and MacOS fully supports BLE since Mountain Lion.  In short, unlike Windows machines, Macs should just work with the more maker friendly Bluetooth flavor.</p>
+
+
+	<p>Turning to Linux, the results are mixed.  The OS itself supports BLE through the BlueZ service.  However, like Windows machines, the computers people choose to install Linux on vary greatly in terms of available Bluetooth hardware.</p>
+
+
+	<a name="Conclusions-About-Bluetooth-Hardware"></a>
+<h3 >Conclusions About Bluetooth Hardware<a href="Bluetooth%3Fversion=14.html#Conclusions-About-Bluetooth-Hardware" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>At present Bluetooth support on Holoseat related hardware is all over the map.  The CHIP Pro has the hardware for one connection (host or peripheral), but lacks the required drivers.  And on the gaming systems side, the common denominator is classic Bluetooth, which is not very maker friendly according to Adafruit.  In short, it is too early for a device like Holoseat to fully embrace Bluetooth.  At best, we can select the CHIP Pro's onboard Bluetooth stack as the Holoseat's host side Bluetooth implementation, deferring work on it until the drivers are released.  But, until more of the gaming machine market supports BLE controllers, there is no real value in developing support for the Holoseat to act as a Bluetooth peripheral.</p>
+
+
+	<a name="Useful-Bluetooth-Libraries"></a>
+<h2 >Useful Bluetooth Libraries<a href="Bluetooth%3Fversion=14.html#Useful-Bluetooth-Libraries" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><a href="https://github.com/sandeepmistry" class="external">Sandeep Mistry</a> maintains three Bluetooth libraries which we will likely find useful.  Note, they are all BLE only libraries and they only work with specific Bluetooth hardware.</p>
+
+
+	<ul>
+	<li>Node.js Libraries
+	<ul>
+	<li><a href="https://github.com/sandeepmistry/noble" class="external">Noble</a> - library to implement a BLE central module (aka host)</li>
+		<li><a href="https://github.com/sandeepmistry/bleno" class="external">Bleno</a> - a library to implement a BLE peripheral (aka device)</li>
+	</ul>
+	</li>
+		<li>Arduino
+	<ul>
+	<li><a href="https://github.com/sandeepmistry/arduino-BLEPeripheral" class="external">Arduino BLEPeripheral</a> - a library to implement a BLE peripheral (device)</li>
+	</ul></li>
+	</ul>
+
+
+	<a name="MakerHacker-Example"></a>
+<h2 >Maker/Hacker Example<a href="Bluetooth%3Fversion=14.html#MakerHacker-Example" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>In this example, the firmware from the <a href="https://www.sparkfun.com/products/12574" class="external">RN-42</a> onto the <a href="http://cdn.makezine.com/uploads/2014/03/hc_hc-05-user-instructions-bluetooth.pdf" class="external">HC-05</a>.  This kind of hacking, while interesting, is not strictly legal (obtaining the RN-42 firmware is not something one just does), so it is not a recommended approach.  However, it does demonstrate how capable a small system can be at capturing signals from one system (the joypad) and in real time translating them to HID over Bluetooth signals.  Consider this evidence that the kind of inline gameplay translation we want the Holoseat controller to do is possible.  Much of the following research was found by following the links from a Hackaday post - <a href="http://hackaday.com/2016/09/04/convert-any-usb-keyboard-to-bluetooth/" class="external">Convert Any USB Keyboard to Bluetooth</a>.</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/L7lEDS6xj5w?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/L7lEDS6xj5w?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/5qXv7TJI324?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/5qXv7TJI324?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/qyRJgtwX0cY?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/qyRJgtwX0cY?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+
+
+	<p>The video below is a summary of this project - <a href="https://mitxela.com/projects/bluetooth_hid_gamepad" class="external">Bluetooth HID gamepad using HC-05 module</a></p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/fWXJDNcbZAA?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/fWXJDNcbZAA?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+
+
+	<a name="ESP32-Wifi-Bluetooth-Module"></a>
+<h2 >ESP32 Wifi Bluetooth Module<a href="Bluetooth%3Fversion=14.html#ESP32-Wifi-Bluetooth-Module" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><a href="http://www.cnx-software.com/2016/09/05/you-can-now-buy-esp3212-esp32-wifi-bluetooth-module-for-6-95" class="external">ESP32 Wifi Bluetooth Module</a>, another Bluetooth module that has people talking.  Need to do more research.</p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/Bluetooth.html?version=14" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/Bluetooth.txt?version=14" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/Bluetooth.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

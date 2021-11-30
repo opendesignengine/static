@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mathematics Tool Kit - MTK Installer - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="6BofmwnlGqRkkG4J2XmPSnANvUqYqK/JFDSmhU8vN7Q="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/mtk.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/mtk.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Mathematics Tool Kit</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/mtk.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/mtk/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/mtk/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/mtk/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/mtk.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/mtk/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/mtk/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/mtk/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/mtk/boards.html">Forums</a> » <a href="../../../projects/mtk/boards/49.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-1010-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>MTK Installer</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-07-27.html" title="07/27/2015 08:11 am">over 7 years</a> ago</span></p>
+<div class="wiki">
+<p>FYI - I've renamed our original installer script to <code>mtk_setup_script_Ubuntu_14_04_Sage.sh</code> and started over again with the IPython version in <code>mtk_setup_script.sh</code></p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (39)</h3>
+
+  <div class="message reply" id="message-1060">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1060.html#message-1060">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 08:48 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><pre>
+jrs@ubuntu:~$ python
+Python 3.4.3 |Anaconda 2.3.0 (64-bit)| (default, Jun  4 2015, 15:29:08) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import pint
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+ImportError: No module named 'pint'
+</pre>
+
+	<p>Running <code>pip install pint</code> and then restarting the NB server fixed the issue.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1061">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1061.html#message-1061">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 09:13 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>So what's different about that <code>pip install pint</code> in relation to the line that's in the script? It must have somehow run inside the system's 2.7 Python environment instead of the Anaconda environment.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1062">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1062.html#message-1062">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 09:26 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, the line from the installer is <code>pip install pint</code>.  I am guessing it should be <code>~/anaconda3/bin/pip install pint</code> in order to use the Anaconda copy of pip (due to that .bashrc issue you commented on earlier).  Also, I lost my NB extensions directory somewhere during my testing (I think I might have lost it when I aborted an install that skipped Anaconda and then tried to run it again without wiping my VM).  We should keep an eye on that.  I would also like to look at whether there is a more global (read inside the Anaconda distro) location to store NB extensions so they ride along with the other Python related code we are installing.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1063">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1063.html#message-1063">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 09:31 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ok, like what I did with conda in the script, that makes sense. I'll make that change.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1065">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1065.html#message-1065">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 09:35 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Yup.  And please remember to uncomment the lines to install Anaconda.  ;)</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1066">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1066.html#message-1066">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 09:37 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Yeah, I was determined not to forget that again. I'm going to try the latest version on a fresh VM.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1067">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1067.html#message-1067">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 09:39 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Cool.  Here is my MTK Test 03 notebook.  You can try running it when you get installed (note the comments on the other thread about PDF export and trusting the NB).</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/576/MTK_Basic_Test_03_-_Units_with_Pint.ipynb" class="icon icon-attachment">MTK_Basic_Test_03_-_Units_with_Pint.ipynb</a>
+  <span class="size">(2.9 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1068">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1068.html#message-1068">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 10:33 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>The script is really close. Everything works except that the extensions are extracted to the Download directory. It has trouble switching to the .ipython directory for some reason during the install. I'll fix that tomorrow.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1069">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1069.html#message-1069">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 11:06 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ok, it looks like the <code>~/.ipython</code> directory is not created until you run IPython for the first time. I'll have to figure out the best way to run what's needed to init the directory structure from the script.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1070">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1070.html#message-1070">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-03.html" title="08/03/2015 11:28 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Looking <a href="https://github.com/ipython-contrib/IPython-notebook-extensions/wiki" class="external">here</a> there are signs that we can both override the NB extensions location and preload standard extensions in custom.js. I wonder where the template copy of that file lives...</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1071">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1071.html#message-1071">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-04.html" title="08/04/2015 08:12 am">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Made a couple of adjustments to the script this morning and then tried it on a fresh VM. Everything works correctly after installation, extensions, PDF export, etc.</p>
+
+
+	<p>J - I'm going to need an explanation of the why and where for changing the NB extensions location. I don't understand the advantage when Anaconda seems to install everything at the user level.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1074">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1074.html#message-1074">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-11.html" title="08/11/2015 10:34 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've run out of time this week I think, but I did make some progress. The latest commit of installer now puts Anaconda in /opt and the IPython profile/config directory in /usr/local/share/ipython. I have not gotten a chance to have the extensions loaded in <code>config.js</code> though.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1076">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1076.html#message-1076">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-09-17.html" title="09/17/2015 03:11 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Looks like the following is the standard way to autoload extensions.</p>
+
+
+	<p><a class="external" href="https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Home_3x#2-automatically-loading-extensions">https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Home_3x#2-automatically-loading-extensions</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1080">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1010%3Fr=1080.html#message-1080">RE: MTK Installer</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-10-16.html" title="10/16/2015 10:44 am">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, the Linux installer script works and the nbextensions load fine. However, when I try to open and execute the sample notebook we've been using, I get an error in the browser console that seems to related to the notebook version (3.x). The error is similar to what J and I experienced in the #ES Hangout last night. If I create a blank notebook with Jupyter 4.x and copy the code and markdown from the 3.x notebook into it, everything executes correctly. When I view the meta data for the old notebook, it shows that it is indeed version 3.x. I'm not sure if there's an easy way to upgrade notebooks from 3.x to 4.x.</p>
+
+
+	<p>The error I get with the 3.x notebook.</p>
+
+
+<pre>
+SyntaxError: invalid property id
+</pre></div>
+  
+  </div>
+
+<p class="pagination"><a href="http://opendesignengine.net/boards/49/topics/1010?page=1&amp;r=1067">« Previous</a> <a href="http://opendesignengine.net/boards/49/topics/1010?page=1&amp;r=1067">1</a> 2  (26-39/39)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1010.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Station - SEP Step 2 - Requirements Document - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/gs-001.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/gs-001.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/gs-001%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/gs-001/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/gs-001/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/gs-001/boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/gs-001/boards/18">General</a> » </p>
+
+<div class="contextual">
+    <span class="message-372-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>SEP Step 2 - Requirements Document</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/gs-001/activity?from=2013-01-18" title="01/18/2013 12:37 am">almost 10 years</a> ago</span></p>
+<div class="wiki">
+<p>Aaron, great work on the Requirements Document. Here are a few thoughts I have:</p>
+
+
+	<p><strong>GSR 1.4</strong> - Will all of the COTS components already be weatherproof? What is meant by "weatherproof" here? What are our limits on temperature, moisture, etc? Is there a weatherproof standard that we can reference?</p>
+
+
+	<p><strong>GSR 2.3</strong> - "Kitified" would be a good candidate for the glossary. Do you want to require kitified components so early in the development process? We're not going to be getting to kitted components until version 2.0 of the Shepard Test Stand.</p>
+
+
+	<p><strong>GSR 3.2.1</strong> - You can build links into the text in the following way. Note: quotes, colon, link.</p>
+
+
+<pre>
+"FCC regulation under CFR Title 47 part 97":http://www.ecfr.gov/cgi-bin/text-idx?c=ecfr&#38;SID=273eb7d322bf9d317063be6dc8908e9c&#38;rgn=div5&#38;view=text&#38;node=47:5.0.1.1.6&#38;idno=47
+</pre>
+
+	<p><strong>GSR 3.3.4</strong> - It might help if this was reworded a little. I wasn't quite sure what it was requiring the first time though.</p>
+
+
+	<p><strong>GSR 3.4.3</strong> - There are no regulations prohibiting Ham licensed civilians from contacting the ISS?</p>
+
+
+	<p><strong>GSR 4.1</strong> and <strong>GSR 4.2</strong> - So, are the stationary and mobile stations separate entities, or just reconfigurations of the same entity?</p>
+
+
+	<p><strong>GSR 4.3.1</strong> - Does this mean that the ground station equipment needs to fit alongside a laptop in a sleeve, or does it need to fit inside the laptop sleeve which is then placed inside of the backpack?</p>
+
+
+	<p><strong>GSR 4.3.2</strong> - This seems like more of a suggestion than a requirement.</p>
+
+
+	<p><strong>GSR 4.4.2</strong> - Should the SWVR value of 1.5 have units on it? Sorry if that's a naive question.</p>
+
+
+	<p><strong>GSR 5.1</strong> - Again, a link can be built into the text if you want.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (6)</h3>
+
+  <div class="message reply" id="message-373">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/18/topics/372?r=373#message-373">RE: SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/gs-001/activity?from=2013-01-18" title="01/18/2013 09:54 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p><strong>GSR 1.4</strong> - Ideally, the COTS equipment will be weatherproof, but there are no guarantees, particularly on the inexpensive radios from China, regardless of what the box says.  In this case, we are specifically talking about the part we are builting for GS 1.0, the antenna system.  Unfortunately, there are several standards for weatherproofing, and none of them directly apply.  The IP ratings and NEMA ratings cover enclosures for water, particulate, and intrusion resistance.  ASTM g53 covers the UV resistance issue, but leaves out the rest.  MIL-STD-810G covers it all, but to build and test to that full standard is unreasonable for folks to do in their garage.  It would be better for us to do the legwork and specify the materials for the user.</p>
+
+
+	<p><strong>GSR 2.3</strong> - Kitified will be added to the glossary along with more terms by the end of the day.  Thanks for the catch, I would have missed that one.  I figure if we design for both kitification and portability from day one, it will put more design time into these aspects.  The regular eggbeater antenna's engineering is done thanks to our ham radio friends, so we can spend our talents making it fold or disassemble. This will facilitate the kitification anyway since it's easier to ship folded flat.</p>
+
+
+	<p><strong>GSR 3.2.1</strong> - Thanks.  I'll build the links in at the same time I make corrections and flesh out the glossary.  One would think government would have more intuitive links...  sheesh!</p>
+
+
+	<p><strong>GSR 3.3.4</strong> - Reworded to "The software must work with Microsoft Windows, Mac OSX, and Linux operating systems."</p>
+
+
+	<p><strong>GSR 3.4.3</strong> - Nope.  If there is a Ham operator on board ISS and they are working the radio, you can talk to them.</p>
+
+
+	<p><strong>GSR 4.1 / GSR 4.2</strong> - Reconfigurations.  The difference is that a stationary ground station is solidly mounted and the cables are already plugged in, making the set up time moot.</p>
+
+
+	<p><strong>GSR 4.3.1</strong> - What I would like to create is the antennas mount to a base comprised of two stacked plates which can rotate 90 degrees relative to each other and lock when bolted to a small camera tripod.  Each plate is attached to a loop element of the eggbeater antenna.  The rotation of the plates would take the loop elements of the eggbeater antenna and move them from nested and stacked to their operational configuration.  Given the size of the antenna system, it could easily fit in most laptop sleeves or in the space next to them.  This would make ground station 1.0 <a href="http://www.radiosurvivalist.com/images/portable02.jpg" class="external">mountaintop portable.</a></p>
+
+
+	<p><strong>GSR 4.3.2</strong> - The antenna must store flat... which means it should either disassemble or fold.  I flipped the requirements GSR 4.4.3 and GSR 4.3.2 allowing a reference back instead of forward and clarifying the issue.</p>
+
+
+	<p><strong>GSR 4.4.2</strong> - Good question!  VSWR, also called SWR, is a ratio, and hence it is unitless.  It is the ratio between the forward and reflected power, which is a function of impedance match between the transmitter, RF cable, and antenna and is sort of the black magic of the radio world.  Have a look at <a href="http://en.wikipedia.org/wiki/Standing_wave_ratio" class="external">this Wikipedia article.</a></p>
+
+
+	<p><strong>GSR 5.1</strong> - Got it.  I know kung fu!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-374">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/18/topics/372?r=374#message-374">RE: SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/gs-001/activity?from=2013-01-18" title="01/18/2013 10:27 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p><strong>GSR 1.4</strong> - Got it. That makes sense.</p>
+
+
+	<p><strong>GSR 2.3</strong> - Good thought. Designing for a kit from the get-go will make things easier down the road. On the Shepard Test Stand we talked about this, but decided that worrying too much about kitting Shepard off the bat would overcomplicate our level 1 kite design. It seems like this project is a good candidate for kitting from the start though.</p>
+
+
+	<p>Your answer for <strong>GSR 4.3.1</strong> sounds like a good item for the Preliminary Design step. Also, I'm assuming mountaintop is the ideal location for satellite tracking?</p>
+
+
+	<p><strong>GSR 4.4.2</strong> - I had expected that VSWR was unitless for a reason, but being a radio newbie I wasn't sure.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-376">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/18/topics/372?r=376#message-376">RE: SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/gs-001/activity?from=2013-01-18" title="01/18/2013 12:12 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p><strong>GSR 4.3.1</strong> - The mountaintop criteria is simply a way to enforce lightweight and small design, giving us additional capabilities.  How many other satellite ground stations can operate from literally anywhere with a realistic 5-7 min setup, and breakdown?</p>
+
+
+	<p>For a demo ground station, If we mounted the foldable antenna to the top of a 12" section of PVC with a fixed ground spike on the bottom to jam in the ground, we could have the antenna ready to go in a couple of seconds.  A nonremoveable 6 foot RF cable to connect directly to the radio, would shave it down even more, facilitating sub-minute setup times.  It would literally take the laptop longer to boot and bring up the software than it would to set up the radio and antenna.  This extreme rapid deployment variant would be fairly limited in other areas like permanently mounting it to a house or vehicle, but it would impress the hell out of folks at ham fests and open hardware demos.</p>
+
+
+	<p>For the next version this sort of portability and rapid deployment is going to be next to impossible because of the directional antennas and tracking assemblies.  For this reason I see the both the 1.0 and 2.0 versions being offered concurrently, targeted at different users / markets.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-382">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/18/topics/372?r=382#message-382">RE: SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/gs-001/activity?from=2013-01-21" title="01/21/2013 09:49 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Aaron - The glossary looks awesome. I have a couple of questions.</p>
+
+
+<blockquote>
+
+	<p>Duplex - In this context, the capability to send and receive at the same time.<br />Full Duplex - See Duplex.</p>
+
+
+</blockquote>
+
+	<p>Would it be better to add a definition for "Half Duplex" and drop the Duplex definition? "Duplex" doesn't mean much by itself does it, or am I misunderstanding the term?</p>
+
+
+<blockquote>
+
+	<p>VSWR - See SWR.</p>
+
+
+</blockquote>
+
+	<p>Should you define what the 'V' means?</p>
+
+
+	<p>I think I like the addition of "(short form)" to show that something is abbreviated.</p>
+
+
+	<p>I made two very minor grammar corrections.</p>
+
+
+	<p>Thanks for putting that together.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-383">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/18/topics/372?r=383#message-383">RE: SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/gs-001/activity%3Ffrom=2013-01-22.html" title="01/22/2013 12:39 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Duplex is used to indicate the bidirectional communication, just as full duplex is, but half duplex is really never used except in computer communications.  I think it still should be added to the glossary.</p>
+
+
+	<p>The V in VSWR stands for vertical because they look rather vertical on the scope, not because there is such a thing as a horizontal standing wave.  The term has fallen out of use being replaced by SWR.  There's no real use in perpetuating it.</p>
+
+
+	<p>Thanks for the grammatical corrections.  Good eye!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-384">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="372%3Fr=384.html#message-384">RE: SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/gs-001/activity%3Ffrom=2013-01-22.html" title="01/22/2013 12:39 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Duplex is used to indicate the bidirectional communication, just as full duplex is, but half duplex is really never used except in computer communications.  I think it still should be added to the glossary.</p>
+
+
+	<p>The V in VSWR stands for vertical because they look rather vertical on the scope, not because there is such a thing as a horizontal standing wave.  The term has fallen out of use being replaced by SWR.  There's no real use in perpetuating it.</p>
+
+
+	<p>Thanks for the grammatical corrections.  Good eye!</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-6/6)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/372">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

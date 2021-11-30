@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Shepard v2.0 Dev Log (Simplified Mount) Started: 06-17-13 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/shepard-ts.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/shepard-ts/news.html" class="news selected">News</a></li>
+<li><a href="../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/shepard-ts/boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-39-watcher"></span>
+
+
+</div>
+
+<h2>Shepard v2.0 Dev Log (Simplified Mount) Started: 06-17-13</h2>
+
+
+
+<p><em>All work done to create a simplified, yet stronger motor mount for the kitified version of Shepard.</em><br />
+<span class="author">Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 05:46 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>In reviewing the Shepard 1.0/1.1 design it became clear that much of the complexity, cost, and build time was centered around both the slide and the structure necessary to pinch the pressure sensor between the slide and an immovable stop. When the sensor was upgraded to a single beam load cell, the need for the backstop went away. Since the slide was bolted to the load cell, and load cells generally have a mechanical failure point around 2.5 times their max sensor value, this would mean that the 5kg load cell shears at about 12.5kg or about 122.5 Newtons of force. Since this is a little over 3.72 times the max thrust of any engine made by Estes (32.9N is the highest it goes), it is safe to bolt a motor mount directly to the load cell, provided that both the mount and mounting hardware are able to withstand similar forces. Finally, if the slide and backstop are not used, it would be safe to vent the rocket motor's ejection charge forward rather than deflect it. This again simplifies the structure and assembly.</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:15 pm">over 9 years</a> ago</h4>
+    <p>To evaluate the possibility of making a one piece design out of 16 to 18ga sheet steel, a mock up was created from card stock.  The results were quite positive.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/167?download=" alt="" /></p>
+
+
+	<p>This photo shows the sheet as it is to be cut and drilled.  Three small details were left out, since the final thickness of the material was not known.  The holes in the mounting tabs are M5, but the location of the holes on the side with the tape are closer together than the side without due to material thickness (the tabs are nested.  This also affects the widths of the tabs (the side with the tape will be narrower).</p>
+
+
+	<p>The second issue is that the 7mm margin on the side without the tape and away from the two 9mm holes should be extended to 12-14mm on wither side of the tabs to allow for fold-over and crimp.</p>
+
+
+	<p>Finally, the measurement of the vertical rectangle (inside diameter of the motor mount) should be increased from 75.4mm to 76mm to allow for some fit tollerance of the engines themselves.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:23 pm">over 9 years</a> ago</h4>
+    <p>Bending the two 7mm margins back, the sheet is formed around a 24mm cylindrical form and secured (clamped with binder clamps in the case of the mockup, crimped with the extra material as indicated above in the prototype).  The tabs are aligned and bent to create a 10.6mm square between the M5 drilled mounting ears.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/168?download=" alt="" /></p>
+
+
+	<p>This photo shows the bends as done on the mockup.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:32 pm">over 9 years</a> ago</h4>
+    <p>Once the mount is formed and secured (clipped or crimped), the mount will be attached to the load cell.  The plastic pin is being used to simulate the M5-14 machine screw and nut used to attach the mount to the load cell. In this photo you can also see the way the mounting ears are nested once the bend around the cylindrical form is completed.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/169?download=" alt="" /></p>
+
+
+	<p>Note that the load cell's mounting holes are threaded, so in the prototype once the screw is threaded through one mounting ear, into the threads of the load cell and through the other mounting ear. the screw would be snugged up in the threads securing one ear, and the nut torqued down to secure the other ear as well as lock the threads.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:36 pm">over 9 years</a> ago</h4>
+    <p>In this top view you can see how the mounting ears precisely cover the top surface of the load cell.  This makes the structure surprisingly rigid along the thrust axis, even in the card stock mockup.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/170?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:42 pm">over 9 years</a> ago</h4>
+    <p>From this bottom view you can see the tight clearances around the ears which makes the structure rigid.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/171?download=" alt="" /></p>
+
+
+	<p>The green clip is aft (toward the rocket nozzle), while the red clip is forward (in the direction of thrust).  The two 9mm holes visible in this picture are for the Melaxis non-contact infrared thermometers.  One measures in the center of the motor and one just ahead of the nozzle where the greatest temperatures and pressures are likely to occur.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:47 pm">over 9 years</a> ago</h4>
+    <p>In this image you can see the mount from an angle approaching the rear.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/172?download=" alt="" /></p>
+
+
+	<p>The 24mm form I used to roll the motor mount is the A-C to D/E motor adapter, which is the red item in the center.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:52 pm">over 9 years</a> ago</h4>
+    <p>In this photo, taken from the left rear quarter, you can see how the mount ears nest and are in direct contact with the top of the load cell, enhancing rigidity.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/173?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:54 pm">over 9 years</a> ago</h4>
+    <p>Photo taken from the left side.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/174?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:56 pm">over 9 years</a> ago</h4>
+    <p>Photo taken from the left front quarter.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/175?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 06:58 pm">over 9 years</a> ago</h4>
+    <p>Photo taken from the right front quarter.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/176?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 07:01 pm">over 9 years</a> ago</h4>
+    <p>Photo taken from the right side.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/177?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 07:14 pm">over 9 years</a> ago</h4>
+    <p>The only questions I had were:</p>
+
+
+	<p>1. Is it rigid enough on the thrust axis not to twist?<br />2. Will the sheet steel be able to withstand the forces?<br />3. If the motor explodes, will this motor mount turn into shrapnel?</p>
+
+
+	<p>The first question is easy to answer.  Even the card stock mockup was incredibly rigid on the thrust axis.  If made from 16-18ga steel and crimped, it will become rigid enough on the other two axis, and be immovable on the thrust and yaw axis.</p>
+
+
+	<p>Regarding the second question, doing the math, I found that 16 ga of 1018 mild sheet steel has a yield strength of .08kN/mm^2, so the ears holding the motor mount (10.6mm^2) will fail at about 9kN or a little over a ton of force, provided the bent edges do not stress the steel and the corners for the cuts are drilled to relieve stress.  Even if shoddily constructed, this mount would have no trouble with any engine that would fit the 24mm dia. body and provide an excellent safety margin.</p>
+
+
+	<p>The third question is more difficult to answer, though if made from mild steel, the crimp should let go allowing the mount to stay together in the event of an explosion.  It is also likely that the majority of the chunks and force would be directed fore and aft in a figure eight pattern rather than to the sides where it would be safest to stand.  This is all supposition and guesswork though, and we won't know for sure until we have one of our famous "successful failures".</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-21" title="06/21/2013 10:04 am">over 9 years</a> ago</h4>
+    <p>Here are a couple of pictures of the mockup mount attached to the new test stand frame.</p>
+
+
+	<p>Oblique view:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/218?download=" alt="" /></p>
+
+
+	<p>Front view:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/219?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/591" class="icon icon-contributor-license">Michelle Mclaughlin</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-08-20" title="08/20/2018 08:30 am">about 4 years</a> ago</h4>
+    <p>Majority of the sources of the information have been coupled for the welfare of the people. It has been ensured with <a class="external" href="https://www.rush-my-essay.com/">https://www.rush-my-essay.com/</a> items for the help of the current items I life.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/675" class="icon icon-contributor-license">kevin spear</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-11-09" title="11/09/2018 02:31 pm">almost 4 years</a> ago</h4>
+    <p>Thank you for sharing this post. I am very interested in this topic. I would like to share my opinion on this topic. [[<a class="external" href="https://rainydayfitness.com/best-water-bottles/">https://rainydayfitness.com/best-water-bottles/</a>]] Right here I wish to remark that good well being is a results of fixed efforts and it takes years to get that desired well being and health.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/677" class="icon icon-contributor-license">Sherry Park</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-11-10" title="11/10/2018 08:23 am">almost 4 years</a> ago</h4>
+    <p>Keep it up! <a href="http://opendesignengine.net/projects/shepard-ts/wiki/Thank_you" class="wiki-page new">Thank you</a>:https://sd.com/</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/722" class="icon icon-contributor-license">Joseph Parker</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-12-11" title="12/11/2018 04:16 pm">almost 4 years</a> ago</h4>
+    <p>Thanks for sharing this post. I am very interested in this topic. I would like to share my opinion on this. &lt;a href="https://startbbq.com/best-charcoal-grills/"&gt;StartBBQ&lt;/a&gt;  wish to study extra about how I do it. I've simply accomplished my model new information to Search Engine Advertising and marketing Success. Uncover The <strong>Secret System</strong> We have Used To Keep In Google's High three Rankings For Over three Years For Some Of The Hardest Key phrases Round.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/813" class="icon icon-contributor-license">Carol Bryant</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2019-04-08" title="04/08/2019 09:09 am">over 3 years</a> ago</h4>
+    <p>D&#38;D is one of the drifting diversions in all RPG's. Here we [[<a class="external" href="https://prowritingpartner.com/essayshark-com-review/">https://prowritingpartner.com/essayshark-com-review/</a>]] have accompanied some valuable pdf documents which are identifying with the cells and mythical beasts fifth version RPG diversion that is called D&#38;D 5e character sheets.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/39">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

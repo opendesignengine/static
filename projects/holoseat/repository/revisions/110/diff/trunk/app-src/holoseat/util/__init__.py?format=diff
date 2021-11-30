@@ -1,0 +1,16 @@
+Index: __init__.py
+===================================================================
+--- __init__.py	(revision 109)
++++ __init__.py	(revision 110)
+@@ -1,8 +1,10 @@
+ import socket
+ from contextlib import closing
+ 
+-from holoseat.util import holoseatSerial
++from holoseat.util import holoseatSerial, restserial
+ 
++holoseatDevice = holoseatSerial.holoseatSerialDevice()
++
+ # from https://stackoverflow.com/a/45690594
+ def findFreePort():
+     with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Source Electrical Motor Generator: Issues</title>
+  <link rel="self" href="http://opendesignengine.net/projects/inkshiele/issues.atom?set_filter=1"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/inkshiele/issues?set_filter=1"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2022-10-31T18:12:22+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+</feed>

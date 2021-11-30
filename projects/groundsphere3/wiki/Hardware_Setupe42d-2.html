@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Hardware_Setup.html?version=1 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:08 GMT -->
+<head>
+<title>Hardware Setup</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Hardware-Setup"></a>
+<h1 >Hardware Setup<a href="#Hardware-Setup" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="#Hardware-Setup">Hardware Setup</a><ul><li><a href="#Tools">Tools</a></li><li><a href="#Materials">Materials</a></li><li><a href="#Safety-Issues">Safety Issues</a></li><li><a href="#Product">Product</a></li><li><a href="#Procedure">Procedure</a><ul><li><a href="#1-Prepare-Mounting-Slot">1. Prepare Mounting Slot</a></li><li><a href="#2-Solder-Headers-to-Feather">2. Solder Headers to Feather</a></li><li><a href="#3-Assemble-Controller-Components">3. Assemble Controller Components</a></li><li><a href="#4-Install-Firmware-and-Test-Controller">4. Install Firmware and Test Controller</a></li><li><a href="#5-Final-Assembly">5. Final Assembly</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Tools"></a>
+<h2 >Tools<a href="#Tools" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>None.</p>
+
+
+	<a name="Materials"></a>
+<h2 >Materials<a href="#Materials" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>(1) H-01: RTL-SDR Dongle</li>
+		<li>(2) H-02: 1/4 Wave Monpole Antenna</li>
+		<li>(3) H-03: TRAM NMO 5 1/2'' Magnet NMO Mounting with Rubber Boot</li>
+	</ul>
+
+
+	<a name="Safety-Issues"></a>
+<h2 >Safety Issues<a href="#Safety-Issues" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Be careful of static discharge for the RTL-SDR dongle.</li>
+		<li>Antenna is very conductive, be careful of electric shock near high voltage sources.</li>
+	</ul>
+
+
+	<a name="Product"></a>
+<h2 >Product<a href="#Product" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Full Hardware Assembly</p>
+
+
+	<a name="Procedure"></a>
+<h2 >Procedure<a href="#Procedure" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="1-Prepare-Mounting-Slot"></a>
+<h3 >1. Prepare Mounting Slot<a href="#1-Prepare-Mounting-Slot" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Do a test fit (without glue) of the <strong>HSC-03: Controller Housing Base</strong> and <strong>HSC-10: Controller Housing Mounting Slot</strong> by sliding the <strong>Controller Housing Base</strong> into the <strong>Controller Housing Mounting Slot</strong><br /><img src="step1.1-sm.html" alt="" /></li>
+		<li>Separate the <strong>Controller Housing Base</strong> into the <strong>Controller Housing Mounting Slot</strong></li>
+		<li>Apply super glue to the inner perimeter of the <strong>Controller Housing Mounting Slot</strong> where the <strong>Controller Housing Base</strong> will sit, taking care to keep glue out of the cut out for the slot; apply extra super glue to the large raised surface to ensure a strong bond.  See yellow lines in image below.<br /><img src="step1.3-sm.html" alt="" /></li>
+		<li>Slide the <strong>Controller Housing Base</strong> into the <strong>Controller Housing Mounting Slot</strong> and press the pieces together per the glue's instructions (typically 1 minute)</li>
+		<li>Allow the glue to cure per its instructions</li>
+	</ol>
+
+
+	<a name="2-Solder-Headers-to-Feather"></a>
+<h3 >2. Solder Headers to Feather<a href="#2-Solder-Headers-to-Feather" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>TBD by Bryan</strong></p>
+
+
+	<a name="3-Assemble-Controller-Components"></a>
+<h3 >3. Assemble Controller Components<a href="#3-Assemble-Controller-Components" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Attach <strong>HSC-08: TRRS Wing</strong> to underside headers on <strong>HSC-02: Holoseat Controller Wing</strong><br /><img src="step3.1-sm.html" alt="" /></li>
+		<li>Attach <strong>TRRS Wing + Controller Wing</strong> to <strong>Feather</strong><br /><img src="step3.2-sm.html" alt="" /></li>
+		<li>Attach <strong>HSC-09: Keyswitch</strong> to <strong>Controller Wing</strong> (note, the LED on the <strong>Keyswitch</strong> should be on the left side when the <strong>TRRS Wing</strong> is toward you)<br /><img src="step3.3-sm.html" alt="" /></li>
+	</ol>
+
+
+	<a name="4-Install-Firmware-and-Test-Controller"></a>
+<h3 >4. Install Firmware and Test Controller<a href="#4-Install-Firmware-and-Test-Controller" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>TBD by J. when test and firmware code is updated</strong></p>
+
+
+	<a name="5-Final-Assembly"></a>
+<h3 >5. Final Assembly<a href="#5-Final-Assembly" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Insert <strong>Feather + Wings</strong> into <strong>HSC-03: Controller Housing Base</strong><br /><img src="step5.1-sm.html" alt="" /></li>
+		<li>Attach <strong>HSC-04: Controller Housing Top</strong> onto <strong>Controller Housing Base</strong> making sure the snap fit connection fully clicks and the inset over TRRS connector seats fully into the <strong>Controller Housing Base</strong><br /><img src="step5.2-sm.html" alt="" />  <img src="step5.2b-sm.html" alt="" /></li>
+		<li>Attach <strong>HSC-07: Holoseat Custom Key Cap</strong> to <strong>Keyswitch</strong><br /><img src="step5.3-sm.html" alt="" /></li>
+	</ol>
+</body>
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Hardware_Setup.html?version=1 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:08 GMT -->
+</html>

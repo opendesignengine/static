@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - News - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../../javascripts/jstoolbar/jstoolbar.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/textile.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/lang/jstoolbar-en.js%3F1359925542" type="text/javascript"></script><link href="../../stylesheets/jstoolbar.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="news.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+  <link href="../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/holoseat.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="news.html" class="news selected">News</a></li>
+<li><a href="../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="boards.html" class="boards">Forums</a></li>
+<li><a href="../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+</div>
+
+<div id="add-news" style="display:none;">
+<h2>Add news</h2>
+<form action="news.html" class="tabular" id="news-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>
+
+<div class="box tabular">
+<p><label for="news_title">Title<span class="required"> *</span></label><input id="news_title" name="news[title]" size="60" type="text" /></p>
+<p><label for="news_summary">Summary</label><textarea cols="60" id="news_summary" name="news[summary]" rows="2"></textarea></p>
+<p><label for="news_description">Description<span class="required"> *</span></label><textarea class="wiki-edit" cols="60" id="news_description" name="news[description]" rows="15"></textarea></p>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var wikiToolbar = new jsToolBar($('news_description')); wikiToolbar.setHelpLink('<a href="http://opendesignengine.net/projects/holoseat/\&quot;/help/wiki_syntax.html\&quot;" onclick=\"window.open(&quot;/help/wiki_syntax.html&quot;, &quot;&quot;, &quot;resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes&quot;); return false;\">Text formatting<\/a>'); wikiToolbar.draw();
+//]]>
+</script>
+
+<input name="commit" type="submit" value="Create" />
+<a accesskey="r" href="news%3Fpage=6.html#" onclick="new Ajax.Updater('preview', '/news/preview?project_id=holoseat', {asynchronous:true, evalScripts:true, method:'get', parameters:Form.serialize('news-form') + '&amp;authenticity_token=' + encodeURIComponent('b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=')}); return false;">Preview</a> |
+<a href="news%3Fpage=6.html#" onclick="Element.hide(&quot;add-news&quot;)">Cancel</a>
+</form>
+<div id="preview" class="wiki"></div>
+</div>
+
+<h2>News</h2>
+
+
+
+    <h3>
+    <a href="http://opendesignengine.net/news/63">2017 Sprint 1 Stand Up 4</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-03-15" title="03/15/2017 10:49 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p>It hasn't been a full week since our last stand up, so the reports are a little shorter than usual.  Still, we are making progress again and are looking pretty good as we pass the half way mark.</p>
+
+
+	<p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>DEV-02: Determine if we should use a tone ring vs. existing single magnet design - <a href="https://opendesignengine.net/boards/36/topics/1256" class="external">documented research</a> and getting close to reaching a conclusion (looks very likely that we will want to move to a commercial sensor/tone ring combination)</li>
+		<li>Get newsletter published - worked with Ingrid, expect to publish in the next day or so</li>
+		<li>BIZ-09: Submit books for tax accounting - packaged and sent materials to accountant (our end is basically done, but won't claim done until accountant sends back tax paperwork)</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>BIZ-03: Generate required reports and confirm accuracy - will review Bryan's documentation and prepare annual report</li>
+		<li>DEV-02: Determine if we should use a tone ring vs. existing single magnet design - complete research and document results</li>
+		<li>CAMP-03: Review docs for new campaigns on Crowd Supply's website - will locate and review Crowd Supply materials</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>on travel through Sat, will need some time to recover Sun/Mon, so still not overloading commitments</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>BIZ-05: Create LLC documentation covering regular reporting requirements (what, when, how, where) - done, doc is on Google drive</li>
+		<li>DEV-06: Test Keyboard USB HID over USB-Gadget - read up more on Docker</li>
+		<li>CAMP-01: Review articles/information from Fred Hicks regarding kickstarter campaigns - started reading, taking notes on google drive</li>
+		<li>DEV-03: Fix Bug <a href="../../issues/276.html" class="issue status-3 priority-2 closed" title="Sensors are 5v logic feeding into 3.3v inputs on the controller (Resolved)">#276</a> (Sensors are 5v logic feeding into 3.3v inputs on the controller) - attached pins to put together breadboard for testing</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>DEV-06: Test Keyboard USB HID over USB-Gadget - more reading about Docker</li>
+		<li>CAMP-01: Review articles/information from Fred Hicks regarding kickstarter campaigns - more reading and note taking</li>
+		<li>DEV-03: Fix Bug <a href="../../issues/276.html" class="issue status-3 priority-2 closed" title="Sensors are 5v logic feeding into 3.3v inputs on the controller (Resolved)">#276</a> (Sensors are 5v logic feeding into 3.3v inputs on the controller) - look over circuit and figure out how to insert the breadboard in the middle  w/ voltage step chip</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>not sure if there is time to commit to anything else</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/62">2017 Sprint 1 Stand Up 3 (belated)</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-03-12" title="03/12/2017 01:48 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p>Both Bryan and I ran into more blocks (business travel and long work hours for J, unplanned family visits and external demands for Bryan) than we expected last week.  The results are little progress made last week (but things are starting to move again) and missing our stand up date.  So, here is our belated stand up 3 for this sprint.</p>
+
+
+	<p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>Published <a href="http://www.modelb.biz/2017-sprint-1-kick-off-finalizing-v0-4-hardware/" class="external">Sprint 1 blog post</a></li>
+		<li>Get newsletter published - sent Ingrid an email about the next newsletter</li>
+		<li>DEV-10: Select BT HID module from CHIP's BT module or an external one / DEV-11: Select BT Host module from CHIP's BT module or an external one - finished <a href="wiki/Bluetooth.html" class="wiki-page">documenting research and findings</a></li>
+		<li>DEV-02: Determine if we should use a tone ring vs. existing single magnet design - as part of prep work, did some research on tone rings and discovered there are low cost/high sensitivity commercial sensors/tone rings that report speed and direction; we should seriously consider switching to one of these options in place of our current sensor board as they cost less and offer higher resolution than anything we could build from scratch</li>
+		<li>DEV-15: Port the controller side RJ-45 wiring from the v0.3 controller to the v0.4 controller / DEV-17: Port physical switch wiring from v0.3 to v0.4 - see <a href="https://opendesignengine.net/dmsf/holoseat?folder_id=77" class="external">v0.4 Fritzing Files</a></li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>DEV-02: Determine if we should use a tone ring vs. existing single magnet design - continue research and document my findings with the idea of selecting one or more options to consider testing out</li>
+		<li>Get newsletter published - if possible</li>
+		<li>BIZ-09: Submit books for tax accounting - package and send materials to accountant</li>
+		<li>BIZ-03: Generate required reports and confirm accuracy - need to check with Bryan about process</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Get newsletter published - waiting for word back from Ingrid about the newsletter</li>
+		<li>BIZ-03: Generate required reports and confirm accuracy - need documentation from Bryan about how/where (BIZ-05)</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>DEV-06: Test Keyboard USB HID over USB-Gadget - got docker installed on laptop</li>
+		<li>BIZ-09: Submit books for tax accounting - Ran the reports for 2016 tax filing</li>
+		<li>BIZ-01: Identify what reports need to be generated - completed</li>
+		<li>BIZ-02: Confirm where the reports should be submitted - completed</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>BIZ-05: Create LLC documentation covering regular reporting requirements (what, when, how, where) - will write this up</li>
+		<li>CAMP-01: Review articles/information from Fred Hicks regarding kickstarter campaigns - will post links to articles on Discord</li>
+		<li>DEV-06: Test Keyboard USB HID over USB-Gadget - continue with cross compiling tests in docker environment</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>DEV-03: Fix Bug <a href="../../issues/276.html" class="issue status-3 priority-2 closed" title="Sensors are 5v logic feeding into 3.3v inputs on the controller (Resolved)">#276</a> (Sensors are 5v logic feeding into 3.3v inputs on the controller) - Realized no longer seem to own a volt meter, need to buy a new one</li>
+		<li>May not be available for stand up 4 due to potential schedule conflict for work</li>
+		<li>BIZ-11: Define schedule for checking and applying updates to website - waiting on license key for last plugin
+	<ul>
+	<li>J still waiting for info from Ingrid</li>
+	</ul></li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/61">2017 Sprint 1 Stand Up 2</a>
+    (2 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-03-01" title="03/01/2017 08:45 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>Drafted Sprint 1 blog post (would like to add image(s) before posting, will check with Ingrid for ideas)</li>
+		<li>DEV-10: Select BT HID module from CHIP's BT module or an external one / DEV-11: Select BT Host module from CHIP's BT module or an external one - read up on BT classic, BLE, and BT support on our target platforms; have decided on suggested path forward and started documenting research and findings on the wiki</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>Publish Sprint 1 blog post</li>
+		<li>Get newsletter published</li>
+		<li>DEV-10: Select BT HID module from CHIP's BT module or an external one / DEV-11: Select BT Host module from CHIP's BT module or an external one - finish documenting research and findings so we can claim done</li>
+		<li>DEV-02: Determine if we should use a tone ring vs. existing single magnet design - start setting up test rig for tone ring on my holoseat</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Still on business travel the week and will need to rest up when I get home, so operating at reduced capacity</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>BIZ-13: Schedule backups so that they are running - done, backups are running after changing backup plug-ins to <a href="https://wordpress.org/plugins/updraftplus/" class="external">UpdraftPlus</a></li>
+		<li>BIZ-14: Determine frequency of backup/restore tests to confirm backups can be used - proposing once a year do a full restore and spot checks once a sprint to confirm archives are valid... done
+	<ul>
+	<li>J - sounds good, let's do annual test soon</li>
+		<li>Bryan - yes</li>
+	</ul>
+	</li>
+		<li>BIZ-09: Submit books for tax accounting - still need more work here (found some issues for 2017); good to go for 2016 taxes</li>
+		<li>BIZ-01: Identify what reports need to be generated - almost done:  identified the details of the bi-annual report and started looking into DC tax filings (looks like we have none to file this year)</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>BIZ-09: Submit books for tax accounting - Run the reports for 2016 tax filing</li>
+		<li>BIZ-01: Identify what reports need to be generated - wrap it up</li>
+		<li>DEV-06: Test Keyboard USB HID over USB-Gadget - check out Docker build environment since other paths have not worked yet</li>
+		<li>BIZ-02: Confirm where the reports should be submitted - will complete</li>
+		<li>BIZ-05: Create LLC documentation covering regular reporting requirements (what, when, how, where) - will write this up</li>
+		<li>CAMP-01: Review articles/information from Fred Hicks regarding kickstarter campaigns - will post links to articles on Discord</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>BIZ-11: Define schedule for checking and applying updates to website - waiting on license key for last plugin
+	<ul>
+	<li>J will talk to Ingrid about this while working on the newsletter</li>
+	</ul>
+	</li>
+		<li>DEV-03: Fix Bug <a href="../../issues/276.html" class="issue status-3 priority-2 closed" title="Sensors are 5v logic feeding into 3.3v inputs on the controller (Resolved)">#276</a> (Sensors are 5v logic feeding into 3.3v inputs on the controller) - shipping of parts is taking a long time (will get in Mon or Tue of next week, so will be in the next commitment)</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/60">2017 Sprint 1 Stand Up 1</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-02-23" title="02/23/2017 09:41 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <strong>J's report</strong>
+	<ul>
+	<li>Did
+	<ul>
+	<li>Posted <a href="https://opendesignengine.net/news/59" class="external">Sprint 1 Announcement</a> on Holoseat News Feed</li>
+		<li>Wrote (and published) <a href="http://www.modelb.biz/arduino-chip-looking-back-2016-kicking-off-2017/" class="external">2017 plan blog post</a></li>
+		<li>DEV-10: Select BT HID module from CHIP's BT module or an external one / DEV-11: Select BT Host module from CHIP's BT module or an external one - spent available free time reading up on Bluetooth and bought <a href="http://shop.oreilly.com/product/0636920031932.do" class="external">Make: Bluetooth ebook</a></li>
+	</ul>
+	</li>
+		<li>Will Do
+	<ul>
+	<li>Write Sprint 1 blog post</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Still on business travel for the next week, so operating at reduced capacity</li>
+	</ul></li>
+	</ul>
+
+
+<strong>Bryan's Report</strong>
+	<ul>
+	<li>Did
+	<ul>
+	<li>DEV-03: Fix Bug <a href="../../issues/276.html" class="issue status-3 priority-2 closed" title="Sensors are 5v logic feeding into 3.3v inputs on the controller (Resolved)">#276</a> (Sensors are 5v logic feeding into 3.3v inputs on the controller) - ordered logic voltage adjustment boards from Sparkfun</li>
+		<li>BIZ-11: Define schedule for checking and applying updates to website - discussed in sprint planning meeting and will include update checks in stand ups; updates current except one plugin (purchased and need the license key to update it)</li>
+		<li>BIZ-12: Setup either RSS feed or notification related to wordpress vulernabilities so we know when to check for emergency updates - RSS feeds subbed</li>
+		<li>BIZ-13: Schedule backups so that they are running - found plugin to monitor and backup plugin, but have not installed yet</li>
+		<li>BIZ-14: Determine frequency of backup/restore tests to confirm backups can be used - no significant progress</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>BIZ-13: Schedule backups so that they are running</li>
+		<li>BIZ-14: Determine frequency of backup/restore tests to confirm backups can be used</li>
+		<li>BIZ-09: Submit books for tax accounting - go though books</li>
+		<li>BIZ-01: Identify what reports need to be generated - start looking at reporting requirements</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>BIZ-11: Define schedule for checking and applying updates to website - waiting on license key for last plugin</li>
+		<li>Possible upcoming blocks around business travel</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/59">2017 Sprint 1 Plan</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-02-19" title="02/19/2017 09:31 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p>Sprint 1 planning is complete.  The focus of the sprint is to address admin tasks related to the maintenance of <a href="http://www.modelb.biz/" class="external">Model B, LLC</a>, conduct initial research about running a crowd source campaign, and continue the research and development required to lock in on the final hardware design for v0.4.  The full details of the sprint are below.</p>
+
+
+	<p><strong>Duration:</strong> 8 weeks<br /><strong>Stand Ups:</strong> Wednesday nights<br /><strong>Start:</strong> Feb 22, 2017 <br /><strong>End:</strong> Apr 19, 2017</p>
+
+
+	<p><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Backlog and Full Sprint Plan</a> (see <em>Backlog</em> and <em>Sprint 1</em> tabs)</p>
+
+
+<ins>Key Development PBIs</ins>
+	<ul>
+	<li>DEV-02: Determine if we should use a tone ring vs. existing single magnet design</li>
+		<li>DEV-03: Fix Bug <a href="../../issues/276.html" class="issue status-3 priority-2 closed" title="Sensors are 5v logic feeding into 3.3v inputs on the controller (Resolved)">#276</a> (Sensors are 5v logic feeding into 3.3v inputs on the controller)</li>
+		<li>DEV-06: Test Keyboard USB HID over USB-Gadget</li>
+		<li>DEV-10: Select BT HID module from CHIP's BT module or an external one</li>
+		<li>DEV-11: Select BT Host module from CHIP's BT module or an external one</li>
+		<li>DEV-15: Port the controller side RJ-45 wiring from the v0.3 controller to the v0.4 controller</li>
+		<li>DEV-17: Port physical switch wiring from v0.3 to v0.4</li>
+	</ul>
+
+
+<ins>Pre-Sprint Commitments</ins>
+	<ul>
+	<li>J - content management
+	<ul>
+	<li>Post Sprint 1 Announcement on Holoseat News Feed</li>
+		<li>Write 2017 plan blog post</li>
+	</ul>
+	</li>
+		<li>Bryan - website admin PBIs
+	<ul>
+	<li>BIZ-11: Define schedule for checking and applying updates to website. </li>
+		<li>BIZ-12: Setup either RSS feed or notification related to wordpress vulernabilities so we know when to check for emergency updates</li>
+		<li>BIZ-13: Schedule backups so that they are running</li>
+		<li>BIZ-14: Determine frequency of backup/restore tests to confirm backups can be used</li>
+	</ul></li>
+	</ul>
+    </div>
+
+
+<p class="pagination"><a href="http://opendesignengine.net/projects/holoseat/news?page=5">« Previous</a> <a href="http://opendesignengine.net/projects/holoseat/news?page=1">1</a> ...  <a href="http://opendesignengine.net/projects/holoseat/news?page=4">4</a> <a href="http://opendesignengine.net/projects/holoseat/news?page=5">5</a> 6 </p>
+
+<p class="other-formats">Also available in:
+	<span><a href="news.atom" class="atom" rel="nofollow">Atom</a></span>
+</p>
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

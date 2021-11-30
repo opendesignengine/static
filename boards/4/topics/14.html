@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Hardware compatibility - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-14-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Hardware compatibility</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2011-08-11.html" title="08/11/2011 03:39 am">about 11 years</a> ago</span></p>
+<div class="wiki">
+<p>If we don't have "black-box" spec's for the proposed hardware, should we collect them now?  If we have detailed spec's, where do I find them.</p>
+
+
+	<p>I have been sniffing around the Arduino page fpr a couple of hours and have not yet determined if the Uno needs additional hardware to deal with the DS2670's "1 wire" interface protocol.  The "1 wire" interface is actually 3 wires being V+, Common, and Data.  The "Data" line is a bi-directional serial communication line using a single Master, and one or more slave devices.</p>
+
+
+	<p>Does the Arduino Uno have a built-in "1 wire" interface, or does it need additional hardware (like a transistor and 2 resistors) to perform the "1-wire" master hardware function.  Who has the software for the "1 wire" protocol?</p>
+
+
+	<p>Ben</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (4)</h3>
+
+  <div class="message reply" id="message-16">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="14%3Fr=16.html#message-16">RE: Hardware compatibility</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2011-08-11.html" title="08/11/2011 04:00 pm">about 11 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ben,</p>
+
+
+	<p>I did some searching of my own and found the following technical info about the Arduino and One Wire protocol.</p>
+
+
+	<ul>
+	<li><a href="http://arduino.cc/en/Main/ArduinoBoardUno" class="external">General Specs for Arduino Uno</a></li>
+		<li><a href="http://www.arduino.cc/playground/Learning/OneWire" class="external">Using One Wire with Arduino</a> - this page has a lot of history on it, so it takes a full read through to get the current picture of where things stand.  But, it looks like there is a working library for the One Wire protocol which does not require much, if any, additional hardware, and an external device to act as a One Wire interface for the Arduino
+	<ul>
+	<li><a href="http://www.pjrc.com/teensy/td_libs_OneWire.html" class="external">One Wire Library</a> - <a href="http://tushev.org/articles/electronics/42-how-it-works-ds18b20-and-arduino" class="external">tutorial on the library</a></li>
+		<li><a href="http://www.phanderson.com/stamp/onewire.html" class="external">One Wire interface</a> - <a href="http://sheepdogguides.com/arduino/asw1onew1.htm" class="external">tutorial on interface</a></li>
+	</ul></li>
+	</ul>
+
+
+	<p>Oh, I have a question for you, Ben.  Do you have some particular One Wire devices in mind for the project?  If so, could you post some links?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-17">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="14%3Fr=17.html#message-17">RE: Hardware compatibility (1-Wire)</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2011-08-12.html" title="08/12/2011 02:45 am">about 11 years</a> ago
+  </h4>
+  <div class="wiki"><p>The reason for the 1-wire question was that the proposed thermocouple interface uses  a "1-Wire" serial communications interface.  I have not yet found its detailed spec's.</p>
+
+
+	<p>The answer to the original question is "Yes, additional hardware is required".  To this old analog hardware guy, analog signal conditioning is looking a lot easier than the addition of a 1-Wire controller with the additional software requirement.  Wouldn't it be easier to just add a couple of op-amps and have a DC voltage ready for the Arduino analog input any time it wants to read it?  Why waste the UART's Rx pin and its associated interrupt, when it only takes a couple of op-amps to use an analog input with all of the timing controlled by the Arduino?</p>
+
+
+	<p>Sorry, to me analog is simple, while digital communication protocols and interrupts just make things more complicated.</p>
+
+
+	<p>Ben</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-18">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="14%3Fr=18.html#message-18">RE: Hardware compatibility</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2011-08-12.html" title="08/12/2011 03:52 pm">about 11 years</a> ago
+  </h4>
+  <div class="wiki"><p>Oh, I somehow missed the thermocouple interface under discussion was "1-wire".  The only time I have used a thermocouple, we just plugged it into an analog input on an ADC and read the values.  Of course, this was for a class, and none of us on the project knew enough to even add signal conditioning.  Anyway, that's a long way of saying I just assumed we would plug the thermocouple into one of the Arduino's analog inputs and read the values off the appropriate pin.</p>
+
+
+	<p>If I understand correctly, that is still essentially the analog option, with the added caveat that we should be conditioning the signal before reading it.  For those of us not so good with analog signals, can you post a link to some good intro material on conditioning or post a brief explanation of how it works?</p>
+
+
+	<p>Thanks!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-19">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="14%3Fr=19.html#message-19">RE: Hardware compatibility</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2011-08-12.html" title="08/12/2011 05:50 pm">about 11 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thermocouple output voltage is only about 50mV @ 1200 C, so a gain of 20-50 would be needed to "fill" the analog input of the Arduino's A/D.  (I will need to study the Arduino more with regard to the useful range of the "Analog Reference voltage". At first glance it looked like it might be nominally 2.5V.  Thermocouple reference:<br /><a class="external" href="http://www.omega.com/temperature/Z/pdf/z204-206.pdf">http://www.omega.com/temperature/Z/pdf/z204-206.pdf</a><br />The Omega web site is a great place to look for all kinds of sensors and signal conditioning.  It is mostly O-T-S, but might not be cheap.</p>
+
+
+	<p>Analog signal conditioning is not so easy.  The basic concept is to use Operational Amplifiers as building blocks to perform amplification and compensate offset.  National Semiconductor, and Analog Devices are the best sources for good application doc's.  I could spend a whole semester teaching analog circuit design and only get through the basic concepts.  Just for a start:<br /><a class="external" href="http://www.national.com/en/amplifiers/op_amp_circuits.html">http://www.national.com/en/amplifiers/op_amp_circuits.html</a><br /><a class="external" href="http://instrumentation.analog.com/en/segment/im.html">http://instrumentation.analog.com/en/segment/im.html</a><br />I dunno if this will help, or just add to the confusion.  Maybe the best place for digital folks to start with analog measurement technology is the Omega home page.<br /><a class="external" href="http://www.omega.com/">http://www.omega.com/</a><br />Look down the left side of the page and pick a parameter...</p>
+
+
+	<p>Ben</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-4/4)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/14.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

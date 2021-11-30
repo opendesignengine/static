@@ -1,0 +1,20 @@
+h1. Resources
+
+{{>toc}}
+
+h2. Link Budget References
+
+* Background Material
+** "Link Budget Calculation":http://www.piscespacific.org/livesite/files/Link_Budget_Calculation.pdf
+** "Tutorial on Basic Link Budget Analysis":http://www.sss-mag.com/pdf/an9804.pdf
+* Example Calculations
+** "KickSat Ground Station Link Budget":https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx (MS Excel)
+** "Jan King's AMSAT link budget +extensive+":http://www.amsatuk.me.uk/iaru/AMSAT-IARU_Link_Model_Rev2.5.3.xls (MS Excel)
+
+h2. ISS SSTV Links
+
+* "SSTV activity being planned for late Dec. 2015 (Now Jan.)":http://ariss-sstv.blogspot.com/2015/12/sstv-activity-being-planned-for-late.html - March and April 2016 are the new target dates
+
+h2. Software Tips and Tricks
+
+* "Content for testing and configuring WxToImg":http://www.fredvandenbosch.nl/satellites_APT.html

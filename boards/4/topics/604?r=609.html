@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Testing updated Shepard DAQ code in preparation for Wed morning meeting with CCSSC - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-604-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Testing updated Shepard DAQ code in preparation for Wed morning meeting with CCSSC</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-17.html" title="09/17/2013 03:11 pm">about 9 years</a> ago</span></p>
+<div class="wiki">
+<p>We are meeting with Matt from CCSSC in the morning, so Jeremy asked me to load up the recent changes to the Arduino source code and the Processing desktop application source code and see if everything was working on the live test stand.  I have mixed news to report from my short testing (I have not conducted a motor firing because Jeremy did not feel the need for one at this time and I ran into a couple of snags that really mean I can't at the moment).</p>
+
+
+	<p><strong>Good News</strong></p>
+
+
+	<ul>
+	<li>Arduino code compiled and loaded onto Shepard from Win7 64bit using Arduino IDE v1.0.5</li>
+		<li>Desktop application compiled and ran on Win7 64bit using 32bit Processing v2.0.3</li>
+		<li>Desktop application correctly detects COM ports and when user selects the correct COM port, the application finds and reads values from the test stand</li>
+	</ul>
+
+
+	<p><strong>Bad News</strong></p>
+
+
+	<ul>
+	<li>Current calibration appears to be way off, with no load the test stand reads around 3N</li>
+		<li>Calibration tool does not run (guessing this has not been updated to work with the latest and greatest Arduino code)</li>
+		<li>Desktop application crashes when I try to demo recording data (get an index out of bounds error on csv file write)</li>
+	</ul>
+
+
+	<p>Thoughts?  I realize we are moving to Java for the desktop application, but if CCSSC is going to stay with Processing for a while, I think we need to get rid of the crash and get the calibration tool working again.  As things stand now, I cannot actually run motor tests, and if CCSSC winds up in the same place, then I think we will have a problem.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (6)</h3>
+
+  <div class="message reply" id="message-605">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="604%3Fr=605.html#message-605">RE: Testing updated Shepard DAQ code in preparation for Wed morning meeting with CCSSC</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-17.html" title="09/17/2013 03:37 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>&lt;professor farnsworth voice&gt;Good news, everyone!&lt;/professor farnsworth voice&gt;</p>
+
+
+	<p>I still remember how to hack code.  ;)  I just got the calibration utility back up and running (I will commit my code changes shortly - no judging, I just copied over changes from the main daq interface until the UI launched again).  About to run a calibration and then get the main app updated with the new equation.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-606">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="604%3Fr=606.html#message-606">RE: Testing updated Shepard DAQ code in preparation for Wed morning meeting with CCSSC</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-17.html" title="09/17/2013 03:55 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Calibration complete.  All bad news seems to have been resolved by updating the calibration equation.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-607">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="604%3Fr=607.html#message-607">RE: Testing updated Shepard DAQ code in preparation for Wed morning meeting with CCSSC</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-17.html" title="09/17/2013 03:58 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>J, I would check to make sure that the trim pot on the DAQ board didn't get turned. If it did it would throw off the zero point and the calibration. There's supposed to be a little bit of silicone on it to hold it in place. I can't remember if I marked it also, but I think I did.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-608">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="604%3Fr=608.html#message-608">RE: Testing updated Shepard DAQ code in preparation for Wed morning meeting with CCSSC</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-17.html" title="09/17/2013 04:00 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I see the silicon, but I don't see a mark.  guessing this is what happened.  If I turn it back to the previous calibration, can I just adjust the trim until I get 0.0 for no load?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-609">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="604%3Fr=609.html#message-609">RE: Testing updated Shepard DAQ code in preparation for Wed morning meeting with CCSSC</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-17.html" title="09/17/2013 04:15 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I would change it back before you commit it to the repo because CCSSC is running on the old calibration. I'm guessing we'll need to walk them through doing a manual calibration anyway, but we want to start them from a known good position.</p>
+
+
+	<p>The slide and/or the load cell weren't damaged in transit were they?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-610">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="604%3Fr=610.html#message-610">RE: Testing updated Shepard DAQ code in preparation for Wed morning meeting with CCSSC</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-17.html" title="09/17/2013 04:18 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I don't see any sign of damage on the test stand.  My bet is you are right and the pot is off from where it was.  I don't plan to commit my change in calibration equation, but I did commit my update to the calibration tool so it should run with the updated Arduino code.  I'll keep my updated calibration for now (and not commit it) unless we can get the pot back where it should be for the old calibration.  That way I can run a test fire or two after I get the thermal sensor mounted.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-6/6)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/604.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+h1. Vendor Documentation
+
+{{>toc}}
+
+h2. CHIP Pro
+
+The "CHIP Pro":https://getchip.com/pages/chippro is the main board for the Holoseat controller.  It is produced by "Next Thing Computing":https://nextthing.co/ (NTC).
+
+* "CHIP Pro Documentation":https://docs.getchip.com/chip_pro.html
+* "CHIP Pro Dev Kit Documentation":https://docs.getchip.com/chip_pro_devkit.html
+* CHIP Pro Pin Out: "Diagram":https://docs.getchip.com/images/Pinout_Diagram_sm.png | "Documentation":https://docs.getchip.com/chip_pro.html#pin-descriptions
+
+h2. Feather
+
+The "Feather":https://www.adafruit.com/product/2771 is the HID USB board for the Holoseat controller.  It is produced by "Adafruit":https://www.adafruit.com/.
+
+* "Feather Documentation":https://learn.adafruit.com/adafruit-feather-32u4-basic-proto
+* Feather Pin Out: "Diagram":https://cdn-learn.adafruit.com/assets/assets/000/041/528/large1024/microcomputers_Adafruit_Feather_32u4_Basic_Proto_v2_2.png?1494120696 | "Documentation":https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/pinouts
+
+h2. Speed & Direction Sensor TLE4966
+
+The "TLE4966":Speed & Direction Sensor TLE4966 is the proposed sensor package for Holoseat.  It is produced by "Infineon":http://www.infineon.com/.  It comes in a number of form factors, listed below.
+
+* "TLE4966V-1K":http://www.infineon.com/cms/en/product/sensor/magnetic-position-sensor/hall-switch/TLE4966V-1K/productType.html?productType=db3a304442b7c1190142d7838f3d33ba
+* "TLE4966K":http://www.infineon.com/cms/en/product/sensor/magnetic-position-sensor/hall-switch/TLE4966K/productType.html?productType=db3a30441ed1cf87011f8e6d1797204d
+* "TLE4966-2K":http://www.infineon.com/cms/en/product/sensor/magnetic-position-sensor/hall-switch/TLE4966-2K/productType.html?productType=db3a30442c64a1a6012c838876472775
+* "TLE4966-3K":http://www.infineon.com/cms/en/product/sensor/magnetic-position-sensor/hall-switch/TLE4966-3K/productType.html?productType=db3a304426e7f13b0127e36db3d44227
+* "TLE4966L":http://www.infineon.com/cms/en/product/sensor/magnetic-position-sensor/hall-switch/TLE4966L/productType.html?productType=db3a30441441f8c00114641779db04e9

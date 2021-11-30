@@ -1,0 +1,681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Setting up CHIP environment easily and repeatedly - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1263-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Setting up CHIP environment easily and repeatedly</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-03-26.html" title="03/26/2017 11:48 am">over 5 years</a> ago</span></p>
+<div class="wiki">
+<a name="Introduction"></a>
+<h2 >Introduction<a href="1263%3Fr=1277.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Holoseat needs an easy and repeatable process for setting up the dev/runtime environments on CHIPs and CHIP Pros.  We need this process to support several initiatives.</p>
+
+
+	<ul>
+	<li>Ensure consistent development environments across physically distributed team</li>
+		<li>Simplify setup steps for volunteers (and staff)</li>
+		<li>Simplify setup steps for production units</li>
+	</ul>
+
+
+	<p>One view of these needs is to say we are looking for a Holoseat platform for the CHIP systems we are using.  Now that <a href="https://blog.hypriot.com/post/docker-supported-on-chip-computer/" class="external">Docker has been run on CHIPs</a> we can look at using Docker to create a Platform as a Service (Paas) methodology to address these needs. As an added bonus, we can publish our Docker images to the larger CHIP and Docker communities to build credibility as NodeBots on CHIP authorities since these are core technologies for Holoseat.</p>
+
+
+	<a name="Implementation-Plans"></a>
+<h2 >Implementation Plans<a href="1263%3Fr=1277.html#Implementation-Plans" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Based on <a href="https://www.packtpub.com/virtualization-and-cloud/build-your-own-paas-docker" class="external">Building Your Own Paas with Docker</a>, we will need at least two containers: a data volume container and a NodeBots container.  Additionally, we may need a database container assuming we can find something lightweight enough to run on the CHIP (e.g. <a href="https://github.com/Level/levelup" class="external">LevelUp/LevelDB</a>).  Note, I am leaning to storing this info in files on disk, but I don't want to rule things out.</p>
+
+
+	<p>There is also the question of if the containers can connect to the CHIP IO pins. Based on a blog post about <a href="https://blog.hypriot.com/post/lets-get-physical/" class="external">Docker and Raspberry Pi</a> and this <a href="http://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins" class="external">stack overflow thread</a> it looks like pin access in a container is just a matter of passing the correct devices to the container on startup.</p>
+
+
+	<p>We will also want to consider how we can separate general community needs (e.g. Node.js, Node.js + Johnny-Five) from Holoseat needs (developers need svn and a checkout of the firmware code from Holoseat repo, production units need the firmware without the overhead of svn).  All of this also begs the question how much of this has already been done in the Docker community and how much can we reuse.</p>
+
+
+	<p>The following is a draft outline of steps to take towards implementation:</p>
+
+
+	<ol>
+	<li>Get Docker installed on a CHIP &lt;find link(s)&gt;</li>
+		<li>Test out some base images to determine what we can reuse from the CHIP and Docker communities (e.g look for supported Node.js, and investigate running BusyBox)</li>
+		<li>Test IO pin access from containers, test HID interaction from containers, and test lightweight databases</li>
+		<li>As needed, build up required base Docker images we can share (based on CHIP research, which still needs some documentation work)
+	<ol>
+	<li>Node.js</li>
+		<li>Johnny-Five plus chip-io (on top of Node.js, installed globally so the build steps are done?)</li>
+	</ol>
+	</li>
+		<li><acronym title="?">SSHD</acronym>
+	<ol>
+	<li>...?</li>
+	</ol>
+	</li>
+		<li>Create Holoseat dev image by adding (in layers?)
+	<ol>
+	<li>Data volume</li>
+		<li>SVN</li>
+		<li>Dev directory structure </li>
+		<li>Samba</li>
+		<li>SVN checkout of firmware from trunk</li>
+		<li>... any missing steps from CHIP research?</li>
+	</ol>
+	</li>
+		<li>Later create a production image as needed</li>
+	</ol>
+
+
+	<p>If all goes according to plan, setting up a new CHIP should be as easy as</p>
+
+
+	<ol>
+	<li>Flash with updated OS</li>
+		<li>Configure wifi - desktop app will automate this step later
+	<ol>
+	<li>Login over serial </li>
+		<li>Set up wifi</li>
+		<li>Logout of serial </li>
+	</ol>
+	</li>
+		<li>Login over ssh</li>
+		<li>Install Docker</li>
+		<li>Grab dev images</li>
+		<li>Set Docker images to auto-start </li>
+		<li>Reboot</li>
+		<li>Login to dev container over wifi and connect to samba</li>
+		<li>Start coding</li>
+	</ol>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (14)</h3>
+
+  <div class="message reply" id="message-1264">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1264.html#message-1264">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-04-09.html" title="04/09/2017 08:36 am">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Just a couple of new developments on this thread.  First, Docker is <a href="https://blog.hypriot.com/post/docker-supported-on-chip-computer/" class="external">officially supported on CHIP/CHIP Pro</a>.  Second, Bryan has some concerns about using Docker with the available storage on CHIP Pro, which bears research and testing.</p>
+
+
+	<p>Third, not only is Docker supported, there are Next Thing demos of using Docker on Chip Pro.  They call this approach CHIP-tainer.  Here are three examples from their github repo.</p>
+
+
+	<ul>
+	<li><a href="https://github.com/NextThingCo/chiptainer_vu_meter" class="external">VU Meter</a></li>
+		<li><a href="https://github.com/NextThingCo/chiptainer_python_io" class="external">Python IO</a></li>
+		<li><a href="https://github.com/NextThingCo/chiptainer_alpine" class="external">Alpine</a></li>
+	</ul>
+
+
+	<p>I think the next step is to get a CHIP Pro set up with Docker, run one or two of these demos, and then look at metrics (e.g. available disk space, processor load, memory).  After that, it will be time to start trying to make our own Docker images.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1267">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1267.html#message-1267">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-04-29.html" title="04/29/2017 08:44 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>This work is now part of 2017 Sprint 2 (DEV-23: Test Nodejs then Johnny-Five in chiptainer enviroment to determine if we want to use chiptainer approach).  Based on notes above, I am planning to test out VU Meter demo provided by Next Thing.  A couple of quick notes before I start my work. This demo requires the CHIP Pro Dev Kit.  The current OS install on my CHIP Pro Dev Kit is the Blinkenlights image (this is an example build-root image that blinks all of the LEDs).  I have checked, and it does not have Docker pre-installed and the standard Docker install commands do not work in this environment.  Contrast this with <a href="https://opendesignengine.net/boards/36/topics/1253?r=1265#message-1265" class="external">this message</a> from Bryan that Docker is included when we make our own copy of build-root.  A little more digging by Bryan shows us that his CHIP Pro is running Docker 1.12.2.</p>
+
+
+	<p>My plan is to install the Debian image on my CHIP Pro and then try to follow these <a href="https://blog.hypriot.com/post/docker-supported-on-chip-computer/" class="external">instructions to install Docker on CHIP</a>.  I am hoping this test will provide an answer to the forum post <a href="https://bbs.nextthing.co/t/is-chip-pro-docker-ready/15204" class="external">Is Chip Pro Docker ready?</a>.</p>
+
+
+	<p>One final note.  I noticed problems flashing my CHIP Pro from Windows 7, but on the other hand serial access from OS X is painful.  So, my plan is to flash the OS from my Mac and then switch to my Win 7 box to login over serial to set up wifi.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1268">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1268.html#message-1268">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-04-29.html" title="04/29/2017 09:20 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p><strong><em>CHIPtainer Example: VU Meter</em> Test</strong></p>
+
+
+	<ol>
+	<li>Initial setup
+	<ol>
+	<li>Flash Chip Pro Dev Kit with "Pro" image (Debian install) from Mac per <a href="https://docs.getchip.com/chip_pro_devkit.html#flash-with-an-os" class="external">dev kit instructions</a></li>
+		<li>Install wifi antenna that came with dev kit per <a href="https://docs.getchip.com/chip_pro_devkit.html#connect-antenna" class="external">wifi antenna instructions</a></li>
+		<li>Connect to the CHIP Pro from Win 7 per <a href="https://docs.getchip.com/chip_pro_devkit.html#windows" class="external">serial connection (Windows) instructions</a><br />You may see boot messages stream by</li>
+		<li>Login with default user/password: chip/chip</li>
+		<li>Enable the attached wifi antenna <br />Neither the <a href="https://raw.githubusercontent.com/NextThingCo/CHIP-buildroot/34a8cfdab2bbecd6741c435d6c400e46848436f1/package/rtl8723ds_mp_driver/set_antenna" class="external">set_antenna script</a> nor obvious access to a text editor are included with this image.  So, the following steps show how to manually configure the CHIP Pro to use the connected wifi antenna.  The following text should be run exactly as shown.  For the <code>sudo</code> command, remember the default password is chip
+	<ol>
+	<li><code>sudo bash</code></li>
+		<li><code>echo 49 > /sys/class/gpio/export</code></li>
+		<li><code>echo out > /sys/class/gpio/gpio49/direction</code></li>
+		<li><code>echo 1 > /sys/class/gpio/gpio49/value</code></li>
+		<li><code>echo 49 > /sys/class/gpio/unexport</code></li>
+		<li><code>exit</code></li>
+	</ol>
+	</li>
+		<li>Enable wifi per the <a href="https://docs.getchip.com/chip_pro_devkit.html#wifi-setup-debian" class="external">Debian wifi instructions</a></li>
+	</ol>
+	</li>
+		<li>Install Docker<br />Based on <a href="https://blog.hypriot.com/post/docker-supported-on-chip-computer/" class="external">Docker is supported on the $9 C.H.I.P. computer</a>
+	<ol>
+	<li>The first three steps are covered by the work above</li>
+		<li>For this test we will skip Step 4 (Configure SSH to access the C.H.I.P.)</li>
+		<li>Step 5 is to check the kernel version (we need a build more recent than 4.4.13 dated Dec 6, 2016).  Below is the output I get from Step 5.<br /><code>chip@chip:~$ uname -a</code><br /><code>Linux chip 4.4.30-pro #1 SMP Wed Dec 21 01:50:18 UTC 2016 armv7l GNU/Linux</code><br />It looks like we can safely move onto Step 6</li>
+		<li>Remember to run the install command under sudo: <code>sudo curl -sSL https://get.docker.com | sh</code><br />Running under sudo might not have been necessary, there are calls to sudo in the install script.  This is interesting, the docker install script reported missing features and then started updating apt-get and installing those missing features.</li>
+		<li>Per comment at the end of the Docker install script, add chip to the docker group<br /><code>sudo usermod -aG docker chip</code></li>
+		<li>Log out and then login back into the CHIP Pro to get the group membership to take effect</li>
+		<li>Check the Docker version by running <code>docker --version</code></li>
+		<li>Clean up space by running <code>sudo apt-get clean</code><br />My results show <code>Docker version 17.04.0-ce, build 4845c56</code> which differs from the version Bryan is running (1.12.2).</li>
+	</ol>
+	</li>
+		<li>Testing the VU Meter CHIPtainer
+	<ol>
+	<li>In theory, this is just a matter of following the <a href="https://github.com/NextThingCo/chiptainer_vu_meter#chiptainer-example-vu-meter" class="external">instructions</a><br />Except, apparently you will need a login for <a class="external" href="https://ntc-registry.githost.io">https://ntc-registry.githost.io</a> (just head to that page and sign up for an account).  Well that did not work.  It looks like registration is restricted (I got the following error: "Email domain is not authorized for sign-up")</li>
+	</ol></li>
+	</ol>
+
+
+	<p>New plan for basic testing.  I am going to run the test from the <a href="https://blog.hypriot.com/post/docker-supported-on-chip-computer/" class="external">Docker is supported on the $9 C.H.I.P. computer</a> instructions (Step 8).</p>
+
+
+	<ol>
+	<li><code>docker run -d -p 80:80 hypriot/rpi-busybox-httpd</code></li>
+		<li>Get the CHIP Pro's ip address: <code>ip addr</code></li>
+		<li>Open the CHIP Pro's ip address in a web browser</li>
+	</ol>
+
+
+	<p>Success!!!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1270">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1270.html#message-1270">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-08.html" title="05/08/2017 09:19 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>After reviewing the Docker files and re-reading <a href="https://www.packtpub.com/virtualization-and-cloud/docker-cookbook" class="external">Packt's Docker Cookbook</a>, I think I can get the CHIPtainer example working.  I say example (and not examples) because the three links above together build up to a single example, the VU Meter.  You see, the VU Meter image is built upon the Python IO image.  And the Python IO image is built upon the Alpine image.</p>
+
+
+	<p>If I am starting to get the hang of the things I have been reading, I think the basic set of steps to get things running are:</p>
+
+
+	<ol>
+	<li>Build Alpine image from its Docker file</li>
+		<li>Publish the Alpine image in a public registry</li>
+		<li>Update the Python IO Docker file to reference the publicly hosted Alpine image</li>
+		<li>Build the Python IO image from the updated Docker file</li>
+		<li>Publish the Python IO image to a public registry</li>
+		<li>Update the VU Meter Docker file to reference the publicly hosted Python IO image</li>
+		<li>Build the VU Meter image from the updated Docker file</li>
+		<li>Publish the VU Meter image to a public registry (this is not strictly required, but it is nice)</li>
+		<li>Test out the VU Meter CHIPtainer</li>
+	</ol>
+
+
+	<p>Tonight I will be setting a few things up and just testing out the general theory.  See next post for engineering log.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1271">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1271.html#message-1271">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-08.html" title="05/08/2017 10:02 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p><strong>Prep Work</strong></p>
+
+
+	<p>So, first things first, I am going to need a local text editor and git, so time to install a couple of packages (followed by cleaning up disk space).</p>
+
+
+	<ol>
+	<li><code>sudo apt-get install nano</code> - I am not too proud to use nano for quick and dirty work</li>
+		<li><code>sudo apt-get install git</code></li>
+		<li><code>sudo apt-get clean</code></li>
+	</ol>
+
+
+	<p><strong>Testing</strong></p>
+
+
+	<p>Now to run our test.  I am going to try to build the Alpine image in a temporary testing directory.</p>
+
+
+	<ol>
+	<li><code>mkdir ~/docker-test</code></li>
+		<li><code>cd ~/docker-test</code></li>
+		<li><code> git clone https://github.com/NextThingCo/chiptainer_alpine.git</code></li>
+		<li><code>cd ./chiptainer_alpine</code></li>
+		<li><code>./build.sh</code></li>
+		<li><code>rm ./qemu-arm-static.tar.gz</code> - cleaning up files we downloaded for the image</li>
+		<li><code>rm ./rootfs.tar.gz</code></li>
+	</ol>
+
+
+	<p>So far, so good.  Docker reported that it successfully built the image.  And running <code>docker images</code> shows the <code>nextthingco/chiptainer_alpine</code> image is there.  Well that worked so well, let's try the next level (without publishing things to a registry).</p>
+
+
+	<p>First, after a little bit of digging I found someone posted a <a href="https://github.com/NextThingCo/chiptainer_python_io/pull/1" class="external">pull request</a> for the Python IO Docker file.  So, I forked this version of Python IO and then forked the NGC versions of Alpine and VU Meter.  I then cloned my Python IO into my <code>docker-test</code> directory and edited the Docker file for Python IO to change the FROM line from <code>FROM ntc-registry.githost.io/nextthingco/chiptainer_alpine</code> to <code>FROM nextthingco/chiptainer_alpine</code>.  And I ran the <code>build.sh</code> for Python IO.  The <code>build.sh</code> reported the build was successful.</p>
+
+
+	<p>I think that is enough for tonight.  Tomorrow I will run some tests on the Python IO image by starting a container.  And if that works, I will use a similar process to build the VU Meter image.  And if all that works I will start publishing the images and updating the Docker files and READMEs to make things just work out of the box.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1272">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1272.html#message-1272">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-08.html" title="05/08/2017 10:08 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Leaving myself a note - <a class="external" href="https://blog.risingstack.com/minimal-docker-containers-for-node-js/">https://blog.risingstack.com/minimal-docker-containers-for-node-js/</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1273">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1273.html#message-1273">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-09.html" title="05/09/2017 09:04 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Next step is to test the Python IO image.  The following are updated instructions from the the NTC instructions.</p>
+
+
+	<ol>
+	<li><code>docker run -v /sys:/sys --cap-add SYS_RAWIO --device /dev/mem -it nextthingco/chiptainer_python_io</code><br />The following commands are from within the Python IO container
+	<ol>
+	<li><code>python</code><br />The following commands are from within Python environment
+	<ol>
+	<li><code>import CHIP_IO.GPIO as GPIO</code></li>
+		<li><code>GPIO.setup("CSID3", GPIO.OUT)</code></li>
+		<li><code>GPIO.output("CSID3", GPIO.HIGH)</code> # LED D3 should light up</li>
+		<li><code>GPIO.output("CSID3", GPIO.LOW)</code> # LED D3 should go out</li>
+		<li><code>exit()</code><br />Exits Python</li>
+	</ol>
+	</li>
+		<li><code>exit</code><br />Exits container</li>
+	</ol></li>
+	</ol>
+
+
+	<p>This test was a complete success (thought it did involve some additional changes to the demo instructions from NTC).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1274">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1274.html#message-1274">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-09.html" title="05/09/2017 09:32 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, now it is time to get VU Meter running.  So, back to the <code>docker-test</code> directory and now time to build the VU Meter code from my fork.</p>
+
+
+	<ol>
+	<li><code>cd ~/docker-test</code></li>
+		<li><code>git clone https://github.com/modelb-jrs/chiptainer_vu_meter.git</code></li>
+		<li><code>cd chiptainer_vu_meter</code></li>
+		<li>Edit <code>Dockerfile</code> and update FROM line to <code>FROM nextthingco/chiptainer_python_io</code></li>
+		<li><code>./build.sh</code></li>
+		<li><code>docker run --name vu-meter --privileged --cap-add SYS_RAWIO --device /dev/mem -v /sys:/sys -ti nextthingco/chiptainer_vu_meter</code></li>
+	</ol>
+
+
+	<p>Success, for a moment or two, then I received a "Program Closed" message and returned to the host OS prompt.  The same thing happened when I restarted the VU Meter container.  A little digging in the source code for the VU Meter shows it only runs 10 iterations and then displays "Program Closed".  So, there you have it, total success!!!</p>
+
+
+	<p>Next steps are to clean up the files in my forks on github and publish the images to a public repo so people outside of NTC can just run the VU Meter example.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1275">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1275.html#message-1275">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-27.html" title="05/27/2017 06:42 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>This afternoon I set out to take all that I had learned from my previous experiments and wrap it all up in a published version of the NTC CHIPtainer examples.  I am very happy to report I was completely successful.  You can try things out for yourself by following the instructions over at the <a href="https://cloud.docker.com/swarm/modelb/repository/docker/modelb/chiptainer_vu_meter/general" class="external">public repo for the VU Meter example</a>.  Just scroll down and follow the instructions in the README section.</p>
+
+
+	<p>I plan to post a few notes about tricky places and some helpful commands I found tomorrow.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1276">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1276.html#message-1276">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-28.html" title="05/28/2017 01:46 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Some useful Docker commands (and sources)</p>
+
+
+	<ul>
+	<li>Login to Docker.io from Docker CLI tool<br /><code>docker login</code> # no need to specify the service provider, it defaults to Docker.io</li>
+		<li>Remove all exited containers (from <a class="external" href="https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes#removing-containers">https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes#removing-containers</a>)<br /><code>docker rm $(docker ps -a -f status=exited -q)</code></li>
+		<li>Remove all images (from <a class="external" href="http://docs.oracle.com/cd/E64747_01/E64749/html/osusg-troubleshoot-registry.html">http://docs.oracle.com/cd/E64747_01/E64749/html/osusg-troubleshoot-registry.html</a>)<br /><code>docker rmi -f $(docker images -q)</code></li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1277">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1277.html#message-1277">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-28.html" title="05/28/2017 03:56 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>While trying to build a Node.js CHIPtainer I quickly ran out of room on my CHIP Pro.  This is not really surprising, but I was hoping the issue would come up later.  So, for short term development, I have added a USB drive to my Dev Board, set it to automount, and switched Docker's root dir to be the USB drive.  Below are my config changes.</p>
+
+
+	<p><strong>format flash drive</strong><br /><code>sudo mkfs.ext4 /dev/sda</code></p>
+
+
+	<p><strong>file system</strong><br /><code>sudo mkdir /mnt/usb</code></p>
+
+
+	<p><strong>/etc/fstab</strong><br /><code>/dev/sda /mnt/usb ext4 defaults 0 0</code></p>
+
+
+	<p><strong>more file system work</strong><br /><pre>
+sudo mount -a
+chmod 777 /mnt/usb
+</pre></p>
+
+
+	<p><strong>/etc/docker/daemon.json</strong> # new file<br /><em>per <a class="external" href="https://docs.docker.com/engine/admin/systemd/#runtime-directory-and-storage-driver">https://docs.docker.com/engine/admin/systemd/#runtime-directory-and-storage-driver</a></em><br /><pre>
+{
+    "graph": "/mnt/usb",
+    "storage-driver": "overlay" 
+}
+</pre></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1278">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1278.html#message-1278">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-29.html" title="05/29/2017 11:12 am">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>And one more problem needed to be overcome...  I received the following error when trying to build the Node.js CHIPtainer:</p>
+
+
+	<p><code>virtual memory exhausted: Cannot allocate memory</code></p>
+
+
+	<p>After some googling, I realized that the CHIP has 0 swap (just check out the results of running <code>free -m</code>).  So, then I found the <a href="https://bbs.nextthing.co/t/creat-swap-space/2052/14" class="external">following instructions</a> which fit very nicely with the work I had already done to set up a larger build environment on my CHIP Pro.</p>
+
+
+<pre>
+sudo dd if=/dev/zero of=/mnt/usb/swap.file bs=1M count=512
+sudo chmod 600 /mnt/usb/swap.file
+sudo mkswap /mnt/usb/swap.file
+sudo swapon /mnt/usb/swap.file
+</pre>
+
+	<p>The results of the build this time (after running for several hours - I really need to get a cross compile environment set up) were successful.  Next up, some testing.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1279">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1279.html#message-1279">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-05-29.html" title="05/29/2017 07:59 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, lots of news.  I only have time for the TL;DR tonight.</p>
+
+
+	<ul>
+	<li>Using the swap file allowed the build to complete</li>
+		<li>The new image did not include npm</li>
+		<li>During missing npm troubleshooting, discovered the build of alpine we are using has nodejs</li>
+		<li>Started testing the alpine node-js packages -> nodejs 7.2 can be installed with <code>apk add nodejs-current</code></li>
+		<li>Then started working on getting johnny-five to install
+	<ul>
+	<li>Eventual success (more details later)</li>
+		<li>Discovered that chip-io for node is not current for CHIP Pro (yay! another CHIP vs CHIP Pro issue)</li>
+		<li>Fixing chip-io for CHIP Pro is more work than I have time for right now (mostly because I don't know enough about the low level stuff)</li>
+	</ul></li>
+	</ul>
+
+
+	<p>The good news is the CHIPtainer stuff really does work, and if we mostly stay with apk packages and small builds, I think I can revert my changes to use the USB drive even on CHIP Pro.  The bad news is we are not at a place where for v0.4 we have to decide between using nodejs and the CHIP Pro.  If we go with nodejs we need to revert to CHIP.  If we use CHIP Pro, we are probably looking at Python 2.7 as that is the only supported version on Alpine apparently.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1288">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1263%3Fr=1288.html#message-1288">RE: Setting up CHIP environment easily and repeatedly</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 04:21 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have just completed the <a href="https://opendesignengine.net/boards/36/topics/1254?r=1287#message-1287" class="external">CHIP Pro/Python testing</a> and it was a huge success.  Not only that, but it was all conducted inside a CHIPtainer, meaning we have successfully demonstrated that CHIPtainers will work for us.  And with that, we can call "DEV-23: Test Nodejs then Johnny-Five in chiptainer enviroment to determine if we want to use chiptainer approach" done (with the caveat that we will be using Python instead of nodejs).</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-14/14)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1263.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

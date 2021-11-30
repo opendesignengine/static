@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Chat Log 08-05-13 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-570-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Chat Log 08-05-13</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-08-05.html" title="08/05/2013 09:25 pm">about 9 years</a> ago</span></p>
+<div class="wiki">
+<p>This chat log has to do with the challenge J put forth to redo Shepard's Processing app in Python in 10 days, and how the platform that's evolving might be turned into a platform to encompass many of Mach 30's data collection needs for the future.</p>
+
+
+	<p>Have you started the port yet Jeremy?<br />Chris - 12:32 PM</p>
+
+
+	<p>Yeah. I started on a loose MVC architecture and am working on the "model" now. It's not a true model, but it's close enough I think.<br />I've already got it auto-detecting the Rabbit, which was a little bit of a pain to get working reliably in Processing.<br />I'm also structuring the code so that it will be easy to switch to TCP for Shepard 2.0.<br />Jeremy - 12:57 PM</p>
+
+
+	<p>This week is shaping up to be busier than I expected though, so I'm not sure I'll have enough time to meet the challenge.<br />Jeremy - 1:04 PM</p>
+
+
+	<p>I was thinking that it might be handy to have the UI divorced from the M and C portions by a TCP connection. The controller would be the TCP server and the view would be the client. Anyone who connects to the controller from localhost would get the full-blow control interface, but anyone who connects from an external address would get a read-only interface. That way students could watch the test in real time if the teacher has the chops to set up the network.<br />Jeremy - 1:08 PM</p>
+
+
+	<p>Sounds good<br />Chris - 1:29 PM</p>
+
+
+	<p>Although, as I'm thinking about it, we could just simplify it to client/server and drop the controller.<br />Also, since we're now auto-detecting the Arduino, and if we're not going to handle ignition control in the software, there wouldn't have to be two interfaces.<br />Jeremy - 1:32 PM</p>
+
+
+	<p>That makes good sense, Jeremy.<br />Aaron - 1:54 PM</p>
+
+
+	<p>I could see value in having view-only capabilities, but I think for now it'd be best to leave that functionality out<br />Chris - 2:02 PM</p>
+
+
+	<p>With this architecture there's really nothing to control. Every client gets its own data, and that's what all the other controls are concerned with.<br />Jeremy - 2:07 PM</p>
+
+
+	<p>It also solves one problem I had with the web based interface which was how to get the data files to the clients.<br />Jeremy - 2:09 PM</p>
+
+
+	<p>Can this architecture work for things other than a ground station such as TVAC control etc?<br />Aaron - 2:20 PM</p>
+
+
+	<p>Hopefully I can have this server side done by tonight, but I don't know.<br />I think it could for the TVAC.<br />Jeremy - 2:21 PM</p>
+
+
+	<p>The reason I ask is that we need some sort of common command and control framework for future projects.<br />TVAC is just the tip of the iceberg...<br />Aaron - 2:22 PM</p>
+
+
+	<p>So we need to plan for view only to be future proof, right?<br />Jeremy - 2:23 PM</p>
+
+
+	<p>It should be extensible, and be able to do point to point, multipoint (broadcast) and multiple control in some circumstances.<br />Yep<br />Aaron - 2:24 PM</p>
+
+
+	<p>When would we use multicast?<br />Jeremy - 2:25 PM</p>
+
+
+	<p>Imagine a lab with all kinds of equipment, each with one of these controllers connected to a network.  The operators in the lab would need the ability to monitor and control multiple systems, and in some cases two or more may need to control a device or pull data from it.<br />Aaron - 2:27 PM</p>
+
+
+	<p>So, I agree it would be good to have it engineered as such, but I also would keep in mind that its hard to engineer something for the future with only one slightly related point of reference<br />Chris - 2:28 PM</p>
+
+
+	<p>...or a flight deck<br />Aaron - 2:28 PM</p>
+
+
+	<p>We should worry about the current Shepard first and foremost, and worry about making everything extensible and modular for future projects later<br />Chris - 2:29 PM</p>
+
+
+	<p>Agreed Chris.<br />Jeremy - 2:29 PM</p>
+
+
+	<p>This is after all a proof of concept that we can replace a bunch of the Processing bit<br />Chris - 2:29 PM</p>
+
+
+	<p>So we would have the sensors broadcasting and have the UI aggregate them?<br />Jeremy - 2:30 PM</p>
+
+
+	<p>Agreed...  but if we hit some decision points or low hanging fruit, we should steer those toward the future possibilities.<br />need to head out.<br />Aaron - 2:31 PM</p>
+
+
+	<p>Ok. I think that if we can get J Python Shepard software to QA we'll have some breathing room to hash out architecture. That would be the perfect time to tear down the proof of concept to talk about where to go next.<br />Jeremy - 2:33 PM</p>
+
+
+	<p>Mhmm<br />Chris - 2:33 PM</p>
+
+
+	<p>I'm a little disappointed that GTK doesn't have more mainstream support for data binding.<br />Jeremy - 2:51 PM</p>
+
+
+	<p>My understanding from other people is that Gtk is a bit archaic now a days as far as GUI API's go<br />Chris - 3:14 PM</p>
+
+
+	<p>Yeah, I could agree with that. Should we look at Qt?<br />Jeremy - 3:15 PM</p>
+
+
+	<p>I doubt it would be much better. Qt is older than Gtk+<br />Chris - 3:35 PM</p>
+
+
+	<p>But it's more actively maintained and used I think.<br />Jeremy - 3:37 PM</p>
+
+
+	<p>I can do some research in a little bit when I get home<br />Chris - 3:38 PM</p>
+
+
+	<p>Cool, thanks.<br />Jeremy - 3:40 PM</p>
+
+
+	<p><a class="external" href="http://www.wikivs.com/wiki/GTK_vs_Qt">http://www.wikivs.com/wiki/GTK_vs_Qt</a>  <br /><a class="external" href="http://stackoverflow.com/questions/2810808/gtk-vs-qt-language-bindings">http://stackoverflow.com/questions/2810808/gtk-vs-qt-language-bindings</a>  <br />From those two, and some others, I'm starting to lean towards Qt<br />Chris - 4:14 PM</p>
+
+
+	<p>Yeah. I have a personal bias towards GTK because it's what I'm used to, but it might be time to put that bias aside.<br />"More used to" I should say.<br />I don't like KDE, which is based on Qt, which adds to my bias.<br />Jeremy - 4:15 PM</p>
+
+
+	<p>There's a charting library for Qt that you have to pay for, and there's also this: <a class="external" href="http://qwt.sourceforge.net/">http://qwt.sourceforge.net/</a><br />Jeremy - 4:24 PM</p>
+
+
+	<p>I'm headed out for awhile. I may be back on this tonight, and I'm at least planning to get back to it in the morning.<br />Jeremy - 5:04 PM</p>
+</div>
+
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/570.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

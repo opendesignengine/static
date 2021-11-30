@@ -1,0 +1,41 @@
+back [[Technology_Evaluation]]
+
+h1. Structures and Mechanisms Card Storming
+
+h2. Unsorted list of ideas
+
+* DIGITAL FABRICATION OF COMPONENTS AND MECHANISMS
+* AN OPEN PLATFORM OF STANDARDS (Like LEGOS)
+* PAYLOAD MOUNT FOR ARDUINOS
+* UPGRADED ELECTRONICS PAYLOAD STRUCTURES - LIKE FOR FIN-FACING CAMERAS
+* FABRICATION IN MAKERSPACES WITH LOCAL TOOLS
+* EXPERIMENT WITH DIFFERENT MATERIALS AND MANUFACTURING TECHNIQUES
+* SOFTWARE TOOLS - CODECAD AND OPENSOURCECAD (CADQUERY)
+* COLLAPSIBLE AND EXPANDABLE MECHANISMS (“ORAGAMI ROCKET”)
+* THE “BLACK BOX” FOR MODEL ROCKET (CHEAP, DURABLE, RECOVERABLE, LIKE www.carbonorigins.com)
+* HARDWARE TOOLS AND JIGS
+* SCALABLE PARTS, AND THE ASSOCIATED STANDARDS FOR USING THEM
+* SOFTWARE - STRUCTURAL ANALYSIS TOOLS (LIKE FEA, NASTRAN, etc.)
+* (linked to propulsion as well) PROPULSION TEST STAND STRUCTURE
+* (stretching outside the box a bit) SCALE MODEL OF A SIMULATED LAUNCH COMPLEX.  FULL GROUND OPS SIMULATION
+* (linked in to aerodynamics as well) FIN DESIGN BASED ON J’S MASTERS THESIS (OPTIMIZING SUPERSONIC STRUCTURES TO PREVENT FLUTTER)
+* STRUCTURAL TESTING (DESTRUCTIVE OR OTHERWISE)
+* STRUCTURAL DESIGN BEST PRACTICES FOR MANUFACTURING, AND OPERATIONS, (AKA LIFECYCLE CONSIDERATION)
+* STRUCTURAL INTERACTIONS WITH THE GROUND SUPPORT EQUIPMENT
+* MATERIALS TESTING FORM AN ENVIRONMENTAL PERSPECTIVE (UV, THERMAL, (eventually) VACUUM
+* STRUCTURAL INCORPORATION OF A “MISSION OBJECTIVE” (like rube goldburg, or scientific experiment)
+* (linked to electrical/power)  HOW TO INCORPORATE POWER STORAGE INTO STRUCTURAL COMPONENTS
+* ADDRESSING REUSABILITY CONCERNS WITH RESPECT TO STRUCTURAL COMPONENTS
+* HIGH-RELIABILITY RECOVERY SYSTEM (MECHANISMS)
+* (building on Legos idea) Modular model rocket kit (1 kit, several rockets; maybe based around "NARTREK":http://www.nar.org/model-rocket-info/nartek-skills-program/ missions)
+* Structural Analysis software for both dynamic and static analysis
+* Launch Pad design/structures
+* Go extermely small size (Just how small can I get it?)
+> * sharing files, etc
+> * educational/entertainment
+> * very open source
+* Evaluation/research of tools and machines required to build rockets at scale we are looking at -> Toolset analysis
+* Make sure the materials research covers non-obvious choices (to us at least) like composites, etc
+* unconventional rockets, like rocket/jet-powered rotors
+* 
+* 

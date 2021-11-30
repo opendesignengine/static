@@ -1,0 +1,3 @@
+h1. Project Backgound
+
+After presenting an "Introduction to Open Source Hardware":http://www.daytondiode.org/2011/10/open-source-hardware-pub-science.html at the "Boonshoft Museum of Discovery":http://www.boonshoftmuseum.org/ October Pub Science event, "Dayton Diode":http://www.daytondiode.org/ was asked to help with a new exhibit at the museum.  Boonshoft needed an exhibit to play a prerecorded message when visitors pressed a button on the exhibit.  Given the recent presentation on the "Arduino":http://arduino.cc/ and "Open Source Hardware":http://www.openhardwaresummit.org/, everyone agreed to develop this project as an open source hardware project using an Arduino as the controller.

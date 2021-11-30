@@ -1,0 +1,1366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Walk Sensor Test Rig Development Log - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-901-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Walk Sensor Test Rig Development Log</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-08.html" title="10/08/2014 06:06 pm">about 8 years</a> ago</span></p>
+<div class="wiki">
+<p>As part of the development of v0.3 of the Holoseat, we want to improve the sensitivity of the "walk sensor(s)".  See <a href="829.html" class="message">Testing Hall Effect Sensors</a> for more details.</p>
+
+
+	<p>I am planning to build a sensor test rig to simplify the testing procedure and eliminate variation in test results. This thread will serve as a live "lab notebook" documenting the design and development of the test rig.  The actual test process (including selection of sensors and magnets to test) will be captured in <a href="829.html" class="message">Testing Hall Effect Sensors</a>.</p>
+
+
+	<p>Below is the block diagram for the test rig.  It will use a stand alone Arduino to control a rotation source (planning to use a re-purposed stepper motor as that source) to run a small wheel over a range of speeds and then plot the values calculated with the sensor/magnet under test to the driven speeds (in RPMs).  Note, a bike computer with cadence measurement (not shown) will be used to verify the stepper motor is driving the wheel to the correct speed.</p>
+
+
+	<p><a href="https://drive.google.com/file/d/0BzOPMhBGrtSXejVwWWpBeU1tdFU/view?usp=sharing"><img src="../../../attachments/download/537" alt="" /></a></p>
+</div>
+<div class="attachments">
+
+<p><a href="../../../attachments/537/sensor_test_rig_block_diagram.png" class="icon icon-attachment">sensor_test_rig_block_diagram.png</a>
+  <span class="size">(120.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (28)</h3>
+
+  <div class="message reply" id="message-902">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=902.html#message-902">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-08.html" title="10/08/2014 06:41 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Bill of Materials</p>
+
+
+	<table>
+		<tr>
+			<th>Part # </th>
+			<th style="text-align:left;">Description</th>
+			<th style="text-align:left;">Vendor (linked)</th>
+			<th style="text-align:right;">Unit Cost ($)</th>
+			<th style="text-align:right;">Qty</th>
+			<th style="text-align:right;">Total Cost ($)</th>
+		</tr>
+		<tr>
+			<td>TR 01    </td>
+			<td>Bike Computer w/Cadence   </td>
+			<td><a href="http://www.amazon.com/CatEye-Cadence-Bicycle-Computer-CC-RD200/dp/B000R6QR2C" class="external">Amazon</a></td>
+			<td style="text-align:right;">36.34</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">36.34</td>
+		</tr>
+		<tr>
+			<td>TR 02    </td>
+			<td>Arduino                   </td>
+			<td>re-purposed Duemilanove (owned)                                                      </td>
+			<td style="text-align:right;">0.00</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;"> 0.0</td>
+		</tr>
+		<tr>
+			<td>TR 03    </td>
+			<td>Stepper Motor             </td>
+			<td>re-purposed from Dayton Diode de-milled materials (owned)                            </td>
+			<td style="text-align:right;">0.00</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;"> 0.0</td>
+		</tr>
+		<tr>
+			<td>TR 04    </td>
+			<td>Frame                     </td>
+			<td>re-purposed pine 2x2s and 2x4s, wood screws, and sheet metal found at Dayton Diode   </td>
+			<td style="text-align:right;">0.00</td>
+			<td style="text-align:right;"> ?</td>
+			<td style="text-align:right;"> 0.0</td>
+		</tr>
+		<tr>
+			<td>TR 05    </td>
+			<td>Spinning Plate (aka Wheel)</td>
+			<td>re-purposed pine plywood found at Dayton Diode                                       </td>
+			<td style="text-align:right;">0.00</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;"> 0.0</td>
+		</tr>
+		<tr>
+			<td>TR 06    </td>
+			<td>Metal Plate (part of set) </td>
+			<td><a href="http://www.amazon.com/Standard-Shutter-Magnet-Catch-SHIPPING/dp/B00JBKFG1S/" class="external">Amazon</a> </td>
+			<td style="text-align:right;">5.77</td>
+			<td style="text-align:right;"> 2</td>
+			<td style="text-align:right;">11.54</td>
+		</tr>
+		<tr>
+			<td>TR 07    </td>
+			<td>Helping Hands             </td>
+			<td><a href="http://www.amazon.com/SE-MZ101B-Helping-Hands-Magnifying/dp/B000RB38X8/" class="external">Amazon</a>     </td>
+			<td style="text-align:right;">6.29</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">6.29</td>
+		</tr>
+		<tr>
+			<td>--       </td>
+			<td>Misc Hardware             </td>
+			<td>--                                                                                   </td>
+			<td style="text-align:right;">15.00</td>
+			<td style="text-align:right;"> 1</td>
+			<td style="text-align:right;">15.00</td>
+		</tr>
+		<tr>
+			<td><strong>Total</strong>  </td>
+			<td>                          </td>
+			<td>                                                                                     </td>
+			<td style="text-align:right;">    </td>
+			<td style="text-align:right;">  </td>
+			<td style="text-align:right;"><strong>69.17</strong></td>
+		</tr>
+	</table></div>
+  
+  </div>
+
+  <div class="message reply" id="message-903">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=903.html#message-903">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-08.html" title="10/08/2014 06:43 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Some design notes...</p>
+
+
+	<ul>
+	<li>Need to test stepper motors before purchasing hardware
+	<ul>
+	<li><del>Need to de-mil v0.1 holoseat for Arduino</del></li>
+		<li>Need to test stepper motor library with Arduino</li>
+	</ul>
+	</li>
+		<li><del>Need to confirm Dayton Diode free parts supplies have all of the found items not already acquired</del></li>
+		<li>Need to test plotting tools</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-915">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=915.html#message-915">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-25.html" title="10/25/2014 06:12 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><a name="Testing-Stepper-Motors-with-Arduino"></a>
+<h2 >Testing Stepper Motors with Arduino<a href="901%3Fr=1144.html#Testing-Stepper-Motors-with-Arduino" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>I found two stepper motors at Dayton Diode.</p>
+
+
+	<p>1. A four-wire stepper motor with SHP_35D1020 and 14970G. stamped on the side.<br /><a href="https://www.flickr.com/photos/jedibfa/15006186994/in/set-72157648971298195"><img src="https://farm4.staticflickr.com/3934/15006186994_2dc1bb76f2.jpg" alt="" /></a></p>
+
+
+	<p>2. A five-wire stepper motor, labeled by hand as "48 steps".  The wiring is broken in several places and will need to be resoldered if it is going to be used.<br /><a href="https://www.flickr.com/photos/jedibfa/15006228014/in/set-72157648971298195"><img src="https://farm6.staticflickr.com/5613/15006228014_3d45558a59.jpg" alt="" /></a> ><a href="https://www.flickr.com/photos/jedibfa/15440419639/in/set-72157648971298195"><img src="https://farm4.staticflickr.com/3950/15440419639_1c99664353.jpg" alt="" /></a></p>
+
+
+	<p>After getting the motors photographed and documented, I googled for more detailed instructions on how to setup stepper motors with an Arduino.  I found the following resources:</p>
+
+
+	<ul>
+	<li><a href="https://learn.adafruit.com/adafruit-arduino-lesson-16-stepper-motors/overview" class="external">Adafruit Arduino Lesson 16: Stepper Motors</a></li>
+		<li><a href="https://www.sparkfun.com/tutorials/400" class="external">Sparkfun Stepper Motor Quickstart Guide</a></li>
+	</ul>
+
+
+	<p>Somehow I missed the fact that I need a motor contoller in order to drive the stepper motor.  I really cannot believe I missed this.  I was clearly too focused on finding a library that would let me run the motor at a continuous fixed speed that I missed the whole need for a motor controller (it is doubly embarrassing because I would not have forgotten if I was thinking about working with servos like on RC airplanes).  Doh!</p>
+
+
+	<p>The complete kit of components (less the Arduino and the bread board which I already have) are about $15.  I think I will order those parts from Adafruit this weekend and work through their tutorial first, then consider repurposing the Dayton Diode stepper motors if the Adafruit one is not sufficient for my testing.</p>
+
+
+	<p>Live and learn...</p>
+
+
+<hr />
+
+
+	<p>While I was working on things, I de-milled the Holoseat v0.1 Arduino and uploaded <a href="http://arduino.cc/en/tutorial/blink" class="external">Blink</a> to it to confirm it was still in working order.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-916">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=916.html#message-916">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-25.html" title="10/25/2014 08:10 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><a name="Testing-plotting-tools"></a>
+<h2 >Testing plotting tools<a href="901%3Fr=1144.html#Testing-plotting-tools" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>So, there are lots of build it yourself plotting tools for Arduino, but very little in the way of plug-n-play.  And, since this is not the kind of project where I want to build generic software tools, I am really looking for something plug-n-plan.  The only thing I found was <a href="http://www.negtronics.com/simplot" class="external">Simplot</a>.  The good news is I think it will work.  I was able to use the sample code from <a href="http://forum.arduino.cc/index.php/topic,58911.0.html" class="external">this forum post</a> to send plotting data in real time to Simplot.  And its controls are very straight forward.  Take a look at the screenshot below to see how I adjusted it to zoom in on the region of the plot I cared about.</p>
+
+
+	<p><img src="../../../attachments/download/538" alt="" /></p>
+
+
+	<p>The settings for this screenshot are:</p>
+
+
+	<ul>
+	<li>Number of data points = 200</li>
+		<li>Y Axis
+	<ul>
+	<li>Minimum Value = -200</li>
+		<li>Maximum Value = 200</li>
+	</ul>
+	</li>
+		<li>Channels
+	<ul>
+	<li>Channel 1
+	<ul>
+	<li>Enabled = checked</li>
+		<li>Legend = Commanded</li>
+	</ul>
+	</li>
+		<li>Channel 2
+	<ul>
+	<li>Enabled = unchecked</li>
+		<li>Legend = Channel 2</li>
+	</ul>
+	</li>
+		<li>Channel 3
+	<ul>
+	<li>Enabled = checked</li>
+		<li>Legend = Detected</li>
+	</ul>
+	</li>
+		<li>Channel 4
+	<ul>
+	<li>Enabled = unchecked</li>
+		<li>Legend = Channel 4</li>
+	</ul></li>
+	</ul></li>
+	</ul>
+
+
+	<p>The only shortcoming of Simplot for my needs is no ability to save the values for use in other plotting tools so I can make permanent records of test results.  So, I modified the sample source code to include a boolean switch to control whether the plot function sends Simplot or csv values.  My thinking is that I will use Simplot to display real time visualization during development and the built in Serial Monitor to capture csv values during verification testing (copying and pasting them into a spreadsheet for plotting).</p>
+
+
+	<p>My next objective is to include a mock test in the sample code on the Arduino and run it in both modes (real time and not) making sure to produce a plot from the csv data.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/538/simplot_demo.png" class="icon icon-attachment">simplot_demo.png</a>
+  <span class="size">(83.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-917">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=917.html#message-917">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-10-25.html" title="10/25/2014 09:13 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><a name="Tesing-Plotting-Tools-Continued"></a>
+<h2 >Tesing Plotting Tools Continued<a href="901%3Fr=1144.html#Tesing-Plotting-Tools-Continued" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Check it out.  Here is a little demo that "commands" a test to run over the course of 30 seconds.  The first image is a screen capture of the live recording from Simplot.  Having the ability to see responses to test changes in real time was quite helpful when deciding how the test should work and if it was working.</p>
+
+
+	<p><img src="../../../attachments/download/539" alt="" /></p>
+
+
+	<p>The second image is a chart created in OpenOffice from the csv export of the test data after having re-run the test with the real time flag set to false.</p>
+
+
+	<p><img src="../../../attachments/download/540" alt="" /></p>
+
+
+	<p>Overall, I am quite happy with how the plotting tests turned out (though I clearly need to spend some time with the OpenOffice charts.  At some point I learned enough to be able to get Excel to make the kind of plots I want, and that skill clearly did not directly translate to OpenOffice.</p>
+
+
+	<p>Note, I will commit my sample code after I make sure we have a proper tag for version 0.2 in the svn repo.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/539/simplot_demo2.png" class="icon icon-attachment">simplot_demo2.png</a>
+  <span class="size">(108.9 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/540/csv_demo2.png" class="icon icon-attachment">csv_demo2.png</a>
+  <span class="size">(17.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-918">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=918.html#message-918">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-11-01.html" title="11/01/2014 10:34 pm">almost 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>When last we left off, I had inadvertently forgotten to include a motor controller for the test rig's stepper motor in my research notes.  After pulling up a couple of tutorials, I elected to order the necessary parts for the <a href="https://learn.adafruit.com/adafruit-arduino-lesson-16-stepper-motors/overview" class="external">Adafruit tutorial</a>.  Those parts came in this week, so tonight I am going to walk through that tutorial and, time permitting, try out the <a href="http://www.airspayce.com/mikem/arduino/AccelStepper/ConstantSpeed_8pde-example.html" class="external">stepper motor library which supports open loop control</a> (necessary for running at constant desired speed).</p>
+
+
+	<p>Here's what I got in the box:</p>
+
+
+	<p><a href="https://www.flickr.com/photos/jedibfa/15067834463/"><img src="https://farm4.staticflickr.com/3953/15067834463_1d7ac4b461.jpg" alt="" /></a></p>
+
+
+	<ul>
+	<li>x2 Controller Chips (in case I fry one)</li>
+		<li>Jumper wires</li>
+		<li>Stepper motor</li>
+	</ul>
+
+
+	<p>First step is to add the parts I already have to the parts I ordered and get <a href="https://learn.adafruit.com/adafruit-arduino-lesson-16-stepper-motors/parts" class="external">everything ready for the tutorial</a>.</p>
+
+
+	<p><a href="https://www.flickr.com/photos/jedibfa/15502071737/"><img src="https://farm4.staticflickr.com/3938/15502071737_03ae47703d.jpg" alt="" /></a></p>
+
+
+	<p>Next step is the <a href="https://learn.adafruit.com/adafruit-arduino-lesson-16-stepper-motors/breadboard-layout" class="external">breadboard layout</a>.</p>
+
+
+	<p><a href="https://www.flickr.com/photos/jedibfa/15687376325/"><img src="https://farm6.staticflickr.com/5611/15687376325_42698a84d6.jpg" alt="" /></a></p>
+
+
+	<p>Now it is time to upload the <a href="https://learn.adafruit.com/adafruit-arduino-lesson-16-stepper-motors/arduino-code" class="external">demo source code</a> and try it out.  I also took this opportunity to update to the latest Arduino IDE (1.0.6).</p>
+
+
+	<p>Unfortunately, the first time I tried to run the demo code the stepper motor did not respond...  Ha ha ha, scratch that, it did work, I just sent a very tiny increment (10 steps) and missed it moving.  When I upped the number of steps to 512 (one complete revolution of this motor) it worked beautifully.</p>
+
+
+	<p>Which means it is time to test the open loop controller.  The <a href="http://www.airspayce.com/mikem/arduino/AccelStepper/ConstantSpeed_8pde-example.html" class="external">basic example code</a> uses the setMaxSpeed() and setSpeed() methods.  These take a single floating point number, the speed in steps/sec (that is stepper motor steps, not holoseat walking steps).  For this stepper motor, 1 revolution = 512 steps.  Therefore, to set the speed in RPM (or in holoseat walking steps) we need to use the following conversion example:</p>
+
+
+	<table>
+		<tr>
+			<td> 25 rev </td>
+			<td> 512 steps </td>
+			<td> 1 min </td>
+			<td> 213.33 steps </td>
+		</tr>
+		<tr>
+			<td> 1 min  </td>
+			<td> 1 rev     </td>
+			<td> 60 sec</td>
+			<td> 1 sec        </td>
+		</tr>
+	</table>
+
+
+
+
+	<p>Giving a conversion factor of 8.533 steps/s / rpm.  With a max speed of ~ 1000 steps/sec (according to the AccelStepper documentation), this gives a max simulated walking rate of 117 RPM.  Considering the current default trigger walking rate is 75 rpm, this should be sufficient for our current testing.</p>
+
+
+	<p>So, I ran some initial tests with modified source code from the AccelStepper documentation to merge it with the Adafruit example so I could send a value from the Serial Monitor and have the Arduino adjust the speed.  The good news is in general it worked.  The bad news is speeds much above 50 RPM didn't work.  So, I modified the code again to replicate the Adafruit example (using the move method, note you also have to call run each pass through the loop and it looks like it works better if you call moveTo(0) in the setup) so I could confirm what the step size was according to calls to the AccelStepper library.  By running to various increments of 512 (512, 256, 128, etc) I confirmed the step size as seen by the AccelStepper library is 512 steps / revolution (so, I did not miss some configuration).</p>
+
+
+	<p>Going back to the run at constant speed test, some quick runs at 30 RPM with a timer confirm it needed 2 seconds to complete a revolution.  15 RPM yielded 4 sec to complete a revolution.  So, it looks like there is just some limit (maybe in the processing power of this old arduino?) that prevents us from reaching much past 50 RPM (some quick testing says 54 RPM is the current limit).  I will ponder these results and decide on the next step.  This is probably enough speed for now.  So I will plan to build a little frame and a disc or arm to mount to the stepper motor and then record some videos to show off the motor in operation (the movement is really too small to see in a video without the additional hardware).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1127">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1127.html#message-1127">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-02-19.html" title="02/19/2016 09:08 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have finally gotten back to working on the test rig (as part of PBI HW-08 in the first sprint of 2016) and I am happy to report significant progress.  This week has seen the completion of the basic test rig (meaning we can claim done for HW-08) as shown in the image below.</p>
+
+
+	<p><a href="https://www.flickr.com/photos/jedibfa/24843493450/in/dateposted-public/"><img src="https://c2.staticflickr.com/2/1623/24843493450_4cdfb27ea0.jpg" alt="" /></a></p>
+
+
+	<p>The frame is just a quick assembly of 1x3 boards.  Two 12 in long boards sit on top of two 6 in long boards, leaving enough of a gap to mount the stepper motor between the 12 in boards.  The boards are attached to one another with 2-1/2 in <a href="../../../issues/8.html" class="issue status-3 priority-2 closed" title="Add support for enhanced document management (Resolved)">#8</a> screws (one at each corner, pilot holes drilled first) and the motor is attached to one end of the frame by screwing into the 12 in boards with 1 in <a href="../../../issues/6.html" class="issue status-5 priority-2 closed" title="Add wiki external format plugin as basis for wiki enhancements (Closed)">#6</a> screws (pilot holes drilled first).</p>
+
+
+	<p>Two 3D printed parts are used to form the rotating plate (now called the rotating arm).  These parts are modeled in CadQuery (python source is in SVN repo, STL files are in <a href="https://opendesignengine.net/dmsf/holoseat?folder_id=66" class="external">DMSF</a>).  The base plate is placed on the stepper motor post first.  Metal plates (from TR 06) are friction fit onto the posts of the rotating arm and then the rotating arm is placed on the stepper motor post.</p>
+
+
+	<p>The Arduino and the motor driver assembly (built on the bread board per AdaFruit tutorial referenced above) are just placed on the opposite end of the frame to keep them out of the way of the rotating arm.  The helping hands (TR 01) completes the basic test rig configuration.</p>
+
+
+	<p>In the picture, the bike computer (TR 01) and its cadence sensor are placed in the helping hands to conduct verification testing (a demo video will be posted shortly).  The verification tests were successful and also indicated there is a definitive upper limit to how fast the stepper motor (at least as currently configured) can move the rotating arm.  With a single magnet on the rotating arm the stepper motor can run up to slightly more than 30 rpm.  To expand the rpm range a second magnet was placed on the rotating arm (on the opposite side).  In this configuration the maximum rpm as specified in the controller software was approximately 27 rpm (giving a cadence of 54 RPM).</p>
+
+
+	<p>The verification tests ran over a range of specified RPMs (15, 20, 25, 27) with anticipated cadences of (30, 40, 50, 54). These tests were repeated several times each and in all tests, the measured cadence was +/- 1 RPM of the anticipated values.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1128">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1128.html#message-1128">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-02-19.html" title="02/19/2016 09:33 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p><strong>Test Rig Verification Demo Video</strong></p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/H-ooOlXsNvE?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/H-ooOlXsNvE?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1129">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1129.html#message-1129">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-02-19.html" title="02/19/2016 09:47 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>A few thoughts on what comes next.</p>
+
+
+	<ul>
+	<li>Earlier testing demonstrated capturing and displaying test results is complicated with the Arduino alone</li>
+		<li>I have been learning and researching NodeBots and I like what I see (event based, web UI is baked in through Node.js, runs on a wide variety of platforms)</li>
+		<li>Would like to make the test rig independent of my laptop</li>
+		<li>Proposed test rig update - Run the test rig from a Raspberry Pi 2 Model B, connected to the Arduino
+	<ul>
+	<li>RPi hosts NodeBots and provides test management and UI</li>
+		<li>Arduino provides stepper motor control, accessed over serial line from RPi NodeBots code</li>
+		<li>May revisit the Arduino code to see if we can get smooth transitions between speed settings </li>
+	</ul>
+	</li>
+		<li>Note, this will also allow us to test drive the concept of using something like a Pi Zero for the main board in the next revision of the holoseat</li>
+	</ul>
+
+
+	<p>AdaFruit has an <a href="https://www.adafruit.com/product/2380" class="external">RPi 2 B starter kit</a> for $100.  It comes with</p>
+
+
+	<ul>
+	<li>RPi 2 B - need</li>
+		<li>RPi 2 B case - nice to have</li>
+		<li>Break out board for RPi - need</li>
+		<li>Breadboard - nice to have</li>
+		<li>M-M jumper wires - have</li>
+		<li>USB to serial cable - nice to have (very)</li>
+		<li>USB Wifi Module - need</li>
+		<li>4 GB SD Card - need</li>
+		<li>5V 2A power supply - need (might have something around that would work, but very nice to have the right thing)</li>
+		<li>Random parts - have some, but still nice</li>
+	</ul>
+
+
+	<p>I am not sure there is much (or any) cost savings, but the 1 button ordering makes this a win I think.  Will order for the next sprint so we can be ready to finalize the test rig and actually run the tests.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1139">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1139.html#message-1139">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-03-14.html" title="03/14/2016 04:39 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Have been unable to order the AdaFruit kit.  Found a <a href="https://www.sparkfun.com/products/13673" class="external">comparable SparkFun kit</a>.  A detailed review shows it has all the critical parts.  And it is on sale for Pi Day.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1141">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1141.html#message-1141">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-03-15.html" title="03/15/2016 10:50 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Alternate RPi kit ordered, so now it is time to finalize the experiment design so we know what to do when we get the last few bits of hardware.  The experiment design should be driven by our design goals, so let's review those first.</p>
+
+
+	<p><strong>Design goals</strong></p>
+
+
+	<ol>
+	<li>Select new sensor/magnet pairing, such that we have a reliable signal over range of distances and "walking" speed (RPM)</li>
+		<li>Determine max range for air gap distance to establish other design parameters</li>
+	</ol>
+
+
+	<p>Note, early on, I also had in my scratch notes a requirement to determine what design variables had the most influence on our objectives, but I realized that is silly, because there are only two design variables (magnet selection and sensor selection) in this experiment so there is no reason to reduce the design space like this.</p>
+
+
+	<p>With these design goals in mind, here is an experiment goal with some more detail:</p>
+
+
+<blockquote>
+
+	<p>"Determine sensor/magnet pairing with least error in rpm (tightest grouping at the selected rpm) for range of distance (low, high) and range of rpms (low, high)".</p>
+
+
+</blockquote>
+
+	<p>This experiment definition does the following:</p>
+
+
+	<ul>
+	<li>Defines the objective - minimize the error in the rpm calculation</li>
+		<li>Defines the operating conditions
+	<ul>
+	<li>Distance range - for a to be determined low and high value</li>
+		<li>RPM range - for a to be determined low and high value</li>
+	</ul></li>
+	</ul>
+
+
+	<p>I want to approach this experiment in phases, partly to familiarize myself with the tools (nodebots) and materials (hall effect sensors), but also to establish reasonable values for the low and high distance and RPM.  Here are my proposed phases.</p>
+
+
+	<p><strong>Phases</strong></p>
+
+
+	<ol>
+	<li>Characterization - parametric studies to observe general behavior (plotting signal vs time for each test) of the system vs:
+	<ol>
+	<li>Sensors - use mid-strength magnet, run test twice</li>
+		<li>Magnets - determine sensor from study 1.1, run test twice</li>
+		<li>Distances - sweep from default out doubling step size until signal is unreliable (select sensor and magnet based on study 1.1 and 1.3 - use smallest magnet and widest on signal sensor to ensure all test cases provide data; this establishes first cut at max range for air gap distance) run test until signal becomes unreliable</li>
+	</ol>
+	</li>
+		<li>DOE prep
+	<ol>
+	<li>Use results from phase 1 to determine final list of sensors and magnets</li>
+		<li>Build DOE table
+	<ol>
+	<li>Sensors - should any of the sensors from Phase 1 be dropped?</li>
+		<li>Magnets - should any of the magnets from Phase 1 be dropped?</li>
+		<li>Replicates - determine how many times to repeat each test case to account for experimental error</li>
+	</ol>
+	</li>
+		<li>Select RPMs and distances</li>
+	</ol>
+	</li>
+		<li>Run DOE (4 times, once for LL, LH, HL, and HH of RPMs and distance)</li>
+		<li>Write report
+	<ol>
+	<li>For each RPM, plot RPM vs sensor/magnet pairing (all replicates and all distances) with horizontal line at the specified RPM</li>
+		<li>Calculate error for each data set (X ordinate) in item 4.4, truth is specified rpm and report in a table</li>
+		<li>Based on 4.1 and 4.2 recommend sensor/magnet pairing (looking for tightest grouping nearest to truth value, should be lowest error value)</li>
+	</ol>
+	</li>
+		<li>Re-run 1.3 for results of 4.3 at low and high rpm, calculating error value; end test when error is 1.5 times error reported 4.2</li>
+		<li>Update report with results of phase 5.0</li>
+	</ol>
+
+
+	<p><strong>Needs for the experiments</strong></p>
+
+
+	<ul>
+	<li>Characterization program - runs test case, sampling sensor every &lt;insert time step&gt;, collecting sensor value and time since test began; plot results after test is complete
+	<ul>
+	<li>Test input = test definition (sensor, magnet, distance, rpm)</li>
+		<li>Test output = plot</li>
+	</ul>
+	</li>
+		<li>DOE program - runs DOE test case, computing RPM on each event of the sensor, recording it
+	<ul>
+	<li>Needs to compute RPM using similar algorithm from Holoseat</li>
+		<li>Test input = test definition (sensor, magnet, distance, rpm)</li>
+		<li>Test output = table of RPMs, average, error value, plots (as required)</li>
+	</ul></li>
+	</ul>
+
+
+	<p>Next step is to complete a couple of more tutorials for nodebots in prep for the hardware arrival.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1143">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1143.html#message-1143">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-03-22.html" title="03/22/2016 11:43 am">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>I am planning on running through a couple of tutorials on NodeBots and Node.js before coding up the experiment programs. Here are ones I am considering.</p>
+
+
+	<ul>
+	<li><a class="external" href="https://www.dunebook.com/create-real-time-server-monitoring-app-with-angularjs-and-nodejs/">https://www.dunebook.com/create-real-time-server-monitoring-app-with-angularjs-and-nodejs/</a> - has a nice set of demo plots</li>
+		<li>Node School tutorials (link coming)</li>
+		<li>???</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1144">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1144.html#message-1144">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-03-25.html" title="03/25/2016 10:45 am">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, it turns out I somehow managed to miss hitting the "Place Order" button on the alt RPi kit (wondered where it was...).  Doh!  In better news, the AdaFruit kit is back in stock, so I just actually ordered that one.  ;)</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1147">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1147.html#message-1147">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-04-03.html" title="04/03/2016 08:57 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>While working on the node school tutorials, I hit one snag (a javascript'ism that I was not very familiar with).  I went looking for solutions to the problem and came across a couple of github repos with people's solutions.  Here is one I liked in particular.</p>
+
+
+	<p><a class="external" href="https://github.com/randallagordon/nodeschool-learnyounode">https://github.com/randallagordon/nodeschool-learnyounode</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1148">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1148.html#message-1148">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-04-03.html" title="04/03/2016 09:00 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here are a couple of other useful links I have been referencing during this work.</p>
+
+
+	<ul>
+	<li><a href="http://nodeschool.io/#workshoppers" class="external">Node School Workshops</a></li>
+		<li><a href="https://github.com/maxogden/art-of-node" class="external">Art of Node</a></li>
+		<li><a href="https://www.atlassian.com/git/tutorials/what-is-version-control/" class="external">What is Version Contorl</a> - nice review of some Git specific concepts that helped fill in some of the material in Node School</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1165">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1165.html#message-1165">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-01.html" title="05/01/2016 12:41 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have completed what I feel is a sufficient number of nodeschool tutorials for now.  Specifically, I have completed:</p>
+
+
+	<ul>
+	<li>javascripting</li>
+		<li>git-it</li>
+		<li>learnyounode</li>
+	</ul>
+
+
+	<p>I am going to move on to <a class="external" href="https://www.dunebook.com/create-real-time-server-monitoring-app-with-angularjs-and-nodejs/">https://www.dunebook.com/create-real-time-server-monitoring-app-with-angularjs-and-nodejs/</a> with the hope that I can morph this demo into what we need for the test harness.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1173">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1173.html#message-1173">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-16.html" title="05/16/2016 10:13 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><a name="Setting-up-the-Raspberry-Pi-to-Run-Nodejs"></a>
+<h2 >Setting up the Raspberry Pi to Run Node.js<a href="901%3Fr=1144.html#Setting-up-the-Raspberry-Pi-to-Run-Nodejs" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Background"></a>
+<h3 >Background<a href="901%3Fr=1144.html#Background" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Recall that the test rig will be managed by programs running on a Raspberry Pi 2 Model B.  We ordered the RPi as part of a <a href="https://www.adafruit.com/product/2380" class="external">kit</a> from AdaFruit.  The kit inclueded an assembled <a href="https://www.adafruit.com/products/2029" class="external">Pi Cobbler Plus</a> which moves the RPi's pins to a breadboard.  This will make setting up the connections to the sensors under test much easier.</p>
+
+
+	<a name="Physical-Setup"></a>
+<h3 >Physical Setup<a href="901%3Fr=1144.html#Physical-Setup" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>After getting the RPi, I placed it in the included case and connected the following cables:</p>
+
+
+	<ul>
+	<li>Power to the micro-USB</li>
+		<li>USB keyboard and mouse to USB ports</li>
+		<li>Monitor to the HDMI port</li>
+		<li>Cobbler ribbon cable to the ribbon and the RPi GPIO pins (note the pin 1 position is on the far side from the USB ports, see below)
+	<table>
+		<tr>
+			<td><a class="external" href="https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/images/gpio-numbers-pi2.png">https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/images/gpio-numbers-pi2.png</a></td>
+		</tr>
+	</table></li>
+	</ul>
+
+
+	<a name="OS-Setup"></a>
+<h3 >OS Setup<a href="901%3Fr=1144.html#OS-Setup" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Based on these <a href="http://www.makeuseof.com/tag/7-linux-distros-can-run-raspberry-pi-2/" class="external">reviews</a> I elected to install <a href="https://ubuntu-mate.org/raspberry-pi/" class="external">Ubuntu Mate</a> 16.04 LTS on the RPi using the following steps.  Note, I decided to give <a href="https://github.com/thefanclub/dd-utility" class="external">dd Utility</a> a try as my image copying tool.</p>
+
+
+	<ol>
+	<li>Download the <a href="https://ubuntu-mate.org/download/" class="external">RPi image</a></li>
+		<li>Verify the RPi image
+	<ol>
+	<li>Verify file size</li>
+		<li><a href="http://ubuntu-mate.org/how-to-verify-downloads/" class="external">Verify the SHA256 Checksum</a></li>
+	</ol>
+	</li>
+		<li>Insert an 8GB or larger class 6 or 10 microSDHC card from the kit into the provided adapter and insert the adapter into the SD card slot on my computer</li>
+		<li>Run dd utility and Restore the downloaded image to the SD card (note, I had to unzip the .xz file first using the gunzip utility on the command line, no aditional arguments required)</li>
+		<li>Safely remove the microSDHC card from the computer and adapter then install in the Pi and boot the Pi</li>
+		<li>Walk through the first boot setup wizard</li>
+		<li>Expand the partition (if needed)
+	<ol>
+	<li>Click the large Raspberry Pi Information button on the Welcome screen</li>
+		<li>Click the Resize button </li>
+		<li>Restart the Raspberry Pi</li>
+	</ol>
+	</li>
+		<li>Set a static IP address through the UI (System>Preferences>Internet and Network>Network Connections)</li>
+		<li>Update apt-get sudo apt-get update</li>
+		<li>Install ssh server sudo apt-get install openssh-server</li>
+	</ol>
+
+
+	<a name="Install-Nodejs"></a>
+<h3 >Install Node.js<a href="901%3Fr=1144.html#Install-Nodejs" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Based on <a href="https://m.reddit.com/r/raspberry_pi/comments/48wbf1/guide_installing_nodejs_on_the_raspberry_pi/" class="external">this reddit post</a> it is possible to install Node on an RPi 2 using the <a href="https://nodejs.org/en/download/package-manager/" class="external">official instructions</a>.</p>
+
+
+	<ol>
+	<li>Run curl -sL <a class="external" href="https://deb.nodesource.com/setup_6.x">https://deb.nodesource.com/setup_6.x</a> | sudo -E bash -</li>
+		<li>Run sudo apt-get install -y nodejs</li>
+	</ol>
+
+
+	<p>Note, the build tools (sudo apt-get install -y build-essential) were already installed.</p>
+
+
+	<p>Per <a href="https://devcenter.heroku.com/articles/node-best-practices" class="external">Best Practices for Node.js Development</a>, I ran the following commands.</p>
+
+
+	<ul>
+	<li>npm config set save=true</li>
+		<li>npm config set save-exact=true</li>
+	</ul>
+
+
+	<p>Ran the <a href="http://expressjs.com/en/starter/hello-world.html" class="external">Express Hello World Example</a> to test the install and everything performed correctly.  Next up is getting NodeBots running and setting up a blinking LED.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1174">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1174.html#message-1174">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-17.html" title="05/17/2016 07:30 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>With the RPi set up to run Node.js, it is ready to install the required libraries to turn it into a <a href="http://nodebots.io/" class="external">NodeBots</a>.  This basically means using <a href="https://github.com/rwldrn/johnny-five" class="external">johnny-five</a> in your Node.js app.  For this project, I want to directly read values from the RPi's GPIO pins, so it also means using <a href="https://github.com/nebrius/raspi-io" class="external">raspi-io</a> in my Node.js apps.  So, I created a new Node.js app and installed johnny-five and raspi-io using the following commands (based on the <a href="https://github.com/nebrius/raspi-io/wiki/Getting-a-Raspberry-Pi-ready-for-NodeBots" class="external">raspi-io wiki</a>).</p>
+
+
+	<ol>
+	<li><code>cd ~/Documents</code></li>
+		<li><code>mkdir node-test</code></li>
+		<li><code>cd node-test</code></li>
+		<li><code>npm init --yes</code></li>
+		<li>edit package.json to include<br /><pre>
+"engines": {
+  "node": "6.1.0" 
+}
+</pre></li>
+		<li><code>npm install johnny-five</code> - Note, this command listed errors that it recovered from by compiling a required library from source</li>
+		<li><code>npm install raspi-io</code> - Note, this command listed errors that it recovered from by compiling a required library from source</li>
+		<li>Rebooted the computer, per instructions from the previous command</li>
+	</ol>
+
+
+	<p>I then tested everything by running the demo program on the raspi-io wiki (shown below):</p>
+
+
+<pre>
+var raspi = require('raspi-io');
+var five = require('johnny-five');
+var board = new five.Board({
+  io: new raspi()
+});
+
+board.on('ready', function() {
+  // Create an Led on pin 7 on P1 (GPIO4)
+  // and strobe it on/off
+  var led = new five.Led();
+  led.strobe(500);
+});
+</pre>
+
+	<p>To do this, I used the following steps:</p>
+
+
+	<ol>
+	<li>Create index.js in my node-test app directory</li>
+		<li>Copy and paste the source code above into index.js and save the file</li>
+		<li>Run the command <code>sudo node index.js</code></li>
+	</ol>
+
+
+	<p>When I ran this, I got several screens of warning messages followed by:</p>
+
+
+<pre>
+1463531222794 Device(s) RaspberryPi-IO  
+1463531222874 Connected RaspberryPi-IO  
+1463531222901 Repl Initialized  
+&gt;&gt; 
+</pre>
+
+	<p>Once the <code>Repl Initialized</code> displayed, the Activity LED on the RPi board (a yellow LED next to the red Power LED) started to blink with a half second refresh rate.  The LED stopped blinking when I quit the app by pressing Ctrl+C twice.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1175">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1175.html#message-1175">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-17.html" title="05/17/2016 08:56 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>The next test I want to run is to repeat the blinking LED, but on the breadboard so I can check out the <a href="https://www.adafruit.com/product/2029" class="external">Cobbler</a>.  Here is an up close image of the Cobbler connected to some buttons.</p>
+
+
+	<p><a href="https://learn.adafruit.com/assets/24487"><img src="https://cdn-learn.adafruit.com/assets/assets/000/024/487/small360/raspberry_pi_pi_jukebox_buttons_bb.png?1429117506" alt="" /></a></p>
+
+
+	<p>As you can see, the Cobbler just brings the <a href="https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/" class="external">Raspberry Pi pins</a> out to the breadboard.  So, all that should be needed is to wire up Pin 7 to an LED like this:</p>
+
+
+	<p><a href="http://www.thirdeyevis.com/pi-page-2.php"><img src="http://www.thirdeyevis.com/images/GPIO-led-schematic.png" alt="" /></a></p>
+
+
+	<p>One final note, here is a <a href="https://github.com/nebrius/raspi-io/wiki/Pin-Information" class="external">wiki page</a> from raspi-io covering how to address the RPi pins from Node.js.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1176">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1176.html#message-1176">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-17.html" title="05/17/2016 09:19 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>And it works (with one minor correction).  The line which declares the LED (<code>var led = new five.Led();</code>) needed to be modified.  It turns out the default constructor points to the ACT LED, which is not addressed the same as Pin 7.  So, I changed the line to point to Pin 7 (aka GPIO4).</p>
+
+
+<pre>
+var led = new five.Led('GPIO4');
+</pre>
+
+	<p>I will post a video later.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1177">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1177.html#message-1177">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-18.html" title="05/18/2016 09:55 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, with the overwhelming bulk of the toolchain working, I realized I wasn't sure which part of the project to work on next.  So, I decided to try out a new bit of agile process and to break down the current PBI by starting with some user stories.  I am not going to be rigorous with the format right now, I just want to get the idea across and practice going from user stories to tasks.</p>
+
+
+	<p><strong>User Stories</strong></p>
+
+
+	<ol>
+	<li>I want to store data <del>online</del> so I can review test results.  <em>Notice how at first I assumed I wanted to store the data online, but later realized I just needed to store the data somewhere.</em></li>
+		<li>I want to collect data on timed events to support the characterization phase.</li>
+		<li>I want to have a way to specify the test case so I can easily re-run the test case.</li>
+		<li>I want to display the results of a test in both plots and tables (format and rendering engine are not important here).</li>
+		<li>I want to control the stepper motor from the test program so everything is automatically coordinated during a test.</li>
+		<li>I want to read values from a hall effect sensor so I can test the sensors we have.</li>
+	</ol>
+
+
+	<p>So, with those user stories I generated the following tasks to break down the PBI.</p>
+
+
+<ins>Key</ins>
+	<ul>
+	<li>(User Story) [Priority] Task</li>
+	</ul>
+
+
+<strong>Tasks</strong>
+	<ul>
+	<li>(3) [7] Write a formal test procedure to ensure the same steps are followed for each run of every test</li>
+		<li>() [3] <del>Set up space for this code in the svn repo</del>
+	<ul>
+	<li>there will be a series of node scripts in one app folder, one per test phase</li>
+		<li>these scripts will run from the command line (the user stories do not require web interfaces)</li>
+		<li>there will be a lib folder for common code I write</li>
+		<li>will set up the package.json file and install required modules (johnny-five, raspi-io, etc)</li>
+		<li>will set up appropriate svn ignores per node.js best practices</li>
+	</ul>
+	</li>
+		<li>(6) [4] <del>Demo reading values from hall effect sensor</del></li>
+		<li>(5) [1] <del>Demo <a href="https://github.com/EmergingTechnologyAdvisors/node-serialport" class="external">node-serialport</a> as interface to the Arduino controlling the stepper motor from node/johnny-five</del></li>
+		<li>(3) [6] Develop a test definition format </li>
+		<li>(2) [5] <del>Demo timer functions</del>
+	<ul>
+	<li><a class="external" href="https://nodejs.org/api/timers.html">https://nodejs.org/api/timers.html</a></li>
+		<li><a class="external" href="https://www.npmjs.com/package/nanotimer">https://www.npmjs.com/package/nanotimer</a></li>
+		<li><a class="external" href="http://www.java2s.com/Tutorials/Javascript/Node.js_Tutorial/0270__Node.js_setTimeout_setInterval.htm">http://www.java2s.com/Tutorials/Javascript/Node.js_Tutorial/0270__Node.js_setTimeout_setInterval.htm</a></li>
+		<li><a class="external" href="http://javascript.info/tutorial/settimeout-setinterval">http://javascript.info/tutorial/settimeout-setinterval</a></li>
+	</ul>
+	</li>
+		<li>(1,4) [2] <del>Create or find a csv writer for node</del> => <a class="external" href="http://csv.adaltas.com/stringify/examples/">http://csv.adaltas.com/stringify/examples/</a></li>
+	</ul>
+
+
+	<p>Finally, with all of this in hand, I was able to develop a concept for the test programs.</p>
+
+
+	<ul>
+	<li>Launch the test program from the command line, specifying a test definition file (.test) as an argument</li>
+		<li>Test program reads the test definition then
+	<ul>
+	<li>Sets output file name (&lt;name of test file&gt;_YYYYMMDD-HHMM.csv)</li>
+		<li>Echos test definition</li>
+		<li>Asks the user to verify the test is configured correctly</li>
+		<li>Y/N?</li>
+	</ul>
+	</li>
+		<li>If Y, run the test, collecting the results in a 2D array | else abort the test</li>
+		<li>When the test is complete, write out the results to the ssv file and exit</li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1182">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1182.html#message-1182">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-22.html" title="05/22/2016 06:26 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, the first thing to do on the task list is to demo "node-serialport"https://github.com/EmergingTechnologyAdvisors/node-serialport controlling the stepper motor through the Arduino sketch that is already written.  The good news is that according to the <a href="https://github.com/EmergingTechnologyAdvisors/node-serialport#raspberry-pi-linux" class="external">docs</a> the RPi version of this module is already installed since I have installed johnny-five and raspi-io.</p>
+
+
+	<p>That means I just need to demo the module.  For that I need to know which port the Arduino gets mounted on and the baudrate I am using.  There is a command line tool that comes with node-serialport called serialportlist that will come in handy for the first question (but you have to install node-serialport with the -g option, so I may need to install it after all).  And for the second question, notes from earlier work with the Arduino sketch show it is set to use 57600 for the baud rate.</p>
+
+
+	<p>Steps for testing.</p>
+
+
+	<ol>
+	<li>Get the stepper motor elements of the test rig out and arrange things so the Arduino can be plugged into the RPi</li>
+		<li>Boot up the RPi</li>
+		<li>Start a terminal shell</li>
+		<li>Run <code>serialportlist</code> - <em>the command was not found, so need to install it</em></li>
+		<li>cd to the node-test directory</li>
+		<li>Install node-serialport with <code>sudo npm install -g serialport</code></li>
+		<li>Run <code>serialportlist</code> to prove the serialportlist command is available</li>
+		<li>Plug in the Arduino</li>
+		<li>Run <code>serialportlist</code> to see if it picks up the Arduino - <em>it detected the Arduino as /dev/ttyACM0</em></li>
+	</ol>
+
+
+	<p>The rest of the testing involved some mucking around with both the Arduino firmware and the Node.js code to get things working.  The gist of the things I had to do is:</p>
+
+
+	<ul>
+	<li>Update the firmware to emit a ready message when the setup() function was complete (see the note under <a href="https://github.com/EmergingTechnologyAdvisors/node-serialport#write-buffer-callback" class="external">write()</a> for more details about why)</li>
+		<li>Create a test script in Node.js (arduino.js) that connects to the Arduino over serial, waits for it to emit the ready message and then sends a value to tell the stepper motor to run at the specified speed (see following post for the source code)</li>
+		<li>I also had to note that I needed to run arduino.js as root - <code>sudo node arduino.js</code></li>
+		<li>The final version of ardunio.js takes a parameter on the command line to specify the stepper motor speed</li>
+	</ul>
+
+
+	<p>Once I take a video and post the source code for the test script, I think I can count this task as done.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1183">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1183.html#message-1183">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-22.html" title="05/22/2016 06:30 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Source code for the test above: arduino.js.</p>
+
+
+<pre>
+var spm = process.argv[2];
+
+var serialport = require('serialport');
+var SerialPort = serialport.SerialPort;
+var port = new SerialPort('/dev/ttyACM0', { 
+    baudrate: 57600,
+    parser: serialport.parsers.readline('\n') });
+
+port.on('data', function (data) {
+  console.log('Data: ' + data);
+  writeAndDrain(spm, function(err) {
+    if (err) {
+      return console.log('Error: ', err.message);
+    }
+    console.log('sent ' + spm + ' to Arduino');
+    process.exit();
+  });
+});
+
+function writeAndDrain (data, callback) {
+  port.write(data, function () {
+    port.drain(callback);
+  });
+}
+</pre></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1185">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1185.html#message-1185">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-05-22.html" title="05/22/2016 07:29 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p><strong>Test Rig Integration Demo Video</strong></p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/7KFpFJAjTAY?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/7KFpFJAjTAY?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1189">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="901%3Fr=1189.html#message-1189">RE: Walk Sensor Test Rig Development Log</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-06-05.html" title="06/05/2016 07:10 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Today I am working on task 4 from my list of tasks for the test rig software: demo reading values from the hall effect sensors.  I will be demoing reading one of the schmitt triggered sensors (these have different magnetic field levels for triggering on/off), so I will be treating the sensor as a digital input.  We also have an analog sensor reporting the field strength on a relative scale.  That sensor would be treated as an analog input.</p>
+
+
+	<p>Most of the work today is based on <a href="http://bildr.org/2011/04/various-hall-effect-sensors/" class="external">A Strange Attraction. Various Hall Effect Sensors</a>.  The wiring will be based on this diagram from that blog post.</p>
+
+
+	<p><a href="http://bildr.org/blog/wp-content/uploads/2011/04/0h090u1.png"><img src="http://bildr.org/blog/wp-content/uploads/2011/04/0h090u1-400x302.png" alt="" /></a></p>
+
+
+	<p>Per the diagram above, the 5V+ line will be connected with a red wire, the ground with a black wire, and the digital out will be a green wire.  Each jumper is connected to a matching alligator clipped line so the sensor can be remotely mounted.  I will post a fritzing diagram as I get closer to writing the actual test scripts.</p>
+
+
+	<p>I am using TR 08 (the OH090U sensor, like in the blog post).  I am using <a href="http://johnny-five.io/api/board/" class="external">digitalRead</a> to log the value from the hall effect sensor to the console.  GPIO3 is not available for reading, so I set the input to be GPIO17 (the next I/O pin after GPIO4 from the LED blink test).</p>
+
+
+	<p>It worked like a charm.  I get a stream of ones ('1') on the console while the magnet is far away and a stream of zeros ('0') when the magnet is close (the circuit is wired to be default closed).  I stretched a little past the task requirement since things just worked by adding a timecode (number of seconds) to the console log messages.  That was easy, so I also added in the timeout test to the same sample file, task 5.  Now the test code reads values from the sensor, writes the values with a timestamp to the console, and exits after a specified period of time.</p>
+
+
+	<p>The code is commited to svn under the file test_rig/test-scripts/hall-read.js.</p></div>
+  
+  </div>
+
+<p class="pagination">1 <a href="http://opendesignengine.net/boards/36/topics/901?page=2&amp;r=1144">2</a>  <a href="http://opendesignengine.net/boards/36/topics/901?page=2&amp;r=1144">Next »</a> (1-25/28)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/901.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

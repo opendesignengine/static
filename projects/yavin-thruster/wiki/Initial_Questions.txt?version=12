@@ -1,0 +1,65 @@
+h1. Yavin Thruster Initial Questions v0.1
+
+{{toc}}
+
+h2. Project Background Questions
+
+h3. BQ1. Why are we making this?
+
+*BA1*. To create an educational project which combines both propulsion design and testing.  In combination with the Shepard Test Stand technology yields a full turnkey package.
+
+h3. BQ2. Who is this for?
+
+*BA2.* Undergraduate aerospace and high level high school students and Mach30 Volunteers.
+
+h3. BQ3. How will this be used?
+
+*BA3*. Demonstrate fundamentals of propulsion systems design and testing of a cold gas thruster to include thrust, specific impulse, expansion ratio, chamber pressure, throat area, and controls.
+
+h3. BQ4. Who's going to build this?
+
+*BA4.*  Mach30 volunteers,undergraduate aerospace and high level high school students with instructor involvement. Unit will be able to be built with commonly available components and 3D printed parts.
+
+h2. Technical Requirement Questions
+
+h3. TQ1a. What features does it need to have (now)?
+
+*TA1a.* _The project needs to:_
+
+* The thruster components from expansion chamber to nozzle are modular to allow experimentation and projects to be tested using the same hardware and parameters.
+* Includes a set of sample CAD models for modification (templates)
+* Gas flow must include a tank of fixed volume, pressure gauge, electrically actuated valve, and timing circuit to make comparison of designs possible.
+* Must be operable indoors
+* Control system must be integrated with test stand controls to synchronize operation with testing.
+
+h3. TQ1b. What features does it need to have (later)?
+
+*TA1b.* _In the future, the project (or related projects) may need to:_
+
+* Variable gas flow for throttling
+* Variable time valve operation for pulse width modulation and flow characteristics.
+* Demonstrate ideal expansion, under- and overexpansion characteristics.  This may require flow visualization capability (schlieren and/or CO2 vapor)
+
+h3. TQ2. What are the legacy requirements?
+
+*TA2.* _To maintain compatibility with other projects, the system should:_
+
+* Adaptable to Shepard Test Stand with minimum modifications (ideally just swapping the motor mount at first)
+
+h2. Project Requirement Questions
+
+h3. PQ1. How many do we want to make?
+
+*PA1.* For V0.1, there should be at least two units built to demonstrate repeatability.  For V1.0, since this is an easily constructed device with a strong educational component, it should be offered as a kit and would ideally see adoption into the curricula of many educational institutions as well as many interested private parties including Mach30 volunteers.
+
+h3. PQ2. What is the budget?
+
+*PA2.* $850.00 for complete V0.1 per Mach30 2015 budget.
+
+h3. PQ3. What is the timeline?
+
+*PA3.* Complete and demonstrated by the end of calendar year 2015.
+
+h3. PQ4. What waste products will be produced by the manufacture and/or operation of this?
+
+*PA4.* Plastic scraps and 3D printed experimental components.  Note that if PLA is used, these waste products will be biodegradable.

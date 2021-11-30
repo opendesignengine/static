@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link rel="self" href="http://opendesignengine.net/issues/11.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2011-05-16T22:45:18+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=26</id>
+    <updated>2011-05-16T22:45:18+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;An example plugin to look at for implementation ideas - &lt;a class="external" href="https://github.com/edavis10/redmine_contributor_licensing"&gt;https://github.com/edavis10/redmine_contributor_licensing&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=28</id>
+    <updated>2011-05-16T23:51:07+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;Here is a &lt;a href="http://www.redmine.org/plugins/extended_profile" class="external"&gt;plugin&lt;/a&gt; that demonstrates hooking into the account creation process to extend the profile info.  Might also be cool to just add it while we are looking at profile related features.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=48</id>
+    <updated>2011-12-19T16:30:06+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;We will also need to write the ToS.  Here is an interesting example where the legal and the layman versions are side by side:&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="http://www.aviary.com/terms"&gt;http://www.aviary.com/terms&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=51</id>
+    <updated>2012-01-06T01:51:29+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;% Done&lt;/strong&gt; changed from &lt;i&gt;0&lt;/i&gt; to &lt;i&gt;50&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Plugin is written and installed (by Littlelines).  Still need to develop the actual ToS and post it on the site.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=59</id>
+    <updated>2012-02-12T17:35:07+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;Here are some sample ToS to work from:&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;&lt;a href="http://en.wordpress.com/tos/" class="external"&gt;Wordpress.com ToS&lt;/a&gt; (CC-BY-SA)&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://creativecommons.org/terms" class="external"&gt;Creative Commons ToS&lt;/a&gt; (CC-BY)&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://geek.net/terms-of-use" class="external"&gt;Source Forge ToS&lt;/a&gt; (c) - note, has language about requiring open source licenses&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=68</id>
+    <updated>2012-03-14T19:44:24+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;% Done&lt;/strong&gt; changed from &lt;i&gt;50&lt;/i&gt; to &lt;i&gt;70&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Currently reviewing example ToS and should have ODE ToS posted in the next week or so.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=70</id>
+    <updated>2012-03-14T19:45:36+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; changed from &lt;i&gt;New&lt;/i&gt; to &lt;i&gt;In Progress&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=76</id>
+    <updated>2012-03-19T01:06:33+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;% Done&lt;/strong&gt; changed from &lt;i&gt;70&lt;/i&gt; to &lt;i&gt;90&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;ToS/Privacy policy have been entered into the site, but there are two bugs that need to be fixed.&lt;/p&gt;
+
+
+	&lt;ol&gt;
+	&lt;li&gt;The sign on page is rendering the unformatted text of the ToS instead of the formatted text.  That is, one is left with wiki source instead of the formatted ToS.&lt;/li&gt;
+		&lt;li&gt;Just discovered there does not appear to be a URL for users to see the ToS other than when they have to agree to it.  There should be a rendered view of the ToS at &lt;a href="https://opendesignengine.net/legal" class="external"&gt;/legal&lt;/a&gt; on the site or something similar.&lt;/li&gt;
+	&lt;/ol&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #11: Add Terms of Service and Privacy Policy to account creation</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/11"/>
+    <id>http://opendesignengine.net/issues/11?journal_id=77</id>
+    <updated>2012-03-27T15:29:14+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; changed from &lt;i&gt;In Progress&lt;/i&gt; to &lt;i&gt;Resolved&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;% Done&lt;/strong&gt; changed from &lt;i&gt;90&lt;/i&gt; to &lt;i&gt;100&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Bugs fixed, and ToS added.  See &lt;a class="external" href="https://opendesignengine.net/terms"&gt;https://opendesignengine.net/terms&lt;/a&gt; for the ToS.&lt;/p&gt;    </content>
+  </entry>
+</feed>

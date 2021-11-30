@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Detailed Design</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="v02-Detailed-Design"></a>
+<h1 >v0.2 Detailed Design<a href="Detailed_Design.html%3Fversion=7.html#v02-Detailed-Design" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Detailed_Design.html%3Fversion=7.html#v02-Detailed-Design">v0.2 Detailed Design</a><ul><li><a href="Detailed_Design.html%3Fversion=7.html#R1-Detect-movement-on-the-exercise-equipment-and-send-walking-command-to-video-game-typically-by-pressing-the-w-key">R1: Detect movement on the exercise equipment and send walking command to video game (typically by "pressing" the 'w' key)</a></li><li><a href="Detailed_Design.html%3Fversion=7.html#R2-Suppress-the-walk-command-signal">R2: Suppress the walk command signal</a></li><li><a href="Detailed_Design.html%3Fversion=7.html#R3-Show-the-status-of-the-walk-command-signal">R3: Show the status of the walk command signal</a></li><li><a href="Detailed_Design.html%3Fversion=7.html#R4-Support-single-step-vs-continuous-walking">R4: Support single step vs continuous walking</a></li><li><a href="Detailed_Design.html%3Fversion=7.html#R5-Tune-the-walking-speed-required-to-trigger-sending-the-walk-command">R5: Tune the "walking" speed required to trigger sending the walk command</a></li></ul></li></ul>
+
+
+	<p>The v0.2 design is based on the answer to Q4 of the <a href="http://opendesignengine.net/projects/holoseat/wiki/.html" class="wiki-page">Initial Questions</a>.  The <a href="https://opendesignengine.net/dmsf_files/255?download=287" class="external">Fritzing drawing</a> shown below covers the prototype design.  The remainder of this document covers the design decisions by addressing each of the requirements.  Note, the bread board seen in the Fritzing drawing will be replaced with a prototype shield like <a href="http://www.amazon.com/SainSmart-Prototyping-Prototype-Breadboard-arduino/dp/B0079WI2MK" class="external">this one</a>.</p>
+
+
+	<p><img src="https://opendesignengine.net/dmsf_files/254?download=288" alt="" /></p>
+
+
+	<a name="R1-Detect-movement-on-the-exercise-equipment-and-send-walking-command-to-video-game-typically-by-pressing-the-w-key"></a>
+<h2 >R1: Detect movement on the exercise equipment and send walking command to video game (typically by "pressing" the 'w' key)<a href="Detailed_Design.html%3Fversion=7.html#R1-Detect-movement-on-the-exercise-equipment-and-send-walking-command-to-video-game-typically-by-pressing-the-w-key" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>To send key presses, the v0.2 <strong>holoseat</strong> controller replaces the Arduino Uno + USB Keyboard Controller from v0.1 with an Arduino Leonardo, using the Leonardo's built-in <a href="http://arduino.cc/en/Tutorial/KeyboardMessage" class="external">keyboard emulation</a>.</p>
+
+
+	<p>To sense activity on the exercise equipment, the <strong>holoseat</strong> will continue to use a reed switch.  For v0.2, the reed switch used will be a <a href="http://www.amazon.com/Directed-Electronics-8601-Magnetic-Switch/dp/B0009SUF08" class="external">Directed Electronics Magnetic Switch</a> <del><a href="http://www.radioshack.com/product/index.jsp?productId=12706328" class="external">Radioshack 55050593</a> as with the <a href="http://www.instructables.com/id/Arduino-Bike-Speedometer/" class="external">Arduino Bike Speedometer</a></del> (this switch is no longer available in stores).</p>
+
+
+	<a name="R2-Suppress-the-walk-command-signal"></a>
+<h2 >R2: Suppress the walk command signal<a href="Detailed_Design.html%3Fversion=7.html#R2-Suppress-the-walk-command-signal" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>To suppress the walk command signal, a toggle switch will be added with the closed position indicating the walk command should be sent and the open position indicating the walk command should not be sent.  The toggle switch used will be a <a href="http://www.radioshack.com/product/index.jsp?productId=2062509" class="external">Radioshack #275-645</a>  as with the <a href="http://www.instructables.com/id/Arduino-Bike-Speedometer/" class="external">Arduino Bike Speedometer</a>.  See the <a href="http://arduino.cc/en/tutorial/button" class="external">push button tutorial</a> for an example of reading a switch/button in the source code.</p>
+
+
+	<a name="R3-Show-the-status-of-the-walk-command-signal"></a>
+<h2 >R3: Show the status of the walk command signal<a href="Detailed_Design.html%3Fversion=7.html#R3-Show-the-status-of-the-walk-command-signal" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The status of the walk command will be indicated with an LED.  The LED will be lit when the walk command is active, and unlit when the walk command is not active.  See the <a href="http://arduino.cc/en/Tutorial/Blink?from=Tutorial.BlinkingLED" class="external">LED tutorial</a> for an example of lighting an LED.</p>
+
+
+	<a name="R4-Support-single-step-vs-continuous-walking"></a>
+<h2 >R4: Support single step vs continuous walking<a href="Detailed_Design.html%3Fversion=7.html#R4-Support-single-step-vs-continuous-walking" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Supporting single step will be implemented completely in source code.  The current plan is to have different behavior during the reed switch interrupt handler if the RPM is 0 (which should trigger a single key press) vs when the RPM is non-zero (which should work like the vs 0.1 <strong>holoseat</strong>).</p>
+
+
+	<a name="R5-Tune-the-walking-speed-required-to-trigger-sending-the-walk-command"></a>
+<h2 >R5: Tune the "walking" speed required to trigger sending the walk command<a href="Detailed_Design.html%3Fversion=7.html#R5-Tune-the-walking-speed-required-to-trigger-sending-the-walk-command" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The walking speed (that is the RPM value required to trigger a key press be sent to the computer) will be tuned with a slide style potentiometer.  The mid-way point on the slider will indicate the user wishes to use the default walking speed.  Lower values on the slider will reduce the walking speed down to a minimum of 50% of the default.  Higher values on the slider will increase the walking speed up to a maximum of 150% of the default.  See the <a href="http://www.arduino.cc/en/Tutorial/Potentiometer" class="external">Potentiometer Tutorial</a> for an example of reading values from a potentiometer.</p>
+
+
+	<p>Note, slide potentiometers are not readily available at hobby electronic stores (aka Radio Shack - see <a href="http://www.sc-fa.com/blog/2009/08/05/slide_potentiometers/" class="external">HOWTO find and buy faders / sliders / slide pots / slide potentiometers</a> for more details).  Current best example of a slider which will fit on the prototype shield is <a href="http://www.mouser.com/ProductDetail/Alpha-Taiwan/RA2043F-20-10EB1-B100K/?qs=sGAEpiMZZMtC25l1F4XBU1sVVnjISoIH138Ia6wzCwA%3d" class="external">this one</a> from Mouser Electronics.</p>
+</body>
+</html>

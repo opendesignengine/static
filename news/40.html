@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Shepard v2.0 Dev Log (Structure Concept) Started 06-19-13 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/shepard-ts.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/shepard-ts/news.html" class="news selected">News</a></li>
+<li><a href="../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/shepard-ts/boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-40-watcher"></span>
+
+
+</div>
+
+<h2>Shepard v2.0 Dev Log (Structure Concept) Started 06-19-13</h2>
+
+
+
+<p><em>Conceptual development and experimentation done on the Shepard structure for version 2.0.</em><br />
+<span class="author">Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-19.html" title="06/19/2013 09:11 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>There was a conversation about the structure concept that Aaron created on Google+. I wanted to make sure it got captured here.</p>
+
+
+	<p><strong>Chris Sigman</strong> Yesterday 8:02 PM</p>
+
+
+	<p>Excited!﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> Yesterday 8:06 PM</p>
+
+
+	<p>The motor mount is going to be the PITA.  This will take some fabrication, but the rest of the construction takes 5 min, not counting bolting it to the brick.﻿</p>
+
+
+	<p><strong>Chris Sigman</strong> Yesterday 9:01 PM</p>
+
+
+	<p>What where you thinking for the design of the motor mount? I've got a picture in my mind (one based upon your little paper model and another).﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> Yesterday 9:22 PM</p>
+
+
+	<p>Basically the paper model done in steel.  I was shooting for 18ga 1018 mild steel, since this will contain an explosion with almost zero chance of coming apart, but it will be a real challenge to bend.</p>
+
+
+	<p>The design also created an engineered failure point should the explosion exceed the rating of the steel.  With a crimped edge, the crimp will undo and deform the mount.  this will start at the front and rear (depending on location of the breach), opening the enclosed area in a cone shape.</p>
+
+
+	<p>This cone allows the pressure wave to escape to the front or back in a way that will reduce pressure by increasing volume rather than attack a specific point in the motor mount, causing shrapnel.</p>
+
+
+	<p>Finally, if the pressure is simply too much, or the explosion started in the exact center of the mount, the ear on the top will shear and the crimp will let go very shortly thereafter, allowing the partially uncurled mount to deflect much of the blast and debris.  This part will remain attached to the load cell since it is still bolted in place.</p>
+
+
+	<p>In such an event, I would no longer trust the load cell, and the temp sensors are likely toast, but this will make the test stand safer than the models the motors are supposed to power.﻿</p>
+
+
+	<p><strong>Jaye Sudar</strong> Yesterday 11:31 PM</p>
+
+
+	<p>The pictures came out much better than I expected.﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> Yesterday 11:58 PM</p>
+
+
+	<p>Yes they did.  Using my halo lamp as flood fill on top of the flash really helped.﻿</p>
+
+
+	<p><strong>J. Simmons</strong> 12:30 AM</p>
+
+
+	<p>Aaron, I like the look of this design.  It is very sexy, and compact (great for kits).  But I do have a couple of design questions/concerns.  (Note, all of this should really go on ODE, but I don't want to lose any of these thoughts.)</p>
+
+
+	<p>1. I want to have a pretty significant discussion about motor mounts before much more work happens.  We discovered lots of concerns on the first design iteration and as the primary operator of v1.0 I have some additional feedback.  I want to make sure we create an opportunity to discuss those points.</p>
+
+
+	<p>2. How is the load cell going to be calibrated in the current design?  In the previous design we used a pulley to turn gravity horizontal.  I am not sure that is an option in the current design.  And my next thought (just turn the test stand on its end so the load cell is facing gravity) both includes the load cell's mass in the calibration load and puts the test stand in an unstable orientation with a weight hanging off-axis, creating a moment that could unbalance the test stand and knock it over.</p>
+
+
+	<p>3. I assume the screws holding the frame to the block will easily withstand the shear load from the motor thrust, but we should document (and test) that to cover our bases.</p>
+
+
+	<p>4. Without a rail system, will we have any issues with misaligned thrust during firings?  While the rails were large and creates some problems, they did at least ensure the motor's thrust only went in the desired line of force.</p>
+
+
+	<p>5. Where are you thinking of mounting the electronics?  I know we never got that far with v1.0, but the idea was always to place the electronics on the back of the test stand.</p>
+
+
+	<p>All of that being said, I love the simplification of the new design over the original.  It is compact, light weight (I assume), and it removes issues like the rails being fouled.  This is definitely a huge step forward in terms of design for Shepard.  And, it clearly has kit users in mind for assembly.﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> 1:45 AM</p>
+
+
+	<p>Hi +J. Simmons thanks for the feedback.  I will be capturing all of this to ODE, but I want to make sure we hit the high points while the iron is hot.  To be honest, you have not brought up anything I haven't thought about, but it's always good to make sure I am thinking straight.</p>
+
+
+	<p>1. Discussion on the motor mount design:  I would have it no other way.  I think I have a good design, but I want to open this part to the discussion process to a lot of discussion before we start to bend metal.  The question that's bugging me is this:  How do we engineer a failure to verify the failure mode of the design?  I get the feeling that working with the metal I have (16ga) will be a colossal PITA, but I don't want to build it out of something that will shred and turn to shrapnel either.  We have got to come up with a way to test this.</p>
+
+
+	<p>2. Calibration:  On my unit, I can just set the brick on it's nose and set the weight on the arm after the mount is removed while I stabilize the brick.  On more solidly mounted units, I would recommend the purchase of a spring type hanging scale to attach to the arm with the motor mount removed.  The other end of the scale should be attached to another immovable object using a turnbuckle.  As you tighten the turnbuckle, the spring changes both the reading on the hanging scale and changes the tension applied to the load cell.  This technique is one which will become mandatory as the test stands become larger.</p>
+
+
+	<p>3. The weak link are the aluminum angle brackets which are rated for 686 N of force.  The M5 hardware is all 304 stainless with a yield rating of at least 400N/mm^2.  This means that for a 5mm bolt, de-rated by 1 mm for the cut threads, we have a cross sectional area of a little over 12.5mm, resulting in a yield strength of over 5kN.  Another weak link is the plastic anchors... which is why I would not include these in the kit.  Mine are in there good enough to where I can pick up the whole assembly, brick and all, by the frame and shake it with no slop.  I can confidently say that removal of the frame from the brick will definitely require much more than the 40 newtons of force an Estes motor can muster.</p>
+
+
+	<p>4. Force alignment.  I was worried about that too, and at the distance the mockup demonstrated as a torque arm (34mm), it would take 12.5 kg of thrust to deform the sensor in any meaningful (+/- 0.25 degree) amount.  Using a torque wrench and laser boresight, I verified the amount of deflection was less than a quarter of a degree at the specified torque, and that the sensor returned true.  I would not want to use such an offset for larger engines, but for the smaller versions it seems fine.  I have a design which does not feed to the side, but it will be much more expensive.  I will document that in ODE as well as time permits, but it is overkill for Shepard's task.</p>
+
+
+	<p>5. Electronics:  The electronics consists of the beaglebone, a daughtercard (they call them capes... I am seeing Edna from The Incredibles...  "No capes!"), and a separate small board to mount under the motor mount on the frame.  The beaglebone and "cape" can be installed in an enclosure on the right side of the frame in an enclosure only slightly larger than an Altoids tin length and width, and double the height.  This would allow the enclosure to contain the DAQ system and battery for use wirelessly or through Ethernet cables.  We're still working on the best way to pull that off.</p>
+
+
+	<p>The really cool thing about this is how compactly it can ship.  The entire thing can fit in a 4x3x2 mailer  and would weigh under a pound and a half, including the DAQ.  the thing that consistently blows my mind about working with the aluminum extrusions is how light they are, yet can support an ungodly amount of weight, especially across their long axis.    Anyhow, enough for tonight.  I'll talk with you in the morning. :)﻿</p>
+
+
+	<p><strong>Chris Sigman</strong> 8:01 AM</p>
+
+
+	<p>One more question... how is the motor affixed to the motor mount so that it doesn't move around in there?﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> 8:45 AM</p>
+
+
+	<p>The traditional way is a friction (interference) fit with an end stop and a clip to hold it in place.  This isn't modeled on the mockup because I was just working on the basic shape. :)﻿</p>
+
+
+	<p><strong>Chris Sigman</strong> 9:26 AM</p>
+
+
+	<p>OK, I've drawn up an idea that once this is in ODE it'll be easier to share, but the idea is this:</p>
+
+
+	<p>The motor mount will primarily consist of a piece of steel tubing (18ga if you'd like, but since you don't have to bend it you could go higher). The tubing would be attached to the load cell by using adjustable pipe fittings to hold 2 right-angle brackets to the side, with a bolt through the angle brackets attaching them to the load cell.  To hold the motor (allowing for various diameters of motor) to the inside of the mount, several holes will be drilled through on the opposite side (perhaps at 45° from center both ways) for bolts.  A bolt will be held in place using 2 nuts: one on the outside of the tube, and one on the inside. On the end of the threading of the bolt will be a rubber footing, keeping the bolt from damaging the motor casing.  Finally, if needed, one end of the tube would be closed off for the non-business end of the motor to be placed against.</p>
+
+
+	<p>Of course, a picture's worth a thousand words, and I don't have nearly that many there.  ﻿</p>
+
+
+	<p><strong>Chris Sigman</strong> 9:32 AM</p>
+
+
+	<p>I also have another item of note not entirely related: why is Shepard fired horizontally? Why not have it oriented so that the thrust fires up, pushing down towards earth?﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> 9:55 AM</p>
+
+
+	<p>The trouble I have with a steel tube is the failure mode.  A steel tube with no seam will allow pressures to build and exit at random, potentially causing shrapnel.</p>
+
+
+	<p>Shepard 1.0/1.1 use a cardboard mount to limit the mass and pressure during such an event, and thus potential damage.  My design holds for a bit more pressure, but is designed to yield in a specific way (burst along the crimp while the bolted center holds.</p>
+
+
+	<p>The reason Shepard fires sideways is because this way the instruments measure only the thrust component and don't register the reduction in mass as the fuel is burned.  This variable mass issue is why most solid  and hybrid fueled designs, including the SRBs made by ATK are tested on their side.</p>
+
+
+	<p>In a liquid fueled design, the mass of the engine is fixed, and when the rocket engine is bolted to the stand the weight added to the sensor can be tared, adding the weight necessary to overcome it's own mass to the recorded thrust.</p>
+
+
+	<p>Not all test stands follow this though.  Many of the high power rocket folks drop the motor with the nozzle up down a tube supported by legs (looks like a tripod).  A sensor in the bottom of the tube registers the weight as well as the downward force when the motor is fired.  Once the engine is done firing, the empty is weighed again, and the sensor data is adjusted based upon the linear reduction of mass over the run.</p>
+
+
+	<p>The trouble is that the consumption of fuel and reduction of mass is not quite linear.  This method is for "close enough" work.  The method we are using for Shepard is very accurate, depending only on the linearity of the sensor and accuracy of the calibration.﻿</p>
+
+
+	<p><strong>Chris Sigman</strong> 10:09 AM</p>
+
+
+	<p>With a tube, you have a few options for handling failure.  The first is you could rather easily go with a higher gauge steel, because there's no need to bend it.  There's also engineering a failure point.  Now, I don't know much about that, but I would think you could drill holes along one side (the 'top' for example) that don't go all the way through.﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> 4:20 PM</p>
+
+
+	<p>Hmmm... that might work, as it would open like a zipper.  I'd like to keep the machining to a minimum though.  I wonder if we couldn't use something 3D printed...﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> 6:00 PM1<br />Reply</p>
+
+
+	<p>Speaking of pipes, I wonder if a length of MIL-T 6736B spec 4130 steel tubing with a wall thickness of 2.1mm open on both ends (except the retention ring) wouldn't just hold the pressure and laugh it off.  Time to dust off my books again.</p>
+
+
+	<p>For those who want to do the math, use a 4" section of this pipe:  <a class="external" href="http://www.onlinemetals.com/merchant.cfm?pid=7551&#38;step=4&#38;showunits=inches&#38;id=1&#38;top_cat=0">http://www.onlinemetals.com/merchant.cfm?pid=7551&#38;step=4&#38;showunits=inches&#38;id=1&#38;top_cat=0</a> and figure on 3/4" orifices on both sides.</p>
+
+
+	<p>The engine for our worst case scenario would be an Estes E9-6 with 35.8 grams of propellant.  I can't find the specs on the propellant to do the analysis, but it can't be too high test... the casing is cardboard after all.</p>
+
+
+	<p>This brings me to another point.  If the mount were snug and unyielding as well as tolerant of the temperatures of a burn-thru, would the motor rupture at all?  This is starting to climb outside my engineering pay grade... does anyone else wanna take a stab at it?﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> 9:50 PM</p>
+
+
+	<p>Youtube video to go with it:  <a class="external" href="http://youtu.be/Lgkbm5svo50﻿">http://youtu.be/Lgkbm5svo50﻿</a></p>
+
+
+	<p><strong>Jeremy Wright</strong> 9:56 PM</p>
+
+
+	<p>I'm tempted to copy the text from this post (since it's shared privately) directly into the dev log on ODE. Thoughts?﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> 9:58 PM</p>
+
+
+	<p>I was headed in that direction myself.  Go for it!﻿</p>
+
+
+	<p><strong>Aaron Harper</strong> 9:59 PM</p>
+
+
+	<p>I can build the structure (if I'm not gabbing) in under 7 min. :)﻿</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-19.html" title="06/19/2013 09:12 pm">over 9 years</a> ago</h4>
+    <p>Here's a link to a video that Aaron created showing how to assemble the extruded aluminum sections of the test stand.</p>
+
+
+	<p><a class="external" href="http://youtu.be/Lgkbm5svo50%EF%BB%BF">http://youtu.be/Lgkbm5svo50%EF%BB%BF</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-20" title="06/20/2013 11:03 am">over 9 years</a> ago</h4>
+    <p>The parts necessary to build this test stand frame are as follows:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/185?download=" alt="" /></p>
+
+
+	<p>Note that this quote is in single quantities and drop shipped as a complete kit anywhere we want.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-20" title="06/20/2013 11:36 am">over 9 years</a> ago</h4>
+    <p>Here is the parts to build the test stand all laid out.  Note that the price reduced between the time I posted to G+ and now.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/186?download=" alt="" /></p>
+
+
+	<p>The parts not included are my screwdriver (get your own, please), the plastic wall anchors, and the screws with the rubber backed washers, generally used for roofing.  By mounting the stand between the shoulder of the plastic wall anchor and the rubber washer the vibration from the test stand will not be directly coupled to the material it is mounted to.  This is a poor man's shock mount which will help make the stand last longer.  More on this later.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-20" title="06/20/2013 12:57 pm">over 9 years</a> ago</h4>
+    <p>Constructing the frame of the test stand is simple with the extrusions and nut plates.  The nut plate slides in the slot, the screw is inserted through the hole in the bracket and tightened.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/93?download=" alt="" /></p>
+
+
+	<p>Sliding two of the nut plates into a slot in an extrusion, we are ready for the next step.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/187?download=" alt="" /></p>
+
+
+	<p>Placing the angle bracket over the hole in the nut plate, insert the first M5-8 screw and tighten.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/188?download=" alt="" /></p>
+
+
+	<p>Using the other extrusion as a spacer, mount the second angle bracket.  Note that the holes in the angle brackets are not universal.  On one side the hole is centered, while on the other, the hole is somewhat toward the edge of the bracket.  This is intentional, and allows us to use the characteristic for better stability.  On the photo below you can see how placing the fasteners wider will enhance the stability of the final assembly.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/189?download=" alt="" /></p>
+
+
+	<p>The next step is to flip the extrusion we were using as a spacer vertically and align to be flush with the first extrusion.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/190?download=" alt="" /></p>
+
+
+	<p>Drop a nut plate in each side channel of the vertical extrusion so the angle brackets can be secured to both extrusions.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/191?download=" alt="" /></p>
+
+
+	<p>Now, simply fasten the vertical extrusion with the M5-8 screws, and torque it down.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/192?download=" alt="" /></p>
+
+
+	<p>Putting a ruler on it, it looks like we need to align the extrusions so that the main beam is in the center. Just loosen screws a little at the top of the T and center the main beam.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/193?download=" alt="" /></p>
+
+
+	<p>Once centered, lock down the screws that we loosened to allow the main beam to slide</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/194?download=" alt="" /></p>
+
+
+	<p>Next, insert three nut plates in left side of the main beam.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/195?download=" alt="" /></p>
+
+
+	<p>Because of it's thickness, use M5-10 screws to secure the scalene bracket.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/196?download=" alt="" /></p>
+
+
+	<p>Tighten first screw to mount the scalene bracket, then back it off a touch so that the bracket can slide.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/197?download=" alt="" /></p>
+
+
+	<p>Sliding the bracket, find the second nut plate, keeping the M5-10 screw loose enough to move the bracket.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/198?download=" alt="" /></p>
+
+
+	<p>Squeeze the scalene bracket tightly against the L-bracket and torque down both screws.  This allows the force to be shared and makes the whole assembly more rigid.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/199?download=" alt="" /></p>
+
+
+	<p>Place the angle bracket with the offset hole on the work surface and line up the centered hole on the nut plate.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/200?download=" alt="" /></p>
+
+
+	<p>Secure bracket with M5-8 screw near the back of the main beam.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/201?download=" alt="" /></p>
+
+
+	<p>Turn the frame around and secure the second L bracket near the end of the beam on the right side.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/202?download=" alt="" /></p>
+
+
+	<p>Insert the final two nut plates in the front of the span beam near the outsides.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/181?download=" alt="" /></p>
+
+
+	<p>Secure the last two L brackets to the span beam with M5-8 screws so that they are flush to the work surface.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/182?download=" alt="" /></p>
+
+
+	<p>Repeat the process on the other L bracket.  For now, tighten these so that they stay put. We will be loosening them again when we install the stand on the base.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/183?download=" alt="" /></p>
+
+
+	<p>This completes the frame assembly.  The next step will be to install the load cell.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/184?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-20" title="06/20/2013 04:46 pm">over 9 years</a> ago</h4>
+    <p>Mounting the load cell is a simple process.  Fold the leads flat under the sensor so that they take the least amount of space possible.  Place the load cell in front of the scalene bracket so that the indicator points toward the span beam (front). To keep the wires out of the way, you can place them in the corner relief as shown.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/203?download=" alt="" /></p>
+
+
+	<p>Using the last M5-10 screw and the last hole in the scalene bracket, secure the load cell using the internal threads in the load cell's mounting holes.  Ensure the load cell is vertical and perpendicular to the frame and scalene bracket.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/204?download=" alt="" /></p>
+
+
+	<p>At this point, the job is complete.  The final parts, the M5-20 screw and nut will go into the threaded hole on the top of the load cell to mount the motor mount.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/205?download=" alt="" /></p>
+
+
+	<p>The next step is to mount the frame to the brick or other solid, heavy, and non-flammable object.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-20" title="06/20/2013 11:56 pm">over 9 years</a> ago</h4>
+    <p>What follows is a sample mounting solution for the prototype Shepard 2.0.  It is by no means the only way to mount the hardware, but most other examples will proceed along a similar path.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/206?download=" alt="" /></p>
+
+
+	<p>The first step is to determine where to mount the test stand (or to what).  Once this has been determined, Scribe a line along the long axis as shown above.  Next, find a spot along this line for the cross beam.  If using a brick, keep this line at least two inches away from the front of the assembly, so the brick won't tumble.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/207?download=" alt="" /><br /><img src="http://opendesignengine.net/dmsf_files/208?download=" alt="" /></p>
+
+
+	<p>Once this line has been marked, mark points along the cross beam 5" apart, 6 3/4" to the rear of the beam, and 2 points 2" apart along the centerline.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/209?download=" alt="" /></p>
+
+
+	<p>Next, drill holes to match the marked locations slightly deeper than your wall anchors.  Mine were 1/4" by 1.5" deep.  Use of a hammer drill is recommended and work slowly and accurately.  Blow out the holes when done using a compressor or canned air.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/210?download=" alt="" /></p>
+
+
+	<p>Tap the wall anchors home until the collar of the anchor sits on top of the concrete.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/211?download=" alt="" /></p>
+
+
+	<p>This is what the installed wall anchors should look like  Note the misalignment of the one at the top of the image.  You should work carefully, but if there is a screw up, the extrusion mounted hardware on the stand can be adjusted to fit.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/212?download=" alt="" /></p>
+
+
+	<p>Place the frame on the brick and secure it using the screw and rubber roofing washer. Adjust the location of the brackets by loosening their bolts so that they slide. Once all the brackets are secured to the brick, torque down the L brackets to the extrusions again.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/213?download=" alt="" /></p>
+
+
+	<p>All done for now.  The DAQ and motor mount are the next step which have their own news entry.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-21" title="06/21/2013 09:53 am">over 9 years</a> ago</h4>
+    <p>Here are a few shots of the completed assembly attached to the brick.</p>
+
+
+	<p>Top angle:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/214?download=" alt="" /></p>
+
+
+	<p>Low side angle:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/215?download=" alt="" /></p>
+
+
+	<p>Rear quarter view:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/216?download=" alt="" /></p>
+
+
+	<p>Final view:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/217?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/563" class="icon icon-contributor-license">Cyrus Cline</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-07-18" title="07/18/2018 06:54 am">over 4 years</a> ago</h4>
+    <p>Shepard test stand is the shooting gun but it is the old version checks it out the new one it is an awesome. Getting to the best of this is in <a href="https://www.essaysontime.com.au/" class="external">online essay service</a> don’t buy it because it is dangerous for others life.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/596" class="icon icon-contributor-license">Ajmer Wason</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-08-27" title="08/27/2018 05:32 am">about 4 years</a> ago</h4>
+    <p>very interesting game. [<a class="external" href="https://fortnitehacks.tools/[fortnite">https://fortnitehacks.tools/[fortnite</a> generator no human verification]]</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/596" class="icon icon-contributor-license">Ajmer Wason</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-08-27" title="08/27/2018 05:32 am">about 4 years</a> ago</h4>
+    <p>thank you. <a class="external" href="https://fortnitehacks.tools/">https://fortnitehacks.tools/</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/647" class="icon icon-contributor-license">md sm</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-10-17" title="10/17/2018 10:09 am">about 4 years</a> ago</h4>
+    <p>Numerous ball fans far and wide are sitting tight for the arrival of ostensibly the best b-ball computer game, &lt;a href="https://getnbalockercodes.com/"&gt;nba 2k18 locker codes nintendo switch&lt;/a&gt;. The computer game will be discharged on September 11, or four days sooner in the event that you preorder it, and it will bring numerous enhancements. MyTEAM, or, in other words the most prevalent modes in this establishment, will get some enormous changes, including another diamond level.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/647" class="icon icon-contributor-license">md sm</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-10-17" title="10/17/2018 10:10 am">about 4 years</a> ago</h4>
+    <p>nba 2k18 locker codes nintendo switch<br /><a class="external" href="https://getnbalockercodes.com/">https://getnbalockercodes.com/</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/693" class="icon icon-contributor-license">Simon Baldwin</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-11-26" title="11/26/2018 03:59 pm">almost 4 years</a> ago</h4>
+    <p>It is possible to earn $20 000 in a single month starting from an investment of $1000, but this means indulging in risky transactions. For example, you can use the one minute strategy that allows you to [[<a class="external" href="https://evokefinance.com/expertoption-review/">https://evokefinance.com/expertoption-review/</a>]] buy pairs of stocks 100 times a day, but beware some of those positions may not be winning ones.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/813" class="icon icon-contributor-license">Carol Bryant</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2019-04-08" title="04/08/2019 09:07 am">over 3 years</a> ago</h4>
+    <p>This gives essential framework functionalities like [[<a class="external" href="https://awriter.org/essay-writing-services/">https://awriter.org/essay-writing-services/</a>]] process the executives, memory the executives, gadget the board like camera, keypad, show and so forth the part handles every one of the things</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/40">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

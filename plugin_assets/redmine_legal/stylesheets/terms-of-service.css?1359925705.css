@@ -1,0 +1,47 @@
+span.pending { color: #FF9900; }
+span.accepted { color: #007700; }
+
+#admin-menu .contributor-license { background-image: url(../images/briefcase.png); }
+
+.icon-contributor-license { background-image: url(../images/award_star_gold_3.png); } /* From silk icons */
+
+
+#register .terms textarea{
+  padding: 10px;
+  width: 88%;
+  height: 200px;
+}
+
+#register .terms input[type="checkbox"]{
+  margin-top: 4px;
+}
+
+.terms p{
+  padding-left: 0;
+}
+
+#register .terms p{
+  padding-left: 180px !important;
+}
+
+#register .terms .fakep{
+  overflow: hidden;
+  padding-left: 180px !important;
+  margin: 0;
+  padding: 5px 0 8px 0;
+  height: 1%;
+  clear: left;
+}
+
+#register .terms .fakep .wiki{
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 88%;
+  background-color: white;
+  overflow-y: scroll;
+  max-height: 300px;
+}
+
+#register .terms .fakep .wiki ul.toc{
+  margin-top: 0;
+}

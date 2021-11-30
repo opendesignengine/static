@@ -1,0 +1,15 @@
+h1. Shepard Test Stand Software and Firmware Summary v1.1
+
+This is a newer document based on "this one":https://opendesignengine.net/projects/shepard-ts/wiki/SoftwareFirmware_Summary_v1_0 , and you should refer to that original version if you want to see the revision history.
+
+The software for the test stand consists of two main components:
+# The Processing software that runs on the laptop or desktop computer.
+# The Arduino Wiring software that runs on the Arduino Uno.
+
+h2. Processing (Desktop) Software
+
+Contained within _/trunk/ShepardDCS/ShepardDCS_Processing_ in the repository, this software is responsible for receiving the data from the Arduino and displaying it for the user. In order to run, the code depends on the controlP5 library that is in _/trunk/libraries/controlP5_ . This must be installed according to the instructions found "here":https://opendesignengine.net/projects/shepard-ts/wiki/Operating_Manual_v1_0#Processing-Desktop-Software before the desktop software will run. The software is not designed to run stand-alone in the current iteration, and instead is run through the Processing Integrated Development Environment (IDE).
+
+h2. Wiring (Arduino) Software
+
+Contained within _/trunk/ShepardDCS/ShepardDCS_Arduino_ in the repository, this software runs on the Arduino and is responsible for collecting the sensor data and sending it to the Processing desktop application. The Arduino software requires the installation of a third-party library from Adafruit for the MAX31855 thermocouple amplifier. You can find those installation instructions "here":https://opendesignengine.net/projects/shepard-ts/wiki/Operating_Manual_v1_0#Wiring-Arduino-Software

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Make Workbenches: News</title>
+  <link rel="self" href="http://opendesignengine.net/projects/makebenches/news.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/makebenches/news"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2011-10-14T01:22:25+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Project launch</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/3"/>
+    <id>http://opendesignengine.net/news/3</id>
+    <updated>2011-10-14T01:22:25+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I've been wanting to publish this project since &lt;a href="http://www.daytondiode.org/2011/02/open-house-rundown.html" class="external"&gt;February 2011&lt;/a&gt;, when I built the first two benches for our Dayton Diode (the Dayton, OH hackerspace).  Finally have some rough &lt;a href="http://opendesignengine.net/projects/makebenches/wiki/WorkbenchInstructions" class="wiki-page"&gt;instructions&lt;/a&gt; posted for the workbenches using photos from the actual build.  I would like to update these instructions with images from CAD drawings complete with labels, etc.&lt;/p&gt;
+
+
+	&lt;p&gt;Future work includes updating the CAD drawings with a package that I can produce drawings from (the current ones are in OpenSCAD and stored under DMSF, I'm investigating FreeCAD).  I also need to add the documentation for the &lt;a href="http://www.daytondiode.org/2011/05/yay-benches.html" class="external"&gt;Tool Benches&lt;/a&gt; I built.&lt;/p&gt;    </content>
+  </entry>
+</feed>

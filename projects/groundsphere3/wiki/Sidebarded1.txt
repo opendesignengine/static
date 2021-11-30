@@ -1,0 +1,34 @@
+h3. [[Sidebar|Navigation]]
+
+h3. Ground Sphere Mk 3
+
+* [[Wiki|Home]]
+* "Forums":https://opendesignengine.net/projects/groundsphere3/boards
+* "Slack":https://mach30.slack.com/messages/groundspherev3/
+* [[Media]]
+
+h4. Background
+
+* [[Goals]]
+* [[History]]
+
+h4. Design Process
+
+# [[Assumptions]]
+# [[Meeting Minutes|Meeting Minutes/Notes]]
+# [[Resources|Resources/Links]]
+## [[Link Budgets]]
+## [[Antennas]]
+
+h4. Business
+
+* [[Business Resources]]
+* [[Marketing Plan]]
+
+h4. Related Projects
+
+* "Ground Sphere Mk 2":https://opendesignengine.net/projects/groundsphere
+* "MTK":https://opendesignengine.net/projects/mtk
+* "CadQuery Model of Ground Sphere":https://github.com/jmwright/cadquery-projects/tree/master/eggbeater-antenna
+* [[Similar Projects]]
+* [[Future Projects]]

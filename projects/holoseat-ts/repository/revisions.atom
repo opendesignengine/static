@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Holoseat Test Stand: Revisions</title>
+  <link rel="self" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2018-05-03T21:38:56+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Revision 7: Added extra assertions to calm my nerves about the results matching the actual test c...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions/7"/>
+    <id>http://opendesignengine.net/projects/holoseat-ts/repository/revisions/7</id>
+    <updated>2018-05-03T21:38:56+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 6: Implemented automated testing for sensor module and tone ring.  Left in place place t...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions/6"/>
+    <id>http://opendesignengine.net/projects/holoseat-ts/repository/revisions/6</id>
+    <updated>2018-05-03T21:10:58+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 5: Setting up the structure for an Electron based test stand app.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions/5"/>
+    <id>http://opendesignengine.net/projects/holoseat-ts/repository/revisions/5</id>
+    <updated>2018-05-03T03:29:48+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 4: Updated sensor controller to use 18 pole tone ring.  Used this new code to verify fir...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions/4"/>
+    <id>http://opendesignengine.net/projects/holoseat-ts/repository/revisions/4</id>
+    <updated>2017-12-30T03:45:25+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 3: First pass at sensor controller firmware.  Used to verify first calibrated sensor.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions/3"/>
+    <id>http://opendesignengine.net/projects/holoseat-ts/repository/revisions/3</id>
+    <updated>2017-12-29T18:02:02+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 2: First pass at tone ring controller using the Adafruit Motor Shield v2 lib.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions/2"/>
+    <id>http://opendesignengine.net/projects/holoseat-ts/repository/revisions/2</id>
+    <updated>2017-12-29T07:01:06+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 1: setting up standard svn structure</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/holoseat-ts/repository/revisions/1"/>
+    <id>http://opendesignengine.net/projects/holoseat-ts/repository/revisions/1</id>
+    <updated>2017-12-03T01:13:12+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+</feed>

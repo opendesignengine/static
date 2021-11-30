@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mathematics Tool Kit - Porting setup instructions to Linux - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="6BofmwnlGqRkkG4J2XmPSnANvUqYqK/JFDSmhU8vN7Q="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/mtk.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/mtk.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Mathematics Tool Kit</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/mtk.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/mtk/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/mtk/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/mtk/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/mtk.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/mtk/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/mtk/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/mtk/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/mtk/boards.html">Forums</a> » <a href="../../../projects/mtk/boards/49.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-919-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Porting setup instructions to Linux</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-01-22.html" title="01/22/2015 09:53 pm">almost 8 years</a> ago</span></p>
+<div class="wiki">
+<p>So, the trick now is to get the <a href="../../../projects/mtk/wiki/Setup_Instructions.html" class="wiki-page">Setup Instructions</a> ported to Linux so we have support for 2 of the three major platforms.  I have used Sage + LaTeX in Linux before using <a href="http://kile.sourceforge.net/" class="external">Kile</a>.  I can spin up the VM it is on later and take a look around.  Like <a href="http://tug.org/mactex/" class="external">MacTex</a>, Kile provides an IDE-like environment for producing LaTeX documents.  So, it is a nice place to start for similar functionality.</p>
+
+
+	<p>Over in Windows the equivalent tool I have used is <a href="http://www.texniccenter.org/" class="external">TeXnicCenter</a>.  The last time I checked, <a href="http://www.sagemath.org/" class="external">Sage</a> did not run under Windows, but I just saw that there is now a <a href="http://www.sagemath.org/download-windows.html" class="external">Windows downloads page</a> so we should also take a look at running MTK under Windows.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (17)</h3>
+
+  <div class="message reply" id="message-920">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=920.html#message-920">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-01-22.html" title="01/22/2015 09:56 pm">almost 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Scratch that about Windows.  The download link is a VM with Sage pre-installed.  OK, back to the plan to support Mac and Linux and investigate putting together a Linux re-spin so Windows users can run MTK in a VM.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-921">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=921.html#message-921">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-01-22.html" title="01/22/2015 09:57 pm">almost 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>I checked around a little bit and it still looks like Kile is the best bet. <a class="external" href="http://kile.sourceforge.net/">http://kile.sourceforge.net/</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-922">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=922.html#message-922">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-01-22.html" title="01/22/2015 10:32 pm">almost 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Resources on creating your own Ubuntu respin.</p>
+
+
+	<ul>
+	<li><a class="external" href="http://www.linux.com/learn/tutorials/739139-roll-your-own-customized-ubuntu-with-uck">http://www.linux.com/learn/tutorials/739139-roll-your-own-customized-ubuntu-with-uck</a></li>
+		<li><a class="external" href="http://sneekygeekers.com/2014/06/09/how-to-create-your-own-ubuntu-respin/">http://sneekygeekers.com/2014/06/09/how-to-create-your-own-ubuntu-respin/</a></li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-924">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=924.html#message-924">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-01-22.html" title="01/22/2015 10:48 pm">almost 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>The amount of stuff you have to install is a drawback to using kile, since it depends on so much of the KDE underpinnings. Got this message when installing kile from the repository.</p>
+
+
+	<p><cite>After this operation, 735 MB of additional disk space will be used.</cite></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-928">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=928.html#message-928">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-01-30.html" title="01/30/2015 12:30 pm">almost 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've got the steps that we worked on in the Hangout last night in a script. I'd like for Linux users to be able to use <code>wget</code> to download the file from the terminal, which is pretty standard for setup shell scripts like this. However, the file needs to be tracked in version control too. I would suggest that we put the finalized version of the script on DMSF for <code>wget</code> access, and maybe put the script under <code>trunk/scripts</code> or something similar in subversion.</p>
+
+
+	<p>Thoughts?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-929">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=929.html#message-929">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-01-31.html" title="01/31/2015 01:01 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>That's great news, Jeremy.  Yeah, I think we can set up something along those lines.  I will lay in an SVN folder structure this weekend and turn on DMSF.  I'll let you know when I get that taken care of.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-931">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=931.html#message-931">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-01.html" title="02/01/2015 02:20 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>I set up svn.  Under trunk there is now an empty examples directory (I will start working on an initial example or two this week) and an install directory.  Under the install directory there is a linux directory (<a class="external" href="https://opendesignengine.net/svn/mtk/trunk/install/linux">https://opendesignengine.net/svn/mtk/trunk/install/linux</a>).  This is where I suggest we put the source for the scripts.  I also added DMSF and added a Releases folder (for released installers and scripts) and an Examples directory (for example PDFs so visitors can see what the tool can generate and have an easy way to get a file to compare with the examples as generated from their own copies of MTK).</p>
+
+
+	<pre><code>-J</code></pre></div>
+  
+  </div>
+
+  <div class="message reply" id="message-934">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=934.html#message-934">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-01.html" title="02/01/2015 09:24 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've committed what we have in the script so far to the <code>linux/install</code> folder. Once we've completed the setup process I'll run the script on a clean Ubuntu 14.04 VM, tweak it as needed, then drop it on DMSF/<code>Documents/Releases</code>. Do we need a <code>linux</code> folder under <code>Releases</code> as well?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-935">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=935.html#message-935">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-01.html" title="02/01/2015 10:14 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Good point.  All taken care of.  Thanks for getting the current script committed.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-936">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=936.html#message-936">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-08.html" title="02/08/2015 12:20 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Two new tests available under examples (with typeset versions posted to dmsf). The first exercises minted and demonstrates how to incorporate custom Python source files in MTK documents. The second is the very first demonstration of using units in MTK by way of Pint.  I am very happy to report that it works.  I was able to assign two variables units of length (meters specifically), multiply them together, and the result was in square meters!</p>
+
+
+	<p>The are still several things to smooth out, though, where units are concerned.  The display in LaTeX is very awkward right now. I tried for about an hour to use Pint's built in formatting and ended up with mixed success.  If you take a look at the <a href="../../../dmsf_files/478%3Fdownload=" class="external">PDF</a> you will see the magnitude of the values are unformatted (that is the default number of decimals) and the units are directly attached to the magnitude.  I also could not get the units abbreviation formatting to work. The good news is the LaTeX formatting mode in Pint properly formatted the m^2 when I made a small adjustment to the formatting string.</p>
+
+
+	<p>I think the root of the problems is some sort of odd interaction between Pint, Sage, and LaTeX when we go to pull the results out of Sage and into LaTeX.  But I think we can fix these issues with some custom formatting work.  And I think we can build in that custom formatting into a helper package that we can include (and instantiate) in a real MTK LaTeX template (a .cls file). I'm seeing an MTK package that does the following:</p>
+
+
+	<ul>
+	<li>imports Pint</li>
+		<li>instantiates a document wide units registry and assigns it to MTK.units so users can access units just by calling MTK.units.&lt;name of unit&gt;</li>
+		<li>sets the unit registry to format to abbreviated units names by default</li>
+		<li>provides a set of methods for displaying formatted results and units, all of the below would return strings and would be called in MTK inside a \sagestr{} command
+	<ul>
+	<li>displayValue(x, stringFormat) - constructs a string of value's magnitude and units with string format applied to the magnitude (for easy rounding) and adding a space between units and magnitude (note, units would be disabled in LaTeX format with appropriate modifiers, $&lt;units&gt;$, applied)</li>
+		<li>displayMagnitude(x, stringFormat) - like above but without displaying units (for use in tables where units are displayed in first row or column)</li>
+		<li>displayUnits(x) - like above but only displaying the units</li>
+	</ul></li>
+	</ul>
+
+
+	<p>I'm sure some more features will come to mind as we move forward.  Once we have a real LaTeX template, we can also look at formatting and inclusion of LaTeX packages in more detail (like advanced math formatting, auto-including the Minted package, line spacing, fonts, how sections are labeled, etc).  Lots of fun stuff.  We will also probably want to create a test case that is all about pulling in lots of units for display to ensue things format correctly.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-938">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=938.html#message-938">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-16.html" title="02/16/2015 08:40 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I ran the setup script on a clean Lubuntu 14.04 install last night. It ran though to completion without errors, and eveything worked fine in Kile. The only thing left to do is have the script alter the kilerc file with the changes MTK needs to automate document compilation for the user.</p>
+
+
+	<p>The kilerc edit steps I see are as follows.</p>
+
+
+	<ol>
+	<li>Pre-pend <code>--shell-escape</code> to the options for the PDFLaTeX build tool.</li>
+		<li>Append a Sage compilation build tool option.</li>
+		<li>Append an MTK sequence build tool that runs the PDFLaTeX tool, then the Sage tool, then PDFLaTeX again on the proper documents in the chain.</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-939">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=939.html#message-939">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-17.html" title="02/17/2015 09:43 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>That is great news, Jeremy.  I have not looked into the Kile customization as much as you have, but those steps sound correct to me.  In particular, the key to the final setup is that when we build an MTK document, it must first run PDFLaTeX (with the -shell-escape option, notice it only has one leading hyphen iirc), then run sage (on the generated .sage file), and finally run PDFLaTeX again (still with the -shell-escape option).  After that, the ball is back in my court to sort out the document class and add in the necessary helper objects/methods to support using units in MTK and easily reporting them.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-940">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=940.html#message-940">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-19.html" title="02/19/2015 09:41 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><blockquote>
+
+	<p>1. Pre-pend -shell-escape to the options for the PDFLaTeX build tool.</p>
+
+
+</blockquote>
+
+	<p>This is handled in the latest version of the install script.</p>
+
+
+<blockquote>
+
+	<p>2. Append a Sage compilation build tool option.</p>
+
+
+</blockquote>
+
+	<p>This is the next step.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-944">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=944.html#message-944">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-26.html" title="02/26/2015 08:19 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, for the #EngineerSpeak Hangout tonight, I'll be working on the Sage and sequence build tools for Kile.</p>
+
+
+<blockquote>
+
+	<p>2. Append a Sage compilation build tool option.<br />3. Append an MTK sequence build tool that runs the PDFLaTeX tool, then the Sage tool, then PDFLaTeX again on the proper documents in the chain.</p>
+
+
+</blockquote>
+
+	<p><a href="http://tex.stackexchange.com/questions/96409/is-it-possible-to-integrate-sage-in-kile" class="external">This</a> looks like a pretty good how-to resource for it.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-945">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=945.html#message-945">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-26.html" title="02/26/2015 09:14 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Well, I started in and everything kind of fell into place. The following is the Sage tool's config that goes in the kilerc file.</p>
+
+
+<pre>
+[Tool/Sage/Default]
+autoRun=no
+checkForRoot=no
+class=Compile
+close=no
+command=sage
+jumpToFirstError=no
+menu=Compile
+options='%S.sagetex.sage'
+state=Editor
+type=Process
+</pre>
+
+	<p>And here's the MTK sequence build tool</p>
+
+
+<pre>
+[Tool/MTK/Default]
+autoRun=
+checkForRoot=
+class=Sequence
+close=
+jumpToFirstError=
+menu=Compile
+sequence=PDFLaTeX,Sage,PDFLaTeX
+state=
+type=Sequence
+</pre>
+
+	<p>The next step is getting the Linux install script to add these config sections in the right place in the kilerc file. I'm tempted to have the script just download the whole config file rather than making changes to the existing one. The only drawback is that it would overwrite any changes that user had already made to their Kile configuration. If our target audience is going to install Kile from scratch, then the script can just make a backup of kilerc and dump our MTK kilerc file in its place. If we need to accommodate existing Kile installations with custom configurations, then I need to have the script directly manipulate kilerc, which is more complicated and still runs the risk of causing conflicts with previous configuration customizations.</p>
+
+
+	<p>Thoughts?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-946">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=946.html#message-946">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-26.html" title="02/26/2015 09:32 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Wow, that's great news. Here's hoping my work next week on a custom document class goes have as well.</p>
+
+
+	<p>In terms of download the kilerc file or edit the existing one, I'm leaning more with the download one. I am pretty concerned about trying to auto-merge things without using a patch tool, and I think our early audience will be doing clean installs anyway. We can always circle around to an in place upgrade from Kile to MTK later if the need arises. Plus, backing up the old kilerc file will let users manually merge things for the time being.</p>
+
+
+	<p>Great work!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-947">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="919%3Fr=947.html#message-947">RE: Porting setup instructions to Linux</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-02-26.html" title="02/26/2015 10:54 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ok, so that install script now does what we just discussed above, and the kilerc file gets downloaded from DMSF <a href="../../../dmsf_files/479%3Fdownload=" class="external">here</a> .</p>
+
+
+	<p>BTW - This script gives a good example of how to download files from DMSF using wget. It takes a little extra effort because DMSF doesn't provide a direct file link, but it's definitely doable.</p>
+
+
+	<p>We'll need to test this on a fresh VM against all of the examples next week, but the Linux installer should be extremely close to being finished.</p>
+
+
+	<p>Is doing a VM download the next step in providing an easy way to try MTK?</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-17/17)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/919.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

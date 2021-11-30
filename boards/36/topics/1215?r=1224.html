@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Sorting out ODE Project Pages Update - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1215-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Sorting out ODE Project Pages Update</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-10-30.html" title="10/30/2016 09:53 am">almost 6 years</a> ago</span></p>
+<div class="wiki">
+<p>Part of the 2016 Sprint 5 is to get the ODE Project docs back up to snuff.  The heavy lifting for that work will be updating the wiki pages and capturing v0.3's important links.  However, I also want to review what features we are using and how we are using them.</p>
+
+
+	<ul>
+	<li>Roadmap <strong>REMOVE</strong> - no longer needed with our move to Agile. Note, the wiki nav bar will need a link to our Agile planning doc and we need to update that spreadsheet to include user stories, the backlog, and the sprints.  I also think we should archive this spreadsheet each year and roll over open user stories and PBIs (after evaluating if they are still relevant) into the new year's spreadsheet.</li>
+		<li>Issues/New Issue - We should no longer create milestones in the issue tracker.  We should primarily use it to track user posted support/bug/feature requests and then move items to PBIs as needed.  I will also be cleaning it out of old content</li>
+		<li>Gantt <strong>REMOVE</strong> - no longer needed, period.</li>
+		<li>News - I noticed today that the News feed shows up on the project overview page (I am sure I knew this before).  So, I think we should use it, but not as a blog (this way content on the overview page is fresh).  I think the best use for it is to move the Sprint posts there.  Each news item will represent a sprint.  It's content will be a short summary of the planned sprint (selected PBIs with summaries) plus the review/retrospective added in after the sprint.  The News module supports comments, so we can put stand ups in the comments.  As for the handful of existing posts, I will port those over to the Model B blog as they really are blog like content.</li>
+		<li>DMSF - need that for distributing various files, plus I expect we will start to see more CAD models soon.</li>
+		<li>Wiki - No change in terms of how we use it, but there are many updates that need to be made there</li>
+		<li>Forums - No real change</li>
+		<li>Repository - No real change (need to make a tag for v0.3 when we wrap up this documentation work)</li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (1)</h3>
+
+  <div class="message reply" id="message-1224">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1215%3Fr=1224.html#message-1224">RE: Sorting out ODE Project Pages Update</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-12-04.html" title="12/04/2016 04:40 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>And now to move on to updating the wiki.  Here is a new suggested Nav bar layout (with notes as needed to explain in page updates)</p>
+
+
+	<a name="Holoseat"></a>
+<h3 >Holoseat<a href="1215%3Fr=1224.html#Holoseat" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="../../../projects/holoseat/wiki/Wiki.html" class="wiki-page">Home</a> - Welcome and About page content</li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Versions" class="wiki-page">Versions</a> - structure as is, add in Documentation page for v0.3 asap, based on final drafts of the wiki content</li>
+		<li><ins>Agile Process Docs</ins><br /><em>See <a href="https://opendesignengine.net/projects/holoseat/news" class="external">News</a> feed for weekly status reports</em>
+	<ul>
+	<li>2016: <ins>User Stories</ins> (link to user stories page) | <ins>Sprints</ins> (link to agile planning doc) <- will add same content for 2017 above 2016 to create a stack, note we should move epoch goals to the User Stories doc (I think)</li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Instructions"></a>
+<h4 >Instructions<a href="1215%3Fr=1224.html#Instructions" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="../../../projects/holoseat/wiki/Operating_Manual.html" class="wiki-page">Operating Manual</a> - write it</li>
+		<li><ins>Assembly Information</ins>
+	<ul>
+	<li><a href="../../../projects/holoseat/wiki/BOM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="../../../projects/holoseat/wiki/Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Design-Data"></a>
+<h4 >Design Data<a href="1215%3Fr=1224.html#Design-Data" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="../../../projects/holoseat/wiki/Block_Diagram.html" class="wiki-page">Block Diagram</a> - update</li>
+		<li><a href="../../../projects/holoseat/wiki/Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a> - pull in all of the fritzing files (DMSF for files, attach images and put them inline), refer back to block diagram</li>
+		<li><a href="../../../projects/holoseat/wiki/Software_Source_Code.html" class="wiki-page">Project Software</a> - reformat to be a list of the software for the project (app, firmware, test rig) pointing to tagged versions for 0.3, merge in details from <a href="../../../projects/holoseat/wiki/Firmware_Notes.html" class="wiki-page">Firmware Notes</a>, making sure to update links in source code comments where relevant</li>
+	</ul>
+
+
+	<a name="Research"></a>
+<h4 >Research<a href="1215%3Fr=1224.html#Research" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="../../../projects/holoseat/wiki/Resources.html" class="wiki-page">General Resources</a> - pull content out of this page and into appropriate sub-pages</li>
+		<li><ins>Technical Resources</ins>
+	<ul>
+	<li><a href="../../../projects/holoseat/wiki/Bluetooth.html" class="wiki-page">Bluetooth</a></li>
+		<li><a href="../../../projects/holoseat/wiki/Raspbery_Pi_Resources.html" class="wiki-page">Raspbery Pi Resources</a></li>
+		<li><a href="../../../projects/holoseat/wiki/CHIP_Resources.html" class="wiki-page">C.H.I.P. Resources</a></li>
+	</ul>
+	</li>
+		<li><ins>Biz Resources</ins>
+	<ul>
+	<li><a href="../../../projects/holoseat/wiki/Marketing_Resources.html" class="wiki-page">Marketing Resources</a></li>
+		<li><a href="../../../projects/holoseat/wiki/Start_Up_Resources.html" class="wiki-page">Start Up Resources</a></li>
+	</ul></li>
+	</ul>
+
+
+<strong>To Be Removed from Navigation Bar</strong>
+	<ul>
+	<li><a href="../../../projects/holoseat/wiki/Backers.html" class="wiki-page">Backers</a> - Remove since we have none at present</li>
+		<li><a href="../../../projects/holoseat/wiki/SoftwareFirmware_Summary.html" class="wiki-page">Software Notes</a> - remove</li>
+		<li><a href="../../../projects/holoseat/wiki/Errata.html" class="wiki-page">Errata</a> - remove</li>
+		<li><a href="../../../projects/holoseat/wiki/Initial_Questions.html" class="wiki-page">Initial Questions</a> - remove, too old, replace with user stories</li>
+		<li><a href="../../../projects/holoseat/wiki/Detailed_Design.html" class="wiki-page">Detailed Design</a> - remove, too old</li>
+		<li><a href="../../../projects/holoseat/wiki/Manufacture.html" class="wiki-page">Manufacture</a> - remove</li>
+		<li><a href="../../../projects/holoseat/wiki/Integration.html" class="wiki-page">Integration</a> - remove</li>
+		<li><a href="../../../projects/holoseat/wiki/Testing.html" class="wiki-page">Testing</a> - remove</li>
+		<li><a href="../../../projects/holoseat/wiki/Meeting_Minutes.html" class="wiki-page">Meeting Minutes/Notes</a> - remove</li>
+	</ul></div>
+  
+  </div>
+
+<p class="pagination"> (1-1/1)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1215.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

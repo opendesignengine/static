@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ground Sphere CubeSat Ground Station: News</title>
+  <link rel="self" href="http://opendesignengine.net/projects/groundsphere/news.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere/news"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2014-02-07T23:35:11+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Update for LNA production</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/55"/>
+    <id>http://opendesignengine.net/news/55</id>
+    <updated>2014-02-07T23:35:11+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;All parts are in to complete the first batch of production LNAs and we have completed the artwork for the solder mask (template).  Tomorrow will be a warm enough day to etch the aluminum to create the template.  Once it is verified both visually and with the production of a single unit, a small batch (about five units) will be made.  This may happen as early as February 9th (Sunday).&lt;/p&gt;
+
+
+	&lt;p&gt;The only part left for the Mk2 unit will be the 3D printed base.  I expect this to be completed and delivered to Quelab by the 12th.  I may have time this weekend to drive down to Quelab to pick up the base and deliver parts for them to build their own Ground Spheres, verifying the build instructions.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Testing update for Prototype 1</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/54"/>
+    <id>http://opendesignengine.net/news/54</id>
+    <updated>2014-01-04T16:21:34+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This update is based on a couple of emails from Tim at Southern Stars.  The short version of the update is that we have limited access for conducting from orbit testing, so Tim and Scott jumped at a chance this past week to run a from orbit test.  Unfortunately, the results are inconclusive at best, and disappointing at worst.  They were unable to receive signal from the CubeSat in question.  Read on for full details.&lt;/p&gt;
+
+
+	&lt;p&gt;The test in question involves attempting to receive signals from &lt;a href="http://space.skyrocket.de/doc_sdat/aerocube-4.htm" class="external"&gt;AeroCube 4C&lt;/a&gt;.  This CubeSat only broadcasts on 915 MHz when it is over its mission control center, so we have to make special arrangements to conduct the from orbit tests.  Specifically, we need to coordinate with its operators and Southern Stars team members must drive with the &lt;strong&gt;Ground Sphere&lt;/strong&gt; to the LA area in order to be under its footprint.&lt;/p&gt;
+
+
+	&lt;p&gt;This past Thursday (Jan 2), a test opportunity was arranged.  The operators believe they picked up the CubeSat's signal (they saw what appeared to be the signal on a spectrum analyzer) but were not able to establish a radio lock.  The following from Tim details our even less successful results.&lt;/p&gt;
+
+
+&lt;blockquote&gt;
+
+	&lt;p&gt;We were less successful.  We saw a number of "blips" right around the expected 914.7 MHz, but they were all very short.  We saw nothing like a continuous signal that dopper-shifted as the satellite approached and receded.  I suspect the blips were all local.  We recorded about 10 GB worth of raw RF samples from the SDR, and we'll go over these in more detail tomorrow.&lt;/p&gt;
+
+
+	&lt;p&gt;I should note: we used Scott's SDR, rather than the SDR that was sent to us.  I didn't realize this until after the pass began.  Scott's SDR does not have the same built-in preamp and has a smaller gain (a few dB difference?  Scott can you put a number on it?)  This was a mistake on our part.&lt;/p&gt;
+
+
+	&lt;p&gt;We also noticed that the GS antenna did not seem to produce noticeably any different signal levels when the power supply to the preamp was plugged in, vs. when it was not plugged in.  I don't know what that means.  Something may or may not be broken.  Or we're just not interpreting the SDR output correctly (?)&lt;/p&gt;
+
+
+&lt;/blockquote&gt;
+
+	&lt;p&gt;Discussions between Aaron and Scott over email confirm there was a hardware issue with Prototype 1.  The preamp's power connection came loose during transport so it was not in use during the test.&lt;/p&gt;
+
+
+	&lt;p&gt;It should also be noted that this attempt at a from orbit test, due to the challenges with securing test opportunities, came well out of the established testing order (see &lt;a href="http://opendesignengine.net/projects/groundsphere/wiki/Testing" class="wiki-page"&gt;Testing&lt;/a&gt; wiki page for more details).  Neither the lab tests nor the field tests have been run, and both need to be run to verify and validate the prototype.  In all likelihood, even the lab tests would have turned up the problem with the pre-amp.&lt;/p&gt;
+
+
+	&lt;p&gt;We will be circling the wagons here shortly to continue the testing.  More news as it is available.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>RTL-SDR Dongle in Linux</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/53"/>
+    <id>http://opendesignengine.net/news/53</id>
+    <updated>2014-01-01T11:06:36+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I plugged the dongle into my laptop and ran &lt;code&gt;lsusb&lt;/code&gt;. The following is the output.&lt;/p&gt;
+
+
+&lt;pre&gt;
+Bus 003 Device 005: ID 0bda:2838 Realtek Semiconductor Corp. RTL2838 DVB-T
+&lt;/pre&gt;
+
+	&lt;p&gt;The vendor and PID numbers match up with this entry on the &lt;a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr" class="external"&gt;rtl-sdr page&lt;/a&gt;:&lt;/p&gt;
+
+
+	&lt;p&gt;0x0bda    0x2838    E4000    ezcap USB 2.0 DVB-T/DAB/FM dongle&lt;/p&gt;
+
+
+	&lt;p&gt;Aaron mentioned that &lt;a href="http://sdrsharp.com/" class="external"&gt;SDR#&lt;/a&gt; has the ability to adjust the dongle's internal preamp gain. It runs on both Windows and Linux (via Mono), so I decided to give that a try using the instructions &lt;a href="http://rtlsdr.org/softwarelinux" class="external"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+
+	&lt;p&gt;The installation of the udev rules doesn't seem to work properly in the instructions above, but you can follow &lt;a href="http://www.instructables.com/id/rtl-sdr-on-Ubuntu/step3/Setup-udev-rules/" class="external"&gt;these&lt;/a&gt;.&lt;/p&gt;
+
+
+	&lt;p&gt;The kernel also automatically loads the dvb driver module for the dongle to make it available as a TV tuner. This causes &lt;code&gt;rtl_test -t&lt;/code&gt; to complain that something is already using the dongle. You can blacklist the offending module in &lt;code&gt;/etc/modprobe.d/blacklist.conf&lt;/code&gt; with the line:&lt;/p&gt;
+
+
+&lt;pre&gt;
+blacklist dvb_usb_rtl28xxu
+&lt;/pre&gt;
+
+	&lt;p&gt;For a quick kill of the driver you can just do:&lt;/p&gt;
+
+
+&lt;pre&gt;
+rmmod dvb_usb_rtl28xxu
+&lt;/pre&gt;
+
+	&lt;p&gt;SDRSharp should be able to access your dongle then.&lt;/p&gt;
+
+
+	&lt;p&gt;What it looks like is that it's rtl-sdr, not SDR# that adjusts the gain of the internal preamp. From what I see in the repo SeeDeR uses rtl-sdr, so it should be possible to adjust the gain through the library without writing code to directly talk to the dongle. Tim and Scott may already know this. I'll start a thread on the forum to ask.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>SkyCube Launch Delayed</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/52"/>
+    <id>http://opendesignengine.net/news/52</id>
+    <updated>2013-12-18T09:28:22+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Just saw &lt;a href="http://www.kickstarter.com/projects/880837561/skycube-the-first-satellite-launched-by-you/posts/698304" class="external"&gt;the news&lt;/a&gt; that the Orbital Cygnus launch SkyCube is manifested on has been postponed until January.  This delay is to give the ISS crew time to make repairs to the &lt;a href="http://abcnews.go.com/Technology/nasa-approves-spacewalks-fix-cooling-system-problem-space/story?id=21253134" class="external"&gt;cooling system&lt;/a&gt;.&lt;/p&gt;
+
+
+	&lt;p&gt;Mach 30 wishes the ISS crew speedy and safe repairs.  And we eagerly await the January launch of SkyCube.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Update from Tim</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/51"/>
+    <id>http://opendesignengine.net/news/51</id>
+    <updated>2013-12-09T10:43:37+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;First, an update on our own launch.  ORB-1 is now pushed back to December 17th, at 10:08 PM EST.  Deets here: &lt;a class="external" href="http://guestops.hq.nasa.gov"&gt;http://guestops.hq.nasa.gov&lt;/a&gt;&lt;br /&gt;Scott &amp;#38; myself are both planning to be there.&lt;/p&gt;
+
+
+	&lt;p&gt;Second, an update on ORS-3.  I've heard from several sources that more than half of the 28 CubeSats launched on ORS-3 have not been heard from in space.  (This comes to me independently from NPS, Pumpkin, and Spaceflight, so I tend to believe it.)  This is an unusually high failure rate, and it's led to speculation that something went wrong with the deployment in space.  You know as much as I know, now.&lt;/p&gt;
+
+
+	&lt;p&gt;Unfortunately, one of the failures was Horus, the NPS Colony-2 satellite that has the same radio as SkyCube.  It hasn't been heard from since launch.  NPS has had intermittent contact with NPS-SCAT, but the problem there seems to be software/firmware instability that reboots the satellite frequently, preventing any kind of robust connection.  On thursday last week, Gio told me they haven't heard from it for a week, and anyhow SCAT apparently downlinks at 2.2 GHz (S-band), contrary to what I'd ben told previously, so it's useless as a 915 MHz target.&lt;/p&gt;
+
+
+&lt;hr /&gt;
+
+
+	&lt;p&gt;So, this puts us back to only one possible (and difficult to test with) on orbit bird operating at 915 MHz.  The Ground Sphere team will need to look at how this affects &lt;a href="http://opendesignengine.net/projects/groundsphere/wiki/Testing" class="wiki-page"&gt;Testing&lt;/a&gt;.  More news as it is available.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Corrected Link Budget posted</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/50"/>
+    <id>http://opendesignengine.net/news/50</id>
+    <updated>2013-12-09T00:28:09+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;With the updated data from our partners, I have re-run and refactored the link budget.  We are still good to go.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Preliminary Link Budget Calculations</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/49"/>
+    <id>http://opendesignengine.net/news/49</id>
+    <updated>2013-12-07T14:02:10+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The rough link budget numbers I used for go/no-go calculations are now available in the DMSF section.  The spreadsheet was originally done for GS001 which was designed to receive transmissions from ISS, so the adaptation was relatively easy.  There is a PDF file and the original spreadsheet in ODS (Open Office) and XLS (Microsoft) formats.  To use the interactive spreadsheet, simply place values (known or guessed) in the value cells.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Big news for SkyCube!</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/48"/>
+    <id>http://opendesignengine.net/news/48</id>
+    <updated>2013-10-28T15:37:33+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This just in from Southern Stars, &lt;a href="http://www.kickstarter.com/projects/880837561/skycube-the-first-satellite-launched-by-you/posts/642774" class="external"&gt;SkyCube will launch on Dec 15&lt;/a&gt;.  This is super exciting news on several fronts.  First and foremost, completing qualifying tests and delivering a satellite for launch is a monumental occasion.  Southern Stars and all of their backers deserve a huge round of applause.  Kudos to one and all at the SkyCube team.&lt;/p&gt;
+
+
+	&lt;p&gt;Second, it locks &lt;strong&gt;Ground Sphere&lt;/strong&gt; into a fixed development schedule.  I will meet with Tim from Southern Stars shortly to make sure everyone is on the same page about the &lt;strong&gt;Ground Sphere&lt;/strong&gt; schedule.  Once that is done, I will update our calendar appropriately.  In the mean time, we will press ahead with our original schedule (though we have had a small delay due to shipping of a component for the first prototype, so we won't be exactly on schedule).&lt;/p&gt;
+
+
+	&lt;p&gt;With SkyCube on its way to space, it's time for us to get cracking.  Look for more updates soon.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;em&gt;ad astra per civitatem&lt;/em&gt; - to the stars through community&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Change of component</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/47"/>
+    <id>http://opendesignengine.net/news/47</id>
+    <updated>2013-10-09T21:39:44+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I have two pieces of news... first the bad, then the outstanding.&lt;/p&gt;
+
+
+	&lt;p&gt;Prior to modifying the preamp circuit, I performed some baseline tests on it in the UHF (435MHz) range.  The noise figure I got was around 5dB, nowhere near the advertized 1dB.  Further the gain I got was closer to 12dB, not 20 as advertized.  Online research shows that this design's quality control was all over the map.  In order to do the calculation for the component change, I first checked the center of the frequency band of the existing filter and found it to be at 167MHz, not in the UHF band at all.  All this leads me to believe that this is a poor design and too much time would have to be spent making sure the kit units worked as advertised.&lt;/p&gt;
+
+
+	&lt;p&gt;In looking for a replacement I found this preamp kit: &lt;a class="external" href="http://www.g0mrf.com/432LNA.htm"&gt;http://www.g0mrf.com/432LNA.htm&lt;/a&gt;  It has 20dB of gain with a noise figure of 0.6 at 915MHz, and is able to amplify signals from 145MHz to 1.5GHz.  Further, it is able to run on 5VDC simply by bypassing the voltage regulator.  This makes it ideal for our uses, and allows the ground station as designed to tune into standard UHF satellites as well by swapping out the aerials and phasing loop.&lt;/p&gt;
+
+
+	&lt;p&gt;In the grand tradition of ham radio (who were sharing designs a century before open hardware), this design is free for use, or we can buy a kit, or we can buy the board. I have contacted the designer in order to purchase a kit for $35.00 (including shipping from the UK).  Should this work as well as I expect, the bare board is available for $10.00, and I may be able to source the parts in the US for cheaper.  The other benefit to this design is that it is a single sided PC board with a ground plane on the back, making construction easy (as SMD circuits go) and giving us a shielded place to locate the SDR to further reduce the noise floor.&lt;/p&gt;
+
+
+	&lt;p&gt;Project wise, this brings the preamp into a known quantity, and not in need of a redesign.  To that end, I am going to post the antenna component spreadsheet and show the math tasks for this week as complete.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Physical calculations</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/46"/>
+    <id>http://opendesignengine.net/news/46</id>
+    <updated>2013-10-06T20:32:23+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The measurements for antenna components are as follows:&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Phasing line:  2.7745" of RG-62 90 ohm coax cable (I have nearly 1000 feet in stock).&lt;/li&gt;
+		&lt;li&gt;Body tube: 4" of 1.5" black ABS tubing (available at Lowes or other hardware store).&lt;/li&gt;
+		&lt;li&gt;Ground plane: 6.3" diameter disk of conductive rip stop fabric.&lt;/li&gt;
+		&lt;li&gt;Ground plane radial arms: 2.3925" of rigid material (need not be conductive).&lt;/li&gt;
+		&lt;li&gt;Aerial length (circumference): 13.7075" of 12ga copper wire or better.&lt;/li&gt;
+		&lt;li&gt;Distance between bottom of aerials and ground plane: 1.6475".&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;Note:  All parts have some tolerance to variance, the measurements cited were the precise mathematical ideals based upon ideal conditions and materials.  Some tuning will be required.&lt;/p&gt;    </content>
+  </entry>
+</feed>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yavin Thruster: Revisions</title>
+  <link rel="self" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2015-11-19T23:05:42+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Revision 41: Completed integration of test case dataset into MTK notebook</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/41"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/41</id>
+    <updated>2015-11-19T23:05:42+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 40: Resolved bugs with pressure vessel test case dataset and test initialization causing...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/40"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/40</id>
+    <updated>2015-11-19T23:05:01+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 39: Fixed the Hello World Chamber so that it will not coerce units into mm automatically...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/39"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/39</id>
+    <updated>2015-11-19T12:10:34+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 38: Fixed the valueerror from assuming that measurements would be in metric.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/38"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/38</id>
+    <updated>2015-11-18T13:28:24+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 37: Created a new pint_ext module where there's an extension of pint's UnitRegistry. The...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/37"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/37</id>
+    <updated>2015-11-17T17:48:53+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 36: Fixed the CAD test so that the rest of the tests would run.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/36"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/36</id>
+    <updated>2015-11-16T20:03:36+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 35: Removed an attempted import of Helpers from the CadQuery module for FreeCAD.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/35"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/35</id>
+    <updated>2015-11-15T13:18:42+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 34: Changed test cases to mimic the math tests, using the test case datasets.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/34"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/34</id>
+    <updated>2015-11-13T14:49:12+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 33: Updated the README for the conditional skip that was added to the CAD unit tests.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/33"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/33</id>
+    <updated>2015-11-13T08:20:32+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 32: Made the CAD test conditional based on the version of Python the tests are being run...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/32"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/32</id>
+    <updated>2015-11-12T22:21:58+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 31: Fixed python 2.7 support for the pressure vessel calcs and child classes</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/31"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/31</id>
+    <updated>2015-11-10T18:32:21+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 30: Updated module handling</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/30"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/30</id>
+    <updated>2015-11-04T20:50:37+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 29: Removed deprecation warning from test_cad.py</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/29"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/29</id>
+    <updated>2015-11-04T20:43:10+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 28: Removed runtests.py in favor of using Python's built-in unit test discovery, and doc...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/28"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/28</id>
+    <updated>2015-11-04T20:21:09+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 27: Resolved imports in tests post-move</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/repository/revisions/27"/>
+    <id>http://opendesignengine.net/projects/yavin-thruster/repository/revisions/27</id>
+    <updated>2015-11-04T20:18:28+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+</feed>

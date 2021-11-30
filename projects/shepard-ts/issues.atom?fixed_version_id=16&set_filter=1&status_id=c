@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Shepard Test Stand: Issues</title>
+  <link href="http://opendesignengine.net/projects/shepard-ts/issues.atom?fixed_version_id=16&amp;amp;set_filter=1&amp;amp;status_id=c" rel="self"/>
+  <link href="http://opendesignengine.net/projects/shepard-ts/issues?fixed_version_id=16&amp;amp;set_filter=1&amp;amp;status_id=c" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-06-26T06:15:12+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Bug #137 (Closed): 64-bit Version of Java on Windows Doesn&amp;#x27;t Support Serial Communications</title>
+    <link href="http://opendesignengine.net/issues/137" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/137</id>
+    <updated>2013-06-26T06:15:12+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;When attempting to run Shepard's Processing application on Windows 8 (or 7) 64-bit, you get the following exception.&lt;/p&gt;
+
+
+	&lt;p&gt;processing.app.SketchException: serial does not run in 64-bit mode.&lt;br /&gt;    at processing.mode.java.runner.Runner.&amp;lt;init&amp;gt;(Runner.java:104)&lt;br /&gt;    at processing.mode.java.JavaMode.handleRun(JavaMode.java:116)&lt;br /&gt;    at processing.mode.java.JavaEditor$19.run(JavaEditor.java:472)&lt;br /&gt;    at java.lang.Thread.run(Thread.java:662)&lt;/p&gt;
+
+
+	&lt;p&gt;Chris has suggested that a fix might be to install the 32-bit version of Java, but that hasn't been tried yet. It remains to be seen if it's worth figuring out how to fix this since we're most likely switching away from processing for Shepard 2.0.&lt;/p&gt;    </content>
+  </entry>
+</feed>

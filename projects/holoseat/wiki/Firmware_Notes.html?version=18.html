@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Firmware Notes</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Firmware-Notes"></a>
+<h1 >Firmware Notes<a href="Firmware_Notes.html%3Fversion=18.html#Firmware-Notes" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="Firmware_Notes.html%3Fversion=18.html#Firmware-Notes">Firmware Notes</a><ul><li><a href="Firmware_Notes.html%3Fversion=18.html#Default-Parameter-Values">Default Parameter Values</a></li><li><a href="Firmware_Notes.html%3Fversion=18.html#HoloSeat-Serial-Protocol">HoloSeat Serial Protocol</a><ul><li><a href="Firmware_Notes.html%3Fversion=18.html#Protocol-Commands">Protocol Commands</a></li><li><a href="Firmware_Notes.html%3Fversion=18.html#Protocol-Messages">Protocol Messages</a></li><li><a href="Firmware_Notes.html%3Fversion=18.html#Usage">Usage</a></li></ul></li></ul></li></ul>
+
+
+	<p>The firmware for the <strong>Holoseat</strong> can be found in the SVN Repository.  Its basic function is to detect pedal events from the sensor, use the timing of those events to determine the cadence (in RPM), and then send the walk command (generally by pressing the 'w' key) when the pedal speed is greater than the specified trigger speed.</p>
+
+
+	<a name="Default-Parameter-Values"></a>
+<h2 >Default Parameter Values<a href="Firmware_Notes.html%3Fversion=18.html#Default-Parameter-Values" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The default parameters for the firmware are stored in the <code>holoseat_constants.h</code> file so they will be available at start up without the need for a connection to the desktop control application.  The desktop control application modifies the default values by updating the values of the corresponding constants in this file and then flashing updated firmware to the Holoseat.  The following parameters have default values in the constants file.</p>
+
+
+	<ul>
+	<li>Default Walk Forward Character - what key is sent to move the character forward in the game</li>
+		<li>Default Walk Backward Character - what key is sent to move the character backward in the game</li>
+		<li>Default Holoseat Enabled - is the Holoseat enabled by default?</li>
+		<li>Default Trigger Cadence - how fast does the user need to pedal (in RPM) to trigger walking?</li>
+		<li>Default Logging Enabled - is serial logging enabled by default?</li>
+		<li>Default Logging Interval - how long between messages in serial logging in deci-seconds (0.1 of a second)</li>
+	</ul>
+
+
+	<a name="HoloSeat-Serial-Protocol"></a>
+<h2 >HoloSeat Serial Protocol<a href="Firmware_Notes.html%3Fversion=18.html#HoloSeat-Serial-Protocol" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The HoloSeat firmware has a serial protocol, the Holoseat Serial Protocol (HSP), to enable the desktop control application to modify all key parameters and to determine the current configuration of the Holoseat.</p>
+
+
+	<a name="Protocol-Commands"></a>
+<h3 >Protocol Commands<a href="Firmware_Notes.html%3Fversion=18.html#Protocol-Commands" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The HSP supports three commands.  Each command is made up of a single upper case character indicating the statement type.  One command, the (S)et statement, also takes an input string.</p>
+
+
+	<ul>
+	<li><code>?</code> - Ready(?) command; used to determine if the HoloSeat is ready to receive commands over the HSP (will reply with the (R)eady message followed by one standard state message if the HoloSeat is ready)</li>
+		<li><code>S &lt;config string&gt;</code> - (S)et command; used to send updated configuration to HoloSeat (HoloSeat will reply with <code>OK</code> on success).  The config string has the following format:<br /><code>&lt;WFC&gt;,&lt;WBC&gt;,&lt;E&gt;,&lt;TC&gt;,&lt;L&gt;,&lt;LI&gt;</code> - example: <code>S w,s,0,60,0,20</code>
+	<ul>
+	<li><code>&lt;WFC&gt;</code> - Walk forward character (example: w)</li>
+		<li><code>&lt;WBC&gt;</code> - Walk backward character (example: s)</li>
+		<li><code>&lt;E&gt;</code> - Enabled? Must be a <code>0</code> (disabled) or a <code>1</code> (enabled) (example: 1)</li>
+		<li><code>&lt;TC&gt;</code> - Trigger cadence (example: 65)</li>
+		<li><code>&lt;L&gt;</code> - Logging enabled? Must be a <code>0</code> (disabled) or a <code>1</code> (enabled) (example: 1)</li>
+		<li><code>&lt;LI&gt;</code> - Logging interval in deci-seconds (example: 10)</li>
+	</ul>
+	</li>
+		<li><code>Q</code> - (Q)uery command; used to request the HoloSeat send one standard state message (see <strong>Protocol Messages</strong> below)</li>
+	</ul>
+
+
+	<a name="Protocol-Messages"></a>
+<h3 >Protocol Messages<a href="Firmware_Notes.html%3Fversion=18.html#Protocol-Messages" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The HSP has two messages.  One is a single character message similar to the commands and one is the HSP standard state message which is sent after initialization, in reply to a (Q)uery command, and as the serial logging message.</p>
+
+
+	<ul>
+	<li><code>R</code> - (R)eady; sent by the HoloSeat to indicate it is ready for serial communication; sent in reply to the Ready(?) command and when serial port is attached in debug mode (to be added)</li>
+		<li><code>&lt;VER&gt;,&lt;WFC&gt;(&lt;DWFC&gt;),&lt;WBC&gt;(&lt;DWBC&gt;),&lt;E&gt;(&lt;DE&gt;),&lt;C&gt;/&lt;TC&gt;(&lt;DTC&gt;),&lt;L&gt;(&lt;DL&gt;)/&lt;LI&gt;(&lt;DLI&gt;)</code> - standard state message, see below for key; example: <code>1.2.3,w(w),s(s),1(1),70/65(75),1(0)/10(10)</code>
+	<ul>
+	<li><code>&lt;VER&gt;</code> - Firmware version string (example: 1.2.3)</li>
+		<li><code>&lt;WFC&gt;</code> - Walk forward character (example: w)</li>
+		<li><code>&lt;DWFC&gt;</code> - Default walk forward character (example: w)</li>
+		<li><code>&lt;WBC&gt;</code> - Walk backward character (example: s)</li>
+		<li><code>&lt;DWBC&gt;</code> - Default walk backward character (example: s)</li>
+		<li><code>&lt;E&gt;</code> - Enabled? Must be a <code>0</code> (disabled) or a <code>1</code> (enabled) (example: 1)</li>
+		<li><code>&lt;DE&gt;</code> - Default enabled state, same format as <code>&lt;E&gt;</code> (example: 1)</li>
+		<li><code>&lt;C&gt;</code> - Current cadence rounded to whole number; positive value means direction is forward, negative value means direction is backward (example: 70)</li>
+		<li><code>&lt;TC&gt;</code> - Trigger cadence (example: 65)</li>
+		<li><code>&lt;DTC&gt;</code> - Default trigger cadence (example: 75)</li>
+		<li><code>&lt;L&gt;</code> - Logging enabled? Must be a <code>0</code> (disabled) or a <code>1</code> (enabled) (example: 1)</li>
+		<li><code>&lt;DL&gt;</code> - Default logging enabled,  same format as <code>&lt;L&gt;</code> (example: 0)</li>
+		<li><code>&lt;LI&gt;</code> - Logging interval in deci-seconds (example: 10)</li>
+		<li><code>&lt;DLI&gt;</code> - Default logging interval in deci-seconds (example: 10)</li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Usage"></a>
+<h3 >Usage<a href="Firmware_Notes.html%3Fversion=18.html#Usage" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Always start a serial session by sending a Ready(?) command.  If a (R)eady message is not received, wait and try again until a timeout is reached or a (R)eady message is received.  Be sure to check the version string sent in the initial standard state message to ensure your app is compatible with the version of the HoloSeat firmware.</p>
+
+
+	<p>After you have initialized your connection, you can then use the (Set) and (Q)uery commands as necessary to control and observe the HoloSeat's state.</p>
+</body>
+</html>

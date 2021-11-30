@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - RTL-SDR Dongle in Linux - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/groundsphere.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/groundsphere%3Fjump=news.html" class="news selected">News</a></li>
+<li><a href="../projects/groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-53-watcher"></span>
+
+
+</div>
+
+<h2>RTL-SDR Dongle in Linux</h2>
+
+
+
+<p><em>I wanted to get a better idea of how the dongle gain was manipulated through software. To do this I first got rtl-sdr and SDRSharp running on my Linux machine.</em><br />
+<span class="author">Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/groundsphere/activity%3Ffrom=2014-01-01.html" title="01/01/2014 11:06 am">almost 9 years</a> ago</span></p>
+<div class="wiki">
+<p>I plugged the dongle into my laptop and ran <code>lsusb</code>. The following is the output.</p>
+
+
+<pre>
+Bus 003 Device 005: ID 0bda:2838 Realtek Semiconductor Corp. RTL2838 DVB-T
+</pre>
+
+	<p>The vendor and PID numbers match up with this entry on the <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr" class="external">rtl-sdr page</a>:</p>
+
+
+	<p>0x0bda    0x2838    E4000    ezcap USB 2.0 DVB-T/DAB/FM dongle</p>
+
+
+	<p>Aaron mentioned that <a href="http://sdrsharp.com/" class="external">SDR#</a> has the ability to adjust the dongle's internal preamp gain. It runs on both Windows and Linux (via Mono), so I decided to give that a try using the instructions <a href="http://rtlsdr.org/softwarelinux" class="external">here</a>.</p>
+
+
+	<p>The installation of the udev rules doesn't seem to work properly in the instructions above, but you can follow <a href="http://www.instructables.com/id/rtl-sdr-on-Ubuntu/step3/Setup-udev-rules/" class="external">these</a>.</p>
+
+
+	<p>The kernel also automatically loads the dvb driver module for the dongle to make it available as a TV tuner. This causes <code>rtl_test -t</code> to complain that something is already using the dongle. You can blacklist the offending module in <code>/etc/modprobe.d/blacklist.conf</code> with the line:</p>
+
+
+<pre>
+blacklist dvb_usb_rtl28xxu
+</pre>
+
+	<p>For a quick kill of the driver you can just do:</p>
+
+
+<pre>
+rmmod dvb_usb_rtl28xxu
+</pre>
+
+	<p>SDRSharp should be able to access your dongle then.</p>
+
+
+	<p>What it looks like is that it's rtl-sdr, not SDR# that adjusts the gain of the internal preamp. From what I see in the repo SeeDeR uses rtl-sdr, so it should be possible to adjust the gain through the library without writing code to directly talk to the dongle. Tim and Scott may already know this. I'll start a thread on the forum to ask.</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/680" class="icon icon-contributor-license">kathleen swafford</a> <a href="../projects/groundsphere/activity%3Ffrom=2018-11-13.html" title="11/13/2018 06:27 am">almost 4 years</a> ago</h4>
+    <p>Good post. It really helps us. Its give us lots of interest and pleasure. Its opportunity is <a href="http://opendesignengine.net/projects/groundsphere/wiki/Womens_Leather_Jackets" class="wiki-page new">Womens Leather Jackets</a><a class="external" href="https://www.hjackets.com/category/womens-leather-jackets/">https://www.hjackets.com/category/womens-leather-jackets/</a> so fantastic and working style so speedy. It's really a good article. It gives me lots of pleasure and interest..!!</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/695" class="icon icon-contributor-license">Carter Wine</a> <a href="../projects/groundsphere/activity%3Ffrom=2018-11-27.html" title="11/27/2018 11:02 am">almost 4 years</a> ago</h4>
+    <p>If you are the one who likes the technical system then use Linux system because it is much expensive. The <a href="https://www.australian-writings.net/" class="external">professional assignment writers</a> share videos which you can watch and if you like then you go for it.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/705" class="icon icon-contributor-license">renuka singh</a> <a href="../projects/groundsphere/activity%3Ffrom=2018-12-01.html" title="12/01/2018 10:34 am">almost 4 years</a> ago</h4>
+    <p>CGC Jhanjeri is one of the best colleges in the North India and we are providing the best quality of education in various courses.<br /><a href="https://www.cgc.ac.in" class="external">engineering college in chandigarh</a><br /><a href="https://www.cgc.ac.in/engineering.html" class="external">best engineering College in north india</a><br /><a href="https://www.cgc.ac.in/b-tech-civil.html" class="external">civil engineering college in punjab</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/705" class="icon icon-contributor-license">renuka singh</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-03-18.html" title="03/18/2019 11:27 am">over 3 years</a> ago</h4>
+    <p>There are many things that are needed to know while being in social networking and this will be a better platform.&lt;br&gt;<br /><a href="http://www.rashpalsinghdhaliwal.in" class="external">Rashpal singh dhaliwal</a><br /><a href="https://in.pinterest.com/rashpalsinghdhaliwal/" class="external">Rashpal singh dhaliwal</a><br /><a href="https://twitter.com/cgc_rsdhaliwal" class="external">Rashpal singh dhaliwal</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/801" class="icon icon-contributor-license">Chris Coleman</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-03-25.html" title="03/25/2019 12:15 pm">over 3 years</a> ago</h4>
+    <p>It's so nice to know all of this.<br />Chris of <a href="https://www.concretecontractorscolumbia.com/patios" class="external">concrete patios columbia sc</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/705" class="icon icon-contributor-license">renuka singh</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-04-04.html" title="04/04/2019 12:07 pm">over 3 years</a> ago</h4>
+    <p>Counter-Strike: Global Offensive is one of the most popular multiplayer games at the moment. For any CS GO fan out there, a good, well-reputed account is an absolute necessity.&lt;br&gt;<br /><a href="https://buyacsgosmurf.com" class="external">csgo accounts</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/817" class="icon icon-contributor-license">Barbara Parker</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-04-16.html" title="04/16/2019 11:30 am">over 3 years</a> ago</h4>
+    <p><a class="external" href="https://fortnitephonecase.com/Red-iPhone-7-Plus-Case">https://fortnitephonecase.com/Red-iPhone-7-Plus-Case</a> Thanks, this website is very helpful.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/825" class="icon icon-contributor-license">Anna John</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-04-27.html" title="04/27/2019 10:43 am">over 3 years</a> ago</h4>
+    <p>It's an informative post. It contains so many useful data. <a href="http://www.cabusaccidentattorney.com/bus-accident-attorney/statute-of-limitations-in-bus-accident-cases/.bar" class="external">Dog Bite Lawyer</a> It helped me to learn about Dongle and it's functions. Thanks a lot for providing the article. Keep providing such useful data. Good work.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/705" class="icon icon-contributor-license">renuka singh</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-07-19.html" title="07/19/2019 11:24 am">over 3 years</a> ago</h4>
+    <p>Welcome to the world of gaming, where life is fast paced and interesting. There is always an adventure waiting for you online.<br /><a href="https://mygamingaccounts.com" class="external">csgo accounts</a><br /><a href="https://mygamingaccounts.com/csgo-high-tier-vip-accounts/" class="external">csgo vip accounts</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/1174" class="icon icon-contributor-license">Alex John</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-08-30.html" title="08/30/2019 07:38 am">about 3 years</a> ago</h4>
+    <p>hi how are you &lt;a href="www.google.com"&gt;google&lt;/a&gt;</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/1174" class="icon icon-contributor-license">Alex John</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-08-30.html" title="08/30/2019 07:41 am">about 3 years</a> ago</h4>
+    <p>hi how are you [<a class="external" href="http://www.google.com[google">http://www.google.com[google</a>]]</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/1174" class="icon icon-contributor-license">Alex John</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-08-30.html" title="08/30/2019 07:42 am">about 3 years</a> ago</h4>
+    <p>hi how are you [<a class="external" href="http://www.google.com">http://www.google.com</a> google]</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/1174" class="icon icon-contributor-license">Alex John</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-08-30.html" title="08/30/2019 07:42 am">about 3 years</a> ago</h4>
+    <p>Me &amp; my fellow classmates use your blogs as our reference materials. We look out for more interesting posts from your end about the same topic . Even the future updates about this topic would be of great help.<br /><a class="external" href="http://www.travelsolutions.co/hotel-booking-engine/">http://www.travelsolutions.co/hotel-booking-engine/</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/1379" class="icon icon-contributor-license">Lauren Desouza</a> <a href="../projects/groundsphere/activity%3Ffrom=2019-12-10.html" title="12/10/2019 09:02 am">almost 3 years</a> ago</h4>
+    <p>Thanks for share here some information regarding Linux. I think this will very useful for all who are in IT field.<br />Lauren Desouza, <br /><a href="https://www.cvfolks.co.uk/cover-letter/" class="external">https://www.cvfolks.co.uk/cover-letter/</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/460" class="icon icon-contributor-license">Harrison Horne</a> <a href="../projects/groundsphere/activity%3Ffrom=2020-11-24.html" title="11/24/2020 01:57 pm">almost 2 years</a> ago</h4>
+    <p>&lt;a href="https://www.essaygeeks.co.uk/assignment/"&gt;assignment help service&lt;/a&gt;</p>
+
+
+	<p>&lt;a rel="dofollow" href="https://www.essaygeeks.co.uk"&gt;essay help&lt;/a&gt;</p>
+
+
+	<p>[URL=https://iamfeelingblog.com/]iamfeelingblog[/URL]</p>
+
+
+	<p>[vitutors.com](<a class="external" href="https://vitutors.com/">https://vitutors.com/</a>)</p>
+
+
+	<p>[url=https://www.essaygeeks.co.uk]EssayGeeks essay writing service uk[/url]</p>
+
+
+	<p>"weblink"https://untamedscience.com/filmmaking/science-film-reviews/top-films-featuring-gambling/</p>
+
+
+	<p>[<a class="external" href="https://untamedscience.com/filmmaking/science-film-reviews/top-films-featuring-gambling/">https://untamedscience.com/filmmaking/science-film-reviews/top-films-featuring-gambling/</a> weblink]</p>
+
+
+	<p>[[ <a class="external" href="https://www.10bestseo.com/url-opener/">https://www.10bestseo.com/url-opener/</a> | Google ]]</p>
+
+
+	<p>&lt;a rel="dofollow"https://www.bestessayservicereviews.com/write-my-paper/"&gt;write my essay reviews&lt;/a&gt;</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/53.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

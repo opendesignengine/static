@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Bluetooth Modules - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1120-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Bluetooth Modules</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-02-06.html" title="02/06/2016 09:20 am">over 6 years</a> ago</span></p>
+<div class="wiki">
+After reviewing a lot of information on bluetooth modules I keep coming back to two specific boards.  Major requirements we've established based on discussions:
+	<ul>
+	<li>Must be Bluetooth 4 LE</li>
+		<li>Must have HID profile</li>
+	</ul>
+
+
+	<p>Narrowed down to two options once you bring in those two factors to get chips that are both reasonably inexpensive and meet spec.<br /><a class="external" href="https://www.adafruit.com/products/2479">https://www.adafruit.com/products/2479</a> - UART based Bluetooth board<br /><a class="external" href="https://www.adafruit.com/products/2633">https://www.adafruit.com/products/2633</a> - SPI based bluetooth board</p>
+
+
+	<p>Long term SPI seems like a better solution, but we're going to have an easier time getting UART wired and functioning.</p>
+
+
+	<p>Both are 17.50 with drops at 10 to 15.75 and 100 to 14.00 for volume discounts at this time.</p>
+
+
+	<p>Alternate sources were reviewed, but the two requirements were continually causing things to be excluded or they were more expensive.</p>
+
+
+Additionally, it may be worth purchasing of the following:
+	<ul>
+	<li><a class="external" href="https://www.adafruit.com/products/2269">https://www.adafruit.com/products/2269</a> - Bluetooth module with sniffing capabilities for debugging the actual bluetooth communication</li>
+		<li><a class="external" href="https://www.adafruit.com/products/1327">https://www.adafruit.com/products/1327</a> - Bluetooth module from Adafruit so I've got a BTLE4 compatible module for my desktop where I'm doing my development. (this one is actually more of a requirement since I don't have bluetooth in my desktop at all)</li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (2)</h3>
+
+  <div class="message reply" id="message-1121">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1120%3Fr=1121.html#message-1121">RE: Bluetooth Modules</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-02-07.html" title="02/07/2016 03:30 pm">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Good stuff.  Concur about UART for now.  SPI looks like a better protocol long term, but  think our ultimate selection depends on the board we select.</p>
+
+
+	<p>Consider the Raspberry Pi zero (it is as an example of a new board I have been pondering).  The RPi Zero is small, low cost (even at low numbers), and supports <a href="http://nodebots.io/" class="external">NodeBots</a> through <a href="https://github.com/nebrius/raspi-io" class="external">raspi-io</a>.  Note, raspi-io does not support SPI, making it an example of a board that would leave us needing to use UART (or I2C if it was an option).</p>
+
+
+	<p>I will wait until we work on the board selection PBI to unpack my thoughts on the RPi Zero vs other boards.  Plus, I want to get some more experience with Nodebots (probably in the test rig) before I get too committed to the idea of using an RPi Zero.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1126">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1120%3Fr=1126.html#message-1126">RE: Bluetooth Modules</a>
+    -
+    Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2016-02-17.html" title="02/17/2016 11:04 am">over 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>UART module purchased along with other requisite hardware.   It is wired onto a protoboard.  Have to have some time to code/test the keyboard functionality.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-2/2)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1120.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

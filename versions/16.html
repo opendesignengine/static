@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - v2.0 Shepard Test Stand - Prototype - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../javascripts/context_menu.js%3F1359925542" type="text/javascript"></script><link href="../stylesheets/context_menu.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" /></head>
+<body class="controller-versions action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/shepard-ts.html" method="get">
+        
+        <a href="../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/shepard-ts/roadmap.html" class="roadmap selected">Roadmap</a></li>
+<li><a href="../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/shepard-ts/boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+
+
+</div>
+
+<h2>v2.0 Shepard Test Stand - Prototype</h2>
+
+<div id="roadmap">
+
+  <p><strong>over 9 years late</strong> (07/30/2013)</p>
+
+
+<p>Base for the kit version of the Shepard Test Stand.</p>
+<ul>
+	
+</ul>
+
+
+    <table class="progress" style="width: 40em;"><tr><td class="closed" style="width: 11%;"></td><td class="done" style="width: 6%;"></td><td class="todo" style="width: 83%;"></td></tr></table><p class="pourcent">17%</p>
+    <p class="progress-info">
+        <a href="http://opendesignengine.net/projects/shepard-ts/issues?fixed_version_id=16&amp;set_filter=1&amp;status_id=c">1 closed</a>
+        (10%)
+        &#160;
+        <a href="http://opendesignengine.net/projects/shepard-ts/issues?fixed_version_id=16&amp;set_filter=1&amp;status_id=o">9 open</a>
+        (90%)
+    </p>
+
+
+
+
+<div id="version-summary">
+
+<fieldset><legend>Time tracking</legend>
+<table>
+<tr>
+    <td width="130px" align="right">Estimated time</td>
+    <td width="240px" class="total-hours"width="130px" align="right"><span class="hours hours-int">6</span><span class="hours hours-dec">.50</span> hours</td>
+</tr>
+
+</table>
+</fieldset>
+
+
+<div id="status_by">
+<form id="status_by_form">
+<fieldset>
+<legend>
+Issues by <select id="status_by_select" name="status_by" onchange="new Ajax.Request('/versions/16/status_by', {asynchronous:true, evalScripts:true, parameters:Form.serialize('status_by_form') + '&amp;authenticity_token=' + encodeURIComponent('b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=')})"><option value="category" selected="selected">Category</option>
+<option value="tracker">Tracker</option>
+<option value="status">Status</option>
+<option value="priority">Priority</option>
+<option value="author">Author</option>
+<option value="assigned_to">Assignee</option></select>
+</legend>
+
+    <p><em>No data to display</em></p>
+
+</fieldset>
+</form>
+
+</div>
+</div>
+
+
+<form action="16.html" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>  <table class="list related-issues">
+  <caption>Related issues</caption>
+    <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="137" /></td>
+      <td><a href="http://opendesignengine.net/issues/137" class="issue status-5 priority-1 closed child">Bug #137</a>: 64-bit Version of Java on Windows Doesn&amp;#x27;t Support Serial Communications</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="157" /></td>
+      <td><a href="../issues/157.html" class="issue status-4 priority-3">Bug #157</a>: Time Stamp Bit Size Wrong On Arduino and Client</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="174" /></td>
+      <td><a href="../issues/174.html" class="issue status-2 priority-2 parent">Bug #174</a>: Create Java based GUI for Shepard DCS</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="175" /></td>
+      <td><a href="../issues/175.html" class="issue status-4 priority-2 child">Bug #175</a>: Java GUI does not yet save CSV of data captured from the Arduino</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="147" /></td>
+      <td><a href="../issues/147.html" class="issue status-1 priority-2 child">Feature #147</a>: Add Mach 30 Branding To Software Interface</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="153" /></td>
+      <td><a href="../issues/153.html" class="issue status-2 priority-2">Feature #153</a>: Switch to 5 Volt Version of MLX90614 IR Sensor</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="154" /></td>
+      <td><a href="../issues/154.html" class="issue status-1 priority-2">Feature #154</a>: Return 0.0 For Temperature if IR Sensor is Not Connected</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="173" /></td>
+      <td><a href="../issues/173.html" class="issue status-1 priority-2 child">Feature #173</a>: Add a &quot;wizard&quot; mode for the Shepard GUI</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="176" /></td>
+      <td><a href="../issues/176.html" class="issue status-1 priority-2">Feature #176</a>: Add Compulsory Version Matching Between Arduino and Java App</td>
+    </tr>
+      <tr class="hascontextmenu">
+      <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="234" /></td>
+      <td><a href="../issues/234.html" class="issue status-1 priority-2">Feature #234</a>: Arduino - Move Timestamp Zero Control to Arduino Instead of Client</td>
+    </tr>
+  
+  </table>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+new ContextMenu('/issues/context_menu')
+//]]>
+</script>
+
+</div>
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/16">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

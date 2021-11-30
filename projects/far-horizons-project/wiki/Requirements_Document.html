@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Far Horizons Project - Requirements Document - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/far-horizons-project.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/far-horizons-project.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Far Horizons Project</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../far-horizons-project.html" class="overview">Overview</a></li>
+<li><a href="../activity.html" class="activity">Activity</a></li>
+<li><a href="../roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../issues.html" class="issues">Issues</a></li>
+<li><a href="../issues/calendar.html" class="calendar">Calendar</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/far-horizons-project.html" class="dmsf">DMSF</a></li>
+<li><a href="../wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Navigation</a><a href="Requirements_Document.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Far-Horizons-Project"></a>
+<h3 >Far Horizons Project<a href="Requirements_Document.html#Far-Horizons-Project" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="Wiki.html" class="wiki-page">Start Here</a></li>
+		<li><a href="Versions.html" class="wiki-page">Versions</a></li>
+	</ul>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="Requirements_Document.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="BOM.html" class="wiki-page">BOM</a></li>
+		<li><a href="Operating_Manual.html" class="wiki-page">Operating Manual</a></li>
+		<li><a href="Design_Videos.html" class="wiki-page">Design Videos</a></li>
+		<li><a href="Launch_Videos.html" class="wiki-page">Launch Videos</a></li>
+		<li><a href="Safety_Procedures.html" class="wiki-page">Safety Procedures</a></li>
+		<li><a href="Licensing_and_Attribution.html" class="wiki-page">Licensing and Attribution</a></li>
+		<li><a href="Errata.html" class="wiki-page">Errata</a></li>
+	</ol>
+
+
+	<a name="Systems-Engineering-Process"></a>
+<h4 >Systems Engineering Process<a href="Requirements_Document.html#Systems-Engineering-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="Initial_Questions.html" class="wiki-page">Initial Questions</a></li>
+		<li><a href="Requirements_Document.html" class="wiki-page">Requirements Document</a></li>
+		<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="Budget.html" class="wiki-page">Budget</a></li>
+		<li><a href="Disposal.html" class="wiki-page">Disposal</a></li>
+		<li><a href="Meeting_Minutes.html" class="wiki-page">Meeting Minutes</a></li>
+	</ol>
+
+<h3>Wiki</h3>
+
+<a href="../wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-139-watcher"></span>
+
+
+
+
+
+
+<a href="http://opendesignengine.net/projects/far-horizons-project/wiki/Requirements_Document/history" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <a name="Far-Horizons-Project-Requirements-Document"></a>
+<h1 >Far Horizons Project Requirements Document<a href="Requirements_Document.html#Far-Horizons-Project-Requirements-Document" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Requirements_Document.html#Far-Horizons-Project-Requirements-Document">Far Horizons Project Requirements Document</a><ul><li><ul><li><a href="Requirements_Document.html#Introduction">Introduction</a></li><li><a href="Requirements_Document.html#Technical-Requirements">Technical Requirements</a></li><li><a href="Requirements_Document.html#Project-Requirements">Project Requirements</a></li><li><a href="Requirements_Document.html#Future-V20-Requirements">Future V2.0 Requirements</a></li><li><a href="Requirements_Document.html#Glossary">Glossary</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h3 >Introduction<a href="Requirements_Document.html#Introduction" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The requirements list matches up to the Initial Questions in step one of the Systems Engineering process as shown below. Each requirement is labeled with FHPR (Far Horizons Project Requirement), followed by the number of the <a href="http://opendesignengine.net/projects/far-horizons-project/wiki/Initial_Questions_v1_0" class="wiki-page">initial question</a> that the requirement corresponds to, followed by a dot and then the ID number of the requirement.</p>
+
+
+	<ul>
+	<li><strong>FHPR 1.x</strong> - Why are we making this?</li>
+		<li><strong>FHPR 2.x</strong> - Who is this for?</li>
+		<li><strong>FHPR 3.x</strong> - How will this be used?</li>
+		<li><strong>FHPR 4.x</strong> - What features does it need to have (now)?</li>
+		<li><strong>FHPR 5.x</strong> - What features does it need to have (later)?</li>
+		<li><strong>FHPR 6.x</strong> - What are the legacy requirements?</li>
+		<li><strong>FHPR 7.x</strong> - Who's going to build this?</li>
+		<li><strong>FHPR 8.x</strong> - How many do we want to make?</li>
+		<li><strong>FHPR 9.x</strong> - What is the budget?</li>
+		<li><strong>FHPR 10.x</strong> - What is the timeline?</li>
+		<li><strong>FHPR 11.x</strong> - What waste products will be produced by the manufacture and/or operation of this?</li>
+	</ul>
+
+
+	<a name="Technical-Requirements"></a>
+<h3 >Technical Requirements<a href="Requirements_Document.html#Technical-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Technical requirements are those requirements which include measurable performance values.  Each technical requirement should be verified through testing to ensure the design meets the requirement.</p>
+
+
+	<ul>
+	<li><strong>FHPR 3.1</strong> The HAB must be able to carry scientific and engineering payloads to a "near space environment" and return the payloads safely.
+	<ul>
+	<li><strong>FHPR 3.1.1</strong> Individual modules must weigh 6 lbs or less.</li>
+		<li><strong>FHPR 3.1.2</strong> Total launch weight must be 12 lbs or less.  </li>
+	</ul>
+	</li>
+		<li><strong>FHPR 3.2</strong> The HAB must be able to withstand the near space environment.
+	<ul>
+	<li><strong>FHPR 3.2.1</strong> Must be able to operate at a pressure 0.01 atm.</li>
+		<li><strong>FHPR 3.2.2</strong> Must be able to operate at radiation levels of up to 60x that at ground level. </li>
+		<li><strong>FHPR 3.2.3</strong> Must be able to operate at -60 C. </li>
+	</ul>
+	</li>
+		<li><strong>FHPR 3.3</strong> The HAB electronics must be able to run for a minimum of 2 hours including 1 hour at altitude (these times are subject to individual mission plans).</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>FHPR 4.1</strong> The HAB will carry payloads to altitudes between 90k ft and 100k ft.</li>
+		<li><strong>FHPR 4.4</strong> The HAB will include a descent system to provide a soft landing (max landing speed of 25 mph).</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>FHPR 6.1</strong> The design and operation of the HAB shall comply with <a href="http://ecfr.gpoaccess.gov/cgi/t/text/text-idx?c=ecfr&#38;rgn=div5&#38;view=text&#38;node=14:2.0.1.3.15&#38;idno=14#14:2.0.1.3.15.4" class="external">FAR 101</a>.</li>
+	</ul>
+
+
+	<a name="Project-Requirements"></a>
+<h3 >Project Requirements<a href="Requirements_Document.html#Project-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Project requirements are the remaining requirements which are not tied to specific performance values.</p>
+
+
+	<ul>
+	<li><strong>FHPR 2.1</strong> The HAB must be well documented so as to meet the needs of open source spaceflight designers who will design and build High Altitude Balloons (at Adler and elsewhere).</li>
+		<li><strong>FHPR 2.2</strong> The HAB documentation and procedures must be complete enough for Adler operators, students, educators, and Makers who want to bring near space missions into the classroom, and anyone else interested in running near space missions.</li>
+		<li><strong>FHPR 2.3</strong> The HAB documentation must cover the the development, setup, launch, tracking, and recovery of the HAB.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>FHPR 4.2</strong> The HAB documentation shall include safety guidelines for launch and recovery.  </li>
+		<li><strong>FHPR 4.3</strong> The HAB will broadcast a tracking signal to facilitate recovery.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>FHPR 7.1</strong> All HAB design documentation must be open and complete enough so that anyone, without necessarily a technical education in high altitude ballooning or engineering, would be able to build and operate the HAB.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>FHPR 8.1</strong> The design and documentation of the HAB must enable the completion and operation of at least one HAB by a third-party.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>FHPR 9.1</strong> The cost of the first third-party operational HAB must not exceed $300 excluding "consumables" and tools.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>FHPR 10.1</strong> The build schedule for the HAB should be between 4 and 5 weeks from project commitment to launch.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>FHPR 11.1</strong> Electronic waste items, including batteries (lithium and others) and circuit boards, must be disposed of according to all local, state, and federal guidelines.</li>
+		<li><strong>FHPR 11.2</strong> If the structures of the HAB are damaged beyond repair during operation, proper disposal/recycling guidelines must be followed for the materials used in its construction.</li>
+		<li><strong>FHPR 11.3</strong> Wherever possible, the HAB design should make it as easy as possible to replace components which are consumable or relatively easy to damage.</li>
+	</ul>
+
+
+	<a name="Future-V20-Requirements"></a>
+<h3 >Future V2.0 Requirements<a href="Requirements_Document.html#Future-V20-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>These are for reference only so that future features can be accommodated in the current design where practical.</p>
+
+
+Version 2.0 and beyond:
+	<ul>
+	<li><strong>FHPR 5.1</strong> Implement advanced tracking and recovery systems used by Adler (redundant APRS transmitters/receivers and cut down unit)</li>
+		<li><strong>FHPR 5.2</strong> Controlled descent system (guided landings using parafoil/air-ram kite to either hit or avoid landing sites)</li>
+		<li><strong>FHPR 5.3</strong> Live two-way telemetry (or command &#38; control) and the ability to receive live experiment and operations data</li>
+		<li><strong>FHPR 5.4</strong> Stabilized platform system (Adler is making progress on this one)</li>
+		<li><strong>FHPR 5.5</strong> Alternative balloon configurations (zero-pressure, super-pressure balloons)</li>
+		<li><strong>FHPR 5.6</strong> Alternate lift gasses (Adler uses helium right now)</li>
+		<li><strong>FHPR 5.7</strong> A structure to hold the balloon during filling operations and to automatically stop the filling operation for the desired lift</li>
+	</ul>
+
+
+	<a name="Glossary"></a>
+<h3 >Glossary<a href="Requirements_Document.html#Glossary" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Cut Down Unit - Device for detaching the balloon envelop from the flight vehicle to prevent unwanted interactions with the descent control system (often a parachute)</li>
+		<li>FHPR - Far Horizons Project Requirement</li>
+		<li>HAB - High Altitude Balloon</li>
+	</ul>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/far-horizons-project/wiki/Requirements_Document.html?version=4" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/far-horizons-project/wiki/Requirements_Document.txt?version=4" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/Requirements_Document">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link href="http://opendesignengine.net/issues/147.atom" rel="self"/>
+  <link href="http://opendesignengine.net/" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-09-12T22:25:19+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <entry>
+    <title>Shepard Test Stand - Feature #147: Add Mach 30 Branding To Software Interface</title>
+    <link href="http://opendesignengine.net/issues/147" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/147?journal_id=265</id>
+    <updated>2013-09-12T22:25:19+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Parent task&lt;/strong&gt; set to &lt;i&gt;#174&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #147: Add Mach 30 Branding To Software Interface</title>
+    <link href="http://opendesignengine.net/issues/147" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/147?journal_id=273</id>
+    <updated>2013-09-15T08:39:06+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Target version&lt;/strong&gt; changed from &lt;i&gt;v1.1 Shepard Test Stand - Prototype&lt;/i&gt; to &lt;i&gt;v2.0 Shepard Test Stand - Prototype&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #147: Add Mach 30 Branding To Software Interface</title>
+    <link href="http://opendesignengine.net/issues/147" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/147?journal_id=355</id>
+    <updated>2013-10-23T16:06:24+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;I've committed an initial pass at this, which basically just meant adding in the logos of Shepard, Mach 30, and School Factory.  There's definitely more to do though.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #147: Add Mach 30 Branding To Software Interface</title>
+    <link href="http://opendesignengine.net/issues/147" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/147?journal_id=356</id>
+    <updated>2013-10-23T16:10:38+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;FYI - School Factory is an ODE sponsor, not a Shepard Sponsor.  We don't need their logo on Shepard UI.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #147: Add Mach 30 Branding To Software Interface</title>
+    <link href="http://opendesignengine.net/issues/147" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/147?journal_id=357</id>
+    <updated>2013-10-23T16:52:17+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;Ha, I don't know how I did that one... they've been removed.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #147: Add Mach 30 Branding To Software Interface</title>
+    <link href="http://opendesignengine.net/issues/147" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/147?journal_id=358</id>
+    <updated>2013-10-23T16:53:34+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;/ul&gt;&lt;p&gt;No worries, that's why we have reviews.  ;)&lt;/p&gt;    </content>
+  </entry>
+</feed>

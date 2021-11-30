@@ -1,0 +1,22 @@
+Index: __init__.py
+===================================================================
+--- __init__.py	(revision 107)
++++ __init__.py	(revision 108)
+@@ -4,6 +4,7 @@
+ # other imports
+ import threading
+ from concurrent.futures import ThreadPoolExecutor
++from holoseat.util import holoseatSerial
+ 
+ apiConfig = { 'apiVersion' : 'v0.4.0',
+               'uiPort' : 8000,
+@@ -12,6 +13,9 @@
+ 
+ apiThreadPool = ThreadPoolExecutor()
+ 
++def connectedOrConnect():
++    return holoseatSerial.connected() or holoseatSerial.connect(apiConfig['apiVersion'])
++
+ # package imports now that the package variables are declared
+ from holoseat.api.apiHandler import apiHandler
+ from holoseat.api import mainHandlers, debugHandlers, socketHandler

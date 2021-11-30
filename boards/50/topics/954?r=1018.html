@@ -1,0 +1,727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Yavin Thruster - Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/yavin-thruster.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/yavin-thruster.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Yavin Thruster</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/yavin-thruster.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/yavin-thruster/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/yavin-thruster/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/yavin-thruster/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/yavin-thruster.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/yavin-thruster/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/yavin-thruster/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/yavin-thruster/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/yavin-thruster/boards.html">Forums</a> » <a href="../../../projects/yavin-thruster/boards/50.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-954-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Accurately Modelling the Nozzle&#x27;s Curves in CadQuery</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-04-03.html" title="04/03/2015 10:12 am">over 7 years</a> ago</span></p>
+<div class="wiki">
+<p>I started a <a href="https://github.com/dcowden/cadquery/issues/80" class="external">feature request</a> on CQ's GitHub issue tracker for this. A conversation we had in last week's #EngineerSpeak Hangout got me thinking, and I finally got some time to do an experiment this morning. It's a mongrel of FreeCAD and CQ code, but shows that it is possible to create a clean curve (based on a bunch of points) that's pretty close to what you get with a polyline. The curve in the screenshot is from the Dean aerospike CQ example I did a few months ago. The left-most point is the tip of the spike, and the right-most is where the curve stops at the outside of the top of the chamber (or at least what I think of as the chamber).</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (23)</h3>
+
+  <div class="message reply" id="message-955">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=955.html#message-955">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-04-03.html" title="04/03/2015 10:43 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Wow, that is very impressive.  I need to go dig out my math text books and find a measurable test for how good the fit is, but judging from the image it is clearly very close.</p>
+
+
+	<p>Here's the image Jeremy was talking about:</p>
+
+
+	<p><img src="https://cloud.githubusercontent.com/assets/1015439/6982600/c70f4952-d9e1-11e4-8e75-75dd380dfd6c.png" alt="" /></p>
+
+
+	<p>Note, as Jeremy points out, this is a rendering of both the polyline from the original points and the fitted curve.  Like I said, impressive.</p>
+
+
+	<p>Oh, and Jeremy, this looks like you are looking at just the aerospike nozzle.  The tip is at the left hand side of the image and the part of the throat defined by the nozzle is on the right.  The throat would be fully defined by adding in the geometry for the chamber so that we can define the outer radius of the throat.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-956">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=956.html#message-956">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-04-03.html" title="04/03/2015 12:12 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I was pleased, and a little surprised, by the results. I thought I'd have to do a lot more coding to get that to work.</p>
+
+
+	<p>Here's a shot that's zoomed in a little bit. The line on the bottom includes 2 segments of the polyline, and the line on the top is the first segment of the curve.</p>
+
+
+	<p><img src="../../../attachments/download/544" alt="" /></p>
+
+
+<blockquote>
+
+	<p>The throat would be fully defined by adding in the geometry for the chamber so that we can define the outer radius of the throat.</p>
+
+
+</blockquote>
+
+	<p>Ok, that makes sense. I started with just the curve on the spike because it's a very recognizable part of the geometry, and it's also the part I thought would give us the most trouble in CadQuery. I hope to check with the FreeCAD devs on where the 26 point limitation comes from, and then to add the code to CQ for this operation soon-ish. Then I'll be able to redo the entire nozzle outline and revolve it. As we were talking about last night, if we can do this nozzle, we can do the cold gas thruster nozzle.</p>
+
+
+<blockquote>
+
+	<p>I need to go dig out my math text books and find a measurable test for how good the fit is, but judging from the image it is clearly very close.</p>
+
+
+</blockquote>
+
+	<p>I'm very interested to see how that works out. Using CodeCAD gives us some options for checking the math that we wouldn't have with traditional CAD.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/544/Polyline_BCurve_Comparison_2.png" class="icon icon-attachment">Polyline_BCurve_Comparison_2.png</a>
+  <span class="size">(5.9 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-957">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=957.html#message-957">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-04-03.html" title="04/03/2015 11:19 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>After getting some <a href="http://forum.freecadweb.org/viewtopic.php?f=10&#38;t=10398&#38;p=83718#p83718" class="external">feedback on the FreeCAD forums</a>, I switched to an interpolated BSpline for this. The implementation of this in CadQuery will be much cleaner (no limitation on the number of points), and the curve is even more true to the original points of the polyline.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-958">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=958.html#message-958">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-04-23.html" title="04/23/2015 03:53 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>A user on GitHub brought up another potential shortcoming with CadQuery. FreeCAD's STL export code (which CadQuery's is built on) doesn't allow for you to vary the quality of the file, so you can end up with a huge file that has tolerances that are way more than your printer could ever do. I'm new to 3D printing, so I wasn't aware that was a problem. It's not a show stopper for Yavin, but is something to keep in mind.</p>
+
+
+	<p><a class="external" href="https://github.com/dcowden/cadquery/issues/85">https://github.com/dcowden/cadquery/issues/85</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-959">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=959.html#message-959">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-05-07.html" title="05/07/2015 09:01 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Just now getting around to reviewing your last note, Jeremy.  Very interesting.  Keep us posted on how the feature develops.  I imagine we will want to control this even for Yavin just to match generated geometry to actual specifications (we shouldn't be driving crazy tolerances that are not expected and cannot be manufactured).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-968">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=968.html#message-968">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-11.html" title="06/11/2015 11:16 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>A function needs to be created to shortcut the conversion of Pint units from meters to mm for FreeCAD. The following are some things that the function needs to have/do.</p>
+
+
+	<ol>
+	<li>Have a short name like 'mm' to keep the code it's used in clean.</li>
+		<li>Use a global units registry (pass in the one you're using)</li>
+		<li>Check for Pint unit type 'length' before doing conversion.
+	<ol>
+	<li>Throw an error if not of type 'length'</li>
+	</ol>
+	</li>
+		<li>Return .to(units.millimeter).magnitude</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-978">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=978.html#message-978">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-06-14.html" title="06/14/2015 03:02 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>The function above has been added, and I also did some clean up of the pressure vessel calc code.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1009">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1009.html#message-1009">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-27.html" title="07/27/2015 07:43 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>This is now identified as CQ-01 from our current <a href="https://docs.google.com/spreadsheets/d/1MQlgkqkl00CoK-mzC6KOVvsz3fwD8jj-vcdJk0DwwVI/edit#gid=1984988226" class="external">sprint planning work</a> .</p>
+
+
+	<p>I started recreating the Aerospike example we've done previously, smoothing out the segmented sections with the spline. The logic is that if I can recreate that, our current nozzle shouldn't be able to stump CadQuery. As you can see from the image, the spike worked out great. It's one smooth segment. The chamber is where I start to have questions. I've marked two areas on the chamber with numbers.</p>
+
+
+	<p><img src="../../../attachments/download/567" alt="" /></p>
+
+
+	<ol>
+	<li>There are sharper steps in area 1 that look like they need to stay sharp (created as a polyline).</li>
+		<li>There are steps in the wall (inner and outer) in area 2 that look like they should really be created with a spline.</li>
+	</ol>
+
+
+	<p>So, should I really be using a spline in area 2, or am I overthinking this?</p>
+
+
+	<p>The reason I'm chasing this is that I've confirmed a bug in how CadQuery's polyline operation works that would likely keep us from creating the current nozzle/chamber combo properly if we need to use a spline in area 2. I'll file the bug no matter what, but I'll have to make sure it's fixed during this sprint to call CQ-01 finished if it's a show stopper.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/567/Aerospike_Steps_2.png" class="icon icon-attachment">Aerospike_Steps_2.png</a>
+  <span class="size">(28 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1016">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1016.html#message-1016">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-28.html" title="07/28/2015 07:29 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>These are interesting results.  I should probably look at the raw data (the array of points from my dissertation research) to see if there is something funny in the data.  I say this, because the points in section 2 (both inside and outside) should be straight lines at constant radii (one for inside and one for outside).  The changes for the inner geometry in section 2 should be driven by just the nozzle (the spike).  In fact, the only reason there are multiple data points in section 2 is because the underlying engineering analysis measured internal state properties at those positions along the length of the engine and my research reported all design data (including geometry) at every location where state properties were measured.</p>
+
+
+	<p>Section 1, on the other hand, looks spot on to me.  This is the one part of the chamber wall where there is any geometry change and it looks just like what you posted.</p>
+
+
+	<p>Hope that helps clarify things.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1017">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1017.html#message-1017">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-28.html" title="07/28/2015 09:56 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks J. Based on your feedback, I was able to clean up the points.</p>
+
+
+	<p><img src="../../../attachments/download/568" alt="" /></p>
+
+
+	<p>It doesn't look like much of a change until you start running your mouse cursor over the model. The original I did had many sections, including on the spike. The spike is now one solid, and the chamber has sections only where it's appropriate to have them.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/568/Aerospike_with_Spline.png" class="icon icon-attachment">Aerospike_with_Spline.png</a>
+  <span class="size">(29.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1018">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1018.html#message-1018">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-28.html" title="07/28/2015 10:42 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>That looks great, Jeremy. We should scale it down (I printed it at 1/8 actual size - points are in inches) and run it off on my printer to see how it compares to my openscad version.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1019">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1019.html#message-1019">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 07:37 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Do you want each part as a separate STL? The spike, chamber, and injector plate aren't connected.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1020">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1020.html#message-1020">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 09:17 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ran into a pretty big snag with the spike. Even after doing <a href="http://forum.freecadweb.org/viewtopic.php?t=5215" class="external">what's recommended</a> to get a better quality STL export from FreeCAD, I still get the following when I open the STL in Netfabb Basic.</p>
+
+
+	<p><img src="../../../attachments/download/569" alt="" /></p>
+
+
+	<p>There's an issue filed for CadQuery to export with arbitrary resolution, but if I can't figure out how to get FreeCAD to export a decent spike in the first place, we may have to create a PBI just for figuring this out.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/569/Bad_Stl_Export.png" class="icon icon-attachment">Bad_Stl_Export.png</a>
+  <span class="size">(22.4 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1021">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1021.html#message-1021">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 09:24 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Of course I'd think of a solution right after I hit Submit on the last post.</p>
+
+
+	<p><img src="../../../attachments/download/570" alt="" /></p>
+
+
+	<p>Getting that better export adds another step in the export process where you have to convert the solid to a mesh in the Mesh Workbench. The spike in the image has some problems, but there are several more settings to try. We should create a PBI to figure out what the optimal mesh generation settings are and document them.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/570/Better_STL_Export.png" class="icon icon-attachment">Better_STL_Export.png</a>
+  <span class="size">(27.6 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1022">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1022.html#message-1022">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 09:47 am">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Try printing <a href="https://opendesignengine.net/dmsf_files/488" class="external">this one</a> J. It's still not perfect, but Netfabb says it's ok.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1023">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1023.html#message-1023">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 07:36 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Wow, it is crazy how much difference those settings make.  @Jeremy, to answer your earlier question, I want a single whole part to print.  Is the attached STL file a single part or just one of the elements?</p>
+
+
+	<p>Oh, and I agree about the new CQ PBI.  I think you can just go ahead and add it (right Chris?).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1024">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1024.html#message-1024">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 07:36 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Oh, and just a quick note, I am out of town.  So I won't be able to print this up until next week.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1026">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1026.html#message-1026">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 07:43 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><blockquote>
+
+	<p>Is the attached STL file a single part or just one of the elements?</p>
+
+
+</blockquote>
+
+	<p>It's just the spike. The spike and the chamber are not connected, so I think the spike will fall through if you print the parts together.</p>
+
+
+<blockquote>
+
+	<p>Oh, and I agree about the new CQ PBI. I think you can just go ahead and add it (right Chris?).</p>
+
+
+</blockquote>
+
+	<p>Maybe we can wordsmith it tomorrow night?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1027">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1027.html#message-1027">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 07:46 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Hmm, the spike falling through sounds odd.  We should look at this tomorrow.  The list of points we are working with should have the portion of the aerospike that is inside the chamber and those points should be connected to the injector.</p>
+
+
+	<p>Happy to wordsmith the new CQ PBI tomorrow night.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1028">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1028.html#message-1028">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 10:44 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here's the outline of the spike, chamber and injector plate before they're revolved.</p>
+
+
+	<p><img src="../../../attachments/download/571" alt="" /></p>
+
+
+	<p>And here's a section view after revolution. FreeCAD doesn't want to do a section view for the injector plate for some reason, so it doesn't show up in this cross-section.</p>
+
+
+	<p><img src="../../../attachments/download/572" alt="" /></p>
+
+
+	<p>There were mounting plate points in the original file that were commented out, so I ignored them. Should I be pulling those in?</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/571/Aerospike_Outlines_Spike_Chamber_Injector.png" class="icon icon-attachment">Aerospike_Outlines_Spike_Chamber_Injector.png</a>
+  <span class="size">(3.6 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/572/Aerospike_Outlines_Spike_Chamber_Injector_2.png" class="icon icon-attachment">Aerospike_Outlines_Spike_Chamber_Injector_2.png</a>
+  <span class="size">(4.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1029">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1029.html#message-1029">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-07-29.html" title="07/29/2015 10:52 pm">over 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Had a doh! moment after I posted the last section. FreeCAD couldn't section the injector plate/ring because it wasn't an enclosed solid. Here's a better section view of everything.</p>
+
+
+	<p><img src="../../../attachments/download/573" alt="" /></p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/573/Aerospike_Outlines_Spike_Chamber_Injector_3.png" class="icon icon-attachment">Aerospike_Outlines_Spike_Chamber_Injector_3.png</a>
+  <span class="size">(4.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1078">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1078.html#message-1078">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-10-13.html" title="10/13/2015 10:43 am">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>CQ-02 was created to address a shortfall in CadQuery that would have kept us from properly drawing the outline of the entire thruster nozzle-chamber assembly. The fix for that is now waiting for comment in a CadQuery pull request, and I expect it to be merged with only minor adjustments, if any.</p>
+
+
+	<p><a class="external" href="https://github.com/dcowden/cadquery/issues/102#issuecomment-147520375">https://github.com/dcowden/cadquery/issues/102#issuecomment-147520375</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1086">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="954%3Fr=1086.html#message-1086">RE: Accurately Modelling the Nozzle&amp;#x27;s Curves in CadQuery</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-10-26.html" title="10/26/2015 03:46 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Pint has been embedded with the CadQuery module for FreeCAD to ensure that users have easy access to units handling.</p>
+
+
+	<p><a class="external" href="https://github.com/jmwright/cadquery-freecad-module/issues/64">https://github.com/jmwright/cadquery-freecad-module/issues/64</a></p>
+
+
+	<p>Everyone who wants to work on the CAD for Yavin should upgrade to the latest commit of the module. You can download the latest commit <a href="https://github.com/jmwright/cadquery-freecad-module/archive/master.zip" class="external">here</a></p></div>
+  
+  </div>
+
+<p class="pagination"> (1-23/23)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/954.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

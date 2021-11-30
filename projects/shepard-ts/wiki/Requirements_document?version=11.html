@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Requirements document - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../activity.html" class="activity">Activity</a></li>
+<li><a href="../roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../issues.html" class="issues">Issues</a></li>
+<li><a href="../issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Navigation</a><a href="Requirements_document%3Fversion=11.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Shepard-Test-Stand"></a>
+<h3 >Shepard Test Stand<a href="Requirements_document%3Fversion=11.html#Shepard-Test-Stand" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="Wiki.html" class="wiki-page">Start Here</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Versions" class="wiki-page">Versions</a></li>
+	</ul>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="Requirements_document%3Fversion=11.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/BOM" class="wiki-page">BOM</a></li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Software Source Code</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a></li>
+		<li><a href="Operating_Manual.html" class="wiki-page">Operating Manual</a></li>
+		<li><a href="Safety_Procedures.html" class="wiki-page">Safety Procedures</a></li>
+		<li><a href="SoftwareFirmware_Summary.html" class="wiki-page">Software/Firmware Summary</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Errata" class="wiki-page">Errata</a></li>
+	</ol>
+
+
+	<a name="Systems-Engineering-Process"></a>
+<h4 >Systems Engineering Process<a href="Requirements_document%3Fversion=11.html#Systems-Engineering-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="Initial_Questions.html" class="wiki-page">Initial Questions</a></li>
+		<li><a href="Requirements_Document.html" class="wiki-page">Requirements Document</a></li>
+		<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Budget" class="wiki-page">Budget</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Timeline" class="wiki-page">Timeline</a></li>
+		<li><a href="Preliminary_Design.html" class="wiki-page">Preliminary Design</a></li>
+		<li><a href="Detailed_Design.html" class="wiki-page">Detailed Design</a></li>
+		<li><a href="Design_Review.html" class="wiki-page">Design Review</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Procurement" class="wiki-page">Procurement</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Manufacture</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Assembly" class="wiki-page">Assembly</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Integration" class="wiki-page">Integration</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Testing" class="wiki-page">Testing</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Disposal" class="wiki-page">Disposal</a></li>
+		<li><a href="Development_Logs.html" class="wiki-page">Development Logs</a></li>
+		<li><a href="Meeting_Minutes.html" class="wiki-page">Meeting Minutes</a></li>
+	</ol>
+
+<h3>Wiki</h3>
+
+<a href="../wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-15-watcher"></span>
+
+
+
+
+
+
+<a href="Requirements_document/history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+
+    <p>
+    <a href="Requirements_document%3Fversion=10.html">« Previous</a> - 
+    Version 11/50
+    (<a href="http://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document/diff/11">diff</a>) - 
+    <a href="Requirements_document%3Fversion=12.html">Next »</a> - 
+    <a href="Requirements_document.html">Current version</a>
+    <br />
+    <em><a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a>, 02/20/2012 01:29 pm </em><br />
+    
+    </p>
+    <hr />
+
+
+<div class="wiki">
+  <a name="Requirements-document"></a>
+<h1 >Requirements document<a href="Requirements_document%3Fversion=11.html#Requirements-document" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Draft requirements, 2011-09-21</p>
+
+
+	<a name="Version-10"></a>
+<h2 > Version 1.0<a href="Requirements_document%3Fversion=11.html#Version-10" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><del># Verify that we can measure the Estes motor performance data (thrust vs time for various motors as published here: <a class="external" href="http://estes.aptinet.com/images/page%2033.pdf">http://estes.aptinet.com/images/page%2033.pdf</a>)</del><br /><del># Measure and record exhaust temperature of the Estes motors <strong>[NOTE:  This means using a computer -gm]</strong></del><br /><del># Document the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand</del></p>
+
+
+	<p>Below is a list of questions and proposed answers to help us narrow down the requirements for this project. You can view the original forum discussion <a href="https://opendesignengine.net/boards/4/topics/38" class="external">here</a></p>
+
+
+	<p><strong>Q1. Why are we making this?</strong></p>
+
+
+	<p><strong>A1</strong>. Jeremy Said - <em>To gain experience in the open design and development of test stands (and other equipment), test ODE (Open Design Engine), and to provide a marketing, outreach, and educational tool.</em></p>
+
+
+	<p><strong>A1</strong>. J Said - <em>The Shepard Test Stand is the first step toward developing an open source test stand for flight capable rocket engines. It's focus on low power, commercially available amateur rocket motors is intended to provide a safe first experience for both designers (low power and low cost lead to little penalty for failing to mean design goals the first time around) and operators (low power leads to lower cost if accidentally misused during early training). Additionally, as one of Mach 30's earliest open source hardware projects, it will give us practical experience in open source hardware development and managing projects on ODE. Finally, we have received interest in performing live demonstrations of the test stand as part of educational and outreach activities, so it is expected the test stand will become an educational and marketing tool.</em></p>
+
+
+	<p><strong>Q2. Who is this for?</strong></p>
+
+
+	<p><strong>A2</strong>. Jeremy Said - <em>It is hoped that the design and development process will be helpful to any and all who have an interest in test stands, and the finished stand will be used by Mach 30 and its partners.</em></p>
+
+
+	<p><strong>A2</strong>. J Said - <em>The Shepard Test Stand is for anyone wanting to learn about measuring the performance of rockets. This includes open source spaceflight designers who will design and build future test stands (at Mach 30 or elsewhere), Mach 30 operators who will use future test stands in other Mach 30 projects, students and educators who want to bring rocket engineering into the classroom, and anyone else interested in how rockets are tested.</em></p>
+
+
+	<p><strong>Q3. How will this be used?</strong></p>
+
+
+	<p><strong>A3</strong>. Jeremy Said - <em>The final test stand will be used for verification of typical motor performance metrics such as thrust and exhaust temperature. These metrics will be compared against benchmark values provided in the Estes motor documentation: <a class="external" href="http://estes.aptinet.com/images/page%2033.pdf">http://estes.aptinet.com/images/page%2033.pdf</a> The test stand will also be used to do demonstrations at various conferences and educational events.</em></p>
+
+
+	<p><strong>A3</strong>. J Said - <em>The final test stand will be used for verification of typical motor performance metrics such as thrust and exhaust temperature. These metrics will be compared against benchmark values provided in the Estes motor documentation:http://estes.aptinet.com/images/page%2033.pdf The test stand will also be used to do demonstrations at various conferences and educational events.</em></p>
+
+
+	<p><strong>Q4. What features does it need to have (now)?</strong></p>
+
+
+<strong>A4</strong>. Jeremy Said - <br /><em>The test stand needs to:</em>
+	<ul>
+	<li><em>Be easily set up and torn down for demonstration purposes.</em></li>
+		<li><em>Be easy to package for shipment to any event at which it will be used.</em></li>
+		<li><em>Provide a stable base on which to test model rocket motors.</em></li>
+		<li><em>Be as safe to operate as possible.</em></li>
+		<li><em>Accommodate Estes rocket motor sizes A through E.</em></li>
+		<li><em>Provide the ability to measure thrust and exhaust temperature while keeping an accurate timestamp for each data point.</em></li>
+	</ul>
+
+
+<strong>A4</strong>. J Said -<br /><em>A4a. I would adjust the safety requirement to read:</em>
+	<ul>
+	<li><em>Conform to NAR safety rules for the operation of model rockets (for example, using "non-metal parts" for all components directly interfacing with the motor to reduce the risk from shrapnel)</em></li>
+		<li><em>I would like to amend my previous answer regarding safety to be Where appropriate, conform to NAR safety rules for the operation of model rockets (for example, using "non-metal parts" for all components directly interfacing with the motor to reduce the risk from shrapnel). My thought is the Shepard test stand should be something that NAR can endorse both educationally and as it relates to safety.</em></li>
+	</ul>
+
+
+	<p><strong>A4</strong>. Greg Said - <em>A4a: I disagree. I think the application of the NAR safety code for operations of model rockets does not apply to the design and operations of rocket motor test stands. While there are some parts of this rule set are reasonable i don't think that the entire code can be applied in broad strokes. A rocket test stand is not designed to fly, however this code was developed for flight operations of rockets. We need to better define the intent of the safety requirement for this project.</em></p>
+
+
+	<p><strong>Q5. What features does it need to have (later)?</strong></p>
+
+
+	<p><strong>A5</strong>. Jeremy Said - <em>Version 2.0 of the test stand will be a separate design that will add support for commercial high-power model rocket motors (above E), and high and low speed video capture.</em></p>
+
+
+<strong>A5</strong>. J Said - <em>Once we have enough experience with Estes class motors, I think the logical progression in scale of test stands (most of which I expect to be implemented as separate projects, spread out over a significant period of time) is</em>
+	<ol>
+	<li><em>high power commercial solid motors</em></li>
+		<li><em>small hybrid motors (on the thrust scale of high power commercial solid motors)</em></li>
+		<li><em>larger thrust hybrid motors</em></li>
+		<li><em>small liquid engines</em></li>
+		<li><em>medium liquid engines</em></li>
+		<li><em>large liquid engines</em></li>
+	</ol>
+
+
+<em>In terms of other features to add to the test stands, those could include:</em>
+	<ul>
+	<li><em>video capture of the tests (high and low speed, from multiple angles)</em></li>
+		<li><em>integrated ignition systems (so the test management software can control the entire test)</em></li>
+		<li><em>additional measurements</em></li>
+		<li><em>higher fidelity measurements</em></li>
+	</ul>
+
+
+	<p><strong>Q6. What are the legacy requirements?</strong></p>
+
+
+	<p><strong>A6</strong>. Jeremy Said - <em>This is a first generation test stand, so there are no legacy requirements to remain compatible with previous Mach 30 designs.</em></p>
+
+
+	<p><strong>A6</strong>. J Said - <em>This is the first project of its kind at Mach 30, there are no existing projects it must interface with. However, if the system includes desktop control software (and I expect it will), that software should run on all three major PC platforms (MS Windows, Mac OS X, and Linux). Additionally, it should use standard connections back to the control software (for example, USB, Ethernet, or similar connections).</em></p>
+
+
+	<p><strong>Q7. Who's going to build this?</strong></p>
+
+
+	<p><strong>A7</strong>. Jeremy Said - <em>It is assumed that volunteers within the Mach 30 community will build this test stand. The designs will be open so that other individuals and groups may choose to build their own as well.</em></p>
+
+
+	<p><strong>A7</strong>. J Said - <em>I have nothing else to add to this answer.</em></p>
+
+
+	<p><strong>A7</strong>. Greg Said - <em>I would add that the intent is to simplify the design such that ANYONE, without necessarily a technical education in rocketry, propulsion, or engineering, would be able to build and operate a Shepherd test stand.</em></p>
+
+
+	<p><strong>Q8. How many do we want to make?</strong></p>
+
+
+	<p><strong>A8</strong>. Jeremy Said - <em>One.</em></p>
+
+
+	<p><strong>A8</strong>. J Said - <em>One (for now). If the design proves particularly valuable as a teaching or training tool, we may revisit this decision. If highly successful, it is not outside the realm of possibility to consider offering it (or a related design) as a kit for others to assemble.</em></p>
+
+
+	<p><strong>Q9. What is the budget?</strong></p>
+
+
+	<p><strong>A9</strong>. Jeremy Said - <em>$200</em></p>
+
+
+	<p><strong>A9</strong>. J Said - <em>$200, firm. If there is a conflict between function and budget, for this iteration, budget should trump. Our goal is not to make the perfect test stand, it is to make the first prototype of a test stand and see what we can learn from that experience (both about test stands, and about our processes). We can always go back and do another iteration to meet the design requirements if needed. Holding to a firm budget minimizes the amount of time spent trying to make it perfect (once you are out of money, you have to wrap up the project, successful or not). Even a "unsuccessful" prototype will teach us important lessons to apply moving forward.</em></p>
+
+
+	<p><strong>A9</strong>. Greg Said - <em>I'm not really sure why the arbitrary number of $200 is important. J and I have already talked about this and it turns out that I'm not invested enough to pursue the discussion farther. I don't know that sticking to a $200 budget at the expense of a successful project is very valuable, but agree that we should continue to work our way through the process and see what comes out the other end.</em></p>
+
+
+	<p><strong>Q10. What is the timeline?</strong></p>
+
+
+	<p><strong>A10</strong>. Jeremy Said - <em>An original timeline of 3 months was proposed, but the timeline will be completely dependent on the involvement of the Mach 30 community.</em></p>
+
+
+	<p><strong>A10</strong>. J Said - <em>The goal is to complete the project within three months of formal launch as an exercise of agile design. However, given the project is also an experiment in open source hardware development and is all volunteer based, we need to recognize the need to be flexible in this requirement.</em></p>
+
+
+	<p><strong>Q11. What waste products will be produced by the manufacture and/or operation of this?</strong></p>
+
+
+	<p><strong>A11</strong>. Jeremy Said - <em>Spent Estes motors will be a waste product of the operation of this test stand, and any residual materials should be treated as hazardous. Disposal of these motors should conform to all local, state, and federal guidelines. Estes motors are based on black powder propellant, so any motors that do not fire properly or are damaged can be disposed of in an ordinary manner by first soaking them in water until the casing unwraps and the propellant falls apart.</em></p>
+
+
+	<a name="Version-20"></a>
+<h2 > Version 2.0<a href="Requirements_document%3Fversion=11.html#Version-20" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Add support for commercial high-power model rocket motors (above E)</li>
+		<li>Add support for video capture (low and high speed) to data collection</li>
+	</ul>
+
+
+	<p>\\<br />\\<br />\\<br />     <a href="Wiki.html" class="wiki-page">&lt;&lt; back to wiki</a></p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document.html?version=11" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document.txt?version=11" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/Requirements_document.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

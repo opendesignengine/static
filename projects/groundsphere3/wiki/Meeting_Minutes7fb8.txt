@@ -1,0 +1,16 @@
+h1. GS Mk 3 Meeting Minutes
+
+{{toc}}
+
+"Sprint Planning Document":https://docs.google.com/spreadsheets/d/1b2WNtS10kq8yuOQJQwRfIBf9d0afU-EbczXwzqx4HpE/pubhtml (perpetually updated)
+
+h3. Sprint 1
+
+* Planning Meeting - documented as the Sprint 1 plan in the planning document
+* "Stand Up 1":https://docs.google.com/document/d/1CBXZfilTN-YWOwUmS2ghtMkJq72dDUYqYES-0HrqAN4/pub
+* "Stand Up 2":https://docs.google.com/document/d/14CtGvw_zrS51glXV2NpZOIQZZoS3NOder0TIzUBWSLw/pub
+* Stand Up 3
+* Stand Up 4
+* Stand Up 5
+* Stand Up 6 and Sprint Review
+* Backlog Grooming

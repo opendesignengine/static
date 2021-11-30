@@ -1,0 +1,33 @@
+h1. GS Mk 3 Meeting Minutes
+
+{{toc}}
+
+"Sprint Planning Document":https://docs.google.com/spreadsheets/d/1b2WNtS10kq8yuOQJQwRfIBf9d0afU-EbczXwzqx4HpE/pubhtml (perpetually updated)
+
+h3. Sprint 1
+
+* Planning Meeting - documented as the Sprint 1 plan in the planning document
+* "Stand Up 1":https://docs.google.com/document/d/1CBXZfilTN-YWOwUmS2ghtMkJq72dDUYqYES-0HrqAN4/pub
+* "Stand Up 2":https://docs.google.com/document/d/14CtGvw_zrS51glXV2NpZOIQZZoS3NOder0TIzUBWSLw/pub
+* "Stand Up 3":https://docs.google.com/document/d/17Wc4sMqlUissR5am6ANDcKP-psRQ41ysxOV0vrcgHJA/pub
+* "Stand Up 4":https://docs.google.com/document/d/1o70kTCoMviGnAA-F5xV3ZnrKjtGb0wmd3vvulQtviCI/pub
+* "Stand Up 5":https://docs.google.com/document/d/1Yqm5dz4XvVSAYf0YaM2t4lbkdMNcCaXbdy3NXFRmTZk/pub
+* "Stand Up 6, Sprint Review, and Retrospective":https://docs.google.com/document/d/1lSFNd2muuRuIwGoWZanTKsoPOunDJElXGwpEcviW0nU/pub
+
++Sprint 1 Sprint Review+
+
+{{youtube(1nDdU9RXQW0)}}
+
+h3. Between Sprints
+
+* "Between Sprints 1 and 2 Meeting":https://docs.google.com/document/d/1Rc-5SuAnJ7ef4B-FMYCXDYmi74dX3HAzowK6SACuE78/pub
+
+h3. Sprint 2
+
+* "Planning Meeting":https://docs.google.com/document/d/1tBFfoBlq_5yGPrOdjKw0ryqVrPf3dKcMSRqXuPIMfmQ/pub - and documented as the Sprint 2 plan in the planning document
+* Stand Up 1
+* Stand Up 2
+* Stand Up 3
+* Stand Up 4
+* Stand Up 5
+* Stand Up 6, Sprint Review, and Retrospective

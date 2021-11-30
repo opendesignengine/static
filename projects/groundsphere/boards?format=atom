@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ground Sphere CubeSat Ground Station: Design Discussions</title>
+  <link rel="self" href="http://opendesignengine.net/projects/groundsphere/boards?format=atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere/boards"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2015-11-23T22:47:51+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Design Discussions: RE: Greg&amp;#x27;s GroundSphere build attempt</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/1099?r=1110#message-1110"/>
+    <id>http://opendesignengine.net/boards/39/topics/1099?r=1110#message-1110</id>
+    <updated>2015-11-23T22:47:51+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Yep.  The preamp was specifically selected for the 900MHz Ground Sphere,and will work quite well for UHF.  I have another amp I am working on for VHF.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Greg&amp;#x27;s GroundSphere build attempt</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/1099?r=1109#message-1109"/>
+    <id>http://opendesignengine.net/boards/39/topics/1099?r=1109#message-1109</id>
+    <updated>2015-11-22T07:09:52+00:00</updated>
+    <author>
+      <name>Greg Moran</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Howdy Aaron, &lt;br /&gt;I have a scaling question about the Preamp.  the Frequency response of the circuit design (&lt;a class="external" href="http://www.g0mrf.com/432LNA.htm"&gt;http://www.g0mrf.com/432LNA.htm&lt;/a&gt;) looks like it goes to poop at the lower frequencies.  Did you look at that in the scaled-up designs in the UHF and VHF versions of ground sphere?&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://www.g0mrf.com/images/432LNA3.gif" alt="" /&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Greg&amp;#x27;s GroundSphere build attempt</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/1099?r=1108#message-1108"/>
+    <id>http://opendesignengine.net/boards/39/topics/1099?r=1108#message-1108</id>
+    <updated>2015-11-22T07:05:55+00:00</updated>
+    <author>
+      <name>Greg Moran</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Howdy Jeremy,&lt;br /&gt; Aaron and I are working it out.  I actually may try the scaled up UHF or VHF version. Thanks for the offer though.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Greg&amp;#x27;s GroundSphere build attempt</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/1099?r=1100#message-1100"/>
+    <id>http://opendesignengine.net/boards/39/topics/1099?r=1100#message-1100</id>
+    <updated>2015-11-15T22:28:51+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I think I might have an extra ground plane that I can ship to you if Aaron doesn't have one.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: Greg's GroundSphere build attempt</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/1099"/>
+    <id>http://opendesignengine.net/boards/39/topics/1099</id>
+    <updated>2015-11-15T17:21:02+00:00</updated>
+    <author>
+      <name>Greg Moran</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Howdy all, &lt;br /&gt;I'm going to start a maker build project, and i'm choosing the GroundShpere.  I've sent a couple emails back and forth to Aaron, and he's able to be my supplier for some of the special electronics components.  I'll find all the standard hardware parts locally.&lt;br /&gt;Wish me luck!&lt;br /&gt;Respect,&lt;br /&gt;-greg&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: Similar idea over at Hackaday</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/993"/>
+    <id>http://opendesignengine.net/boards/39/topics/993</id>
+    <updated>2015-07-19T16:10:10+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Saw &lt;a href="http://hackaday.com/2015/06/29/easy-way-to-listen-to-cube-sats/" class="external"&gt;this post&lt;/a&gt; on Hackaday a couple of weeks ago.  I wanted to capture it here as a comparison point to Ground Sphere.  These folks are using a simpler antenna than Ground Sphere and reporting decent results.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a href="http://2.bp.blogspot.com/-viMwCpqrUEk/VYh6lTem6ZI/AAAAAAAAYoY/SgyET1BWIdU/s1600/IMGP2993.JPG"&gt;&lt;img src="http://2.bp.blogspot.com/-viMwCpqrUEk/VYh6lTem6ZI/AAAAAAAAYoY/SgyET1BWIdU/s400/IMGP2993.JPG" alt="" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Key links (from Hacakday):&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;&lt;a href="http://soldersmoke.blogspot.com/2015/06/back-with-sats-catching-cubes-with.html" class="external"&gt;Back with the Sats: Catching Cubes with a Dongle&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="https://www.arrl.org/files/file/Technology/tis/info/pdf/ab18-16.pdf" title="ARRL" class="external"&gt;Ground-plane Antennas for 144, 222 and 440 MHz&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=811#message-811"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=811#message-811</id>
+    <updated>2014-08-12T08:19:23+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I made the output match the spreadsheet's units, and here are my results.&lt;/p&gt;
+
+
+	&lt;p&gt;Wavelength: 0.327641 m&lt;br /&gt;Wavelength in Copper: 0.304706 m&lt;/p&gt;
+
+
+	&lt;p&gt;Aerial Length: 1.09836 ft&lt;br /&gt;Compensated Aerial Length: 12.2577 in&lt;/p&gt;
+
+
+	&lt;p&gt;The regular aerial length matches the spreadsheet exactly, but the compensated length is 12.2577 in whereas the spreadsheet shows 13.7075 in.&lt;/p&gt;
+
+
+	&lt;p&gt;Also, the assembly documentation for the aerials says to cut them to 14" in length, stripping 1/4" of insulation from each end, and then bending the stripped ends 90 degrees. Would that make the effective loop length 13.5" instead of 13.7"+ once the ends of the loops are inserted into the connectors?&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://opendesignengine.net/projects/groundsphere/wiki/Assembly_Instructions#Aerial-Fabrication"&gt;https://opendesignengine.net/projects/groundsphere/wiki/Assembly_Instructions#Aerial-Fabrication&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=810#message-810"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=810#message-810</id>
+    <updated>2014-08-11T16:17:10+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I'm having trouble matching some of the numbers in &lt;a href="http://opendesignengine.net/dmsf_files/271?download=" class="external"&gt;Aaron's Ground Sphere calculation spreadsheet&lt;/a&gt;.&lt;/p&gt;
+
+
+	&lt;p&gt;My numbers match his exactly when I don't use the material compensated wavelength, but when I do I end up being off. For example, at 915 MHz the spreadsheet gives an uncompensated aerial length of 1.098 ft, which is just what the Python rules give. But when I add the material compensation in (0.93 * wavelength for copper) I end up off by about 1.5 inches from his "Adj Len" value. Here's the relevant snippet of code that I have for this. I'm sure it's a simple mistake somewhere.&lt;/p&gt;
+
+
+&lt;pre&gt;
+frequency = 915.00 #MHz
+
+# The speed of light in a vacuum for conversions (x10^6)
+c = 299.792
+
+# Find the wavelength so it can be the base for our calculations (meters)
+wavelength = c / frequency
+
+# Returns the length for each aerial in meters
+def get_aerial_length():
+  # Wavelength compensation for the velocity factor of the material (copper)
+  wavelength_in_copper = wavelength * 0.93 #meters
+
+  # The length of each aerial based on the frequency and the material's velocity factor
+  aerial_length = (1005.0 / (c / wavelength_in_copper)) / 3.2808 #meters
+
+  return aerial_length
+&lt;/pre&gt;
+
+	&lt;p&gt;Here's a link to the &lt;a href="http://on6wg.pagesperso-orange.fr/Doc/Antenne%20Eggbeater-Engl-Part1-Full.pdf" class="external"&gt;source material&lt;/a&gt; if that helps too.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=809#message-809"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=809#message-809</id>
+    <updated>2014-07-30T07:00:48+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I intend for it to be a CAD model. I don't know if it's going to be practical to keep the loops from intersecting though. In the real world, if a Ground Sphere copy was built to closer tolerances (than hand-built), you'd have to slightly deform one of the loops to make it ride over the other one. Since it's just 14 ga copper wire, this is easy to do. It's not easy (or in my opinion necessarily a good idea) to deform a component in the CAD to make the model exactly match something that will technically be "fudged" in the real world. A note could always be added to the isometric and exploded views of the assembly that those loops should be arranged to not intersect. I'm not sure how else to handle it. Thoughts?&lt;/p&gt;
+
+
+	&lt;p&gt;Another thing that's going to be hard to do like it is in the real world is the phasing loop inside the body tube.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/attachments/download/516" alt="" /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;It presents a lot of the same challenges as modelling a wiring harness, which companies have entire CAD packages and add-ons to do. It's going to be difficult to model it in a realistic way with the tools we have currently.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=808#message-808"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=808#message-808</id>
+    <updated>2014-07-29T22:32:56+00:00</updated>
+    <author>
+      <name>Matt Maier</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Is this going to produce an actual CAD model of GS, or just a 3D blueprint? The way I'm picturing it, an actual CAD model would include things like wire of appropriate thickness, fasteners, those copper bits the wire loops are mounted to, the PVC pipe, the base, etc. A 3D blueprint could get away with just representing the important dimensions and letting someone figure out how to meet them on their own.&lt;/p&gt;
+
+
+	&lt;p&gt;An example of important difference between those two approaches: an actual CAD model should account for the fact that one loop passes over the other loop at the top, whereas a simple blueprint could abstract that away and pretend the two loops cross through each other.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=807#message-807"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=807#message-807</id>
+    <updated>2014-07-29T21:49:23+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I've started an ODE project to hold the rules and CAD code.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://opendesignengine.net/projects/ground-sphere-cad/repository"&gt;https://opendesignengine.net/projects/ground-sphere-cad/repository&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=806#message-806"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=806#message-806</id>
+    <updated>2014-07-29T15:30:52+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It looks like the 1005 factor above is a standard shortcut, but I had trouble finding where it comes from. In the interest of keeping the perfect from being the enemy of the good (for now), I just converted the length from feet to meters after the 1005 is applied. Below shows the first function of the Ground Sphere rules module.&lt;/p&gt;
+
+
+&lt;pre&gt;
+# Only change this variable, the rest of the design is based off of this (MHz)
+frequency = 145.800 #MHz
+
+### DO NOT CHANGE ANYTHING FROM HERE DOWN ###
+
+# The speed of light in a vacuum for conversions (x10^6)
+c = 299.792
+
+# Find the wavelength so it can be the base for our calculations (meters)
+wavelength = c / frequency
+
+# Returns the length for each aerial in meters
+def get_aerial_length():
+  # Wavelength compensation for the velocity factor of the material (copper)
+  aerial_wavelength = wavelength * 0.93 #meters
+
+  # The length of each aerial based on the frequency, without compensating for the velocity factor
+  aerial_length = (1005.0 * wavelength) / c
+
+  # The length of each aerial, corrected using the velocity factor, converted to meters
+  actual_aerial_length = ((1005.0 * aerial_wavelength) / c) / 3.2808 #meters
+
+  #print "Material Compensated Aerial Length: " + repr(actual_aerial_length) + " meters" 
+
+  return actual_aerial_length
+&lt;/pre&gt;
+
+	&lt;p&gt;Here's an example of a script using the module.&lt;/p&gt;
+
+
+&lt;pre&gt;
+import gs_rules
+
+# Get the aerial length from our rules file
+aerial_length = gs_rules.get_aerial_length()
+
+print "Material Compensated Aerial Length: " + repr(aerial_length) + " meters" 
+&lt;/pre&gt;
+
+	&lt;p&gt;I will get this code into a repo somewhere and continue working on it as I get time.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=805#message-805"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=805#message-805</id>
+    <updated>2014-07-28T11:01:51+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Here's some simple Python code for calculating the aerial lengths, assuming that they'll be copper (which they are currently). I only did the aerial lengths because I want to get feedback from you folks before I move on. This code will probably end up being placed in a module, and have methods like get_aerial_length() so the model builder has a relatively simple interface.&lt;/p&gt;
+
+
+&lt;pre&gt;
+# Only change this variable, the rest of the design is based off of this (MHz)
+frequency = 145.800 #MHz
+
+# The speed of light in a vacuum for conversions (x10^6)
+c = 299.792
+
+# Find the wavelength so it can be the base for our calculations (meters)
+wavelength = c / frequency
+
+# Wavelength compensation for the velocity factor of the material (copper)
+aerial_wavelength = wavelength * 0.93 #meters
+
+# The length of each aerial based on the frequency, without compensating for the velocity factor
+aerial_length = (1005.0 * wavelength) / c
+
+# The length of each aerial, corrected using the velocity factor
+actual_aerial_length = (1005.0 * aerial_wavelength) / c
+
+print "Compensated Aerial Length: " + repr(actual_aerial_length)
+&lt;/pre&gt;
+
+	&lt;p&gt;One question I have is where does the 1005 factor come from (&lt;a href="http://on6wg.pagesperso-orange.fr/Doc/Antenne%20Eggbeater-Engl-Part1-Full.pdf" class="external"&gt;Design and Calculation section here&lt;/a&gt;)? I'd like to understand this so I can correct the equation to come out in meters instead of feet. That way we're not mixing units between meters and feet within the rule.&lt;/p&gt;
+
+
+	&lt;p&gt;Also, I don't think I ever got an answer on whether or not the distance between the ground plane and the aerials is from the bottom or middle of the aerial loops.&lt;/p&gt;
+
+
+	&lt;p&gt;Matt asked a question above about what the tolerance was on things like aerial length. Is that documented anywhere currently Aaron?&lt;/p&gt;
+
+
+	&lt;p&gt;Thanks.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=803#message-803"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=803#message-803</id>
+    <updated>2014-07-20T15:46:02+00:00</updated>
+    <author>
+      <name>David Norris</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I agree with the earlier statement that its safe to assume 1c for the speed of light in the groundplane.  Worst case, its bigger than you need but it still works.  The radiator is the most critical part.&lt;/p&gt;
+
+
+	&lt;p&gt;As for testing things, you can bring things by or mail them or point me to info on building or buying it.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Design Discussions: RE: Ground Sphere CAD Model</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/39/topics/789?r=802#message-802"/>
+    <id>http://opendesignengine.net/boards/39/topics/789?r=802#message-802</id>
+    <updated>2014-07-20T15:45:59+00:00</updated>
+    <author>
+      <name>David Norris</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I agree with the earlier statement that its safe to assume 1c for the speed of light in the groundplane.  Worst case, its bigger than you need but it still works.  The radiator is the most critical part.&lt;/p&gt;
+
+
+	&lt;p&gt;As for testing things, you can bring things by or mail them or point me to info on building or buying it.&lt;/p&gt;    </content>
+  </entry>
+</feed>

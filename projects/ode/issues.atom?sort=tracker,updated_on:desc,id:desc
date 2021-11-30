@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Issues</title>
+  <link href="http://opendesignengine.net/projects/ode/issues.atom?sort=tracker%2Cupdated_on%3Adesc%2Cid%3Adesc" rel="self"/>
+  <link href="http://opendesignengine.net/projects/ode/issues?sort=tracker%2Cupdated_on%3Adesc%2Cid%3Adesc" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2014-09-11T19:10:50+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Feature #267 (New): Add Companies Plugin</title>
+    <link href="http://opendesignengine.net/issues/267" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/267</id>
+    <updated>2014-09-11T19:10:50+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It would be nice to have the companies plugin (with additional features for users to register their own companies directly) so orgs like Mach 30 could group their projects together.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://github.com/splendeo/chiliproject_companies"&gt;https://github.com/splendeo/chiliproject_companies&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #266 (New): Upgrade fundraising plugin to include more sites</title>
+    <link href="http://opendesignengine.net/issues/266" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/266</id>
+    <updated>2014-09-11T18:51:37+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We should definitely add Indiegogo.  There are probably others that I can't think of right now, so the first step should be to find a good list of popular fundraising and payment sites for individuals and small groups, then make the new master list of supported sites.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #265 (New): SCM URL in project settings is incorrect</title>
+    <link href="http://opendesignengine.net/issues/265" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/265</id>
+    <updated>2014-09-03T19:12:54+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The URL shows the URL to the file system, instead of the URL users access the repository at.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #264 (New): New Project Creation Does Not Require Selection of Software or Documentation Lice...</title>
+    <link href="http://opendesignengine.net/issues/264" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/264</id>
+    <updated>2014-08-19T11:05:50+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;If you select the hardware license, but not other licenses, the project is still created. I think it should at least stop you if you haven't selected a documentation license.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #195 (New): Inconsistent visual layout between project tabs</title>
+    <link href="http://opendesignengine.net/issues/195" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/195</id>
+    <updated>2013-09-23T16:02:38+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;So, I have been thinking about the UI for &lt;strong&gt;ODE&lt;/strong&gt;, especially the theme.  And I just noticed something that I think is part of what makes the site just a little bit clunky.  Different tabs in projects either have or do not have the right hand side navigation bar.  Go check out the Overview tab, the Activity tab, the News tab, and the Wiki tab for examples.  You will go back and forth between having a right hand side navigation bar and not having one.  This inconsistency creates a jerkiness.  If every tab had a navigation bar, it would cut down on dramatic changes in rendering (smoothing out the user experience) and create a consistent location for users to look for navigation and additional controls.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #184 (New): Add STL part editor using OpenJsCad</title>
+    <link href="http://opendesignengine.net/issues/184" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/184</id>
+    <updated>2013-09-18T16:07:06+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Provides a Google Docs like functionality for editing 3D parts direct on ODE.  See &lt;a href="http://joostn.github.io/OpenJsCad/" class="external"&gt;OpenJsCad&lt;/a&gt;.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #150 (New): Install and begin usage of Redmine CMS Plugin</title>
+    <link href="http://opendesignengine.net/issues/150" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/150</id>
+    <updated>2013-07-20T14:15:19+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The plugin (&lt;a class="external" href="http://www.redmine.org/plugins/cms"&gt;http://www.redmine.org/plugins/cms&lt;/a&gt;) may be very useful for adding additional information that would require writing a custom plugin at the moment in a much easier manner.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #149 (New): Investigate usage of Redmine's To-Do List plugin</title>
+    <link href="http://opendesignengine.net/issues/149" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/149</id>
+    <updated>2013-07-20T13:55:02+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;a class="external" href="http://www.redmine.org/plugins/to-do-list"&gt;http://www.redmine.org/plugins/to-do-list&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #148 (New): Deactivate Files Module</title>
+    <link href="http://opendesignengine.net/issues/148" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/148</id>
+    <updated>2013-07-18T21:03:28+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;DMSF is a replacement for the files module. As such, the files module should be deactivated.  This can currently be done on a per-project basis, but should be done on a site-wide basis.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #124 (New): Enhanced wiki formatting</title>
+    <link href="http://opendesignengine.net/issues/124" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/124</id>
+    <updated>2013-03-22T14:39:30+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Would like to be able to change font foreground and background colors (for highliting, etc).&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #123 (Feedback): Address inconsistent use of http and https in fundraising plugin</title>
+    <link href="http://opendesignengine.net/issues/123" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/123</id>
+    <updated>2013-03-08T10:46:02+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Some of the widgets that the fundraising plugin supports try to use dynamic calls to determine if they should use http vs https for the protocol when including content from third party sites on &lt;strong&gt;ODE&lt;/strong&gt;.  Other widgets use the string "https".  We need to use a consistent (and working) implementation for including content from third party sites.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #122 (New): Remove unused and outdated .gem files from vendor/cache</title>
+    <link href="http://opendesignengine.net/issues/122" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/122</id>
+    <updated>2013-02-20T21:46:25+00:00</updated>
+    <author>
+      <name>Kevin Bouwkamp</name>
+    </author>
+    <content type="html">
+&lt;p&gt;While going through a standard ODE development setup, this is printed out at the end of a successful `bundle`:&lt;/p&gt;
+
+
+	&lt;p&gt;Removing outdated .gem files from vendor/cache
+  * rails-2.3.11.gem
+  * actionpack-2.3.11.gem
+  * rack-1.1.2.gem
+  * activerecord-2.3.11.gem
+  * actionmailer-2.3.11.gem
+  * actionmailer-2.3.15.gem
+  * activesupport-2.3.15.gem
+  * activeresource-2.3.15.gem
+  * actionpack-2.3.15.gem
+  * rails-2.3.15.gem
+  * activeresource-2.3.11.gem
+  * activesupport-2.3.11.gem
+  * rack-1.1.4.gem
+  * activerecord-2.3.15.gem&lt;/p&gt;
+
+
+	&lt;p&gt;This is due to the recent updates to rails and friends. We should remove these files from the repository, just to keep things squeaky clean.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #102 (New): Updates to the repository don&amp;#x27;t show up on "Activity" tab automatically</title>
+    <link href="http://opendesignengine.net/issues/102" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/102</id>
+    <updated>2012-12-30T23:14:22+00:00</updated>
+    <author>
+      <name>Jack Linke</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I have noticed that when I make push changes to my repository, those changes are not reflected on the "Activity" tab until I manually visit the "Repository" tab in my browser. Then, if I go back to the "Activity" tab, the updates to my repository show up.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #92 (New): Clean up capistrano deploy script</title>
+    <link href="http://opendesignengine.net/issues/92" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/92</id>
+    <updated>2012-11-18T18:32:36+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;During the release over v0.2.0, we noticed that the deploy script has a few bugs in it such as&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;not removing old releases&lt;/li&gt;
+		&lt;li&gt;sub-optimal handling of config files&lt;/li&gt;
+		&lt;li&gt;error with migration logging&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;We should address these issues and just in general tighten up the deployment script.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #51 (New): Git hosting is not working</title>
+    <link href="http://opendesignengine.net/issues/51" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/51</id>
+    <updated>2012-02-13T15:58:33+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Git repositories can be created, but not accessed.  Need to figure out how to host the git repositories over https like we have done for svn.  Next step is to consult with Bitnami docs and forums about a solutions.&lt;/p&gt;    </content>
+  </entry>
+</feed>

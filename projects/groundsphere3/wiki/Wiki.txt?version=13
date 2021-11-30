@@ -1,0 +1,27 @@
+h1. Welcome to Ground Sphere Mk 3
+
+!>GroundSphere_Final_small.png!
+
+Mach 30 is currently running an Open-source hardware project to develop a kit for a inexpensive and simple satellite ground receiver to listen to radio transmissions from NOAA weather satellites.  We're calling it GroundSphere V3, or mark3, and right now we have a collection of possible designs from which we are about to pick one or two to build as prototypes.  We're looking for help from makers to participate in our "market research" to see if these chosen designs are feasible. 
+
+h1. What is a ground station?
+
+Ground Stations are basically radio stations, except that they let people communicate with satellites by sending and receiving radio signals to and from Space. Sending signals requires a license, so Ground Sphere is designed to only receive signals from Space. Mach 30 is in the process of creating Ground Sphere MK3. It is an open-source ground station project, documented on our Open Design Engine. Ground Sphere’s ultimate goal is to allow those that use it to listen to the International Space Station as it travels above the Earth.
+
+h1. What kind of signals can you receive with Ground Sphere?
+
+The various incarnations of Ground Sphere have had several capabilities, from listening to a specific satellite, to receiving Ham radio signals. There’s a wide range of frequencies that the Ground Sphere design can be tuned to, and we’re asking anyone interested to help us determine the best frequency to tune it to. You can tell us your thoughts in our minute long "survey":https://docs.google.com/forms/d/e/1FAIpQLSdMpjKCtJZy_Xl8RJ8ftw7_rKknMMAwDNKFRmW-zZ9O4A3t_w/viewform
+
+h1. The history of Ground Sphere:
+
+MK1 was our proof of concept. Its mission was to receive signals from Ham Radio Satellites, and when it made its on-screen appearance at Yuri’s Night in 2013 in Colorado, it was able to receive signals from as far away as California and Tennessee.
+
+MK2 was the companion to SkyCube , and its mission was to receive “tweets” from SkyCube, a Kickstarter CubeSat project from Southern Stars. Unfortunately, SkyCube had gotten essentially lost in space.
+
+As Ground Sphere progresses, we will update our readers about how we’re able to grow and use the project.
+Remember, you can be a part of projects like Ground Sphere by joining our weekly IPT Standup meetings, held on Google hangouts. You can join us on Tuesday evenings at 8:30pm Eastern Time by clicking here. We are always interested in meeting people who are interested in being a part of our mission to help all of Humanity reach Outer Space. To find out more about how you can become a Mach 30 Catalyst, please click here.
+You can also follow GroundSphere on "Twitter":http://www.twitter.com/ground_sphere
+
+The below video gives a brief outline of the Ground Sphere Project.
+
+{{youtube(KVEo6JsSraA)}}

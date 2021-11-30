@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Shepard v1.1 Dev Log (DAQ) 04-02-13 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/shepard-ts.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/shepard-ts/news.html" class="news selected">News</a></li>
+<li><a href="../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/shepard-ts/boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-32-watcher"></span>
+
+
+</div>
+
+<h2>Shepard v1.1 Dev Log (DAQ) 04-02-13</h2>
+
+
+
+<p><em>A log of changes that are being made to the thrust sensing capability of the Shepard DAQ system, version 1.1.</em><br />
+<span class="author">Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-04-02.html" title="04/02/2013 10:18 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>It occurred to me that the Shepard 1.0 DAQ software has not been milestoned and added to DMSF yet. I've already shipped the 1.0 DAQ shield for the Arduino to J for the Yuri's Night demos, so he's going to test the version in the repo out. Once it's confirmed that works, I'll zip the code up for upload to DMSF as the 1.0 milestone version. For now, I'll keep my changes local.</p>
+
+
+	<p>The new thrust measurement circuitry for the DAQ system has been prototyped, and seems to work well.</p>
+
+
+	<p><img src="../dmsf_files/82%3Fdownload=" alt="" /></p>
+
+
+	<p>It uses a higher quality FSR ("Force Sensing Resistor" that costs about $25), and uses a variable resistor to set the effective range of the FSR (Flexiforce Sensor). The variable resistor's max is 100k-Ohm since this is the max specified in the FSR's documentation. In order to see and adjust this range, you can use the "Raw Value" field of the Calibration_Util_Processing.pde Processing app. The process for setting the max range is below, and is a rough cut at creating a max range setting process.</p>
+
+
+	<p>1. Add the amount of weight onto the FSR that represents the max that you ever want the sensor to be able to read (up to the 25 lb max).<br />2. Adjust the variable resistor until the "Raw Value" reading is maxed out at that weight (~1023 if possible).<br />3. Put a dot of clear silicone (RTV) on the side of the resistor where the "turntable" and the body meet. This will prevent the resistor from turning on its own during a rough shipping trip.</p>
+
+
+	<p>While working on this I was reminded that the default reference voltage for the <a href="http://arduino.cc/en/Reference/AnalogReference" class="external">Arduino's ADC</a> is 5.0 volts. Since the FSR is being used in a voltage divider that's being fed from the Arduino's 5V pin, this means that we'll never "fill" the ADC's range, and thus we won't have the maximum resolution possible. This can be corrected by building a voltage divider and using it to feed the AREF (external ADC reference voltage) pin with the max voltage that we ever expect seeing from the FSR's voltage divider.</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/664" class="icon icon-contributor-license">Eliza mpston</a> <a href="../projects/shepard-ts/activity%3Ffrom=2018-10-29.html" title="10/29/2018 05:42 pm">almost 4 years</a> ago</h4>
+    <p>Shepard test stand was made by me that have a DEV process it was all about the log this was a community unit. I need to have more on this that was all I got from <a href="https://www.bestessay.org/bestessays_review.php" class="external">best essay review services</a> this has all the codes on it that was compulsory to run this on system.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/725" class="icon icon-contributor-license">Jacob Mason</a> <a href="../projects/shepard-ts/activity%3Ffrom=2018-12-17.html" title="12/17/2018 02:05 pm">almost 4 years</a> ago</h4>
+    <p>Thanks for sharing this post. I am very interested in this topic. I would like to share my opinion on this. &lt;a href="https://justchainsaw.com/best-chainsaw/"&gt;justchainsaw.com&lt;/a&gt; Preserve the noticed in accordance with the producer's suggestions with all the protection units in environment friendly working order and all guards in place. It'll have to be commonly serviced by somebody who's competent to take action.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/32.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

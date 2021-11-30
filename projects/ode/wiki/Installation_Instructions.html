@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Open Design Engine - Installation Instructions - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/ode.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/ode.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../ode%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../ode%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../ode%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../ode%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../../ode%3Fjump=files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/ode/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Navigation</a><a href="Installation_Instructions.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/ode/files" class="external">Downloads</a></li>
+	</ul>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="Installation_Instructions.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Development_Plans.html" class="wiki-page">Development Plans</a></li>
+		<li><a href="Installation_Instructions.html" class="wiki-page">Installation Instructions</a></li>
+		<li><a href="Development_Setup.html" class="wiki-page">Development Setup</a></li>
+		<li><a href="Release_Testing.html" class="wiki-page">Release Testing</a></li>
+		<li><a href="Deployment_Instructions.html" class="wiki-page">Deployment Instructions</a></li>
+		<li><a href="Features.html" class="wiki-page">Features</a></li>
+		<li><a href="http://www.redmine.org/projects/redmine/wiki/Guide" class="external">User Manual</a></li>
+	</ul>
+
+
+	<a name="Templates"></a>
+<h4 >Templates<a href="Installation_Instructions.html#Templates" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Wiki_Navigation_Templates.html" class="wiki-page">Wiki Navigation Templates</a></li>
+		<li><a href="Initial_Questions_Template.html" class="wiki-page">Initial Questions Template</a></li>
+		<li><a href="Requirements_Template.html" class="wiki-page">Requirements Template</a></li>
+		<li><a href="Versions_Template.html" class="wiki-page">Versions Template</a></li>
+	</ul>
+
+
+	<a name="About-ODE"></a>
+<h4 >About ODE<a href="Installation_Instructions.html#About-ODE" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Supporters.html" class="wiki-page">Supporters</a></li>
+		<li><a href="Similar_Sites.html" class="wiki-page">Similar Sites</a></li>
+		<li><a href="Resources.html" class="wiki-page">Resources</a></li>
+	</ul>
+
+
+	<a name="Other"></a>
+<h4 >Other<a href="Installation_Instructions.html#Other" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Draft_ToS.html" class="wiki-page">Draft ToS</a></li>
+	</ul>
+
+<h3>Wiki</h3>
+
+<a href="../wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-3-watcher"></span>
+
+
+
+
+
+
+<a href="http://opendesignengine.net/projects/ode/wiki/Installation_Instructions/history" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <a name="Installation-Instructions"></a>
+<h1 >Installation Instructions<a href="Installation_Instructions.html#Installation-Instructions" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Open Design Engine (ODE) is based on <a href="http://redmine.org" class="external">Redmine</a>.  The official installation method is to install the <a href="http://bitnami.org/stack/redmine" class="external">Bitnami Redmine Stack</a>, apply some custom configuration to the stack, and then upgrade the installed Redmine instance to the ODE source code.  Support for other stacks (or bootstrapped installations) will come with future releases.  With luck, one or more of the stack providers will add ODE to their list of supported stacks.</p>
+
+
+	<p>If you're looking to upgrade from a previous version of ODE, see <a href="http://opendesignengine.net/projects/ode/wiki/Upgrading_ODE" class="wiki-page">Upgrading ODE</a></p>
+
+
+	<p>Note, these instructions assume you are running the Ubuntu VM image of the Bitnami Redmine Stack and are <strong>running all commands under</strong> <code>sudo</code>.  They were tested with <a href="http://bitnami.org/files/stacks/redmine/1.1.3-0/bitnami-redmine-1.1.3-0-ubuntu-10.10.zip" class="external">version 1.1.3</a> in <a href="http://www.vmware.com/products/player/" class="external">VMWare Player</a>.</p>
+
+
+Useful Paths
+	<ul>
+	<li><code>(bitnami_base) = /opt/bitnami</code> in VM images</li>
+	</ul>
+
+
+Steps to install ODE
+	<ul>
+	<li>Import the Bitnami Redmine Stack into VMWare (the free VMWare Player is supported)</li>
+		<li>Configure Redmine to run at <a class="external" href="http://hostname/">http://hostname/</a> instead of <a class="external" href="http://hostname/redmine">http://hostname/redmine</a>
+	<ul>
+	<li>Edit <code>(bitnami_base)/apache2/conf/httpd.conf</code> and comment out the line:<br /><pre>
+DocumentRoot "/opt/bitnami/apache2/htdocs" 
+</pre></li>
+		<li>Edit <code>(bitnami_base)/apps/redmine/conf/redmine.conf</code> to match the following (the key areas are the addition of the virtual host section and changing all references of <code>/redmine</code> to <code>/</code>):<br /><pre>
+&lt;VirtualHost *:80&gt;
+  ServerAdmin haha.huhu.com
+  ServerName server.our.lan
+  ServerAlias server
+  ErrorLog "logs/error.log" 
+  CustomLog "logs/access.log" combined
+ # this not only blocks access to .svn directories, but makes it                
+ # appear as though they aren't even there, not just that they are              
+ # forbidden                                                                    
+ &lt;DirectoryMatch "^/.*/\.svn/"&gt;
+    ErrorDocument 403 /404.html
+    Order allow,deny
+    Deny from all
+    Satisfy All
+  &lt;/DirectoryMatch&gt;
+  # This passes through remote_user to mongrel                                  
+  RewriteEngine On
+  # Redirect non-static requests to cluster                                     
+  RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME} !-f
+  RewriteRule ^/(.*)$ balancer://redminecluster%{REQUEST_URI} [P,QSA,L]
+&lt;/VirtualHost&gt;
+
+#ProxyPass / balancer://redminecluster
+#ProxyPassReverse / balancer://redminecluster
+
+&lt;Proxy balancer://redminecluster&gt;
+  BalancerMember http://127.0.0.1:3001
+  BalancerMember http://127.0.0.1:3002
+  # The number of balancer members depends on the number of mongrels running
+  # We use only one mongrel on port 3001 by default for the BitNami Cloud Hosting
+  # Please remove the others like 3002 above in such a case.
+&lt;/Proxy&gt;
+</pre></li>
+		<li>Edit <code>(bitnami_base)/apps/redmine/config/mongrel_cluster.yml</code> and change references to <code>prefix: /redmine</code> to <code>prefix: </code></li>
+		<li>Restart Redmine by running:<br /><pre>
+(bitnami_base)/ctlscript stop
+(bitnami_base)/ctlscript start
+</pre></li>
+	</ul>
+	</li>
+		<li>Configure apache to host svn repositories using Redmine for user authentication
+	<ul>
+	<li>Install dependencies<br /><pre>
+apt-get update
+apt-get install build-essential
+apt-get install zlib1g-dev
+(bitnami_base)/perl/bin/cpan  # accept defaults and choose CPAN servers
+cpan&gt; install Test::Simple
+cpan&gt; install DBI
+cpan&gt; install DBD::mysql
+cpan&gt; quit
+apt-get install libapache2-svn libapache-dbi-perl libapache2-mod-perl2 libdbd-mysql-perl libdigest-sha1-perl libauthen-simple-ldap-perl
+</pre></li>
+		<li>Enable newly installed apache modules by editing <code>(bitnami_base)/apache/conf/httpd.conf</code>
+	<ul>
+	<li>Uncomment approximately line 108:<br /><pre>
+LoadModule dav_svn_module modules/mod_dav_svn.so
+</pre></li>
+		<li>Add a line at the end of the load modules list for mod_perl:<br /><pre>
+LoadModule perl_module modules/mod_perl.so
+</pre></li>
+	</ul>
+	</li>
+		<li>Copy Redmine.pm into the perl library<br /><pre>
+cp (bitnami_base)/apps/redmine/extra/svn/Redmine.pm (bitnami_base)/perl/lib/site_perl/5.8.8/i686-linux/Apache/
+</pre> </li>
+		<li>Create the directory structure for the svn repositories (<em>Note, ODE is setup to store all project related content in the <code>(bitnami_base)</code> directory, so it uses a non-traditional location to store the svn repositories.</em>)<br /><pre>
+cd (bitnami_base)
+mkdir repos
+chown root:daemon repos
+chmod 0755 repos
+cd repos
+mkdir svn
+chown daemon:daemon svn
+chmod 0750 svn
+</pre></li>
+		<li>Document the following production values in <code>(bitnami_base)/apps/redmine/config/database.yml</code>:
+	<ul>
+	<li>username</li>
+		<li>password</li>
+		<li>socket</li>
+		<li>database</li>
+		<li>host</li>
+	</ul>
+	</li>
+		<li>Edit <code>(bitnami_base)/apps/redmine/conf/redmine.conf</code> to configure apache to host the svn repositories
+	<ul>
+	<li>Add the following line between <code>RewriteEngine On</code> and the first <code>RewriteCond</code> to prevent calls to svn from being forwarded to Redmine:<br /><pre>
+RewriteCond %{REQUEST_URI} !/svn(/|$)
+</pre></li>
+		<li>Add the following line above the first <code>ProxyPass</code> directive:<br /><pre>
+ProxyPass /svn !
+</pre></li>
+		<li>Add the following directives to the end of <code>redmine.conf</code> to enable svn over http (note the various fields that need to be updated with values for your installation, including the values you noted earlier from <code>database.yml</code>):<br /><pre>
+# /svn location for users
+PerlLoadModule Apache::Redmine
+&lt;Location /svn&gt;
+  DAV svn
+  SVNParentPath "(bitnami_base)/repos/svn" 
+  Order deny,allow
+  Deny from all
+  Satisfy any
+
+  PerlAccessHandler Apache::Authn::Redmine::access_handler
+  PerlAuthenHandler Apache::Authn::Redmine::authen_handler
+  AuthType Basic
+  AuthName "Redmine SVN Repository" 
+
+  #read-only access   
+  &lt;Limit GET PROPFIND OPTIONS REPORT&gt;
+     Require valid-user
+     Allow from localhost
+     # Allow from another-ip
+     Satisfy any
+  &lt;/Limit&gt;
+  # write access
+  &lt;LimitExcept GET PROPFIND OPTIONS REPORT&gt;
+    Require valid-user
+  &lt;/LimitExcept&gt;
+
+  ## for mysql
+  RedmineDSN "DBI:mysql:database=(database);host=(host);mysql_socket=(socket)" 
+
+  RedmineDbUser "(username)" 
+  RedmineDbPass "(password)" 
+&lt;/Location&gt;
+</pre></li>
+	</ul>
+	</li>
+		<li>Restart Redmine by running:<br /><pre>
+(bitnami_base)/ctlscript stop
+(bitnami_base)/ctlscript start
+</pre></li>
+	</ul>
+	</li>
+		<li>Configure Redmine to automatically create svn repositories
+	<ul>
+	<li>Activate SVN in Redmine
+	<ul>
+	<li>Login to Redmine with an administrator account</li>
+		<li>Goto Admin/Settings and select the Repositories tab</li>
+		<li>Check "*Enable WS for repository management*" </li>
+		<li>Click the "Generate a key" link and note the new API key for use below</li>
+		<li>Make sure SVN is the only enabled SCM</li>
+	</ul>
+	</li>
+		<li>Add the following to cron by calling <code>crontab -e</code><br /><pre>
+*/2 * * * * (bitnami_base)/ruby/bin/ruby (bitnami_base)/apps/redmine/extra/svn/reposman.rb --redmine localhost --svn-dir (bitnami_base)/repos/svn --owner root --group daemon --command="(bitnami_base)/subversion/bin/svnadmin create --pre-1.6-compatible --fs-type fsfs" --url http://(server_public_fqdn)/svn --key=(API_Key) --verbose &gt;&gt; /var/log/reposman.log 2&gt;&#38;1 
+</pre></li>
+	</ul>
+	</li>
+		<li>Test SVN Functionality
+	<ul>
+	<li>Create a new Redmine project, making sure to select the <strong>Repository</strong> module, then wait for 2 minutes to give the cron job a chance to create the svn repository</li>
+		<li>Refresh the project page, and then browse to the new project's <strong>Repository</strong> tab.  You should see an empty repository display without any error messages</li>
+		<li>Confirm you can browse the new repository using svn by running the following command.  It should return without errors.<br /><pre>
+svn ls http://(server_public_fqdn)/svn/(project_name)
+</pre></li>
+		<li>Confirm you can add content to the svn repository through svn. 
+	<ul>
+	<li>Add a user to the newly created project in Redmine (go to the <strong>Settings</strong> tab and then the <strong>Members</strong> sub-tab to add a user)</li>
+		<li>Run the following command (note, you will be prompted for the Redmine user's password during this step):<br /><pre>
+svn --username (user) -m "testing mkdir" mkdir http://(server_public_fqdn)/svn/(project_name)/testdir
+</pre></li>
+		<li> Refresh the project's <strong>Repository</strong> tab in Redmine and confirm the <code>testdir</code> is present in the repository</li>
+	</ul></li>
+	</ul></li>
+	</ul>
+
+
+Sources<br />These installation instructions are based on a number of existing how-to's and postings on the internet.  The sources include:
+	<ul>
+	<li><a class="external" href="http://wiki.bitnami.org/Applications/BitNami_Redmine_Stack#How_to_change_the_default_URL.3f">http://wiki.bitnami.org/Applications/BitNami_Redmine_Stack#How_to_change_the_default_URL.3f</a></li>
+		<li><a class="external" href="http://www.redmine.org/projects/redmine/wiki/HowTo_Automate_repository_creation">http://www.redmine.org/projects/redmine/wiki/HowTo_Automate_repository_creation</a></li>
+		<li><a class="external" href="http://www.redmine.org/projects/redmine/wiki/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl">http://www.redmine.org/projects/redmine/wiki/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl</a></li>
+		<li><a class="external" href="http://bitnami.org/forums/forums/redmine/topics/integrated-repository-control#post_9593">http://bitnami.org/forums/forums/redmine/topics/integrated-repository-control#post_9593</a></li>
+		<li><a class="external" href="http://www.azazia.com/kb/entry/62/">http://www.azazia.com/kb/entry/62/</a></li>
+	</ul>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/ode/wiki/Installation_Instructions.html?version=20" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/ode/wiki/Installation_Instructions.txt?version=20" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/Installation_Instructions">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

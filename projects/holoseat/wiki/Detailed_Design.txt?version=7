@@ -1,0 +1,31 @@
+h1. v0.2 Detailed Design
+
+{{toc}}
+
+The v0.2 design is based on the answer to Q4 of the [[Initial Questions]].  The "Fritzing drawing":https://opendesignengine.net/dmsf_files/255?download=287 shown below covers the prototype design.  The remainder of this document covers the design decisions by addressing each of the requirements.  Note, the bread board seen in the Fritzing drawing will be replaced with a prototype shield like "this one":http://www.amazon.com/SainSmart-Prototyping-Prototype-Breadboard-arduino/dp/B0079WI2MK.
+
+!https://opendesignengine.net/dmsf_files/254?download=288!
+
+h2. R1: Detect movement on the exercise equipment and send walking command to video game (typically by "pressing" the 'w' key)
+
+To send key presses, the v0.2 *holoseat* controller replaces the Arduino Uno + USB Keyboard Controller from v0.1 with an Arduino Leonardo, using the Leonardo's built-in "keyboard emulation":http://arduino.cc/en/Tutorial/KeyboardMessage.
+
+To sense activity on the exercise equipment, the *holoseat* will continue to use a reed switch.  For v0.2, the reed switch used will be a "Directed Electronics Magnetic Switch":http://www.amazon.com/Directed-Electronics-8601-Magnetic-Switch/dp/B0009SUF08 -"Radioshack 55050593":http://www.radioshack.com/product/index.jsp?productId=12706328 as with the "Arduino Bike Speedometer":http://www.instructables.com/id/Arduino-Bike-Speedometer/- (this switch is no longer available in stores).
+
+h2. R2: Suppress the walk command signal
+
+To suppress the walk command signal, a toggle switch will be added with the closed position indicating the walk command should be sent and the open position indicating the walk command should not be sent.  The toggle switch used will be a "Radioshack #275-645":http://www.radioshack.com/product/index.jsp?productId=2062509  as with the "Arduino Bike Speedometer":http://www.instructables.com/id/Arduino-Bike-Speedometer/.  See the "push button tutorial":http://arduino.cc/en/tutorial/button for an example of reading a switch/button in the source code.
+
+h2. R3: Show the status of the walk command signal
+
+The status of the walk command will be indicated with an LED.  The LED will be lit when the walk command is active, and unlit when the walk command is not active.  See the "LED tutorial":http://arduino.cc/en/Tutorial/Blink?from=Tutorial.BlinkingLED for an example of lighting an LED.
+
+h2. R4: Support single step vs continuous walking
+
+Supporting single step will be implemented completely in source code.  The current plan is to have different behavior during the reed switch interrupt handler if the RPM is 0 (which should trigger a single key press) vs when the RPM is non-zero (which should work like the vs 0.1 *holoseat*).
+
+h2. R5: Tune the "walking" speed required to trigger sending the walk command
+
+The walking speed (that is the RPM value required to trigger a key press be sent to the computer) will be tuned with a slide style potentiometer.  The mid-way point on the slider will indicate the user wishes to use the default walking speed.  Lower values on the slider will reduce the walking speed down to a minimum of 50% of the default.  Higher values on the slider will increase the walking speed up to a maximum of 150% of the default.  See the "Potentiometer Tutorial":http://www.arduino.cc/en/Tutorial/Potentiometer for an example of reading values from a potentiometer.
+
+Note, slide potentiometers are not readily available at hobby electronic stores (aka Radio Shack - see "HOWTO find and buy faders / sliders / slide pots / slide potentiometers":http://www.sc-fa.com/blog/2009/08/05/slide_potentiometers/ for more details).  Current best example of a slider which will fit on the prototype shield is "this one":http://www.mouser.com/ProductDetail/Alpha-Taiwan/RA2043F-20-10EB1-B100K/?qs=sGAEpiMZZMtC25l1F4XBU1sVVnjISoIH138Ia6wzCwA%3d from Mouser Electronics.

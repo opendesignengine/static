@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Leonardo retired - need to consider alternative dev boards/implementations - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1111-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Leonardo retired - need to consider alternative dev boards/implementations</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2015-12-14.html" title="12/14/2015 10:27 am">almost 7 years</a> ago</span></p>
+<div class="wiki">
+<p>@Bryan pointed out <a href="https://www.arduino.cc/en/Main/Products" class="external">this news</a> a week or so ago over IM.  I think this is actually gives us a chance to reevaluate our implementation some (for example, do we want to move away from usb connection to Bluetooth?).  Bluetooth is particularly interesting for two reasons.  First, we have gotten feedback (internal and external) that the USB cable is annoying.  Second, it would decouple us from the specific chip used in the Leonard (required currently to imitate the keyboard).</p>
+
+
+	<ul>
+	<li>Here is an <a href="http://www.kobakant.at/DIY/?p=3310" class="external">example of connecting Bluetooth to an Arduino to make it an HID</a>.  </li>
+		<li>Here is an <a href="http://www.linuxuser.co.uk/tutorials/emulate-a-bluetooth-keyboard-with-the-raspberry-pi" class="external">example of turning an Raspberry Pi into a Bluetooth keyboard</a></li>
+	</ul>
+
+
+	<p>That last example is interesting to me.  I wonder if a <a href="https://www.raspberrypi.org/blog/raspberry-pi-zero/" class="external">Raspberry Pi Zero</a> could be the basis of a new rev of Holoseat.....</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (2)</h3>
+
+  <div class="message reply" id="message-1112">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1111%3Fr=1112.html#message-1112">RE: Leonardo retired - need to consider alternative dev boards/implementations</a>
+    -
+    Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2015-12-16.html" title="12/16/2015 10:37 am">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Work noting, Adafruit has continued to support the chip on the Leo.<br /><a href="https://www.adafruit.com/products/2829" class="external">Bluefruit 32U4 LE</a> is a product they make that uses that chip and has the bluetooth module built in along with the ability to be powered/charge a battery from USB.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1114">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1111%3Fr=1114.html#message-1114">RE: Leonardo retired - need to consider alternative dev boards/implementations</a>
+    -
+    Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2015-12-16.html" title="12/16/2015 11:01 am">almost 7 years</a> ago
+  </h4>
+  <div class="wiki">Fleshing out my last post.  If we do decide to go with a bluetooth capable Leonardo then we can pull it off by combining a Bluefruit 32u4 LE, a Featherwing Doubler, a featherwing protoboard, and the mini USB Host from Circuits@Home and it should all come together for a prototype set. All combined that allows us to continue with the leonardo but provides for bluetooth and uses a product that is not discontinued.  Can do stacking with the proto, but this allows us to keep a fairly close form factor to the existing model.
+	<ul>
+	<li><a href="https://www.circuitsathome.com/products-page/arduino-shields/usb-host-shield-for-arduino-pro-mini" class="external">USB Host ~20</a></li>
+		<li><a href="https://www.adafruit.com/products/2829" class="external">Bluefruit 32u4 LE ~30</a></li>
+		<li><a href="https://www.adafruit.com/products/2884" class="external">Featherwing Proto ~5</a></li>
+		<li><a href="https://www.adafruit.com/products/2890" class="external">Featherwing Doubler ~7.50</a></li>
+	</ul>
+
+
+	<p>All told it gives us a good bit of proto space to attach and total cost of 62.50 which isn't too bad.  If we don't worry about form factor that much we can cut that to 60 flat.</p>
+
+
+	<p>Additionally, if we drop Bluetooth from the list of requirements the Adafruit board we'd need drops down to 20 and reduces the cost of the build.  Having an option to do both our current model and swap to bluetooth later with a board replacement could make development easier.  In this case it would be as simple as pulling the board off the pins of the protoboard and replacing it.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-2/2)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1111.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

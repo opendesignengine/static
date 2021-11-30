@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere Mk 3 - Proposed Test Cases for Link Budget Library - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere3.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere3.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere Mk 3</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/groundsphere3.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/groundsphere3/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/groundsphere3/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/groundsphere3.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/groundsphere3/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/groundsphere3/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/groundsphere3/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/groundsphere3/boards.html">Forums</a> » <a href="../../../projects/groundsphere3/boards/51.html">Main</a> » </p>
+
+<div class="contextual">
+    <span class="message-1290-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Proposed Test Cases for Link Budget Library</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/392.html" class="icon icon-contributor-license">Skylar Hoffert</a> <a href="http://opendesignengine.net/projects/groundsphere3/activity?from=2017-07-26" title="07/26/2017 01:10 am">over 5 years</a> ago</span></p>
+<div class="wiki">
+<p>1) GS Mk 3<br />    - This is the one described in our documentation already</p>
+
+
+	<p>2) GS Mk 3 High Elevation Angle<br />    - Mostly the same as <a href="../../../issues/1.html" class="issue status-5 priority-2 closed" title="Automatically create SVN Repositories when Repository module is turned on (Closed)">#1</a>, but his a higher elevation angle, and therefore less pointing loss for the antenna</p>
+
+
+	<p>3) GS Mk 3 Low Elevation Angle<br />    - Similar to <a href="http://opendesignengine.net/issues/2" class="issue status-3 priority-2 closed" title="Install available Bot filters (Resolved)">#2</a>, but with a low elevation angle, and greater pointing loss<br />    - This link budget may generate a negative margin, which is fine as a point of test</p>
+
+
+	<p>4) GS Mk 3 High Gain Antenna, With Tracking<br />    - For example, the Ground Station at VT 3m antenna<br />    - Tracking allows for minimal pointing loss</p>
+
+
+	<p>5) GS Mk 3 High Gain Antenna, No Tracking<br />    - Probably will have an extremely negative value due to the high directionality of high gain antennae<br />    - Could again use the Ground Station at VT, but without tracking</p>
+
+
+	<p>6) GS Mk 3 Ground Plane Dipole Antenna, Optimal Elevation Angle<br />    - Similar to the eggbeater, but with different gain characteristics<br />    - Optimal elevation angle to maximize gain</p>
+
+
+	<p>7) GS Mk 3 Ground Plane Dipole Antenna, High Elevation Angle<br />    - Same antenna, but with a high elevation angle<br />    - Could also use a low elevation angle<br />    - This would show the egg beater is well suited for a variety of elevation angles</p>
+
+
+	<p>8) AMSAT Example Link Budget<br />    - To test we find the same result using a known example<br />    - <a class="external" href="https://www.google.com/url?sa=t&#38;rct=j&#38;q=&#38;esrc=s&#38;source=web&#38;cd=3&#38;cad=rja&#38;uact=8&#38;ved=0ahUKEwje4ZGg5IvVAhVEGD4KHbEpD_oQFggxMAI&#38;url=ftp%3A%2F%2Fftp.amsat.org%2Famsat%2Fsoftware%2Fspreadsheet%2FAMSAT-IARU_Link_Budget_Rev1.xls&#38;usg=AFQjCNF1uEoVwNVy-oGRZ0leY6jJ2Cj-NA">https://www.google.com/url?sa=t&#38;rct=j&#38;q=&#38;esrc=s&#38;source=web&#38;cd=3&#38;cad=rja&#38;uact=8&#38;ved=0ahUKEwje4ZGg5IvVAhVEGD4KHbEpD_oQFggxMAI&#38;url=ftp%3A%2F%2Fftp.amsat.org%2Famsat%2Fsoftware%2Fspreadsheet%2FAMSAT-IARU_Link_Budget_Rev1.xls&#38;usg=AFQjCNF1uEoVwNVy-oGRZ0leY6jJ2Cj-NA</a></p>
+
+
+	<p>9) Using NOAA EMWIN-N Budget I found<br />    - <a class="external" href="http://www.nws.noaa.gov/emwin/emwin-n-link-budget.htm">http://www.nws.noaa.gov/emwin/emwin-n-link-budget.htm</a> <br />    - Ground Station values are a little strange compared to ours<br />    - I am not sure if this one would work?</p>
+
+
+	<p>10) Link Budget for a separate completely different system<br />    - DSN receiving signals from Voyager spacecraft<br />    - VCC (USIP) Cubesat Link Budget<br />    - Another Ground Station at VT link budget Zach may know about</p>
+
+
+	<p>Cases that should break the LB<br />11) Elevation Angle Below the horizon</p>
+
+
+	<p>12) Frequency outside of realistic limits (this is optional, requesting feedback)<br />    - 100 GHz probably isn't realistic, maybe some sort of warning<br />    - 3 Hz also isn't realistic<br />    - Maybe okay between 30 MHz and 30 GHz</p>
+
+
+	<p>13) Incorrectly signed values<br />    - Losses MUST be <= 0<br />    - Gains could be positive or negative, but are usually positive<br />    - Distance must be positive<br />    - Noise figure >= 0<br />    - Certain bandwidths wouldn't make sense, i.e. < 0 or > 10G</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (2)</h3>
+
+  <div class="message reply" id="message-1291">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/51/topics/1290?r=1291#message-1291">RE: Proposed Test Cases for Link Budget Library</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/groundsphere3/activity?from=2017-07-30" title="07/30/2017 03:54 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>This looks like a great list to me.  Going to leave comments for each proposed case for completeness.</p>
+
+
+	<p>1) Concur<br />2) Agree with the concept, but I have a quick question.  How would this be implemented in the test case?  Just by supplying a different value for pointing loss?<br />3) Same comment as (2)<br />4) Same comment as (2)<br />5) Same comment as (2)<br />6) Same comment as (2)<br />7) Same comment as (2); really like the idea of getting in some antenna comparisons ahead of prototype design<br />8) Concur, assuming we can match inputs well enough<br />9) I think this one is worth running by hand to see how it compares to our process and if we can make sense of it we make it part of the test suite<br />10) I would like to see if we can find a good cubesat example for this proposed case<br />11) Concur<br />12) I like the idea of bounding the frequency and asserting we report the appropriate warning in place of performing the calculation<br />13) Concur, but note this should be broken into multiple test cases for each value being tested</p>
+
+
+	<p>We may also want to add the <a href="https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx" class="external">KickSat Link Budget</a></p>
+
+
+	<p>Great work!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1293">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1290%3Fr=1293.html#message-1293">RE: Proposed Test Cases for Link Budget Library</a>
+    -
+    Added by <a href="../../../users/392.html" class="icon icon-contributor-license">Skylar Hoffert</a> <a href="../../../projects/groundsphere3/activity%3Ffrom=2017-08-03.html" title="08/03/2017 07:34 pm">about 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>2, 3, 4, 5, 6, 7 are all just changing one or two values of the input variables. It is just to show that by having different input values, we may see better or worse performance.</p>
+
+
+	<p>I definitely agree that we should check out KickSat! I will start looking through their link budget to see if we can match their values.</p>
+
+
+	<p>13 will have to be broken into several test cases, thank you for mentioning that.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-2/2)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/1290">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

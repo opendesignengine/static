@@ -1,0 +1,13 @@
+Index: __init__.py
+===================================================================
+--- __init__.py	(revision 110)
++++ __init__.py	(revision 111)
+@@ -1,7 +1,7 @@
+ import socket
+ from contextlib import closing
+ 
+-from holoseat.util import holoseatSerial, restserial
++from holoseat.util import holoseatSerial, jsonserial
+ 
+ holoseatDevice = holoseatSerial.holoseatSerialDevice()
+ 

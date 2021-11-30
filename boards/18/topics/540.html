@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Station - Version 1.0 close out. - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/gs-001.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/gs-001.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/gs-001%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/gs-001/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/gs-001/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/gs-001/boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/gs-001/boards/18">General</a> » </p>
+
+<div class="contextual">
+    <span class="message-540-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Version 1.0 close out.</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/gs-001/activity?from=2013-07-15" title="07/15/2013 04:30 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>At it’s most basic level, a satellite ground station is simply a radio receiver and an antenna.  An exercise in just how simple one can be made was demonstrated at a Yuri’s Night event in April of this year.  Using a TV dongle as a software defined radio receiver (SDR) and connecting it directly to a medium gain “eggbeater” omnidirectional antenna, we were able to hear multiple satellite contacts, some quite far away.  While it worked, it cannot be said that it worked well, nor was the communication bidirectional, but it was inexpensive (under $50.00 for the entire project) and did receive radio communications as demonstrated in the linked Youtube video: <a class="external" href="http://youtu.be/CbODjHt-BSg">http://youtu.be/CbODjHt-BSg</a></p>
+
+
+	<p>There were problems with this device.  First the antenna design was selected based upon the fact that it is not top-blind (low or no gain at zenith) like most, but in use we found another issue: it is not circularly polarized when the transmitting object is to the side.  This presents some major issues since the coupling between a randomly polarized signal and a vertically polarized antenna will likely be non-ideal, and could even cancel the signal.  This issue strongly affects reception, but the impact it has on the transmission using a 5 watt handheld transceiver would be disastrous.</p>
+
+
+	<p>Another issue is that the other aerial loop at a 90 degree physical mounting as well as 90 degrees phase delayed do not contribute to the signal at all, and in some cases are detrimental.  The resulting real reception pattern when viewed from the top is a weak (+1.6-2.1db) cloverleaf with lobes between the aerial loops.  That said, it has a strong reception spike (+7.92dB) coming from the top of the assembly with a beam width of 38 degrees. Essentially we built a directional antenna in an effort to construct a high gain omni.  In practice, the only place the link budget will allow bidirectional contact with the satellite is within a couple of degrees of zenith.</p>
+
+
+	<p>While quite functional for overhead passes this design turned out to be useless for pulling in weak signals close to the horizon.  Other designs were evaluated as well, and they had similar issues; they were either "top-blind" or had the same issues to the side the eggbeater antenna had.  we briefly considered building a hybrid antenna or connecting two different antennas, one "top-blind like a turnstile, and the other an eggbeater design.  The increase in cost and complexity makes this a bad idea.  The bottom line is that the 1.x design will never be able to meet the design criteria and paints us in a corner when it comes to its development as a tool for serious use.  That said, the eggbeater antenna design is a great introduction to satellite reception, and will be further developed as the 1.1 version which will be much easier to construct.</p>
+
+
+	<p>It is clearly time to increase the complexity a bit for the purpose of enhancing the utility of the device into the realm of real use.  Thus the Groundstation 2.0 project has been born.  The solution is to change the design to a directional antenna, one which is expected to pick up a signal in a narrow cone and ignore signals in the remaining sphere.  For the bands we are interested in, the amateur VHF and UHF FM bands at approximately 144 and 440 MHz, the two most effective antennas are the X-Yagi and the Helical antenna designs.</p>
+
+
+	<p>Since LEO satellites this ground station is designed to pick up move across the sky quite rapidly, a method of automatically pointing the antenna must be implemented.  Fortunately this is easy to implement in both the mechanical and electrical areas.  The challenge is to knowing where the satellite is and point the antenna array at it as it passes, but for this we have computer software which is capable of relaying the azimuth and elevation data to the microprocessor controller on the mount itself.</p>
+
+
+	<p>This will yield the best possible horizon to horizon coverage for the satellite pass.  While the fact that the ground station now has moving parts makes it more complex, more expensive, and in some respects more prone to failure, the end result will improve the day to day operation and mission effectiveness of the ground station.  With some careful engineering, the new ground station design will remain buildable by students and hobbyists while keeping the complexity and costs to a minimum.</p>
+
+
+	<p>To recap:  Version 1.0 will be abandoned, Version 1.1 will be developed as an easy to build hobby device, and version 2.0 will be developed as a strong mobile capable groundstation.</p>
+</div>
+
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/540">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

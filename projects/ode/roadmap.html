@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Open Design Engine - Roadmap - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../../javascripts/context_menu.js%3F1359925542" type="text/javascript"></script><link href="../../stylesheets/context_menu.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" /></head>
+<body class="controller-versions action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/ode.html" method="get">
+        
+        <a href="../../search/index/ode.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../ode%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../ode%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="roadmap.html" class="roadmap selected">Roadmap</a></li>
+<li><a href="../ode%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../ode%3Fjump=news.html" class="news">News</a></li>
+<li><a href="wiki.html" class="wiki">Wiki</a></li>
+<li><a href="boards.html" class="boards">Forums</a></li>
+<li><a href="../ode%3Fjump=files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/ode/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+<form action="roadmap.html" method="get">
+<h3>Roadmap</h3>
+
+  <label><input checked="checked" name="tracker_ids[]" type="checkbox" value="1" />
+  Bug</label><br />
+
+  <label><input checked="checked" name="tracker_ids[]" type="checkbox" value="2" />
+  Feature</label><br />
+
+  <label><input checked="checked" name="tracker_ids[]" type="checkbox" value="3" />
+  Support</label><br />
+
+  <label><input checked="checked" name="tracker_ids[]" type="checkbox" value="4" />
+  Milestone</label><br />
+
+<br />
+<label for="completed"><input id="completed" name="completed" type="checkbox" value="1" /> Show completed versions</label>
+
+	<input id="with_subprojects" name="with_subprojects" type="hidden" value="0" />
+  <br /><label><input checked="checked" id="with_subprojects" name="with_subprojects" type="checkbox" value="1" /> Subprojects</label>
+
+<p><input class="button-small" type="submit" value="Apply" /></p>
+</form>
+
+<h3>Versions</h3>
+
+<a href="roadmap.html#Under consideration">Under consideration</a><br />
+
+<a href="roadmap.html#v0.2.1 - Public Beta Enhancements">v0.2.1 - Public Beta Enhancements</a><br />
+
+<a href="roadmap.html#v0.3 - Sustainability Enhancements">v0.3 - Sustainability Enhancements</a><br />
+
+<a href="roadmap.html#v0.4 - Wiki Enhancements">v0.4 - Wiki Enhancements</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+	
+</div>
+
+<h2>Roadmap</h2>
+
+
+<div id="roadmap">
+
+    <h3 class="version"><a name="Under consideration" /><a href="../../versions/3.html">Under consideration</a></h3>
+    
+
+<p>Features that have not been assigned to a specific version.</p>
+<ul>
+	
+</ul>
+
+
+    <table class="progress" style="width: 40em;"><tr><td class="closed" style="width: 5%;"></td><td class="todo" style="width: 95%;"></td></tr></table><p class="pourcent">5%</p>
+    <p class="progress-info">
+        <a href="issues%3Ffixed_version_id=3&amp;set_filter=1&amp;status_id=c.html">2 closed</a>
+        (5%)
+        &#160;
+        <a href="issues%3Ffixed_version_id=3&amp;set_filter=1&amp;status_id=o.html">35 open</a>
+        (95%)
+    </p>
+
+
+    
+
+    
+    <form action="roadmap.html" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>	
+    <table class="list related-issues">
+    <caption>Related issues</caption>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="124" /></td>
+        <td><a href="../../issues/124.html" class="issue status-1 priority-2">Bug #124</a>: Enhanced wiki formatting</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="18" /></td>
+        <td><a href="../../issues/18.html" class="issue status-1 priority-2">Feature #18</a>: Configure installer to use ODE.net&amp;#x27;s settings for defaults</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="20" /></td>
+        <td><a href="../../issues/20.html" class="issue status-1 priority-2">Feature #20</a>: Add support for shared &quot;engineering&quot; workflows</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="21" /></td>
+        <td><a href="../../issues/21.html" class="issue status-1 priority-2">Feature #21</a>: Project assistance Bounty System</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="23" /></td>
+        <td><a href="../../issues/23.html" class="issue status-1 priority-2">Feature #23</a>: Add a &quot;fans&quot; page to projects</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="24" /></td>
+        <td><a href="../../issues/24.html" class="issue status-1 priority-2">Feature #24</a>: Social networking sites support</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="25" /></td>
+        <td><a href="../../issues/25.html" class="issue status-1 priority-2">Feature #25</a>: Add tagging support to projects and their modules</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="26" /></td>
+        <td><a href="../../issues/26.html" class="issue status-1 priority-2 parent">Feature #26</a>: Native support for Bills of Materials</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="27" /></td>
+        <td><a href="../../issues/27.html" class="issue status-1 priority-2">Feature #27</a>: Engineering file management features</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="28" /></td>
+        <td><a href="../../issues/28.html" class="issue status-1 priority-2">Feature #28</a>: Add real-time wiki editing</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="29" /></td>
+        <td><a href="../../issues/29.html" class="issue status-1 priority-2">Feature #29</a>: Add embedded project IRC support</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="33" /></td>
+        <td><a href="../../issues/33.html" class="issue status-1 priority-2">Feature #33</a>: Allow users to request membership in projects</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="37" /></td>
+        <td><a href="../../issues/37.html" class="issue status-1 priority-2">Feature #37</a>: Visual diffs for graphical file formats</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="45" /></td>
+        <td><a href="../../issues/45.html" class="issue status-1 priority-2">Feature #45</a>: Add license usage stats to a public page </td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="47" /></td>
+        <td><a href="../../issues/47.html" class="issue status-5 priority-2 closed">Feature #47</a>: Add ability to request to join a project</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="49" /></td>
+        <td><a href="../../issues/49.html" class="issue status-1 priority-2">Feature #49</a>: Save filter settings on Activity tab</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="107" /></td>
+        <td><a href="../../issues/107.html" class="issue status-5 priority-2 closed">Feature #107</a>: Add Rails and Ruby versions to output on admin/info page</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="113" /></td>
+        <td><a href="../../issues/113.html" class="issue status-1 priority-2">Feature #113</a>: Repository Zip Download</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="128" /></td>
+        <td><a href="../../issues/128.html" class="issue status-1 priority-2">Feature #128</a>: Add oEmbed wiki macro</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="129" /></td>
+        <td><a href="../../issues/129.html" class="issue status-1 priority-2">Feature #129</a>: Add support for formal PLM process</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="150" /></td>
+        <td><a href="../../issues/150.html" class="issue status-1 priority-2">Feature #150</a>: Install and begin usage of Redmine CMS Plugin</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="152" /></td>
+        <td><a href="../../issues/152.html" class="issue status-1 priority-2">Feature #152</a>: Add &quot;Create new page&quot; button to wiki system</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="177" /></td>
+        <td><a href="../../issues/177.html" class="issue status-1 priority-3">Feature #177</a>: Add svn style tagging to ODE projects</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="179" /></td>
+        <td><a href="../../issues/179.html" class="issue status-1 priority-2">Feature #179</a>: Dozuki Integration</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="180" /></td>
+        <td><a href="../../issues/180.html" class="issue status-1 priority-2">Feature #180</a>: Add 3D rendering support to wiki syntax and DMSF file details</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="181" /></td>
+        <td><a href="../../issues/181.html" class="issue status-1 priority-2">Feature #181</a>: Slideshare wiki macro</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="182" /></td>
+        <td><a href="../../issues/182.html" class="issue status-1 priority-2">Feature #182</a>: Add a requirements management system to ODE</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="183" /></td>
+        <td><a href="../../issues/183.html" class="issue status-1 priority-2 child">Feature #183</a>: Include the ability to embed references to other OSHW projects in BoM module</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="184" /></td>
+        <td><a href="../../issues/184.html" class="issue status-1 priority-2">Feature #184</a>: Add STL part editor using OpenJsCad</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="185" /></td>
+        <td><a href="../../issues/185.html" class="issue status-1 priority-2">Feature #185</a>: Add video conferencing support</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="186" /></td>
+        <td><a href="../../issues/186.html" class="issue status-1 priority-2">Feature #186</a>: Upverter wiki macro</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="187" /></td>
+        <td><a href="../../issues/187.html" class="issue status-1 priority-2">Feature #187</a>: Automatic site submissions to Google for projects and their pages</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="188" /></td>
+        <td><a href="../../issues/188.html" class="issue status-1 priority-2">Feature #188</a>: Create project &quot;Contact us&quot; pages</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="189" /></td>
+        <td><a href="../../issues/189.html" class="issue status-1 priority-2">Feature #189</a>: Implement a &quot;karma&quot; system</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="190" /></td>
+        <td><a href="../../issues/190.html" class="issue status-1 priority-2">Feature #190</a>: Shipper tracking wiki macro</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="191" /></td>
+        <td><a href="../../issues/191.html" class="issue status-1 priority-1">Feature #191</a>: Allow Voting For Features</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="91" /></td>
+        <td><a href="../../issues/91.html" class="issue status-1 priority-2">Support #91</a>: Publish ODE specific plugins as separate sub-projects with their own repositories</td>
+      </tr>
+        </table>
+    </form>
+    
+    
+
+    <h3 class="version"><a name="v0.2.1 - Public Beta Enhancements" /><a href="../../versions/10.html">v0.2.1 - Public Beta Enhancements</a></h3>
+    
+
+<p></p>
+<ul>
+	
+</ul>
+
+
+    <table class="progress" style="width: 40em;"><tr><td class="closed" style="width: 69%;"></td><td class="done" style="width: 8%;"></td><td class="todo" style="width: 23%;"></td></tr></table><p class="pourcent">77%</p>
+    <p class="progress-info">
+        <a href="issues%3Ffixed_version_id=10&amp;set_filter=1&amp;status_id=c.html">9 closed</a>
+        (69%)
+        &#160;
+        <a href="issues%3Ffixed_version_id=10&amp;set_filter=1&amp;status_id=o.html">4 open</a>
+        (31%)
+    </p>
+
+
+    <div class="wiki">
+  <a name="v021-Public-Beta-Enhancements"></a>
+<h1 >v0.2.1 - Public Beta Enhancements<a href="roadmap.html#v021-Public-Beta-Enhancements" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>This is an interim release to capture issues which were preventing <a href="wiki/V02_-_Public_Beta.html" class="wiki-page">v0.2 - Public Beta</a> from launching.  These issues are centered around adding version control systems and refining plugins developed for <a href="wiki/V02_-_Public_Beta.html" class="wiki-page">v0.2 - Public Beta</a>.</p>
+</div>
+
+
+    
+    <form action="roadmap.html" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>	
+    <table class="list related-issues">
+    <caption>Related issues</caption>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="87" /></td>
+        <td><a href="../../issues/87.html" class="issue status-5 priority-2 closed">Bug #87</a>: Chipin Widget does not render at all</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="90" /></td>
+        <td><a href="../../issues/90.html" class="issue status-3 priority-4 closed">Bug #90</a>: Self registration page renders ToS as source code instead of formatted text</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="92" /></td>
+        <td><a href="../../issues/92.html" class="issue status-1 priority-2">Bug #92</a>: Clean up capistrano deploy script</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="122" /></td>
+        <td><a href="../../issues/122.html" class="issue status-1 priority-1">Bug #122</a>: Remove unused and outdated .gem files from vendor/cache</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="123" /></td>
+        <td><a href="../../issues/123.html" class="issue status-4 priority-2">Bug #123</a>: Address inconsistent use of http and https in fundraising plugin</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="218" /></td>
+        <td><a href="../../issues/218.html" class="issue status-3 priority-2 closed child">Bug #218</a>: Footer is not styled correctly</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="249" /></td>
+        <td><a href="../../issues/249.html" class="issue status-5 priority-2 closed child">Bug #249</a>: Receive 403 Error After Creating New Project</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="251" /></td>
+        <td><a href="../../issues/251.html" class="issue status-5 priority-2 closed child">Bug #251</a>: Not selecting a license results in a 500 error</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="257" /></td>
+        <td><a href="../../issues/257.html" class="issue status-3 priority-2 closed child">Bug #257</a>: Remove Chipin from fundraising plugin</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="258" /></td>
+        <td><a href="../../issues/258.html" class="issue status-3 priority-2 closed child">Bug #258</a>: Footer link to Terms of Service does not render correctly</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="259" /></td>
+        <td><a href="../../issues/259.html" class="issue status-5 priority-1 closed">Bug #259</a>: Editing As The Same User In Multiple Browser Gives An Error</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="13" /></td>
+        <td><a href="../../issues/13.html" class="issue status-3 priority-2 closed">Feature #13</a>: Create a donation drive module</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="217" /></td>
+        <td><a href="../../issues/217.html" class="issue status-1 priority-2 parent">Milestone #217</a>: Migrate ODE source code to match current version of Redmine</td>
+      </tr>
+        </table>
+    </form>
+    
+    
+
+    <h3 class="version"><a name="v0.3 - Sustainability Enhancements" /><a href="../../versions/4.html">v0.3 - Sustainability Enhancements</a></h3>
+    
+
+<p></p>
+<ul>
+	
+</ul>
+
+
+    <table class="progress" style="width: 40em;"><tr><td class="closed" style="width: 13%;"></td><td class="done" style="width: 2%;"></td><td class="todo" style="width: 85%;"></td></tr></table><p class="pourcent">15%</p>
+    <p class="progress-info">
+        <a href="issues%3Ffixed_version_id=4&amp;set_filter=1&amp;status_id=c.html">2 closed</a>
+        (13%)
+        &#160;
+        <a href="issues%3Ffixed_version_id=4&amp;set_filter=1&amp;status_id=o.html">13 open</a>
+        (87%)
+    </p>
+
+
+    <div class="wiki">
+  <a name="v03-Sustainability-Enhancements"></a>
+<h1 >v0.3 - Sustainability Enhancements<a href="roadmap.html#v03-Sustainability-Enhancements" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>The goal of v0.3 is to grow <strong>ODE</strong> from its current beta state to a vibrant and self-sustaining open source hardware community.  To accomplish this goal, we will focus development efforts on obtaining IT support for features such as integrated git support, updating the visual aspects of the site to enhance the usability of the site, growing the user base through advertising and messaging, and developing multiple income streams to sustainably fund <strong>ODE</strong>.</p>
+</div>
+
+
+    
+    <form action="roadmap.html" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>	
+    <table class="list related-issues">
+    <caption>Related issues</caption>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="51" /></td>
+        <td><a href="../../issues/51.html" class="issue status-1 priority-2">Bug #51</a>: Git hosting is not working</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="102" /></td>
+        <td><a href="../../issues/102.html" class="issue status-1 priority-2">Bug #102</a>: Updates to the repository don&amp;#x27;t show up on &quot;Activity&quot; tab automatically</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="195" /></td>
+        <td><a href="../../issues/195.html" class="issue status-1 priority-2">Bug #195</a>: Inconsistent visual layout between project tabs</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="220" /></td>
+        <td><a href="../../issues/220.html" class="issue status-5 priority-2 closed">Bug #220</a>: For Pay Private Projects</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="10" /></td>
+        <td><a href="../../issues/10.html" class="issue status-1 priority-2 parent">Feature #10</a>: Modernize ODE theme</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="14" /></td>
+        <td><a href="../../issues/14.html" class="issue status-1 priority-2 child">Feature #14</a>: Add support to showcase &quot;featured projects&quot; on the site homepage</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="15" /></td>
+        <td><a href="../../issues/15.html" class="issue status-1 priority-2 child">Feature #15</a>: Make project homepage more dynamic</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="16" /></td>
+        <td><a href="../../issues/16.html" class="issue status-1 priority-2 child">Feature #16</a>: Improve dashboard</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="17" /></td>
+        <td><a href="../../issues/17.html" class="issue status-5 priority-2 closed">Feature #17</a>: Need a logo for ODE</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="42" /></td>
+        <td><a href="../../issues/42.html" class="issue status-1 priority-2">Feature #42</a>: Per project web stores</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="48" /></td>
+        <td><a href="../../issues/48.html" class="issue status-1 priority-2 child">Feature #48</a>: Add tool tips to icons in the web site GUI</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="73" /></td>
+        <td><a href="../../issues/73.html" class="issue status-1 priority-2">Feature #73</a>: Update embedded image and video rendering to handle browser resizing</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="260" /></td>
+        <td><a href="../../issues/260.html" class="issue status-1 priority-2">Feature #260</a>: For Pay Private Projects</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="36" /></td>
+        <td><a href="../../issues/36.html" class="issue status-2 priority-2">Support #36</a>: Research how Redmine uses RMagick</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="131" /></td>
+        <td><a href="../../issues/131.html" class="issue status-1 priority-2">Support #131</a>: No Notification of Comments on News Items</td>
+      </tr>
+        </table>
+    </form>
+    
+    
+
+    <h3 class="version"><a name="v0.4 - Wiki Enhancements" /><a href="../../versions/5.html">v0.4 - Wiki Enhancements</a></h3>
+    
+
+<p></p>
+<ul>
+	
+</ul>
+
+
+    <table class="progress" style="width: 40em;"><tr><td class="closed" style="width: 50%;"></td><td class="done" style="width: 13%;"></td><td class="todo" style="width: 37%;"></td></tr></table><p class="pourcent">62%</p>
+    <p class="progress-info">
+        <a href="issues%3Ffixed_version_id=5&amp;set_filter=1&amp;status_id=c.html">2 closed</a>
+        (50%)
+        &#160;
+        <a href="issues%3Ffixed_version_id=5&amp;set_filter=1&amp;status_id=o.html">2 open</a>
+        (50%)
+    </p>
+
+
+    <div class="wiki">
+  <a name="v04-Wiki-Enhancements"></a>
+<h1 >v0.4 - Wiki Enhancements<a href="roadmap.html#v04-Wiki-Enhancements" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>This version will focus on adding features to the ODE wiki system.  New features will include a templating engine that will support sharing templates with the ODE community, new formatting options, and better export support.</p>
+</div>
+
+
+    
+    <form action="roadmap.html" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>	
+    <table class="list related-issues">
+    <caption>Related issues</caption>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="6" /></td>
+        <td><a href="../../issues/6.html" class="issue status-5 priority-2 closed">Feature #6</a>: Add wiki external format plugin as basis for wiki enhancements</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="9" /></td>
+        <td><a href="../../issues/9.html" class="issue status-5 priority-2 closed">Feature #9</a>: Improve Wiki PDF export</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="30" /></td>
+        <td><a href="../../issues/30.html" class="issue status-1 priority-2">Feature #30</a>: Add wiki page templates</td>
+      </tr>
+          <tr class="hascontextmenu">
+        <td class="checkbox"><input id="ids_" name="ids[]" type="checkbox" value="32" /></td>
+        <td><a href="../../issues/32.html" class="issue status-4 priority-2">Feature #32</a>: Add embedded video support to wiki</td>
+      </tr>
+        </table>
+    </form>
+    
+    
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+new ContextMenu('/issues/context_menu')
+//]]>
+</script>
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

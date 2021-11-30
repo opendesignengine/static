@@ -1,0 +1,35 @@
+Index: holoseatSerial.py
+===================================================================
+--- holoseatSerial.py	(revision 107)
++++ holoseatSerial.py	(revision 108)
+@@ -24,6 +24,16 @@
+     return holoseat.readline().decode("utf-8").strip()
+ 
+ def connected():
++    # check to see if we think the com port is connected
++    if holoseat.is_open:
++        try:
++            # then check to see if we can actually talk to holoseat
++            temp = holoseat.in_waiting
++        except serial.serialutil.SerialException as e:
++            # if not, then close the connection
++            disconnect()
++
++    # either way, is_open is now the true state of the connection
+     return holoseat.is_open
+ 
+ def readData(messageId=None):
+@@ -132,6 +142,13 @@
+             disconnect()
+             return False
+ 
++        # tell holoseat to echo out all status events to sync up any connected clients
++        eventsResults = json.loads(execCommand({"uri":"/lowlevel/events","verb":"GET"}))
++        if ('Error' in eventsResults):
++            disconnect()
++            print('Error: %s' % eventsResults['Error'])
++            return False
++
+         # passed all tests, we can talk to this Holoseat
+         return True
+     except serial.serialutil.SerialException as e:

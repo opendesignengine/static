@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - HID via Leonardo testing - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1254-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>HID via Leonardo testing</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-02-14.html" title="02/14/2017 09:16 pm">over 5 years</a> ago</span></p>
+<div class="wiki">
+<p>Home of J's work to implement HID through Leonardo style boards controlled from CHIP.</p>
+
+
+	<p>Tasked under DEV-07: Test Keyboard USB HID over Arduino, with all sub-PBIs tasked onto 2017 Sprint 2.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (9)</h3>
+
+  <div class="message reply" id="message-1269">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1269.html#message-1269">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-04-30.html" title="04/30/2017 12:09 am">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>This week I committed to documenting my initial research into powering CHIP Pro from a Feather (our preferred Leonardo style board) and providing I2C between CHIP Pro and Feather (to enable command and control of the Feather from the CHIP Pro).</p>
+
+
+<strong>Powering CHIP Pro from a Feather</strong>
+	<ul>
+	<li><a class="external" href="https://docs.getchip.com/chip_pro.html#power-c-h-i-p-pro">https://docs.getchip.com/chip_pro.html#power-c-h-i-p-pro</a><br />There are several power options listed in the CHIP Pro docs.  Given we may later use a battery to provide power for graceful shutdown, I am going to go with the "Connect 5 - 5.5 volts of power to <strong>CHG-IN</strong> (and GND)" on the CHIP Pro side.</li>
+		<li><a class="external" href="https://learn.adafruit.com/assets/30918">https://learn.adafruit.com/assets/30918</a><br />We can get 5v (up to 500mA) from the <strong>USB</strong> pin on the Feather and there are mutliple GND pins we can use.</li>
+		<li>Plan: connect Feather.USB pin to CHIP.CHG-IN pin and connect a Feather.GND pin to a CHIP.GND pin to provide power</li>
+	</ul>
+
+
+<strong>Providing I2C between CHIP Pro and Feather</strong>
+	<ul>
+	<li>Feather I2C Pins - from <a class="external" href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/pinouts">https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/pinouts</a><br />See <a href="https://www.arduino.cc/en/Tutorial/MasterWriter" class="external">Arduino Master Writer</a> and <a href="https://www.arduino.cc/en/Tutorial/MasterReader" class="external">Arduino Master Reader</a> tutorials for background
+	<ul>
+	<li>I2C Data Pin = #2/SDA</li>
+		<li>I2C Clock Pin = #3/SCL </li>
+	</ul>
+	</li>
+		<li>Johnny-Five and I2C
+	<ul>
+	<li>Utilize <a href="http://johnny-five.io/news/introducing-i2c-component-backpacks/" class="external">backpacks</a> (see also <a href="https://bbs.nextthing.co/t/solved-johnny-five-i2c-backpack-ws2812-node-pixel/8914" lang="SOLVED" class="external"> Johnny five i2c backpack ws2812 node-pixel</a>)</li>
+		<li>Looking around the <a href="https://github.com/ajfisher/node-pixel" class="external">Node Pixel</a> example
+	<ul>
+	<li><a href="https://github.com/ajfisher/node-pixel/blob/master/docs/installation.md#i2c-backpack-installation" class="external">I2C Backpack Installation</a><br />To follow the above, you need to know the data and clock pins for both the slave board (Feather) and master board (CHIP Pro)</li>
+		<li>From <a class="external" href="https://docs.getchip.com/chip_pro.html#twi1">https://docs.getchip.com/chip_pro.html#twi1</a>
+	<ul>
+	<li>I2C Data Pin = 12/TWI1-SDA</li>
+		<li>I2C Clock Pin = 11/TWI1-SCK</li>
+	</ul>
+	</li>
+		<li><a href="https://github.com/ajfisher/node-pixel/tree/master/firmware/build/backpack" class="external">Example Arduino Backpack Code</a>
+	<ul>
+	<li><a href="https://github.com/ajfisher/node-pixel/tree/master/firmware/build/backpack" title="ino" class="external">Main Arduino File</a></li>
+		<li><a href="https://github.com/ajfisher/node-pixel/blob/master/firmware/build/backpack/ws2812.cpp" title="numbytes, received_bytes" class="external">Implementation of process_command</a></li>
+	</ul></li>
+	</ul></li>
+	</ul></li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1280">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1280.html#message-1280">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 11:44 am">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Today I am planning to test implementing the Holoseat controller (and specifically the required connections for HID through Arduino-like devices) with the CHIP Pro/Python.  My test plan is as follows.</p>
+
+
+	<ol>
+	<li>Prep CHIP Pro
+	<ol>
+	<li>Install antenna</li>
+		<li>Install Debian os </li>
+		<li>Setup wifi</li>
+		<li>Setup ssh</li>
+		<li>Test ssh (need IP address)</li>
+	</ol>
+	</li>
+		<li>Test power from feather
+	<ol>
+	<li>Power down CHIP Pro</li>
+		<li>Wire up proposed power pinout from feather to CHIP Pro</li>
+		<li>Connect feather to power supply</li>
+		<li>Observe CHIP Pro</li>
+		<li>If it starts, try to ssh into it</li>
+	</ol>
+	</li>
+		<li>Setup python IO chiptainer 
+	<ol>
+	<li>Continue getting power from feather</li>
+		<li>Install Docker</li>
+		<li>Pull python IO image</li>
+		<li>Launch python IO container with i2c and mem access</li>
+		<li>Verify devices are present</li>
+		<li>Install git in chiptainer </li>
+		<li>Shutdown chiptainer and chip Pro</li>
+	</ol>
+	</li>
+		<li>Prep feather i2c
+	<ol>
+	<li>Disconnect power pins for chip pro</li>
+		<li>Install sample firmware (ensure code references built in led)</li>
+		<li>Disconnect feather from pc </li>
+		<li>Wire up power and i2c between feather and chip Pro</li>
+	</ol>
+	</li>
+		<li>Test i2c
+	<ol>
+	<li>Plug feather into pc</li>
+		<li>Verify feather and chip Pro boot</li>
+		<li>Ssh into chip Pro</li>
+		<li>Start python IO container </li>
+		<li>Get python demo source code and required libraries (note, there are two implementations, will test adafruit pure python first)</li>
+		<li>Modify for wired i2c bus</li>
+		<li>Run python test code</li>
+	</ol></li>
+	</ol>
+
+
+	<p>Here goes...</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1281">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1281.html#message-1281">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 12:07 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki">Prep CHIP Pro
+	<ol>
+	<li>Install antenna - check</li>
+		<li>Install Debian os - check</li>
+		<li>Setup wifi - check (see <a href="https://opendesignengine.net/boards/36/topics/1263?r=1268#message-1268" class="external">this post</a> for full details for this step</li>
+		<li>Setup ssh - already configured in Debian OS for CHIP Pro</li>
+		<li>Test ssh (need IP address) - check</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1282">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1282.html#message-1282">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 12:16 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki">Test power from feather
+	<ol>
+	<li>Power down CHIP Pro - check</li>
+		<li>Wire up proposed power pinout from feather to CHIP Pro<br />- 5V from Arduino to pin 4 (CHG-IN)<br />- GND from Arduino to pin 6 (GND)</li>
+		<li>Connect feather to power supply - check</li>
+		<li>Observe CHIP Pro - power led came on and ping to ip address successful after waiting for it to boot</li>
+		<li>If it starts, try to ssh into it - check</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1283">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1283.html#message-1283">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 01:08 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki">Setup python IO chiptainer 
+	<ol>
+	<li>Continue getting power from feather - check</li>
+		<li>Install Docker<br />- the CHIP Pro kept shutting down during the installation process<br />- it turns out I am short a feather, so I am trying these steps out a Leonardo I have_)<br />- I think the CHIP Pro is shutting down because I am drawing too much power, ntc recommends 5v and 1 amp for power supplies<br />- looking at the <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/power-management#power-supplies" class="external">feather docs</a> it looks like it will have the same problem<br />- I think we will need to pull power directly from the USB cable  <br />- going to install Docker with power from the USB port on the CHIP Pro and go back to Leonardo power for i2c tests</li>
+		<li>Pull python IO image<br />- docker pull modelb/chiptainer_python_io:master</li>
+		<li>Launch python IO container with i2c and mem access<br />- docker run -v /sys:/sys --cap-add SYS_RAWIO --device /dev/mem --device /dev/i2c-0 --device /dev/i2c-1 -it modelb/chiptainer_python_io:master</li>
+		<li>Verify devices are present - check</li>
+		<li>Install git in chiptainer <br />- apk update<br />- apk add git</li>
+		<li>Shutdown chiptainer and chip Pro - check</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1284">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1284.html#message-1284">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 01:44 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki">Prep feather i2c
+	<ol>
+	<li>Disconnect power pins for chip pro - check</li>
+		<li>Install sample firmware (ensure code references built in led)<br />- see <a class="external" href="https://oscarliang.com/raspberry-pi-arduino-connected-i2c/">https://oscarliang.com/raspberry-pi-arduino-connected-i2c/</a><br />- check</li>
+		<li>Disconnect feather from pc - check</li>
+		<li>Wire up power and i2c between feather and chip Pro - check</li>
+	</ol>
+
+
+	<p>Connections for i2c testing</p>
+
+
+	<table>
+		<tr>
+			<td>Purpose  </td>
+			<td>CHIP Pro</td>
+			<td>Leonardo</td>
+		</tr>
+		<tr>
+			<td>5v       </td>
+			<td>Pin 4   </td>
+			<td>5v      </td>
+		</tr>
+		<tr>
+			<td>GND      </td>
+			<td>Pin 6   </td>
+			<td>GND     </td>
+		</tr>
+		<tr>
+			<td>i2c clock</td>
+			<td>Pin 11  </td>
+			<td>SCL     </td>
+		</tr>
+		<tr>
+			<td>i2c data </td>
+			<td>Pin 12  </td>
+			<td>SDA     </td>
+		</tr>
+	</table>
+
+
+
+
+	<p>Note, we are connecting to i2c-1 on the CHIP Pro.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1285">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1285.html#message-1285">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 02:30 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki">Test i2c
+	<ol>
+	<li>Plug feather into pc - check</li>
+		<li>Verify feather and chip Pro boot - check</li>
+		<li>Ssh into chip Pro <br />- the CHIP Pro is very slow to respond</li>
+		<li>Start python IO container -check </li>
+		<li>Get python demo source code and required libraries (note, there are two implementations, will test adafruit pure python first)<br />- first lib to check: <a class="external" href="https://github.com/fordsfords/Adafruit_Python_PureIO">https://github.com/fordsfords/Adafruit_Python_PureIO</a><br />- example: <a class="external" href="https://oscarliang.com/raspberry-pi-arduino-connected-i2c/">https://oscarliang.com/raspberry-pi-arduino-connected-i2c/</a></li>
+		<li>Modify for wired i2c bus<br /><pre>
+import Adafruit_PureIO.smbus as smbus
+import time
+# for RPI version 1, use "bus = smbus.SMBus(0)" 
+bus = smbus.SMBus(1)
+
+# This is the address we setup in the Arduino Program
+address = 0x04
+
+def writeNumber(value):
+    bus.write_byte(address, value)
+    # bus.write_byte_data(address, 0, value)
+    return -1
+
+def readNumber():
+    number = bus.read_byte(address)
+    # number = bus.read_byte_data(address, 1)
+    return number
+
+while True:
+    var = input("Enter 1 - 9: ")
+    if not var:
+        continue
+
+    writeNumber(var)
+    print "CHIP Pro: Hi Arduino, I sent you ", var
+    # sleep one second
+    time.sleep(1)
+
+    number = readNumber()
+    print "Arduino: Hey CHIP Pro, I received a digit ", number
+    print
+</pre></li>
+		<li>Run python test code - check</li>
+	</ol>
+
+
+	<p>And it worked!  I can see the Arduino receiving messages in the Serial Monitor and I can see the CHIP Pro receiving messages in the ssh session to the CHIP Pro!!!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1286">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1286.html#message-1286">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 02:41 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>Note, I have done some earlier testing demonstrating that the Leonardo style boards (including the Feather) can dynamically turn on and off their HID modes inside of loop().  These tests plus the testing above clearly demonstrates we can implement HID using Arduino.  We just need to resolve the power issue (which note, was not a problem when I was not trying to install large packages) and implement a control protocol over i2c to send HID commands.</p>
+
+
+	<p>I also need to verify the issues with responsiveness (which were not present when I started) are not a chronic issue.  I will start working on a Holoseat HID over i2c protocol so we can get this thing fully prototyped.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1287">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1254%3Fr=1287.html#message-1287">RE: HID via Leonardo testing</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-06-03.html" title="06/03/2017 04:18 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think the responsiveness issue is something to do with my laptop.  Everything is starting to feel sluggish.</p>
+
+
+	<p>I made a couple of modifications to the source code for the Leonardo firmware and the Python demo script to move us to HID testing.</p>
+
+
+	<p><strong>Leonard Firmware</strong><br /><pre>
+#include &lt;Wire.h&gt;
+#include &lt;Keyboard.h&gt;
+
+#define SLAVE_ADDRESS 0x04
+int number = 0;
+int state = 0;
+
+void setup() {
+  Keyboard.begin();
+  pinMode(13, OUTPUT);
+  Serial.begin(9600); // start serial for output
+  // initialize i2c as slave
+  Wire.begin(SLAVE_ADDRESS);
+
+  // define callbacks for i2c communication
+  Wire.onReceive(receiveData);
+  Wire.onRequest(sendData);
+
+  Serial.println("Ready!");
+}
+
+void loop() {
+  delay(100);
+}
+
+// callback for received data
+void receiveData(int byteCount) {
+
+  while (Wire.available()) {
+    number = Wire.read();
+    Serial.print("data received: ");
+    Serial.write(number);
+    Serial.println("");
+    Keyboard.write(number);
+
+    if (number == 1) {
+
+      if (state == 0) {
+        digitalWrite(13, HIGH); // set the LED on
+        state = 1;
+      }
+      else {
+        digitalWrite(13, LOW); // set the LED off
+        state = 0;
+      }
+    }
+  }
+}
+
+// callback for sending data
+void sendData() {
+  Wire.write(number);
+}
+</pre></p>
+
+
+	<p><strong>Python Demo</strong><br /><pre>
+import Adafruit_PureIO.smbus as smbus
+import time
+# for RPI version 1, use "bus = smbus.SMBus(0)" 
+bus = smbus.SMBus(1)
+
+# This is the address we setup in the Arduino Program
+address = 0x04
+
+def writeNumber(value):
+    bus.write_byte(address, value)
+    # bus.write_byte_data(address, 0, value)
+    return -1
+
+def readNumber():
+    number = bus.read_byte(address)
+    # number = bus.read_byte_data(address, 1)
+    return number
+
+while True:
+    var = input("Enter a message: ")
+    if not var:
+        continue
+
+    for c in var:
+        writeNumber(ord(c))
+</pre></p>
+
+
+	<p>Using this code, I can remotely type messages from a machine running ssh into the CHIP Pro to a machine with the Leonardo plugged into it.  Note, the <a href="https://www.arduino.cc/en/Reference/KeyboardWrite" class="external">Keyboard.write()</a> calls are good for sending what you are typing, but not for game play.  We will still need to use <a href="https://www.arduino.cc/en/Reference/KeyboardPress" class="external">Keyboard.press()</a> function for game play.  With this last test, I feel we can claim done on the following PBIs.</p>
+
+
+	<ul>
+	<li>DEV-26: Determine wiring to power CHIP Pro from Feather - with the lesson learned that we should look into drawing power straight off of the USB line</li>
+		<li>DEV-27: Determine wiring to provide I2C between CHIP Pro and Feather</li>
+		<li>DEV-28: Develop Feather code to be I2C slave</li>
+		<li>DEV-29: Develop Johnny-Five code for CHIP Pro to be I2C master - with the understanding that we are now moving to Python 2.7 and <a href="https://github.com/xtacocorex/CHIP_IO" class="external">CHIP-IO</a></li>
+		<li>DEV-30: Test master to slave and slave to master events between Feather and CHIP Pro</li>
+	</ul>
+
+
+	<p>Part of the implementation of the CHIP Pro version of Holoseat will need to include developing a protocol between the CHIP Pro and the Feather.  This protocol should support operation messages from the CHIP Pro to the Feather (e.g. press a key, disable keyboard, release keys, etc) and messages from the Feather to the CHIP Pro (e.g. passing along messages from host machine to the Holoseat over the Holoseat Serial Protocol).</p>
+
+
+	<p>Still, not a bad day's work.
+*</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-9/9)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1254.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

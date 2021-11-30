@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ground Sphere Mk 3: Revisions</title>
+  <link rel="self" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2018-05-22T01:30:53+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Revision 95: Woops, now I added the quarter wave monopole analysis.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/95"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/95</id>
+    <updated>2018-05-22T01:30:53+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 94: Added analysis of quarter wave dipole antenna.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/94"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/94</id>
+    <updated>2018-05-22T01:30:20+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 93: Removed need for pyephem.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/93"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/93</id>
+    <updated>2018-05-01T04:52:04+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 92</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/92"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/92</id>
+    <updated>2018-04-11T00:19:54+00:00</updated>
+    <author>
+      <name>Monty Noblezada</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 91</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/91"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/91</id>
+    <updated>2018-04-11T00:02:19+00:00</updated>
+    <author>
+      <name>Monty Noblezada</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 90: Now including the pass angles in analysis! Yay!</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/90"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/90</id>
+    <updated>2018-04-03T16:07:12+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 89: Now including real orbit elevation angles! with TLEs retrieved from the web!</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/89"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/89</id>
+    <updated>2018-04-03T06:09:16+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 88: Fixed some issues with the calculator to_string function.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/88"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/88</id>
+    <updated>2018-03-27T23:38:29+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 87: Moved boilerplate code into utils.py</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/87"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/87</id>
+    <updated>2018-03-13T13:09:30+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 86: Updated Analysis template to include required sections. Also, the plotting works now!</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/86"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/86</id>
+    <updated>2018-02-27T02:10:24+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 85: Corrected importing of library, added feedback notes from standup</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/85"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/85</id>
+    <updated>2018-02-21T01:41:28+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 84: Added analysis template for analysis iterations! Has some issues with importing and ...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/84"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/84</id>
+    <updated>2018-02-20T15:31:13+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 83: Fixed some misspelled words</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/83"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/83</id>
+    <updated>2018-02-08T15:11:41+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 82: Included checking all default values in default_init test case</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/82"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/82</id>
+    <updated>2018-02-04T18:07:14+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 81: Library logging updated to utilize a better method</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/groundsphere3/repository/revisions/81"/>
+    <id>http://opendesignengine.net/projects/groundsphere3/repository/revisions/81</id>
+    <updated>2018-02-04T18:02:47+00:00</updated>
+    <author>
+      <name>Skylar Hoffert</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+</feed>

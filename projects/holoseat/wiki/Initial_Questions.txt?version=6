@@ -1,0 +1,55 @@
+h1. Holoseat Initial Questions  v0.1
+
+{{toc}}
+
+Below is a list of questions and proposed answers to help us narrow down the requirements for this project.
+
+h3. Q1. Why are we making this?
+
+*A1*. _The *Holoseat* is a video gaming accessory which uses the drive to play video games to encourage regular exercise.  It accomplishes this by coupling exercise directly into the video game experience.  It should be functional enough to support initial sales to end users as both a kit and finished product._
+
+h3. Q2. Who is this for?
+
+*A2*. _PC based video game players who play games which involve character movement in 3rd or 1st person (role playing games, massively multiplayer role playing games, first person shooters, etc)._
+
+h3. Q3. How will this be used?
+
+*A3*. _Players attach the *Holoseat* interface to a recumbent exercise bike or elliptical machine and to a computer.  The *Holoseat* interface then detects the motion from the exercise equipment and sends the appropriate keystrokes for walking (or other locomotion) to the computer.  In this way, players must use the exercise equipment as part of the game experience._
+
+h3. Q4. What features does it need to have (now)?
+
+*A4*. _The *Holoseat* needs to support the following features to be sellable:_
+
+* _Detect movement on the exercise equipment and send walking command to video game (typically by "pressing" the 'w' key) - *Required*_
+* _Suppress the walk command signal - *Required*_
+* _Show the status of the walk command signal (for example with an LED) - *Required*_
+* _Support single step vs continuous walking - *Required*_
+* _Tune the "walking" speed required to trigger sending the walk command - *Highly desired*_
+
+h3. Q5. What features does it need to have (later)?
+
+*A5*. _Later versions of the *Holoseat* may have the following features:_
+
+* _Support "walking" vs "running" in game play through different speeds on the exercise equipment_
+* _Allow for changing the in game locomotion command(s) without reprogramming (to expand the style and list of games supported)_
+* _Someday, want to support having the *Holoseat* plugged inline between a controller and a PC or gaming console, passing through signals from the controller not related to locomotion, suppressing those which are, and emulating the signals for locomotion when the exercise equipment is used.  The idea is to allow the *Holoseat* to be used with consoles and make it easy for most games to be controlled partly from the exercise equipment._
+
+h3. Q6. What are the legacy requirements?
+
+*A6*. _None - still in early prototyping phase, new versions can completely replace current version(s)._
+
+h3. Q7. Who's going to build this?
+
+*A7*. _The *Holoseat* will be offered as both a kit and a completed product.  The kit version will be built by gamers and makers.  The complete product will be built by *Holoseat* staff._
+
+h3. Q8. How many do we want to make?
+
+*A8*. _Eventually, one for every gaming PC and console on the planet.  For now, it will be built in limited batches (one and two at a time).  Development will include a series of prototypes leading to an initial production version optimized for assembly by makers as a kit._
+
+h3. Q9. What is the budget?
+
+*A9.* _As controllers cost between $35 and $50.  The kit should be in the same level of price, which with a 2.6 times mark up means material costs for the *Holoseat* parts should be between $14 and $20.  Budget for prototyping should cover several generations of prototypes and account for non-production components, giving a development budget of $300._
+
+h3. Q10. What is the timeline?
+
+*A10*. _The second generation prototype needs to be completed before the end of 2013.  Kit prototypes should be complete by the end of Q2 2014._

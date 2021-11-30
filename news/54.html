@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Testing update for Prototype 1 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/groundsphere.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/groundsphere%3Fjump=news.html" class="news selected">News</a></li>
+<li><a href="../projects/groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-54-watcher"></span>
+
+
+</div>
+
+<h2>Testing update for Prototype 1</h2>
+
+
+
+<p>
+<span class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/groundsphere/activity%3Ffrom=2014-01-04.html" title="01/04/2014 04:21 pm">almost 9 years</a> ago</span></p>
+<div class="wiki">
+<p>This update is based on a couple of emails from Tim at Southern Stars.  The short version of the update is that we have limited access for conducting from orbit testing, so Tim and Scott jumped at a chance this past week to run a from orbit test.  Unfortunately, the results are inconclusive at best, and disappointing at worst.  They were unable to receive signal from the CubeSat in question.  Read on for full details.</p>
+
+
+	<p>The test in question involves attempting to receive signals from <a href="http://space.skyrocket.de/doc_sdat/aerocube-4.htm" class="external">AeroCube 4C</a>.  This CubeSat only broadcasts on 915 MHz when it is over its mission control center, so we have to make special arrangements to conduct the from orbit tests.  Specifically, we need to coordinate with its operators and Southern Stars team members must drive with the <strong>Ground Sphere</strong> to the LA area in order to be under its footprint.</p>
+
+
+	<p>This past Thursday (Jan 2), a test opportunity was arranged.  The operators believe they picked up the CubeSat's signal (they saw what appeared to be the signal on a spectrum analyzer) but were not able to establish a radio lock.  The following from Tim details our even less successful results.</p>
+
+
+<blockquote>
+
+	<p>We were less successful.  We saw a number of "blips" right around the expected 914.7 MHz, but they were all very short.  We saw nothing like a continuous signal that dopper-shifted as the satellite approached and receded.  I suspect the blips were all local.  We recorded about 10 GB worth of raw RF samples from the SDR, and we'll go over these in more detail tomorrow.</p>
+
+
+	<p>I should note: we used Scott's SDR, rather than the SDR that was sent to us.  I didn't realize this until after the pass began.  Scott's SDR does not have the same built-in preamp and has a smaller gain (a few dB difference?  Scott can you put a number on it?)  This was a mistake on our part.</p>
+
+
+	<p>We also noticed that the GS antenna did not seem to produce noticeably any different signal levels when the power supply to the preamp was plugged in, vs. when it was not plugged in.  I don't know what that means.  Something may or may not be broken.  Or we're just not interpreting the SDR output correctly (?)</p>
+
+
+</blockquote>
+
+	<p>Discussions between Aaron and Scott over email confirm there was a hardware issue with Prototype 1.  The preamp's power connection came loose during transport so it was not in use during the test.</p>
+
+
+	<p>It should also be noted that this attempt at a from orbit test, due to the challenges with securing test opportunities, came well out of the established testing order (see <a href="../projects/groundsphere/wiki/Testing.html" class="wiki-page">Testing</a> wiki page for more details).  Neither the lab tests nor the field tests have been run, and both need to be run to verify and validate the prototype.  In all likelihood, even the lab tests would have turned up the problem with the pre-amp.</p>
+
+
+	<p>We will be circling the wagons here shortly to continue the testing.  More news as it is available.</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/613" class="icon icon-contributor-license">Lamar Craft</a> <a href="../projects/groundsphere/activity%3Ffrom=2018-09-08.html" title="09/08/2018 12:03 pm">about 4 years</a> ago</h4>
+    <p>All the potentially sound men have been admired for the future times. The range of the term and <a href="http://opendesignengine.net/projects/groundsphere/wiki/Uk_coursework_writing" class="wiki-page new">uk coursework writing</a> is fixed for the consumption for the candidates.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/623" class="icon icon-contributor-license">Colette Kelley</a> <a href="../projects/groundsphere/activity%3Ffrom=2018-09-18.html" title="09/18/2018 09:01 am">about 4 years</a> ago</h4>
+    <p>The fluctuations have been done for the people. The charges and [url=https://rainbowintl.com/chicago-north-shore]mold removal chicago inc[/url] have been done for the motivating factors for the candidates in life.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/671" class="icon icon-contributor-license">Ridley Roswell</a> <a href="../projects/groundsphere/activity%3Ffrom=2018-11-22.html" title="11/22/2018 07:54 am">almost 4 years</a> ago</h4>
+    <p>We can see the unmistakable distinction in last few years especially in 2006 a ton of garden some portion of that town and following 3 years these garden expel from the town. Along these lines it's a great opportunity to revamp the Town with a considerable measure of garden which must be incorporated there. Well! I want to get <a href="https://nsw-writers.com/best-essay-services-reviews/australianwritings-com-review/" class="external">australian writings services review</a> and this article have some extremely legitimate focuses to be see here with respect to this learning post.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/481" class="icon icon-contributor-license">Brayden Torreggiani</a> <a href="../projects/groundsphere/activity%3Ffrom=2020-12-10.html" title="12/10/2020 01:20 pm">almost 2 years</a> ago</h4>
+    <p>Every book have different message which they want to convey to reader. In every book, you must find out different &lt;a href="https://randomcrap.net/best-2-in-1-laptops/"&gt;best 2 in 1 laptops&lt;/a&gt; than others. So, don’t think that every CTO demands you for the same thing.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/481" class="icon icon-contributor-license">Brayden Torreggiani</a> <a href="../projects/groundsphere/activity%3Ffrom=2020-12-10.html" title="12/10/2020 01:22 pm">almost 2 years</a> ago</h4>
+    <p>&lt;a href="https://randomcrap.net/best-2-in-1-laptops/"&gt;best 2 in 1 laptops&lt;/a&gt;</p>
+
+
+	<p>&lt;a rel="dofollow" href="https://www.topbritishessays.com/"&gt;best uk essay writing service&lt;/a&gt;</p>
+
+
+	<p>[URL=https://www.essayuniverse.net/best-essay-writing-services/]top essay writing service[/URL]</p>
+
+
+	<p>[best 2 in 1 laptops](<a class="external" href="https://randomcrap.net/best-2-in-1-laptops/">https://randomcrap.net/best-2-in-1-laptops/</a>)</p>
+
+
+	<p>[url=https://randomcrap.net/best-laptops-for-teachers/]best laptop for teachers[/url]</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/54.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

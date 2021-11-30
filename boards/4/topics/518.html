@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Chat Log 06-25-13 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-518-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Chat Log 06-25-13</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-26.html" title="06/26/2013 04:08 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>Here are some relevant discussions from the Mach 30 IRC chat room on irc.freenode.net from 06-25-13. We're experimenting with using IRC as a full time chat room, and if you would like to take part in that testing you can hop on the #mach30 channel on irc.freenode.net.</p>
+
+
+	<p>The first section holds some discussion on the requirements document and how well the concepts employed in Shepard scale to larger test stands. The second section includes a short discussion on some of the challenges of kitting Shepard 2.0.</p>
+
+
+	<p>[12:42] &lt;aharper_mach30&gt; read your ODE post...  the second temp sensor will fulfill all the requirements in the documentation with the exceptions of STSR 5.1, 5.2 (working on that), 5.4, 5.5-5.10 (future requirements)<br />[12:44] <@jwright_mach30> Yeah, and if we can get everything on the I2C interface we'll have a pretty clean setup. Are you looking at the 1.0 requirements? I trimmed down the 1.1 requirements and will have to revert back to the originals for 2.0.<br />[12:44] &lt;aharper_mach30&gt; The v2.0 DAQ will allow 5.1, do 5.2 (the reason for the cape), and nail 5.4.<br />[12:45] &lt;aharper_mach30&gt; Yeah.  I was looking at 1.1<br />[12:46] <@jwright_mach30> <a class="external" href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document?version=20">https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document?version=20</a><br />[12:47] <@jwright_mach30> Those are the full blown requirements. Most (if not all) of them we should be able to meet still.<br />[12:48] <@jwright_mach30> Ok, sounds like lunch is back on. BRB<br />[12:48] &lt;aharper_mach30&gt; STSR 4.6:  We're not using a thermocouple, so some of the language may need to be changed.<br />[12:48] &lt;aharper_mach30&gt; cool.  See ya<br />[12:48] <@jwright_mach30> Good point on 4.6. I'll work on that.<br />[12:49] &lt;aharper_mach30&gt; I don't get STSR 4.8.  This will be necessary to do anything previously defined in the requirements document.<br />[12:51] &lt;aharper_mach30&gt; Also, if the data collection is digital, and the sensor returns digital data (like an integrated ADC in the load cell housing), there is no need for analog inputs in the data collection system.<br />[12:57] &lt;aharper_mach30&gt; STS 1.1 meets or exceeds all STSR project and tech requirements (provided the second IR sensor doesn't slow the scan rate below 250 SPS).<br />[12:59] &lt;aharper_mach30&gt; If we add a webcam or two to v2.0 and I get the ignition circuit done, it will meet or exceed all future requirements with the exception of STSR 5.3.2<br />[13:05] &lt;csigman_mach30&gt; I was looking at the diagram in Jeremy's news article that he reposted the link to a little bit ago<br />[13:06] &lt;csigman_mach30&gt; what's the part off of the ADS1118 on A/B 17/18?<br />[13:10] &lt;aharper_mach30&gt; What page are you on?<br />[13:10] &lt;csigman_mach30&gt; <a class="external" href="https://opendesignengine.net/news/36">https://opendesignengine.net/news/36</a><br />[13:14] &lt;aharper_mach30&gt; Which pic?<br />[13:15] &lt;aharper_mach30&gt; Got it.<br />[13:15] &lt;aharper_mach30&gt; It's a screw terminal<br />[13:16] &lt;aharper_mach30&gt; The new sensors eliminated the ADS1118.<br />[13:19] &lt;csigman_mach30&gt; ahh. I saw the screws, but for some reason it didn't click<br />[13:21] &lt;aharper_mach30&gt; No worries... took me a sec too<br />[13:28] &lt;csigman_mach30&gt; Also, STSR5.5-10 should really specify an output, not just ambiguous terms like small/medium/large<br />[13:29] &lt;aharper_mach30&gt; Agreed.  I have them going up by order of magnitude.<br />[13:29] &lt;aharper_mach30&gt; Shepard is 0-50N<br />[13:29] &lt;csigman_mach30&gt; well v2 is<br />[13:30] &lt;aharper_mach30&gt; Grissom is up to 500N<br />[13:30] &lt;aharper_mach30&gt; Glenn is up to 5kN<br />[13:30] &lt;aharper_mach30&gt; Carpenter is up to 50kN<br />[13:30] &lt;csigman_mach30&gt; I think those reqs should be cleared up more and some scoped to other test stands<br />[13:31] &lt;aharper_mach30&gt; Schirra is up to 500kN<br />[13:31] &lt;aharper_mach30&gt;  Cooper is 5MN+<br />[13:31] &lt;aharper_mach30&gt; Bingo<br />[13:32] &lt;csigman_mach30&gt; so, for reference, what's like a Falcon 9 or an Ariane 5 or something<br />[13:32] &lt;aharper_mach30&gt; Funny part is that now that we are using the sensors we are and using a Bone for DAQ, the DAQ can scale all the way up by swapping out sensors and peripherals.<br />[13:33] &lt;csigman_mach30&gt; nm, I found a ref<br />[13:33] &lt;csigman_mach30&gt; falcon 9 is 550kN<br />[13:34] &lt;aharper_mach30&gt; Right at for the first stage<br />[13:34] &lt;csigman_mach30&gt; mhmm<br />[13:34] &lt;aharper_mach30&gt; Cooper would handle a all up cluster fire from the Falcon Heavy or SLS.<br />[13:35] &lt;aharper_mach30&gt; ...and yes, sensors are available that would plug into 1.1 that can handle 1million pounds of force or more.<br />[13:36] &lt;csigman_mach30&gt; I figured<br />[13:36] &lt;aharper_mach30&gt; <a class="external" href="http://www.futek.com/product.aspx?stock=FSH01905">http://www.futek.com/product.aspx?stock=FSH01905</a><br />[13:36] &lt;csigman_mach30&gt; the falcon heavy's thrust isn't much more than the 9<br />[13:36] &lt;csigman_mach30&gt; it's 620kN<br />[13:37] &lt;aharper_mach30&gt; Should be more than that.  It has 27 of the same engines as the Falcon 1 and 9<br />[13:38] &lt;aharper_mach30&gt; It should be around 1.65MN<br />[13:38] <@jwright_mach30> I'm back. Looks like you two have been busy.<br />[13:39] &lt;aharper_mach30&gt; LOL!  me mostly.  I showed Chris how big shepard scales.  V<br />[13:39] &lt;aharper_mach30&gt; <a class="external" href="http://www.ebay.com/itm/KELI-LOAD-CELL-DOUBLE-ENDED-SHEAR-BEAM-100-000-LB-SCALE-KL-58-/251042016746?pt=LH_DefaultDomain_0&#38;hash=item3a73452dea">http://www.ebay.com/itm/KELI-LOAD-CELL-DOUBLE-ENDED-SHEAR-BEAM-100-000-LB-SCALE-KL-58-/251042016746?pt=LH_DefaultDomain_0&#38;hash=item3a73452dea</a><br />[13:40] &lt;csigman_mach30&gt; that's not as big as I'd expect<br />[13:40] &lt;aharper_mach30&gt; Gist of what I said while you were gone:  STS 1.1 meets or exceeds all STSR project and tech requirements (provided the second IR sensor doesn't slow the scan rate below 250 SPS).<br />[13:40] &lt;aharper_mach30&gt; If we add a webcam or two to v2.0 and I get the ignition circuit done, it will meet or exceed all future requirements with the exception of STSR 5.3.2<br />[13:41] &lt;aharper_mach30&gt; I question the wisdom of 5.3.2<br />[13:41] <@jwright_mach30> Shepard 1.1 doesn't meet the 1000 SPS requirement though.<br />[13:41] <@jwright_mach30> Only Shepard 2.0 will.<br />[13:42] &lt;aharper_mach30&gt; The original was 250, shooting for 400 I thought.<br />[13:43] <@jwright_mach30> That was only after I dumbed the requirements down for 1.1.<br />[13:43] &lt;aharper_mach30&gt; Ahh.<br />[13:43] <@jwright_mach30> The link that I gave you above has 1000/500 in it.<br />[13:43] &lt;aharper_mach30&gt; Then 2.0 is the magic bullet.<br />[13:43] <@jwright_mach30> <a class="external" href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document?version=20">https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document?version=20</a><br />[13:44] &lt;aharper_mach30&gt; Gotcha<br />[13:46] &lt;aharper_mach30&gt; ...unless we could use an external ADC on the load cell to have it do the heavy lifting...  That mat increase the SPS, but I doubt we'd hit 1000 even with noting in the main loop.<br />[13:46] &lt;aharper_mach30&gt; may<br />[13:46] &lt;csigman_mach30&gt; 5.3.2 makes sense to me from the standpoint of prolonged exposure to a certain level of heat has different effects overt time for different materials<br />[13:46] <@jwright_mach30> STSRs 5.5-5.10  were left intentionally vague because we didn't have good educated guesses at the time. We can rework those now.<br />[13:46] &lt;csigman_mach30&gt; ahh, OK<br />[13:47] &lt;aharper_mach30&gt; But there is currently nothing that will measure such a stream without destroying the sensor fo a price which we can justify.<br />[13:47] <@jwright_mach30> Once I've cleared the decks of Shepard 1.1 I think we should rework the requirements with these suggestions (and any others you have). We know tons more now than we did at the beginning of 1.1.<br />[13:50] <@jwright_mach30> What do you mean by "such a stream" Aaron?<br />[13:53] <@jwright_mach30> Another thing about STSRs 5.5-5.10 is that if you start specifying larger motor sizes, you aren't setting requirements for Shepard anymore, you're setting them for Glenn+.<br />[13:53] &lt;csigman_mach30&gt; could you do passive sensing of the exaust temp? i.e. thermal imaging?<br />[13:53] &lt;csigman_mach30&gt; well that was sort of my point is that I think some of those at least should be for Glenn+<br />[13:53] <@jwright_mach30> We've talked about that before (imaging).<br />[13:54] <@jwright_mach30> <a class="external" href="https://opendesignengine.net/projects/pyr-001">https://opendesignengine.net/projects/pyr-001</a><br />[13:54] &lt;aharper_mach30&gt; You could do non-contact sensing on the stream, but there are no such sensors with the range needed for below 200.00 that I have found.<br />[13:55] &lt;csigman_mach30&gt; that's true, they are expensive<br />[13:56] &lt;aharper_mach30&gt; Yep.  I have had no luck with experiments in the optical system.  The results are not anything I would call a measurement.<br />[13:56] &lt;aharper_mach30&gt; not even one sigma. :(<br />[13:57] &lt;csigman_mach30&gt; lol, that's pretty low<br />[14:07] &lt;aharper_mach30&gt; Yep.  Hence why the project hit the bottom of the pile with a new approach needed after we found the Melaxis sensors.</p>
+
+
+	<p>[15:04] &lt;jeremy_mach30&gt; Kitting Shepard's going to keep me from getting bored anytime soon.<br />[15:04] &lt;jeremy_mach30&gt; :)<br />[15:04] &lt;aharper&gt; Do you really see that as much of a challenge at this point?<br />[15:05] &lt;jeremy_mach30&gt; Physical kitting, no. Logistics, yes.<br />[15:07] &lt;aharper&gt; k...  we're set up and can produce around 8-12 kits per day without breaking a sweat... including the shipping (ups pick up here).<br />[15:12] &lt;aharper&gt; The physical parts of the kit plus boxing and shipping of the whole thing would run about $40.00, and I'd even make a little for the time and trouble ;)<br />[15:12] &lt;jeremy_mach30&gt; Beyond that though there are things like not having a bookkeeper, no plan (or funds) for liability insurance yet, no FedEx/UPS shipping account (as Chris suggested yesterday), no process in place to manage who's doing what, etc.<br />[15:12] &lt;jeremy_mach30&gt; Yeah, I think the lower cost of the new design concept is a huge plus.<br />[15:13] &lt;aharper&gt; That is the challenge, but I see that all being solved in a 2 hour cage match hangout.<br />[15:14] &lt;jeremy_mach30&gt; Things like the bookkeeper and insurance are not quick fixes though.<br />[15:14] &lt;jeremy_mach30&gt; Our potential bookkeeping volunteer fell though.<br />[15:14] &lt;aharper&gt; Nope.  Aww crap.  Need help, let me know</p>
+</div>
+
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/518.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

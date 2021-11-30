@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Issues</title>
+  <link rel="self" href="http://opendesignengine.net/projects/ode/issues.atom?query_id="/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/ode/issues?query_id="/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2011-05-13T18:35:41+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Feature #32 (Feedback): Add embedded video support to wiki</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/32"/>
+    <id>http://opendesignengine.net/issues/32</id>
+    <updated>2011-05-13T18:35:41+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Take a look at this &lt;a href="http://projects.plural.cc/projects/redmine-youtube" class="external"&gt;plugin&lt;/a&gt;  It could be a good start, but we should expand it to support other hosting services (like &lt;a href="http://vimeo.com/" class="external"&gt;vimeo&lt;/a&gt;) and locally hosted videos.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #30 (New): Add wiki page templates</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/30"/>
+    <id>http://opendesignengine.net/issues/30</id>
+    <updated>2011-04-09T16:23:26+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;There will be many common types of wiki pages (meeting minutes, Bills of Materials, assembly instructions, etc).  ODE should support templates for these common types of wiki pages.  The templates should be sharable (link on page create by template, plus searchable on site), and be markable as "featured" so the best practices can spread through the community.&lt;/p&gt;    </content>
+  </entry>
+</feed>

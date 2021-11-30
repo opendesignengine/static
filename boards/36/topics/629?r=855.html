@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Looking toward v0.3 - Production Prototype - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-629-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Looking toward v0.3 - Production Prototype</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2013-09-23.html" title="09/23/2013 03:14 pm">about 9 years</a> ago</span></p>
+<div class="wiki">
+<p>Things are moving along nicely with the <strong>Holoseat</strong> and one of the questions I keep getting asked is how will I package it.  I see two main alternatives with three purchase options for each.  First, the alternatives:</p>
+
+
+	<ul>
+	<li>Sell the <strong>Holoseat</strong> as an Arduino Leonard shield - This has the advantage of only needing to design and test the electronics for the <strong>Holoseat</strong> functionality, making development time potentially shorter.  On the down side is the increased total investment for users.  They will need to buy (from me or a third party) an Arduino Leonardo (currently around $20 on amazon).  This expense basically guarantees missing the cost target from the <a href="../../../projects/holoseat/wiki/Initial_Questions.html" class="wiki-page">Initial Questions</a>.</li>
+	</ul>
+
+
+	<ul>
+	<li>Sell the <strong>Holoseat</strong> as a stand alone product by embedding an ATmega32U4 on a custom PCB - This idea comes from the <a href="http://makezine.com/2011/10/10/how-to-shrinkify-your-arduino-projects/" class="external">How-To: Shrinkify Your Arduino Projects</a> blog post over at Make.  Now, it does not cover the entire process or really talk about the Leonardo.  But, fortunately <a href="http://jeffmurchison.com/blog/monday-experiment-bootloading-an-atmega32u4-with-arduino/" class="external">Monday Experiment: Bootloading an ATmega32u4 with Arduino</a> does.  And, while it is a little above my head (I am just not an EE), I think with some help I could figure it out.  And it covers how to setup a minimum Leonardo clone, an essential element to creating a custom PCB for the <strong>Holoseat</strong>.  The pros of this alternative are it should greatly reduce the price of components and it still looks doable.  The down side is it will take a little experimenting to get right.  It might be about time to look at custom PCB shops (especially ones which support small batch runs).</li>
+	</ul>
+
+
+	<p>Now for the options, which work with both alternatives.  These are the three ways I see people getting <strong>Holoseats</strong> once the design is finished and it is for sale.</p>
+
+
+	<ul>
+	<li>Fully assembled - Like it says, buy a ready to use <strong>Holoseat</strong>.  Just add exercise equipment and a computer.  Might have an upsell of this option which includes a pedaler with the <strong>Holoseat</strong> already installed.</li>
+	</ul>
+
+
+	<ul>
+	<li>Kit - We ship you the parts, you solder it up, install the software on the controller and then you are good to go.</li>
+	</ul>
+
+
+	<ul>
+	<li>DIY - Makers can download the plans, order the parts, solder them up, install the software on the controller and then you are good to go.  Might offer an upsell of this option which is the PCB without any parts.</li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (1)</h3>
+
+  <div class="message reply" id="message-855">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="629%3Fr=855.html#message-855">RE: Looking toward v0.3 - Production Prototype</a>
+    -
+    Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-09-26.html" title="09/26/2014 09:25 am">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>My thoughts are this:</p>
+
+
+	<p>I hate the idea of missing the price target, but I think we should at least maintain a method by which it could be built using a kit even if we move onto another form (perhaps an adafruit board?).  I'm thinking it should be a phase after v0.3 though.  I feel like the focus for this rev should really be getting the hall effect sensors in, joystick style functionality and the joypad passthrough.</p>
+
+
+	<p>Either way, I think we need to get past where we're making hardware changes first, then look at the fully assembled method.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-1/1)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/629.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+h1. Shepard Test Stand Software Source Code v1.1
+
+This is a newer document based on "this one":https://opendesignengine.net/projects/shepard-ts/wiki/Software_Source_Code_v1_0 , and you should refer to that original version if you want to see the revision history.
+
+In order to download the latest source code for the data acquisition (DAQ) software, you will need a subversion client.
+
+*Please be aware that the newest versions of Shepard DCS will not work with this version of the Shepard DAQ. You'll want to check out "version 22":https://opendesignengine.net/projects/shepard-ts/repository/revisions/22 instead.*
+
+On Linux, you can install the subversion package and then execute the following on a command line.
+
+<pre>
+svn co https://opendesignengine.net/svn/shepard-ts
+</pre>
+
+This will download the source tree to the current directory. The top level directory will be @shepard-ts@ and the most current version will be in the @trunk@ directory.
+
+There will also be milestone versions available for download from "DMSF":https://opendesignengine.net/dmsf/shepard-ts?folder_id=16 . These versions will not necessarily be up-to-date though.
+
+For instructions on how to use the software, please see the "Operating Manual":https://opendesignengine.net/projects/shepard-ts/wiki/Operating_Manual_v1_0

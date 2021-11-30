@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Overview</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Overview"></a>
+<h1 >Overview<a href="Overview.html%3Fversion=5.html#Overview" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Overview.html%3Fversion=5.html#Overview">Overview</a><ul><li><a href="Overview.html%3Fversion=5.html#The-Need-for-MTK">The Need for MTK</a></li><li><a href="Overview.html%3Fversion=5.html#MTKs-Approach-to-Documentation">MTK's Approach to Documentation</a></li></ul></li></ul>
+
+
+	<a name="The-Need-for-MTK"></a>
+<h2 >The Need for MTK<a href="Overview.html%3Fversion=5.html#The-Need-for-MTK" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>As Mach 30 moves into more complex engineering projects, its development community will have a greater need to perform up front mathematical analysis to design, size, and predict the performance of those projects.  Engineering analysis of this type should be well documented (both in principle and in order to follow Mach 30's commitment to its OSHW values).  Documenting engineering analysis makes it clear why and how it works as well as providing verification of the analysis (in implementation and results).</p>
+
+
+	<p>This is where MTK comes in.  MTK is a single environment for creating and documenting mathematical analyses using Python to code the analysis.  As an added bonus, the use of Python allows Mach 30 to take the analyses created and documented in MTK and use them directly in <a href="https://github.com/dcowden/cadquery" class="external">CadQuery</a> to drive our parametric CAD models when designing and making physical components.</p>
+
+
+	<a name="MTKs-Approach-to-Documentation"></a>
+<h2 >MTK's Approach to Documentation<a href="Overview.html%3Fversion=5.html#MTKs-Approach-to-Documentation" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>MTK's approach to integrating engineering analysis and documentation is based on three core principles of engineering documentation:</p>
+
+
+	<ol>
+	<li><strong>Document before you act</strong> - In preparation for engineering analysis, engineers must find the correct mathematical models, identify the key equations from those models, and demonstrate why the selected models are the correct ones to use. This involves writing narratives and the equations covering these items and citing sources used to arrive at the selected equations. This phase should also identify test cases for later verification efforts. MTK's integrated documentation environment (with support for units, equations, calculations, and plots) makes it easy for users to capture this information in a format that supports adding additional information as the project progresses.</li>
+		<li><strong>Document as you act</strong> - During engineering analysis, modern engineers spend their time coding up the equations from selected mathematical models, preferably into reusable modules (functions, classes, etc). Rigorous verification of engineering analysis should provide commentary on the critical sections of this code, showing how specific lines of code implement the required equations or methodologies (such as solver algorithms). MTK's unified analysis and documentation environment is critical to documenting in this way as it provides for seamless transition between coding and documenting.</li>
+		<li><strong>Document after you act</strong> - Once the engineering analysis is complete, it needs to be verified. Verification should include the commentary mentioned above plus inspection of test case results.  This commentary can include plots and tables showing those results and narrative commentary to prove to readers that the analysis is ready to be used. MTK's ability to run engineering analyses directly within its documentation environment is essential to this part of the documentation process.</li>
+	</ol>
+</body>
+</html>

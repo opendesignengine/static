@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - 2017 Sprint 2 Plan - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/holoseat.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/holoseat/news.html" class="news selected">News</a></li>
+<li><a href="../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/holoseat/boards.html" class="boards">Forums</a></li>
+<li><a href="../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-70-watcher"></span>
+
+
+</div>
+
+<h2>2017 Sprint 2 Plan</h2>
+
+
+
+<p><em>Sprint 2 of 2017 is underway.  Check out the plan in this week&#x27;s project news.</em><br />
+<span class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/holoseat/activity%3Ffrom=2017-04-23.html" title="04/23/2017 08:56 pm">over 5 years</a> ago</span></p>
+<div class="wiki">
+<p>We just wrapped up Sprint 1 (check out our <a href="https://opendesignengine.net/news/69" class="external">Review and Retrospective</a>) and are ready to start Sprint 2.  This sprint will continue the development work from Sprint 1 and should see us lock in on the v0.4 architecture.  Of special importance is implementing the HID keyboard functionality to connect the new CHIP Pro controller board to the gaming machine.  The full details of the sprint are below.</p>
+
+
+	<p><strong>Duration:</strong> 8 weeks<br /><strong>Stand Ups:</strong> Wednesday nights<br /><strong>Start:</strong> Apr 22, 2017 <br /><strong>End:</strong> Jun 17, 2017</p>
+
+
+	<p><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Backlog and Full Sprint Plan</a> (see <em>Backlog</em> and <em>Sprint 2</em> tabs)</p>
+
+
+<ins>Key Development PBIs</ins>
+	<ul>
+	<li>DEV-07: Test Keyboard USB HID over Arduino (by way of all of its decendent PBIs)
+	<ul>
+	<li>DEV-26: Determine wiring to power CHIP Pro from Feather</li>
+		<li>DEV-27: Determine wiring to provide I2C between CHIP Pro and Feather</li>
+		<li>DEV-28: Develop Feather code to be I2C slave</li>
+		<li>DEV-29: Develop Johnny-Five code for CHIP Pro to be I2C master</li>
+		<li>DEV-30: Test master to slave and slave to master events between Feather and CHIP Pro</li>
+	</ul>
+	</li>
+		<li>DEV-23: Test Nodejs then Johnny-Five in chiptainer enviroment to determine if we want to use chiptainer approach</li>
+		<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?)</li>
+		<li>DEV-19: Add hot key for enable/disable of Holoseat to v0.3 Configuration App for UX testing in prep to move controller down to the exercise equipment and remove separate sensor board</li>
+		<li>DEV-31: Send out note to fans asking for input about hotkey vs button for enable/disable</li>
+	</ul>
+
+
+<ins>Pre-Sprint Commitments</ins>
+	<ul>
+	<li>J
+	<ul>
+	<li>Drafting blog post about Sprint 1 and 2</li>
+		<li>DEV-23: Test Nodejs then Johnny-Five in chiptainer enviroment to determine if we want to use chiptainer approach - start testing work and document what we know</li>
+	</ul>
+	</li>
+		<li>Bryan
+	<ul>
+	<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?) - research options to include CHIP Pro in electrical schematics (may include work on DEV-24)</li>
+	</ul></li>
+	</ul>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/687" class="icon icon-contributor-license">Cara Buckley</a> <a href="../projects/holoseat/activity%3Ffrom=2018-11-20.html" title="11/20/2018 03:33 pm">almost 4 years</a> ago</h4>
+    <p>The arrangement of the components is done for the humans. The enhancement of the goal and <a class="external" href="https://australianwritings.net/blog/things-to-remember-about-a-correct-essay-structure/">https://australianwritings.net/blog/things-to-remember-about-a-correct-essay-structure/</a> is vital for the approach of the goodness for the people. The component is fixed for the encouragement of the institutes and fields.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/735" class="icon icon-contributor-license">Liam William</a> <a href="../projects/holoseat/activity%3Ffrom=2018-12-30.html" title="12/30/2018 09:18 am">almost 4 years</a> ago</h4>
+    <p>well a good <a href="https://www.wikipedia.org/" class="external">plan</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/671" class="icon icon-contributor-license">Ridley Roswell</a> <a href="../projects/holoseat/activity%3Ffrom=2018-12-30.html" title="12/30/2018 09:22 am">almost 4 years</a> ago</h4>
+    <p>good post.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/735" class="icon icon-contributor-license">Liam William</a> <a href="../projects/holoseat/activity%3Ffrom=2018-12-30.html" title="12/30/2018 09:22 am">almost 4 years</a> ago</h4>
+    <p>On the website there is someone talking about Sprint 2 Plan. <a href="https://nsw-writers.com/best-essay-services-reviews/assignmentmasters-co-uk-review/" class="external">Assignmentmasters reviews</a> are assisting people in different ways. They just wrapped up Sprint 1 and are ready to initiate Sprint 2. It will last precede the development work from Sprint 1 and should see us lock in on the v0.4 architecture.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/750" class="icon icon-contributor-license">Ruby Moore</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2019-01-14" title="01/14/2019 09:16 am">almost 4 years</a> ago</h4>
+    <p>I obviously recommend opening an offshore bank account for the [url=https://www.bcspos.com/products-and-services/credit-card-processing]Credit Card Processinga[/url] right reasons, with full compliance with laws and regulations.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/70">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Requirements document - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../activity.html" class="activity">Activity</a></li>
+<li><a href="../roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../issues.html" class="issues">Issues</a></li>
+<li><a href="../issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Navigation</a><a href="Requirements_document%3Fversion=36.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Shepard-Test-Stand"></a>
+<h3 >Shepard Test Stand<a href="Requirements_document%3Fversion=36.html#Shepard-Test-Stand" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="Wiki.html" class="wiki-page">Start Here</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Versions" class="wiki-page">Versions</a></li>
+	</ul>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="Requirements_document%3Fversion=36.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/BOM" class="wiki-page">BOM</a></li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Software Source Code</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a></li>
+		<li><a href="Operating_Manual.html" class="wiki-page">Operating Manual</a></li>
+		<li><a href="Safety_Procedures.html" class="wiki-page">Safety Procedures</a></li>
+		<li><a href="SoftwareFirmware_Summary.html" class="wiki-page">Software/Firmware Summary</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Errata" class="wiki-page">Errata</a></li>
+	</ol>
+
+
+	<a name="Systems-Engineering-Process"></a>
+<h4 >Systems Engineering Process<a href="Requirements_document%3Fversion=36.html#Systems-Engineering-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="Initial_Questions.html" class="wiki-page">Initial Questions</a></li>
+		<li><a href="Requirements_Document.html" class="wiki-page">Requirements Document</a></li>
+		<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Budget" class="wiki-page">Budget</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Timeline" class="wiki-page">Timeline</a></li>
+		<li><a href="Preliminary_Design.html" class="wiki-page">Preliminary Design</a></li>
+		<li><a href="Detailed_Design.html" class="wiki-page">Detailed Design</a></li>
+		<li><a href="Design_Review.html" class="wiki-page">Design Review</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Procurement" class="wiki-page">Procurement</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Manufacture</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Assembly" class="wiki-page">Assembly</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Integration" class="wiki-page">Integration</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Testing" class="wiki-page">Testing</a></li>
+		<li><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Disposal" class="wiki-page">Disposal</a></li>
+		<li><a href="Development_Logs.html" class="wiki-page">Development Logs</a></li>
+		<li><a href="Meeting_Minutes.html" class="wiki-page">Meeting Minutes</a></li>
+	</ol>
+
+<h3>Wiki</h3>
+
+<a href="../wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-15-watcher"></span>
+
+
+
+
+
+
+<a href="Requirements_document/history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+
+    <p>
+    <a href="Requirements_document%3Fversion=35.html">« Previous</a> - 
+    Version 36/50
+    (<a href="http://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document/diff/36">diff</a>) - 
+    <a href="Requirements_document%3Fversion=37.html">Next »</a> - 
+    <a href="Requirements_document.html">Current version</a>
+    <br />
+    <em><a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a>, 06/25/2013 01:47 pm </em><br />
+    
+    </p>
+    <hr />
+
+
+<div class="wiki">
+  <a name="Shepard-Test-Stand-Requirements-Document-v11"></a>
+<h1 >Shepard Test Stand Requirements Document v1.1<a href="Requirements_document%3Fversion=36.html#Shepard-Test-Stand-Requirements-Document-v11" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Requirements_document%3Fversion=36.html#Shepard-Test-Stand-Requirements-Document-v11">Shepard Test Stand Requirements Document v1.1</a><ul><li><ul><li><a href="Requirements_document%3Fversion=36.html#Introduction">Introduction</a></li><li><a href="Requirements_document%3Fversion=36.html#Technical-Requirements">Technical Requirements</a></li><li><a href="Requirements_document%3Fversion=36.html#Project-Requirements">Project Requirements</a></li><li><a href="Requirements_document%3Fversion=36.html#Future-Requirements">Future Requirements</a></li><li><a href="Requirements_document%3Fversion=36.html#Glossary">Glossary</a></li></ul></li></ul></li></ul>
+
+
+	<p>This is a newer document based on <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0" class="external">this one</a> , and you should refer to that original version if you want to see the revision history.</p>
+
+
+	<a name="Introduction"></a>
+<h3 >Introduction<a href="Requirements_document%3Fversion=36.html#Introduction" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>This requirements document were discussed on the forums <a href="https://opendesignengine.net/boards/4/topics/72" class="external">here</a>.  The requirements list matches up to the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Initial_Questions" class="external">Initial Questions</a> in step one of the Systems Engineering process as shown below. Each requirement is labeled with STSR (Shepard Test Stand Requirement), followed by the number of the initial question that the requirement corresponds to, followed by a dot and then the ID number of the requirement.</p>
+
+
+	<ul>
+	<li><strong>STSR 1.x</strong> - Why are we making this?</li>
+		<li><strong>STSR 2.x</strong> - Who is this for?</li>
+		<li><strong>STSR 3.x</strong> - How will this be used?</li>
+		<li><strong>STSR 4.x</strong> - What features does it need to have (now)?</li>
+		<li><strong>STSR 5.x</strong> - What features does it need to have (later)?</li>
+		<li><strong>STSR 6.x</strong> - What are the legacy requirements?</li>
+		<li><strong>STSR 7.x</strong> - Who's going to build this?</li>
+		<li><strong>STSR 8.x</strong> - How many do we want to make?</li>
+		<li><strong>STSR 9.x</strong> - What is the budget?</li>
+		<li><strong>STSR 10.x</strong> - What is the timeline?</li>
+		<li><strong>STSR 11.x</strong> - What waste products will be produced by the manufacture and/or operation of this?</li>
+	</ul>
+
+
+	<a name="Technical-Requirements"></a>
+<h3 >Technical Requirements<a href="Requirements_document%3Fversion=36.html#Technical-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Technical requirements are those requirements which include measurable performance values.  Each technical requirement should be verified through testing to ensure the design meets the requirement.</p>
+
+
+	<ul>
+	<li><strong>STSR 1.1</strong> The STS must accommodate low power, commercially available amateur rocket motors sized A through E.</li>
+		<li><strong>STSR 1.2</strong> The STS must be mobile enough to enable live demonstrations as part of educational and outreach activities.
+	<ul>
+	<li><strong>STSR 1.2.1</strong> The STS total weight shall be less than 25 pounds, or be able to break into components that weigh no more than 25 pounds each (based on OSHA recommendations).</li>
+		<li><strong>STSR 1.2.2</strong> The STS must be transportable by 1 person.</li>
+	</ul></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 3.1</strong> The design and operation of the STS shall be conducted in compliance with <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">The National Association of Rocketry (NAR) Standards &#38; Testing Committee Motor Testing Manual, Version 1.5, Effective Date: July 1, 2011</a>, henceforth referred to as the "NAR testing manual". </li>
+		<li><strong>STSR 3.2</strong> The STS must be useful for the verification of Estes thrust vs time <a href="http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf" class="external">motor performance data</a> and to acquire casing temperature vs time data.
+	<ul>
+	<li><strong>STSR 3.2.1</strong> The STS must be able to record motor thrust vs time of Estes motors and transport that data to an attached computer.</li>
+		<li><strong>STSR 3.2.2</strong> The STS must be able to record motor casing temperature vs time at the nozzle throat of Estes motors and transport that data to an attached computer.
+	<ul>
+	<li><strong>STSR 3.2.2.1</strong> The STS must be able to record the peak temperature at the nozzle throat of Estes motors during a test run.</li>
+	</ul></li>
+	</ul></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 4.1</strong> The STS shall be easily set up and torn down for demonstration purposes.
+	<ul>
+	<li><strong>STSR 4.1.1</strong> Unpack and set up time should be less than 45 min.</li>
+		<li><strong>STSR 4.1.2</strong> Clean up and storage time should be less than 90 min.</li>
+	</ul>
+	</li>
+		<li><strong>STSR 4.2</strong> The STS shall be easy to package for shipment to any event at which it will be used, meaning the whole test stand system shall fit in the backseat or trunk of a standard 4-door sedan.</li>
+		<li><strong>STSR 4.4</strong> The STS shall be capable of a data acquisition sample rate of no less than 250 samples per second when sampling both the thrust and casing temperature values, with a goal of 400 samples per second.</li>
+		<li><strong>STSR 4.5</strong> Force sensor requirements
+	<ul>
+	<li><strong>STSR 4.5.1</strong> The force sensor shall have a measurement range of no less than 33 Newtons.</li>
+	</ul>
+	</li>
+		<li><strong>STSR 4.6</strong> Temperature sensor requirements
+	<ul>
+	<li><strong>STSR 4.6.1</strong> IAW NAR testing manual requirements specified in Section 8.6, the STS shall use temperature sensors with "a readout system still be accurate to 10 degrees C" <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">1</a></li>
+		<li><strong>STSR 4.6.2</strong> IAW NAR testing manual requirements specified in Section 8.6, the STS shall use temperature sensors with a response of "5 seconds or less" <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">1</a></li>
+		<li><strong>STSR 4.6.3</strong> IAW (partial) NAR testing manual requirements specified in Section 8.6, a temperature sensor will be attached to the motor under test "where the propellant and nozzle meet" (the "throat" in Mach 30 parlance). <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">1</a> Full compliance with this requirement has been moved to the future requirements section below.</li>
+	</ul>
+	</li>
+		<li><strong>STSR 4.7</strong> IAW NAR testing manual requirements specified in Section 8.5, the STS shall "store the collected data into a general use data formats [sic], such as a .txt, .csv" <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">1</a></li>
+		<li><strong>STSR 4.8</strong> The data collection system must have a threshold (minimum) of 1 ADC (Analog to Digital Converter) channel for the force sensor.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 6.1</strong> Any desktop computer based control software for the STS should run on all three major PC platforms (MS Windows, Mac OS X, and Linux).</li>
+		<li><strong>STSR 6.2</strong> The STS must use standard connections to the computer running the control software (for example, USB, Ethernet, or similar connections).</li>
+	</ul>
+
+
+	<a name="Project-Requirements"></a>
+<h3 >Project Requirements<a href="Requirements_document%3Fversion=36.html#Project-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Project requirements are the remaining requirements which are not tied to specific performance values.</p>
+
+
+	<ul>
+	<li><strong>STSR 2.1</strong> The STS must be well documented so as to meet the needs of open source spaceflight designers who will design and build future test stands (at Mach 30 and elsewhere).</li>
+		<li><strong>STSR 2.2</strong> The STS documentation and procedures must be complete enough that Mach 30 operators, students and educators who want to bring rocket engineering into the classroom, and anyone else interested in how rockets are tested can learn how to use it.</li>
+		<li><strong>STSR 2.3</strong> The STS documentation must cover the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 3.4</strong> The STS shall be operated IAW the safety procedures which are outlined in Section 8 of the NAR testing manual.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 4.3</strong> The STS shall provide a fixed base on which to test model rocket motors.  
+	<ul>
+	<li><strong>STSR 4.3.1</strong> The test stand will remain stationary during motor firings.</li>
+		<li><strong>STSR 4.3.2</strong> The test stand components will not experience undo vibration during motor firings.</li>
+	</ul></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 7.1</strong> All STS design documentation must be open and complete enough so that ANYONE, without necessarily a technical education in rocketry, propulsion, or engineering, would be able to build and operate the test stand.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 8.1</strong> The design of the STS must enable the completion of at least one operational test stand.</li>
+		<li><strong>STSR 8.2</strong> Whenever and wherever possible, considerations should be made so that the design of this STS can be used as a kit in the future.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 9.1</strong> The cost of the first operational STS must not exceed $200 excluding "consumables" and tools.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 10.1</strong> If at all possible, the STS should be completed within 3 months of formal launch as an exercise in agile design.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>STSR 11.1</strong> Disposal of the spent Estes motors should conform to all local, state, and federal guidelines.</li>
+		<li><strong>STSR 11.2</strong> Electronic waste items, including batteries and circuit boards, must also be disposed of according to all local, state, and federal guidelines.</li>
+		<li><strong>STSR 11.3</strong> If the frame of the STS is damaged beyond repair during operation, proper disposal/recycling guidelines must be followed for the materials used in its construction.</li>
+		<li><strong>STSR 11.4</strong> Wherever possible, the STS design should make it as easy as possible to replace components which are consumable or relatively easy to damage.</li>
+	</ul>
+
+
+	<a name="Future-Requirements"></a>
+<h3 >Future Requirements<a href="Requirements_document%3Fversion=36.html#Future-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>These are for reference only so that future features can be accommodated in the current design where practical.</p>
+
+
+	<ul>
+	<li><strong>STSR 5.1</strong> High and low speed video capture of test firings from multiple angles.</li>
+		<li><strong>STSR 5.2</strong> Integrated ignition system so the test management software can control the entire test.</li>
+		<li><strong>STSR 5.3</strong> Additional measurements including:
+	<ul>
+	<li><strong>STSR 5.3.1</strong> The STS must meet the second part of the NAR testing manual requirement for casing temperature measurements and have a second temperature sensor "3/4 of the way down the motor casing as measured from the nozzle end." <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">1</a></li>
+		<li><strong>STSR 5.3.2</strong> The STS must be able to record exhaust temperature vs time of Estes motors and transport that data to an attached computer.</li>
+	</ul>
+	</li>
+		<li><strong>STSR 5.4</strong> Higher resolution measurements.</li>
+	</ul>
+
+
+The accommodation of:
+	<ul>
+	<li><strong>STSR 5.5</strong> High power commercial solid motors.</li>
+		<li><strong>STSR 5.6</strong> Small hybrid motors (on the thrust scale of high power commercial solid motors).</li>
+		<li><strong>STSR 5.7</strong> Larger thrust hybrid motors.</li>
+		<li><strong>STSR 5.8</strong> Small liquid engines.</li>
+		<li><strong>STSR 5.9</strong> Medium liquid engines.</li>
+		<li><strong>STSR 5.10</strong> Large liquid engines.</li>
+	</ul>
+
+
+	<a name="Glossary"></a>
+<h3 >Glossary<a href="Requirements_document%3Fversion=36.html#Glossary" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>ADC - Analog to Digital Converter<br />consumables - Items that are used and then discarded, i.e. rocket motors.<br />IAW - In Accordance With<br />LSB - Least Significant Bit<br />NAR - National Association of Rocketry<br />STS - Shepard Test Stand<br />STSR - Shepard Test Stand Requirement</p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document.html?version=36" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/shepard-ts/wiki/Requirements_document.txt?version=36" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/Requirements_document.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

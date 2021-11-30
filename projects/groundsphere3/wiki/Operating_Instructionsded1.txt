@@ -1,0 +1,56 @@
+h1. Operating Instructions
+
+{{>toc}}
+
+h2. Preparing For A Pass
+
+Run WXtoImg. Select *File* -> *Update Keplers*. This will update NOAA satellite TLEs so that your pass times are as up to date as possible.
+
+In WXtoImg, select *File* -> *Satellite Pass List*. This window will display all future passes within a few days.
+
+!preparing_for_a_pass_1.jpg!
+
+Selecting an appropriate pass can be tricky. The most important characteristic for a good pass is the maximum elevation angle. Low maximum elevation angles will have short passes with insufficient gain to complete an image. High maximum elevation angles may have periods of insufficient gain when the satellite is directly overhead.
+
+!preparing_for_a_pass_2.jpg!
+
+*NOTE*: Frequencies in WXtoImg are *INCORRECT*. Use these frequencies for NOAA satellites:
+
+* NOAA 15: 137.6200 MHz
+* NOAA 18: 137.9125 MHz
+* NOAA 19: 137.1000 MHz
+
+*NOTE*: NOAA 17 is no longer in operation. Do not try to capture an image from NOAA 17.
+
+h2. Placing The Antenna
+
+Ensure that the antenna is perpendicular to the ground so that it is facing directly up (zenith). This will ensure gain is uniform across the radio horizon.
+
+In some cases, when testing the antenna, the top of a vehicle was used. While having height off of the ground may be nice to reduce interference to the horizon, the vehicle may interfere and cause stray multi-path signals to affect the quality of the signal (negatively or positively). For more predictable behavior, place the antenna in the middle of a large field on a flat surface.
+
+!placing_the_antenna_1.jpg!
+
+h2. Receiving An Image
+
+Once you have selected a sufficient pass, place the antenna and connect it to your computer with the *RTL-SDR Dongle*. Run SDR-Sharp and WXtoImg side by side so that you can watch both as the pass occurs.
+
+Shortly before the pass begins, select *File* -> *Record* -> *Auto Record* in WXtoImg. WXtoImg will now wait for a pass to reach a sufficient elevation angle before starting to record.
+
+While you wait for the recording to start, use SDR Sharp to locate the signal. It should appear with low intensity at first and increase over time. The image below is what the signal looks like near maximum.
+
+!receiving_an_image_1.png!
+
+Adjust the gain setting to have the signal at highest power without making the waterfall plot (on the bottom) appear as a dark blue background. We want maximum gain without saturating the receiver. The image above is a good reference.
+
+Once WXtoImg starts recording, you should see an image start to appear! The image may start off with static, but it should get better over time. Check the *Troubleshooting* section below to help resolve some common issues.
+
+h2. Troubleshooting
+
+h3. WXtoImg shows a black screen with no image.
+
+You must ensure VB Cable is transmitting sound to WXtoImg from SDR Sharp. Double check SDR Sharp audio output, ensure your microphone and speakers are not muted, turn up the volume for your VBCable in Audio Settings.
+
+h3. I do not see a signal in SDR Sharp at the time of the pass.
+
+There could be numerous things wrong with your setup. Ensure your ground station coordinates are correct on WXtoImg, double check that you are using the correct frequency (do NOT trust WXtoImg listed frequencies), and be sure that you are using local time and not UTC time.
+

@@ -1,0 +1,22 @@
+h1. Similar Projects
+
+{{>toc}}
+
+The following is a list of other low cost satellite receiving projects.  Not all projects are open source hardware, but all include at least some degree of documentation/evidence of success.  Note, some of these projects require the use of a directional antenna (usually a hand held "Yagi":https://en.wikipedia.org/wiki/Yagi-Uda_antenna) to provide sufficient gain.  Contrast this with the Ground Sphere goal of providing a new user friendly system by utilizing an omni-directional antenna.
+
+h2. "Listening to a Satellites for 30 Dollars":http://blog.nobugware.com/post/2015/listening_to_satellites_for_30_dollars/
+
+Basic instructions for receiving 1990s era weather satellite data.  Utilizes SDR USB dongle and free (mostly open source) software.  Lowest cost example that does not strictly require Yagi antenna (post does not spend much time discussing the antenna).  There is a PBI in Sprint 1 to attempt to reproduce the results of this post at one or more Mach 30 volunteer sites.
+
+h2. "KickSat Ground Station":https://github.com/kicksat/groundstation/wiki
+
+Hand-held Yagi + SDR based ground station for receiving telemetry from "KickSat sprites":https://www.kickstarter.com/projects/zacinaction/kicksat-your-personal-spacecraft-in-space.  This is an open source hardware project published on GitHub. 
+
+h2. "How to Hear the ISS":http://amsat-uk.org/beginners/how-to-hear-the-iss/
+
+AMSAT-UK blog post on using ham radio gear to listen to the ISS.  Discussion includes antenna selection (a "1/4 wave whip antenna":https://en.wikipedia.org/wiki/Whip_antenna and a "1/4 wave ground plane":http://www.hamuniverse.com/2metergp.html).  The post mentions 3 things you can listen for from the ISS.
+
+* AX.25 packet repeater
+* Voice repeater
+* Receive Slow Scan Television (SSTV) pictures
+

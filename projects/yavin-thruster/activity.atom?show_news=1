@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yavin Thruster: News</title>
+  <link rel="self" href="http://opendesignengine.net/projects/yavin-thruster/activity.atom?show_news=1"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/yavin-thruster/activity?show_news=1"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2022-10-31T16:23:28+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+</feed>

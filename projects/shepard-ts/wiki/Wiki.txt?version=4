@@ -1,0 +1,25 @@
+h1. Wiki
+
+h2.  Draft requirements
+
+Version 1.0
+# Verify that we can measure the Estes motor performance data (thrust vs time for various motors as published here: http://estes.aptinet.com/images/page%2033.pdf)
+# Measure and record exhaust temperature of the Estes motors *[NOTE:  This means using a computer -gm]*
+# Document the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand
+
+Version 2.0
+# Add support for commercial high-power model rocket motors (above E)
+# Add support for video capture (low and high speed) to data collection
+
+h2. Budget
+
+Money:  $200
+Time: 3 months
+
+h2. Links to meeting minutes
+
+* TBD 
+
+Note: The sections on this page should be broken into separate pages as needed to maintain organization.
+
+ 

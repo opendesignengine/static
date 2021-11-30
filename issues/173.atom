@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link href="http://opendesignengine.net/issues/173.atom" rel="self"/>
+  <link href="http://opendesignengine.net/" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-09-12T22:24:55+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <entry>
+    <title>Shepard Test Stand - Feature #173: Add a "wizard" mode for the Shepard GUI</title>
+    <link href="http://opendesignengine.net/issues/173" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/173?journal_id=264</id>
+    <updated>2013-09-12T22:24:55+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Parent task&lt;/strong&gt; set to &lt;i&gt;#174&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #173: Add a "wizard" mode for the Shepard GUI</title>
+    <link href="http://opendesignengine.net/issues/173" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/173?journal_id=272</id>
+    <updated>2013-09-15T08:38:49+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Target version&lt;/strong&gt; set to &lt;i&gt;v2.0 Shepard Test Stand - Prototype&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+</feed>

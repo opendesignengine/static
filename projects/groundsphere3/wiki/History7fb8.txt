@@ -1,0 +1,42 @@
+h1. History
+
+{{>toc}}
+
+The Ground Sphere projects have a rich history at Mach 30, starting with a question from Mach 30 contributor Aaron Harper leading all the way to the current generation Ground Sphere intended for receiving signals from the International Space Station.
+
+h2. Mk 1
+
+h3. The Inspiration
+
+The first Ground Sphere project did not go by the name Ground Sphere, it was simply referred to as "GS-001":https://opendesignengine.net/projects/gs-001/.  GS-001 wasn't even a formal Mach 30 project.  Instead it was the physical answer to a question posed by Mach 30 volunteer Aaron Harper, _"How low can we get the cost down to an reliably receive radio signals from space?"_  Like all good makers, Aaron sought to answer the question quite practically, by building one with the goals of low cost and simple operations.  As you will see, the success of this early work had a profound impact on Mach 30 and influenced future project development.  Today we refer to GS-001 as Ground Sphere Mk 1 due to its relationship to the first project to bear the name Ground Sphere.
+
+h3. Revision 1
+
+
+
+<Aaron's story of the first build (everything soldered together>.  Why he chose the design he did, putting it together, and testing it>
+<"Aaron's story of asking the question that led to the first GS":http://mach30.org/2013/05/16/ground-station-part-1/>
+
+h3. Revision 2
+
+<Aaron's story of the second build (screw terminals for the aerials, so we could ship it, a design decision that is still with us today).  J's story of "taking it to New Space 2013":http://mach30.org/2013/08/03/new-space-2013-wrap-up/>
+
+h2. Mk 2
+
+<insert continued story (with photos and link to project) of the SkyCube GS>
+
+h3. Companion to SkyCube... Ground Sphere of Course
+
+<discussion of "updated requirements":https://opendesignengine.net/projects/groundsphere/wiki/Requirements_Document (focus on top level), new dimensions>
+
+h3. Building Mk 2 
+
+<discuss new build (use lots of pics, including from "this blog post":http://mach30.org/2014/06/03/testing-for-catastrophic-capacitor-failure/> 
+
+h3. Testing and SkyCube
+
+<discuss "test procedure":https://opendesignengine.net/projects/groundsphere/wiki/Testing ("especially tests for signal reception":https://opendesignengine.net/projects/groundsphere/wiki/Test_112_Instructions).  close with info from "SkyCube updates":https://www.kickstarter.com/projects/880837561/skycube-the-first-satellite-launched-by-you/posts/985395>
+
+h2. Mk 3
+
+<insert story and goal of Mk 3 (with logo), happy hour, Perigee, etc>

@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mach 30 Technical Roadmap - Process Questions re: Choosing Technology Branch for v 1.0 Roadmap - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/m30roadmap.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/m30roadmap.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Mach 30 Technical Roadmap</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/m30roadmap.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/m30roadmap/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/m30roadmap/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/m30roadmap/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../dmsf/m30roadmap.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/m30roadmap/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/m30roadmap/boards.html" class="boards selected">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/m30roadmap/boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/m30roadmap/boards/45">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-828-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/m30roadmap/activity?from=2014-09-13" title="09/13/2014 10:41 pm">about 8 years</a> ago</span></p>
+<div class="wiki">
+<p>Aaron brought up the following over on the G+ announcement of this project, so I am starting a process thread to discuss this and any other process questions about selecting a technology branch.</p>
+
+
+<blockquote>
+
+	<p>Would it be more helpful to identify the EC mines in the minefield, or enumerate existing technologies and ways to accomplish the tasks?</p>
+
+
+	<p>I am thinking that we need to bound the scope with the EC regs, but we might want to explore all the possibilities from a training and procedural standpoint, then reduce the pool.﻿</p>
+
+
+</blockquote>
+
+	<p>My hope is that we can keep process light enough to evaluate most if not all of the subsystems.  To help keep things light, I am thinking that if we determine as a group that a subsystem scores a 0 on one or more of the requirements then we can close down that thread and move onto the next one.  Clearly export controls are likely to 0 out one or more subsystems in the Admin score.  But, I can also imagine engineering expertise being a requirement that scores 0 for some of the subsystems (GNC, I'm looking at you).  Lastly, there are probably some subsystems that do not lend themselves to abstract technology development at present (I am thinking this is probably the case for the Payload Handling system).</p>
+
+
+	<p>I plan to add an initial post to each thread with a short description of the subsystem in question to make sure we are all on the same page about what we are evaluating.  After that, I think people should comment on those criteria that they have a proposed score in mind for and any other general comments that come to mind.  We can then discuss the scores and build a consensus for that subsystem.</p>
+
+
+	<p><strong>Example: Widget Subsystem Posts</strong></p>
+
+
+	<ol>
+	<li><strong>J</strong> - The Widget Subsystem encompasses all widgets within the vehicle.  Widgets provide foo capability throughout operations of a launch vehicle.</li>
+		<li><strong>J</strong>
+	<ol>
+	<li>Engineering Expertise = 4 - Aaron, J, and Jeremy all have experience making and using widgets</li>
+		<li>Fabrication = 3 - Aaron has made widgets before for lab use, Jeremy is familiar with how they should be made but has not made any since undergrad</li>
+		<li>Mission = 5 - Widgets are a key feature of launch vehicles, they are exciting to watch in demos, and would make an ideal physics lab or practical example in a high school math class</li>
+		<li>Income = 3 - Widgets could get expensive and may out price the educational market, and it is unclear if there are other markets</li>
+		<li>Admin = pass - not sure how export controls apply or not; do not see an insurance issue with them though</li>
+	</ol>
+	</li>
+		<li><strong>Matt</strong>
+	<ol>
+	<li>Engineering Expertise = 4 - ditto to J</li>
+		<li>Fabrication = pass</li>
+		<li>Mission = 5 - ditto</li>
+		<li>Income = pass</li>
+		<li>Admin = 0 - see Part 1.2.3 of USML, clearly widgets are covered under EC</li>
+	</ol></li>
+	</ol>
+
+
+	<p>Assuming people agreed with the Admin assessment that earned a 0 score, the group could close out the thread as infeasible.</p>
+
+
+	<p>Thoughts?</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (9)</h3>
+
+  <div class="message reply" id="message-830">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/45/topics/828?r=830#message-830">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/m30roadmap/activity?from=2014-09-15" title="09/15/2014 08:32 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>One more bit of process I have been assuming.  For those sub-systems that do not get zeroed out, I plan to just take the average of people's scores to generate the final scores.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-832">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/45/topics/828?r=832#message-832">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/m30roadmap/activity?from=2014-09-23" title="09/23/2014 03:57 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>I'm still a little fuzzy on how the EC score should be determined. Isn't this something that should be submitted to the ECTF for them to tell us (even though we have a significant contingent of ECTF folks on the hardware team already) where the "EC mines" are, and what the score of a particular branch is?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-842">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/45/topics/828?r=842#message-842">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/m30roadmap/activity?from=2014-09-24" title="09/24/2014 03:27 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Are we taking into account related subsystems that will become blockers at some point? For instance, a completed rocket engine without the attitude control and aerodynamic subsystems can only be taken so far. Do we need to discuss the order/timing of related subsystems, or are we focusing solely on one subsystem no matter what due to our resource constraints?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-844">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/45/topics/828?r=844#message-844">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/m30roadmap/activity?from=2014-09-24" title="09/24/2014 03:44 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>I've asked Matt, as our resident expert on the USML, to join us in evaluating the sub-systems in terms of EC land mines. But, any of us who have experience with the USML can offer input on administrative scores (which includes EC and other admin concerns like insurance). Anyone else is welcome to pass on rating an admin score or include a caveat (such as does not include EC considerations).</p>
+
+
+	<p>Regarding integration between subsystems,...  It's important to keep in mind that we are not developing a launch vehicle (well, yet). Instead we are building experience in one of these disciplines. The limit of one discipline is intended to provide focus and a stable and sustainable roadmap that we can implement.</p>
+
+
+	<p>Let me know if that clears things up for you.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-846">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/45/topics/828?r=846#message-846">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/m30roadmap/activity?from=2014-09-24" title="09/24/2014 09:38 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>That makes sense. I just wanted to make sure I was scoping my feedback properly on the subsystems.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-851">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/45/topics/828?r=851#message-851">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/m30roadmap/activity?from=2014-09-25" title="09/25/2014 10:12 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>There was discussion about this roadmap process during the #EngineerSpeak Hangout tonight.</p>
+
+
+	<p><a class="external" href="https://docs.google.com/a/mach30.org/document/d/1oC0VcKRnAoPDpYqeQxZ_ZVs9S7ecHyMP-N3U22uD6JM/edit">https://docs.google.com/a/mach30.org/document/d/1oC0VcKRnAoPDpYqeQxZ_ZVs9S7ecHyMP-N3U22uD6JM/edit</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-886">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/45/topics/828?r=886#message-886">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/m30roadmap/activity%3Ffrom=2014-10-06.html" title="10/06/2014 11:24 am">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Did I hear right that someone was going to add "Spaceflight for Dummies" examples to each of the subsystems to help those of us who are not spaceflight engineers? The only one I see examples for so far is the Communication and Data Handling Subsystem disucssion.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-888">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/45/topics/828?r=888#message-888">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/m30roadmap/activity%3Ffrom=2014-10-07.html" title="10/07/2014 08:07 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Yes, you did.  I just got side tracked with creating the issue and working with Aaron (he volunteered to do the heavy lifting for this) over the weekend.  It has since been created - <a href="../../../projects/m30roadmap.html">Mach 30 Technical Roadmap</a> - <a href="../../../issues/269.html" class="issue status-1 priority-3">Support <a href="../../../issues/269.html" class="issue status-1 priority-3" title="Add brief description to launch vehicle sub-systems to introduce them as discussion topics (New)">#269</a></a>: Add brief description to launch vehicle sub-systems to introduce them as discussion topics - <strong>Needs estimate</strong> (New).  Hopefully Aaron will have some time to help with this soon.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-909">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="828%3Fr=909.html#message-909">RE: Process Questions re: Choosing Technology Branch for v 1.0 Roadmap</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/m30roadmap/activity%3Ffrom=2014-10-21.html" title="10/21/2014 08:07 pm">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>Howdy all,</p>
+
+
+	<p>I was busier than I expected to be this weekend, so I just got a chance to follow up with the next step in the roadmap process.  Per the Oct 16 #EngineerSpeak, I have created wiki pages for each of the remaining subsystem categories (aerodynamics, propulsion, structures/mechanisms) for use with the card storming exercise.  You can reach these pages from the <a href="../../../projects/m30roadmap/wiki/Technology_Evaluation.html" class="wiki-page">Technology Evaluation</a> wiki page.  To see how the process works at this stage, take a look at the <a href="../../../projects/m30roadmap/wiki/Structures_and_Mechanisms_Card_Storming.html" class="wiki-page">Structures and Mechanisms Card Storming</a> page where I ported over the content from Thursday's meeting.</p>
+
+
+	<p>The basic idea is to list one idea per bullet.   Just login to ODE and edit the wiki page you want to add one or more items to (you do need an account, but you don't need to be a member of this project).  Add you items and click the Submit button.  Couldn't be easier.  We will work some more at the next #EngineerSpeak hangout.</p>
+
+
+	<p>Happy Card Storming!</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-9/9)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/828">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+#,Status,Project,Tracker,Priority,Subject,Assignee,Category,Target version,Author,Start date,Due date,% Done,Estimated time,Parent task,Created,Updated,Description
+137,Closed,Shepard Test Stand,Bug,Low,64-bit Version of Java on Windows Doesn&#x27;t Support Serial Communications,Jeremy Wright,"",v2.0 Shepard Test Stand - Prototype,Jeremy Wright,06/26/2013,"",0,2.0,174,06/26/2013 06:15 am,12/10/2013 10:25 am,"When attempting to run Shepard's Processing application on Windows 8 (or 7) 64-bit, you get the following exception.
+
+processing.app.SketchException: serial does not run in 64-bit mode.
+	at processing.mode.java.runner.Runner.<init>(Runner.java:104)
+	at processing.mode.java.JavaMode.handleRun(JavaMode.java:116)
+	at processing.mode.java.JavaEditor$19.run(JavaEditor.java:472)
+	at java.lang.Thread.run(Thread.java:662)
+
+Chris has suggested that a fix might be to install the 32-bit version of Java, but that hasn't been tried yet. It remains to be seen if it's worth figuring out how to fix this since we're most likely switching away from processing for Shepard 2.0."

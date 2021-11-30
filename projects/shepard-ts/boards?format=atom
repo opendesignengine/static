@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Shepard Test Stand: Discussion</title>
+  <link href="http://opendesignengine.net/projects/shepard-ts/boards?format=atom" rel="self"/>
+  <link href="http://opendesignengine.net/projects/shepard-ts/boards" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2016-12-06T14:24:52+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=1225#message-1225" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=1225#message-1225</id>
+    <updated>2016-12-06T14:24:52+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Some kind of cool switches possibly for future versions of Shepard.&lt;/p&gt;
+
+
+	&lt;p&gt;Rugged Momentary Pushbutton Switch (Illuminated Blue): &lt;a class="external" href="https://www.adafruit.com/products/481"&gt;https://www.adafruit.com/products/481&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Rugged Momentary Pushbutton Switch (Illuminated Red): &lt;a class="external" href="https://www.adafruit.com/products/559"&gt;https://www.adafruit.com/products/559&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Illuminated Protected Toggle Switch (Red): &lt;a class="external" href="https://www.adafruit.com/products/3218"&gt;https://www.adafruit.com/products/3218&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=1222#message-1222" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=1222#message-1222</id>
+    <updated>2016-11-25T19:59:22+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This thrust stand isn't designed for rocket motors, but could be modified for it with some 3D printing. It uses the same style load cell that we used in Shepard, and can handle up to 5 Kg of thrust.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://hobbyking.com/en_us/turnigy-thrust-stand.html"&gt;https://hobbyking.com/en_us/turnigy-thrust-stand.html&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Beyond Shepard</title>
+    <link href="http://opendesignengine.net/boards/4/topics/776?r=1221#message-1221" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/776?r=1221#message-1221</id>
+    <updated>2016-11-25T09:50:29+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;NASA has released an open source mission control dashboard called Open MCT.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://github.com/nasa/openmct/blob/master/README.md"&gt;https://github.com/nasa/openmct/blob/master/README.md&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;I think it would be interesting to replace the Shepard GUI with a customized deployment of Open MCT.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=1151#message-1151" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=1151#message-1151</id>
+    <updated>2016-04-10T13:35:16+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Saw &lt;a href="http://hackaday.com/2016/04/04/automating-rc-motor-efficiency-testing/" class="external"&gt;this post on hackaday&lt;/a&gt; about measuring performance of electric motors for RC airplanes and it reminded me of our work on Shepard.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=972#message-972" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=972#message-972</id>
+    <updated>2015-06-12T10:02:26+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Jinx!&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=971#message-971" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=971#message-971</id>
+    <updated>2015-06-12T09:38:45+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;There's some other good stuff in the newsletter that amplifier came from.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="http://us6.campaign-archive1.com/?u=8f49618731958db855ab7abeb&amp;#38;id=f508e94455&amp;#38;e=3b6092b8e7"&gt;http://us6.campaign-archive1.com/?u=8f49618731958db855ab7abeb&amp;#38;id=f508e94455&amp;#38;e=3b6092b8e7&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=970#message-970" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=970#message-970</id>
+    <updated>2015-06-12T09:35:24+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This looks like an interesting option for the successors to Shepard.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a href="https://www.sparkfun.com/products/13230?utm_source=SparkFun+Customer+Newsletter&amp;#38;utm_campaign=f508e94455-June12_newsletter&amp;#38;utm_medium=email&amp;#38;utm_term=0_fa5287abaf-f508e94455-60561225" class="external"&gt;SparkFun Load Cell Amplifier - HX711&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=969#message-969" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=969#message-969</id>
+    <updated>2015-06-12T09:01:21+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Sparkfun's newsletter this month is full of &lt;a href="http://eepurl.com/bp36h1" class="external"&gt;load cell goodness&lt;/a&gt;.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=948#message-948" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=948#message-948</id>
+    <updated>2015-03-10T13:01:26+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;From Aaron's G+ feed:&lt;/p&gt;
+
+
+	&lt;blockquote&gt;
+		&lt;p&gt;Design considerations for things which use linear bearings or bushings such as some of the designs for Gen1 Shepard, CNC gantries, and 3D printer mechanisms.&#65279;&lt;/p&gt;
+	&lt;/blockquote&gt;
+
+
+	&lt;p&gt;&lt;object width="600" height="400"&gt;
+  &lt;param name="movie" value="https://www.youtube.com/v/yvG6jFzgD04?rel=1&amp;fs=1"&gt;&lt;/param&gt;
+  &lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;
+  &lt;param name="allowScriptAccess" value="always"&gt;&lt;/param&gt;
+  &lt;embed src="https://www.youtube.com/v/yvG6jFzgD04?rel=1&amp;fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"&gt;&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Beyond Shepard</title>
+    <link href="http://opendesignengine.net/boards/4/topics/776?r=831#message-831" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/776?r=831#message-831</id>
+    <updated>2014-09-16T22:34:24+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;And one more interesting thing.... A display library for real time data collection from Adafruit.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://plus.google.com/u/0/+ladyada/posts/jeh7JMnKdz9"&gt;https://plus.google.com/u/0/+ladyada/posts/jeh7JMnKdz9&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Beyond Shepard</title>
+    <link href="http://opendesignengine.net/boards/4/topics/776?r=814#message-814" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/776?r=814#message-814</id>
+    <updated>2014-09-08T16:15:43+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Storing this here for future reference.&lt;/p&gt;
+
+
+	&lt;p&gt;Load cell Arduino shield that seems to be very well done:&lt;br /&gt;&lt;a class="external" href="http://www.osengr.org/Projects/Load-Cell-Shield/Load-Cell-Shield.html"&gt;http://www.osengr.org/Projects/Load-Cell-Shield/Load-Cell-Shield.html&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Materials to use as add-on cable shielding for the load cell leads:&lt;br /&gt;&lt;a class="external" href="http://www.buyheatshrink.com/braidedsleeving/metal-braided-sleeving.htm"&gt;http://www.buyheatshrink.com/braidedsleeving/metal-braided-sleeving.htm&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="http://www.spectreperformance.com/search/product.aspx?prod=1008B"&gt;http://www.spectreperformance.com/search/product.aspx?prod=1008B&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Resources</title>
+    <link href="http://opendesignengine.net/boards/4/topics/1?r=786#message-786" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/1?r=786#message-786</id>
+    <updated>2014-05-28T08:51:48+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Some more links (note to self, need to come back and review these resources and make a wiki page from them).&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;&lt;a href="http://www.aeroconsystems.com/cart/ts-pics" class="external"&gt;Example Test Stands List&lt;/a&gt; - we should submit Shepard to this site&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://www.pasco.com/prodCatalog/ME/ME-6617_rocket-engine-test-bracket/#overviewTab" class="external"&gt;Model Rocket Motor Test Bracket&lt;/a&gt; - this is an add-on for a force gauge for use by students (wonder how it is insured)&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://www.2020vertical.com/nar_edu_cd_dev/lessons/Rocketry%20&amp;#38;%20Calculus.pdf" class="external"&gt;Article on Model Rocket Testing Curriculum&lt;/a&gt; - might be useful for working with partners to develop Shepard curriculum&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://publiclab.org/notes/Shannon/04-10-2014/public-lab-is-hiring-job-posting-kits-initiative-manager" class="external"&gt;Job Posting for a Science OSHW Kit Manager&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://hackaday.io/prize/details" class="external"&gt;Hackaday Prize&lt;/a&gt; - is this something we should enter?&lt;/li&gt;
+		&lt;li&gt;&lt;a href="https://plus.google.com/u/0/+KevinMcIntyreinSPACE/posts/c9idF8Muyjz" class="external"&gt;Parametric 3D Printed Nozzles&lt;/a&gt; - might be useful as part of an initiative to get away from Estes motors in the classroom
+	&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://github.com/Buback/ParametricDeLavalModel" class="external"&gt;Underlying source code in OpenSCAD&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: Another desktop application environment to look</title>
+    <link href="http://opendesignengine.net/boards/4/topics/784" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/784</id>
+    <updated>2014-05-07T09:33:35+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;a class="external" href="https://github.com/atom/atom-shell"&gt;https://github.com/atom/atom-shell&lt;/a&gt; - Just seems like an interesting way to work things....&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Beyond Shepard</title>
+    <link href="http://opendesignengine.net/boards/4/topics/776?r=783#message-783" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/776?r=783#message-783</id>
+    <updated>2014-05-07T09:32:25+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;And Adafruit has a nifty little gadget to send power over ethernet that is compatible with Arduinos.  Very clever...  I think this would go nicely with the Yun.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="http://www.adafruit.com/products/435"&gt;http://www.adafruit.com/products/435&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Beyond Shepard</title>
+    <link href="http://opendesignengine.net/boards/4/topics/776?r=782#message-782" rel="alternate"/>
+    <id>http://opendesignengine.net/boards/4/topics/776?r=782#message-782</id>
+    <updated>2014-05-06T12:29:03+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Updates to the Yun sound very interesting... &lt;a class="external" href="http://blog.arduino.cc/2014/05/06/time-to-expand-your-yun-disk-space-and-install-node-js/"&gt;http://blog.arduino.cc/2014/05/06/time-to-expand-your-yun-disk-space-and-install-node-js/&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+</feed>

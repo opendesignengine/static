@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Issues</title>
+  <link rel="self" href="http://opendesignengine.net/issues.atom?page=3"/>
+  <link rel="alternate" href="http://opendesignengine.net/issues?page=3"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-07-02T17:57:55+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Groundstation v.2.0 - Milestone #145 (New): Connect Receiver and test satellite reception</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/145"/>
+    <id>http://opendesignengine.net/issues/145</id>
+    <updated>2013-07-02T17:57:55+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Connect Receiver and test satellite reception, overall system shakedown.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Groundstation v.2.0 - Milestone #144 (New): Computer control</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/144"/>
+    <id>http://opendesignengine.net/issues/144</id>
+    <updated>2013-07-02T17:56:08+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Connect to PC and control through Gpredict&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Groundstation v.2.0 - Milestone #143 (New): Assemble ground station Az-El mount</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/143"/>
+    <id>http://opendesignengine.net/issues/143</id>
+    <updated>2013-07-02T17:54:39+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Build Az-El mount and document&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Groundstation v.2.0 - Milestone #140 (New): Feature requests and design requirements (SEP)</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/140"/>
+    <id>http://opendesignengine.net/issues/140</id>
+    <updated>2013-07-02T17:43:08+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;All major project description, parameters, and guidelines.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #132 (New): Live Collaborative Editing</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/132"/>
+    <id>http://opendesignengine.net/issues/132</id>
+    <updated>2013-05-28T09:24:31+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It would be nice to have live collaborative editing on the wiki and news feeds in the same way Google Docs allows real-time collaborative editing.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Support #131 (New): No Notification of Comments on News Items</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/131"/>
+    <id>http://opendesignengine.net/issues/131</id>
+    <updated>2013-05-21T08:28:03+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I have my email notifications set to "For any event on all my projects", but a comment was posted to one of my dev logs (using the news module) and I never got any notification. I checked and it did not go to spam. Is there a separate setting somewhere for this? If not, I would like to add it as a feature request.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Space Chiles v1.0 - Bug #127 (New): Inability to run flight prediction more than 7.5d before launch</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/127"/>
+    <id>http://opendesignengine.net/issues/127</id>
+    <updated>2013-04-28T21:05:22+00:00</updated>
+    <author>
+      <name>Tenzin Beck</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The most comprehensive flight tracker I've found, &lt;a class="external" href="http://habhub.org/predict/"&gt;http://habhub.org/predict/&lt;/a&gt;, is unable to run predictions for launches scheduled more than 180h in the future. In my testing of multiple scenarios, flight path and ground track distance is extremely variable from day to day.&lt;/p&gt;
+
+
+	&lt;p&gt;This means that we won't be able to schedule launches more than a week in advance, which may make coordinating a large team difficult.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Sandbox - Support #125 (New): Test issue</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/125"/>
+    <id>http://opendesignengine.net/issues/125</id>
+    <updated>2013-03-26T09:06:34+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Demonstrating that non-project member (but registered ODE user) can log issues to projects.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Bug #102 (New): Updates to the repository don&amp;#x27;t show up on "Activity" t...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/102"/>
+    <id>http://opendesignengine.net/issues/102</id>
+    <updated>2012-12-30T23:14:22+00:00</updated>
+    <author>
+      <name>Jack Linke</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I have noticed that when I make push changes to my repository, those changes are not reflected on the "Activity" tab until I manually visit the "Repository" tab in my browser. Then, if I go back to the "Activity" tab, the updates to my repository show up.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Support #91 (New): Publish ODE specific plugins as separate sub-projects wit...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/91"/>
+    <id>http://opendesignengine.net/issues/91</id>
+    <updated>2012-11-18T13:46:35+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Need to pull out the following plugins so we can list them on the &lt;a href="http://www.redmine.org/plugins" class="external"&gt;Redmine site&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Redmine Funding wiki macro plugin&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Redmine Legal&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Redmine Licensing&lt;/strong&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;We should also look into offering the code changes in &lt;strong&gt;Redmine Video wiki macro plugin&lt;/strong&gt; to &lt;strong&gt;&lt;a href="http://jwm.slavitica.net/p/projects/redmine-youtube" class="external"&gt;Redmine Youtube wiki macro plugin&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Bug #51 (New): Git hosting is not working</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/51"/>
+    <id>http://opendesignengine.net/issues/51</id>
+    <updated>2012-02-13T15:58:33+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Git repositories can be created, but not accessed.  Need to figure out how to host the git repositories over https like we have done for svn.  Next step is to consult with Bitnami docs and forums about a solutions.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #48 (New): Add tool tips to icons in the web site GUI</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/48"/>
+    <id>http://opendesignengine.net/issues/48</id>
+    <updated>2012-02-12T01:32:03+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;For example:&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;The medals next to user names denoting they have signed the terms of service (this may even be an unnecessary icon for users other than admins...)&lt;/li&gt;
+		&lt;li&gt;The green arrows on sticky forum threads&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #42 (New): Per project web stores</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/42"/>
+    <id>http://opendesignengine.net/issues/42</id>
+    <updated>2011-10-12T12:18:23+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Idea originally submitted as comment on KickStarter Campaign by &lt;a href="http://www.kickstarter.com/profile/1722694026" class="external"&gt;Jarryd Bekker&lt;/a&gt;.  His comment is quoted below.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;cite&gt;Brilliant idea! We have been looking for something like this for some time now. There is just one thing we really thing should be included: a web store.  If the site also incorporated some sort of selling mechanism for projects to supply (partially or fully manufactured) open hardware, we believe that there will be a much higher number of sustainable projects due to the accessibility of hardware to the community as well as the flow of funding to the projects. It may be as simple as integrating paypal (in which case there wouldn't require too much development) although the users would still need some sort of guidance/tutorial/template to get going.  &lt;br /&gt;We are completely behind this project and have pledged our 25 buck, but if hardware sales and distribution were a more explicitly included, we will GLADLY up our backing!!  &lt;br /&gt;Good luck with the remaining few days!&lt;/cite&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Note, Feature &lt;a href="http://opendesignengine.net/issues/13" class="issue status-3 priority-2 closed" title="Create a donation drive module (Resolved)"&gt;#13&lt;/a&gt; will partially serve this need, but having a fully integrated shopping cart would greatly simplify things for project owners and could create a revenue stream for both projects and ODE (as ODE could keep a small percentage of sales like &lt;a href="http://www.kickstarter.com/" class="external"&gt;KickStarter&lt;/a&gt; and &lt;a href="http://pledgie.com/" class="external"&gt;Pledgie&lt;/a&gt; do).&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Support #36 (In Progress): Research how Redmine uses RMagick</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/36"/>
+    <id>http://opendesignengine.net/issues/36</id>
+    <updated>2011-09-22T17:10:25+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It looks like Redmine can use RMagick according to the Info screen on the ODE admin console.  This may be part of the image resize capability in the wiki (which is not working right now).  Need to research how Redmine uses RMagick and install/config it if necessary.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #27 (New): Engineering file management features</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/27"/>
+    <id>http://opendesignengine.net/issues/27</id>
+    <updated>2011-04-09T16:17:47+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Source code control for embedded systems or computer based controls, etc should be stored in one of the available Version Control Systems (VCS) such as SVN, bzr, git, etc.  But engineering documents offer challenges that VCS do not handle well (very large, on order of GB files, primarily binary files).  Here are some specific requirements for engineering documents.  (Should investigate Enterprise CMS like &lt;a href="http://www.alfresco.com/products/dm/" class="external"&gt;Alfresco&lt;/a&gt; for underlying capabilities, as many of the features below are available in this class of tools.)&lt;/p&gt;    </content>
+  </entry>
+</feed>

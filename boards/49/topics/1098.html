@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mathematics Tool Kit - Working on @CSS blocker about dealing with library paths in MTK - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/mtk.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/mtk.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Mathematics Tool Kit</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/mtk.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/mtk/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/mtk/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/mtk/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/mtk.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/mtk/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/mtk/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/mtk/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/mtk/boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/mtk/boards/49">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-1098-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Working on @CSS blocker about dealing with library paths in MTK</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/mtk/activity?from=2015-11-14" title="11/14/2015 03:00 pm">almost 7 years</a> ago</span></p>
+<div class="wiki">
+<p>So, Chris is working on YVN-10 (Create unit tests for the PressureVessel class and integrate them into its MTK document as the harness for the reported test results).  As part of that work he has been reorganizing the Yavin project directory into something that looks like this:</p>
+
+
+	<ul>
+	<li>Yavin/
+	<ul>
+	<li>lib/
+	<ul>
+	<li>chamber/
+	<ul>
+	<li>pressure_vessel_calcs.py <em>the Yavin module used to size the chamber's wall thickness</em></li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>documentation/
+	<ul>
+	<li><em>mtk notebook files</em></li>
+	</ul>
+	</li>
+		<li>tests/
+	<ul>
+	<li>chamber/
+	<ul>
+	<li>pressure_vessel_test_case_dataset.py <em>data set for pressure vessel test cases and documentation</em></li>
+		<li>test_math.py <em>unit tests for pressure vessel calcs class</em></li>
+	</ul></li>
+	</ul></li>
+	</ul></li>
+	</ul>
+
+
+	<p>So, why and I talking about this over in MTK.  Well, this new structure highlights a problem in MTK, namely when Chris goes to import the pressure vessel calcs class (or anything else from parallel directories) into the notebook(s) in the documentation directory, he gets import errors.  This is blocking his progress.  At this week's <a href="https://docs.google.com/document/d/12IaGAevWIR3fT3i9XwbwAlBaHHwZhA_NNbwodv9a4iQ/pub" class="external">#EngineerSpeak hangout</a> I agreed to help Chris look for some ways to get around this issue.</p>
+
+
+	<p>At the heart of this block is the fact that Jupyter notebooks each get their own IPython kernel running as its own process with its current working directory equal to the notebook's directory.  If you want to import libraries from the notebook directory or one of its sub-directories, everything works great.  But, if you want to import from a parent or sibling directory you are out of luck.  After poking around how libraries are searched for in Python, I found <a href="http://stackoverflow.com/questions/4383571/importing-files-from-different-folder-in-python" class="external">this little gem</a>.  So, I know we can easily add a directory to the search path, we just need to choose one and then have a reliable way to tell the notebook to use it.</p>
+
+
+	<p>In terms of choosing one, I think the top level project directory (Yavin/ in the example we are working with) makes the most sense.  Now, as for finding it, I am thinking we borrow from the library search process in Python, and require a file be placed in this directory (say <code>__mtk_project_root__.py</code> which we can later use to contain project specific notebook initialization commands) to identify it as the top level project directory.  Then we just need to include some initialization code which is run for each notebook kernel that searches up its directory structure for this file and then adds the located directory to the Python sys.path.</p>
+
+
+	<p>I tested out this idea today with some inline code in a couple of notebooks (see below).  The code is clearly just draft code (it should use directory objects instead of strings, it should be bullet proofed for when the <code>__mtk_project_root__.py</code> is not found, etc).  But, in a test environment, it proved the technique works for a few different directory structures, including one like Chris' example.</p>
+
+
+<pre>
+import os, sys
+
+PROJECT_ROOT_FILE = '__mtk_project_root__.py'
+searchPath = ''
+cwd = os.getcwd()
+
+while (not os.path.isfile(cwd + '/' + searchPath + PROJECT_ROOT_FILE)):
+    searchPath = searchPath + "../" 
+
+libPath = cwd + '/' + searchPath
+sys.path.insert(0, libPath)
+</pre>
+
+	<p>So, the question becomes how to make sure this gets run every time a new notebook is started.  Well, IPython has a configuration option called <a href="http://ipython.readthedocs.org/en/stable/interactive/tutorial.html?highlight=startup" class="external">startup files</a> (scroll down toward the end of the page).  I think we could easily insert an improved version of the code above into a startup script and be good to go (plus later source the script after we find it to get project custom settings).</p>
+
+
+	<p>The last thing this made me think about was IPython configurations.  I wonder if we should start planning on setting up and shipping an MTK configuration (for stuff like this, initializing Pint, ensuring our set of notebook extensions are loaded, etc).  The idea would be when you launch the MTK GUI, it would set its IPython to use the MTK configuration so we have what we need, but don't clobber IPython for other uses.  I will have to do some more research on configurations and see what all we can really do with them.</p>
+</div>
+
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/1098">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mathematics Tool Kit: Revisions</title>
+  <link rel="self" href="http://opendesignengine.net/projects/mtk/repository/revisions.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2017-07-06T22:02:46+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Revision 44: Create branch conda</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/44"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/44</id>
+    <updated>2017-07-06T22:02:46+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 43: Removed test file</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/43"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/43</id>
+    <updated>2017-06-23T01:27:22+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 42: test</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/42"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/42</id>
+    <updated>2017-06-23T01:23:24+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 41: Updated .gitignore</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/41"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/41</id>
+    <updated>2017-06-18T17:37:29+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 40: Branched for making MTK installable via pip</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/40"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/40</id>
+    <updated>2017-06-18T14:33:39+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 39: Created a new installer that uses conda environments instead of ipython profiles. th...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/39"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/39</id>
+    <updated>2016-11-02T20:05:19+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 38: Saving WIP alternate installer</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/38"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/38</id>
+    <updated>2015-10-22T20:46:16+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 37: Updating javascript calls to load nb extensions for new Jupyter syntax and new insta...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/37"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/37</id>
+    <updated>2015-10-22T20:36:42+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 36: Fixed install script for new Jupyter 4.x nbextensions.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/36"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/36</id>
+    <updated>2015-10-15T22:40:55+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 35: Fixed a mispelling of ipython with the symbolic link to the binary.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/35"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/35</id>
+    <updated>2015-09-17T15:04:16+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 34: Adding first draft of final basic test.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/34"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/34</id>
+    <updated>2015-08-27T19:18:34+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 33: Adding initial drafts of IPython Notebook versions of tests 01 and 03.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/33"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/33</id>
+    <updated>2015-08-26T23:53:14+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 32: Finished the work of putting the IPython profile/config directory in /usr/local/share.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/32"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/32</id>
+    <updated>2015-08-12T00:08:16+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 31: Added options to move Anaconda install and IPython config directories to /opt.</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/31"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/31</id>
+    <updated>2015-08-11T13:57:47+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Revision 30: First pass at changing Anaconda to being installed in /opt along with the IPython co...</title>
+    <link rel="alternate" href="http://opendesignengine.net/projects/mtk/repository/revisions/30"/>
+    <id>http://opendesignengine.net/projects/mtk/repository/revisions/30</id>
+    <updated>2015-08-10T23:24:59+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+</feed>

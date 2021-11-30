@@ -1,0 +1,1178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - DMSF - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery-ui/jquery-ui-1.8.13.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/plupload/jquery.ui.plupload.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery.dataTables/jquery-ui.dataTables.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/dmsf.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-1.6.1.min.js%3F1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-ui-1.8.13.min.js%3F1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/jquery.dataTables.min.js%3F1359925705" type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function() {
+			jQuery("#browser").dataTable({
+				"bJQueryUI": true,
+				"oLanguage": {
+					'sUrl': '/plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/en.json'	
+				},
+				"bAutoWidth": false,
+				"bPaginate": false,
+				"aaSorting": [[1,'asc']],
+				"aaSortingFixed": [[7,'asc']],
+				"aoColumnDefs": [
+					{ "bSearchable": false, "aTargets": [0, 6, 7, 8] },
+					{ "bSortable": false, "aTargets": [0, 6, 7] },
+					{ "iDataSort": 8, "aTargets": [ 2 ] }
+				],
+				"fnInitComplete": function() {
+					jQuery("div.controls").prependTo(jQuery("#browser_wrapper div.fg-toolbar")[0]);
+				},
+				"fnInfoCallback": function( oSettings, iStart, iEnd, iMax, iTotal, sPre ) {
+					return "Folders: 4, Documents: 21";
+				}
+			});
+			
+			jQuery("[data-downloadurl]").each(function() {
+		        var url = this.getAttribute("data-downloadurl");
+		        if (this.addEventListener) {
+		          this.addEventListener("dragstart", function(e) {
+		            if (e.dataTransfer) {
+		              e.dataTransfer.setData("DownloadURL", url);
+		            }
+		          },false);
+		        }
+	      	});
+		});
+	</script>
+</head>
+<body class="controller-dmsf action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/groundsphere.html" method="get">
+        
+        <a href="../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../projects/groundsphere%3Fjump=dmsf.html" class="dmsf selected">DMSF</a></li>
+<li><a href="../projects/groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        
+
+<div class="contextual">
+	
+</div>
+
+
+<h2>
+	<a href="../projects/groundsphere%3Fjump=dmsf.html">Documents</a>
+
+ / 
+ <a href="groundsphere%3Ffolder_id=45.html">Images</a>
+ 
+
+
+</h2>
+
+<div class="wiki">
+<p>Holds images relevant to the project.</p>
+</div>
+
+<form action="http://opendesignengine.net/dmsf/entries_operation/groundsphere?folder_id=45" class="dmfs_entries" id="entries_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>
+	<input id="action" name="action" type="hidden" />
+	<div class="controls" style="float: left">
+		<input name="download_entries" title="Download checked in Zip archive" type="submit" value="Download" />
+		<input name="email_entries" title="Send checked by email" type="submit" value="Email" />
+		
+	</div> 
+	<table class="display entries" id="browser">
+		<thead>
+			<tr id="root">
+				<th class="check">
+					<input id="check_all_entries" title="Check/Uncheck all for zip download or email" type="checkbox" />
+				</th>
+				<th>Title</th>
+				<th>Size</th>
+				<th>Modified</th>
+				<th>Ver.</th>
+				<th>Author</th>
+				<th></th>
+				<th class="hidden"></th>
+				<th class="hidden"></th>
+			</tr>
+		</thead>
+	<tbody>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="50" /></td>
+			<td class="title">
+				<a href="http://opendesignengine.net/dmsf/groundsphere?folder_id=50" class="icon icon-folder">Assembly</a>
+				<div class="filename" title="Number of files in directory">[4]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">259.4 kB</td>
+			<td class="modified">2014-02-12 16:05</td>
+			<td class="version"></td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">265640</td>
+		</tr>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="48" /></td>
+			<td class="title">
+				<a href="http://opendesignengine.net/dmsf/groundsphere?folder_id=48" class="icon icon-folder">Screen_Shots</a>
+				<div class="filename" title="Number of files in directory">[7]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">541.9 kB</td>
+			<td class="modified">2014-01-02 22:19</td>
+			<td class="version"></td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">554944</td>
+		</tr>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="61" /></td>
+			<td class="title">
+				<a href="http://opendesignengine.net/dmsf/groundsphere?folder_id=61" class="icon icon-folder">Terminology Diagram</a>
+				<div class="filename" title="Number of files in directory">[2]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">289.8 kB</td>
+			<td class="modified">2015-08-07 10:16</td>
+			<td class="version"></td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">296714</td>
+		</tr>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="52" /></td>
+			<td class="title">
+				<a href="http://opendesignengine.net/dmsf/groundsphere?folder_id=52" class="icon icon-folder">Thumbnails</a>
+				<div class="filename" title="Number of files in directory">[18]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">1.3 MB</td>
+			<td class="modified">2014-07-08 21:01</td>
+			<td class="version"></td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">1397631</td>
+		</tr>
+	
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="446" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/446?download=" class="icon icon-file image-png" data-downloadurl="image/png:Settings.png:http://opendesignengine.net/dmsf_files/446?download=" title="-18dB Settings version 0.1 download">-18dB Settings</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Settings.png</div>
+			</td>
+			<td class="size">226.1 kB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/446" title="-18dB Settings details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/446" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">231548</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="445" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/445?download=" class="icon icon-file image-png" data-downloadurl="image/png:-18dBm@1m.png:http://opendesignengine.net/dmsf_files/445?download=" title="-18dBm@1m version 0.1 download">-18dBm@1m</a>
+				<div class="filename" title="Filename used for download or in Zip archive">-18dBm@1m.png</div>
+			</td>
+			<td class="size">400.5 kB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/445" title="-18dBm@1m details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/445" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">410087</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="444" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/444?download=" class="icon icon-file image-png" data-downloadurl="image/png:-60dB settings.png:http://opendesignengine.net/dmsf_files/444?download=" title="-60dB settings version 0.1 download">-60dB settings</a>
+				<div class="filename" title="Filename used for download or in Zip archive">-60dB settings.png</div>
+			</td>
+			<td class="size">215.9 kB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/444" title="-60dB settings details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/444" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">221096</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="443" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/443?download=" class="icon icon-file image-png" data-downloadurl="image/png:-60dBm@3m.png:http://opendesignengine.net/dmsf_files/443?download=" title="-60dBm@3m version 0.1 download">-60dBm@3m</a>
+				<div class="filename" title="Filename used for download or in Zip archive">-60dBm@3m.png</div>
+			</td>
+			<td class="size">532.3 kB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/443" title="-60dBm@3m details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/443" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">545121</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="450" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/450?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:1M_TestSetup.JPG:http://opendesignengine.net/dmsf_files/450?download=" title="1M TestSetup version 0.1 download">1M TestSetup</a>
+				<div class="filename" title="Filename used for download or in Zip archive">1M_TestSetup.JPG</div>
+			</td>
+			<td class="size">1.2 MB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/450" title="1M TestSetup details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/450" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">1229235</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="449" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/449?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:3M_TestSetup.JPG:http://opendesignengine.net/dmsf_files/449?download=" title="3M TestSetup version 0.1 download">3M TestSetup</a>
+				<div class="filename" title="Filename used for download or in Zip archive">3M_TestSetup.JPG</div>
+			</td>
+			<td class="size">1.4 MB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/449" title="3M TestSetup details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/449" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">1426017</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="448" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/448?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:3M_TestSetupDetail.JPG:http://opendesignengine.net/dmsf_files/448?download=" title="3M TestSetupDetail version 0.1 download">3M TestSetupDetail</a>
+				<div class="filename" title="Filename used for download or in Zip archive">3M_TestSetupDetail.JPG</div>
+			</td>
+			<td class="size">1.1 MB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/448" title="3M TestSetupDetail details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/448" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">1204095</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="494" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/494?download=" class="icon icon-file image-png" data-downloadurl="image/png:Aaron_Showing_Ground_Sphere_v0_2.png:http://opendesignengine.net/dmsf_files/494?download=" title="Aaron Showing Ground Sphere v0 2 version 0.1 download">Aaron Showing Ground Sphere v0 2</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Aaron_Showing_Ground_Sphere_v0_2.png</div>
+			</td>
+			<td class="size">872 kB</td>
+			<td class="modified">
+				2015-08-07 10:18
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/494" title="Aaron Showing Ground Sphere v0 2 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/494" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">892909</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="442" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/442?download=" class="icon icon-file " data-downloadurl="application/octet-stream:Audio recording of -60dBm signal at 3M_AF.wav:http://opendesignengine.net/dmsf_files/442?download=" title="Audio recording of -60dBm signal at 3M AF version 0.1 download">Audio recording of -60dBm signal at 3M AF</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Audio recording of -60dBm signal at 3M_AF.wav</div>
+			</td>
+			<td class="size">4 MB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/442" title="Audio recording of -60dBm signal at 3M AF details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/442" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">4155044</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="435" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/435?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:GreatStuff_1.JPG:http://opendesignengine.net/dmsf_files/435?download=" title="GreatStuff Flammability Test 1 version 0.2 download">GreatStuff Flammability Test 1</a>
+				<div class="filename" title="Filename used for download or in Zip archive">GreatStuff_1.JPG</div>
+			</td>
+			<td class="size">53.4 kB</td>
+			<td class="modified">
+				2014-03-12 13:21
+				
+				
+			</td>
+			<td class="version">
+				0.2
+				
+			</td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/435" title="GreatStuff Flammability Test 1 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/435" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">54714</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="436" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/436?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:GreatStuff_2.JPG:http://opendesignengine.net/dmsf_files/436?download=" title="GreatStuff Flammability Test 2 version 0.2 download">GreatStuff Flammability Test 2</a>
+				<div class="filename" title="Filename used for download or in Zip archive">GreatStuff_2.JPG</div>
+			</td>
+			<td class="size">48.9 kB</td>
+			<td class="modified">
+				2014-03-12 13:21
+				
+				
+			</td>
+			<td class="version">
+				0.2
+				
+			</td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/436" title="GreatStuff Flammability Test 2 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/436" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">50115</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="438" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/438?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:GreatStuff_4.JPG:http://opendesignengine.net/dmsf_files/438?download=" title="GreatStuff Flammability Test 4 version 0.1 download">GreatStuff Flammability Test 4</a>
+				<div class="filename" title="Filename used for download or in Zip archive">GreatStuff_4.JPG</div>
+			</td>
+			<td class="size">104.7 kB</td>
+			<td class="modified">
+				2014-03-12 13:21
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/438" title="GreatStuff Flammability Test 4 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/438" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">107178</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="437" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/437?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:GreatStuff_3.JPG:http://opendesignengine.net/dmsf_files/437?download=" title="GreatStuff Flammibility Test 3 version 0.1 download">GreatStuff Flammibility Test 3</a>
+				<div class="filename" title="Filename used for download or in Zip archive">GreatStuff_3.JPG</div>
+			</td>
+			<td class="size">39.1 kB</td>
+			<td class="modified">
+				2014-03-12 13:21
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/437" title="GreatStuff Flammibility Test 3 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/437" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">40086</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="322" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/322%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:Ground_Sphere_v0_1_Small.JPG:http://opendesignengine.net/dmsf_files/322?download=" title="Ground Sphere v0.1 Small version 0.1 download">Ground Sphere v0.1 Small</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Ground_Sphere_v0_1_Small.JPG</div>
+			</td>
+			<td class="size">49.4 kB</td>
+			<td class="modified">
+				2013-12-29 13:14
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/322.html" title="Ground Sphere v0.1 Small details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/322" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">50606</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="453" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/453?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:IMG_0009.JPG:http://opendesignengine.net/dmsf_files/453?download=" title="IMG 0009 version 0.1 download">IMG 0009</a>
+				<div class="filename" title="Filename used for download or in Zip archive">IMG_0009.JPG</div>
+			</td>
+			<td class="size">1.4 MB</td>
+			<td class="modified">
+				2014-06-21 16:41
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/453" title="IMG 0009 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/453" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">1450915</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="452" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/452?download=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:IMG_0010.JPG:http://opendesignengine.net/dmsf_files/452?download=" title="IMG 0010 version 0.1 download">IMG 0010</a>
+				<div class="filename" title="Filename used for download or in Zip archive">IMG_0010.JPG</div>
+			</td>
+			<td class="size">1.8 MB</td>
+			<td class="modified">
+				2014-06-21 16:41
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/452" title="IMG 0010 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/452" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">1870996</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="447" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/447?download=" class="icon icon-file image-png" data-downloadurl="image/png:Noise floor.png:http://opendesignengine.net/dmsf_files/447?download=" title="Noise floor version 0.1 download">Noise floor</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Noise floor.png</div>
+			</td>
+			<td class="size">461.6 kB</td>
+			<td class="modified">
+				2014-06-04 23:29
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/447" title="Noise floor details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/447" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">472640</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="319" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/319%3Fdownload=" class="icon icon-file image-png" data-downloadurl="image/png:southern_stars_logo.png:http://opendesignengine.net/dmsf_files/319?download=" title="Southern Stars Logo version 0.1 download">Southern Stars Logo</a>
+				<div class="filename" title="Filename used for download or in Zip archive">southern_stars_logo.png</div>
+			</td>
+			<td class="size">17.3 kB</td>
+			<td class="modified">
+				2013-12-26 07:26
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/319.html" title="Southern Stars Logo details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/319" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">17762</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="456" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/456?download=" class="icon icon-file image-png" data-downloadurl="image/png:field 0el.png:http://opendesignengine.net/dmsf_files/456?download=" title="field 0el version 0.1 download">field 0el</a>
+				<div class="filename" title="Filename used for download or in Zip archive">field 0el.png</div>
+			</td>
+			<td class="size">545.7 kB</td>
+			<td class="modified">
+				2014-06-21 16:41
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/456" title="field 0el details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/456" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">558837</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="454" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/454?download=" class="icon icon-file image-png" data-downloadurl="image/png:field 0el a.png:http://opendesignengine.net/dmsf_files/454?download=" title="field 0el a version 0.1 download">field 0el a</a>
+				<div class="filename" title="Filename used for download or in Zip archive">field 0el a.png</div>
+			</td>
+			<td class="size">531.8 kB</td>
+			<td class="modified">
+				2014-06-21 16:41
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/454" title="field 0el a details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/454" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">544541</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="455" /></td>
+			<td class="title">
+				
+				<a href="http://opendesignengine.net/dmsf_files/455?download=" class="icon icon-file image-png" data-downloadurl="image/png:field 0el b.png:http://opendesignengine.net/dmsf_files/455?download=" title="field 0el b version 0.1 download">field 0el b</a>
+				<div class="filename" title="Filename used for download or in Zip archive">field 0el b.png</div>
+			</td>
+			<td class="size">538.5 kB</td>
+			<td class="modified">
+				2014-06-21 16:41
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="http://opendesignengine.net/dmsf_files/455" title="field 0el b details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/455" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">551452</td>
+		</tr>
+	
+	</tbody>
+	</table>
+	<br />
+</form>
+
+<script type="text/javascript">
+	jQuery("a.delete-link").click(function(event) {
+		if(!window.confirm("Do you really want to delete this entry?")) event.preventDefault();
+	})
+	
+	jQuery("#entries_delete_button").click(function(event) {
+		if(window.confirm("Do you really want to delete checked entries?")) {
+			jQuery("#entries_form").attr("action", "/dmsf/delete_entries/groundsphere?folder_id=45");
+			jQuery("#entries_form").submit();
+		}
+	})
+	
+	jQuery("#check_all_entries").click(function(event) {
+		var $this = jQuery(this);
+		if($this.prop("checked")) {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", true);
+		} else {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", false);
+		}
+	})			
+</script>
+
+
+
+
+
+
+<br />
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/groundsphere.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

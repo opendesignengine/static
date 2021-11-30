@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - v1.0 - SEP Step 2 - Requirements Document - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-72-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>v1.0 - SEP Step 2 - Requirements Document</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-03-03.html" title="03/03/2012 03:40 am">over 10 years</a> ago</span></p>
+<div class="wiki">
+<p>I thought I'd get a discussion started on this. The three requirements that I've added are from the original wiki content, and I've tried to match them to the questions that they most likely fall under. Other questions will be pulled from the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Initial_Questions_v1_0" class="external">Initial Questions</a> SEP document.</p>
+
+
+<blockquote>
+
+	<p><strong>Q2. Who is this for?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Document the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand.</li>
+	</ul>
+
+
+<blockquote>
+
+	<p><strong>Q3. How will this be used?</strong></p>
+
+
+</blockquote>
+
+	<ul>
+	<li>Verify that we can measure the Estes motor performance data (thrust vs time for various motors as published here: <a class="external" href="http://estes.aptinet.com/images/page%2033.pdf">http://estes.aptinet.com/images/page%2033.pdf</a>)</li>
+		<li>Measure and record exhaust temperature of the Estes motors which means using a computer.</li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (30)</h3>
+
+  <div class="message reply" id="message-134">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=134.html#message-134">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-18.html" title="05/18/2012 04:01 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>We talked about a few changes for the <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0" class="external">requirements doc</a> tonight during the hangout, and I made an attempt at integrating them. The following requirements contain the changes I made.</p>
+
+
+	<ul>
+	<li><strong>STSR 4.6.3</strong></li>
+		<li><strong>STSR 4.8</strong></li>
+		<li><strong>STSR 5.5</strong></li>
+		<li><strong>STSR 5.6</strong></li>
+	</ul>
+
+
+	<p>I of course had to renumber the rest of the STSR 5.x series after adding 5.5 and 5.6.</p>
+
+
+	<p>I also added "ADC" to the glossary.</p>
+
+
+	<p>These should be the last additions/changes, so if there are no objections or corrections we should be able to gel the doc in a few days.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-138">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=138.html#message-138">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-20.html" title="05/20/2012 11:51 pm">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have just completed a final review of the requirements document, and I saw only one small change.  I moved the <strong>STSR 5.5</strong> and <strong>STSR 5.6</strong> to <strong>STSR 5.3.1</strong> and <strong>STSR 5.3.2</strong> respectively, because they are in fact specific additional measurements, which makes them part of <strong>STSR 5.3</strong>.  Note, I then restored the previous numbering for the remaining requirements under section 5.</p>
+
+
+	<p>If there are no other changes, I approve the current version of the requirements, <a href="../../../projects/shepard-ts/wiki/Requirements_Document_v1_0%3Fversion=47.html">v47</a>.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-141">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=141.html#message-141">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-21.html" title="05/21/2012 03:25 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I also approve <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0?version=47" class="external">v47</a></p>
+
+
+	<p>As with the block diagram, I would say to gel the requirements within a few days if there are no objections.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-151">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=151.html#message-151">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-29.html" title="05/29/2012 02:21 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>There have been no more suggestions for changes to the requirements doc, so I've gelled it and marked the "Finalize Requirements" issue as 100% complete.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-153">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="72%3Fr=153.html#message-153">RE: v1.0 - SEP Step 2 - Requirements Document</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-05-29.html" title="05/29/2012 02:26 am">over 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks, Jeremy.</p></div>
+  
+  </div>
+
+<p class="pagination"><a href="72%3Fpage=1&amp;r=153.html">« Previous</a> <a href="72%3Fpage=1&amp;r=153.html">1</a> 2  (26-30/30)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/72.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

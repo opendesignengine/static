@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Mathematics Tool Kit</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+
+<strong>Index by title</strong>
+<ul>
+
+    <li><a href="export.html#CONOPS">CONOPS</a></li>
+
+    <li><a href="export.html#Manual">Manual</a></li>
+
+    <li><a href="export.html#Media">Media</a></li>
+
+    <li><a href="export.html#Meeting_Minutes">Meeting Minutes</a></li>
+
+    <li><a href="export.html#Overview">Overview</a></li>
+
+    <li><a href="export.html#Resources">Resources</a></li>
+
+    <li><a href="export.html#Setup_Instructions">Setup Instructions</a></li>
+
+    <li><a href="export.html#Sidebar">Sidebar</a></li>
+
+    <li><a href="export.html#Wiki">Wiki</a></li>
+
+</ul>
+
+
+<hr />
+<a name="CONOPS" />
+<a name="MTK-CONOPS"></a>
+<h1 >MTK CONOPS<a href="export.html#MTK-CONOPS" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="export.html#MTK-CONOPS">MTK CONOPS</a><ul><li><a href="export.html#Scenario-Description">Scenario Description</a></li><li><a href="export.html#Actors">Actors</a></li><li><a href="export.html#Assumptions">Assumptions</a></li><li><a href="export.html#Narrative">Narrative</a></li></ul></li></ul>
+
+
+	<a name="Scenario-Description"></a>
+<h2 >Scenario Description<a href="export.html#Scenario-Description" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Mach 30 needs to do engineering analysis (aka math) on ballistic trajectories for a sub-orbital test vehicle (the rocket science equivalent to throwing a ball, very high).</p>
+
+
+	<a name="Actors"></a>
+<h2 >Actors<a href="export.html#Actors" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Isaac (Engineer) - knows all of the physics and math involved to predict the vehicle's flight, but he is not comfortable coding it up</li>
+		<li>Ada (Programmer) - very skilled at writing Python and can easily translate math to code</li>
+	</ul>
+
+
+	<a name="Assumptions"></a>
+<h2 >Assumptions<a href="export.html#Assumptions" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Isaac and Ada have access to a shared project space with version control for the ballistic trajectory analysis project (ODE)</li>
+	</ul>
+
+
+	<a name="Narrative"></a>
+<h2 >Narrative<a href="export.html#Narrative" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Isaac starts a new MTK project and writes a short intro covering why Mach 30 needs ballistic trajectory analysis.  He then spends most of his time researching and writing down the following information in this document (aka he documents before they act):</p>
+
+
+	<ul>
+	<li>the equations required for this analysis</li>
+		<li>why these are the correct equations (assumptions of the engineering models, how the Mach 30 case matches those assumptions, etc)</li>
+		<li>how to use the equations, with an example</li>
+		<li>some test cases (inputs and expected outputs)</li>
+	</ul>
+
+
+	<p>This work is in Isaac's wheelhouse. He is able to knock it out quickly and easily.  Best of all this work is fun for him.  When he is done he easily shares this work with Ada since they are using a common platform for their contributions to the project.</p>
+
+
+	<p>Ada takes over to design and implement the Python class that will perform the calculations Isaac specified. As she develops her code in MTK, she references and expands the documentation, which is open in a panel next to her code for easy access.  She adds a section showing how different parts of her code compute the results of the equations and how they do so with the correct data and in the correct order (documenting as she acts).  Ada then writes up the test cases in a test suite and includes the results of those test cases in the documentation (a kind of documenting after she acts).  </p>
+
+
+	<p>Notice how the only documentation Ada is writing directly relates to her code and just explains how it works in relation to the material Isaac provided. Everything else Ada is doing involves writing a key Python library for Mach 30.  Even the test cases are easier to write because they are based on engineering research from Isaac. This is a productive and enjoyable contribution for Ada involving a minimum of fuss reviewing and writing documentation.</p>
+
+
+	<p>Isaac then takes a look at the updated documentation, instead of having to review each line of source code.  Isaac pays special attention to the implementation details ("hmm, yes that code excerpt does compute the value for equation 3") and the test results which could include tables and figures ("yup, that's the right plot"). If he has questions, he can get on a hangout to review things with Ada. When they are about done, Isaac writes up a short conclusion and abstract wrapping up the documentation (one last bit of documenting after they act). </p>
+
+
+	<p>The jointly created documentation could be shared inside and outside Mach 30 for peer review and the Python class would be ready for use after addressing any comments from the peer review. Of course, those comments and updates would be handled in MTK as well. </p>
+
+<hr />
+<a name="Manual" />
+<a name="Manual"></a>
+<h1 >Manual<a href="export.html#Manual" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="export.html#Manual">Manual</a><ul><li><a href="export.html#Creating-MTK-Documents">Creating MTK Documents</a></li><li><a href="export.html#Formatting-MTK-Documents">Formatting MTK Documents</a></li><li><a href="export.html#Performing-Math-Operations-in-MTK">Performing Math Operations in MTK</a></li></ul></li></ul>
+
+
+	<p>We have just changed implementation of MTK.  Please stand by while we update our documentation to reflect these changes.</p>
+
+
+	<a name="Creating-MTK-Documents"></a>
+<h2 >Creating MTK Documents<a href="export.html#Creating-MTK-Documents" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Formatting-MTK-Documents"></a>
+<h2 >Formatting MTK Documents<a href="export.html#Formatting-MTK-Documents" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Performing-Math-Operations-in-MTK"></a>
+<h2 >Performing Math Operations in MTK<a href="export.html#Performing-Math-Operations-in-MTK" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://github.com/hgrecco/pint/blob/b5ead03728af49aa8272e8d58d61c13697a179ff/pint/default_en.txt" class="external">Supported Units</a> (from Pint source code - we should port this to a wiki table later)</li>
+	</ul>
+
+<hr />
+<a name="Media" />
+<a name="Media"></a>
+<h1 >Media<a href="export.html#Media" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="export.html#Media">Media</a><ul><li><a href="export.html#OHS-2015-Presentation">OHS 2015 Presentation</a></li></ul></li></ul>
+
+
+	<p>Welcome to the media page for the MTK wiki.  Place videos of demos, presentations, or important screenshots here for easy reference.</p>
+
+
+	<a name="OHS-2015-Presentation"></a>
+<h2 >OHS 2015 Presentation<a href="export.html#OHS-2015-Presentation" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/oQJY-_c7Fg8?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/oQJY-_c7Fg8?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+
+<hr />
+<a name="Meeting_Minutes" />
+<a name="MTK-Meeting-Minutes"></a>
+<h1 >MTK Meeting Minutes<a href="export.html#MTK-Meeting-Minutes" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="export.html#MTK-Meeting-Minutes">MTK Meeting Minutes</a><ul><li><ul><li><a href="export.html#Sprint-1">Sprint 1</a></li><li><a href="export.html#Sprint-2">Sprint 2</a></li><li><a href="export.html#Sprint-3">Sprint 3</a></li></ul></li></ul></li></ul>
+
+
+	<p><a href="https://docs.google.com/spreadsheets/d/1MQlgkqkl00CoK-mzC6KOVvsz3fwD8jj-vcdJk0DwwVI/pubhtml" class="external">Sprint Planning Document</a> (perpetually updated)</p>
+
+
+	<a name="Sprint-1"></a>
+<h3 >Sprint 1<a href="export.html#Sprint-1" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="https://docs.google.com/document/d/1LZesRXDzq6UasLzEzNV0UsPFjv0JznaDHqTOuPulDtk/pub" class="external">Planning Meeting 1</a></li>
+		<li><a href="https://docs.google.com/document/d/16lZVJTAGgkhTVlaTN8BL-FRt0iuT9kbf4gD7TfmCL4w/pub" class="external">Planning Meeting 2</a></li>
+		<li><a href="https://docs.google.com/document/d/1KFfrenz-hjIxi8USpebxpYRiX4KNLYx-zRA11O2m_Ak/pub" class="external">Stand Up 1</a></li>
+		<li><a href="https://docs.google.com/document/d/1zBuolm1so_Zff3TXWXvZWjsg2EuL2uCp5eRatVeXpHE/pub" class="external">Stand Up 2</a></li>
+		<li><a href="https://docs.google.com/document/d/1Lmm4Rkx5SLh5590cQqgRJWNg0cTSNcgjuzQPSL6XFJU/pub" class="external">Stand Up 3</a></li>
+		<li><a href="https://docs.google.com/document/d/1Lmm4Rkx5SLh5590cQqgRJWNg0cTSNcgjuzQPSL6XFJU/pub" class="external">Stand Up 4</a></li>
+		<li><a href="https://docs.google.com/document/d/1lZFDor6W96Mhj2UWf1HDVC8unnIK-5WdzuRzycrJcPU/pub" class="external">Stand Up 5</a></li>
+		<li><a href="https://docs.google.com/document/d/1LBCvUxAd9xK_iLLt3A9b7LJFnUmBPwVFZN942gV2QBs/pub" class="external">Stand Up 6 and Sprint Review</a></li>
+		<li><a href="https://docs.google.com/document/d/17mj1SAiN7I47w9UheNEhq59GVXih8_kAaX87i-cqOZw/pub" class="external">Backlog Grooming</a></li>
+	</ul>
+
+
+	<a name="Sprint-2"></a>
+<h3 >Sprint 2<a href="export.html#Sprint-2" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="https://docs.google.com/document/d/15WQAgErReGtJ53Krs6hJAhqi1sTPMVlNQJFtkvXuUKE/pub" class="external">Sprint Planning</a></li>
+		<li><a href="https://docs.google.com/document/d/1fnjWiqtP2TSlIJfdXj9zT1rgbprv9kSi73btBNJBd-E/pub" class="external">Stand Up 1</a></li>
+		<li><a href="https://docs.google.com/document/d/1RcqVwvaUI2TjFhqCYtapBCb3fx8TQFMMYWUlUn4flXo/pub" class="external">Stand Up 2</a></li>
+		<li><a href="https://docs.google.com/document/d/1jpXUI8GLCzRWtPyCtWTGVHgzQ797EkBMA1_SMk2vjQI/pub" class="external">Stand Up 3</a></li>
+		<li>Stand Up 4</li>
+		<li><a href="https://docs.google.com/document/d/11BkpOyYiDye9xN4karAVdQfUaRP_oYswBvCiqwdldr0/pub" class="external">Stand Up 5</a></li>
+		<li><a href="https://docs.google.com/document/d/1nyGGT9p8DfyDttIEltRextcTiAj9tdVEosQhVs7bt3Y/pub" class="external">Stand Up 6 and Sprint Review</a></li>
+		<li><a href="https://docs.google.com/document/d/1YZKjN0so3CnQAi_7p9gVvZpQXZAjL50IkVumDFcYraQ/pub" class="external">Backlog Grooming</a></li>
+	</ul>
+
+
+	<a name="Sprint-3"></a>
+<h3 >Sprint 3<a href="export.html#Sprint-3" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="https://docs.google.com/document/d/1PTonYRlaDBZb4vpNCkZKSO1KUExl2yxgBrQ2cowXt4c/pub" class="external">Sprint Planning</a></li>
+		<li><a href="https://docs.google.com/document/d/1zfs5v5OJTJVVjGZEMPrqKsLxKoIM2D5QFW7YmXhttz4/pub" class="external">Stand Up 1</a></li>
+		<li><a href="https://docs.google.com/document/d/1ETHLRPY5i7Bo0B_9x1KVSDhf21D-2YiuxmnPpek_uDU/pub" class="external">Stand Up 2</a></li>
+		<li><a href="https://docs.google.com/document/d/1mlvW0HSsBLiL5m8ZrmRDvrGX180CDzFCS3AoYDXPKyE/pub" class="external">Stand Up 3</a></li>
+		<li><a href="https://docs.google.com/document/d/1TtUeiyGE56xHWS4BQ2hCuZhJmdZot7F2ZdlmxpawEvc/pub" class="external">Stand Up 4</a></li>
+		<li><a href="https://docs.google.com/document/d/12IaGAevWIR3fT3i9XwbwAlBaHHwZhA_NNbwodv9a4iQ/pub" class="external">Stand Up 5</a></li>
+		<li><a href="https://docs.google.com/document/d/10R04IQNpdy3P_sOJrhqhdBShhk-4Z2dZcr7-FFMHc74/pub" class="external">Stand Up 6 and Sprint Review</a></li>
+		<li>Backlog Grooming</li>
+	</ul>
+
+<hr />
+<a name="Overview" />
+<a name="Overview"></a>
+<h1 >Overview<a href="export.html#Overview" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="export.html#Overview">Overview</a><ul><li><a href="export.html#The-Need-for-MTK">The Need for MTK</a></li><li><a href="export.html#MTKs-Approach-to-Documentation">MTK's Approach to Documentation</a></li></ul></li></ul>
+
+
+	<a name="The-Need-for-MTK"></a>
+<h2 >The Need for MTK<a href="export.html#The-Need-for-MTK" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>As Mach 30 moves into more complex engineering projects, its development community will have a greater need to perform up front mathematical analysis to design, size, and predict the performance of those projects.  Engineering analysis of this type should be well documented (both in principle and in order to follow Mach 30's commitment to its OSHW values).  Documenting engineering analysis makes it clear why and how it works as well as providing verification of the analysis (in implementation and results).</p>
+
+
+	<p>This is where MTK comes in.  MTK is a single environment for creating and documenting mathematical analyses using Python to code the analysis.  As an added bonus, the use of Python allows Mach 30 to take the analyses created and documented in MTK and use them directly in <a href="https://github.com/dcowden/cadquery" class="external">CadQuery</a> to drive our parametric CAD models when designing and making physical components.</p>
+
+
+	<a name="MTKs-Approach-to-Documentation"></a>
+<h2 >MTK's Approach to Documentation<a href="export.html#MTKs-Approach-to-Documentation" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>MTK's approach to integrating engineering analysis and documentation is based on three core principles of engineering documentation:</p>
+
+
+	<ol>
+	<li><strong>Document before you act</strong> - In preparation for engineering analysis, engineers must find the correct mathematical models, identify the key equations from those models, and demonstrate why the selected models are the correct ones to use. This involves writing narratives and the equations covering these items and citing sources used to arrive at the selected equations. This phase should also identify test cases for later verification efforts. MTK's integrated documentation environment (with support for units, equations, calculations, and plots) makes it easy for users to capture this information in a format that supports adding additional information as the project progresses.</li>
+		<li><strong>Document as you act</strong> - During engineering analysis, modern engineers spend their time coding up the equations from selected mathematical models, preferably into reusable modules (functions, classes, etc). Rigorous verification of engineering analysis should provide commentary on the critical sections of this code, showing how specific lines of code implement the required equations or methodologies (such as solver algorithms). MTK's unified analysis and documentation environment is critical to documenting in this way as it provides for seamless transition between coding and documenting.</li>
+		<li><strong>Document after you act</strong> - Once the engineering analysis is complete, it needs to be verified. Verification should include the commentary mentioned above plus inspection of test case results.  This commentary can include plots and tables showing those results and narrative commentary to prove to readers that the analysis is ready to be used. MTK's ability to run engineering analyses directly within its documentation environment is essential to this part of the documentation process.</li>
+	</ol>
+
+<hr />
+<a name="Resources" />
+<a name="Resources"></a>
+<h1 >Resources<a href="export.html#Resources" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="Support-Orgs"></a>
+<h2 >Support Orgs<a href="export.html#Support-Orgs" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a class="external" href="https://www.numfocus.org/">https://www.numfocus.org/</a></li>
+	</ul>
+
+
+	<a name="IPython"></a>
+<h2 >IPython<a href="export.html#IPython" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>IPython is the calculation engine in MTK.</p>
+
+
+	<ul>
+	<li><a href="http://ipython.org/" class="external">IPython homepage</a></li>
+		<li><a href="http://en.wikipedia.org/wiki/IPython" class="external">IPython Wiki page</a></li>
+		<li>Examples of using IPython
+	<ul>
+	<li><a href="https://jakevdp.github.io/blog/2015/02/24/optimizing-python-with-numpy-and-numba/" class="external">Web article about optimizing Python code that introduced us to IPython</a></li>
+		<li><a href="http://www.randalolson.com/2012/05/12/a-short-demo-on-how-to-use-ipython-notebook-as-a-research-notebook/" class="external">A short demo on how to use IPython Notebook as a research notebook</a> (<a href="http://www.randalolson.com/wp-content/uploads/Evolution-of-Swarming-Experiment.pdf" class="external">actual example research notebook</a>) </li>
+		<li><a href="https://github.com/jvns/pandas-cookbook" class="external">Pandas cookbook</a> - great examples of using Pandas library to process/display data</li>
+		<li><a href="http://nbviewer.ipython.org/gist/wesm/4757075/PandasTour.ipynb" class="external">Pandas Tour</a> - another set of Pandas examples</li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Included-Packages"></a>
+<h2 >Included Packages<a href="export.html#Included-Packages" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Pint (units for Python)
+	<ul>
+	<li><a href="http://pint.readthedocs.org/en/0.6/" class="external">Pint Docs</a></li>
+		<li><a href="http://pint.readthedocs.org/en/0.6/getting.html" class="external">General Installation</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Jupyter-Notebooks"></a>
+<h2 >Jupyter Notebooks<a href="export.html#Jupyter-Notebooks" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Jupyter is the documentation creation user interface.</p>
+
+
+	<ul>
+	<li><a href="http://jupyter.org/" class="external">Jupyter homepage</a></li>
+		<li><a href="https://github.com/ipython-contrib/IPython-notebook-extensions" class="external">Jupyter extensions</a> </li>
+		<li><a href="http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/" class="external">JupyterLab: the next generation of the Jupyter Notebook</a></li>
+	</ul>
+
+
+	<a name="Python-Tips-and-Tricks"></a>
+<h2 >Python Tips and Tricks<a href="export.html#Python-Tips-and-Tricks" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="http://www.analyticsvidhya.com/blog/2015/06/infographic-cheat-sheet-data-exploration-python/" class="external">Cheat Sheet for Exploratory Data Analysis in Python</a> - great list of functions/methods and example code for dealing with data (think tables, plotting, etc)</li>
+		<li><a href="http://www.discoversdk.com/blog/how-to-create-a-new-python-module-%28and-deploy-it-using-pip%29" class="external">Make and Deploy Python Package</a> - thinking we can make our mods into a package?</li>
+		<li><a class="external" href="https://www.datacamp.com/community/blog/python-matplotlib-cheat-sheet#gs.dQvhxi8">https://www.datacamp.com/community/blog/python-matplotlib-cheat-sheet#gs.dQvhxi8</a></li>
+	</ul>
+
+
+	<a name="Packages-to-Research"></a>
+<h2 >Packages to Research<a href="export.html#Packages-to-Research" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="http://www.texample.net/tikz/" class="external">Tikz</a> - Programatic graphics</li>
+		<li><a href="http://www.astropy.org/" class="external">AstroPy</a> - Python library for astronomical and astrodynamics calculations </li>
+		<li><a href="http://www.galvanize.com/blog/2015/07/14/seven-python-tools-all-data-scientists-should-know-how-to-use/#.VazwF_lVhBf" class="external">Seven Python Tools All Data Scientists Should Know How to Use</a></li>
+		<li><a href="https://github.com/bloomberg/bqplot" class="external">bqplot</a> - plotting system for the Jupyter notebook</li>
+		<li><a href="http://rhodesmill.org/pyephem/" class="external">PyEphem</a> - provides basic astronomical computations for the Python programming language</li>
+	</ul>
+
+<hr />
+<a name="Setup_Instructions" />
+<a name="Setup-Instructions"></a>
+<h1 >Setup Instructions<a href="export.html#Setup-Instructions" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="export.html#Setup-Instructions">Setup Instructions</a><ul><li><a href="export.html#On-Linux">On Linux</a></li></ul></li></ul>
+
+
+	<a name="On-Linux"></a>
+<h2 >On Linux<a href="export.html#On-Linux" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>These instructions were developed using a PC laptop running Ubuntu 14.04 64-bit.</p>
+
+
+	<ol>
+	<li>Download the <a href="https://opendesignengine.net/projects/mtk/repository/revisions/36/raw/trunk/install/linux/mtk_setup_script.sh" class="external">install script</a> from the MTK repository (rev 36 is the current working build)</li>
+		<li>Open a terminal window and change to the directory where you downloaded the install script (e.g. ~/Downloads/)</li>
+		<li>Add execute permissions to the install script <br /><code>chmod +x ./mtk_setup_script.sh</code></li>
+		<li>Run the install script (you will be prompted for your password as the script uses sudo)<br /><code>./mtk_setup_script.sh</code> </li>
+		<li>Be patient and answer yes to any prompts (the install script needs to download, install, and update a number of tools to fully configure MTK)</li>
+	</ol>
+
+<hr />
+<a name="Sidebar" />
+<a name="Navigation"></a>
+<h3 ><a href="export.html#Navigation" class="wiki-page">Navigation</a><a href="export.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Mathematics-Tool-Kit"></a>
+<h3 >Mathematics Tool Kit<a href="export.html#Mathematics-Tool-Kit" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="export.html#Home" class="wiki-page">Home</a></li>
+		<li><a href="export.html#" class="wiki-page">Media</a></li>
+	</ul>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="export.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="export.html#" class="wiki-page">Setup Instructions</a></li>
+		<li><a href="export.html#" class="wiki-page">Manual</a> (TBD)</li>
+		<li><a href="https://github.com/hgrecco/pint/blob/70eef0ccf9ffc065a12e30865a657b0d11109c2d/pint/default_en.txt" class="external">Pint Units Reference</a> <br />(raw source code)</li>
+	</ol>
+
+
+	<a name="Design-Process"></a>
+<h4 >Design Process<a href="export.html#Design-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="export.html#" class="wiki-page">Overview</a></li>
+		<li><a href="export.html#" class="wiki-page">CONOPS</a></li>
+		<li><a href="export.html#Meeting Minutes/Notes" class="wiki-page">Meeting Minutes/Notes</a></li>
+		<li><a href="export.html#Resources/Links" class="wiki-page">Resources/Links</a></li>
+	</ol>
+
+<hr />
+<a name="Wiki" />
+<a name="Mach-30s-Mathematics-Tool-Kit"></a>
+<h1 >Mach 30's Mathematics Tool Kit<a href="export.html#Mach-30s-Mathematics-Tool-Kit" class="wiki-anchor">&para;</a></h1>
+
+
+	<p><div style="float:right"><img src="../../../attachments/download/578" alt="" /></div></p>
+
+
+	<p>Mach 30 believes documentation is essential to creating high quality engineering analysis and that integrating documentation steps into the engineering process is the key to ensuring documentation is created and maintained.  The Mathematics Tool Kit (MTK) is a unified engineering analysis and documentation tool created to address these needs.</p>
+
+
+	<p>MTK is built on existing open source tools including <a href="http://ipython.org/" class="external">IPython</a>, <a href="https://jupyter.org/" class="external">Jupyter</a> (and <a href="https://github.com/ipython-contrib/IPython-notebook-extensions" class="external">several extensions</a>), <a href="http://pint.readthedocs.org/" class="external">Pint</a>, and <a href="https://pythonhosted.org/spyder/" class="external">Spyder</a> (coming soon).  The goal is to create a tool that makes it easy to switch between (and focus on) engineering analysis and documentation tasks, all in an environment optimized for engineers (e.g. built in support for units as first class mathematical constructs via Pint).  A notional view of MTK is shown below (Spyder-windows-screenshot" by Joshdoe at en.wikipedia; "IPython-notebook" by Shishirdasika).</p>
+
+
+	<p><img src="../../../attachments/download/579" alt="" /></p>
+
+
+	<p>Visit the links on the right to get started with MTK or leave us a message on the <strong><a href="https://opendesignengine.net/projects/mtk/boards" class="external">Forums</a></strong> if you want to help us make MTK the premier choice for engineering analysis.</p>
+
+
+</body>
+</html>

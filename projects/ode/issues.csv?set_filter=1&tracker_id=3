@@ -1,0 +1,10 @@
+#,Status,Project,Tracker,Priority,Subject,Assignee,Category,Target version,Author,Start date,Due date,% Done,Estimated time,Parent task,Created,Updated,Description
+91,New,Open Design Engine,Support,Normal,Publish ODE specific plugins as separate sub-projects with their own repositories,"","",Under consideration,J. Simmons,11/18/2012,"",0,"","",11/18/2012 01:46 pm,03/08/2013 10:38 am,"Need to pull out the following plugins so we can list them on the ""Redmine site"":http://www.redmine.org/plugins
+
+* *Redmine Funding wiki macro plugin*
+* *Redmine Legal*
+* *Redmine Licensing*
+
+We should also look into offering the code changes in *Redmine Video wiki macro plugin* to *""Redmine Youtube wiki macro plugin"":http://jwm.slavitica.net/p/projects/redmine-youtube*"
+36,In Progress,Open Design Engine,Support,Normal,Research how Redmine uses RMagick,"","",v0.3 - Sustainability Enhancements,J. Simmons,09/22/2011,"",30,"","",09/22/2011 05:10 pm,03/08/2013 10:41 am,It looks like Redmine can use RMagick according to the Info screen on the ODE admin console.  This may be part of the image resize capability in the wiki (which is not working right now).  Need to research how Redmine uses RMagick and install/config it if necessary.
+131,New,Open Design Engine,Support,Normal,No Notification of Comments on News Items,"","",v0.3 - Sustainability Enhancements,Jeremy Wright,05/21/2013,"",0,"","",05/21/2013 08:28 am,05/22/2013 03:29 pm,"I have my email notifications set to ""For any event on all my projects"", but a comment was posted to one of my dev logs (using the news module) and I never got any notification. I checked and it did not go to spam. Is there a separate setting somewhere for this? If not, I would like to add it as a feature request."

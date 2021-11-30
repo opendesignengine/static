@@ -1,0 +1,34 @@
+h1. Holoseat - Interactive Exercise Video Game Project
+
+!>http://opendesignengine.net/dmsf_files/641?download=!:http://certificate.oshwa.org/certification-directory/  !>Holoseat-Model-B.png!:http://holoseat.com
+
+{{toc}}
+
+h2. Introduction
+
+!>hs_qrcode.png!
+
+Welcome to the Holoseat Wiki. Holoseat is a gaming peripheral for PCs (it works with Windows, Mac OS, and Linux) that turns your video games into workouts.  Every step you take in your game is driven by pedaling in the real world.  Using Holoseat is an immersive experience (players pedal faster when their characters are in danger) and invisible.  This combination masks the exercise experience in game play, transforming exercise from a chore into a natural part of a gamer's day.  In short, Holoseat _exerfies your games_!
+
+Holoseat is an *"open source hardware":https://en.wikipedia.org/wiki/Open-source_hardware* project ([[v0_3Documentation|v0.3]] is certified as open source by "OSHWA":http://certificate.oshwa.org/certification-directory/) and all aspects of its development are managed on "Open Design Engine":https://opendesignengine.net.  As an open source hardware project, you have access to all of the design details of Holoseat and can participate in any manner you want.  Do you want to follow along with the development team until we release the first commercial version?  Great, check out the _Want to learn more?_ section.  Do you just have to have a Holoseat of your own right now?  No problem, check out the _Want to build your own?_ section.  Do you have an idea for how to improve Holoseat?  Do you want to help us bring Holoseat to market (this includes technical and business development work)?  Awesome!  Check out the _Want to join the Holoseat team?_ section.
+
+No matter what brought you here today, be sure to *"sign up for our newsletter":http://www.modelb.biz/newsletter-signup/* to stay up to date on our journey toward 1.0 and our first commercial release.
+
+h2. Want to learn more?
+
+So, you want to learn more about Holoseat?  First, have you *"signed up for our newsletter":http://www.modelb.biz/newsletter-signup/*?  If not, follow the link and sign up.  Our newsletter comes out between each of our development cycles, or *"sprints":https://en.wikipedia.org/wiki/Scrum_(software_development)#Workflow* (roughly every 8 weeks) and covers our last sprint (what we planned and what we did) and next sprint (what we are planning to do).  
+
+Want to know how to use Holoseat?  Check out our *"home page":http://www.modelb.biz/* for an infographic summarizing how Holoseat works.  Looking for more details, check out the *[[Operating Manual|Operating Manual]]*.  If you want to know a little about the science behind Holoseat, check out *"this blog post":http://www.modelb.biz/science-behind-holoseat-exercise-intrinsically-rewarding/*.
+
+Finally, if you are looking for the technical details of Holoseat, take a look at the _Design Data_.  The *[[Block Diagram|Block Diagram]]* documents the Holoseat system architecture (what are the components of the Holoseat and how do they relate to their environment?).  The *[[Schematics and PCB Files|Schematics and PCB Files]]* covers the design of the electronic components of Holoseat (the controller and sensor boards).  And the *[[Software Source Code|Project Software]]* describes each of the software elements of the Holoseat project and how they work.
+
+h2. Want to build your own?
+
+So, you want to build your own Holoseat?  You're in luck.  As an open source hardware project, all of the plans and assembly instructions for Holoseat are published here on Open Design Engine.  Just check out the _Assembly Information_ links in the navigation bar on the right.  The *[[BOM|Bill of Materials]]* lists all of the materials required to build the Holoseat electronics (you still need to BYOP - Bring Your Own Pedals - don't have a set, we recommend *"DeskCycle":https://www.amazon.com/DeskCycle-Exercise-Pedal-Exerciser-White/dp/B00B1VDNQA/* if you prefer peddles or *"FitDesk":https://www.amazon.com/FitDesk-Under-Desk-Elliptical/dp/B00Y1FRULM/* for elliptical).  Then just follow the *[[Assembly Instructions|Assembly Instructions]]* and the *[[Software Set Up|Software Set Up]]* and you will have your very own Holoseat.
+
+h2. Want to join the Holoseat team?
+
+So, you want to join our team and help us get to market faster?  Step one is to *"sign up for an account":https://opendesignengine.net/account/register* on Open Design Engine.  Step two is to introduce yourself on the *"forums":https://opendesignengine.net/projects/holoseat/boards/36*.  We welcome any and all comers.  Found a bug? *"Report it":https://opendesignengine.net/projects/holoseat/issues/new*.  Have an idea?  Share it on the forums.  Want to help with the development?  Let us know on the forums and we will include you in our weekly meetings and development cycle.  Want to help on the business side?  Again let us know on the forums and we will be in touch about how we can work together.  What are you waiting for?  Sign up and introduce yourself!
+
+
+

@@ -1,0 +1,43 @@
+h1. Shepard Test Stand Budget v1.1
+
+This is a newer document based on "this one":https://opendesignengine.net/projects/shepard-ts/wiki/Budget_v1_0 , and you should refer to that original version if you want to see the revision history.
+
+h3. Overview
+
+The budget is $200, firm. If there is a conflict between function and budget, for this iteration, budget should trump. Our goal is not to make the perfect test stand, it is to upgrade the first prototype (v1.0) of the test stand in a way that gives us an upgrade path to v2.0 and beyond. In the process we will continue to learn both about test stands, and about our processes within our distributed design framework. Holding to a firm budget minimizes the amount of time spent trying to make the stand perfect (once you are out of money, you have to wrap up the project, successful or not). Even an "unsuccessful" prototype will teach us important lessons to apply moving forward. This budget does not include "consumables" such as motors, nor tools, but the $200 cost for the stand itself keeps the basic project affordable if standard tools found in Makerspaces can be used. Any manufacturing that has to be hired out to a third party will be taken out of the $200 budget, and should be avoided to keep this project more practical for those same Makerspaces.
+
+h3. Detailed Budget
+
+*Preliminary Mechanical Cost Estimates (For One-Off Quantities)*
+|_.Item |_.Cost (Minus Shipping) |_.Link |
+| 8' 2x10 pine board | $7.75 |  |
+| 8' 2x4 pine board | $2.50 |  |
+| 4"x8"x16" solid concrete block | $1.50 |  |
+| Small Ball Bearing Drawer Guide  | $6.00 |  |
+| 30 Ga Sheel Metal | $7.93 | "Link":http://www.mcmaster.com/#8457k11/=nmwo7j |
+| Pulley | $3.31 | "Link":http://www.mcmaster.com/#3742t52/=nnde7v |
+| Estes D/E Motor Mount | $9.00 | "Link":http://bit.ly/Rrn330 |
+| Estes Motor Adapters | $6.00 | "Link":http://bit.ly/MYMnNg |
+| Copper T-Fitting | $3.00 |  |
+| High Heat Spray Primer | $8.00 |  |
+| High Heat Spray Paint | $5.00 |  |
+| Misc Hardware (Screws, etc) | $5.00 |  |
+| *Total*| $64.99 | |
+
+*Preliminary DAQ Cost Estimates (For One-Off Quantities)*
+|_.Item |_.Quantity|_.Unit Cost (Minus Shipping) |_.Cost to Builder (Including Shipping) |_.Link |
+| Arduino Uno R3 | 1 | $29.95 | $37.09 | "Link":http://bit.ly/N5kizl |
+| Arduino Protoshield | 1 | $16.50 | $20.45 | "Link":http://bit.ly/S7I466 |
+| 5 Kg Micro Load Cell | 1 | $6.80 | $19.96 | "Link":http://www.robotshop.com/micro-load-cell-5-kg-2.html |
+| INA122 Instrumentation Amplifier | 1 | $8.02 | $13.02 | "Link":http://www.mouser.com/ProductDetail/Texas-Instruments/INA122P/?qs=sGAEpiMZZMsE1dKaA2ImUPh%2fgv48%2feoecYaIG23%252bilQ%3d | 
+| Melexis MLX90614 IR Temperature Sensor | 1 | $12.40 | $17.74 | "Link":http://www.digikey.com/product-detail/en/MLX90614ESF-BAA-000-TU/MLX90614ESF-BAA-000-TU-ND/1647941 |
+| 8-Pin DIP Socket | 1 | $0.99 | $1.06 | "Link":http://www.radioshack.com/product/index.jsp?productId=2062604 |
+| 10K Micro Trim Poteniometer | 1 | $1.99 | $2.13 | "Link":http://www.radioshack.com/product/index.jsp?productId=2062301 |
+| 15 Ohm Resistor | 1 | $0.10 | $0.11 | "Link":http://www.radioshack.com/product/index.jsp?productId=2062310 |
+| 150 Ohm Resistor | 1 | $0.10 | $0.11 | "Link":http://www.radioshack.com/product/index.jsp?productId=2062316 |
+| 2 x 3.5 mm Screw Terminal | 2 | $0.35 | $0.82 | "Link":http://www.jameco.com/webapp/wcs/stores/servlet/Product_10001_10001_2094506_-1 |
+| Misc (Wire, Shrink Tubing, etc) | 1 | $2.00 | $2.00 | |
+| *Totals* | | $79.20 | $114.49 |
+
+*Total Project Cost:*
+$179.48 ($20.52 under budget)

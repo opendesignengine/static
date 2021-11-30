@@ -1,0 +1,23 @@
+h1. Resources
+
+{{>toc}}
+
+h2. Technical References
+
+* [[Link Budgets]]
+
+h2. ISS SSTV Links
+
+* "SSTV activity being planned for late Dec. 2015 (Now Jan.)":http://ariss-sstv.blogspot.com/2015/12/sstv-activity-being-planned-for-late.html - March and April 2016 are the new target dates
+
+h2. Software Tips and Tricks
+
+* "Content for testing and configuring WxToImg":http://www.fredvandenbosch.nl/satellites_APT.html
+
+h2. Business Resources
+
+* *FROM PROJECT TO KIT* - Hackaday on "turning an electronic project into a marketable kit"
+** "SO YOU WANT TO SELL ELECTRONIC KITS":http://hackaday.com/2016/07/29/from-project-to-kit-so-you-want-to-sell-electronic-kits/
+** "GETTING THE HARDWARE RIGHT":http://hackaday.com/2016/08/05/from-project-to-kit-getting-the-hardware-right/
+** "INSTRUCTIONS ARE EVERYTHING":http://hackaday.com/2016/08/12/from-project-to-kit-instructions-are-everything/
+** "BRINGING IT ALL TOGETHER":http://hackaday.com/2016/08/19/from-project-to-kit-bringing-it-all-together/

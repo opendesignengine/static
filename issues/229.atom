@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link rel="self" href="http://opendesignengine.net/issues/229.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-11-02T18:15:06+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <entry>
+    <title>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks - Milestone #229: Flash an ATMEGA328 with grbl firmware</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/229"/>
+    <id>http://opendesignengine.net/issues/229?journal_id=367</id>
+    <updated>2013-11-02T18:15:06+00:00</updated>
+    <author>
+      <name>Steve Popenoe</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Due date&lt;/strong&gt; set to &lt;i&gt;11/30/2013&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Start date&lt;/strong&gt; changed from &lt;i&gt;11/02/2013&lt;/i&gt; to &lt;i&gt;11/25/2013&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+</feed>

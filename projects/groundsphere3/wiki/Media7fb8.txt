@@ -1,0 +1,9 @@
+h1. Media
+
+{{>toc}}
+
+A capture from NOAA 19
+!IMG_20180716_184840.jpg!
+
+The equipment we used to capture the above image
+!08272012.jpg!

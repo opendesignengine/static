@@ -1,0 +1,56 @@
+h1. Software Setup
+
+{{>toc}}
+
+h2. Introduction
+
+These instructions cover the software set up of the Ground Sphere Mk3.
+
+Note, these steps are for Windows (tested on Windows 10).
+
+h2. 1. Download required Software
+
+# Download the following files
+## "Windows SDR Package - SDR Sharp": https://airspy.com/download/ (ver 1.0.0.1443)
+## "WXtoImg": https://wxtoimgrestored.xyz/downloads/ (ver 2.10.11)
+## "VBCable": https://www.vb-audio.com/Cable/ (pack 43)
+
+!HoloseatDir.png!
+
+h2. 2. Install Arduino IDE
+
+# Run the Arduino IDE installer
+# Configure the Arduino IDE to work with the Feather board
+Complete details are available at learn.adafruit.com: "General details":https://learn.adafruit.com/adafruit-arduino-ide-setup/arduino-1-dot-6-x-ide | "Feather specific details":https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide
+## Launch the Arduino IDE 
+## Open the Arduino IDE Preferences by selecting *File>Preferences* from the menu
+## Add @https://adafruit.github.io/arduino-board-index/package_adafruit_index.json@ to the *Additional Boards Manager URLs* field
+## Click the *OK* button to save the new preferences
+## Launch the Boards Manager by selecting *Tools>Board>Board Manager* from the menu
+## Select _Contributed_ from the *Type* select box
+## Select _Adafruit AVR Boards by Adafruit_ in the list of contributed boards then click the *Install* button
+## Click the *Close* button, then exit out of the Arduino IDE (you may optionally relaunch the Arduino IDE and verify the list of boards under *Tools>Board* includes the Adafruit Feather)
+## *ON WINDOWS ONLY* Install the Windows Adafruit Drivers (optional: only select the _Feather 32u4_ to minimize the number of drivers installed)
+!InstallFeatherDriver.png!
+# Copy the Arduino libraries to the Holoseat libs directory
+## Launch the Arduino IDE
+## Open the Arduino IDE Preferences by selecting File>Preferences from the menu
+## Note the Sketchbook location (typically Documents\Arduino)
+## Close the Arduino IDE Preferences and exit the Arduino IDE
+## Copy Documents\Holoseat\Firmware\libs\Bounce2 to the libraries folder in the sketchbook folder (typically Documents\Arduino\libraries)
+!LibrariesFolder.png!
+
+h2. 3. Install Firmware on Holoseat Controller
+
+# Launch the Arduino IDE
+# Plug the Holoseat controller into a USB port
+# Set the board type to _Adafruit Feather 32u4_ by selecting *Tools>Board>Adafruit Feather 32u4* in the menu
+# Set the port the Feather is connected to by selecting *Tools>Port>COM# (Adafruit Feather 32u4)* in the menu where # is an integer (see figure)
+!SelectComPort.png!
+# Open the Holoseat firmware in the Arduino by selecting *File>Open* and navigating to Documents\Holoseat\Firmware\holoseat_firmware\holoseat_firmware.ino
+# Confirm the firmware compiles by clicking the *Verify* button (with the check mark icon)
+# Flash the Holoseat controller with the firmware by clicking the *Upload* button (with the right facing arrow icon)
+
+h2. 4. Install Desktop Configuration App
+
+The desktop configuration app does not currently require any installation steps.  You can run it directly from Documents\Holoseat\HoloseatConfigurationUtility

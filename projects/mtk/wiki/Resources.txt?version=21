@@ -1,0 +1,45 @@
+h1. Resources
+
+h2. Support Orgs
+
+* https://www.numfocus.org/
+
+h2. IPython
+
+IPython is the calculation engine in MTK.
+
+* "IPython homepage":http://ipython.org/
+* "IPython Wiki page":http://en.wikipedia.org/wiki/IPython
+* Examples of using IPython
+** "Web article about optimizing Python code that introduced us to IPython":https://jakevdp.github.io/blog/2015/02/24/optimizing-python-with-numpy-and-numba/
+** "A short demo on how to use IPython Notebook as a research notebook":http://www.randalolson.com/2012/05/12/a-short-demo-on-how-to-use-ipython-notebook-as-a-research-notebook/ ("actual example research notebook":http://www.randalolson.com/wp-content/uploads/Evolution-of-Swarming-Experiment.pdf) 
+** "Pandas cookbook":https://github.com/jvns/pandas-cookbook - great examples of using Pandas library to process/display data
+** "Pandas Tour":http://nbviewer.ipython.org/gist/wesm/4757075/PandasTour.ipynb - another set of Pandas examples
+
+h2. Included Packages
+
+* Pint (units for Python)
+** "Pint Docs":http://pint.readthedocs.org/en/0.6/
+** "General Installation":http://pint.readthedocs.org/en/0.6/getting.html
+
+h2. Jupyter Notebooks
+
+Jupyter is the documentation creation user interface.
+
+* "Jupyter homepage":http://jupyter.org/
+* "Jupyter extensions":https://github.com/ipython-contrib/IPython-notebook-extensions 
+* "JupyterLab: the next generation of the Jupyter Notebook":http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/
+
+h2. Python Tips and Tricks
+
+* "Cheat Sheet for Exploratory Data Analysis in Python":http://www.analyticsvidhya.com/blog/2015/06/infographic-cheat-sheet-data-exploration-python/ - great list of functions/methods and example code for dealing with data (think tables, plotting, etc)
+* "Make and Deploy Python Package":http://www.discoversdk.com/blog/how-to-create-a-new-python-module-%28and-deploy-it-using-pip%29 - thinking we can make our mods into a package?
+* https://www.datacamp.com/community/blog/python-matplotlib-cheat-sheet#gs.dQvhxi8
+
+h2. Packages to Research
+
+* "Tikz":http://www.texample.net/tikz/ - Programatic graphics
+* "AstroPy":http://www.astropy.org/ - Python library for astronomical and astrodynamics calculations 
+* "Seven Python Tools All Data Scientists Should Know How to Use":http://www.galvanize.com/blog/2015/07/14/seven-python-tools-all-data-scientists-should-know-how-to-use/#.VazwF_lVhBf
+* "bqplot":https://github.com/bloomberg/bqplot - plotting system for the Jupyter notebook
+* "PyEphem":http://rhodesmill.org/pyephem/ - provides basic astronomical computations for the Python programming language

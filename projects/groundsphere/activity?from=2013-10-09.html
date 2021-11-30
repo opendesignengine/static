@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Activity - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+<link href="activity.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+</head>
+<body class="controller-activities action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/groundsphere.html" method="get">
+        
+        <a href="../../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../groundsphere%3Fjump=activity.html" class="activity selected">Activity</a></li>
+<li><a href="../groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+<form action="../groundsphere%3Fjump=activity.html" method="get">
+<h3>Activity</h3>
+<p>
+<input checked="checked" id="show_issues" name="show_issues" type="checkbox" value="1" />
+<a href="activity%3Fshow_issues=1.html">Issues</a>
+<br />
+
+<input checked="checked" id="show_changesets" name="show_changesets" type="checkbox" value="1" />
+<a href="activity%3Fshow_changesets=1.html">Changesets</a>
+<br />
+
+<input checked="checked" id="show_news" name="show_news" type="checkbox" value="1" />
+<a href="activity%3Fshow_news=1.html">News</a>
+<br />
+
+<input id="show_wiki_edits" name="show_wiki_edits" type="checkbox" value="1" />
+<a href="activity%3Fshow_wiki_edits=1.html">Wiki edits</a>
+<br />
+
+<input id="show_messages" name="show_messages" type="checkbox" value="1" />
+<a href="activity%3Fshow_messages=1.html">Messages</a>
+<br />
+
+<input id="show_time_entries" name="show_time_entries" type="checkbox" value="1" />
+<a href="activity%3Fshow_time_entries=1.html">Spent time</a>
+<br />
+
+<input checked="checked" id="show_dmsf_files" name="show_dmsf_files" type="checkbox" value="1" />
+<a href="activity%3Fshow_dmsf_files=1.html">Dmsf files</a>
+<br />
+</p>
+
+	  <input id="with_subprojects" name="with_subprojects" type="hidden" value="0" />
+    <p><label><input checked="checked" id="with_subprojects" name="with_subprojects" type="checkbox" value="1" /> Subprojects</label></p>
+
+
+<p><input class="button-small" type="submit" value="Apply" /></p>
+</form>
+
+        
+    </div>
+
+    <div id="content">
+				
+        <h2>Activity</h2>
+<p class="subtitle">From 09/10/2013 to 10/09/2013</p>
+
+<div id="activity">
+
+<h3>10/09/2013</h3>
+<dl>
+  <dt class="issue-closed  ">
+	
+  <span class="time">09:50 pm</span>
+  
+  <a href="http://opendesignengine.net/issues/198#change-353">Milestone #198 (Resolved): Make calculations for amplifier and antenna</a></dt>
+  <dd><span class="description">Complete primarily due to design change when original preamp design was found unsuitable.  A far superior design was ...</span>
+  <span class="author"><a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a></span></dd>
+  <dt class="dmsf-file-revision  ">
+	
+  <span class="time">09:48 pm</span>
+  
+  <a href="http://opendesignengine.net/dmsf_files/271">DMSF updated: Design Files/GScalc</a></dt>
+  <dd><span class="description">Calculation spreadsheet (simplified) for eggbeater antenna design.</span>
+  <span class="author"><a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a></span></dd>
+  <dt class="news  ">
+	
+  <span class="time">09:39 pm</span>
+  
+  <a href="../../news/47.html">Change of component</a></dt>
+  <dd><span class="description">I have two pieces of news... first the bad, then the outstanding.<br />Prior to modifying the preamp circuit, I perform...</span>
+  <span class="author"><a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a></span></dd>
+  <dt class="issue-edit  ">
+	
+  <span class="time">12:41 pm</span>
+  
+  <a href="http://opendesignengine.net/issues/203#change-352">Milestone #203 (In Progress): Acquire and publish list of targets in same frequency range of SkyCube</a></dt>
+  <dd><span class="description">Summary of Tim&#x27;s research:<br />* There are not many CubeSats currently operating at 915MHz (there are 3, but they only...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-note  ">
+	
+  <span class="time">09:09 am</span>
+  
+  <a href="../../issues/204.html#change-351">Milestone #204: Distribute AX.25 software to team</a></dt>
+  <dd><span class="description">source code moved to trunk in svn repo</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:53 am</span>
+  
+  <a href="http://opendesignengine.net/issues/214">Milestone #214 (Rejected): Fabricate and ship kits</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-note  ">
+	
+  <span class="time">12:46 am</span>
+  
+  <a href="http://opendesignengine.net/issues/210#change-349">Milestone #210: Debrief Prototype 2</a></dt>
+  <dd><span class="description">This milestone will include any necessary design discussions to tweak the kit design in prep for building prototype 3.</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-note  ">
+	
+  <span class="time">12:44 am</span>
+  
+  <a href="http://opendesignengine.net/issues/209#change-348">Milestone #209: Test Prototype 2</a></dt>
+  <dd><span class="description">Adding some extra time for testing since this is the first kit version being built and tested.</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:43 am</span>
+  
+  <a href="http://opendesignengine.net/issues/210">Milestone #210 (Closed): Debrief Prototype 2</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:40 am</span>
+  
+  <a href="http://opendesignengine.net/issues/209">Milestone #209 (Resolved): Test Prototype 2</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:39 am</span>
+  
+  <a href="http://opendesignengine.net/issues/208">Milestone #208 (Resolved): Build Prototype 2</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:38 am</span>
+  
+  <a href="http://opendesignengine.net/issues/207">Milestone #207 (Resolved): Design Prototype 2</a></dt>
+  <dd><span class="description">Note, the design work will take place over *ODE* forums and Google+ Hangouts.  J is the assignee to reflect his respo...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:35 am</span>
+  
+  <a href="../../issues/206.html">Milestone #206 (Resolved): Debrief Prototype 1</a></dt>
+  <dd><span class="description">Capture lessons learned in prep for kit version design</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:33 am</span>
+  
+  <a href="../../issues/205.html">Milestone #205 (Closed): Test Prototype 1</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-note  ">
+	
+  <span class="time">12:31 am</span>
+  
+  <a href="../../issues/204.html#change-343">Milestone #204: Distribute AX.25 software to team</a></dt>
+  <dd><span class="description">Scott has uploaded binaries to DMSF and source code to svn.  J needs to add classic svn structure to the repository a...</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:30 am</span>
+  
+  <a href="../../issues/204.html">Milestone #204 (Resolved): Distribute AX.25 software to team</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:28 am</span>
+  
+  <a href="http://opendesignengine.net/issues/203">Milestone #203 (Resolved): Acquire and publish list of targets in same frequency range of SkyCube</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:26 am</span>
+  
+  <a href="http://opendesignengine.net/issues/202">Milestone #202 (Resolved): Setup Wiki</a></dt>
+  <dd><span class="description">Special focus should be paid to<br />* Versions<br />* Initial Questions<br />* Requirements</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-edit  ">
+	
+  <span class="time">12:23 am</span>
+  
+  <a href="../../issues/197.html#change-341">Milestone #197 (In Progress): Build Prototype 1</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:23 am</span>
+  
+  <a href="../../issues/201.html">Milestone #201 (Resolved): Assemble Prototype 1</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:21 am</span>
+  
+  <a href="../../issues/200.html">Milestone #200 (Resolved): Fabricate preamp</a></dt>
+  <dd><span class="description">Must operate at 915MHz</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:19 am</span>
+  
+  <a href="../../issues/199.html">Milestone #199 (Resolved): Fabricate antenna components</a></dt>
+  <dd><span class="description">* Body <br />* Aerial loops<br />* Ground plane (Jaye)<br />* Phasing loop</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue-edit  ">
+	
+  <span class="time">12:17 am</span>
+  
+  <a href="http://opendesignengine.net/issues/198#change-339">Milestone #198 (In Progress): Make calculations for amplifier and antenna</a></dt>
+  <dd><span class="description">Aaron has made the calculations for the antenna - https://opendesignengine.net/news/46</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:16 am</span>
+  
+  <a href="http://opendesignengine.net/issues/198">Milestone #198 (Resolved): Make calculations for amplifier and antenna</a></dt>
+  <dd><span class="description">Calculations are to size electrical components for operation at 915MHz</span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+  <dt class="issue closed  ">
+	
+  <span class="time">12:14 am</span>
+  
+  <a href="../../issues/197.html">Milestone #197 (Resolved): Build Prototype 1</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a></span></dd>
+</dl>
+
+<h3>10/08/2013</h3>
+<dl>
+  <dt class="dmsf-file-revision  ">
+	
+  <span class="time">04:00 am</span>
+  
+  <a href="../../dmsf_files/269.html">DMSF updated: Software Releases/SeeDeR/SeeDeR v0.01</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/178.html" class="icon icon-contributor-license">Scott Cutler</a></span></dd>
+  <dt class="dmsf-file-revision  ">
+	
+  <span class="time">04:00 am</span>
+  
+  <a href="../../dmsf_files/270.html">DMSF updated: Software Releases/SeeDeR/vcredist x86 vs2012</a></dt>
+  <dd><span class="description"></span>
+  <span class="author"><a href="../../users/178.html" class="icon icon-contributor-license">Scott Cutler</a></span></dd>
+</dl>
+
+<h3>10/06/2013</h3>
+<dl>
+  <dt class="news  ">
+	
+  <span class="time">08:32 pm</span>
+  
+  <a href="../../news/46.html">Physical calculations</a></dt>
+  <dd><span class="description">The measurements for antenna components are as follows:<br />* Phasing line:  2.7745&quot; of RG-62 90 ohm coax cable (I hav...</span>
+  <span class="author"><a href="../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a></span></dd>
+</dl>
+</div>
+
+
+
+<div style="float:left;">
+<a href="http://opendesignengine.net/projects/groundsphere/activity?from=2013-09-09" title="From 08/11/2013 to 09/09/2013">« Previous</a>
+</div>
+<div style="float:right;">
+<a href="http://opendesignengine.net/projects/groundsphere/activity?from=2013-11-08" title="From 10/10/2013 to 11/08/2013">Next »</a>
+</div>
+&nbsp;
+<p class="other-formats">Also available in:
+	<span><a href="activity.atom" class="atom" rel="nofollow">Atom</a></span>
+</p>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms_of_services/groundsphere.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

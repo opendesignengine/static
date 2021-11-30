@@ -1,0 +1,10 @@
+ID,Description,Sensor,Magnet,Distance,Duration,Cadence
+CHAR01,TR 08 characterization low rpm,TR 08,MAG.375,1.0,60,20
+CHAR02,TR 08 characterization mid rpm,TR 08,MAG.375,1.0,60,36
+CHAR03,TR 08 characterization hi rpm,TR 08,MAG.375,1.0,60,54
+CHAR04,TR 09 characterization low rpm,TR 09,MAG.375,1.0,60,20
+CHAR05,TR 09 characterization mid rpm,TR 09,MAG.375,1.0,60,36
+CHAR06,TR 09 characterization hi rpm,TR 09,MAG.375,1.0,60,54
+CHAR07,TR 10 characterization low rpm,TR 10,MAG.375,1.0,60,20
+CHAR08,TR 10 characterization mid rpm,TR 10,MAG.375,1.0,60,36
+CHAR09,TR 10 characterization hi rpm,TR 10,MAG.375,1.0,60,54

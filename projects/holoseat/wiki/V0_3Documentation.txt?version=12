@@ -1,0 +1,40 @@
+h1. V0.3.1 Documentation
+
+!https://opendesignengine.net/attachments/download/618!:http://holoseat.com !http://opendesignengine.net/dmsf_files/641?download=!:http://certificate.oshwa.org/certification-directory/
+
+h4. Agile Process Docs
+
+** 2016: "User Stories":https://docs.google.com/document/d/e/2PACX-1vSVLmaORZab4QV0ZSy5OUl6lSPx2lNc3gud5nB6WSxNrrxkMu7Kz5zObKeKnP8pw7eghYJY3h_xs99L/pub | "Sprints":https://docs.google.com/spreadsheets/d/e/2PACX-1vTnBFoFpZA4rAainOlzv4E7-PW3-BwjTg9SP0iXHz1XZUCjVF_4WYIWttJyHtO5EhO24pYazn8sL7Jh/pubhtml
+
+h4. Software
+
+* +Released Code+
+** "Firmware source code":https://opendesignengine.net/dmsf_files/624?download=738
+** "Desktop configuration app executable":http://opendesignengine.net/dmsf_files/623?download=
+* v0.3.1 Source Code Tag in SVN: "Web UI":https://opendesignengine.net/projects/holoseat/repository/show/tags/version-0.3.1 | "SVN":https://opendesignengine.net/svn/holoseat/tags/version-0.3.1
+
+h4. Instructions
+
+* "Operating Manual":https://opendesignengine.net/projects/holoseat/wiki/Operating_Manual?version=20
+* +Assembly Information+
+** "Bill of Materials":https://opendesignengine.net/projects/holoseat/wiki/BOM?version=9
+** "Assembly Instructions":https://opendesignengine.net/projects/holoseat/wiki/Assembly_Instructions?version=41
+** "Software Set Up":https://opendesignengine.net/projects/holoseat/wiki/Software_Set_Up?version=15
+
+h4. Design Data
+
+* "Block Diagram":https://opendesignengine.net/projects/holoseat/wiki/Block_Diagram?version=9
+* "Schematics and PCB Files":https://opendesignengine.net/projects/holoseat/wiki/Schematics_and_PCB_Files?version=6
+* "Project Software":https://opendesignengine.net/projects/holoseat/wiki/Software_Source_Code?version=6
+
+h4. Research
+
+* "General Resources":https://opendesignengine.net/projects/holoseat/wiki/Resources?version=47
+* +Technical Resources+
+** "Bluetooth":https://opendesignengine.net/projects/holoseat/wiki/Bluetooth?version=2
+** "NodeBots Resources":https://opendesignengine.net/projects/holoseat/wiki/NodeBots_Resources?version=2
+** "Raspbery Pi Resources":https://opendesignengine.net/projects/holoseat/wiki/Raspbery_Pi_Resources?version=4
+** "C.H.I.P. Resources":https://opendesignengine.net/projects/holoseat/wiki/CHIP_Resources?version=1
+* +Biz Resources+
+** "Marketing Resources":https://opendesignengine.net/projects/holoseat/wiki/Marketing_Resources?version=4
+** "Start Up Resources":https://opendesignengine.net/projects/holoseat/wiki/Start_Up_Resources?version=5

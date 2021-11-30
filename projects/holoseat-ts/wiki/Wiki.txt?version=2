@@ -1,0 +1,12 @@
+h1. Holoseat Test Stand
+
+The Holoseat Test Stand is a development and manufacturing resource for Model B's "Holoseat":http://holoseat.com.  Developers can use it to simulate user activities in predictable and repeatable testing.  And the manufacturing team can use the test stand to verify the key sub-systems (sensor, tone ring, and controller) are assembled correctly and work according to their specifications.
+
+Key resources for the test stand are:
+
+* This [[Wiki]]
+  Source for project documentation
+* The "File Repository":https://opendesignengine.net/dmsf/holoseat-ts
+  Source for design files (CAD/CAM, BoM, MBSE)
+* The "Source Code Repository":https://opendesignengine.net/projects/holoseat-ts/repository
+  Source for software files (firmware and apps)

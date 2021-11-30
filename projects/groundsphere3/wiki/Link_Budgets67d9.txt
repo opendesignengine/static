@@ -1,0 +1,24 @@
+h1. Link Budget References
+
+{{>toc}}
+
+h2. Background Material
+
+* "Link Budget Calculation":http://www.piscespacific.org/livesite/files/Link_Budget_Calculation.pdf
+* "Tutorial on Basic Link Budget Analysis":http://www.sss-mag.com/pdf/an9804.pdf
+
+h2. Example Calculations
+
+* "KickSat Ground Station Link Budget":https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx (MS Excel)
+* "Jan King's AMSAT link budget +extensive+":http://www.amsatuk.me.uk/iaru/AMSAT-IARU_Link_Model_Rev2.5.3.xls (MS Excel)
+
+h2. Video Tutorials
+
+These vidoes are proof of concept video tutorials, and will be replaced with a more polished version as time permits.
+* "Link Budgets Part 1, Intro to Satellite Link Budgets":https://youtu.be/WLhLYSvHmNY
+* "Link Budget part 2, Transmission Segment":https://youtu.be/x8Jsyc0CYLU
+* "Link Budget part 3, Trigonometry Refresher":https://youtu.be/pexhLdsp9J0
+* "Link Budget part 4, Propagation Loss":https://youtu.be/nFxdoXbmURw
+* "Link Budget part 5, Ground Segment":
+* "Link Budget part 6, Putting It All Together":
+* "Link Budget part 7, Software Solutions":

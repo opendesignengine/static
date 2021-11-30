@@ -1,0 +1,73 @@
+Index: holoseat-firmware.ino
+===================================================================
+--- holoseat-firmware.ino	(revision 112)
++++ holoseat-firmware.ino	(revision 113)
+@@ -54,6 +54,10 @@
+ unsigned int BaseTriggerCadence = 25;       // first interval for trigger cadence
+ unsigned int TriggerCadenceThreshold = 5;   // number of RPM above trigger cadence to step up
+ unsigned int CurrentTriggerCadence = BaseTriggerCadence;
++unsigned long SlowSingleStepTime = 50;      // duration of keyboad event for a single step
++unsigned long MediumSingleStepTime = 75;
++unsigned long FastSingleStepTime = 100;
++unsigned long CurrentSingleStepTime = SlowSingleStepTime;         
+ //unsigned int ForwardTriggerCadence = DefaultTriggerCadence;
+ //unsigned int BackwardTriggerCadence = DefaultTriggerCadence;
+ unsigned int LoggingEnabled = DefaultLoggingEnabled;
+@@ -75,8 +79,9 @@
+ // sensor data and functions
+ const int CadencePin = 3;                         // pin used to measure cadence
+ const int DirectionPin = 2;                       // pin to read direction
+-const int NumPoles = 12;                          // number of magnetic pole pairs on the tone ring
++const int NumPoles = 18;                          // number of magnetic pole pairs on the tone ring
+ volatile unsigned long LastStepTime;              // last time the step sensor was triggered
++volatile unsigned long LastWalkTime;              // last time walking was handled
+ 
+ // common function to attach/detach interrupts
+ void EnableSensors(unsigned int enable) {
+@@ -389,6 +394,30 @@
+   float deltaT = max(SensedDeltaT, localDeltaT)/1000; // in seconds
+   Cadence = round(60.0/deltaT/NumPoles);  // in RPM
+ 
++  if (Cadence <= 10)
++    CurrentSingleStepTime = SlowSingleStepTime;
++  else if (Cadence <= 50)
++    CurrentSingleStepTime = MediumSingleStepTime;
++  else
++    CurrentSingleStepTime = FastSingleStepTime;
++
++  if (StepTriggered) {
++    LastWalkTime = currentTime;
++    SelectKeyBasedOnDirection();
++  }
++    
++  boolean stillWalking = (currentTime - LastWalkTime) <= CurrentSingleStepTime;
++
++  // if we have not seen a step in time, trigger key release
++  if (!stillWalking) {
++    DesiredPressedKey = 0;
++    CurrentSingleStepTime = SlowSingleStepTime;
++  }
++
++  StepTriggered = false;
++  PressDesiredKey();
++
++/*
+   // handle single stepping: single keypress for each cadence event while cadence
+   // is below BaseTriggerCadence
+   if (Cadence < BaseTriggerCadence) {
+@@ -417,6 +446,7 @@
+   }
+ 
+   PressDesiredKey();
++*/
+   
+   // re-enbale the interrupts now that we are done
+   EnableSensors(true);
+@@ -460,6 +490,7 @@
+   WalkingForward = true;
+   SensedDeltaT = 5000;            // initialize sensed deltaT (and the value used to compute it, LastStepTime) to 5 seconds in the past
+   LastStepTime = millis() - 5000; // as above
++  LastWalkTime = LastStepTime;    // as above
+   CurrentPressedKey = 0;
+   DesiredPressedKey = 0;
+ }

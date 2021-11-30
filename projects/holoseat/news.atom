@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Holoseat: News</title>
+  <link rel="self" href="http://opendesignengine.net/projects/holoseat/news.atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/holoseat/news"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2018-06-03T00:02:43+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>PY18 Sprint 4 Stand Up 0</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/113"/>
+    <id>http://opendesignengine.net/news/113</id>
+    <updated>2018-06-03T00:02:43+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;strong&gt;J's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;n/a&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;Count all components and order additional materials if needed for 15 total units (sensor, tone ring)&lt;/li&gt;
+		&lt;li&gt;Coordinate with Syndcon chair&lt;/li&gt;
+		&lt;li&gt;Make template for stand up status update posts in Wordpress&lt;/li&gt;
+		&lt;li&gt;Confirm functionality for alternative exercise equipment (other bike)&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocks?
+	&lt;ul&gt;
+	&lt;li&gt;none&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Bryan's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;n/a&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;Count all components and order additional materials if needed for 15 total units (controller)&lt;/li&gt;
+		&lt;li&gt;Install Glue between Wordpress and social media (twitter/facebook)&lt;/li&gt;
+		&lt;li&gt;Verify wordpress Template plugin&lt;/li&gt;
+		&lt;li&gt;Confirm functionality for alternative exercise equipment (elliptical)&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocks?
+	&lt;ul&gt;
+	&lt;li&gt;none&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 4 Planning</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/112"/>
+    <id>http://opendesignengine.net/news/112</id>
+    <updated>2018-06-02T23:58:22+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We have been in Kanban mode working to wrap up development of the Alpha Holoseat units.  With SyndCon approaching, it is time to get back to running a sprint.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Duration:&lt;/strong&gt; 8 weeks&lt;br /&gt;&lt;strong&gt;Stand Ups:&lt;/strong&gt; Saturday Mornings&lt;br /&gt;&lt;strong&gt;Start:&lt;/strong&gt; Jun 3, 2018&lt;br /&gt;&lt;strong&gt;End:&lt;/strong&gt; Jul 29, 2018&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external"&gt;Backlog and Full Sprint Plan&lt;/a&gt; (see &lt;em&gt;Backlog&lt;/em&gt; and &lt;em&gt;SyndCon Task List&lt;/em&gt; tabs)&lt;/p&gt;
+
+
+	&lt;p&gt;We have some very specific tasks we need to get done before SyndCon, not all of which are currently in our backlog.  So, we are going to run this sprint from a dedicated task list shown below.&lt;/p&gt;
+
+
+	&lt;table&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;strong&gt;ID&lt;/strong&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;strong&gt;Task&lt;/strong&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;strong&gt;Responsible&lt;/strong&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;Install Glue between Wordpress and social media (twitter/facebook)&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;Verify wordpress Template plugin&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;Count all components and order additional materials if needed for 15 total units&lt;/td&gt;
+			&lt;td&gt;All&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;Coordinate with Syndcon chair&lt;/td&gt;
+			&lt;td&gt;J&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;5&lt;/td&gt;
+			&lt;td&gt;Make template for stand up status update posts in Wordpress&lt;/td&gt;
+			&lt;td&gt;J&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;Make Template for photo social media posts in Wordpress&lt;/td&gt;
+			&lt;td&gt;J&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;7&lt;/td&gt;
+			&lt;td&gt;Make template for re-share posts in Wordpress&lt;/td&gt;
+			&lt;td&gt;J&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;8&lt;/td&gt;
+			&lt;td&gt;Confirm functionality for alternative exercise equipment (other bike)&lt;/td&gt;
+			&lt;td&gt;J&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;9&lt;/td&gt;
+			&lt;td&gt;Confirm functionality for alternative exercise equipment (elliptical)&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;10&lt;/td&gt;
+			&lt;td&gt;Message testers to let them know we will have an updated set of terms to sign&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;11&lt;/td&gt;
+			&lt;td&gt;Message testers to let them know they will need to purchase their own equipment&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;Start using templates for stand ups and pics asap (back date posts for stand ups at start)&lt;/td&gt;
+			&lt;td&gt;All&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;13&lt;/td&gt;
+			&lt;td&gt;Bag controller parts for documentation assembly (including feather and its bits)&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;14&lt;/td&gt;
+			&lt;td&gt;Build 14 snap fit tone rings&lt;/td&gt;
+			&lt;td&gt;J&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;15&lt;/td&gt;
+			&lt;td&gt;Build 14 controller housings&lt;/td&gt;
+			&lt;td&gt;J&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;16&lt;/td&gt;
+			&lt;td&gt;Build 8 alpha units main systems for delivery&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;17&lt;/td&gt;
+			&lt;td&gt;Message testers to let them know we will be delivering at Syndcon&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;18&lt;/td&gt;
+			&lt;td&gt;Build 5 more sensors for use at Syndcon&lt;/td&gt;
+			&lt;td&gt;J&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;19&lt;/td&gt;
+			&lt;td&gt;Build 2 alpha units main systems for raffle&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;20&lt;/td&gt;
+			&lt;td&gt;Plan demo schedule&lt;/td&gt;
+			&lt;td&gt;All&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;21&lt;/td&gt;
+			&lt;td&gt;Find and pack all items for demos&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;22&lt;/td&gt;
+			&lt;td&gt;Build 3-4 (including ours) unit main systems for demos&lt;/td&gt;
+			&lt;td&gt;Bryan&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;Generate panel presentation&lt;/td&gt;
+			&lt;td&gt;All&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;24&lt;/td&gt;
+			&lt;td&gt;Generate main meeting presentation&lt;/td&gt;
+			&lt;td&gt;All&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;25&lt;/td&gt;
+			&lt;td&gt;Prep for shipment of alpha units to testers not at Syndcon&lt;/td&gt;
+			&lt;td&gt;All&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 2 Review and Retrospective</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/111"/>
+    <id>http://opendesignengine.net/news/111</id>
+    <updated>2018-03-15T23:44:18+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;strong&gt;Review&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;ins&gt;Claiming Done&lt;/ins&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;BIZ-01: Prep books for taxes&lt;/li&gt;
+		&lt;li&gt;BIZ-06: Meet with SBDC Innovation and Commercialization Assistance Program&lt;/li&gt;
+		&lt;li&gt;SME-08: Publish at least one blog post in Jan.&lt;/li&gt;
+		&lt;li&gt;V04-22: Load Adafruit wing design into CircuitMaker&lt;/li&gt;
+		&lt;li&gt;V04-23: Modify Adafruit Wing to handle the required components and have the necessary headers&lt;/li&gt;
+		&lt;li&gt;V04-25: Order initial test run of board for Wing&lt;/li&gt;
+		&lt;li&gt;V04-26: Assemble a test Wings to verify design (on proto-wing)&lt;/li&gt;
+		&lt;li&gt;V04-28: Design a housing in Fusion 360 for the sensor and TRRS jack (Sensor Housing)&lt;/li&gt;
+		&lt;li&gt;V04-58: Implement hardware versioning system that can be detected by Holoseat software&lt;/li&gt;
+		&lt;li&gt;V10-03: Research sensor mount adhesives&lt;/li&gt;
+		&lt;li&gt;V10-04: Test mount adhesive&lt;/li&gt;
+		&lt;li&gt;V10-05: Select mount adhesive&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;ins&gt;Not Claiming Done&lt;/ins&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;BIZ-02: Mid Year Planning - Review/Groom User Stories and Backlog*&lt;/li&gt;
+		&lt;li&gt;BIZ-05: Communication Plan*&lt;/li&gt;
+		&lt;li&gt;PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat*&lt;/li&gt;
+		&lt;li&gt;SME-09: Publish at least one blog post in Feb&lt;/li&gt;
+		&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping)&lt;/li&gt;
+		&lt;li&gt;V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step&lt;/li&gt;
+		&lt;li&gt;V04-57: Implement about screen to include versions, licensing, and other required information for all major elements of the Holoseat (SW,HW,FW,HSP,REST API)&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;ins&gt;Blocked&lt;/ins&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing&lt;/li&gt;
+		&lt;li&gt;BIZ-04: Work with legal on finalizing any updates to testing agreement&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Retrospective&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;ins&gt;What went well?&lt;/ins&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Sprint was going well (good pace and on target) until the last 3 weeks&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;ins&gt;What did not go well?&lt;/ins&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;The last 3 weeks things almost came to a grinding halt (external issues overcame both J and Bryan)&lt;/li&gt;
+		&lt;li&gt;Really concerned about all things communications (blog posts are still infrequent and we need to get the comms plan done!)&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;Note: we are very close to the SyndCon prep sprint&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;ins&gt;What can we do better?&lt;/ins&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Be ruthless about prioritizing tasks while we are ultra-bandwidth limited (highest priority is to ship the alphas)&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 2 Stand Up 8 (belated)</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/110"/>
+    <id>http://opendesignengine.net/news/110</id>
+    <updated>2018-03-10T17:13:28+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;strong&gt;J's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;Reviewed email to alpha testers&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;n/a&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocks?
+	&lt;ul&gt;
+	&lt;li&gt;none&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Bryan's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;Finish J's proto-wing board soldering and ship components to J&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - started work to publish updated logos, but keep getting distracted by external issues&lt;/li&gt;
+		&lt;li&gt;PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat - started the research, but want to consult with volunteer&lt;/li&gt;
+		&lt;li&gt;V04-25: Order initial test run of board for Wing - received PCBs!&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;n/a&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocks?
+	&lt;ul&gt;
+	&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - waiting on legal&lt;/li&gt;
+		&lt;li&gt;BIZ-04: Work with legal on finalizing any updates to testing agreement - waiting on legal&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 2 Stand Up 7</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/109"/>
+    <id>http://opendesignengine.net/news/109</id>
+    <updated>2018-02-24T15:36:33+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;strong&gt;J's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - started work on converting new tone ring to tool-free design including 2 iterations; confirmed the basic idea will work, but need a mechanical latching connection instead of magnetic latching to make it stay on axle&lt;/li&gt;
+		&lt;li&gt;V04-28: Design a housing in Fusion 360 for the sensor and TRRS jack (Sensor Housing) - verified sensor housing height is correct; just need to upload CAD files and this PBI will be done&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;SME-09: Publish at least one blog post in Feb - will get this blog post done&lt;/li&gt;
+		&lt;li&gt;Review email to alpha testers&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocked?
+	&lt;ul&gt;
+	&lt;li&gt;Not really, but about to be on travel for 7 days, so almost no capacity&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Bryan's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-23: Modify Adafruit Wing to handle the required components and have the necessary headers - &lt;/li&gt;
+		&lt;li&gt;V04-25: Order initial test run of board for Wing - done!&lt;/li&gt;
+		&lt;li&gt;V04-26: Assemble a test Wings to verify design (on proto-wing) - from a design standpoint, this is done; Bryan to wrap up soldering headers on J's board for dev purposes&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - got response back&lt;/li&gt;
+		&lt;li&gt;BIZ-04: Work with legal on finalizing any updates to testing agreement - got response back&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;Finish J's proto-wing board soldering and ship components to J&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - publish updated logos&lt;/li&gt;
+		&lt;li&gt;PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat - start researching surface mount shops&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocked?
+	&lt;ul&gt;
+	&lt;li&gt;none&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 2 Stand Up 6</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/108"/>
+    <id>http://opendesignengine.net/news/108</id>
+    <updated>2018-02-17T16:24:39+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;strong&gt;J's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V10-04: Test mount adhesive - printed a test article of the sensor mount, attached to a non-critical location on bike, allowed it to cure, and stress tested the bond; complete success!!&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - start work on converting new tone ring to tool-free design&lt;/li&gt;
+		&lt;li&gt;SME-09: Publish at least one blog post in Feb - finish draft blog post&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocked?
+	&lt;ul&gt;
+	&lt;li&gt;Recovering from being sick, so less blocked than have very little capacity&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Bryan's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-58: Implement hardware versioning system that can be detected by Holoseat software - test done and passed!&lt;/li&gt;
+		&lt;li&gt;V04-23: Modify Adafruit Wing to handle the required components and have the necessary headers - completed layout, need review then can claim done&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - got corrected image files of updated logo&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - follow up with legal; publish updated logos&lt;/li&gt;
+		&lt;li&gt;BIZ-04: Work with legal on finalizing any updates to testing agreement - follow up with legal&lt;/li&gt;
+		&lt;li&gt;V04-25: Order initial test run of board for Wing - place order&lt;/li&gt;
+		&lt;li&gt;V04-26: Assemble a test Wings to verify design (on proto-wing) - build J's wing and sent out to J&lt;/li&gt;
+		&lt;li&gt;PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat - start researching surface mount shops&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocked?
+	&lt;ul&gt;
+	&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - waiting on legal&lt;/li&gt;
+		&lt;li&gt;BIZ-04: Work with legal on finalizing any updates to testing agreement - waiting on legal&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;br /&gt;Completing V10-04 also let us knock out two more PBIs&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;V10-03: Research sensor mount adhesives&lt;/li&gt;
+		&lt;li&gt;V10-05: Select mount adhesive&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 2 Stand Up 5</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/107"/>
+    <id>http://opendesignengine.net/news/107</id>
+    <updated>2018-02-09T01:15:02+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;strong&gt;J's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - got magnets, printed full disc tone ring, assembled test tone ring, and tested it; got clear signals to sensor!&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - start work on converting new tone ring to tool-free design&lt;/li&gt;
+		&lt;li&gt;SME-09: Publish at least one blog post in Feb - finish draft blog post&lt;/li&gt;
+		&lt;li&gt;BIZ-05: Communication plan - read "defining customer" and "marketing plan for makers" blog posts&lt;/li&gt;
+		&lt;li&gt;V10-04: Test mount adhesive - will print a test article of the sensor mount, attach to a non-critical location on bike, allow to cure, and then stress test the bond&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocked?
+	&lt;ul&gt;
+	&lt;li&gt;none, but at reduced capacity next week&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Bryan's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-22: Load Adafruit wing design into CircuitMaker - done&lt;/li&gt;
+		&lt;li&gt;V04-23: Modify Adafruit Wing to handle the required components and have the necessary headers - very close to having this done (down to just a few more connections&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;V04-23: Modify Adafruit Wing to handle the required components and have the necessary headers - will complete v1 Rev 2 wing design file in CircuitMaker&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - follow up with legal; get corrected PNGs of updated logo&lt;/li&gt;
+		&lt;li&gt;BIZ-04: Work with legal on finalizing any updates to testing agreement - follow up with legal&lt;/li&gt;
+		&lt;li&gt;V04-58: Implement hardware versioning system that can be detected by Holoseat software - will wrap up by running ohm test sketch on test wing&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocked?
+	&lt;ul&gt;
+	&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - waiting on legal&lt;/li&gt;
+		&lt;li&gt;BIZ-04: Work with legal on finalizing any updates to testing agreement - waiting on legal&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 2 Stand Up 4</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/106"/>
+    <id>http://opendesignengine.net/news/106</id>
+    <updated>2018-02-03T15:22:43+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;strong&gt;J's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - ordered and received new magnets for testing&lt;/li&gt;
+		&lt;li&gt;V04-58: Implement hardware versioning system that can be detected by Holoseat software - &lt;a href="https://opendesignengine.net/boards/36/topics/1307" class="external"&gt;sorted out wiki updates&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;SME-09: Publish at least one blog post in Feb - wrote outline and intro (needed access to ODE to do any other work, but was on a plane)&lt;/li&gt;
+		&lt;li&gt;V04-26: Assemble a test Wings to verify design (on proto-wing) - sent Bryan ohm arduino sketch to verify hw version circuit&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - work on test assemblies with new magnets and CAD model&lt;/li&gt;
+		&lt;li&gt;SME-09: Publish at least one blog post in Feb - keep working on draft post&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocked?
+	&lt;ul&gt;
+	&lt;li&gt;none&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Bryan's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-23: Modify Adafruit Wing to handle the required components and have the necessary headers - had some issues with CircuitMaker, so did layout on printed hardcopy; hand layout is done; did layout with an eye toward next revision (SMT version)&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - got updated logo images&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;V04-23: Modify Adafruit Wing to handle the required components and have the necessary headers - put the layout into CircuitMaker&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - update production logos with new images&lt;/li&gt;
+		&lt;li&gt;Working on draft message to alpha testers about status of hardware&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocked?
+	&lt;ul&gt;
+	&lt;li&gt;Issues with importing files into CircuitMaker&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 2 Stand Up 3</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/105"/>
+    <id>http://opendesignengine.net/news/105</id>
+    <updated>2018-01-27T15:51:44+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;
+	&lt;li&gt;J's Report*&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;SME-08: Publish at least one blog post in Jan. - published this post&lt;/li&gt;
+		&lt;li&gt;V04-28: Design a housing in Fusion 360 for the sensor and TRRS jack (Sensor Housing) - &lt;a href="https://opendesignengine.net/boards/36/topics/1300?r=1304#message-1304" class="external"&gt;All but done&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - discovered issue with magnet strength while testing sensor inside sensor housing; began redesign of tone ring for stronger magnets and sourced new magnets&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - order small batch of new magnets for R&amp;#38;D of tone ring&lt;/li&gt;
+		&lt;li&gt;V04-58: Implement hardware versioning system that can be detected by Holoseat software - start reorganizing wiki pages around about page/versioning plan&lt;/li&gt;
+		&lt;li&gt;SME-09: Publish at least one blog post in Feb - start drafting last post in current series&lt;/li&gt;
+		&lt;li&gt;V04-26: Assemble a test Wings to verify design (on proto-wing) - send Bryan ohm arduino sketch to verify hw version circuit&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocks?
+	&lt;ul&gt;
+	&lt;li&gt;none, but at reduced capacity due to travel (need to reschedule stand up)&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Bryan's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-26: Assemble a test Wings to verify design (on proto-wing) - fixed TRRS jack wiring and added version circuit on board 1 (board 1 is complete)&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - met with J, gave feedback to graphic artist about image fixes (waiting for updates), gave go ahead to legal&lt;/li&gt;
+		&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - dropped due to findings above&lt;/li&gt;
+		&lt;li&gt;BIZ-06: Meet with SBDC Innovation and Commercialization Assistance Program - done&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;V04-23: Modify Adafruit Wing to handle the required components and have the necessary headers - research board layout and start layout work&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocks?
+	&lt;ul&gt;
+	&lt;li&gt;none&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>PY18 Sprint 2 Stand Up 2</title>
+    <link rel="alternate" href="http://opendesignengine.net/news/104"/>
+    <id>http://opendesignengine.net/news/104</id>
+    <updated>2018-01-18T22:36:50+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;strong&gt;J's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Note: Over estimated capacity this week (needed recovery time from travel), so only got about half of committed work done.&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - sent Bryan a set of tone ring parts&lt;/li&gt;
+		&lt;li&gt;SME-08: Publish at least one blog post in Jan. - got about half of draft post moved over to wordpress (needs way more editing than I realized)&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;SME-08: Publish at least one blog post in Jan. - will finish and publish this post&lt;/li&gt;
+		&lt;li&gt;V04-28: Design a housing in Fusion 360 for the sensor and TRRS jack (Sensor Housing) - start working on the CAD model&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocks
+	&lt;ul&gt;
+	&lt;li&gt;none&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Bryan's Report&lt;/strong&gt;&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Did
+	&lt;ul&gt;
+	&lt;li&gt;V04-26: Assemble a test Wings to verify design (on proto-wing) - Built Wing other than version circuit which required parts that had not arrived&lt;/li&gt;
+		&lt;li&gt;BIZ-01: Prep books for taxes - done&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - met with legal&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Will do
+	&lt;ul&gt;
+	&lt;li&gt;V04-26: Assemble a test Wings to verify design (on proto-wing) - Add version circuit to first wing, work out layout to improve second wing, start building second wing&lt;/li&gt;
+		&lt;li&gt;BIZ-03: Work with Legal on Trademark Filing - Work w/ J to decide what we want to do trademark wise to push that forward; Get circle R changed to TM on logos&lt;/li&gt;
+		&lt;li&gt;Ship Parts to J&lt;/li&gt;
+		&lt;li&gt;V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - Put new tone ring together&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;Blocks
+	&lt;ul&gt;
+	&lt;li&gt;none&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+</feed>

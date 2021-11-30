@@ -1,0 +1,85 @@
+h1. Shepard Test Stand Preliminary Design v1.0
+
+This document has been relinked to the Preliminary Design document "here":https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design as part of our versioning system update.
+
+{{toc}}
+
+h3. Introduction
+
+The preliminary design discussion is broken down into two parts in the forums.
+
+# "Mechanical systems":https://opendesignengine.net/boards/4/topics/158
+# "Data Acquisition (DAQ) Systems":https://opendesignengine.net/boards/4/topics/159
+
+Most of this preliminary design work was done via Google+ Hangout. The meeting minutes from those hangouts will be distilled down into a form suitable for this document, but in the meantime you can find links to the raw meeting minutes below. You will most likely need to request permission to view the document.
+
+# "Mechanical Hangout Minutes":https://docs.google.com/document/d/1M5qMFE-SNDYR_yHCI5XGnKLK1Xq17f7NVWNOhb3XkyU/edit
+# "Data Acquisition Hangout Minutes":https://docs.google.com/document/d/1c4HOtpcp2yDxln5aTmMffk5PxDC5d3YM5UA53KJLoi0/edit
+
+_Note: Need to get all of the minutes linked here_
+
+h3. Preliminary Mechanical Design
+
+* *STSPM 1.1* We're going to attempt to use "FreeCAD":http://sourceforge.net/apps/mediawiki/free-cad/index.php?title=Main_Page as the base CAD program for this project.
+** *STSPM 1.1.1* Files will be stored on "Open Design Engine":opendesignengine.net in the default FreeCAD file format.
+** *STSPM 1.1.2* For milestones STL versions will be saved for models, and DXF and PDF formats will be saved for draft files.
+* *STSPM 2.1* The over all design will be composed of three principle components 
+** *STSPM 2.1.1* The body will hold the other system elements (both mechanical and DAQ related) with sufficient weight to prevent movement
+** *STSPM 2.1.2* The rail system will limit the motor's movement to the x-axis
+** *STSPM 2.1.3* The motor mount will connect the motor under test to the rail system 
+* *STSPM 2.2* Concepts considered for the body design
+** *STSPM 2.2.1* "Integrated body/rail system":https://lh5.googleusercontent.com/-7g_Oh9iY94E/T_KiaNjAzXI/AAAAAAAABp8/8_6TBhH77Og/s721/12+-+1 similar to "RepRap 3D Printer":http://reprap.org/wiki/File:Plumb-1.jpg
+** *STSPM 2.2.2* "Open Box":https://lh6.googleusercontent.com/-EL0FCBNC7TU/T_KiaPZghdI/AAAAAAAABqA/IPtEM64lX5E/s801/12+-+2 design
+** *STSPM 2.2.3* Back plate and beam(s)
+* *STSPM 2.3* Concepts considered for the rail system design
+** *STSPM 2.3.1* Smooth rods and linear bearings (number of rods depends on the body design)
+** *STSPM 2.3.2* Ball bearing drawer guide
+* *STSPM 2.4* Concepts considered for the motor mount design
+** *STSPM 2.4.1* Estes motor mount placed in a rocket body tube
+** *STSPM 2.4.2* An aluminum tube
+** *STSPM 2.4.3* Estes motor mount with a plumbing t-connector on the back to route the ejection charge away from the force sensor
+* *STSPM 2.4* Some sort of shielding such as chicken wire or plexi-glass may be used to protect observers from runaway rockets.
+* *STSPM 2.5* The thermocouple will be attached to the motor casing with Kapton tape.
+** *STSPM 2.5.1* The thermocouple leads will be routed away from the motor exhaust and in such a way that it won't interfere with the movement of the motor mount carriage.
+* *STSPM 2.6* A Mount will be created for to attach the selected force sensor to the body such that it will interface with the motor mount
+* *STSPM 2.7* Selected design concept: back plate and beam body (covering a concrete block for added weight), ball bearing drawer guide rail system, and Estes motor mount with a plumbing t-connector
+
+*Preliminary Mechanical Cost Estimates (For One-Off Quantities)*
+|_.Item |_.Cost (Shipping to Midwest U.S.)|_.Approx Total |_.Link |
+| 8' 2x10 pine board | $7.75 | $7.75 |  |
+| 8' 2x4 pine board | $2.50 | $2.50 |  |
+| 4"x8"x16" solid concrete block | $1.50 | $1.50 |  |
+| Small Ball Bearing Drawer Guide  | $6.00 | $6.00 |  |
+| Pulley | $3.00 | $3.00 |  |
+| Estes D/E Motor Mount | $9.00 | $9.00 | http://bit.ly/Rrn330 |
+| Estes Motor Adapters | $6.00 | $6.00 | http://bit.ly/MYMnNg |
+| Copper T-Fitting | $3.00 | $3.00 |  |
+| High Heat Spray Primer | $8.00 | $8.00 |  |
+| High Heat Spray Paint | $5.00 | $5.00 |  |
+| Misc Hardware | $5.00 | $5.00 |  |
+| *Total*| | $56.75 | |
+
+_Note: Need to address shielding in the cost table above._
+
+h3. Preliminary Data Acquisition Design
+
+* *STSPD 1.1* An "Arduino Uno":http://www.arduino.cc/ will be used as the data collection platform which includes the ADC interface with the load cell and thermocouple(s).
+* *STSPD 1.2* A "Force Sensing Resistor":http://www.trossenrobotics.com/c/robot-force-sensor-fsr.aspx (FSR) will be used for the load cell. We will need to watch for hysteresis issues with this type of load sensor.
+** *STSPD 1.2.1* A "unity gain amplifier":http://banananan.wordpress.com/2012/01/12/pressure-sensor-arduino-processing-signal-analysis/ will be used to obtain measurable output from this sensor.
+* *STSPD 1.3* A "type K glass braid insulated thermocouple":http://adafruit.com/products/270 will be used to measure the casing temperature of the motor.
+** *STSPD 1.3.1* An Adafruit "thermocouple amplifier":http://adafruit.com/products/269 will be used to condition the thermocouple signal for the Arduino's analog inputs. This requires SPI communication with the Arduino.
+* *STSPD 1.4* The data will that is recorded by the Arduino will be streamed over the USB connection unless it is found that is not fast enough.
+** *STSPD 1.4.1* The data format will consist of a data point coupled with a simple time stamp.
+** *STSPD 1.4.2* Data processing will be handled by the computer. This will include the conversion from voltage to force due to the logarithmic nature of the force sensing resistor.
+* *STSPD 1.5* The Wiring programming language will be used to program the Arduino, and Processing will be used for any computer-side code.
+
+*Preliminary DAQ Cost Estimates (For One-Off Quantities)*
+|_.Item |_.Cost (Shipping to Midwest U.S.)|_.Approx Total |_.Link |
+| Arduino Uno R3 | $29.95 + shipping | $35 | http://bit.ly/N5kizl |
+| 1.5 Inch Square FSR | $7.95 + shipping | $16 | http://bit.ly/Pd3ztz |
+| TLV2374 Op Amp | $1.71 + shipping | $8 | http://bit.ly/OcVA12 | 
+| 560 Ohm Resistor x 2 | $0.20 (combined w/ shipping above) | $0.20 | http://bit.ly/M3duBJ |
+| Type-K Glass Braid Insulated Thermocouple | $10.00 + shipping | $13.87 | http://bit.ly/NPRosE |
+| Adafruit Thermocouple Amplifier | $17.50 + shipping | $21.50 | http://bit.ly/OqVc2A |
+| Misc (Wire, etc) | | $5.00 | |
+| *Total*| | $99.57 | |

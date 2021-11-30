@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Some observations on process and the Ground Sphere prototypes - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/groundsphere%3Fjump=boards.html" class="boards selected">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/groundsphere%3Fjump=boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/groundsphere/boards/39">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-739-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Some observations on process and the Ground Sphere prototypes</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere/activity%3Ffrom=2014-01-04.html" title="01/04/2014 05:04 pm">almost 9 years</a> ago</span></p>
+<div class="wiki">
+<a name="Intro"></a>
+<h3 >Intro<a href="739.html#Intro" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>So, a lot has happened in <strong>Ground Sphere</strong> land the last couple of weeks.  And I want to take a moment to reflect on things and discuss how we should be moving forward.  So, let's start with the good.</p>
+
+
+	<ul>
+	<li>Prototype 1 completed</li>
+		<li>Prototype 1 passed smoke tests at Aaron's lab</li>
+		<li>Prototype 1 shipped to Scott for further testing using SkyCube twin as source radio</li>
+		<li>Tim secured permission and the required data to test from Orbit reception using <a href="http://space.skyrocket.de/doc_sdat/aerocube-4.htm" class="external">AeroCube 4C</a></li>
+		<li>Aaron has developed a far lower cost design for the antenna structure that is also easier to assemble</li>
+	</ul>
+
+
+	<p>Let's next look at the bad.</p>
+
+
+	<ul>
+	<li>Several bits of less than stellar news from <a href="https://opendesignengine.net/news/54" class="external">testing</a>
+	<ul>
+	<li>Failed to acquire signal from AeroCube 4C</li>
+		<li>Preamp power connection broke during transit</li>
+	</ul>
+	</li>
+		<li>Testing is falling behind schedule</li>
+		<li>Prototype 1's documentation is incomplete, making it difficult to track changes in the design and to evaluate future designs vs Prototype 1</li>
+	</ul>
+
+
+	<p>Finally, there are some things which I don't think fall into either category, but that everyone should know are going on</p>
+
+
+	<ul>
+	<li>Scott continues to work on improving SeeDeR</li>
+		<li>Jeremy and J have been discussing whether SeeDeR can be enhanced to control the SDR dongle's built-in amplifier and if so, whether that amplifier could replace the separate pre-amp (this was in fact much of the discussion at the <a href="https://docs.google.com/document/d/13hB21tjO-JqPDoh6X-2CckJtldGc1gEKE8UBYR0IBxk/pub" class="external">Jan 2 #EngineerSpeak Hangout</a></li>
+		<li>Tim has expressed very reasonable concerns about the suitability of the current antenna design for receiving signals from orbit (see quote from email below)</li>
+	</ul>
+
+
+	<p>Part of email from Tim about his concerns regarding the antenna selection</p>
+
+
+<blockquote>
+
+	<p>My gut feeling is that the antenna may not be sufficient.  I'm not an RF guy, and I have zero expertise in antenna design.  But all the CubeSat ground antennas I've seen are long yagis, several meters in length, or big dishes a few meters across, attached to powerful rotors that track the satellite across the sky.  (The NPS antennas as like this.)  I've never seen anything like the GroundSphere design working at orbital range, so I'm wondering about the underlying feasibility of this approach.  Why are we convinced that the GS design actually has sufficient gain/directionality to distinguish background from foreground sources?  It's omnidirectional, right?  And it's physically the same size as rubber-ducky antennas that we find on our home routers or 900 MHz cordless phone bases.  They're designed to work at ranges of a few hundred meters, at most.  Why are we convinced that something this small has enough gain to work at a range of hundreds or thousands of kilometers?  If it were this easy, why wouldn't everyone do it this way?</p>
+
+
+	<p>Anyhow ... all is not lost.  The preamp + SDR are probably valid - more than one group are using (or planning to use) them with CubeSats, and they can't all be wrong.  My thinking is that if we re-do the test, we keep that part of the kit, but substitute a more directional Yagi antenna with higher gain.</p>
+
+
+</blockquote>
+
+	<a name="My-thoughts-on-the-items-above"></a>
+<h3 >My thoughts on the items above<a href="739.html#My-thoughts-on-the-items-above" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>So, like I said in the beginning of this post, there are several things going on here.  I want to reflect on them one at a time.</p>
+
+
+	<ol>
+	<li>Testing - I am going to put my Systems Engineering hat on and say that this is just something we have to do and I feel we need to do it by the book.  According to an email from Tim, we will have another opportunity to test from orbit during the 3rd week of January.  I think we need to focus a significant part of our efforts on getting the lab and field tests done by this time so we can have a project team meeting to make a go/no-go call on conducting the from orbit test with the current antenna based on other test results.  Further, Tim has expressed a desire to test a directional <a href="http://www.streakwave.com/itemdesc.asp?ic=YA9-13" class="external">yagi style</a> antenna.  Scott recommended, and I agree (assuming the current antenna passes lab and field tests), that we do a side-by-side test with both the yagi and the <strong>Ground Sphere</strong> antennas to compare operation and function.</li>
+		<li>Built-in amplifier - In parallel to testing Prototype 1, I would like to see Jeremy and I continue our work to make the built-in amplifier available for use from SeeDeR.  If we are successful, I think we should then repeat the lab tests (and preferably the field tests) with the built-in amplifier in place of the separate pre-amp.  It would be great to be able to eliminate the pre-amp (it is itself a costly part, and it needs a separate power supply).</li>
+		<li>Documentation - There are some internal discussions about documentation going on over at Mach 30 that are of a larger scope than this project.  But, while we are working on tests, I strongly urge us to take the time to document Prototype 1 to the point that someone could replicate it (basically, get our documentation in line with the production of the Prototype).  At a minimum, I believe this means completing a BoM and assembly instructions.  Jeremy/Greg, am I missing anything from a minimum documentation point of view?</li>
+		<li>Addressing the antenna selection - Tim, I completely understand your concern about the antenna.  And, I agree we should be looking at alternatives.  But, I am not ready to make a commitment to an alternative design.  The value of the omin-directional antenna for casual users is just too high and so far I do not believe our limited testing can lead to any conclusions.  Also, just to note, the antenna design for <strong>Ground Sphere</strong> does have a orbital signal reception heritage (what I am not sure about is if it does for CubeSats with their lower power transmissions).  Take a look <a href="http://on6wg.pagesperso-orange.fr/Doc/Antenne%20Eggbeater-Engl-Part1-Full.pdf" class="external">here</a> for details about the antenna.  But, aside from our testing plan is there anything else we can do to help us make a decision about the antenna selection?  I believe there is.
+	<ol>
+	<li>Reassemble GS-001 prototypes 1 and 2 and repeat testing of signal acquisition from orbit of 430+/- MHz signals with and without amplification</li>
+		<li>Get a neutral third party to evaluate our design and analysis for <strong>Ground Sphere</strong> (Jeremy and I may know someone who could do this)</li>
+	</ol></li>
+	</ol>
+
+
+	<a name="Moving-forward"></a>
+<h3 >Moving forward<a href="739.html#Moving-forward" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>So, we are still very far behind schedule, and we are not catching up.  This is crunch time for <strong>Ground Sphere</strong> and I would like to propose we take actions which will help us keep from slipping even further behind.  Starting this week, I would like to institute twice weekly "tag-up" hangouts on Google+ with Jeremy, Aaron, Scott, and myself.  These will be for the express purpose of reporting on results from action items and establishing new action items.  Design reviews and decisions will continue to happen in other forums.  I believe these meetings should take place on Mon and Fri to establish a rhythm of working during the week and reporting followed by working over the weekend and reporting.  The goal of our action items should be to address the list of concerns and needs (hopefully mostly captured above) in time for the next from orbit test.</p>
+
+
+	<p>Finally, I want to go on record that I think it is very unlikely we will be in a position to ship hardware in mid-February.  There is just too much to do between now and then that depends on the results of testing and design reviews.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (1)</h3>
+
+  <div class="message reply" id="message-740">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="739%3Fr=740.html#message-740">RE: Some observations on process and the Ground Sphere prototypes</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/groundsphere/activity%3Ffrom=2014-01-05.html" title="01/05/2014 10:46 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, I missed something in my round up above (which Jeremy had told me to look for, but I still managed to miss).  Scott's been very busy with <a href="http://opendesignengine.net/dmsf_files/419?download=" class="external">SeeDeR enhancements</a>, including adding full support for for controlling the built-in amp.  I just downloaded the latest build and ran a quick smoke test, and was able to see a significant improvement in signal strength using the built-in amp.</p>
+
+
+	<p>While listening to the Dayton area weather station at 162.475 MHz, without the built-in amp my signal strength is about -60 dB and I can barely make out the weather report.  With the gain set to 50 dB, my signal strength is about -9 dB and I can clearly hear the weather report.  That's the good news.  The less good news is the noise floor rose from about -75 dB to about -40 dB.</p>
+
+
+	<p>Still, this crosses item 2 on my list above off the list.  Love to see that!!!  Now to get on with the other 3 items.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-1/1)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/739">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

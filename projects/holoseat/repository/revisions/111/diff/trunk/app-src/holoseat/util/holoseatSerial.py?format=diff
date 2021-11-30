@@ -1,0 +1,33 @@
+Index: holoseatSerial.py
+===================================================================
+--- holoseatSerial.py	(revision 110)
++++ holoseatSerial.py	(revision 111)
+@@ -1,8 +1,8 @@
+-from holoseat.util import restserial
++from holoseat.util import jsonserial
+ import serial
+ import json
+ 
+-class holoseatSerialDevice(restserial.RestSerialDevice):
++class holoseatSerialDevice(jsonserial.QueuedJsonSerialDevice):
+     def __init__(self):
+         super().__init__()
+         self.device.baudrate = 115200
+@@ -11,7 +11,7 @@
+         self.device.stopbits = serial.STOPBITS_ONE
+         self.device.timeout = 5 # 5 second timeout for comms with Holoseat
+ 
+-    def checkDeviceId(self, vid, pid):
++    def _checkDeviceId(self, vid, pid):
+         # check for Alpha Controller (aka - Adafruit Feather 324u)
+         if (vid == '239A' and pid == '800C'):
+             return { 'expectedHwVer' : ['v0.4'],
+@@ -25,7 +25,7 @@
+         # no valid device, return None
+         return None
+ 
+-    def checkDeviceInfo(self, devicePortInfo):
++    def _checkDeviceInfo(self, devicePortInfo):
+         # get device name
+         deviceResults = json.loads(self.execCommand({"uri":"/main/devicename","verb":"GET"}))
+ 

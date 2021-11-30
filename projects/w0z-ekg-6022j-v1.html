@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Laboratory EKG Pre-Amplifier - Overview - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+<link href="w0z-ekg-6022j-v1/activity.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+</head>
+<body class="controller-projects action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/w0z-ekg-6022j-v1.html" method="get">
+        
+        <a href="../search/index/w0z-ekg-6022j-v1.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Laboratory EKG Pre-Amplifier</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="w0z-ekg-6022j-v1.html" class="overview selected">Overview</a></li>
+<li><a href="w0z-ekg-6022j-v1/activity.html" class="activity">Activity</a></li>
+<li><a href="w0z-ekg-6022j-v1/issues.html" class="issues">Issues</a></li>
+<li><a href="w0z-ekg-6022j-v1/news.html" class="news">News</a></li>
+<li><a href="w0z-ekg-6022j-v1/documents.html" class="documents">Documents</a></li>
+<li><a href="w0z-ekg-6022j-v1/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="w0z-ekg-6022j-v1/files.html" class="files">Files</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    
+    
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+	
+</div>
+
+<h2>Overview</h2>
+	
+<div class="splitcontentleft">
+	<div class="wiki">
+		<p>This project describes an analog laboratory EKG pre-amplifier for a chart recorder. This pre-amp can also be used to visualize EKGs on an oscilloscope.</p>
+
+
+	<p>This project was based off of a laboratory amplifier for an electrophysiology course. For background information on basic cardio-electrophysiology, check out <a href="http://ocw.mit.edu/courses/health-sciences-and-technology/hst-542j-quantitative-physiology-organ-transport-systems-spring-2004/index.htm" class="external">Course 6.022J on MIT OpenCourseWare.</a></p>
+
+
+	<p>The EKG pre-amplifier unit consists of one differential amplifier (Gain = 1000) and three single-ended amplifiers with adjustable offset (Gain = 10). It is battery powered with an on/off switch and power supply indicator LEDs. The input connectors are binding posts: the intent is that electrode leads for the measurement are connected to the inputs (V+, V-, V_REF) and DC_1, DC_2, DC_3. The output connectors are BNCs. The offset voltages for the three DC/single-ended amplifiers are independently adjustable (rail-to-rail) via three potentiometers.</p>
+
+
+	<p>If you're looking to explore basic EKG and issues of signal offset, this is a good circuit to start with.</p>
+
+
+	<a name="Where-Do-I-Start"></a>
+<h1 >Where Do I Start?<a href="w0z-ekg-6022j-v1.html#Where-Do-I-Start" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>For a description of how the circuit works, go over to the <strong><ins>Wiki</ins></strong> tab.</p>
+
+
+	<p>To download all of the <em><strong>Design Files</strong></em>, and <strong><em>Engineering Files</em></strong> go over to the <strong><ins>Documents</ins></strong> tab.</p>
+
+
+	<p>If you'd like to see the list of things that still need work on this project, look at the <strong><ins>Issues</ins></strong> tab.</p>
+
+
+	<p>If you want to audit the activity on this project (put on your project management hat, because this action item is open) - go to the <strong><ins>Activity</ins></strong> tab.</p>
+
+
+	<p>Enjoy!</p>
+
+
+	<p>--w0z</p>
+
+
+	<p><img src="https://opendesignengine.net/attachments/download/375/assembly-milestone-output1.jpg" alt="" /></p>
+	</div>	
+	<ul>
+	
+  
+	
+	</ul>	
+
+  
+  <div class="issues box">
+    <h3>Issue tracking</h3>
+    <ul>
+    
+      <li><a href="w0z-ekg-6022j-v1/issues%3Fset_filter=1&amp;tracker_id=1.html">Bug</a>:
+					1 open / 1
+			</li>
+    
+      <li><a href="w0z-ekg-6022j-v1/issues%3Fset_filter=1&amp;tracker_id=2.html">Feature</a>:
+					0 open / 0
+			</li>
+    
+      <li><a href="w0z-ekg-6022j-v1/issues%3Fset_filter=1&amp;tracker_id=4.html">Milestone</a>:
+					2 open / 3
+			</li>
+    
+    </ul>
+    <p>
+    	<a href="w0z-ekg-6022j-v1/issues%3Fset_filter=1.html">View all issues</a>
+	    
+			
+		</p>
+  </div>
+  
+  
+</div>
+
+<div class="splitcontentright">
+    
+	<div class="members box">
+		<h3>Members</h3>
+		<p>
+		Manager: <a href="../users/140.html" class="icon icon-contributor-license">Amanda Wozniak</a><br />
+		</p>
+    <p>
+      Terms of Service Signers: <a href="../users/140.html" class="icon icon-contributor-license">Amanda Wozniak</a>
+    </p>
+	</div>
+	
+
+
+  
+  <div class="news box">
+  <h3>Licensing</h3>
+  <ul>
+    
+
+    
+    
+    
+      <li>Documentation:
+        
+          <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike</a>
+        
+      </li>
+    
+  </ul>
+</div>
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/w0z-ekg-6022j-v1.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

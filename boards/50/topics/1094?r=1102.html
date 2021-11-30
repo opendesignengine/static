@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Yavin Thruster - CAD Unit Tests - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/yavin-thruster.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/yavin-thruster.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Yavin Thruster</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/yavin-thruster.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/yavin-thruster/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/yavin-thruster/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/yavin-thruster/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/yavin-thruster.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/yavin-thruster/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/yavin-thruster/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/yavin-thruster/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/yavin-thruster/boards.html">Forums</a> » <a href="../../../projects/yavin-thruster/boards/50.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-1094-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>CAD Unit Tests</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-12.html" title="11/12/2015 10:24 pm">almost 7 years</a> ago</span></p>
+<div class="wiki">
+<p>I changed the CAD unit test so that it's skipped if the tests are being run with a version of Python newer than 2.7.x.</p>
+
+
+	<p><a class="external" href="https://opendesignengine.net/projects/yavin-thruster/repository/entry/trunk/tests/chamber/test_cad.py">https://opendesignengine.net/projects/yavin-thruster/repository/entry/trunk/tests/chamber/test_cad.py</a></p>
+
+
+	<p>I'll clean that code up a little and then flesh out the actual tests of the geometry next week.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (10)</h3>
+
+  <div class="message reply" id="message-1095">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1095.html#message-1095">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-13.html" title="11/13/2015 03:13 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I started changing the CAD unit tests to be dataset driven like the math tests are. However, this highlighted an issue that we need to talk through.</p>
+
+
+	<p>The CAD tests are complaining that I'm using different unit registries, and I noticed that the math test has the same issue although no conversions are being done so the error isn't raised. I think I remember J saying that it's a requirement of Pint that you use the same units registry all the way through your code.</p>
+
+
+	<p>So, I'm thinking that we need to adjust our code so that a single Pint units registry can be passed around. Any classes/functions that need to work with units would need to have a units registry passed in. For the unit tests, that registry could potentially live in the dataset class.</p>
+
+
+	<p>Thoughts?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1096">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1096.html#message-1096">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-13.html" title="11/13/2015 05:31 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>We can just create a singleton wrapper around the units registry. That way all we'd have to do is change our import and maybe the call to load it, and not have to pass it around.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1097">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1097.html#message-1097">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-13.html" title="11/13/2015 05:44 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Do you want to do that, or should I?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1101">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1101.html#message-1101">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-18.html" title="11/18/2015 03:28 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I wanted to do a sanity check of the test dataset chambers before I started adding the automated checks. All of them are a variation of this shape, which doesn't seem right.</p>
+
+
+	<p><img src="../../../attachments/download/580" alt="" /></p>
+
+
+	<p>I stepped back and tried the original Hello World Chamber dimensions and it looks the same as it did before.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/580/dataset_1_chamber.png" class="icon icon-attachment">dataset_1_chamber.png</a>
+  <span class="size">(18.5 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1102">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1102.html#message-1102">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-18.html" title="11/18/2015 03:48 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>That's dataset 1 by the way. I suspect that it's an issue with converting between inches and mm, which are FreeCAD's native units.</p>
+
+
+	<p>I've run out of time for now, but will check that theory out later unless this chamber somehow looks spot-on.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1103">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1103.html#message-1103">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-18.html" title="11/18/2015 03:53 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Looks like you're supposed to be able to change units in the newer versions, but it seems like we hit a snag with Shepard when trying to do that. I'll test it out.</p>
+
+
+	<p><a class="external" href="http://forum.freecadweb.org/viewtopic.php?t=5177">http://forum.freecadweb.org/viewtopic.php?t=5177</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1104">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1104.html#message-1104">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-18.html" title="11/18/2015 04:48 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I tried allowing all the variables to stay in their native units (inches), and the proportions stay the same.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1105">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1105.html#message-1105">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-18.html" title="11/18/2015 10:42 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>This isn't going to be straightened out by the stand up tomorrow. The PressureVessel class is giving back a large ro, which I think is what's making the tapered opening look too large. Troubleshooting this has also highlighted a couple of issues with the geometry.</p>
+
+
+	<p>1. The ro when measured on the model is only within about 10% of what the PressureVessel class gives, and ri is almost exact. Our math for figuring out how to draw the profiles before revolving probably has a flaw in it.<br />2. Probably related to <a href="../../../issues/1.html" class="issue status-5 priority-2 closed" title="Automatically create SVN Repositories when Repository module is turned on (Closed)">#1</a>, some of the test cases lead to bad geometry when the solid is revolved. I haven't looked into it too closely, but it looks like self-intersecting geometry on first glance.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1106">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1106.html#message-1106">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-19.html" title="11/19/2015 12:04 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ok, so after some digging I figured out that the chamber just looks wrong, but is fine. It's the total length of the chamber not being long enough that makes it look that way. If I increase the length of the chamber I get a better looking result.</p>
+
+
+	<p><img src="../../../attachments/download/581" alt="" /></p>
+
+
+	<p>I also figured out that I was just doing the math wrong on the ri and ro of the model. It matches the numbers given by the tests.</p>
+
+
+	<p>Is there a way we can objectively (and automatically) choose the total chamber length?</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/581/Chamber_with_Proper_Length.png" class="icon icon-attachment">Chamber_with_Proper_Length.png</a>
+  <span class="size">(20.4 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-1107">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1094%3Fr=1107.html#message-1107">RE: CAD Unit Tests</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/yavin-thruster/activity%3Ffrom=2015-11-19.html" title="11/19/2015 12:20 pm">almost 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>I'd also like to talk tonight at the #EngineerSpeak Hangout about encoding other things like "expected volume" into the test case datasets so that I can check some extra aspects of the models.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-10/10)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1094.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

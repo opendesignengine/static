@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Issues</title>
+  <link rel="self" href="http://opendesignengine.net/issues.atom?page=6"/>
+  <link rel="alternate" href="http://opendesignengine.net/issues?page=6"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-11-02T18:33:34+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks - Milestone #232 (New): Build the X and Y axes</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/232"/>
+    <id>http://opendesignengine.net/issues/232</id>
+    <updated>2013-11-02T18:33:34+00:00</updated>
+    <author>
+      <name>Steve Popenoe</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks - Milestone #231 (New): Build the Y axis</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/231"/>
+    <id>http://opendesignengine.net/issues/231</id>
+    <updated>2013-11-02T18:32:37+00:00</updated>
+    <author>
+      <name>Steve Popenoe</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks - Milestone #230 (New): Design X and Y axes</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/230"/>
+    <id>http://opendesignengine.net/issues/230</id>
+    <updated>2013-11-02T18:31:09+00:00</updated>
+    <author>
+      <name>Steve Popenoe</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Movement along the X axis (the shorter of the two axes determining lateral position) will be controlled with a 5-foot piece of threaded rod (3/8in all-thread) mounted on a gantry.  The gantry position along the Y axis will be controlled with two 9-foot pieces of the same threaded rod, one on each side.  One stepper motor will be connected directly to the end of each threaded rod (one stepper on the X axis and two, one on each long side of the table, for the Y axis) so that the threaded rod will rotate as the rotor rotates.  Rails on each long side of the table will support the weight of the gantry and guide its motion in the Y axis.  A rail on the gantry will support movement in the X axis.  At each weight-bearing location on the rails, two bearings on top and one or two on the bottom will help it roll more smoothly.  I guess drawings are more helpful that all this description, eh?&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks - Milestone #229 (New): Flash an ATMEGA328 with grbl...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/229"/>
+    <id>http://opendesignengine.net/issues/229</id>
+    <updated>2013-11-02T18:14:15+00:00</updated>
+    <author>
+      <name>Steve Popenoe</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks - Milestone #228 (New): Design the base (table)</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/228"/>
+    <id>http://opendesignengine.net/issues/228</id>
+    <updated>2013-11-02T18:12:03+00:00</updated>
+    <author>
+      <name>Steve Popenoe</name>
+    </author>
+    <content type="html">
+&lt;p&gt;At least draw a picture and estimate the amount of material required.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks - Milestone #227 (New): Build the base (table)</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/227"/>
+    <id>http://opendesignengine.net/issues/227</id>
+    <updated>2013-11-02T18:10:29+00:00</updated>
+    <author>
+      <name>Steve Popenoe</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The table must be large and sturdy enough to accept whole 4x8 sheets of plywood, and support mounting of motors, axes and support hardware, and movement of the router.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks - Milestone #226 (In Progress): Assemble Stepper Mot...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/226"/>
+    <id>http://opendesignengine.net/issues/226</id>
+    <updated>2013-11-02T17:27:56+00:00</updated>
+    <author>
+      <name>Steve Popenoe</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We have three unassembled Linistepper (&lt;a class="external" href="http://www.piclist.com/techref/io/stepper/linistep"&gt;http://www.piclist.com/techref/io/stepper/linistep&lt;/a&gt;) open source stepper motor driver boards.  Assembly consists of soldering components to the board and mounting the heat sink of our choice.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Source Anchor Project (OSAP) - Milestone #225 (New): FEM Analysis of Attachment point Shank</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/225"/>
+    <id>http://opendesignengine.net/issues/225</id>
+    <updated>2013-11-01T06:17:33+00:00</updated>
+    <author>
+      <name>JC Durbin</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Open Source Anchor Project (OSAP) - Milestone #224 (New): FEM Analysis of Attachment Points for c...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/224"/>
+    <id>http://opendesignengine.net/issues/224</id>
+    <updated>2013-11-01T06:17:10+00:00</updated>
+    <author>
+      <name>JC Durbin</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Open Source Anchor Project (OSAP) - Milestone #223 (New): FEM Analysis of Fluke Strength</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/223"/>
+    <id>http://opendesignengine.net/issues/223</id>
+    <updated>2013-11-01T06:16:43+00:00</updated>
+    <author>
+      <name>JC Durbin</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Open Source Anchor Project (OSAP) - Milestone #222 (New): FEM Analysis OSA V1.0 </title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/222"/>
+    <id>http://opendesignengine.net/issues/222</id>
+    <updated>2013-11-01T06:16:20+00:00</updated>
+    <author>
+      <name>JC Durbin</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Open Source Anchor Project (OSAP) - Milestone #221 (New): Version 1.0 Fabrication </title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/221"/>
+    <id>http://opendesignengine.net/issues/221</id>
+    <updated>2013-11-01T06:15:28+00:00</updated>
+    <author>
+      <name>JC Durbin</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Completion of first prototype fabrication&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Sandbox - Bug #215 (New): test</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/215"/>
+    <id>http://opendesignengine.net/issues/215</id>
+    <updated>2013-10-21T20:30:44+00:00</updated>
+    <author>
+      <name>joe abraham</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Feature #147 (New): Add Mach 30 Branding To Software Interface</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/147"/>
+    <id>http://opendesignengine.net/issues/147</id>
+    <updated>2013-07-14T13:01:34+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Version 1.1 of the ShepardDCS software says "Shepard Test Stand", but should also include something that shows the Mach 30 brand.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #10 (New): Modernize ODE theme</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/10"/>
+    <id>http://opendesignengine.net/issues/10</id>
+    <updated>2011-04-08T03:10:05+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The available &lt;a href="http://www.redmine.org/projects/redmine/wiki/Theme_List" class="external"&gt;themes for Redmine&lt;/a&gt; are basically variations on the default theme.  It is time to update the look to a more modern feel and layout.  Here are some examples to look at or base research on:&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;&lt;a href="http://www.thingiverse.com/" class="external"&gt;Thingiverse&lt;/a&gt; - A kind of ODE for projects or parts developed by single users&lt;/li&gt;
+		&lt;li&gt;&lt;a href="https://projects.littlestreamsoftware.com/" class="external"&gt;Little Stream Software&lt;/a&gt; - A custom install of Redmine with an updated and clean theme&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://www.redmine.org/boards/1/topics/4402" class="external"&gt;Experimental Theme&lt;/a&gt; - Source code is available, but is not under active development and requires modifications to the Redmine core.  Might be an interesting place to start.&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;See attached file for some more ideas about the layout and flow that should be included in the new theme.&lt;/p&gt;    </content>
+  </entry>
+</feed>

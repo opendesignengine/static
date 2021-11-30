@@ -1,0 +1,107 @@
+h1. Tone Ring Half Assembly
+
+{{>toc}}
+
+h2. Tools
+
+* Holoseat Test Stand
+* Magnetic Compass
+* Soldering Iron with clean wide flat tip
+* Heat proof matt
+* Spacer TODO - get dimensions
+
+h2. Materials
+
+* Instant/super glue (prefer Loctite Super Glue Ultragel Control)
+* (1) 18PTR-01: Snap Fit 18 Pole Tone Ring Base
+* (1) 18PTR-02: Snap Fit 18 Pole Tone Ring Cover
+* (18) 18PTR-03: N52 3/16" x 3/16" Neodymium Cylinder Magnets
+* (1) 18PTR-04: M3 x 0.5 mm Thread Size, 3.8 mm Installed Length Heat-Set Inserts for Plastics
+* (2) HS-07: 18-8 Stainless Steel Flanged Button Head Screw, M3 x 0.5 mm Thread Size, 5 mm Long
+* (1) HS-08: 49 mm 2mm Hex Tip Key L Wrench with short arm
+
+Note:  The final build requires (2) *HS-03: 18 Pole Tone Ring Halves* as detailed in Step 6.
+
+h2. Safety Issues
+
+* Use safety glasses when working with small, high powered magnets to avoid eye injury from flying magnets  
+* Be sure to maintain physical control of magnets (those being placed and those already placed) to avoid flying magnets
+
+h2. Product
+
+HS-03: 18 Pole Tone Ring Half
+
+h2. Procedure
+
+h3. 1. Place Heat-Set Insert
+
+# Place the *18PTR-01: Snap Fit 18 Pole Tone Ring Base* on heat proof mat with the spacer supporting the overhanging tab
+!step1.1-sm.jpg!
+# Place *18PTR-04: M3 x 0.5 mm Thread Size, 3.8 mm Installed Length Heat-Set Inserts for Plastics* face up into the the hole in the *Tone Ring Base* (when setting the insert, try press fitting it into place to seat it prior to later steps)
+!step1.2a-sm.png!:https://www.mcmaster.com/#94180A331
+!step1.2b-sm.jpg!
+# Set Soldering Iron to 350 Celsius and wait for it to reach temperature
+# Use the flat of the soldering iron tip to apply gentle pressure to the *Heat-set Insert* until it melts into the hole and sits flush.  Take care not to twist or shift the insert.
+{{youtube(UdDcJpsXWKc)}}
+
+h3. 2. Place Initial Magnet
+
+# Select 1 *18PTR-03: N52 3/16" x 3/16" Neodymium Cylinder Magnet*
+# Find the *Magnet's* south pole using the magnetic compass (this is the pole which attracts the north/red indicator - see references) 
+!step2.2-sm.jpg!
+# Align the *Base* so that the tab is closer to you than the slot
+!step2.3-sm.jpg!
+# Apply super glue to the half magnet slot away from you and insert the magnet so that the south pole identified above faces out in the *Tone Ring*; take care that the *Magnet* is flat in its slot and hold it in place for 60 seconds
+!step2.4-sm.jpg!
+# Wait 15 min
+
+h3. 3. Place Remaining Magnets
+
+# Select another magnet and find its polarity by placing it along the outside edge so that it becomes attracted to the previous magnet
+!step3.1-sm.jpg!
+# Rotate the magnet from the previous step 180 degrees (so that the pole attracted to the previous magnet is facing out to create a pole pair) and place it in the next slot in the base
+!step3.2-sm.jpg!
+# Repeat the previous two steps until the tone ring is fully populated
+!step3.3-sm.jpg!
+
+h3. 4. Verify Magnet Placement
+
+Note: You will need (2) in progress *HS-03: 18 Pole Tone Ring Halves* for testing
+
+# Set up the Holoseat Test Stand
+## Ensure the calibrated sensor is attached to the sensor controller
+## Ensure the power and USB connections are all configured according to the test stand operating instructions
+## Join (2) in progress *HS-03: 18 Pole Tone Ring Halves* onto the tone ring adapter
+!step4.1-sm.jpg!
+# Run tone ring test(s)
+!step4.2b-sm.png!
+{{youtube(lSUpJeY2iXg)}}
+# Remove the tone ring halves from the tone ring adapter
+
+h3. 5. Fix Cover to Base
+
+# Apply super glue to the *Base* as shown below
+!step5.1_marked-sm.jpg!
+# Place *18PTR-02: Snap Fit 18 Pole Tone Ring Cover* onto *Base*
+# Press the *Top* firmly onto the base for 1 minute
+!step5.3-sm.jpg!
+# Wait 1 hour
+
+h3. 6. Verify Fit
+
+Note: You will need (2) in progress *HS-03: 18 Pole Tone Ring Halves* which going forward will be considered a complete set
+
+# Take 2 *Tone Ring Halves*, insert the tabs from each into the slots of the other, and push until they form a single disc (there may be a click as the exposed magnets seat into the other half)
+# Check the alignment of the screw hole on each half with the *Heat-set Insert* to verify the *HS-07: 18-8 Stainless Steel Flanged Button Head Screw, M3 x 0.5 mm Thread Size, 5 mm Long* will set properly
+## If the alignment is good move on to the next step
+!step6.2-sm.jpg!
+## Otherwise, disassemble the 2 halves and use the soldering iron to correct the alignment (retest fit as necessary)
+# Use the *HS-08: 49 mm 2mm Hex Tip Key L Wrench with short arm* to screw in the two *Screws* to complete the tone ring assembly
+## If the alignment is good the assembly is complete
+!step6.3-sm.jpg!
+## Otherwise, disassemble the 2 halves and use the soldering iron to correct the alignment (retest fit as necessary)
+
+h2. References
+
+* "What Are Magnetic Poles and How to Identify Them":https://www.apexmagnets.com/news-how-tos/what-are-magnetic-poles-and-how-to-identify-them/
+* "Reading a Compass":http://www.compassdude.com/compass-reading.php

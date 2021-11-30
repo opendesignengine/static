@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Detailed Design</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Shepard-Test-Stand-Detailed-Design-v11"></a>
+<h1 >Shepard Test Stand Detailed Design v1.1<a href="Detailed_Design.html%3Fversion=4.html#Shepard-Test-Stand-Detailed-Design-v11" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Detailed_Design.html%3Fversion=4.html#Shepard-Test-Stand-Detailed-Design-v11">Shepard Test Stand Detailed Design v1.1</a><ul><li><ul><li><a href="Detailed_Design.html%3Fversion=4.html#Introduction">Introduction</a></li><li><a href="Detailed_Design.html%3Fversion=4.html#Mechanical-System">Mechanical System</a><ul><li><a href="Detailed_Design.html%3Fversion=4.html#Component-Overview">Component Overview</a></li><li><a href="Detailed_Design.html%3Fversion=4.html#CAD-Files">CAD Files</a></li></ul>
+</li><li><a href="Detailed_Design.html%3Fversion=4.html#Data-Acquisition-DAQ-System">Data Acquisition (DAQ) System</a><ul><li><a href="Detailed_Design.html%3Fversion=4.html#Component-Overview">Component Overview</a></li><li><a href="Detailed_Design.html%3Fversion=4.html#Electrical-Schematics-and-PCB-Files">Electrical Schematics and PCB Files</a></li></ul>
+</li><li><a href="Detailed_Design.html%3Fversion=4.html#Attached-Files">Attached Files</a></li></ul></li></ul></li></ul>
+
+
+	<p>This is a newer document based on <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Detailed_Design_v1_0" class="external">this one</a> , and you should refer to that original version if you want to see the revision history.</p>
+
+
+	<a name="Introduction"></a>
+<h3 >Introduction<a href="Detailed_Design.html%3Fversion=4.html#Introduction" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The Shepard Test Stand design is broken down into two main components. The first is the mechanical system, and the second is the Data Acquisition (DAQ) system. The mechanical system consists of the frame of the test stand, as well as the motor mounting mechanism and mounts for the thrust and temperature sensors. The DAQ system handles the task of collecting the data from the sensors and presenting them to the user in a way that facilitates motor testing.</p>
+
+
+	<a name="Mechanical-System"></a>
+<h3 >Mechanical System<a href="Detailed_Design.html%3Fversion=4.html#Mechanical-System" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Component-Overview"></a>
+<h4 >Component Overview<a href="Detailed_Design.html%3Fversion=4.html#Component-Overview" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><img src="http://opendesignengine.net/projects/shepard-ts/wiki/ShepardMechaniclComponentIdentification.png" alt="" /></p>
+
+
+	<p>The Shepard Test Stand v1.0 mechanical system (pictured above) is made up of six key components.  They are:</p>
+
+
+	<ol>
+	<li><strong>Test Stand Base</strong> - The <strong>Test Stand Base</strong> (<strong>Base</strong>) is constructed from ripped down 2x10 pine stock, and fits over a 4" x 8" x 16" (nominal) solid concrete block which is available at most hardware stores.  The outer dimensions of the <strong>Base</strong> are 10-7/8" x 21-1/2" x 5-3/16", and its inner dimensions are 7-3/4" x 15-5/8" x 3-1/2".  The key dimensions of the base are the inner dimensions (to allow the base to fit over the concrete block during operation) and an open platform of 20" in length to accommodate the <strong>Test Section Beam</strong>.</li>
+		<li><strong>Back Plate</strong> - The <strong>Back Plate</strong> is constructed from ripped down 2x10 pine stock.  Its function is to provide resistance to the thrust, and a mounting location for the force sensor (on the side facing the motor) and the DAQ electronics (on the side opposite the force sensor).  The dimensions of the <strong>Back Plate</strong> are 7-3/4" x 14" x 1-1/2" (with 8-13/16" sticking up above the base).  The key dimensions are the width (to match the top of the <strong>Base</strong>) and the height (which should be no less than 8" to provide enough space to mount the force sensor and the electronics).  Note, there may be one or more holes in the <strong>Back Plate</strong> to feed wires from the sensors to the DAQ board (or other purposes).  In the current version, there is one 3/8" diameter hole drilled through the center of the <strong>Back Plate</strong> approximately 3-7/8" above the <strong>Base</strong> to allow a cord from the <strong>Motor Mount Bracket</strong> to facilitate calibration.  After passing through the <strong>Back Plate</strong> the cord goes over a pulley mounted on the back side of the <strong>Back Plate</strong> so weights can be hung from the cord to simulate thrust applying force to the force sensor.</li>
+		<li><strong>Test Section Beam</strong> - The <strong>Test Section Beam</strong> (<strong>Beam</strong>) is constructed from a 2x4 pine board, and sits vertically on top of the <strong>Base</strong>, along the center line.  It is 20" long (6" longer than the <strong>Rail System</strong>) to provide room for the <strong>Rail System</strong> to retract the <strong>Motor Mount</strong> and <strong>Motor Mount Bracket</strong> away from the <strong>Back Plate</strong> for maintenance.  The key dimension is its length.</li>
+		<li><strong>Rail System</strong> - The <strong>Rail System</strong> restricts the motor under test to motion along the initial thrust vector.  It is made from a <a href="http://www.libertyhardware.com/search/detail/?searchType=retail&#38;ID=D80614C-ZP-W&#38;FIN=ZP" class="external"><strong>Liberty</strong> 14 inch Ball Bearing Drawer Slide</a> (PN D80614C-ZP-W, available at <a href="http://www.homedepot.com/buy/liberty-14-in-ball-bearing-full-extension-drawer-slide-d80614c-zp-w.html#.UEAZVNaPWsg" class="external">Home Depot</a>).  Note, this was the shortest ball bearing drawer guide available at the time of testing.  If a shorter drawer guide is found, the overall length of the test stand could be reduced.  It is installed along the top of the <strong>Beam</strong> along the <strong>Beam's</strong> center line.</li>
+		<li><strong>Rail Shield</strong> (not shown) - Testing of v1.0 showed the <strong>Rail System</strong> was prone to becoming fouled by the exhaust from the motor under test.  To protect the <strong>Rail System</strong>, a sheet metal guard, or <strong>Rail Shield</strong>, was added to the v1.1 design.  The <strong>Rail Shield</strong> is a folded sheet piece of sheet metal sized and shaped to completely cover the portion of the <strong>Rail System</strong> in front of the <strong>Motor Mount</strong>.  It is attached to the test stand with screws (for a small <strong>Rail Shield</strong>, it is attached to the <strong>Rail System</strong>; for a large <strong>Rail Shield</strong>, like the one used by CCSSC, it is attached to the <strong>Test Stand Base</strong>).</li>
+		<li><strong>Motor Mount</strong> -  The <strong>Motor Mount</strong> is based on an <a href="http://www.estesrockets.com/rockets/accessories/engine-mounting/303159-d-and-e-engine-mount-kit" class="external">Estes D and E Engine Mount Kit</a> (PN 303159).  It is assembled according to the instructions for E size motors with four modifications.
+	<ol>
+	<li>It is assembled without "Centering Rings" (the cardboard rings used to connect the mount to a rocket body)</li>
+		<li>1/4" is removed from the "Engine Block" to leave room for a 3/4" copper plumbing t-connector to be inserted into the aft end of the mount</li>
+		<li>A layer of wood glue is spread on the inside of the motor mount at the aft end to seal the surface which will be glued to the t-connector</li>
+		<li>A 3/4" copper t-connector is glued into the aft end of the motor mount to redirect the ejection charge</li>
+	</ol>
+	</li>
+		<li><strong>Motor Mount Bracket</strong> - The <strong>Motor Mount Bracket</strong> provides a connection between the <strong>Motor Mount</strong> and the <strong>Rail System</strong>.  It is a 1/2" thick plate with a block on the aft end sized to provide the correct contact area with the force sensor.  The current version is constructed from 1/2" sheet of pine plywood (to create the plate) and a pine block cut from a 2x4.  The plate's dimensions are 6-1/4" x 1-23/32" x 1/2" (the 1-23/32" dimension is set to fit the selected force sensor).  The block is 1-1/2" x 1-7/32" x 1-23/32".  The critical dimensions are the overall length of the plate (sufficient to accommodate the block and the <strong>Motor Mount</strong>) and the area presented at the back of the <strong>Motor Mount Bracket</strong> (sized for the force sensor).  The <strong>Motor Mount</strong> is attached to the <strong>Motor Mount Bracket</strong> using 2 plastic zip ties (rated at least 50 lbf), one over the t-connector and the other over the "Engine Retainer Ring" at the front of the <strong>Motor Mount</strong>.  The <strong>Motor Mount Bracket</strong> has a number of holes drilled into it.  Two countersunk holes are used to attach the <strong>Motor Mount Bracket</strong> to the <strong>Rail System</strong>.  Four straight-through holes are used to allow the zip ties to pass through the <strong>Motor Mount Bracket</strong>.  Finally, two grooves are cut in the bottom of the <strong>Motor Mount Bracket</strong> to give the zip ties room between the <strong>Rail System</strong> and the <strong>Motor Mount Bracket</strong>.  Many of these details can be seen in the image below.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/projects/shepard-ts/wiki/motor_mount_bracket_detail.jpg" alt="" /></p>
+
+
+	<p><strong>Note:</strong>  All of the wooden components are covered in 2 coats of heat resistant spray on primer and 2 coats of heat resistant paint.</p>
+
+
+	<a name="CAD-Files"></a>
+<h4 >CAD Files<a href="Detailed_Design.html%3Fversion=4.html#CAD-Files" class="wiki-anchor">&para;</a></h4>
+
+
+The CAD files for this version of the test stand are located in the Shepard_v1.0_CAD.zip file <a href="https://opendesignengine.net/dmsf/shepard-ts?folder_id=10" class="external">here</a> and include the following:
+	<ol>
+	<li>Drafts in PDF and SVG formats in the <strong>Drafts</strong> directory.</li>
+		<li>An exploded view in PNG and SVG formats in the <strong>Images</strong> directory.</li>
+		<li>Files in the <strong>Orig_Assemblies</strong> directory in the FreeCAD format, including the complete assembly and the exploded assembly.</li>
+		<li>Files in the <strong>Orig_Parts</strong> directory in the FreeCAD format, which are the individual part files for the test stand.</li>
+		<li>STEP versions of the part files stored in the <strong>STEP_Files</strong> directory, which were used to build the assemblies.</li>
+		<li>The <strong>Templates</strong> directory holding two templates that are used with FreeCAD for the drafts/drawings. <strong>A4_Landscape_Simple.svg</strong> is a blank template that can be used to remove the title block from a drawing. <strong>A4_Mach_30_Title_Block.svg</strong> is the Mach 30 specific title block used in all the drafts/drawings.</li>
+	</ol>
+
+
+	<a name="Data-Acquisition-DAQ-System"></a>
+<h3 >Data Acquisition (DAQ) System<a href="Detailed_Design.html%3Fversion=4.html#Data-Acquisition-DAQ-System" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Component-Overview"></a>
+<h4 >Component Overview<a href="Detailed_Design.html%3Fversion=4.html#Component-Overview" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><img src="http://opendesignengine.net/projects/shepard-ts/wiki/Shepard_DAQ_Overview.png" alt="" /></p>
+
+
+	<p>The Shepard Test Stand v1.0 Data Acquisition (DAQ) system (pictured above) is made up of four key components.  They are:</p>
+
+
+	<ol>
+	<li><strong>Arduino Uno</strong> - The <a href="http://arduino.cc/en/Main/ArduinoBoardUno" class="external">Arduino Uno</a> is an open hardware electronics prototyping platform that serves as the base for the test stand's DAQ system.</li>
+		<li><strong>Arduino Proto Shield</strong> - The <a href="http://arduino.cc/en/Main/ArduinoProtoShield" class="external">Arduino Proto Shield</a> is a pre-built shield for the Arduino Uno that allows a developer to easily package their components for the platform. There is a general overview of the components on the test stand's proto shield below.</li>
+		<li><strong>Force Sensing Resistor (FSR)</strong> - The <a href="http://www.trossenrobotics.com/productdocs/2010-10-26-DataSheet-FSR406-Layout2.pdf" class="external">FSR</a> is a variable resistor who's resistance changes as pressure is applied to its contact area. These resistors are very low cost, but have issues with accuracy and drift, among others. For this prototype which used an FSR with male connectors, a custom cable was made using CAT 5 Ethernet cable and D-SUB pins to connect the FSR to the Arduino Uno. <strong>UPDATE</strong>: The FSR that was selected had an effective measurement range from 0.1 to 10 Newtons, which was too low for the rocket motors being tested since some could generate a peak thrust of nearly 30 Newtons. This was an oversight that ended up being a moot point because of the FSRs other shortcomings.</li>
+		<li><strong>Type K Thermocouple</strong> - The <a href="http://www.adafruit.com/products/270" class="external">thermocouple</a> has a 1-meter long fiberglass braided cable and can read temperatures of up to 500 °C.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/projects/shepard-ts/wiki/Shepard_DAQ_Proto_Shield_Overview.png" alt="" /></p>
+
+
+	<ol>
+	<li><strong>MAX31855 Thermocouple Amplifier Breakout Board</strong> - Available from Adafruit Industries, this <a href="http://www.adafruit.com/datasheets/MAX31855.pdf" class="external">amplifier</a> is designed to work with any K-type themocouple and gives output from -200 °C to 1350 °C in 0.25 °C increments. It uses a SPI data interface with a built-in 14-bit ADC, and requires 70 to 100 ms to do a conversion. <strong>UPDATE</strong>: This slow conversion time seems to be the biggest factor limiting our overall data collection sample rate to around 15 samples/sec.</li>
+		<li><strong>0.01uF Capacitor</strong> - This capacitor is wired in parallel with the thermocouple and helps smooth out the sampling jitter in noisy environments.</li>
+		<li><strong>560 Ohm Resistor</strong> - This resistor is one side of a voltage divider, with the FSR being the other. This allows us to convert the change in resistance of the FSR to a voltage so that it can be measured by the Arduino Uno.</li>
+		<li><strong>TLV2374IN Quad 3MHz Op Amp</strong> - This TLV2374 is in a DIP package to make it easier to prototype. This IC is used to amplify the voltage from the FSR to a level suitable for the analog inputs of the Arduino Uno.</li>
+		<li><strong>14 Pin IC Socket</strong> - Lying beneath the TLV2374, this is used to make it possible to swap out TLV2374 ICs if one is damaged in prototyping, and also prevents heat from the soldering iron from being transferred directly into the IC during assembly.</li>
+	</ol>
+
+
+	<a name="Electrical-Schematics-and-PCB-Files"></a>
+<h4 >Electrical Schematics and PCB Files<a href="Detailed_Design.html%3Fversion=4.html#Electrical-Schematics-and-PCB-Files" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>There are no PCB files for this version of the Shepard Test Stand at this time.</p>
+
+
+	<p>You can find the schematic files in the DMSF plugin <a href="https://opendesignengine.net/dmsf/shepard-ts?folder_id=17" class="external">here</a></p>
+
+
+	<p>An image of the schematic is shown below.</p>
+
+
+	<p><img src="http://opendesignengine.net/projects/shepard-ts/wiki/Shepard_v1.0_DAQ.png" alt="" /></p>
+
+
+	<a name="Attached-Files"></a>
+<h3 >Attached Files<a href="Detailed_Design.html%3Fversion=4.html#Attached-Files" class="wiki-anchor">&para;</a></h3>
+</body>
+</html>

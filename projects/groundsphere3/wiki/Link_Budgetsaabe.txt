@@ -1,0 +1,34 @@
+h1. Link Budget References
+
+{{>toc}}
+
+TODO: write a 1-2 sentence explanation of what a link budget is here, and a summary of what the purpose of this page is.
+
+h2. Background Material
+
+* "Link Budget Calculation":http://www.piscespacific.org/livesite/files/Link_Budget_Calculation.pdf
+* "Tutorial on Basic Link Budget Analysis":http://www.sss-mag.com/pdf/an9804.pdf
+* [[Link Budget Video Tutorials]] by Aaron Harper, Mach 30 volunteer
+
+h2. Example Calculations
+
+Much of this material was reviewed with the stakeholders and the IPT at the "Sprint 1 Stand Up 3 meeting":https://docs.google.com/document/d/17Wc4sMqlUissR5am6ANDcKP-psRQ41ysxOV0vrcgHJA/pub
+
+h3. Online Forms
+
+Online forms are useful for one off calculations, source code/math not necessarily available to Mach 30.
+* "Satellite Link Budget Calculator":http://www.satsig.net/linkbugt.htm - simple online form for uplink and downlink calculations
+* "Satellite Link Budget Calculator page":http://www.tutorialsweb.com/satcom/satellite-link-budget-calculator.htm - a mor complete set of calculations for uplink and downlink
+* "Geostationary Satellite Link Budget Calculations (Downlink)":http://www.satcom-services.com/VSAT/downlink.html - Geo calculations, not really useful for us, but nice user experience
+
+h3. Spreadsheets 
+
+Spreadsheets require the correct software to run (typically MS Excel), but Mach 30 can investigate the implementation to use as a source for porting to Python library.
+* "KickSat Ground Station Link Budget":https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx (MS Excel) - just about the right level of detail for current work (not surprising since KickSat has a similar level of technical complexity and available technical resources as Ground Sphere)
+* "Jan King's AMSAT link budget":http://www.amsatuk.me.uk/iaru/AMSAT-IARU_Link_Model_Rev2.5.3.xls (MS Excel) - the most extensive calculations, too much detail for now, but will likely be useful for future projects
+* "KA9Q JJSat link budget design spreadsheet":http://www.ka9q.net/jjsat/full_links.xls (MS Excel) - another set of right sized calculations for our current needs (came from "conceptual design work for JJSat":http://www.ka9q.net/jjsat/)
+* "ConaSat Link Budget Calculations for DTUSat":http://www.crn2.inpe.br/conasat1/projetos_cubesat/projetos/DTUSat%20-%20Technical%20University%20of%20Denmark%20-%20Denmark/DTUSat%20-%20COM%20-%20Link%20Budget.xls (MS Excel) - the history of this spreadsheet is a little unclear, but it is a very clean implementation of the required calculations
+
+h2. Selected Link Budget Source Document
+
+The Ground Sphere Mk 3 team has decided to build its Python Link Budget library on the calculations used in the "KickSat Ground Station Link Budget":https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx.  This spreadsheet includes nearly all of the required transmission effects and has been verified by "comparing its results to manual calculations":http://opendesignengine.net/dmsf_files/523?download=.

@@ -1,0 +1,12 @@
+h1. Design Review v1.0
+
+This document has been relinked to the Design Review document "here":https://opendesignengine.net/projects/shepard-ts/wiki/Design_Review as part of our versioning system update.
+
+* There are some design review items, as well as lessons learned about the Mach 30 design process "here":https://docs.google.com/document/pub?id=1Mf90mKULMSQIIxagVz8EoLMosPMmceKSIxPGebP4vyo .
+
+* There is some DAQ design review information "here":https://opendesignengine.net/boards/4/topics/255 on the forums.
+
+* A design issue that was brought up about the drawer slide used is "here":https://opendesignengine.net/boards/4/topics/247. It was later confirmed that this was actually a problem that surfaces after repeated motor firings.
+
+* A couple of areas where the DAQ system fell short of the requirements was brought up in the last post by Jeremy Wright "here":https://opendesignengine.net/boards/4/topics/159.
+

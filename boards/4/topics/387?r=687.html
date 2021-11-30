@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Future Design Discussion - v2.0 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-387-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Future Design Discussion - v2.0</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-29.html" title="01/29/2013 12:37 am">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>As we look towards the kit version of Shepard that will hopefully be widely used for educational purposes, I'm looking for everyone's thoughts on software.</p>
+
+
+	<p>Right now, the Shepard data collection software is written in Processing. This language/platform was chosen because of it's coupling (and parental connection) with the Arduino language and IDE. It was also chosen because it's designed to be easier for non-engineers and non-programmers to use. I've come to like Processing more as I've used it, but I personally still prefer a language like Python.</p>
+
+
+	<p>Since this version will be used in education, I was thinking about setting the main application up to be a TCP server that other client GUI frontends can connect to. This would allow any student machines on the same network to view and download the data from the test stand in (almost) real time. There are several different design options that come to mind when thinking about this:</p>
+
+
+	<ol>
+	<li>Don't mess with this, nobody will ever use it.</li>
+		<li>Keep the current Processing app with the built-in GUI and try to add a TCP server to that. Then write a separate "Shepard Viewer" app that connects to the TCP server.</li>
+		<li>Break the current Processing app down to a TCP server (non-GUI backend) and a TCP client (GUI frontend). Then all systems (including the main one for the test) would be running the same client. Each client would have the option of recording data separately.</li>
+		<li>Break the current Processing app down to a non-GUI server only, and have that serve clients with a dynamic HTML 5 app to display the data. This adds some other challenges such as security, data storage and speed, but it would allow any device (tablets, laptops, cell phones) to take part in the test without installing anything.</li>
+		<li>Keep the Processing app with the built in GUI for speed and stability, and have it serve HTML 5 to any other clients.</li>
+		<li>Use a language like Python to accomplish any of the above options.</li>
+	</ol>
+
+
+	<p>I haven't checked yet to see if Processing will serve web pages without a ton of coding. I know that Python will though.</p>
+
+
+	<p>So, any thoughts on any of this?</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (16)</h3>
+
+  <div class="message reply" id="message-463">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=463.html#message-463">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-10.html" title="05/10/2013 08:17 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think we have addressed these.  Use the new BeagleBone Black, program it however you'd like, and have the bone do the heavy lifting, presenting the data on an active web page on it's own server.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-614">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=614.html#message-614">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-18.html" title="09/18/2013 04:15 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>CCSSC asked about direct measurement of the exhaust stream, and that led me to another short round of research. That led me to this: <a class="external" href="http://www.melexis.com/Infrared-Thermometer-Sensors/Infrared-Thermometer-Sensors/Thermal-infrared-thermopile-sensor-for-high-temperature-measurements-779.aspx">http://www.melexis.com/Infrared-Thermometer-Sensors/Infrared-Thermometer-Sensors/Thermal-infrared-thermopile-sensor-for-high-temperature-measurements-779.aspx</a></p>
+
+
+	<p>In short, it can read up to 1030 C, but it uses the SMBus interface instead of I2C.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-615">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=615.html#message-615">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-09-18.html" title="09/18/2013 04:17 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Oh, and there's this too for later versions of test stands. It actually has an array of sensors to give you a low resolution thermal image.</p>
+
+
+	<p><a class="external" href="http://www.melexis.com/Infrared-Thermometer-Sensors/Infrared-Thermometer-Sensors/FIRray16X4-Far-InfraRed-Array-776.aspx">http://www.melexis.com/Infrared-Thermometer-Sensors/Infrared-Thermometer-Sensors/FIRray16X4-Far-InfraRed-Array-776.aspx</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-687">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=687.html#message-687">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-11-29.html" title="11/29/2013 09:25 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>We've talked about the possibility of using the Adafruit Arduino Trinket in the finalized Shepard 2.0 kits.</p>
+
+
+	<p><a class="external" href="http://www.adafruit.com/products/1501#Learn">http://www.adafruit.com/products/1501#Learn</a></p>
+
+
+	<p>I found the deal killer tonight while reading the documentation. The serial port can only be used for programming, not for communication. There's a workaround for Windows, but not Linux or Mac.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-699">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=699.html#message-699">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-02.html" title="12/02/2013 08:13 am">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy, where does it say that it can't be used for comm?  All I see is that it can't be used for debug, which to me isn't the same thing, but I could see meaning that in general it can't be used for comm, so I wanted to check.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-700">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=700.html#message-700">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-02.html" title="12/02/2013 08:50 am">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p><a class="external" href="http://www.adafruit.com/blog/2013/10/15/how-to-fake-usb-serial-with-a-trinket-the-adafruit-learning-system/">http://www.adafruit.com/blog/2013/10/15/how-to-fake-usb-serial-with-a-trinket-the-adafruit-learning-system/</a></p>
+
+
+	<p>The main page for the Trinket doesn't say "communication", but it won't work with the Arduino serial monitor which I take to mean that it won't work with our current Shepard UIs.</p>
+
+
+	<p><a class="external" href="http://learn.adafruit.com/introducing-trinket/">http://learn.adafruit.com/introducing-trinket/</a></p>
+
+
+	<p><cite>Trinket does not have a Serial port connection for debugging so the serial port monitor will not be able to send/receive data</cite></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-701">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=701.html#message-701">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-02.html" title="12/02/2013 10:39 am">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I didn't see that page; that confirms it in my mind.  Another alternative might be the one Aaron brought up a week or two ago: <a class="external" href="http://www.dfrobot.com/wiki/index.php/Beetle_SKU:DFR0282">http://www.dfrobot.com/wiki/index.php/Beetle_SKU:DFR0282</a>  I haven't looked at it in terrible detail yet, but it's supposed to be fully compatible with the Leonardo, so I would assume that it doesn't have the same comm limitation.  It might be a little more of an assembly challenge in using one of those, but I think it's very doable.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-702">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=702.html#message-702">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-02.html" title="12/02/2013 11:00 am">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Yep, and at $7 each in packs of 10 they're pretty cheap. Looking at the pinouts, we should be able to do one analog input and one I2C bus at the same time without any trouble. I'd be a little gun-shy on getting too serious about it yet though since it's a pre-order item and we don't know how stable their supply chain will be. If they're chronically sold out they won't do us much good for kits. I do like the concept though.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-703">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=703.html#message-703">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-05.html" title="12/05/2013 08:47 am">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>This will mainly be of interest to Chris.</p>
+
+
+	<p>I'm thinking that we should discuss switching the timestamp back to an unsigned int and then try the following:</p>
+
+
+	<ol>
+	<li>Max the timer out at 65535.</li>
+		<li>Use the "Enable Recording" button to tell the Arduino to 0 and hold the timer.</li>
+		<li>When the thrust value goes above 0 start the timer on the Arduino.</li>
+	</ol>
+
+
+	<p>This would remove 2 bytes of data from each send and sync the timestamp zero to the first data point.</p>
+
+
+	<p>Thoughts?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-704">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=704.html#message-704">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-05.html" title="12/05/2013 08:47 am">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>This will mainly be of interest to Chris.</p>
+
+
+	<p>I'm thinking that we should discuss switching the timestamp back to an unsigned int and then try the following:</p>
+
+
+	<ol>
+	<li>Max the timer out at 65535.</li>
+		<li>Use the "Enable Recording" button to tell the Arduino to 0 and hold the timer.</li>
+		<li>When the thrust value goes above 0 start the timer on the Arduino.</li>
+	</ol>
+
+
+	<p>This would remove 2 bytes of data from each send and sync the timestamp zero to the first data point.</p>
+
+
+	<p>Thoughts?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-705">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=705.html#message-705">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-05.html" title="12/05/2013 01:10 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>What would be the pro's of switching back? The decrease in packet size would mean an increase in data rate.  Can anyone think of anything else?<br />What are the con's of switching back? My biggest concern is if the collection doesn't stop for some reason before the time is all eaten up, I think our average user would get freaked out by how the data looks in those cases, especially the graph with a line trailing from the right most data point back to the left most. There might be other concerns, but I can't think of much at the moment for this one either.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-706">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=706.html#message-706">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-05.html" title="12/05/2013 08:42 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Pro 1: Faster sample rates.<br />Pro 2: Would force zero time to be sync'd with the first data point.</p>
+
+
+	<p>If we freeze the timer when it's zero'd and only start it when the value goes above zero, the user would have 65.5 seconds to finish their sample run before the timer runs out. This could paint us into a corner with a delayed stop feature like CCSSC has requested. If the user wanted to measure the temperature casing cool-down cycle for 2 minutes after the test firing started, they'd be out of luck.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-707">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=707.html#message-707">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-05.html" title="12/05/2013 09:21 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think the zeroing can be part of the req regardless of whether we use 2 or 4 bit timestamps.  In terms of sample rate, IIRC with the current 4bit timestamp we still have sustained for several minutes a sample rate >1K, but even if it is a bit shy I think the rate is still more than adequate, and prevents the issue you laid out with the cooldown cycle.  The other option is to have the software adjust the timestamps so the wrapping isn't an issue, but this goes into the fact that now the data isn't quite the data.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-708">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=708.html#message-708">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-05.html" title="12/05/2013 09:26 pm">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Agreed - So it sounds like we're leaning towards sticking with the long value and zero-syncing it. Is that correct? Anybody else have any thoughts?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-709">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=709.html#message-709">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/130.html" class="icon icon-contributor-license">Christopher Sigman</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-06.html" title="12/06/2013 06:09 am">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Yep, I think that's the best option, unless anyone else has any other insight.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-725">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="387%3Fr=725.html#message-725">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-12-10.html" title="12/10/2013 10:30 am">almost 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>While fixing a bug in the Processing app this morning I noticed that we're already essentially doing this, it's just on the client side. That keeps the load on the Arduino low. However, I typically try to keep the creation/control of a timestamp as close to the original data source as possible, so I'm going to still add this as a feature request for Shepard v2.0.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-16/16)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/387.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

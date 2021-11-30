@@ -1,0 +1,372 @@
+Index: trunk/app-src/holoseat/api/__init__.py
+===================================================================
+--- trunk/app-src/holoseat/api/__init__.py	(revision 107)
++++ trunk/app-src/holoseat/api/__init__.py	(revision 108)
+@@ -4,6 +4,7 @@
+ # other imports
+ import threading
+ from concurrent.futures import ThreadPoolExecutor
++from holoseat.util import holoseatSerial
+ 
+ apiConfig = { 'apiVersion' : 'v0.4.0',
+               'uiPort' : 8000,
+@@ -12,6 +13,9 @@
+ 
+ apiThreadPool = ThreadPoolExecutor()
+ 
++def connectedOrConnect():
++    return holoseatSerial.connected() or holoseatSerial.connect(apiConfig['apiVersion'])
++
+ # package imports now that the package variables are declared
+ from holoseat.api.apiHandler import apiHandler
+ from holoseat.api import mainHandlers, debugHandlers, socketHandler
+Index: trunk/app-src/holoseat/api/socketHandler.py
+===================================================================
+--- trunk/app-src/holoseat/api/socketHandler.py	(revision 0)
++++ trunk/app-src/holoseat/api/socketHandler.py	(revision 108)
+@@ -0,0 +1,35 @@
++from tornado import websocket
++from holoseat.util import getHost
++from holoseat.api import apiConfig, connectedOrConnect
++from holoseat.util import holoseatSerial
++from tornado import web, gen
++
++socketClients = []
++
++class SocketHandler(websocket.WebSocketHandler):
++    def check_origin(self, origin):
++        uiLocalhost = "http://%s:%s" % ("localhost", apiConfig['uiPort'])
++        uiIpAddress = "http://%s:%s" % (getHost(), apiConfig['uiPort'])
++        return (origin == uiLocalhost) or (origin == uiIpAddress)
++
++    def open(self):
++        if self not in socketClients:
++            socketClients.append(self)
++
++    def on_close(self):
++        if self in socketClients:
++            socketClients.remove(self)
++
++def SendMessages():
++    # make sure we have all the data in the serial buffer
++    connectedOrConnect()
++    data = holoseatSerial.readData()
++    while (data):
++        data = holoseatSerial.readData()
++
++    # for each line of data, send a message to each socket client
++    message = holoseatSerial.popData()
++    while (message):
++        for client in socketClients:
++            client.write_message(message)
++        message = holoseatSerial.popData()
+Index: trunk/app-src/holoseat/api/apiHandler.py
+===================================================================
+--- trunk/app-src/holoseat/api/apiHandler.py	(revision 107)
++++ trunk/app-src/holoseat/api/apiHandler.py	(revision 108)
+@@ -1,4 +1,4 @@
+-from holoseat.api import status, apiThreadPool, apiConfig
++from holoseat.api import status, apiThreadPool, apiConfig, connectedOrConnect
+ from concurrent.futures import ThreadPoolExecutor
+ from tornado.concurrent import run_on_executor
+ from tornado import web, gen
+@@ -12,7 +12,7 @@
+ 
+     @run_on_executor(executor="_threadPool")
+     def connectedOrConnect(self):
+-        return holoseatSerial.connected() or holoseatSerial.connect(apiConfig['apiVersion'])
++        return connectedOrConnect()
+ 
+     @run_on_executor(executor="_threadPool")
+     def execCommand(self, command):
+Index: trunk/app-src/holoseat/ui/static/js/holoseat-app.js
+===================================================================
+--- trunk/app-src/holoseat/ui/static/js/holoseat-app.js	(revision 107)
++++ trunk/app-src/holoseat/ui/static/js/holoseat-app.js	(revision 108)
+@@ -34,3 +34,14 @@
+     .append("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>" + message)
+     .appendTo("#alertArea");
+ }
++
++function setHoloseatEnableButton(enabled) {
++  if (enabled) {
++    $('#holoseatEnableButton').attr("aria-pressed", true);
++    $('#holoseatEnableButton').addClass('active');
++  }
++  else {
++    $('#holoseatEnableButton').attr("aria-pressed", false);
++    $('#holoseatEnableButton').removeClass('active');
++  }
++}
+Index: trunk/app-src/holoseat/ui/templates/layout.html
+===================================================================
+--- trunk/app-src/holoseat/ui/templates/layout.html	(revision 107)
++++ trunk/app-src/holoseat/ui/templates/layout.html	(revision 108)
+@@ -175,6 +175,14 @@
+        console.log('WebSocket Error');
+        {% endif %}
+      };
++
++     $(document).ready(function() {
++       // set up enabled button event listener
++       holoseatEventListeners.push({eventType : "enabledChange",
++                                    handle : function(message) {
++                                      setHoloseatEnableButton(message.enabled);
++                                    }});
++                      });
+   </script>
+   {% block scriptCode %}{% endblock %}
+ </body>
+Index: trunk/app-src/holoseat/util/holoseatSerial.py
+===================================================================
+--- trunk/app-src/holoseat/util/holoseatSerial.py	(revision 107)
++++ trunk/app-src/holoseat/util/holoseatSerial.py	(revision 108)
+@@ -24,6 +24,16 @@
+     return holoseat.readline().decode("utf-8").strip()
+ 
+ def connected():
++    # check to see if we think the com port is connected
++    if holoseat.is_open:
++        try:
++            # then check to see if we can actually talk to holoseat
++            temp = holoseat.in_waiting
++        except serial.serialutil.SerialException as e:
++            # if not, then close the connection
++            disconnect()
++
++    # either way, is_open is now the true state of the connection
+     return holoseat.is_open
+ 
+ def readData(messageId=None):
+@@ -132,6 +142,13 @@
+             disconnect()
+             return False
+ 
++        # tell holoseat to echo out all status events to sync up any connected clients
++        eventsResults = json.loads(execCommand({"uri":"/lowlevel/events","verb":"GET"}))
++        if ('Error' in eventsResults):
++            disconnect()
++            print('Error: %s' % eventsResults['Error'])
++            return False
++
+         # passed all tests, we can talk to this Holoseat
+         return True
+     except serial.serialutil.SerialException as e:
+Index: trunk/controller-src/holoseat-firmware/holoseat-firmware.ino
+===================================================================
+--- trunk/controller-src/holoseat-firmware/holoseat-firmware.ino	(revision 107)
++++ trunk/controller-src/holoseat-firmware/holoseat-firmware.ino	(revision 108)
+@@ -156,17 +156,6 @@
+   return Hardware_v0_4_VersionString;
+ }
+ 
+-// deprecated
+-void SendReadyMessage() {
+-    Serial.print("Holoseat");
+-    Serial.print(" HW=");
+-    Serial.print(GetHardwareVersion());
+-    Serial.print(" FW=");
+-    Serial.print(FirmwareVersionString);
+-    Serial.print(" HSP=");
+-    Serial.println(HspVersionString);
+-}
+-
+ void SerialReturnError(char* messageId, char* errorMessage) {
+   const size_t bufferSize = JSON_OBJECT_SIZE(2);
+   DynamicJsonBuffer jsonBuffer(bufferSize);
+@@ -196,6 +185,14 @@
+     const char* verb = root["verb"];
+ 
+     // find the method for uri/verb pair
++    if (strcmp(uri, "/lowlevel/events") == 0) {
++      if (strcmp(verb, "GET") == 0) {
++        LowlevelEventsGet(messageId);
++      }
++      else {
++        SerialReturnError(messageId, Error_Illegal_Verb);
++      }
++    }
+     if (strcmp(uri, "/main/devicename") == 0) {
+       if (strcmp(verb, "GET") == 0) {
+         MainDevicenameGet(messageId);
+@@ -212,6 +209,17 @@
+         SerialReturnError(messageId, Error_Illegal_Verb);
+       }
+     }
++    if (strcmp(uri, "/main/enabled") == 0) {
++      if (strcmp(verb, "GET") == 0) {
++        MainEnabledGet(messageId);
++      }
++      else if (strcmp(verb, "PUT") == 0) {
++        MainEnabledPut(messageId, root["args"]["enabled"]);
++      }
++      else {
++        SerialReturnError(messageId, Error_Illegal_Verb);
++      }
++    }
+     if (strcmp(uri, "/main/logging") == 0) {
+       if (strcmp(verb, "PUT") == 0) {
+         LoggingEnabled = root["args"]["enabled"];
+@@ -232,6 +240,20 @@
+   }
+ }
+ 
++void LowlevelEventsGet(char * messageId) {
++  // send all of the event messages 
++  sendEnabledChangeEvent();
++  
++  const size_t bufferSize = JSON_OBJECT_SIZE(2);
++  DynamicJsonBuffer jsonBuffer(bufferSize);
++  JsonObject& root = jsonBuffer.createObject();
++
++  root["messageId"] = messageId;  
++  root["events"] = "Echoed";
++  root.printTo(Serial);
++  Serial.println();
++}
++
+ void MainDevicenameGet(char * messageId) {
+   const size_t bufferSize = JSON_OBJECT_SIZE(2);
+   DynamicJsonBuffer jsonBuffer(bufferSize);
+@@ -259,60 +281,24 @@
+   Serial.println();
+ }
+ 
+-//-----------------------------------------------------
+-// deprecated
+-void ProcessSerialData_old() {
+-  if (Serial && Serial.available()) {
+-    // FIXME - replace with C-string functions later for stability 
+-    String command = Serial.readStringUntil('\n'); 
+-    int nextStart = 0;
+-  
+-    if (command.charAt(0) == '?') {
+-      SendReadyMessage();
+-    }
+-    else if (command.charAt(0) == 'Q') {
+-      SendStateMessage();
+-    }
+-    else if (command.charAt(0) == 'S') {
+-      // find new walk forward character
+-      nextStart = 2;
+-      WalkForwardCharacter = command.charAt(nextStart);
++void MainEnabledGet(char* messageId) {
++  const size_t bufferSize = JSON_OBJECT_SIZE(2);
++  DynamicJsonBuffer jsonBuffer(bufferSize);
++  JsonObject& root = jsonBuffer.createObject();
+ 
+-      // find new walk backward character
+-      nextStart = command.indexOf(',', nextStart);
+-      WalkBackwardCharacter = command.charAt(nextStart+1);
+-    
+-      // find new enabled flag
+-      nextStart = command.indexOf(',', nextStart+1);
+-      HoloseatEnabled = command.substring(nextStart+1).toInt();
+-      
+-      // find trigger cadence
+-      nextStart = command.indexOf(',', nextStart+1);
+-      unsigned int foo = command.substring(nextStart+1).toInt();
+-      //ForwardTriggerCadence = command.substring(nextStart+1).toInt();
+-      //BackwardTriggerCadence = ForwardTriggerCadence;
+-      
+-      // find new enable logging
+-      nextStart = command.indexOf(',', nextStart+1);
+-      LoggingEnabled = command.substring(nextStart+1).toInt();
+-      
+-      // find the new logging interval
+-      nextStart = command.indexOf(',', nextStart+1);    
+-      LoggingInterval = command.substring(nextStart+1).toInt();
+-      
+-      Serial.println("OK");
+-    }
+-    else {
+-      Serial.println("ERROR");  
+-    }
++  root["messageId"] = messageId;  
++  root["enabled"] = HoloseatEnabled;
++  root.printTo(Serial);
++  Serial.println();
++}
++
++void MainEnabledPut(char* messageId, int enabled) {
++  if (HoloseatEnabled != enabled) {
++    toggleEnabledState();
+   }
+-  
+-  if (LoggingEnabled && (millis() - LastLogTime >= (100 * LoggingInterval))) { // measured in 1/10 sec
+-    LastLogTime = millis();
+-    SendStateMessage();
+-  }
++
++  MainEnabledGet(messageId);
+ }
+-//-----------------------------------------------------
+ 
+ // set up enabled state variables
+ int enableReading = LOW;          
+@@ -341,26 +327,31 @@
+   EnableSensors(true);
+   LastLogTime = millis();
+   Keyboard.begin();
++}
+ 
+-#ifdef DEBUG  // when debugging, hold for the serial monitor and setup some test defaults
+-  while (!Serial)
+-    {
+-    ;
+-    }
++void toggleEnabledState() {
++  HoloseatEnabled = !HoloseatEnabled;
++  if (HoloseatEnabled) {
++    digitalWrite(enableLedPin, HIGH);
++  }
++  else {
++    digitalWrite(enableLedPin, LOW);
++  }
++  
++  sendEnabledChangeEvent();
++}
+ 
+-  // override defaults
+-  WalkForwardCharacter = 'w';
+-  WalkBackwardCharacter = 's';
+-  HoloseatEnabled = !true;  // when we wake up, we will go through the transition right away, so set up for that fact
+-  //ForwardTriggerCadence = 45;
+-  //BackwardTriggerCadence = 45;
+-  LoggingEnabled = 1;
+-  LoggingInterval = 5;
++void sendEnabledChangeEvent() {
++  const size_t bufferSize = JSON_OBJECT_SIZE(3);
++  DynamicJsonBuffer jsonBuffer(bufferSize);
+ 
+-  // send ready message and state
+-  Serial.println("R"); // send ready signal, if there is a serial connection
+-  SendStateMessage();
+-#endif
++  JsonObject& root = jsonBuffer.createObject();
++  root["messageId"] = "event";
++  root["type"] = "enabledChange";
++  root["enabled"] = HoloseatEnabled;
++
++  root.printTo(Serial);
++  Serial.println();
+ }
+ 
+ void loop() {
+@@ -373,15 +364,13 @@
+   
+   // handle enable switching
+   if (enableReading == HIGH && enablePrevious == LOW)
+-    HoloseatEnabled = !HoloseatEnabled;
++    toggleEnabledState();
+ 
+   // handle "walking" (or not)
+   if (HoloseatEnabled) {
+-    digitalWrite(enableLedPin, HIGH);
+     HandleWalking();
+   }
+   else {
+-    digitalWrite(enableLedPin, LOW);
+     InitializeWalkingVariables();
+   }
+     

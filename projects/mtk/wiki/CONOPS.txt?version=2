@@ -1,0 +1,35 @@
+h1. MTK CONOPS
+
+{{toc}}
+
+h2. Scenario Description
+
+Mach 30 needs to do engineering analysis (aka math) on ballistic trajectories for a sub-orbital test vehicle (the rocket science equivalent to throwing a ball, very high). 
+
+h2. Actors
+
+* Isaac (Engineer) - knows all of the physics and math involved to predict the vehicle's flight, but he is not comfortable coding it up
+* Ada (Programmer) - very skilled at writing Python and can easily translate math to code
+
+h2. Assumptions
+
+* Isaac and Ada have access to a shared project space with version control for the ballistic trajectory analysis project (ODE)
+
+h2. Narrative
+
+Isaac starts a new MTK project and writes a short intro covering why Mach 30 needs ballistic trajectory analysis.  He then spends most of his time researching and writing down the following information in this document (aka he documents before they act):
+
+* the equations required for this analysis
+* why these are the correct equations (assumptions of the engineering models, how the Mach 30 case matches those assumptions, etc)
+* how to use the equations, with an example
+* some test cases (inputs and expected outputs)
+
+This work is in Isaac's wheelhouse. He is able to knock it out quickly and easily.  Best of all this work is fun for him.  When he is done he easily shares this work with Ada since they are using a common platform for their contributions to the project.
+
+Ada takes over to design and implement the Python class that will perform the calculations Isaac specified. As she develops her code in MTK, she references and expands the documentation, which is open in a panel next to her code for easy access.  She adds a section showing how different parts of her code compute the results of the equations and how they do so with the correct data and in the correct order (documenting as she acts).  Ada then writes up the test cases in a test suite and includes the results of those test cases in the documentation (a kind of documenting after she acts).  
+
+Notice how the only documentation Ada is writing directly relates to her code and just explains how it works in relation to the material Isaac provided. Everything else Ada is doing involves writing a key Python library for Mach 30.  Even the test cases are easier to write because they are based on engineering research from Isaac. This is a productive and enjoyable contribution for Ada involving a minimum of fuss reviewing and writing documentation.
+
+Isaac then takes a look at the updated documentation, instead of having to review each line of source code.  Isaac pays special attention to the implementation details ("hmm, yes that code excerpt does compute the value for equation 3") and the test results which could include tables and figures ("yup, that's the right plot"). If he has questions, he can get on a hangout to review things with Ada. When they are about done, Isaac writes up a short conclusion and abstract wrapping up the documentation (one last bit of documenting after they act). 
+
+The jointly created documentation could be shared inside and outside Mach 30 for peer review and the Python class would be ready for use after addressing any comments from the peer review. Of course, those comments and updates would be handled in MTK as well. 

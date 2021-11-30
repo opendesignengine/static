@@ -1,0 +1,245 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg a3:scriptImplementation='Adobe' xmlns:a3='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/' height='300' xmlns='http://www.w3.org/2000/svg' width='800' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 800 300'>
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+<!-- Created with SVG::Graph -->
+<!-- SVG::Graph by Sean E. Russell -->
+<!-- Losely based on SVG::TT::Graph for Perl by Leo Lapworth & Stephan Morgan -->
+<!-- //////////////////////////////////////////////////////////////////-->
+<defs>
+<style type='text/css'>
+<![CDATA[/* Copy from here for external style sheet */
+.svgBackground{
+  fill:#ffffff;
+}
+.graphBackground{
+  fill:#f0f0f0;
+}
+
+/* graphs titles */
+.mainTitle{
+  text-anchor: middle;
+  fill: #000000;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+.subTitle{
+  text-anchor: middle;
+  fill: #999999;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.axis{
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
+.guideLines{
+  stroke: #666666;
+  stroke-width: 1px;
+  stroke-dasharray: 5 5;
+}
+
+.xAxisLabels{
+  text-anchor: middle;
+  fill: #000000;
+  font-size: 12px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.yAxisLabels{
+  text-anchor: end;
+  fill: #000000;
+  font-size: 12px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.xAxisTitle{
+  text-anchor: middle;
+  fill: #ff0000;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.yAxisTitle{
+  fill: #ff0000;
+  text-anchor: middle;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.dataPointLabel{
+  fill: #000000;
+  text-anchor:middle;
+  font-size: 10px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.staggerGuideLine{
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.5px;  
+}
+
+/* default fill styles for multiple datasets (probably only use a single dataset on this graph though) */
+.key1,.fill1{
+	fill: #ff0000;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 0.5px;	
+}
+.key2,.fill2{
+	fill: #0000ff;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key3,.fill3{
+	fill: #00ff00;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key4,.fill4{
+	fill: #ffcc00;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key5,.fill5{
+	fill: #00ccff;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key6,.fill6{
+	fill: #ff00ff;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key7,.fill7{
+	fill: #00ffff;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key8,.fill8{
+	fill: #ffff00;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key9,.fill9{
+	fill: #cc6666;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key10,.fill10{
+	fill: #663399;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key11,.fill11{
+	fill: #339900;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key12,.fill12{
+	fill: #9966FF;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+
+
+.keyText{
+  fill: #000000;
+  text-anchor:start;
+  font-size: 10px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+/* End copy for external style sheet */
+]]>
+</style>
+</defs>
+<!-- include default stylesheet if none specified -->
+<!--SVG Background-->
+<rect x='0' y='0' height='300' class='svgBackground' width='800'/>
+<g transform='translate( 14.2 26 )'>
+<rect x='0' y='0' height='255' class='graphBackground' width='702.8'/>
+<path d='M 0 0 v255' class='axis' id='xAxis'/>
+<path d='M 0 255 h702.8' class='axis' id='yAxis'/>
+<text y='270' x='29.2833333333333' class='xAxisLabels' style='text-anchor: middle'>
+November
+</text>
+<text y='270' x='146.416666666667' class='xAxisLabels' style='text-anchor: middle'>
+January
+</text>
+<text y='270' x='263.55' class='xAxisLabels' style='text-anchor: middle'>
+March
+</text>
+<text y='270' x='380.683333333333' class='xAxisLabels' style='text-anchor: middle'>
+May
+</text>
+<text y='270' x='497.816666666667' class='xAxisLabels' style='text-anchor: middle'>
+July
+</text>
+<text y='270' x='614.95' class='xAxisLabels' style='text-anchor: middle'>
+September
+</text>
+<text x='-3' y='NaN' class='yAxisLabels' style='text-anchor: end'>
+0
+</text>
+<rect x='0.0' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='24.2833333333333' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='58.5666666666667' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='82.85' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='117.133333333333' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='141.416666666667' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='175.7' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='199.983333333333' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='234.266666666667' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='258.55' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='292.833333333333' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='317.116666666667' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='351.4' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='375.683333333333' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='409.966666666667' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='434.25' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='468.533333333333' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='492.816666666667' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='527.1' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='551.383333333333' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='585.666666666667' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='609.95' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<rect x='644.233333333333' y='NaN' height='NaN' class='fill1' width='24.2833333333333'/>
+<rect x='668.516666666667' y='NaN' height='NaN' class='fill2' width='24.2833333333333'/>
+<g/>
+</g>
+<text x='400' y='16' class='mainTitle'>
+Commits per month
+</text>
+<g transform='translate(727.0 46)'>
+<rect x='0' y='0' height='12' class='key1' width='12'/>
+<text x='17' y='12' class='keyText'>
+Revisions
+</text>
+<rect x='0' y='17' height='12' class='key2' width='12'/>
+<text x='17' y='29' class='keyText'>
+Changes
+</text>
+</g>
+</svg>

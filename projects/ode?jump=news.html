@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Open Design Engine - News - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../javascripts/jstoolbar/jstoolbar.js%3F1359925542" type="text/javascript"></script><script src="../javascripts/jstoolbar/textile.js%3F1359925542" type="text/javascript"></script><script src="../javascripts/jstoolbar/lang/jstoolbar-en.js%3F1359925542" type="text/javascript"></script><link href="../stylesheets/jstoolbar.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="ode/news.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/ode.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/ode.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="ode%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="ode%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="ode/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="ode%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="ode/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="ode%3Fjump=news.html" class="news selected">News</a></li>
+<li><a href="ode/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="ode/boards.html" class="boards">Forums</a></li>
+<li><a href="ode%3Fjump=files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/ode/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+</div>
+
+<div id="add-news" style="display:none;">
+<h2>Add news</h2>
+<form action="ode%3Fjump=news.html" class="tabular" id="news-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>
+
+<div class="box tabular">
+<p><label for="news_title">Title<span class="required"> *</span></label><input id="news_title" name="news[title]" size="60" type="text" /></p>
+<p><label for="news_summary">Summary</label><textarea cols="60" id="news_summary" name="news[summary]" rows="2"></textarea></p>
+<p><label for="news_description">Description<span class="required"> *</span></label><textarea class="wiki-edit" cols="60" id="news_description" name="news[description]" rows="15"></textarea></p>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var wikiToolbar = new jsToolBar($('news_description')); wikiToolbar.setHelpLink('<a href="http://opendesignengine.net/projects/ode/\&quot;/help/wiki_syntax.html\&quot;" onclick=\"window.open(&quot;/help/wiki_syntax.html&quot;, &quot;&quot;, &quot;resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes&quot;); return false;\">Text formatting<\/a>'); wikiToolbar.draw();
+//]]>
+</script>
+
+<input name="commit" type="submit" value="Create" />
+<a accesskey="r" href="ode%3Fjump=news.html#" onclick="new Ajax.Updater('preview', '/news/preview?project_id=ode', {asynchronous:true, evalScripts:true, method:'get', parameters:Form.serialize('news-form') + '&amp;authenticity_token=' + encodeURIComponent('b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=')}); return false;">Preview</a> |
+<a href="ode%3Fjump=news.html#" onclick="Element.hide(&quot;add-news&quot;)">Cancel</a>
+</form>
+<div id="preview" class="wiki"></div>
+</div>
+
+<h2>News</h2>
+
+
+
+    <h3>
+    <a href="../news/27.html">Public Beta is here!!!</a>
+    (5 comments)</h3>
+    <p class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="ode/activity%3Ffrom=2012-12-02.html" title="12/02/2012 02:34 pm">almost 10 years</a> ago</p>
+    <div class="wiki">
+    <p>With the help of <a href="http://www.discoded.com/" class="external">Kevin Bouwkamp</a>, Bryan Christian, and <a href="http://schoolfactory.org/" class="external">The School Factory</a>, we have reached a critical milestone: The Public Beta of <strong>ODE</strong>.  Self-registration for user accounts is now active, and we are ready for our next round of promotion of <strong>Open Design Engine</strong>.  Please share the news on Twitter, Facebook, Google+, and your own personal blogs (be sure to link to <a href="https://opendesignengine.net/news/27" class="external"><strong>this page</strong></a>).  And, if you have not <a href="https://opendesignengine.net/account/register" class="external">signed up</a> for an account yet, please do so.  Then, <a href="https://opendesignengine.net/projects/new" class="external">start a project</a> on <strong>ODE</strong> and document one of your <a href="http://www.oshwa.org/definition/" class="external">Open Source Hardware</a> projects (or document a new one from day one).</p>
+
+
+	<p>And this is just the beginning.  We are actively improving the site.  For example, just this weekend Kevin completed the <a href="https://opendesignengine.net/projects/ode/wiki/Features#Embed-Chipin-Badge" class="external">funding plugin</a>, allowing users to insert Kickstarter badges and Paypal buttons into any field which supports wiki-syntax (this is in addition to earlier support developed by <a href="http://littlelines.com/" class="external">Littlelines</a> which enabled users to insert Pledgie and ChipIn badges).  Future plans include <a href="https://opendesignengine.net/issues/51" class="external">adding support for integrated git repositories</a> and <a href="https://opendesignengine.net/versions/4" class="external">major improvements to the user interface</a>.  As always, watch the <a href="https://opendesignengine.net/projects/ode/roadmap" class="external">roadmap</a> to keep up with our plans and progress.</p>
+
+
+	<p>Thanks to all of our supporters, backers, and volunteers.  We are looking forward to growing <strong>Open Design Engine</strong> into a great site for hosting open source hardware projects.  And remember, Makers, <em>document what you make</em>.</p>
+    </div>
+
+    <h3>
+    <a href="../news/9.html">Another step closer to the public beta</a>
+    (20 comments)</h3>
+    <p class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="ode/activity%3Ffrom=2012-06-24.html" title="06/24/2012 03:44 pm">over 10 years</a> ago</p>
+    <div class="wiki">
+    <p>Today we migrated <strong>ODE</strong> to its production server.  I am sure we will have a few bugs to work through over the next week or so, but this is a significant step in the path toward launching the public beta.  Thank you to School Factory and our volunteers who helped make this possible.</p>
+    </div>
+
+    <h3>
+    <a href="../news/4.html">ODE v0.2 - Public Beta development to start in November</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="ode/activity%3Ffrom=2011-10-28.html" title="10/28/2011 02:15 pm">about 11 years</a> ago</p>
+    <div class="wiki">
+    <p>Our <a href="http://www.kickstarter.com/projects/373493158/open-hardware-needs-a-sourceforge-of-its-own" class="external">KickStarter campaign</a>" was a success.  We received $6237 in pledges from 166 backers, and heard many great ideas for future development.  Thank you to everyone who backed us, shared the KickStarter link, and participated in the many discussions on and off line.  We have already been in contact with our developers at Littlelines, and we will begin development on <a href="../versions/2.html" class="version">v0.2 - Public Beta</a> in November.  Keep an eye out here and on the <a href="http://www.kickstarter.com/projects/373493158/open-hardware-needs-a-sourceforge-of-its-own/posts" class="external">KickStarter Updates Page</a> for more news.</p>
+    </div>
+
+    <h3>
+    <a href="../news/2.html">Working toward v0.1 - Private Alpha</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="ode/activity%3Ffrom=2011-09-22.html" title="09/22/2011 05:34 pm">about 11 years</a> ago</p>
+    <div class="wiki">
+    <p>As can be seen by the lack of recent updates, progress ground to a halt over the summer.  My other Mach 30 commitments and my PhD research pretty much meant there was no time for working on ODE.  Not to mention, my formal training is in rocket science not web development, so when I did get time to work on ODE, it was slow going.  But I am here to tell you we have started work again in earnest.</p>
+
+
+	<p>Starting this September, Mach 30 has been partnering with our first ODE sponsor, <a href="http://littlelines.com/" class="external">Littlelines</a>.  They are a Ruby on Rails development shop here in Dayton, OH, and they are going to be the developers for ODE.  As a sponsor, they are graciously giving Mach 30 a discounted rate on their work.  Many thanks to Littlelines.</p>
+
+
+	<p>With a developer in hand, we are now working to get ODE up and running, starting with v0.1, the private alpha, and looking toward v0.2, the public beta.  If you take a look at the <a href="../versions/1.html" class="version">v0.1 - Private Alpha</a> specs, you can see we are moving ahead quite well.  We only need a few more plugins installed and configured to be able to call this first release complete.  We also managed to get a head start on <a href="../versions/2.html" class="version">v0.2 - Public Beta</a>.</p>
+
+
+	<p>Speaking of the next version, we are also launching a <a href="http://www.kickstarter.com/projects/373493158/open-hardware-needs-a-sourceforge-of-its-own" class="external">KickStarter</a> to raise the funds for development.  If you give $25 or more, we will give you an early access account on the private alpha so you can host your projects today, and help provide valuable feedback.  So, please donate $25 today and help us spread the word about the urgent need to publish open source hardware designs and the role Open Design Engine can play in filling that need.</p>
+
+
+	<a name="Click-Here-to-Kickstart-ODE-and-start-documenting-your-own-Open-Source-Hardware"></a>
+<h2 ><a href="http://www.kickstarter.com/projects/373493158/open-hardware-needs-a-sourceforge-of-its-own" class="external">Click Here to Kickstart ODE and start documenting your own Open Source Hardware!</a><a href="ode%3Fjump=news.html#Click-Here-to-Kickstart-ODE-and-start-documenting-your-own-Open-Source-Hardware" class="wiki-anchor">&para;</a></h2>
+    </div>
+
+    <h3>
+    <a href="../news/1.html">Progress Report and Schedule Updates</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="ode/activity%3Ffrom=2011-05-12.html" title="05/12/2011 02:58 pm">over 11 years</a> ago</p>
+    <div class="wiki">
+    <p>When the Mach 30 Board decided to <a href="http://mach30.org/files/plans/2011/OS2HW_Bus_Route.pdf" class="external">move forward with implementing ODE in Redmine</a> at its <a href="http://mach30.org/pub/strategic-plans/2011" class="external">2011 Planning Meetings</a>, I laid out a release schedule based on a series of design discussions inside and outside of Mach 30.  This schedule aimed to quickly release v0.1 based on entirely existing code from the Redmine community, so I assumed I could get it up and running in just a few days.  I failed to account for the time it would take to get up to speed with the tools I am using (take a look at the <a href="ode/wiki/Installation_Instructions.html" class="wiki-page">Installation Instructions</a> to see the challenges faced in standing up Redmine with svn, etc), and so naturally we are a little behind in the schedule.  The original due date for v0.1 was May 1, 2011.  As I write this, I am 11 days late and counting.  To add insult to injury, my workload outside Mach 30 has shot up dramatically in recent weeks, severely limiting my available hours to work on ODE.  Finally, v0.2, due at the end of June was even more ambitious, including a number of custom plugins for Redmine and a UI facelift.  Given the progress on v0.1, there is no way v0.2 will be released on time.</p>
+
+
+	<p>Clearly it is time for a new plan.  First, I will be moving the due date for v0.1 out to May 31, 2011.  Given the extra time, I also want to move Issue <a href="../issues/31.html" class="issue status-5 priority-4 closed" title="Install SSL support to live ODE server (Closed)">#31</a>, which is one of the more pressing security issues, up from v0.2 to v0.1 (we'll have to see if this was a good idea or not as time progresses).  I am also going to limit the scope of v0.2 to just the minimum number of new features (for example, I think it must include Feature <a href="../issues/11.html" class="issue status-3 priority-2 closed" title="Add Terms of Service and Privacy Policy to account creation (Resolved)">#11</a> and Feature <a href="../issues/12.html" class="issue status-5 priority-2 closed" title="Require all projects to have Open Source licenses (Closed)">#12</a>, but most of the others can probably wait).  Finally, I will setup quarterly releases through the end of the year, each of which will focus on only one or two core features.  Stay tuned for more updates.</p>
+
+
+	<p><em>ad astra per civitas</em></p>
+    </div>
+
+
+<p class="pagination"></p>
+
+<p class="other-formats">Also available in:
+	<span><a href="ode/news.atom" class="atom" rel="nofollow">Atom</a></span>
+</p>
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

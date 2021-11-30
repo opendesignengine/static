@@ -1,0 +1,5 @@
+h1. Resources
+
+h2. Link Budget References
+
+* "KickSat Ground Station Link Budget":https://github.com/kicksat/groundstation/blob/master/Link%20Budgets.xlsx (MS Excel)

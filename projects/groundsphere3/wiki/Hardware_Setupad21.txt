@@ -1,0 +1,33 @@
+h1. Hardware Setup
+
+{{>toc}}
+
+h2. Tools
+
+None.
+
+h2. Materials
+
+* (1) H-01: RTL-SDR Dongle
+* (1) H-02: 1/4 Wave Monpole Antenna
+* (1) H-03: TRAM NMO 5 1/2'' Magnet NMO Mounting with Rubber Boot
+
+h2. Safety Issues
+
+* Be careful of static discharge for the RTL-SDR dongle.
+* Antenna is very conductive, be careful of electric shock near high voltage sources.
+
+h2. Product
+
+Full Hardware Assembly
+
+h2. Procedure
+
+# Place *NMO Base* on a level surface
+!prep_antenna_1.jpg!
+# Screw *Monopole Antenna* onto *NMO Base*
+!prep_antenna_2.jpg!
+# Screw SMA connector end of *NMO Base* to the *RTL-SDR Dongle*
+!prep_antenna_3.jpg!
+# Plug *RTL-SDR Dongle* into your computer's USB port
+!prep_antenna_4.jpg!

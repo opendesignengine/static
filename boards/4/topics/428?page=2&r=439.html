@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Future Design Discussion - v2.0 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-428-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Future Design Discussion - v2.0</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-04-01.html" title="04/01/2013 03:07 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>This has been copied from an email conversation about Shepard requirements.</p>
+
+
+	<p>Aaron Harper wrote:</p>
+
+
+	<p>I think the NAR measurement was concerned about burn-thru, otherwise there is no reason to measure temperature at those two points.  I didn't see anything about sensor specs, lag and slew rates, measurement resolution, or time resolution, and I get the feeling that these may have been outside the skill set of the NAR spec writers.  This means we will probably have to write our own.</p>
+
+
+	<p>Some possible specs to yield a usable dataset:</p>
+
+
+	<p>1. The temperature sensor must be used in accordance with it's design.  A contact sensor such as a thermocouple must be put in contact with the motor casing, while a non-contact (IR) sensor may need to be placed a minimum distance away from the casing to form a valid thermal image.</p>
+
+
+	<p>2. The temperature sensor must be able to read 50% or more of the temperature which would destroy the motor casing, ie. if the casing will ignite at 500F, the sensor must be able to measure to 250F as a minimum.  This refers to the sensor's specification, not the calibration of the measurement circuit's full scale.</p>
+
+
+	<p>3. The temperature sensor must be read as an analog value with a minimum of 8 bit precision.  This will allow a very small change to be spotted even if it were to occur in a destructive event since the system could register a change as small as 0.004 degrees in the above example.</p>
+
+
+	<p>4. The temperature measurement system must read the temperature at least 32 times during the engine thrust cycle.  In a 1/2A3-2T, the system must measure the temperature at least 32 times during the 3 second propellant burn.  This is a measurment every 93mS or a frequency of 10.67Hz.</p>
+
+
+	<p>5. The sensor must be able to yield valid data at least 1/8 of the way through the test.  This means that in the example above, the sensor may not lag more than 375mS.</p>
+
+
+	<p>Thoughts?</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (30)</h3>
+
+  <div class="message reply" id="message-466">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=466.html#message-466">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-13.html" title="05/13/2013 01:05 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think we can make the necessary changes to the v2.0 structure to accommodate this sensor (and that we can probably hack the v1.0 structure to make it work during preliminary testing of the v2.0 DAQ).  So, I would agree that we have a temp sensor to order and test.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-467">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=467.html#message-467">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-05-13.html" title="05/13/2013 01:33 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>We have discussed ideas informally about redesigning the motor mount so more of the casing is exposed. The original thought was to minimize damage to the mount in case of a motor failure (explosion), but it would help us here too.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-491">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=491.html#message-491">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-12.html" title="06/12/2013 04:02 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>This idea has been brewing in my head for awhile, and a conversation I had with J the other day got me thinking more about it again.</p>
+
+
+	<p>There's been discussion of using the BeagleBone Black on Shepard 2.0, and taking advantage of it's built in Ethernet interface. This brings up the questions of how do you configure the network (do you have the Bone do DHCP, etc), and what happens when a teacher (or anyone else) can't get their laptop's Ethernet interface configured properly to work with Shepard.</p>
+
+
+	<p>There are technologies like <a href="http://en.wikipedia.org/wiki/ATA_over_Ethernet" class="external">ATAoE</a> that utilize the lower layers of Ethernet to gain speed and control, and I'm wondering if the same thing could be done with Shepard 2.0 if we use the BeagleBone.</p>
+
+
+	<p><a class="external" href="http://aschauf.landshut.org/fh/linux/udp_vs_raw/ch01.html">http://aschauf.landshut.org/fh/linux/udp_vs_raw/ch01.html</a></p>
+
+
+	<p>I'm thinking that if we did it right, all that would be required is to connect the Bone to a laptop with a cross-over cable. I need to research it more though if folks agree that this might be a viable idea.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-492">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=492.html#message-492">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-12.html" title="06/12/2013 06:55 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>The easiest way, since it is unlikely that the test stand would be connected to multiple interfaces or a network, just use a crossover Ethernet cable and have the Beaglebone run a DHCP server with a pool of one address and the subnet of 255.255.255.254 (/31).  With everything on the laptop set to auto, it will hook up with no trouble.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-493">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="428%3Fr=493.html#message-493">RE: Future Design Discussion - v2.0</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-06-12.html" title="06/12/2013 09:16 pm">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>The thing that worries me is that a teacher with no IT staff could have their Ethernet interface set to static and not understand why the software can't connect to Shepard.</p>
+
+
+	<p>Two things that might help though are:</p>
+
+
+	<p>1. Have the software detect a static address configuration and warn the user.<br />2. Just have the users rely on the forums.</p></div>
+  
+  </div>
+
+<p class="pagination"><a href="http://opendesignengine.net/boards/4/topics/428?page=1&amp;r=439">« Previous</a> <a href="http://opendesignengine.net/boards/4/topics/428?page=1&amp;r=439">1</a> 2  (26-30/30)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/428.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

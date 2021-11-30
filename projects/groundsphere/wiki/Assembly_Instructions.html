@@ -1,0 +1,854 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - Assembly Instructions - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/groundsphere.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../groundsphere%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../groundsphere%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../../groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Navigation</a><a href="Assembly_Instructions.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Ground-Sphere-CubeSat-Ground-Station"></a>
+<h3 >Ground Sphere CubeSat Ground Station<a href="Assembly_Instructions.html#Ground-Sphere-CubeSat-Ground-Station" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><a href="Wiki.html" class="wiki-page">Start Here</a></li>
+		<li><a href="Versions.html" class="wiki-page">Versions</a></li>
+	</ul>
+
+
+	<a name="User-Manuals"></a>
+<h4 >User Manuals<a href="Assembly_Instructions.html#User-Manuals" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>End user manuals, including how to assemble from kit and operating instructions for predicting flyovers and receiving "space tweets".</p>
+
+
+	<ul>
+	<li><a href="Kit_Assembly_Instructions.html" class="wiki-page">Kit Assembly Instructions</a></li>
+		<li><a href="Software_Installation.html" class="wiki-page">Software Installation</a></li>
+		<li><a href="Operating_Manual.html" class="wiki-page">Operating Manual</a></li>
+		<li><a href="Safety_Procedures.html" class="wiki-page">Safety Procedures</a></li>
+	</ul>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="Assembly_Instructions.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>Full OSHW project documentation - covers component acquisition and assembly, packaging of kits, and other project level documentation needed to replicate the Ground Sphere from source.</p>
+
+
+	<ul>
+	<li><a href="BoM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Software Source Code</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/SoftwareFirmware_Summary" class="wiki-page new">Software/Firmware Summary</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Errata" class="wiki-page new">Errata</a></li>
+	</ul>
+
+
+	<a name="Systems-Engineering-Process"></a>
+<h4 >Systems Engineering Process<a href="Assembly_Instructions.html#Systems-Engineering-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>Full OSHW project design documentation - covers design from concept through final design.</p>
+
+
+	<ol>
+	<li><a href="Initial_Questions.html" class="wiki-page">Initial Questions</a></li>
+		<li><a href="Requirements_Document.html" class="wiki-page">Requirements Document</a></li>
+		<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="Budget.html" class="wiki-page">Budget</a></li>
+		<li><a href="Timeline.html" class="wiki-page">Timeline</a></li>
+		<li><a href="Preliminary_Design.html" class="wiki-page">Preliminary Design</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Detailed_Design" class="wiki-page new">Detailed Design</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Design_Review" class="wiki-page new">Design Review</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Procurement" class="wiki-page new">Procurement</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Manufacture" class="wiki-page new">Manufacture</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Integration" class="wiki-page new">Integration</a></li>
+		<li><a href="Testing.html" class="wiki-page">Testing</a></li>
+		<li><a href="http://opendesignengine.net/projects/groundsphere/wiki/Disposal" class="wiki-page new">Disposal</a></li>
+		<li><a href="Meeting_Minutes.html" class="wiki-page">Meeting Minutes/Notes</a></li>
+		<li><a href="Resources.html" class="wiki-page">Resources/Links</a></li>
+	</ol>
+
+<h3>Wiki</h3>
+
+<a href="../../groundsphere%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-234-watcher"></span>
+
+
+
+
+
+
+<a href="http://opendesignengine.net/projects/groundsphere/wiki/Assembly_Instructions/history" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <a name="Ground-Sphere-Prototype-Assembly-Instructions-v02"></a>
+<h1 >Ground Sphere Prototype Assembly Instructions v0.2<a href="Assembly_Instructions.html#Ground-Sphere-Prototype-Assembly-Instructions-v02" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Assembly_Instructions.html#Ground-Sphere-Prototype-Assembly-Instructions-v02">Ground Sphere Prototype Assembly Instructions v0.2</a><ul><li><a href="Assembly_Instructions.html#Introduction">Introduction</a></li><li><a href="Assembly_Instructions.html#Structural-Component-Pre-assembly">Structural Component Pre-assembly</a><ul><li><a href="Assembly_Instructions.html#Tools">Tools</a></li><li><a href="Assembly_Instructions.html#Materials">Materials</a></li><li><a href="Assembly_Instructions.html#Safety-issues">Safety issues</a></li><li><a href="Assembly_Instructions.html#Product-or-Outcome">Product or Outcome</a></li><li><a href="Assembly_Instructions.html#Procedure">Procedure</a></li></ul>
+</li><li><a href="Assembly_Instructions.html#Assembling-the-Phasing-Loop">Assembling the Phasing Loop</a><ul><li><a href="Assembly_Instructions.html#Tools">Tools</a></li><li><a href="Assembly_Instructions.html#Materials">Materials</a></li><li><a href="Assembly_Instructions.html#Safety-issues">Safety issues</a></li><li><a href="Assembly_Instructions.html#Product-or-Outcome">Product or Outcome</a></li><li><a href="Assembly_Instructions.html#Procedure">Procedure</a></li></ul>
+</li><li><a href="Assembly_Instructions.html#Building-the-Ground-Plane">Building the Ground Plane</a><ul><li><a href="Assembly_Instructions.html#Tools">Tools</a></li><li><a href="Assembly_Instructions.html#Materials">Materials</a></li><li><a href="Assembly_Instructions.html#Safety-Issues">Safety Issues</a></li><li><a href="Assembly_Instructions.html#Product-or-Outcome">Product or Outcome</a></li><li><a href="Assembly_Instructions.html#Procedure">Procedure</a></li></ul>
+</li><li><a href="Assembly_Instructions.html#Installing-the-Phasing-Loop-Ground-Plane-and-RF-Line-Assembly">Installing the Phasing Loop Ground Plane and RF Line Assembly</a><ul><li><a href="Assembly_Instructions.html#Tools">Tools</a></li><li><a href="Assembly_Instructions.html#Materials">Materials</a></li><li><a href="Assembly_Instructions.html#Safety-issues">Safety issues</a></li><li><a href="Assembly_Instructions.html#Product-or-Outcome">Product or Outcome</a></li><li><a href="Assembly_Instructions.html#Procedure">Procedure</a></li></ul>
+</li><li><a href="Assembly_Instructions.html#Ground-Sphere-Base-Preparation-and-Electronics-Integration">Ground Sphere Base Preparation and Electronics Integration</a><ul><li><a href="Assembly_Instructions.html#Tools">Tools</a></li><li><a href="Assembly_Instructions.html#Materials">Materials</a></li><li><a href="Assembly_Instructions.html#Safety-issues">Safety issues</a></li><li><a href="Assembly_Instructions.html#Product-or-Outcome">Product or Outcome</a></li><li><a href="Assembly_Instructions.html#Procedure">Procedure</a></li></ul>
+</li><li><a href="Assembly_Instructions.html#Aerial-Fabrication">Aerial Fabrication</a><ul><li><a href="Assembly_Instructions.html#Tools">Tools</a></li><li><a href="Assembly_Instructions.html#Materials">Materials</a></li><li><a href="Assembly_Instructions.html#Safety-issues">Safety issues</a></li><li><a href="Assembly_Instructions.html#Product-or-Outcome">Product or Outcome</a></li><li><a href="Assembly_Instructions.html#Procedure">Procedure</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h2 >Introduction<a href="Assembly_Instructions.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Version 0.2 is the second prototype, which sacrifices some of the flexibility of v0.1 in order to move toward a more polished kit version of the ground station.  The overall design is the same between v0.1 and v0.2, but the details and several components have changed. Below are the assembly instructions for v0.2.</p>
+
+
+	<a name="Structural-Component-Pre-assembly"></a>
+<h2 >Structural Component Pre-assembly<a href="Assembly_Instructions.html#Structural-Component-Pre-assembly" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools"></a>
+<h3 >Tools<a href="Assembly_Instructions.html#Tools" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Hacksaw or chop saw</li>
+		<li>Sharp knife</li>
+		<li>Drill or drill press</li>
+		<li>Ruler or caliper</li>
+		<li>Pen or pencil</li>
+		<li>Optional:  Centering jig for drill press</li>
+	</ul>
+
+
+	<a name="Materials"></a>
+<h3 >Materials<a href="Assembly_Instructions.html#Materials" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>1ea (ANT01) ¾” sched 40 PVC coupler</li>
+		<li>1 ea length of ¾” PVC sched 40 pipe 3” or longer.  Makes (ANT02) coupling sections</li>
+		<li>1ea (ANT05) ¾” PVC sched 40 to ½” NPT male adapter</li>
+		<li>1ea (ANT06) ¾” PVC sched 40 end cap</li>
+		<li>PVC cement primer (purple solvent)</li>
+		<li>PVC pipe cement</li>
+		<li>Optional: PVC safe spray paint in a desirable color.</li>
+	</ul>
+
+
+	<a name="Safety-issues"></a>
+<h3 >Safety issues<a href="Assembly_Instructions.html#Safety-issues" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Care must be taken when working with powertools, sharp blades, or saws. </li>
+		<li>When using a chop saw, drill, or drill press, eye protection should be worn. </li>
+		<li>PVC solvent and cement must be used in well ventilated areas.</li>
+		<li>Spray paint must be used in a well ventilated area, and should be done in a paint booth or outdoors.</li>
+	</ul>
+
+
+	<a name="Product-or-Outcome"></a>
+<h3 >Product or Outcome<a href="Assembly_Instructions.html#Product-or-Outcome" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>All plastic components for the Ground Sphere Mk2 upper structure.</p>
+
+
+	<a name="Procedure"></a>
+<h3 >Procedure<a href="Assembly_Instructions.html#Procedure" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Using a chop saw or hack saw, cut 2 sections of ¾” PVC sched 40 pipe 1¼” long.</li>
+		<li>Using a sharp knife debur the inside and outside of the sections.  </li>
+		<li>These become coupling sections (ANT02).</li>
+		<li>Using the PVC cement primer (purple solvent), lightly coat the whole outside of both coupling sections.</li>
+		<li>Without dipping the applicator back into the primer, lightly coat the inside of the ¾” PVC sched 40 to ½” NPT male adapter. (ANT05).</li>
+		<li>Without dipping the applicator back into the primer, lightly coat the inside of the ¾” PVC sched 40 end cap (ANT06).</li>
+		<li>Lightly coat the inside of the unthreaded side of the ¾” PVC sched 40 to ½” NPT male adapter (ANT05) with PVC cement.</li>
+		<li>Quickly insert one of the coupling sections (ANT02) and set aside to cure.</li>
+		<li>Lightly coat the inside sides of the ¾” PVC sched 40 end cap (ANT06) with PVC cement.</li>
+		<li>Quickly insert the remaining coupling section (ANT02) and set aside to cure.</li>
+		<li>As accurately as possible drill a 3/16” hole in the exact center of the side on the ¾” sched 40 PVC coupler (ANT01).  The use of a drill press and centering jig is recommended.</li>
+		<li>Rotating the part 180 degrees, drill a 3/16” hole in the exact center of the opposite side on the ¾” sched 40 PVC coupler (ANT01). </li>
+		<li>Rotating the part 90 degrees, drill a 3/16” hole in the exact center of the ¾” sched 40 PVC coupler (ANT01) between the first two holes.</li>
+		<li>Rotating the part 180 degrees, drill a 3/16” hole in the exact center of the remaining side on the ¾” sched 40 PVC coupler (ANT01). </li>
+		<li>The holes should be at the 12 o’clock, 3 o’clock’ 6 o’clock, and 9 o’clock positions when sighting down the ¾” sched 40 PVC coupler (ANT01). </li>
+		<li>If it is desirable to paint the ground station components, this is a good time to do so.</li>
+		<li>Set the units aside for integration with the antenna body.</li>
+	</ol>
+
+
+	<a name="Assembling-the-Phasing-Loop"></a>
+<h2 >Assembling the Phasing Loop<a href="Assembly_Instructions.html#Assembling-the-Phasing-Loop" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools"></a>
+<h3 >Tools<a href="Assembly_Instructions.html#Tools" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Needle nose pliers</li>
+		<li>Wire cutters</li>
+		<li>Wire strippers</li>
+		<li>X-acto knife</li>
+		<li>Terminal crimper</li>
+		<li>Ruler or caliper</li>
+		<li>Dental pick or needle</li>
+	</ul>
+
+
+	<a name="Materials"></a>
+<h3 >Materials<a href="Assembly_Instructions.html#Materials" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>3ea (ANT10) Insulated crimp ring terminal Red (22-18 AWG) </li>
+		<li>1ea (ANT11) Insulated crimp ring terminal Blue (16-14 AWG)</li>
+		<li>1ea (ANT13) Antenna line, SMA female connector to pigtail</li>
+		<li>1ea (ANT15) Tuned length of RG62u 90ohm coaxial cable</li>
+	</ul>
+
+
+	<a name="Safety-issues"></a>
+<h3 >Safety issues<a href="Assembly_Instructions.html#Safety-issues" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Care must be taken when working with hand tools, sharp blades, or sharp points.</li>
+		<li>Coaxial cable wires, both the center conductor and shield wire can easily pierce the skin.</li>
+		<li>Should a shield wire pierce the skin, remove it carefully since it can break off well below the surface of the skin, requiring painful removal</li>
+	</ul>
+
+
+	<a name="Product-or-Outcome"></a>
+<h3 >Product or Outcome<a href="Assembly_Instructions.html#Product-or-Outcome" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>All radio frequency (RF) components for the Ground Sphere Mk2 upper structure.</p>
+
+
+	<a name="Procedure"></a>
+<h3 >Procedure<a href="Assembly_Instructions.html#Procedure" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Cut the RG62u 90ohm cable (ANT15) to precisely 2.775”.  
+	<ol>
+	<li>Note:  the RG62u 90ohm cable (ANT15) should already be cut to length.  </li>
+		<li>Verify the length.</li>
+	</ol>
+	</li>
+		<li>Using the X-acto knife, strip ¾” from each end of the RG62u segment (ANT15) and retain the insulation tube.  
+	<ol>
+	<li>Note:  If something goes wrong with the RG62u segment (ANT15), do not cut off the messed up end and retry. It is a specific length and must remain so.  </li>
+	</ol>
+	</li>
+		<li>In the event of breakage, use another segment of the correct length.</li>
+		<li>Using the dental pick or needle, gently unbraid the shield from both ends of the RG62u segment, twisting the strands into a single strand.
+	<ol>
+	<li>Some breakage of the shield strands is unavoidable.  </li>
+		<li>Remove any broken strands.</li>
+	</ol>
+	</li>
+		<li>Using the X-acto knife, strip ¼” of insulation from the center conductor from both ends of the RG62u segment (ANT15).  </li>
+		<li>With the needle nose pliers, form a hook in the end of both of the center conductors as small as possible, a 1/32” across.</li>
+		<li>Slip a red ring terminal (ANT10) over one of the center conductors.  The hook should just fit into the hole of the ring terminal (ANT10).</li>
+		<li>Crimp the ring terminal (ANT10) with the crimper.</li>
+		<li>Trim the insulation tubes removed from the RG62u segment (ANT15) in step 2 into ½”.</li>
+		<li>Slip one of the ½” insulation tubes over the shield wires twisted in step 3 on the same side as the terminal we just terminated in step 7.</li>
+		<li>Insert a red ring terminal (ANT10) over the exposed twisted shield wire insulated with the insulation tube in step 9.  
+	<ol>
+	<li>Allow a small amount of play in the length (the insulation tube should not be tight)</li>
+		<li>Crimp the ring terminal with the crimper</li>
+	</ol>
+	</li>
+		<li>Cut the antenna line (ANT13) at six inches from the end of the connector and strain relief.</li>
+		<li>Use the wire strippers at the 14ga setting and gently strip ¾” from the antenna line ( ANT13) and retain the insulation tube.</li>
+		<li>Using the dental pick or needle, gently unbraid the shield from the stripped end of the antenna line (ANT13), twisting them into a single strand.
+	<ol>
+	<li>Some breakage of the shield strands is unavoidable.  </li>
+		<li>Remove any broken strands.</li>
+	</ol>
+	</li>
+		<li>Using the X-acto knife, very carefully strip ¼” of insulation from the exposed center conductor on the antenna line (ANT13).
+	<ol>
+	<li>Note:  If something goes wrong with the antenna line (ANT13), you may cut off the messed up end and retry, beginning at step 11.</li>
+		<li>There is enough extra to correct one mistake in this manner.</li>
+		<li>In the event of a second mistake on the same antenna line, discard the shortened antenna line and use another beginning at step 10.</li>
+	</ol>
+	</li>
+		<li>Slide the remaining ½” insulation tube over the remaining shield wires of the RG62u (ANT15) segment twisted in step 3.</li>
+		<li>Trim the insulation tube removed from the antenna line (ANT13) to a length of ½”</li>
+		<li>Carefully slide the insulation tube over the shield strands of the antenna line (ANT13) twisted together in step 12.</li>
+		<li>Insert a blue ring terminal (ANT11) over the exposed twisted shield wires on both the antenna line (ANT13) and the RG62u segment (ANT15) insulated with the insulation tubes in steps 14 and 16.  
+	<ol>
+	<li>Allow a small amount of play in the length (the insulation tube should not be tight)</li>
+		<li>Crimp the ring terminal with the crimper</li>
+	</ol>
+	</li>
+		<li>Insert a red ring terminal (ANT10) over both of the remaining exposed center conductors, on the antenna line (ANT13) and the RG62u segment (ANT15) and crimp the ring terminal tightly.</li>
+		<li>Set the unit aside for integration with the ground plane and antenna body</li>
+	</ol>
+
+
+	<a name="Building-the-Ground-Plane"></a>
+<h2 >Building the Ground Plane<a href="Assembly_Instructions.html#Building-the-Ground-Plane" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools"></a>
+<h3 >Tools<a href="Assembly_Instructions.html#Tools" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Scissors</li>
+		<li>Fine point permanent marker (Sharpie)    </li>
+		<li>Clothespins    </li>
+		<li>Wide eyed needle    </li>
+		<li>Ruler or tape measure    </li>
+		<li>X-acto knife    </li>
+		<li>Flush cutters or small diagonal cutters</li>
+		<li>A short piece of ¾” Schedule 40 PVC pipe for a fit test.</li>
+	</ul>
+
+
+	<a name="Materials"></a>
+<h3 >Materials<a href="Assembly_Instructions.html#Materials" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Paper for the pattern</li>
+		<li>1 ea (ANT16) Conductive fabric    </li>
+		<li>1 ea (ANT17) Round ABS plastic needlepoint canvas 9” diameter    </li>
+		<li>1 ea (ANT18) 15ft length of conductive thread</li>
+	</ul>
+
+
+	<a name="Safety-Issues"></a>
+<h3 >Safety Issues<a href="Assembly_Instructions.html#Safety-Issues" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Care must be taken when working with hand tools, sharp blades, or sharp points.</li>
+	</ul>
+
+
+	<a name="Product-or-Outcome"></a>
+<h3 >Product or Outcome<a href="Assembly_Instructions.html#Product-or-Outcome" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The complete ground plane assembly for the Ground Sphere Mk2.</p>
+
+
+	<a name="Procedure"></a>
+<h3 >Procedure<a href="Assembly_Instructions.html#Procedure" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Take a piece of paper and fold it in half four times on the diagonal until you have a cone.    </li>
+		<li>Using a ruler or tape measure, measure from the folded point and mark the radius at 3¾” on the paper with a fine point permanent marker.    </li>
+		<li>Using the scissors, cut the edge on a slight convex curve.</li>
+		<li>Using a ruler or tape measure, measure from the folded point and mark the radius at ½” on the paper with a fine point permanent marker.</li>
+		<li>Cut the radius on a slight concave curve.     </li>
+		<li>Unfold the paper and lay flat.</li>
+		<li>Verify the dimensions of the finished template.  It should be a 7 ½ inch diameter circle with a 1 inch diameter inner circle removed.</li>
+		<li>This pattern may be reused if multiple ground planes are to be made.</li>
+		<li>Using a ruler or tape measure, measure the plastic needlepoint canvas (ANT17) and measure across the center. Use one of the four sections that go straight across as a guide.</li>
+		<li>Using a fine point permanent marker, mark the gap between rings that exceeds 3½” from the centerpoint of the plastic needlepoint canvas (ANT17).     </li>
+		<li>Using a fine point permanent marker, mark the gap between rings that is ½” from the centerpoint of the plastic needlepoint canvas (ANT17).</li>
+		<li>Using a fine point permanent marker mark the plastic all the way around the radii of the measurements and marks made in steps 11 and 12, making a 7” and 1” circle.    </li>
+		<li>Using an X-acto knife, cut out center circle from the plastic needlepoint canvas (ANT17).  Leave the teeth of the plastic needlepoint canvas, which will be trimmed later.</li>
+		<li>Using scissors, cut out the outer circle and trim the teeth flush from the plastic needlepoint canvas (ANT17).</li>
+		<li>Use flush cutters or small diagonal cutters to trim the nubs from inner edge of the center 1” circle on the the plastic needlepoint canvas (ANT17) as tightly as can be accomplished with the tool. </li>
+		<li>DO NOT attempt to make the inner radius of the plastic needlepoint canvas (ANT17) completely smooth, as the remaining nubs hold the ground plane assembly snugly in place in the antenna coupling section (ANT02).    </li>
+		<li>Test fit the plastic needlepoint canvas (ANT17) on a section of ¾” Schedule 40 PVC pipe.
+	<ol>
+	<li>The plastic needlepoint canvas (ANT17) should fit, but not tightly nor deforming.</li>
+		<li>Trim as necessary.</li>
+	</ol>
+	</li>
+		<li>Fold the paper pattern in half on one of the fold lines from step 1.</li>
+		<li>Fold the conductive fabric (ANT16) in half at 4” from the cut edge so that the underside (less shiny side) is visible.</li>
+		<li>Place pattern on the folded conductive fabric (ANT16) so that it is completely on the conductive fabric (ANT16) and the fold of the pattern is flush with the fold of the fabric.</li>
+		<li>Using a fine point permanent marker trace both the inner and outer radius of the pattern on the folded fabric.     </li>
+		<li>With the conductive fabric (ANT16) still folded, cut out conductive fabric (ANT16) on the outer circumference tracing lines from step 21.         </li>
+		<li>Cut out center hole following the inner circumference tracing lines from step 21.         </li>
+		<li>Test fit the conductive fabric (ANT16) on a section of ¾” Schedule 40 PVC pipe as was done with the plastic needlepoint canvas in step 17.</li>
+		<li>Use clothespins to hold conductive fabric (ANT16) and plastic needlepoint canvas (ANT17) together at multiple points. There should be a ¼ inch overlap of conductive fabric (ANT16) on the outside edge. This overlap will shrink as the ground plane is sewn to the plastic needlepoint canvas.</li>
+		<li>Thread the wide eye needle with a 3ft section of conductive thread.  
+	<ol>
+	<li>Knot one end </li>
+		<li>Position the needle near the unknotted end of the thread.  </li>
+		<li>Note: stitch the Ground Sphere ground plane assembly with a single strand of conductive thread (ANT18).  </li>
+		<li>DO NOT use double strands, as this reduces the electrical conductivity and wastes thread.     </li>
+	</ol>
+	</li>
+		<li>Starting from the plastic needlepoint canvas (ANT17) side on the innermost ring, stitch down through a hole in the plastic needlepoint canvas (ANT17), drawing the conductive thread (ANT18) all the way through to the knot. </li>
+		<li>Move one square in either direction (clockwise or counterclockwise) and stitch through both layers drawing the conductive thread (ANT18) all the way through.</li>
+		<li>Continue in the chosen direction, working around the ring of holes, up one square, down the next. Go all the way around one 'circle' in the plastic needlepoint canvas. 
+	<ol>
+	<li>Note: Maintain a steady tension on the conductive thread while drawing it through the fabric.  Once the thread stops, DO NOT tighten the loop further.</li>
+		<li>Sew slowly to prevent the conductive thread (ANT18) from knotting. </li>
+		<li>The conductive thread (ANT18) tangles more easily than regular and is more likely to break.  </li>
+		<li>Keep the conductive fabric (ANT16) as smooth as possible. </li>
+		<li>Avoid folds or twists in the conductive fabric (ANT16) by going slowly and adjusting the clothespins frequently.</li>
+	</ol>
+	</li>
+		<li>When the circle is complete, skip a row and start the next circle outward. </li>
+		<li>When about 5-6” of conductive thread (ANT18) remain, work the conductive thread (ANT18) through the backs of the stitches on the plastic needlepoint canvas (ANT17) side heading back to the starting point where the knotted tail remains.</li>
+		<li>Bring the conductive thread (ANT18) up and through the square at the beginning (where the knot is) and remove the needle from the conductive thread (ANT18) leaving the remainder as a tail. These strands will be used to electrically connect the ground plane assembly to the antenna ground.</li>
+		<li>Should it be necessary to start a new thread during a round:
+	<ol>
+	<li>Knot the two pieces of conductive thread (ANT18) together with a square knot and continue sewing. </li>
+		<li>The conductive thread (ANT18) should always be linked to a previous section, unless it ends at the original square in the central circle.</li>
+	</ol>
+	</li>
+		<li>When 5-6 full circles are done, move to the outer row at the very edge of the plastic needlepoint canvas (ANT17) with a new piece of conductive thread (ANT18), prepared as per step 26. </li>
+		<li>Stitch all the way around the outermost holes of the plastic needlepoint canvas (ANT17).</li>
+		<li>Once the outer circle is complete, skip a row inward and start the next circle. </li>
+		<li>Continue this pattern until there are stitches in every other row from the edge to the center of the plastic needlepoint canvas (ANT17).</li>
+		<li>Once the stitching is complete, ensure all conductive thread (ANT18) ends travel down to the center of the plastic needlepoint canvas (ANT17) forming the ground line or are tied on to previous threads which do.</li>
+		<li>Trim off the excess conductive fabric (ANT16) from the outer edge of the ground plane.
+	<ol>
+	<li>Taking care to not cut into the plastic needlepoint canvas(ANT17) below the conductive fabric (ANT16). </li>
+		<li>The surplus conductive fabric (ANT16) may be uneven or irregular.  This is normal and is due to the pull of the conductive fabric (ANT16) and the tension of the stitches.</li>
+	</ol>
+	</li>
+		<li>Set the unit aside for integration with the phasing loop and RF line assembly.</li>
+	</ol>
+
+
+	<a name="Installing-the-Phasing-Loop-Ground-Plane-and-RF-Line-Assembly"></a>
+<h2 >Installing the Phasing Loop Ground Plane and RF Line Assembly<a href="Assembly_Instructions.html#Installing-the-Phasing-Loop-Ground-Plane-and-RF-Line-Assembly" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools"></a>
+<h3 >Tools<a href="Assembly_Instructions.html#Tools" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Needle nose pliers</li>
+		<li>Wire cutters</li>
+		<li><a href="http://opendesignengine.net/issues/2" class="issue status-3 priority-2 closed" title="Install available Bot filters (Resolved)">#2</a> phillips screwdriver</li>
+		<li>Dental pick or needle</li>
+		<li>Bench vice or other method of holding the work</li>
+		<li>Sharpie or other permanent marker</li>
+	</ul>
+
+
+	<a name="Materials"></a>
+<h3 >Materials<a href="Assembly_Instructions.html#Materials" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>1 ea (ANT01) ¾” sched 40 PVC coupler with holes drilled at 90 degree intervals</li>
+		<li>1 ea (ANT02 and ANT05) ¾” PVC to ½” NPT male adapter and coupling section (previously assembled)</li>
+		<li>4 ea (ANT07) Thomas &#38; Betts L35-B2 or equivalent ground lugs  These are used as aerial terminals</li>
+		<li>4 ea (ANT08) <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> ½” long machine screws</li>
+		<li>4 ea (ANT09) <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> nuts</li>
+		<li>1ea (ANT10, ANT11, ANT13,ANT15) Phasing loop (previously assembled)</li>
+		<li>1ea (ANT16, ANT17, ANT18) ground plane (previously assembled)</li>
+		<li>Optional: PVC pipe cement</li>
+		<li>Optional: Soft paper or cloth bags to protect painted finish</li>
+	</ul>
+
+
+	<a name="Safety-issues"></a>
+<h3 >Safety issues<a href="Assembly_Instructions.html#Safety-issues" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Care must be taken when working with hand tools or sharp points.</li>
+		<li>PVC solvent and cement must be used in well ventilated areas.</li>
+	</ul>
+
+
+	<a name="Product-or-Outcome"></a>
+<h3 >Product or Outcome<a href="Assembly_Instructions.html#Product-or-Outcome" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The completed upper assembly for the Ground Sphere Mk2.</p>
+
+
+	<a name="Procedure"></a>
+<h3 >Procedure<a href="Assembly_Instructions.html#Procedure" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Carefully Feed the phasing loop assembly RG62u segment (ANT15) end first into the threaded end of the male adapter and coupling section (ANT05 and ANT02).</li>
+		<li>Carefully Feed the phasing loop assembly, RG62u segment (ANT15) end first, through the center hole in the ground plane (ANT16, ANT17, ANT18) from the plastic mesh side to the conductive fabric (ANT16) side.</li>
+		<li>Using the needle nose pliers, gently grip the RG62u segment (ANT15) on the black insulation near one of the ends of the insulation and gently bend the segment into a U-shape.  
+	<ol>
+	<li>Repeat the process on the other side of the insulation to even out the bend and make it a tighter radius.  </li>
+		<li>The ring terminals installed should extend in the same direction and distance from both ends of the RG62u segment (ANT15).</li>
+		<li>Repeat as necessary without deforming or damaging the phasing loop excessively.  If the insulation tears, the phasing loop assembly will need to be replaced, as this will alter the electrical characteristics of the phasing loop.</li>
+	</ol>
+	</li>
+		<li>Using the needle nose pliers, bend each of the ring terminals between the ring and insulation about 15-30 degrees toward the rolled side of the ring terminal.</li>
+		<li>Insert the phasing loop assembly RG62u segment (ANT15), U-bend first into the PVC coupling section (ANT02) so that the insulation on the ring terminals are in the PVC coupling section (ANT02), but the rings of the terminals extend above it.</li>
+		<li>Place the ground plane assembly (ANT16, ANT17, ANT18) on the NPT male adapter and coupling section (ANT05 and ANT02) so that the ground plane assembly sits on the NPT male adapter with coupling section extending through the hole in the center of the ground plane.</li>
+		<li>Wiggle the NPT male adapter and coupling section (ANT05 and ANT02) into the coupler (ANT01) preferably without disturbing the phasing loop placement too much.  </li>
+		<li>Reposition the ring terminals inside the PVC coupler (ANT01) so that the ring terminals pretty much line up with the holes.</li>
+		<li>Clamp the body of the PVC NPT male adapter (ANT02) in the vice to hold the whole assembly so that the side with the blue ring terminal is in a convenient position to work on..
+	<ol>
+	<li>DO NOT use the threads on the PVC NPT male adapter (ANT02) as a clamping surface for the vice.  This will deform the threads and make final assembly difficult or impossible.</li>
+		<li>DO NOT clamp the PVC NPT male adapter (ANT02) with more force than is strictly necessary to hold it.</li>
+		<li>Use a rag or other cover so that the teeth on the vice do not bite into the plastic of the PVC NPT male adapter (ANT02), particularly if the parts were previously painted.</li>
+	</ol>
+	</li>
+		<li>Insert a <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> machine screw (ANT08) through an aerial terminal (ANT07) from the same side as the aerial terminal’s screw terminal.  Insert the screw end through the hole in the PVC coupler (ANT01) which is closest to the blue ring terminal (ANT11)</li>
+		<li>Using needle nose pliers, gently slip the ring terminal over the machine screw’s threads.</li>
+		<li>Fasten the screw (ANT08), aerial terminal (ANT07), and ring terminal (ANT11) to the PVC coupler (ANT01) using a <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> nut (ANT09).
+	<ol>
+	<li>Using the needle nose pliers, place the <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> nut (ANT09) at the end of the machine screw’s threads so that it can engage the threads when the screw is turned.</li>
+		<li>While lightly pressing the nut (ANT09) against the threads of the screw, turn the <a href="http://opendesignengine.net/issues/2" class="issue status-3 priority-2 closed" title="Install available Bot filters (Resolved)">#2</a> Phillips screwdriver counterclockwise (loosening), listening for a soft click.  This will let you know the threads are aligned.</li>
+		<li>This technique prevents the nut from becoming cross threaded, which would be difficult to resolve in such a tight area.</li>
+		<li>Tighten the screw normally until lightly snug</li>
+		<li>Line up the aerial terminal (ANT07) so that the aerial terminal is vertical and it’s screw terminal is positioned away from the ground plane. </li>
+		<li>While holding the nut (ANT09) on the inside of the coupler (ANT01) with the needle nose pliers and holding the aerial terminal (ANT07) in position, tighten the machine screw (ANT08) firmly allowing the ring terminal and nut to bite into the stop ridge inside of the coupler (ANT01)</li>
+		<li>Mark this aerial terminal with a sharpie marker for identification.</li>
+	</ol>
+	</li>
+		<li>Loosen the vice holding the whole assembly and rotate it 90 degrees counterclockwise.  Tighten the vice using the same precautions as step 9 above.</li>
+		<li>Insert a <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> machine screw (ANT08) through an aerial terminal (ANT07) from the same side as the aerial terminal’s screw terminal.  Insert the screw end through the hole in the PVC coupler (ANT01) which is now in the same position as the first aerial terminal was before we rotated the assembly.</li>
+		<li>Using needle nose pliers, find the red ring terminal (ANT10) which has the shield wire for the other end of the RG62u segment (ANT15) and gently slip the ring terminal over the machine screw’s threads.</li>
+		<li>Fasten the screw (ANT08), aerial terminal (ANT07), and ring terminal (ANT10) to the PVC coupler (ANT01) using a <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> nut (ANT09) using the technique outlined in step12 above.</li>
+		<li>Loosen the vice holding the whole assembly and rotate it 90 degrees counterclockwise.  Tighten the vice using the same precautions as step 9 above.</li>
+		<li>Insert a <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> machine screw (ANT08) through an aerial terminal (ANT07) from the same side as the aerial terminal’s screw terminal.  Insert the screw end through the hole in the PVC coupler (ANT01) which is now in the working position.</li>
+		<li>Using needle nose pliers, find the red ring terminal (ANT10) which has the center conductor for both the RF line (ANT13) and the RG62u segment (ANT15).  Gently slip the ring terminal over the machine screw’s threads.  Note that this connection should be considered fragile.</li>
+		<li>Fasten the screw (ANT08), aerial terminal (ANT07), and ring terminal (ANT10) to the PVC coupler (ANT01) using a <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> nut (ANT09) using the technique outlined in step12 above.</li>
+		<li>Loosen the vice holding the whole assembly and rotate it 90 degrees counterclockwise.  Tighten the vice using the same precautions as step 9 above.</li>
+		<li>Insert a <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> machine screw (ANT08) through an aerial terminal (ANT07) from the same side as the aerial terminal’s screw terminal.  Insert the screw end through the hole in the PVC coupler (ANT01) which is now in the working position.</li>
+		<li>Using needle nose pliers, find the remaining red ring terminal (ANT10) which has the center conductor for the other end of the RG62u segment (ANT15) and gently slip the ring terminal over the machine screw’s threads.</li>
+		<li>Fasten the screw (ANT08), aerial terminal (ANT07), and ring terminal (ANT10) to the PVC coupler (ANT01) using a <a href="../../../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> nut (ANT09) using the technique outlined in step12 above.</li>
+		<li>Once all connectors are aligned and tightened (double check), press the  ¾” PVC sched 40 end cap (ANT06) and coupling section (ANT02) assembly into the top of the PVC coupler (ANT01).
+	<ol>
+	<li>While you can optionally use PVC cement to lock this in place, it is not necessary, and would make repairs or retightening impossible.  The primer creates a tacky surface that remains removable with some effort </li>
+		<li>To glue the end cap on, apply PVC glue to the inside of the PVC coupler (ANT01) and press the end cap assembly home.  This prevents the glue from squeezing out between the coupler and the cap, making a mess.</li>
+	</ol>
+	</li>
+		<li>Loosen the vice and remove the completed upper assembly.  </li>
+		<li>Gently pull the PVC NPT male adapter (ANT02) from the bottom of the coupler (ANT01) without pulling on the RF line (ANT13) hanging out the bottom of the assembly.</li>
+		<li>Allow the ground plane (ANT16 and associated parts) to drop onto the antenna line (ANT13).</li>
+		<li>If the components are painted, place the coupler / endcap assembly (ANT01 and associated parts) as well as the PVC NPT male adapter (ANT02) in protective bags for shipping or storage.</li>
+		<li>Place the unit aside for shipping in kit form.</li>
+	</ol>
+
+
+	<a name="Ground-Sphere-Base-Preparation-and-Electronics-Integration"></a>
+<h2 >Ground Sphere Base Preparation and Electronics Integration<a href="Assembly_Instructions.html#Ground-Sphere-Base-Preparation-and-Electronics-Integration" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools"></a>
+<h3 >Tools<a href="Assembly_Instructions.html#Tools" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Needle nose pliers</li>
+		<li>Wire cutters</li>
+		<li>Soldering iron</li>
+		<li>Common (flat) screwdriver</li>
+		<li>Heat gun or hot air rework station.</li>
+		<li>Optional: third hand tool (work clamp system)</li>
+	</ul>
+
+
+	<a name="Materials"></a>
+<h3 >Materials<a href="Assembly_Instructions.html#Materials" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>1 ea (ANT03) Metal outlet box</li>
+		<li>1 ea (ANT04) Metal outlet box cover </li>
+		<li>1 ea (ANT14) Preamp to SDR line SMA male to MCX male</li>
+		<li>1 ea (ANT19) Rubber feet (set of 4)</li>
+		<li>1 ea (ANT20) Tube of black or clear silicone sealant.</li>
+		<li>1 ea (RAD01) RTL2832U Software Defined Radio (SDR) Dongle</li>
+		<li>1 ea (RAD02) ATF54143 Pre-Amplifier</li>
+		<li>1 ea (RAD03) 2.1mm DC power jack</li>
+		<li>1 ea (RAD04) Small heat shrink tubing for power connection</li>
+		<li>1 ea (RAD05) 6” length of 18-20ga 2 conductor wire, becomes the power pigtail.</li>
+		<li>1 ea (RAD06) 10ft USB extension cable</li>
+		<li>Optional: PVC safe spray paint in a desirable color.</li>
+		<li>Optional: Soft paper covering to protect painted finish</li>
+	</ul>
+
+
+	<a name="Safety-issues"></a>
+<h3 >Safety issues<a href="Assembly_Instructions.html#Safety-issues" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Care must be taken when working with hand tools, soldering iron, or sharp points.</li>
+		<li>When using a drill press or dremel, eye protection should be worn.</li>
+		<li>If cutting or drilling more than one or two small hard to hold pieces (Steps 3 and 4), make a jig to hold the parts.  This will improve quality and safety.</li>
+		<li>Silicone sealant should be used in well ventilated areas.</li>
+		<li>Spray paint must be used in a well ventilated area, and should be done in a paint booth or outdoors.</li>
+	</ul>
+
+
+	<a name="Product-or-Outcome"></a>
+<h3 >Product or Outcome<a href="Assembly_Instructions.html#Product-or-Outcome" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The completed base assembly for the Ground Sphere Mk2.</p>
+
+
+	<a name="Procedure"></a>
+<h3 >Procedure<a href="Assembly_Instructions.html#Procedure" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Open the package containing the outlet box (ANT03).</li>
+		<li>If it is desirable to paint the ground station components, this is a good time to paint the outlet box (ANT03) and the outlet box cover (ANT04).</li>
+		<li>Open the plastic bag with the plugs and screws that came with the outlet box (ANT03).</li>
+		<li>Using a drill press, drill a 29/64” hole through the center of one of the plugs.  </li>
+		<li>Thread a barrel jack (RAD03) into the hole drilled in step 3.</li>
+		<li>Split one end of the power pigtail (RAD05) back about 1” from the end.</li>
+		<li>Strip ¼” of insulation from the ends of each wire end and twist the wire tight.</li>
+		<li>Using the soldering iron, tin each bare wire </li>
+		<li>Cut two ½” sections of heat shrink tubing (RAD04) and slide them over each wire.</li>
+		<li>Using needle nose pliers, form each of the tinned wires into a hook. </li>
+		<li>Using needle nose pliers, put the hook made in step 10 into the loops on the power jack connector.
+	<ol>
+	<li>Red to the center pin</li>
+		<li>Black to the sleeve connector</li>
+		<li>Squeeze the hooks closed.</li>
+	</ol>
+	</li>
+		<li>Keeping the heat shrink tubing (RAD04) back toward the split in the wire, solder the connections to the jack.</li>
+		<li>Slide the heat shrink tubing (RAD04) down to cover the soldered connections and carefully apply heat with a heat gun or hot air rework station.  Take care not to scorch the heat shrink tubing (RAD04) or melt the plastic plug or jack. </li>
+		<li>Install the power jack assembly (RAD03) in the lower right hole when the outlet box is viewed with the green ground screw at the bottom.</li>
+		<li>Thread the female end of the USB extension cable into the lower left hole open when the outlet box is viewed with the green ground screw at the bottom.</li>
+		<li>Using a common screwdriver, install the plugs in the remaining holes in the outlet box (ANT03).</li>
+		<li>Remove the green ground screw from the outlet box (ANT03) and discard.</li>
+		<li>Open the package containing the outlet cover (ANT04) and set the gasket aside.</li>
+		<li>Seal the area in the outlet box (ANT03) around the USB Extension cable (RAD06) with silicone sealant (ANT20) where the female end of the USB Extension cable (RAD06) is screwed into the hole in the outlet box (ANT03).  </li>
+		<li>Take care not to allow the sealant to leak on the exterior surface of the outlet box (ANT03) the USB cable or the USB electrical connections.</li>
+		<li>Press the MCX connector on the preamp to SDR cable (ANT14) into the SDR (RAD01) until it seats with a click.</li>
+		<li>Remove the SDR (RAD01) USB interface cover and discard.</li>
+		<li>Install the SDR (RAD01) into the female USB connector on the USB Extension cable (RAD06) .</li>
+		<li>Arrange the the preamp to SDR cable (ANT14) so that it routes under the SDR (ANT01) in the outlet box.</li>
+		<li>Attach the SMA connector of the the preamp to SDR cable (ANT14) to the preamp (RAD02) output</li>
+		<li>Place a ¼” round dab of silicone sealant on the top center of the SDR (RAD01).</li>
+		<li>Press the preamp (RAD02) on top of the SDR (RAD01) so that as much room as possible is around the preamp input connector.</li>
+		<li>Place the outlet cover gasket on top of the outlet box (ANT03), lining up the screw holes to the posts below.</li>
+		<li>Secure the outlet cover (ANT04) and gasket to the outlet box with the screws provided.</li>
+		<li>With a common screwdriver, install the outlet cover mounting screws moderately snug.</li>
+		<li>While tightening, make sure the gasket remains in place, not withdrawn into the outlet box (ANT03).</li>
+		<li>Install the self adhesive rubber feet (ANT19) on the bottom of the outlet box (ANT03).</li>
+		<li>Apply any labels or decals to the outlet box (ANT03) at this time.</li>
+		<li>If the components are painted, place the outlet box and cover in a protective bag or soft paper cover for shipping or storage.</li>
+		<li>Place the unit aside for shipping in kit form.</li>
+	</ol>
+
+
+	<a name="Aerial-Fabrication"></a>
+<h2 >Aerial Fabrication<a href="Assembly_Instructions.html#Aerial-Fabrication" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="Tools"></a>
+<h3 >Tools<a href="Assembly_Instructions.html#Tools" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Needle nose pliers</li>
+		<li>Wire cutters</li>
+		<li>Wire Strippers</li>
+		<li>A 4” diameter jar or can to use as a wire form (a large soup can)</li>
+	</ul>
+
+
+	<a name="Materials"></a>
+<h3 >Materials<a href="Assembly_Instructions.html#Materials" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>2 ea (ANT03) 14” of insulated 14ga solid copper wire</li>
+		<li>Optional: PVC safe spray paint in a desirable color.</li>
+	</ul>
+
+
+	<a name="Safety-issues"></a>
+<h3 >Safety issues<a href="Assembly_Instructions.html#Safety-issues" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Care must be taken when working with hand tools.</li>
+		<li>Spray paint must be used in a well ventilated area, and should be done in a paint booth or outdoors.</li>
+	</ul>
+
+
+	<a name="Product-or-Outcome"></a>
+<h3 >Product or Outcome<a href="Assembly_Instructions.html#Product-or-Outcome" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>The two aerial loops for the Ground Sphere Mk2.</li>
+	</ul>
+
+
+	<a name="Procedure"></a>
+<h3 >Procedure<a href="Assembly_Instructions.html#Procedure" class="wiki-anchor">&para;</a></h3>
+
+
+	<ol>
+	<li>Cut a section of ordinary house wire (Romex 14-2) 14” long</li>
+		<li>Pull out the insulated wire (black or white).  Discard the bare ground wire.</li>
+		<li>Strip ¼” from both ends of both wire lengths.</li>
+		<li>Using needle nose pliers, bend the stripped ends 90 degrees in the same direction.</li>
+		<li>With the wires facing outward, bend the wire around the soup can to make a round loop. </li>
+		<li>Test fit in the aerial terminals (ANT07) and adjust to be circular.</li>
+		<li>If it is desirable to paint the ground station components, this is a good time to do so.</li>
+		<li>If the components are painted, place the aerials in a protective bag or soft paper cover for shipping or storage.</li>
+		<li>Place the aerials aside for shipping in kit form.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/428?download=" alt="" /> <img src="http://opendesignengine.net/dmsf_files/429?download=" alt="" /></p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/groundsphere/wiki/Assembly_Instructions.html?version=29" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/groundsphere/wiki/Assembly_Instructions.txt?version=29" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/Assembly_Instructions">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Open Design Engine - Feature #13: Create a donation drive module - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+    <link href="http://opendesignengine.net/issues/13.atom" rel="alternate" title="Open Design Engine - Feature #13: Create a donation drive module" type="application/atom+xml" />
+    <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="../javascripts/context_menu.js%3F1359925542" type="text/javascript"></script>
+    <link href="../stylesheets/context_menu.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+    
+</head>
+<body class="controller-issues action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/ode.html" method="get">
+        <input name="issues" type="hidden" value="1" />
+        <a href="../search/index/ode.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/ode%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/ode%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/ode/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/ode%3Fjump=issues.html" class="issues selected">Issues</a></li>
+<li><a href="../projects/ode/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/ode%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../projects/ode/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/ode/boards.html" class="boards">Forums</a></li>
+<li><a href="../projects/ode%3Fjump=files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/ode/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+  <h3>Issues</h3>
+<a href="../projects/ode/issues%3Fset_filter=1.html">View all issues</a><br />
+
+<a href="../projects/ode/issues/report.html">Summary</a><br />
+
+
+
+
+
+	<a href="../projects/ode/issues/gantt.html">Gantt</a><br />
+
+
+
+
+
+
+
+  
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="issue-13-watcher"></span>
+
+
+
+
+</div>
+
+
+<h2>Feature #13</h2>
+
+<div class="issue status-3 priority-2 closed details">
+        
+      
+<div class="subject">      
+<div><h3>Create a donation drive module</h3></div>
+</div>
+        <p class="author">
+        Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/ode/activity%3Ffrom=2011-04-08.html" title="04/08/2011 03:17 am">over 11 years</a> ago.
+        
+        Updated <a href="http://opendesignengine.net/projects/ode/activity?from=2020-06-05" title="06/05/2020 08:20 am">over 2 years</a> ago.
+        
+        </p>
+
+<table class="attributes">
+<tr>
+    <th class="status">Status:</th><td class="status">Resolved</td>
+    <th class="start-date">Start date:</th><td class="start-date">04/08/2011</td>
+</tr>
+<tr>
+    <th class="priority">Priority:</th><td class="priority">Normal</td>
+    <th class="due-date">Due date:</th><td class="due-date"></td>
+</tr>
+<tr>
+    <th class="assigned-to">Assignee:</th><td class="assigned-to">-</td>
+    <th class="progress">% Done:</th><td class="progress"><table class="progress" style="width: 80px;"><tr><td class="closed" style="width: 100%;"></td></tr></table><p class="pourcent">100%</p></td>
+</tr>
+<tr>
+    <th class="category">Category:</th><td class="category">-</td>
+    
+</tr>
+<tr>
+    <th class="fixed-version">Target version:</th><td class="fixed-version"><a href="../versions/10.html">v0.2.1 - Public Beta Enhancements</a></td>
+    
+</tr>
+
+
+</table>
+
+<hr />
+
+	<div class="contextual">
+	
+	</div>
+	
+	<p><strong>Description</strong></p>
+	<div class="wiki">
+	<p>This should be a plugin and work similar to <a href="http://pledgie.com/" class="external">Pledgie</a> or similar offerings.  May just create it as a Pledgie plugin.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div id="history">
+<h3>History</h3>
+
+  <div id="change-23" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-1">#1</a></div>
+    
+    <a name="note-1"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2011-05-13" title="05/13/2011 06:40 pm">over 11 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-23-notes"><p>Looking into how we could do this.  And one idea would be a new wiki macro for donation drive sites like <a href="http://pledgie.com/" class="external">pledgie</a> and <a href="http://www.chipin.com/" class="external">chip-in</a>.  Could be modeled after wiki macro plugins like this <a href="http://projects.plural.cc/projects/redmine-youtube" class="external">one for youtube</a>.</p>
+
+
+	<p>One quick question then is do the wiki macros work everywhere there is formatted text (like the project and main site homepages or in forums and issues).  If so, then you could even do drives for individual features and put drives on the project page... Or in news stories.</p></div>
+  </div>
+  
+
+  <div id="change-27" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-2">#2</a></div>
+    
+    <a name="note-2"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/ode/activity%3Ffrom=2011-05-16.html" title="05/16/2011 11:02 pm">over 11 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-27-notes"><p>Blog post series on writing Redmine Plugins:</p>
+
+
+	<ul>
+	<li><a href="http://sergeyenin.com/redmine-plugin-development-part1-generation-enumerations-hooks" class="external">Part 1</a></li>
+		<li><a href="http://sergeyenin.com/redmine-plugin-development-part2-journal-customization-of-redmine-menu-and-core" class="external">Part 2</a></li>
+	</ul></div>
+  </div>
+  
+
+  <div id="change-44" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-3">#3</a></div>
+    
+    <a name="note-3"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2011-10-12" title="10/12/2011 12:09 pm">about 11 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-44-notes"><p>First draft of full list of types of payments to accept.</p>
+
+
+	<ul>
+	<li><a href="http://pledgie.com/" class="external">Pledgie</a> - specifically embed the Pledgie Badge</li>
+		<li><a href="http://www.chipin.com/" class="external">ChipIn</a> - specifically embed the ChipIn Widget</li>
+		<li><a href="http://www.kickstarter.com/" class="external">KickStarter</a> - specifically embed the KickStarter widget</li>
+		<li><a href="https://www.paypal.com" class="external">PayPal</a> - specifically embed <a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_singleitem-intro-outside" class="external">PayPal buttons</a>
+	<ul>
+	<li>Buy now</li>
+		<li>Add to Cart</li>
+		<li>Donate</li>
+	</ul></li>
+	</ul></div>
+  </div>
+  
+
+  <div id="change-67" class="journal has-notes has-details">
+    <h4><div class="journal-link"><a href="13.html#note-4">#4</a></div>
+    
+    <a name="note-4"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/ode/activity%3Ffrom=2012-03-14.html" title="03/14/2012 07:43 pm">over 10 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>% Done</strong> changed from <i>0</i> to <i>70</i></li>
+      
+    </ul>
+    
+    <div class="wiki" id="journal-67-notes"><p>Pledgie and ChipIn support are up and working (<a class="external" href="https://opendesignengine.net/projects/ode/wiki/Features#Embed-Chipin-Badge">https://opendesignengine.net/projects/ode/wiki/Features#Embed-Chipin-Badge</a>).  Probably need an hour or two to wrap the other two up.</p></div>
+  </div>
+  
+
+  <div id="change-71" class="journal has-details">
+    <h4><div class="journal-link"><a href="13.html#note-5">#5</a></div>
+    
+    <a name="note-5"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/ode/activity%3Ffrom=2012-03-14.html" title="03/14/2012 07:45 pm">over 10 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Status</strong> changed from <i>New</i> to <i>In Progress</i></li>
+      
+    </ul>
+    
+    
+  </div>
+  
+
+  <div id="change-121" class="journal has-notes has-details">
+    <h4><div class="journal-link"><a href="13.html#note-6">#6</a></div>
+    
+    <a name="note-6"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2012-11-04" title="11/04/2012 06:47 pm">almost 10 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Target version</strong> changed from <i>v0.2 - Public Beta</i> to <i>v0.2.1 - Public Beta Enhancements</i></li>
+      
+    </ul>
+    
+    <div class="wiki" id="journal-121-notes"><p>Moving to v0.2.1 for the other two donation drive services to facilitate the launch of the public beta.</p></div>
+  </div>
+  
+
+  <div id="change-134" class="journal has-notes has-details">
+    <h4><div class="journal-link"><a href="13.html#note-7">#7</a></div>
+    
+    <a name="note-7"></a>
+		Updated by <a href="../users/114.html" class="icon icon-contributor-license">Kevin Bouwkamp</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2012-11-20" title="11/20/2012 08:17 pm">almost 10 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>% Done</strong> changed from <i>70</i> to <i>90</i></li>
+      
+    </ul>
+    
+    <div class="wiki" id="journal-134-notes"><p>Fixed the Chipin badge, and got the Kickstart one working. Below is my wiki-formatting code I was testing with.</p>
+
+
+<pre>
+h2. Embed Kickstarter Badge
+
+@{ {kickstarter(*account name*,*project name or url path*)} }@ (without the spaces) =&gt;
+
+_examples:_
+
+@{ {kickstarter(fallmedia,Alphabet Apparel)} }@
+@{ {kickstarter(fallmedia,alphabet-apparel)} }@
+
+      <div class="kickstarter-widget">
+        <iframe frameborder="0" 
+                height="380" 
+                width="220"
+                src="http://www.kickstarter.com/projects/fallmedia/alphabet-apparel/widget/card.html">
+        </iframe>
+      </div>
+
+</pre></div>
+  </div>
+  
+
+  <div id="change-135" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-8">#8</a></div>
+    
+    <a name="note-8"></a>
+		Updated by <a href="../users/114.html" class="icon icon-contributor-license">Kevin Bouwkamp</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2012-11-20" title="11/20/2012 09:05 pm">almost 10 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-135-notes"><p>The PayPal one is a little bit different since there isn't really a concept of projects or funds that pre-exist. I created a button on their generator and this is how it comes out:</p>
+
+
+<pre>
+<code class="html syntaxhl"><span class="CodeRay"><span class="no">1</span> <span class="ta">&lt;form</span> <span class="an">action</span>=<span class="s"><span class="dl">&quot;</span><span class="k">https://www.paypal.com/cgi-bin/webscr</span><span class="dl">&quot;</span></span> <span class="an">method</span>=<span class="s"><span class="dl">&quot;</span><span class="k">post</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
+<span class="no">2</span>   <span class="ta">&lt;input</span> <span class="an">type</span>=<span class="s"><span class="dl">&quot;</span><span class="k">hidden</span><span class="dl">&quot;</span></span> <span class="an">name</span>=<span class="s"><span class="dl">&quot;</span><span class="k">cmd</span><span class="dl">&quot;</span></span> <span class="an">value</span>=<span class="s"><span class="dl">&quot;</span><span class="k">_s-xclick</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
+<span class="no">3</span>   <span class="ta">&lt;input</span> <span class="an">type</span>=<span class="s"><span class="dl">&quot;</span><span class="k">hidden</span><span class="dl">&quot;</span></span> <span class="an">name</span>=<span class="s"><span class="dl">&quot;</span><span class="k">hosted_button_id</span><span class="dl">&quot;</span></span> <span class="an">value</span>=<span class="s"><span class="dl">&quot;</span><span class="k">6P7UX7ZAUBD9J</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
+<span class="no">4</span>   <span class="ta">&lt;input</span> <span class="an">type</span>=<span class="s"><span class="dl">&quot;</span><span class="k">image</span><span class="dl">&quot;</span></span> <span class="an">src</span>=<span class="s"><span class="dl">&quot;</span><span class="k">https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif</span><span class="dl">&quot;</span></span> <span class="an">border</span>=<span class="s"><span class="dl">&quot;</span><span class="k">0</span><span class="dl">&quot;</span></span> <span class="an">name</span>=<span class="s"><span class="dl">&quot;</span><span class="k">submit</span><span class="dl">&quot;</span></span> <span class="an">alt</span>=<span class="s"><span class="dl">&quot;</span><span class="k">PayPal - The safer, easier way to pay online!</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
+<span class="no">5</span>   <span class="ta">&lt;img</span> <span class="an">alt</span>=<span class="s"><span class="dl">&quot;</span><span class="dl">&quot;</span></span> <span class="an">border</span>=<span class="s"><span class="dl">&quot;</span><span class="k">0</span><span class="dl">&quot;</span></span> <span class="an">src</span>=<span class="s"><span class="dl">&quot;</span><span class="k">https://www.paypalobjects.com/en_US/i/scr/pixel.gif</span><span class="dl">&quot;</span></span> <span class="an">width</span>=<span class="s"><span class="dl">&quot;</span><span class="k">1</span><span class="dl">&quot;</span></span> <span class="an">height</span>=<span class="s"><span class="dl">&quot;</span><span class="k">1</span><span class="dl">&quot;</span></span><span class="ta">&gt;</span>
+<span class="no">6</span> <span class="ta">&lt;/form&gt;</span>
+</span></code><br /></pre>
+
+	<p>The only thing that really matters here is the hosted_button_id hidden input's value, in this case '6P7UX7ZAUBD9J'. Seems to be something PayPal creates on their end because there is a lot of pre-defined information built into these future transactions.</p>
+
+
+<strong><ins>Options</ins></strong>
+	<ol>
+	<li>Obtain a business account in order to gain API access. They have a button manager part of their API. Not sure if this would work for our arbitrary intentions, or if we could create buttons for other business accounts besides ours</li>
+		<li>Let the user be able to just paste the HTML they have generated into the page. Letting any ol' user paste any HTML into the page has it's obvious drawbacks.</li>
+	</ol>
+
+
+	<p>I'll stew on it a bit</p></div>
+  </div>
+  
+
+  <div id="change-136" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-9">#9</a></div>
+    
+    <a name="note-9"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2012-11-21" title="11/21/2012 09:07 am">almost 10 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-136-notes"><p>As long as the hosted_button_id field is sufficient to identify the button for paypal, I would be fine with the macro being something like { {paypal(6P7UX7ZAUBD9J)} } (obviously without the spaces).  We should also check and see if the "donate" vs "buy" buttons use different html in their rendering.  Let me know if you want to get on a hangout sometime to chat about this one from a requirements standpoint, since it is more tricky than the others.</p>
+
+
+	<p>Thanks for all the work on this.</p></div>
+  </div>
+  
+
+  <div id="change-137" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-10">#10</a></div>
+    
+    <a name="note-10"></a>
+		Updated by <a href="../users/114.html" class="icon icon-contributor-license">Kevin Bouwkamp</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2012-11-25" title="11/25/2012 02:29 pm">almost 10 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-137-notes"><p>OK so I went ahead and made the PayPal ones. Here is the wiki-formatting code I was playing with:</p>
+
+
+<pre>
+h2. Embed Paypal Badge
+
+h3. PayPal Button Types
+
+@{ {paypal_donate(*button id*)} }@ (without the spaces) =&gt;
+
+        <div class='paypal-widget'>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="D39Q5TE3RQUX2">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+
+
+*OR*
+
+@{ {paypal_buynow(*button id*)} }@ (without the spaces) =&gt;
+
+        <div class='paypal-widget'>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="D39Q5TE3RQUX2">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+
+
+*button id* is generated from "PayPal":https://www.paypal.com/us/cgi-bin/webscr?cmd=_singleitem-intro-outside
+_example where *7T7Z7DHEDQA6L* becomes our button id_
+&lt;pre&gt;
+&lt;form&gt;
+  ...
+  &lt;input type="hidden" name="hosted_button_id" value="7T7Z7DHEDQA6L"&gt;
+  ...
+&lt;/form&gt;
+&lt;/pre&gt;
+</pre>
+
+	<p>It was either do it with individual macros, or make a macro: paypal(id,type). So I did both, but this wiki code only uses the former.</p>
+
+
+	<p>Just realized I forgot to do the add to cart button. Let me throw it in quick</p></div>
+  </div>
+  
+
+  <div id="change-138" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-11">#11</a></div>
+    
+    <a name="note-11"></a>
+		Updated by <a href="../users/114.html" class="icon icon-contributor-license">Kevin Bouwkamp</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2012-11-25" title="11/25/2012 02:36 pm">almost 10 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-138-notes"><p>K here's some code for the PayPal add to cart button:</p>
+
+
+<pre>
+@{ {paypal_cart(*button id*)} }@ (without the spaces) =&gt;
+
+        <div class='paypal-widget'>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="D39Q5TE3RQUX2">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+
+</pre></div>
+  </div>
+  
+
+  <div id="change-140" class="journal has-details">
+    <h4><div class="journal-link"><a href="13.html#note-12">#12</a></div>
+    
+    <a name="note-12"></a>
+		Updated by <a href="../users/114.html" class="icon icon-contributor-license">Kevin Bouwkamp</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2012-11-25" title="11/25/2012 03:40 pm">almost 10 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>% Done</strong> changed from <i>90</i> to <i>100</i></li>
+      
+    </ul>
+    
+    
+  </div>
+  
+
+  <div id="change-141" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-13">#13</a></div>
+    
+    <a name="note-13"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2012-11-27" title="11/27/2012 08:27 am">almost 10 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-141-notes"><p>This is great news.  I will get these on my test server this week and take a look.  With any luck we could see them on the live server over the weekend.</p></div>
+  </div>
+  
+
+  <div id="change-144" class="journal has-notes has-details">
+    <h4><div class="journal-link"><a href="13.html#note-14">#14</a></div>
+    
+    <a name="note-14"></a>
+		Updated by <a href="../users/1.html" class="">Admin Administrator</a> <a href="../projects/ode/activity%3Ffrom=2012-12-02.html" title="12/02/2012 01:58 pm">almost 10 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Status</strong> changed from <i>In Progress</i> to <i>Resolved</i></li>
+      
+    </ul>
+    
+    <div class="wiki" id="journal-144-notes"><p>Tested, and published to the live server.</p></div>
+  </div>
+  
+
+  <div id="change-549" class="journal has-notes">
+    <h4><div class="journal-link"><a href="13.html#note-15">#15</a></div>
+    
+    <a name="note-15"></a>
+		Updated by <a href="../users/952.html" class="icon icon-contributor-license">Ida wallace</a> <a href="http://opendesignengine.net/projects/ode/activity?from=2020-06-05" title="06/05/2020 08:20 am">over 2 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-549-notes"><p>Thanks for sharing with us this kind of useful post. I appreciate an efforts for sharing this posts.<br />Ida, Assignment writer. <a class="external" href="http://www.secureassignmenthelp.com/psychology-assignment-help/">http://www.secureassignmenthelp.com/psychology-assignment-help/</a></p></div>
+  </div>
+  
+
+
+
+
+</div>
+
+
+
+<div style="clear: both;"></div>
+<div class="contextual">
+
+
+<span class="issue-13-watcher"></span>
+
+
+
+
+</div>
+
+
+<div style="clear: both;"></div>
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/issues/13.atom" class="atom" rel="nofollow">Atom</a></span>
+	<span><a href="http://opendesignengine.net/issues/13.pdf" class="pdf" rel="nofollow">PDF</a></span>
+</p>
+
+
+
+
+
+
+<div id="context-menu" style="display: none;"></div>
+<script type="text/javascript">
+//<![CDATA[
+new ContextMenu('/issues/context_menu')
+//]]>
+</script>
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/13">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

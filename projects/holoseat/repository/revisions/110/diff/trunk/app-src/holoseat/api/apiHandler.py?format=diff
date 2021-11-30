@@ -1,0 +1,40 @@
+Index: apiHandler.py
+===================================================================
+--- apiHandler.py	(revision 109)
++++ apiHandler.py	(revision 110)
+@@ -2,7 +2,7 @@
+ from concurrent.futures import ThreadPoolExecutor
+ from tornado.concurrent import run_on_executor
+ from tornado import web, gen, escape
+-from holoseat.util import holoseatSerial
++from holoseat.util import holoseatDevice
+ import json
+ import serial
+ 
+@@ -16,7 +16,7 @@
+ 
+     @run_on_executor(executor="_threadPool")
+     def execCommand(self, command):
+-        return json.loads(holoseatSerial.execCommand(command))
++        return json.loads(holoseatDevice.execCommand(command))
+ 
+     @web.asynchronous
+     @gen.coroutine
+@@ -30,7 +30,7 @@
+ 
+                 # check for errors
+                 if ('Error' in results):
+-                    holoseatSerial.disconnect()
++                    holoseatDevice.disconnect()
+                     self.set_status(status.HTTP_500_INTERNAL_SERVER_ERROR)
+                     self.write(results)
+                     self.finish()
+@@ -41,7 +41,7 @@
+                 self.finish()
+                 return
+             except serial.serialutil.SerialException as e:
+-                holoseatSerial.disconnect()
++                holoseatDevice.disconnect()
+                 self.set_status(status.HTTP_503_SERVICE_UNAVAILABLE)
+                 response = {
+                     'ConnectionError': 'Lost connection to Holoseat',

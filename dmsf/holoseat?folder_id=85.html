@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - DMSF - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery-ui/jquery-ui-1.8.13.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/plupload/jquery.ui.plupload.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery.dataTables/jquery-ui.dataTables.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/dmsf.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-1.6.1.min.js%3F1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-ui-1.8.13.min.js%3F1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/jquery.dataTables.min.js%3F1359925705" type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function() {
+			jQuery("#browser").dataTable({
+				"bJQueryUI": true,
+				"oLanguage": {
+					'sUrl': '/plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/en.json'	
+				},
+				"bAutoWidth": false,
+				"bPaginate": false,
+				"aaSorting": [[1,'asc']],
+				"aaSortingFixed": [[7,'asc']],
+				"aoColumnDefs": [
+					{ "bSearchable": false, "aTargets": [0, 6, 7, 8] },
+					{ "bSortable": false, "aTargets": [0, 6, 7] },
+					{ "iDataSort": 8, "aTargets": [ 2 ] }
+				],
+				"fnInitComplete": function() {
+					jQuery("div.controls").prependTo(jQuery("#browser_wrapper div.fg-toolbar")[0]);
+				},
+				"fnInfoCallback": function( oSettings, iStart, iEnd, iMax, iTotal, sPre ) {
+					return "Folders: 0, Documents: 11";
+				}
+			});
+			
+			jQuery("[data-downloadurl]").each(function() {
+		        var url = this.getAttribute("data-downloadurl");
+		        if (this.addEventListener) {
+		          this.addEventListener("dragstart", function(e) {
+		            if (e.dataTransfer) {
+		              e.dataTransfer.setData("DownloadURL", url);
+		            }
+		          },false);
+		        }
+	      	});
+		});
+	</script>
+</head>
+<body class="controller-dmsf action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/holoseat.html" method="get">
+        
+        <a href="../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../projects/holoseat%3Fjump=dmsf.html" class="dmsf selected">DMSF</a></li>
+<li><a href="../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/holoseat/boards.html" class="boards">Forums</a></li>
+<li><a href="../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        
+
+<div class="contextual">
+	
+</div>
+
+
+<h2>
+	<a href="../projects/holoseat%3Fjump=dmsf.html">Documents</a>
+
+ / 
+ <a href="holoseat%3Ffolder_id=84.html">Media</a>
+ 
+
+ / 
+ <a href="holoseat%3Ffolder_id=85.html">Sensor Enclosure Pics</a>
+ 
+
+
+</h2>
+
+<div class="wiki">
+
+</div>
+
+<form action="http://opendesignengine.net/dmsf/entries_operation/holoseat?folder_id=85" class="dmfs_entries" id="entries_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0=" /></div>
+	<input id="action" name="action" type="hidden" />
+	<div class="controls" style="float: left">
+		<input name="download_entries" title="Download checked in Zip archive" type="submit" value="Download" />
+		<input name="email_entries" title="Send checked by email" type="submit" value="Email" />
+		
+	</div> 
+	<table class="display entries" id="browser">
+		<thead>
+			<tr id="root">
+				<th class="check">
+					<input id="check_all_entries" title="Check/Uncheck all for zip download or email" type="checkbox" />
+				</th>
+				<th>Title</th>
+				<th>Size</th>
+				<th>Modified</th>
+				<th>Ver.</th>
+				<th>Author</th>
+				<th></th>
+				<th class="hidden"></th>
+				<th class="hidden"></th>
+			</tr>
+		</thead>
+	<tbody>
+	
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="662" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/662%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:01-Base-FirstPass.JPG:http://opendesignengine.net/dmsf_files/662?download=" title="01-Base-FirstPass version 0.1 download">01-Base-FirstPass</a>
+				<div class="filename" title="Filename used for download or in Zip archive">01-Base-FirstPass.JPG</div>
+			</td>
+			<td class="size">3.1 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/662.html" title="01-Base-FirstPass details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/662.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3279695</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="663" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/663%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:01-SensorSubAssembly.JPG:http://opendesignengine.net/dmsf_files/663?download=" title="01-SensorSubAssembly version 0.1 download">01-SensorSubAssembly</a>
+				<div class="filename" title="Filename used for download or in Zip archive">01-SensorSubAssembly.JPG</div>
+			</td>
+			<td class="size">3.2 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/663.html" title="01-SensorSubAssembly details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/663.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3359179</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="664" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/664%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:02-Base-SecondPass.JPG:http://opendesignengine.net/dmsf_files/664?download=" title="02-Base-SecondPass version 0.1 download">02-Base-SecondPass</a>
+				<div class="filename" title="Filename used for download or in Zip archive">02-Base-SecondPass.JPG</div>
+			</td>
+			<td class="size">3.1 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/664.html" title="02-Base-SecondPass details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/664.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3264254</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="666" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/666%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:03-Box-FirstPass.JPG:http://opendesignengine.net/dmsf_files/666?download=" title="03-Box-FirstPass version 0.1 download">03-Box-FirstPass</a>
+				<div class="filename" title="Filename used for download or in Zip archive">03-Box-FirstPass.JPG</div>
+			</td>
+			<td class="size">3 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/666.html" title="03-Box-FirstPass details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/666.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3124198</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="665" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/665%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:03b-Box-FirstPassWithSensor.JPG:http://opendesignengine.net/dmsf_files/665?download=" title="03b-Box-FirstPassWithSensor version 0.1 download">03b-Box-FirstPassWithSensor</a>
+				<div class="filename" title="Filename used for download or in Zip archive">03b-Box-FirstPassWithSensor.JPG</div>
+			</td>
+			<td class="size">3.1 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/665.html" title="03b-Box-FirstPassWithSensor details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/665.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3297515</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="668" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/668%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:04-Box-SecondPass.JPG:http://opendesignengine.net/dmsf_files/668?download=" title="04-Box-SecondPass version 0.1 download">04-Box-SecondPass</a>
+				<div class="filename" title="Filename used for download or in Zip archive">04-Box-SecondPass.JPG</div>
+			</td>
+			<td class="size">3 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/668.html" title="04-Box-SecondPass details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/668.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3120418</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="667" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/667%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:04b-Box-SecondPassWithSensor.JPG:http://opendesignengine.net/dmsf_files/667?download=" title="04b-Box-SecondPassWithSensor version 0.1 download">04b-Box-SecondPassWithSensor</a>
+				<div class="filename" title="Filename used for download or in Zip archive">04b-Box-SecondPassWithSensor.JPG</div>
+			</td>
+			<td class="size">3.1 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/667.html" title="04b-Box-SecondPassWithSensor details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/667.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3274735</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="670" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/670%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:05-SensorSlot.JPG:http://opendesignengine.net/dmsf_files/670?download=" title="05-SensorSlot version 0.1 download">05-SensorSlot</a>
+				<div class="filename" title="Filename used for download or in Zip archive">05-SensorSlot.JPG</div>
+			</td>
+			<td class="size">3 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/670.html" title="05-SensorSlot details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/670.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3120899</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="669" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/669%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:05b-SensorSlotWithSensor.JPG:http://opendesignengine.net/dmsf_files/669?download=" title="05b-SensorSlotWithSensor version 0.1 download">05b-SensorSlotWithSensor</a>
+				<div class="filename" title="Filename used for download or in Zip archive">05b-SensorSlotWithSensor.JPG</div>
+			</td>
+			<td class="size">3.1 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/669.html" title="05b-SensorSlotWithSensor details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/669.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3292817</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="671" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/671%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:06-Top.JPG:http://opendesignengine.net/dmsf_files/671?download=" title="06-Top version 0.1 download">06-Top</a>
+				<div class="filename" title="Filename used for download or in Zip archive">06-Top.JPG</div>
+			</td>
+			<td class="size">3 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/671.html" title="06-Top details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/671.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3165763</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="672" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/672%3Fdownload=" class="icon icon-file image-jpeg" data-downloadurl="image/jpeg:07-FinishedHousing.JPG:http://opendesignengine.net/dmsf_files/672?download=" title="07-FinishedHousing version 0.1 download">07-FinishedHousing</a>
+				<div class="filename" title="Filename used for download or in Zip archive">07-FinishedHousing.JPG</div>
+			</td>
+			<td class="size">3.1 MB</td>
+			<td class="modified">
+				2018-02-04 20:43
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/672.html" title="07-FinishedHousing details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/672.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">3271645</td>
+		</tr>
+	
+	</tbody>
+	</table>
+	<br />
+</form>
+
+<script type="text/javascript">
+	jQuery("a.delete-link").click(function(event) {
+		if(!window.confirm("Do you really want to delete this entry?")) event.preventDefault();
+	})
+	
+	jQuery("#entries_delete_button").click(function(event) {
+		if(window.confirm("Do you really want to delete checked entries?")) {
+			jQuery("#entries_form").attr("action", "/dmsf/delete_entries/holoseat?folder_id=85");
+			jQuery("#entries_form").submit();
+		}
+	})
+	
+	jQuery("#check_all_entries").click(function(event) {
+		var $this = jQuery(this);
+		if($this.prop("checked")) {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", true);
+		} else {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", false);
+		}
+	})			
+</script>
+
+
+
+
+
+
+<br />
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/holoseat.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

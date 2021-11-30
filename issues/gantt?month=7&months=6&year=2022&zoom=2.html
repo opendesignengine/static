@@ -1,0 +1,1083 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Gantt - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="nV8PNPvpDTvNop/c7qgPAI5NYptC5U4EN3elfQuecv4="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../javascripts/calendar/calendar.js%3F1359925542" type="text/javascript"></script><script src="../javascripts/calendar/lang/calendar-en.js%3F1359925542" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+
+//]]>
+</script><script src="../javascripts/calendar/calendar-setup.js%3F1359925542" type="text/javascript"></script><link href="../stylesheets/calendar.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" /></head>
+<body class="controller-gantts action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search.html" method="get">
+        
+        <a href="../search.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <h3>Issues</h3>
+<a href="../issues%3Fset_filter=1.html">View all issues</a><br />
+
+
+
+
+	<a href="calendar.html">Calendar</a><br />
+
+
+	<a href="gantt.html">Gantt</a><br />
+
+
+
+
+
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        
+<h2>Gantt</h2>
+
+<form action="http://opendesignengine.net/issues/gantt?month=7&amp;months=6&amp;year=2022" id="query_form" method="get">
+<input id="set_filter" name="set_filter" type="hidden" value="1" />
+<fieldset id="filters" class="collapsible ">
+  <legend onclick="toggleFieldset(this);">Filters</legend>
+	<div style="">
+    <script type="text/javascript">
+//<![CDATA[
+function add_filter() {
+  select = $('add_filter_select');
+  field = select.value
+  Element.show('tr_' +  field);
+  check_box = $('cb_' + field);
+  check_box.checked = true;
+  toggle_filter(field);
+  select.selectedIndex = 0;
+
+  for (i=0; i<select.options.length; i++) {
+    if (select.options[i].value == field) {
+      select.options[i].disabled = true;
+    }    
+  }
+}
+
+function toggle_filter(field) {
+  check_box = $('cb_' + field);
+  if (check_box.checked) {
+    Element.show("operators_" + field);
+    Form.Element.enable("operators_" + field);
+    toggle_operator(field);
+  } else {
+    Element.hide("operators_" + field);
+    Form.Element.disable("operators_" + field);
+    enableValues(field, []);
+  }
+}
+
+function enableValues(field, indexes) {
+	var f = $$(".values_" + field);
+	for(var i=0;i<f.length;i++) {
+		if (indexes.include(i)) {
+			Form.Element.enable(f[i]);
+			f[i].up('span').show();
+		} else {
+			f[i].value = '';
+      Form.Element.disable(f[i]);
+      f[i].up('span').hide();
+		}
+	}
+	if (indexes.length > 0) {
+		Element.show("div_values_" + field);
+	} else {
+		Element.hide("div_values_" + field);
+	}
+}
+
+function toggle_operator(field) {
+  operator = $("operators_" + field);
+  switch (operator.value) {
+    case "!*":
+    case "*":
+    case "t":
+    case "w":
+    case "o":
+    case "c":
+      enableValues(field, []);
+      break;
+    case "><":
+      enableValues(field, [0,1]);
+      break;
+    case "<t+":
+    case ">t+":
+    case "t+":
+    case ">t-":
+    case "<t-":
+    case "t-":
+      enableValues(field, [2]);
+      break;
+    default:
+      enableValues(field, [0]);
+      break;
+  }
+}
+
+function toggle_multi_select(el) {
+  var select = $(el);
+  if (select.multiple == true) {
+    select.multiple = false;
+  } else {
+    select.multiple = true;
+  }
+}
+
+function submit_query_form(id) {
+  selectAllOptions("selected_columns");
+  $(id).submit();
+}
+
+function apply_filters_observer() {
+  $$("#query_form input[type=text]").invoke("observe", "keypress", function(e){
+    if(e.keyCode == Event.KEY_RETURN) {
+      submit_query_form("query_form");
+    }
+  });
+}
+Event.observe(document,"dom:loaded", apply_filters_observer);
+//]]>
+</script>
+
+<table width="100%">
+<tr>
+<td>
+<table>
+
+    
+    <tr  id="tr_status_id" class="filter">
+    <td class="field">
+        <input checked="checked" id="cb_status_id" name="f[]" onclick="toggle_filter('status_id');" type="checkbox" value="status_id" />
+        <label for="cb_status_id">Status</label>
+    </td>
+    <td class="operator">
+        <select id="operators_status_id" name="op[status_id]" onchange="toggle_operator('status_id');"><option value="o" selected="selected">open</option>
+<option value="=">is</option>
+<option value="!">is not</option>
+<option value="c">closed</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_status_id" style="display:none;">
+    
+        <span class="span_values_status_id">
+        	<select class="values_status_id" id="values_status_id_1" name="v[status_id][]"><option value="1">New</option>
+<option value="2">In Progress</option>
+<option value="3">Resolved</option>
+<option value="4">Feedback</option>
+<option value="5">Closed</option>
+<option value="6">Rejected</option></select>
+          <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html#" onclick="toggle_multi_select('values_status_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('status_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_project_id" class="filter">
+    <td class="field">
+        <input id="cb_project_id" name="f[]" onclick="toggle_filter('project_id');" type="checkbox" value="project_id" />
+        <label for="cb_project_id">Project</label>
+    </td>
+    <td class="operator">
+        <select id="operators_project_id" name="op[project_id]" onchange="toggle_operator('project_id');"><option value="=">is</option>
+<option value="!">is not</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_project_id" style="display:none;">
+    
+        <span class="span_values_project_id">
+        	<select class="values_project_id" id="values_project_id_1" name="v[project_id][]"><option value="46">Far Horizons Project</option>
+<option value="108">Ground Sphere CubeSat Ground Station</option>
+<option value="120">-- Ground Sphere CadQuery CAD</option>
+<option value="116">-- Ground Sphere Test Transmitter</option>
+<option value="131">Ground Sphere Mk 3</option>
+<option value="57">Ground Station</option>
+<option value="88">-- Computer Hardware and Software</option>
+<option value="86">-- Operator Licensing</option>
+<option value="87">-- Radio Selection</option>
+<option value="89">-- Upgrading the Antennas</option>
+<option value="85">Groundstation v.2.0</option>
+<option value="104">Holoseat</option>
+<option value="137">-- Holoseat Test Stand</option>
+<option value="123">Mach 30 Technical Roadmap</option>
+<option value="5">Make Workbenches</option>
+<option value="126">Mathematics Tool Kit</option>
+<option value="6">Museum Audio Button</option>
+<option value="1">Open Design Engine</option>
+<option value="99">-- Allow Private Projects Plugin</option>
+<option value="8">Open Source Electrical Motor Generator</option>
+<option value="122">Pedal Bus</option>
+<option value="62">Plant Respiration Test Aparatus</option>
+<option value="63">-- Climate control assembly</option>
+<option value="69">-- Command &amp; Control System</option>
+<option value="64">-- Consolidated Gas Sensor Assembly</option>
+<option value="67">-- Ebb and Flow Control</option>
+<option value="68">-- Gas Mixture Assembly</option>
+<option value="66">-- Growth Chambers</option>
+<option value="65">-- Pressure / Vacuum Control</option>
+<option value="97">Power/Temp Monitor and Control System (EPS/ECLSS)</option>
+<option value="96">Pyrometer</option>
+<option value="103">RFCase</option>
+<option value="53">Rover</option>
+<option value="55">-- LIDAR and guidance (collision avoidance) system</option>
+<option value="71">-- Rover Communication Module (CDHS)</option>
+<option value="72">-- Rover Data Processing System</option>
+<option value="70">-- Rover Frame</option>
+<option value="75">-- Rover Generic Manipulator</option>
+<option value="76">-- Rover Modular Payload Bay</option>
+<option value="73">-- Rover Navigation Module</option>
+<option value="74">-- Rover Power module</option>
+<option value="54">-- Wheel and tire assembly</option>
+<option value="3">Sandbox</option>
+<option value="12">-- Sub Sandbox</option>
+<option value="47">Scanning Tunnelling Microscope</option>
+<option value="4">Shepard Test Stand</option>
+<option value="9">Simple Wheel Truing Device</option>
+<option value="11">DMX Gizmo</option>
+<option value="44">Epoxy Granite CNC Mill</option>
+<option value="48">Space Chiles v1.0</option>
+<option value="98">Variable Gravity Agriculture</option>
+<option value="58">AttenuatorX</option>
+<option value="94">Gravity Development Board</option>
+<option value="95">-- Modkit expansion </option>
+<option value="100">__</option>
+<option value="102">Open Source Linking Construction Set</option>
+<option value="105">Laboratory EKG Pre-Amplifier</option>
+<option value="106">Dionysus</option>
+<option value="107">-- Hardware</option>
+<option value="109">CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks</option>
+<option value="110">Open Source Anchor Project (OSAP)</option>
+<option value="113">-- Base Anchor</option>
+<option value="111">-- Shankless Anchor</option>
+<option value="112">-- Weldless Anchor</option>
+<option value="114">Open Source Switches</option>
+<option value="115">-- Push Button Switch</option>
+<option value="117">Wave Articulation Matrix</option>
+<option value="121">Visual Guide to 3D Printing</option>
+<option value="124">High Altitude Rocket Project (HARP)</option>
+<option value="125">Yavin Thruster</option>
+<option value="128">Open Source Lidar</option>
+<option value="129">Perpetum mobile</option>
+<option value="138">Audio Frequency Function Generator</option></select>
+          <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html#" onclick="toggle_multi_select('values_project_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('project_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_tracker_id" class="filter">
+    <td class="field">
+        <input id="cb_tracker_id" name="f[]" onclick="toggle_filter('tracker_id');" type="checkbox" value="tracker_id" />
+        <label for="cb_tracker_id">Tracker</label>
+    </td>
+    <td class="operator">
+        <select id="operators_tracker_id" name="op[tracker_id]" onchange="toggle_operator('tracker_id');"><option value="=">is</option>
+<option value="!">is not</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_tracker_id" style="display:none;">
+    
+        <span class="span_values_tracker_id">
+        	<select class="values_tracker_id" id="values_tracker_id_1" name="v[tracker_id][]"><option value="1">Bug</option>
+<option value="2">Feature</option>
+<option value="3">Support</option>
+<option value="4">Milestone</option></select>
+          <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html#" onclick="toggle_multi_select('values_tracker_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('tracker_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_priority_id" class="filter">
+    <td class="field">
+        <input id="cb_priority_id" name="f[]" onclick="toggle_filter('priority_id');" type="checkbox" value="priority_id" />
+        <label for="cb_priority_id">Priority</label>
+    </td>
+    <td class="operator">
+        <select id="operators_priority_id" name="op[priority_id]" onchange="toggle_operator('priority_id');"><option value="=">is</option>
+<option value="!">is not</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_priority_id" style="display:none;">
+    
+        <span class="span_values_priority_id">
+        	<select class="values_priority_id" id="values_priority_id_1" name="v[priority_id][]"><option value="3">Low</option>
+<option value="4">Normal</option>
+<option value="5">High</option>
+<option value="6">Urgent</option>
+<option value="7">Immediate</option></select>
+          <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html#" onclick="toggle_multi_select('values_priority_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('priority_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_assigned_to_id" class="filter">
+    <td class="field">
+        <input id="cb_assigned_to_id" name="f[]" onclick="toggle_filter('assigned_to_id');" type="checkbox" value="assigned_to_id" />
+        <label for="cb_assigned_to_id">Assignee</label>
+    </td>
+    <td class="operator">
+        <select id="operators_assigned_to_id" name="op[assigned_to_id]" onchange="toggle_operator('assigned_to_id');"><option value="=">is</option>
+<option value="!">is not</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_assigned_to_id" style="display:none;">
+    
+        <span class="span_values_assigned_to_id">
+        	<select class="values_assigned_to_id" id="values_assigned_to_id_1" name="v[assigned_to_id][]"><option value="125">Aaron Harper</option>
+<option value="1">Admin Administrator</option>
+<option value="110">Alfred Cochrane</option>
+<option value="140">Amanda Wozniak</option>
+<option value="113">Andrew Starr</option>
+<option value="5">Ben Barnett</option>
+<option value="133">Blaze Sanders</option>
+<option value="105">Brandin Watson</option>
+<option value="158">Bryan Christian</option>
+<option value="231">Camdon Cady</option>
+<option value="153">Carl Atnip</option>
+<option value="179">Charlie Bellows</option>
+<option value="98">Chris McCord</option>
+<option value="130">Christopher Sigman</option>
+<option value="172">David McCoy</option>
+<option value="116">David Norris</option>
+<option value="155">David Syndergaard</option>
+<option value="30">Derek Bever</option>
+<option value="107">Dylan Cullertan</option>
+<option value="289">Emil Leban</option>
+<option value="111">Ethan Chew</option>
+<option value="190">Glenn Dennis</option>
+<option value="144">Greg Austic</option>
+<option value="4">Greg Moran</option>
+<option value="24">Ian Harrison</option>
+<option value="308">Ingrid Velasquez</option>
+<option value="199">Innovations Tech</option>
+<option value="3">J. Simmons</option>
+<option value="131">Jack Linke</option>
+<option value="187">JC Durbin</option>
+<option value="102">Jeremy Wright</option>
+<option value="10">Joe Mckibben</option>
+<option value="309">Josh Sharpe</option>
+<option value="115">Juli Fowler</option>
+<option value="387">Katherine Hogue</option>
+<option value="269">Katherine Maul</option>
+<option value="114">Kevin Bouwkamp</option>
+<option value="108">Manuel Payan</option>
+<option value="188">Mark Cote</option>
+<option value="216">Matt Maier</option>
+<option value="7">Matthew Sears</option>
+<option value="405">Monty Noblezada</option>
+<option value="592">Nikolay Yurchenko</option>
+<option value="310">Ray McCauley</option>
+<option value="156">Ryan Pulkrabek</option>
+<option value="226">Samer Najia</option>
+<option value="178">Scott Cutler</option>
+<option value="204">Sean Logan</option>
+<option value="69">Shaun Houlihan</option>
+<option value="392">Skylar Hoffert</option>
+<option value="183">Steve Popenoe</option>
+<option value="151">Tenzin Beck</option>
+<option value="177">Tim DeBenedictis</option>
+<option value="106">Trenton Wilson</option>
+<option value="109">Trevor Law</option>
+<option value="104">Wilton Burke</option></select>
+          <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html#" onclick="toggle_multi_select('values_assigned_to_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('assigned_to_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_author_id" class="filter">
+    <td class="field">
+        <input id="cb_author_id" name="f[]" onclick="toggle_filter('author_id');" type="checkbox" value="author_id" />
+        <label for="cb_author_id">Author</label>
+    </td>
+    <td class="operator">
+        <select id="operators_author_id" name="op[author_id]" onchange="toggle_operator('author_id');"><option value="=">is</option>
+<option value="!">is not</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_author_id" style="display:none;">
+    
+        <span class="span_values_author_id">
+        	<select class="values_author_id" id="values_author_id_1" name="v[author_id][]"><option value="125">Aaron Harper</option>
+<option value="1">Admin Administrator</option>
+<option value="110">Alfred Cochrane</option>
+<option value="140">Amanda Wozniak</option>
+<option value="113">Andrew Starr</option>
+<option value="5">Ben Barnett</option>
+<option value="133">Blaze Sanders</option>
+<option value="105">Brandin Watson</option>
+<option value="158">Bryan Christian</option>
+<option value="231">Camdon Cady</option>
+<option value="153">Carl Atnip</option>
+<option value="179">Charlie Bellows</option>
+<option value="98">Chris McCord</option>
+<option value="130">Christopher Sigman</option>
+<option value="172">David McCoy</option>
+<option value="116">David Norris</option>
+<option value="155">David Syndergaard</option>
+<option value="30">Derek Bever</option>
+<option value="107">Dylan Cullertan</option>
+<option value="289">Emil Leban</option>
+<option value="111">Ethan Chew</option>
+<option value="190">Glenn Dennis</option>
+<option value="144">Greg Austic</option>
+<option value="4">Greg Moran</option>
+<option value="24">Ian Harrison</option>
+<option value="308">Ingrid Velasquez</option>
+<option value="199">Innovations Tech</option>
+<option value="3">J. Simmons</option>
+<option value="131">Jack Linke</option>
+<option value="187">JC Durbin</option>
+<option value="102">Jeremy Wright</option>
+<option value="10">Joe Mckibben</option>
+<option value="309">Josh Sharpe</option>
+<option value="115">Juli Fowler</option>
+<option value="387">Katherine Hogue</option>
+<option value="269">Katherine Maul</option>
+<option value="114">Kevin Bouwkamp</option>
+<option value="108">Manuel Payan</option>
+<option value="188">Mark Cote</option>
+<option value="216">Matt Maier</option>
+<option value="7">Matthew Sears</option>
+<option value="405">Monty Noblezada</option>
+<option value="592">Nikolay Yurchenko</option>
+<option value="310">Ray McCauley</option>
+<option value="156">Ryan Pulkrabek</option>
+<option value="226">Samer Najia</option>
+<option value="178">Scott Cutler</option>
+<option value="204">Sean Logan</option>
+<option value="69">Shaun Houlihan</option>
+<option value="392">Skylar Hoffert</option>
+<option value="183">Steve Popenoe</option>
+<option value="151">Tenzin Beck</option>
+<option value="177">Tim DeBenedictis</option>
+<option value="106">Trenton Wilson</option>
+<option value="109">Trevor Law</option>
+<option value="104">Wilton Burke</option></select>
+          <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html#" onclick="toggle_multi_select('values_author_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('author_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_assigned_to_role" class="filter">
+    <td class="field">
+        <input id="cb_assigned_to_role" name="f[]" onclick="toggle_filter('assigned_to_role');" type="checkbox" value="assigned_to_role" />
+        <label for="cb_assigned_to_role">Assignee's role</label>
+    </td>
+    <td class="operator">
+        <select id="operators_assigned_to_role" name="op[assigned_to_role]" onchange="toggle_operator('assigned_to_role');"><option value="=">is</option>
+<option value="!">is not</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_assigned_to_role" style="display:none;">
+    
+        <span class="span_values_assigned_to_role">
+        	<select class="values_assigned_to_role" id="values_assigned_to_role_1" name="v[assigned_to_role][]"><option value="3">Manager</option>
+<option value="4">Developer</option></select>
+          <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html#" onclick="toggle_multi_select('values_assigned_to_role_1');; return false;"><img alt="Bullet_toggle_plus" src="../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('assigned_to_role');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_subject" class="filter">
+    <td class="field">
+        <input id="cb_subject" name="f[]" onclick="toggle_filter('subject');" type="checkbox" value="subject" />
+        <label for="cb_subject">Subject</label>
+    </td>
+    <td class="operator">
+        <select id="operators_subject" name="op[subject]" onchange="toggle_operator('subject');"><option value="~">contains</option>
+<option value="!~">doesn&#x27;t contain</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_subject" style="display:none;">
+    
+        <span class="span_values_subject"><input class="values_subject" id="values_subject" name="v[subject][]" size="30" type="text" /></span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('subject');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_created_on" class="filter">
+    <td class="field">
+        <input id="cb_created_on" name="f[]" onclick="toggle_filter('created_on');" type="checkbox" value="created_on" />
+        <label for="cb_created_on">Created</label>
+    </td>
+    <td class="operator">
+        <select id="operators_created_on" name="op[created_on]" onchange="toggle_operator('created_on');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="&gt;t-">less than days ago</option>
+<option value="&lt;t-">more than days ago</option>
+<option value="t-">days ago</option>
+<option value="t">today</option>
+<option value="w">this week</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_created_on" style="display:none;">
+    
+        <span class="span_values_created_on"><input class="values_created_on" id="values_created_on_1" name="v[created_on][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_created_on_1_trigger" src="../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_created_on_1', ifFormat : '%Y-%m-%d', button : 'values_created_on_1_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_created_on"><input class="values_created_on" id="values_created_on_2" name="v[created_on][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_created_on_2_trigger" src="../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_created_on_2', ifFormat : '%Y-%m-%d', button : 'values_created_on_2_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_created_on"><input class="values_created_on" id="v_created_on_" name="v[created_on][]" size="3" type="text" /> days</span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('created_on');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_updated_on" class="filter">
+    <td class="field">
+        <input id="cb_updated_on" name="f[]" onclick="toggle_filter('updated_on');" type="checkbox" value="updated_on" />
+        <label for="cb_updated_on">Updated</label>
+    </td>
+    <td class="operator">
+        <select id="operators_updated_on" name="op[updated_on]" onchange="toggle_operator('updated_on');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="&gt;t-">less than days ago</option>
+<option value="&lt;t-">more than days ago</option>
+<option value="t-">days ago</option>
+<option value="t">today</option>
+<option value="w">this week</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_updated_on" style="display:none;">
+    
+        <span class="span_values_updated_on"><input class="values_updated_on" id="values_updated_on_1" name="v[updated_on][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_updated_on_1_trigger" src="../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_updated_on_1', ifFormat : '%Y-%m-%d', button : 'values_updated_on_1_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_updated_on"><input class="values_updated_on" id="values_updated_on_2" name="v[updated_on][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_updated_on_2_trigger" src="../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_updated_on_2', ifFormat : '%Y-%m-%d', button : 'values_updated_on_2_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_updated_on"><input class="values_updated_on" id="v_updated_on_" name="v[updated_on][]" size="3" type="text" /> days</span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('updated_on');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_start_date" class="filter">
+    <td class="field">
+        <input id="cb_start_date" name="f[]" onclick="toggle_filter('start_date');" type="checkbox" value="start_date" />
+        <label for="cb_start_date">Start date</label>
+    </td>
+    <td class="operator">
+        <select id="operators_start_date" name="op[start_date]" onchange="toggle_operator('start_date');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="&lt;t+">in less than</option>
+<option value="&gt;t+">in more than</option>
+<option value="t+">in</option>
+<option value="t">today</option>
+<option value="w">this week</option>
+<option value="&gt;t-">less than days ago</option>
+<option value="&lt;t-">more than days ago</option>
+<option value="t-">days ago</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_start_date" style="display:none;">
+    
+        <span class="span_values_start_date"><input class="values_start_date" id="values_start_date_1" name="v[start_date][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_start_date_1_trigger" src="../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_start_date_1', ifFormat : '%Y-%m-%d', button : 'values_start_date_1_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_start_date"><input class="values_start_date" id="values_start_date_2" name="v[start_date][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_start_date_2_trigger" src="../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_start_date_2', ifFormat : '%Y-%m-%d', button : 'values_start_date_2_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_start_date"><input class="values_start_date" id="v_start_date_" name="v[start_date][]" size="3" type="text" /> days</span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('start_date');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_due_date" class="filter">
+    <td class="field">
+        <input id="cb_due_date" name="f[]" onclick="toggle_filter('due_date');" type="checkbox" value="due_date" />
+        <label for="cb_due_date">Due date</label>
+    </td>
+    <td class="operator">
+        <select id="operators_due_date" name="op[due_date]" onchange="toggle_operator('due_date');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="&lt;t+">in less than</option>
+<option value="&gt;t+">in more than</option>
+<option value="t+">in</option>
+<option value="t">today</option>
+<option value="w">this week</option>
+<option value="&gt;t-">less than days ago</option>
+<option value="&lt;t-">more than days ago</option>
+<option value="t-">days ago</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_due_date" style="display:none;">
+    
+        <span class="span_values_due_date"><input class="values_due_date" id="values_due_date_1" name="v[due_date][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_due_date_1_trigger" src="../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_due_date_1', ifFormat : '%Y-%m-%d', button : 'values_due_date_1_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_due_date"><input class="values_due_date" id="values_due_date_2" name="v[due_date][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_due_date_2_trigger" src="../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_due_date_2', ifFormat : '%Y-%m-%d', button : 'values_due_date_2_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_due_date"><input class="values_due_date" id="v_due_date_" name="v[due_date][]" size="3" type="text" /> days</span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('due_date');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_estimated_hours" class="filter">
+    <td class="field">
+        <input id="cb_estimated_hours" name="f[]" onclick="toggle_filter('estimated_hours');" type="checkbox" value="estimated_hours" />
+        <label for="cb_estimated_hours">Estimated time</label>
+    </td>
+    <td class="operator">
+        <select id="operators_estimated_hours" name="op[estimated_hours]" onchange="toggle_operator('estimated_hours');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_estimated_hours" style="display:none;">
+    
+        <span class="span_values_estimated_hours"><input class="values_estimated_hours" id="values_estimated_hours_1" name="v[estimated_hours][]" size="6" type="text" /></span>
+        <span class="span_values_estimated_hours"><input class="values_estimated_hours" id="values_estimated_hours_2" name="v[estimated_hours][]" size="6" type="text" /></span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('estimated_hours');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_done_ratio" class="filter">
+    <td class="field">
+        <input id="cb_done_ratio" name="f[]" onclick="toggle_filter('done_ratio');" type="checkbox" value="done_ratio" />
+        <label for="cb_done_ratio">% Done</label>
+    </td>
+    <td class="operator">
+        <select id="operators_done_ratio" name="op[done_ratio]" onchange="toggle_operator('done_ratio');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_done_ratio" style="display:none;">
+    
+        <span class="span_values_done_ratio"><input class="values_done_ratio" id="values_done_ratio_1" name="v[done_ratio][]" size="6" type="text" /></span>
+        <span class="span_values_done_ratio"><input class="values_done_ratio" id="values_done_ratio_2" name="v[done_ratio][]" size="6" type="text" /></span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('done_ratio');</script>
+    </td>
+    </tr>
+
+</table>
+</td>
+<td class="add-filter">
+<label for="add_filter_select">Add filter</label>
+<select id="add_filter_select" onchange="add_filter();"><option value=""></option>
+<option value="project_id">Project</option>
+<option value="tracker_id">Tracker</option>
+<option value="priority_id">Priority</option>
+<option value="assigned_to_id">Assignee</option>
+<option value="author_id">Author</option>
+<option value="assigned_to_role">Assignee&#x27;s role</option>
+<option value="subject">Subject</option>
+<option value="created_on">Created</option>
+<option value="updated_on">Updated</option>
+<option value="start_date">Start date</option>
+<option value="due_date">Due date</option>
+<option value="estimated_hours">Estimated time</option>
+<option value="done_ratio">% Done</option></select>
+</td>
+</tr>
+</table>
+<input id="f_" name="f[]" type="hidden" value="" />
+
+  </div>
+</fieldset>
+
+<p class="contextual">
+  <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=3.html" class="icon icon-zoom-in">Zoom in</a>
+  <a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=1.html" class="icon icon-zoom-out">Zoom out</a>
+</p>
+
+<p class="buttons">
+<input id="months" name="months" size="2" type="text" value="6" />
+months from
+<select id="month" name="month">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option selected="selected" value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+
+<select id="year" name="year">
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option selected="selected" value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+<option value="2025">2025</option>
+<option value="2026">2026</option>
+<option value="2027">2027</option>
+</select>
+
+<input id="zoom" name="zoom" type="hidden" value="2" />
+
+<a class="icon icon-checked" href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html#" onclick="$(&quot;query_form&quot;).submit(); return false;">Apply</a>
+<a href="gantt%3Fset_filter=1.html" class="icon icon-reload">Clear</a>
+</p>
+</form>
+
+
+
+
+
+
+
+<table width="100%" style="border:0; border-collapse: collapse;">
+<tr>
+<td style="width:330px; padding:0px;">
+
+<div style="position:relative;height:3370px;width:331px;">
+<div style="right:-2px;width:330px;height:36px;background: #eee;" class="gantt_hdr"></div>
+<div style="right:-2px;width:330px;height:3346px;border-left: 1px solid #c0c0c0;overflow:hidden;" class="gantt_hdr"></div>
+
+<div class="gantt_subjects">
+<div class="project-name" style="position: absolute;top:44px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/far-horizons-project.html">Far Horizons Project</a></span></div><div class="version-name" style="position: absolute;top:64px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../versions/8.html">Far Horizons Project - Far Horizons Project v1.0</a></span></div><div class="issue-subject" style="position: absolute;top:84px;left:44px;width:286px;" title="Adler Planetarium Documentation Visit"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="65.html" class="issue status-2 priority-2 overdue">Milestone #65</a>: Adler Planetarium Documentation Visit</span></div><div class="project-name" style="position: absolute;top:104px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/gs-002.html">Groundstation v.2.0</a></span></div><div class="issue-subject" style="position: absolute;top:124px;left:24px;width:306px;" title="Ground station overview"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="139.html" class="issue status-1 priority-2 overdue">Milestone #139</a>: Ground station overview</span></div><div class="issue-subject" style="position: absolute;top:144px;left:24px;width:306px;" title="Feature requests and design requirements (SEP)"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="140.html" class="issue status-1 priority-2 overdue">Milestone #140</a>: Feature requests and design requirements (SEP)</span></div><div class="issue-subject" style="position: absolute;top:164px;left:24px;width:306px;" title="Ground Station Design"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="141.html" class="issue status-1 priority-2 overdue">Milestone #141</a>: Ground Station Design</span></div><div class="issue-subject" style="position: absolute;top:184px;left:24px;width:306px;" title="Order components and prepare preliminary assemblies"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="142.html" class="issue status-1 priority-2 overdue">Milestone #142</a>: Order components and prepare preliminary assemblies</span></div><div class="issue-subject" style="position: absolute;top:204px;left:24px;width:306px;" title="Assemble ground station Az-El mount"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="143.html" class="issue status-1 priority-2 overdue">Milestone #143</a>: Assemble ground station Az-El mount</span></div><div class="issue-subject" style="position: absolute;top:224px;left:24px;width:306px;" title="Computer control"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="144.html" class="issue status-1 priority-2 overdue">Milestone #144</a>: Computer control</span></div><div class="issue-subject" style="position: absolute;top:244px;left:24px;width:306px;" title="Connect Receiver and test satellite reception"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="145.html" class="issue status-1 priority-2 overdue">Milestone #145</a>: Connect Receiver and test satellite reception</span></div><div class="issue-subject" style="position: absolute;top:264px;left:24px;width:306px;" title="Create body of documentation"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="146.html" class="issue status-1 priority-2 overdue">Milestone #146</a>: Create body of documentation</span></div><div class="project-name" style="position: absolute;top:284px;left:4px;width:326px;"><span class='icon icon-projects '><a href="../projects/holoseat%3Fjump=overview.html">Holoseat</a></span></div><div class="issue-subject" style="position: absolute;top:304px;left:24px;width:306px;" title="App window renders below full resolution on high resolution screen"><span class=' icon icon-issue'><a href="277.html" class="issue status-2 priority-2">Bug #277</a>: App window renders below full resolution on high resolution screen</span></div><div class="project-name" style="position: absolute;top:324px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/m30roadmap.html">Mach 30 Technical Roadmap</a></span></div><div class="issue-subject" style="position: absolute;top:344px;left:24px;width:306px;" title="Add brief description to launch vehicle sub-systems to introduce them as discussion topics"><span class=' icon icon-issue'><a href="269.html" class="issue status-1 priority-3">Support #269</a>: Add brief description to launch vehicle sub-systems to introduce them as discussion topics</span></div><div class="project-name" style="position: absolute;top:364px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/ode%3Fjump=overview.html">Open Design Engine</a></span></div><div class="issue-subject" style="position: absolute;top:384px;left:24px;width:306px;" title="Ability to Set Aliases for Module Tab Names"><span class=' icon icon-issue'><a href="135.html" class="issue status-2 priority-1 child">Feature #135</a>: Ability to Set Aliases for Module Tab Names</span></div><div class="issue-subject" style="position: absolute;top:404px;left:24px;width:306px;" title="Change &quot;Issues&quot; to &quot;Tickets&quot;"><span class=' icon icon-issue'><a href="156.html" class="issue status-1 priority-2 child">Feature #156</a>: Change &quot;Issues&quot; to &quot;Tickets&quot;</span></div><div class="issue-subject" style="position: absolute;top:424px;left:24px;width:306px;" title="Allow Users to Accept or Reject Project &quot;Invitations&quot;"><span class=' icon icon-issue'><a href="104.html" class="issue status-1 priority-1">Feature #104</a>: Allow Users to Accept or Reject Project &quot;Invitations&quot;</span></div><div class="issue-subject" style="position: absolute;top:444px;left:24px;width:306px;" title="Organize Projects Page Entries"><span class=' icon icon-issue'><a href="105.html" class="issue status-1 priority-2">Feature #105</a>: Organize Projects Page Entries</span></div><div class="issue-subject" style="position: absolute;top:464px;left:24px;width:306px;" title="Ability to Collapse Subprojects List"><span class=' icon icon-issue'><a href="106.html" class="issue status-1 priority-1">Feature #106</a>: Ability to Collapse Subprojects List</span></div><div class="issue-subject" style="position: absolute;top:484px;left:24px;width:306px;" title="Add Current and All Revisions Deletion of Images"><span class=' icon icon-issue'><a href="112.html" class="issue status-1 priority-2">Feature #112</a>: Add Current and All Revisions Deletion of Images</span></div><div class="issue-subject" style="position: absolute;top:504px;left:24px;width:306px;" title="Live Collaborative Editing"><span class=' icon icon-issue'><a href="132.html" class="issue status-1 priority-2">Feature #132</a>: Live Collaborative Editing</span></div><div class="issue-subject" style="position: absolute;top:524px;left:24px;width:306px;" title="Preview and Edit Capability for News Comments"><span class=' icon icon-issue'><a href="133.html" class="issue status-1 priority-1">Feature #133</a>: Preview and Edit Capability for News Comments</span></div><div class="issue-subject" style="position: absolute;top:544px;left:24px;width:306px;" title="Deactivate Files Module"><span class=' icon icon-issue'><a href="148.html" class="issue status-1 priority-2">Bug #148</a>: Deactivate Files Module</span></div><div class="issue-subject" style="position: absolute;top:564px;left:24px;width:306px;" title="Investigate usage of Redmine's To-Do List plugin"><span class=' icon icon-issue'><a href="149.html" class="issue status-1 priority-2">Bug #149</a>: Investigate usage of Redmine&#x27;s To-Do List plugin</span></div><div class="issue-subject" style="position: absolute;top:584px;left:24px;width:306px;" title="Open ID Integration"><span class=' icon icon-issue'><a href="151.html" class="issue status-1 priority-1">Feature #151</a>: Open ID Integration</span></div><div class="issue-subject" style="position: absolute;top:604px;left:24px;width:306px;" title="Bread Crumb Navigation"><span class=' icon icon-issue'><a href="250.html" class="issue status-1 priority-2">Feature #250</a>: Bread Crumb Navigation</span></div><div class="issue-subject" style="position: absolute;top:624px;left:24px;width:306px;" title="ThingTracker Integration"><span class=' icon icon-issue'><a href="263.html" class="issue status-1 priority-1">Feature #263</a>: ThingTracker Integration</span></div><div class="issue-subject" style="position: absolute;top:644px;left:24px;width:306px;" title="New Project Creation Does Not Require Selection of Software or Documentation Licenses"><span class=' icon icon-issue'><a href="264.html" class="issue status-1 priority-2">Bug #264</a>: New Project Creation Does Not Require Selection of Software or Documentation Licenses</span></div><div class="issue-subject" style="position: absolute;top:664px;left:24px;width:306px;" title="SCM URL in project settings is incorrect"><span class=' icon icon-issue'><a href="265.html" class="issue status-1 priority-3">Bug #265</a>: SCM URL in project settings is incorrect</span></div><div class="issue-subject" style="position: absolute;top:684px;left:24px;width:306px;" title="Upgrade fundraising plugin to include more sites"><span class=' icon icon-issue'><a href="266.html" class="issue status-1 priority-2">Feature #266</a>: Upgrade fundraising plugin to include more sites</span></div><div class="issue-subject" style="position: absolute;top:704px;left:24px;width:306px;" title="Add Companies Plugin"><span class=' icon icon-issue'><a href="267.html" class="issue status-1 priority-2">Feature #267</a>: Add Companies Plugin</span></div><div class="version-name" style="position: absolute;top:724px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../versions/4.html">Open Design Engine - v0.3 - Sustainability Enhancements</a></span></div><div class="issue-subject" style="position: absolute;top:744px;left:44px;width:286px;" title="Modernize ODE theme"><span class=' icon icon-issue'><a href="10.html" class="issue status-1 priority-2 parent">Feature #10</a>: Modernize ODE theme</span></div><div class="issue-subject" style="position: absolute;top:764px;left:64px;width:266px;" title="Add support to showcase &quot;featured projects&quot; on the site homepage"><span class=' icon icon-issue'><a href="14.html" class="issue status-1 priority-2 child">Feature #14</a>: Add support to showcase &quot;featured projects&quot; on the site homepage</span></div><div class="issue-subject" style="position: absolute;top:784px;left:64px;width:266px;" title="Make project homepage more dynamic"><span class=' icon icon-issue'><a href="15.html" class="issue status-1 priority-2 child">Feature #15</a>: Make project homepage more dynamic</span></div><div class="issue-subject" style="position: absolute;top:804px;left:64px;width:266px;" title="Improve dashboard"><span class=' icon icon-issue'><a href="16.html" class="issue status-1 priority-2 child">Feature #16</a>: Improve dashboard</span></div><div class="issue-subject" style="position: absolute;top:824px;left:64px;width:266px;" title="Add tool tips to icons in the web site GUI"><span class=' icon icon-issue'><a href="48.html" class="issue status-1 priority-2 child">Feature #48</a>: Add tool tips to icons in the web site GUI</span></div><div class="issue-subject" style="position: absolute;top:844px;left:44px;width:286px;" title="Research how Redmine uses RMagick"><span class=' icon icon-issue'><a href="36.html" class="issue status-2 priority-2">Support #36</a>: Research how Redmine uses RMagick</span></div><div class="issue-subject" style="position: absolute;top:864px;left:44px;width:286px;" title="Per project web stores"><span class=' icon icon-issue'><a href="42.html" class="issue status-1 priority-2">Feature #42</a>: Per project web stores</span></div><div class="issue-subject" style="position: absolute;top:884px;left:44px;width:286px;" title="Git hosting is not working"><span class=' icon icon-issue'><a href="51.html" class="issue status-1 priority-2">Bug #51</a>: Git hosting is not working</span></div><div class="issue-subject" style="position: absolute;top:904px;left:44px;width:286px;" title="Update embedded image and video rendering to handle browser resizing"><span class=' icon icon-issue'><a href="73.html" class="issue status-1 priority-2">Feature #73</a>: Update embedded image and video rendering to handle browser resizing</span></div><div class="issue-subject" style="position: absolute;top:924px;left:44px;width:286px;" title="Updates to the repository don&amp;#x27;t show up on &quot;Activity&quot; tab automatically"><span class=' icon icon-issue'><a href="102.html" class="issue status-1 priority-2">Bug #102</a>: Updates to the repository don&amp;#x27;t show up on &quot;Activity&quot; tab automatically</span></div><div class="issue-subject" style="position: absolute;top:944px;left:44px;width:286px;" title="No Notification of Comments on News Items"><span class=' icon icon-issue'><a href="131.html" class="issue status-1 priority-2">Support #131</a>: No Notification of Comments on News Items</span></div><div class="issue-subject" style="position: absolute;top:964px;left:44px;width:286px;" title="Inconsistent visual layout between project tabs"><span class=' icon icon-issue'><a href="195.html" class="issue status-1 priority-2">Bug #195</a>: Inconsistent visual layout between project tabs</span></div><div class="issue-subject" style="position: absolute;top:984px;left:44px;width:286px;" title="For Pay Private Projects"><span class=' icon icon-issue'><a href="260.html" class="issue status-1 priority-2">Feature #260</a>: For Pay Private Projects</span></div><div class="version-name" style="position: absolute;top:1004px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../versions/3.html">Open Design Engine - Under consideration</a></span></div><div class="issue-subject" style="position: absolute;top:1024px;left:44px;width:286px;" title="Configure installer to use ODE.net&amp;#x27;s settings for defaults"><span class=' icon icon-issue'><a href="18.html" class="issue status-1 priority-2">Feature #18</a>: Configure installer to use ODE.net&amp;#x27;s settings for defaults</span></div><div class="issue-subject" style="position: absolute;top:1044px;left:44px;width:286px;" title="Add support for shared &quot;engineering&quot; workflows"><span class=' icon icon-issue'><a href="20.html" class="issue status-1 priority-2">Feature #20</a>: Add support for shared &quot;engineering&quot; workflows</span></div><div class="issue-subject" style="position: absolute;top:1064px;left:44px;width:286px;" title="Project assistance Bounty System"><span class=' icon icon-issue'><a href="21.html" class="issue status-1 priority-2">Feature #21</a>: Project assistance Bounty System</span></div><div class="issue-subject" style="position: absolute;top:1084px;left:44px;width:286px;" title="Add a &quot;fans&quot; page to projects"><span class=' icon icon-issue'><a href="23.html" class="issue status-1 priority-2">Feature #23</a>: Add a &quot;fans&quot; page to projects</span></div><div class="issue-subject" style="position: absolute;top:1104px;left:44px;width:286px;" title="Social networking sites support"><span class=' icon icon-issue'><a href="24.html" class="issue status-1 priority-2">Feature #24</a>: Social networking sites support</span></div><div class="issue-subject" style="position: absolute;top:1124px;left:44px;width:286px;" title="Add tagging support to projects and their modules"><span class=' icon icon-issue'><a href="25.html" class="issue status-1 priority-2">Feature #25</a>: Add tagging support to projects and their modules</span></div><div class="issue-subject" style="position: absolute;top:1144px;left:44px;width:286px;" title="Native support for Bills of Materials"><span class=' icon icon-issue'><a href="26.html" class="issue status-1 priority-2 parent">Feature #26</a>: Native support for Bills of Materials</span></div><div class="issue-subject" style="position: absolute;top:1164px;left:64px;width:266px;" title="Include the ability to embed references to other OSHW projects in BoM module"><span class=' icon icon-issue'><a href="183.html" class="issue status-1 priority-2 child">Feature #183</a>: Include the ability to embed references to other OSHW projects in BoM module</span></div><div class="issue-subject" style="position: absolute;top:1184px;left:44px;width:286px;" title="Engineering file management features"><span class=' icon icon-issue'><a href="27.html" class="issue status-1 priority-2">Feature #27</a>: Engineering file management features</span></div><div class="issue-subject" style="position: absolute;top:1204px;left:44px;width:286px;" title="Add real-time wiki editing"><span class=' icon icon-issue'><a href="28.html" class="issue status-1 priority-2">Feature #28</a>: Add real-time wiki editing</span></div><div class="issue-subject" style="position: absolute;top:1224px;left:44px;width:286px;" title="Add embedded project IRC support"><span class=' icon icon-issue'><a href="29.html" class="issue status-1 priority-2">Feature #29</a>: Add embedded project IRC support</span></div><div class="issue-subject" style="position: absolute;top:1244px;left:44px;width:286px;" title="Allow users to request membership in projects"><span class=' icon icon-issue'><a href="33.html" class="issue status-1 priority-2">Feature #33</a>: Allow users to request membership in projects</span></div><div class="issue-subject" style="position: absolute;top:1264px;left:44px;width:286px;" title="Visual diffs for graphical file formats"><span class=' icon icon-issue'><a href="37.html" class="issue status-1 priority-2">Feature #37</a>: Visual diffs for graphical file formats</span></div><div class="issue-subject" style="position: absolute;top:1284px;left:44px;width:286px;" title="Add license usage stats to a public page "><span class=' icon icon-issue'><a href="45.html" class="issue status-1 priority-2">Feature #45</a>: Add license usage stats to a public page </span></div><div class="issue-subject" style="position: absolute;top:1304px;left:44px;width:286px;" title="Save filter settings on Activity tab"><span class=' icon icon-issue'><a href="49.html" class="issue status-1 priority-2">Feature #49</a>: Save filter settings on Activity tab</span></div><div class="issue-subject" style="position: absolute;top:1324px;left:44px;width:286px;" title="Publish ODE specific plugins as separate sub-projects with their own repositories"><span class=' icon icon-issue'><a href="91.html" class="issue status-1 priority-2">Support #91</a>: Publish ODE specific plugins as separate sub-projects with their own repositories</span></div><div class="issue-subject" style="position: absolute;top:1344px;left:44px;width:286px;" title="Repository Zip Download"><span class=' icon icon-issue'><a href="113.html" class="issue status-1 priority-2">Feature #113</a>: Repository Zip Download</span></div><div class="issue-subject" style="position: absolute;top:1364px;left:44px;width:286px;" title="Enhanced wiki formatting"><span class=' icon icon-issue'><a href="124.html" class="issue status-1 priority-2">Bug #124</a>: Enhanced wiki formatting</span></div><div class="issue-subject" style="position: absolute;top:1384px;left:44px;width:286px;" title="Add oEmbed wiki macro"><span class=' icon icon-issue'><a href="128.html" class="issue status-1 priority-2">Feature #128</a>: Add oEmbed wiki macro</span></div><div class="issue-subject" style="position: absolute;top:1404px;left:44px;width:286px;" title="Add support for formal PLM process"><span class=' icon icon-issue'><a href="129.html" class="issue status-1 priority-2">Feature #129</a>: Add support for formal PLM process</span></div><div class="issue-subject" style="position: absolute;top:1424px;left:44px;width:286px;" title="Install and begin usage of Redmine CMS Plugin"><span class=' icon icon-issue'><a href="150.html" class="issue status-1 priority-2">Feature #150</a>: Install and begin usage of Redmine CMS Plugin</span></div><div class="issue-subject" style="position: absolute;top:1444px;left:44px;width:286px;" title="Add &quot;Create new page&quot; button to wiki system"><span class=' icon icon-issue'><a href="152.html" class="issue status-1 priority-2">Feature #152</a>: Add &quot;Create new page&quot; button to wiki system</span></div><div class="issue-subject" style="position: absolute;top:1464px;left:44px;width:286px;" title="Add svn style tagging to ODE projects"><span class=' icon icon-issue'><a href="177.html" class="issue status-1 priority-3">Feature #177</a>: Add svn style tagging to ODE projects</span></div><div class="issue-subject" style="position: absolute;top:1484px;left:44px;width:286px;" title="Dozuki Integration"><span class=' icon icon-issue'><a href="179.html" class="issue status-1 priority-2">Feature #179</a>: Dozuki Integration</span></div><div class="issue-subject" style="position: absolute;top:1504px;left:44px;width:286px;" title="Add 3D rendering support to wiki syntax and DMSF file details"><span class=' icon icon-issue'><a href="180.html" class="issue status-1 priority-2">Feature #180</a>: Add 3D rendering support to wiki syntax and DMSF file details</span></div><div class="issue-subject" style="position: absolute;top:1524px;left:44px;width:286px;" title="Slideshare wiki macro"><span class=' icon icon-issue'><a href="181.html" class="issue status-1 priority-2">Feature #181</a>: Slideshare wiki macro</span></div><div class="issue-subject" style="position: absolute;top:1544px;left:44px;width:286px;" title="Add a requirements management system to ODE"><span class=' icon icon-issue'><a href="182.html" class="issue status-1 priority-2">Feature #182</a>: Add a requirements management system to ODE</span></div><div class="issue-subject" style="position: absolute;top:1564px;left:44px;width:286px;" title="Add STL part editor using OpenJsCad"><span class=' icon icon-issue'><a href="184.html" class="issue status-1 priority-2">Feature #184</a>: Add STL part editor using OpenJsCad</span></div><div class="issue-subject" style="position: absolute;top:1584px;left:44px;width:286px;" title="Add video conferencing support"><span class=' icon icon-issue'><a href="185.html" class="issue status-1 priority-2">Feature #185</a>: Add video conferencing support</span></div><div class="issue-subject" style="position: absolute;top:1604px;left:44px;width:286px;" title="Upverter wiki macro"><span class=' icon icon-issue'><a href="186.html" class="issue status-1 priority-2">Feature #186</a>: Upverter wiki macro</span></div><div class="issue-subject" style="position: absolute;top:1624px;left:44px;width:286px;" title="Automatic site submissions to Google for projects and their pages"><span class=' icon icon-issue'><a href="187.html" class="issue status-1 priority-2">Feature #187</a>: Automatic site submissions to Google for projects and their pages</span></div><div class="issue-subject" style="position: absolute;top:1644px;left:44px;width:286px;" title="Create project &quot;Contact us&quot; pages"><span class=' icon icon-issue'><a href="188.html" class="issue status-1 priority-2">Feature #188</a>: Create project &quot;Contact us&quot; pages</span></div><div class="issue-subject" style="position: absolute;top:1664px;left:44px;width:286px;" title="Implement a &quot;karma&quot; system"><span class=' icon icon-issue'><a href="189.html" class="issue status-1 priority-2">Feature #189</a>: Implement a &quot;karma&quot; system</span></div><div class="issue-subject" style="position: absolute;top:1684px;left:44px;width:286px;" title="Shipper tracking wiki macro"><span class=' icon icon-issue'><a href="190.html" class="issue status-1 priority-2">Feature #190</a>: Shipper tracking wiki macro</span></div><div class="issue-subject" style="position: absolute;top:1704px;left:44px;width:286px;" title="Allow Voting For Features"><span class=' icon icon-issue'><a href="191.html" class="issue status-1 priority-1">Feature #191</a>: Allow Voting For Features</span></div><div class="version-name" style="position: absolute;top:1724px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../versions/5.html">Open Design Engine - v0.4 - Wiki Enhancements</a></span></div><div class="issue-subject" style="position: absolute;top:1744px;left:44px;width:286px;" title="Add wiki page templates"><span class=' icon icon-issue'><a href="30.html" class="issue status-1 priority-2">Feature #30</a>: Add wiki page templates</span></div><div class="issue-subject" style="position: absolute;top:1764px;left:44px;width:286px;" title="Add embedded video support to wiki"><span class=' icon icon-issue'><a href="32.html" class="issue status-4 priority-2">Feature #32</a>: Add embedded video support to wiki</span></div><div class="version-name" style="position: absolute;top:1784px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../versions/10.html">Open Design Engine - v0.2.1 - Public Beta Enhancements</a></span></div><div class="issue-subject" style="position: absolute;top:1804px;left:44px;width:286px;" title="Clean up capistrano deploy script"><span class=' icon icon-issue'><a href="92.html" class="issue status-1 priority-2">Bug #92</a>: Clean up capistrano deploy script</span></div><div class="issue-subject" style="position: absolute;top:1824px;left:44px;width:286px;" title="Remove unused and outdated .gem files from vendor/cache"><span class=' icon icon-issue'><a href="122.html" class="issue status-1 priority-1">Bug #122</a>: Remove unused and outdated .gem files from vendor/cache</span></div><div class="issue-subject" style="position: absolute;top:1844px;left:44px;width:286px;" title="Address inconsistent use of http and https in fundraising plugin"><span class=' icon icon-issue'><a href="123.html" class="issue status-4 priority-2">Bug #123</a>: Address inconsistent use of http and https in fundraising plugin</span></div><div class="issue-subject" style="position: absolute;top:1864px;left:44px;width:286px;" title="Migrate ODE source code to match current version of Redmine"><span class=' icon icon-issue'><a href="217.html" class="issue status-1 priority-2 parent">Milestone #217</a>: Migrate ODE source code to match current version of Redmine</span></div><div class="project-name" style="position: absolute;top:1884px;left:4px;width:326px;"><span class='icon icon-projects '><a href="../projects/sandbox%3Fjump=overview.html">Sandbox</a></span></div><div class="issue-subject" style="position: absolute;top:1904px;left:24px;width:306px;" title="This is a test issue for the sandbox"><span class=' icon icon-issue'><a href="35.html" class="issue status-1 priority-2">Support #35</a>: This is a test issue for the sandbox</span></div><div class="issue-subject" style="position: absolute;top:1924px;left:24px;width:306px;" title="Test issue"><span class=' icon icon-issue'><a href="125.html" class="issue status-1 priority-2">Support #125</a>: Test issue</span></div><div class="issue-subject" style="position: absolute;top:1944px;left:24px;width:306px;" title="test"><span class=' icon icon-issue'><a href="215.html" class="issue status-1 priority-2">Bug #215</a>: test</span></div><div class="project-name" style="position: absolute;top:1964px;left:4px;width:326px;"><span class='icon icon-projects '><a href="../projects/stm-ajstarr.html">Scanning Tunnelling Microscope</a></span></div><div class="issue-subject" style="position: absolute;top:1984px;left:24px;width:306px;" title="Parts list for Bias Voltage Controller"><span class=' icon icon-issue'><a href="84.html" class="issue status-2 priority-2">Milestone #84</a>: Parts list for Bias Voltage Controller</span></div><div class="issue-subject" style="position: absolute;top:2004px;left:24px;width:306px;" title="Test performance of high frequency isolator"><span class=' icon icon-issue'><a href="85.html" class="issue status-1 priority-2">Milestone #85</a>: Test performance of high frequency isolator</span></div><div class="issue-subject" style="position: absolute;top:2024px;left:24px;width:306px;" title="Test performance of Tunnelling Current Amplifier"><span class=' icon icon-issue'><a href="86.html" class="issue status-1 priority-2">Milestone #86</a>: Test performance of Tunnelling Current Amplifier</span></div><div class="issue-subject" style="position: absolute;top:2044px;left:24px;width:306px;" title="Assembly of bias voltage controller"><span class=' icon icon-issue'><a href="88.html" class="issue status-1 priority-2">Milestone #88</a>: Assembly of bias voltage controller</span></div><div class="issue-subject" style="position: absolute;top:2064px;left:24px;width:306px;" title="Test performance of bias voltage controller"><span class=' icon icon-issue'><a href="89.html" class="issue status-1 priority-2">Milestone #89</a>: Test performance of bias voltage controller</span></div><div class="issue-subject" style="position: absolute;top:2084px;left:24px;width:306px;" title="Main controller PCB"><span class=' icon icon-issue'><a href="96.html" class="issue status-1 priority-2">Milestone #96</a>: Main controller PCB</span></div><div class="issue-subject" style="position: absolute;top:2104px;left:24px;width:306px;" title="Test performance of main controller"><span class=' icon icon-issue'><a href="97.html" class="issue status-1 priority-2">Milestone #97</a>: Test performance of main controller</span></div><div class="issue-subject" style="position: absolute;top:2124px;left:24px;width:306px;" title="Main controller schematic"><span class=' icon icon-issue'><a href="98.html" class="issue status-1 priority-2">Milestone #98</a>: Main controller schematic</span></div><div class="project-name" style="position: absolute;top:2144px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/shepard-ts.html">Shepard Test Stand</a></span></div><div class="version-name" style="position: absolute;top:2164px;left:24px;width:306px;"><span class='icon icon-package version-behind-schedule version-overdue'><a href="../versions/16.html">Shepard Test Stand - v2.0 Shepard Test Stand - Prototype</a></span></div><div class="issue-subject" style="position: absolute;top:2184px;left:44px;width:286px;" title="Switch to 5 Volt Version of MLX90614 IR Sensor"><span class=' icon icon-issue'><a href="153.html" class="issue status-2 priority-2">Feature #153</a>: Switch to 5 Volt Version of MLX90614 IR Sensor</span></div><div class="issue-subject" style="position: absolute;top:2204px;left:44px;width:286px;" title="Return 0.0 For Temperature if IR Sensor is Not Connected"><span class=' icon icon-issue'><a href="154.html" class="issue status-1 priority-2">Feature #154</a>: Return 0.0 For Temperature if IR Sensor is Not Connected</span></div><div class="issue-subject" style="position: absolute;top:2224px;left:44px;width:286px;" title="Time Stamp Bit Size Wrong On Arduino and Client"><span class=' icon icon-issue'><a href="157.html" class="issue status-4 priority-3">Bug #157</a>: Time Stamp Bit Size Wrong On Arduino and Client</span></div><div class="issue-subject" style="position: absolute;top:2244px;left:44px;width:286px;" title="Create Java based GUI for Shepard DCS"><span class=' icon icon-issue'><a href="174.html" class="issue status-2 priority-2 parent">Bug #174</a>: Create Java based GUI for Shepard DCS</span></div><div class="issue-subject" style="position: absolute;top:2264px;left:64px;width:266px;" title="Add a &quot;wizard&quot; mode for the Shepard GUI"><span class=' icon icon-issue'><a href="173.html" class="issue status-1 priority-2 child">Feature #173</a>: Add a &quot;wizard&quot; mode for the Shepard GUI</span></div><div class="issue-subject" style="position: absolute;top:2284px;left:64px;width:266px;" title="Add Mach 30 Branding To Software Interface"><span class=' icon icon-issue'><a href="147.html" class="issue status-1 priority-2 child">Feature #147</a>: Add Mach 30 Branding To Software Interface</span></div><div class="issue-subject" style="position: absolute;top:2304px;left:64px;width:266px;" title="Java GUI does not yet save CSV of data captured from the Arduino"><span class=' icon icon-issue'><a href="175.html" class="issue status-4 priority-2 child">Bug #175</a>: Java GUI does not yet save CSV of data captured from the Arduino</span></div><div class="issue-subject" style="position: absolute;top:2324px;left:44px;width:286px;" title="Add Compulsory Version Matching Between Arduino and Java App"><span class=' icon icon-issue'><a href="176.html" class="issue status-1 priority-2">Feature #176</a>: Add Compulsory Version Matching Between Arduino and Java App</span></div><div class="issue-subject" style="position: absolute;top:2344px;left:44px;width:286px;" title="Arduino - Move Timestamp Zero Control to Arduino Instead of Client"><span class=' icon icon-issue'><a href="234.html" class="issue status-1 priority-2">Feature #234</a>: Arduino - Move Timestamp Zero Control to Arduino Instead of Client</span></div><div class="version-name" style="position: absolute;top:2364px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../versions/15.html">Shepard Test Stand - v1.1 Shepard Test Stand - Prototype</a></span></div><div class="issue-subject" style="position: absolute;top:2384px;left:44px;width:286px;" title="Research Whether or Not the 30 Foot Safety Radius For E Motors is Necessary"><span class=' icon icon-issue'><a href="155.html" class="issue status-1 priority-3">Bug #155</a>: Research Whether or Not the 30 Foot Safety Radius For E Motors is Necessary</span></div><div class="project-name" style="position: absolute;top:2404px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/egmill.html">Epoxy Granite CNC Mill</a></span></div><div class="issue-subject" style="position: absolute;top:2424px;left:24px;width:306px;" title="Vacuum"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="67.html" class="issue status-1 priority-2 overdue">Feature #67</a>: Vacuum</span></div><div class="issue-subject" style="position: absolute;top:2444px;left:24px;width:306px;" title="Finish v1 design of mill"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="68.html" class="issue status-1 priority-2 overdue">Feature #68</a>: Finish v1 design of mill</span></div><div class="issue-subject" style="position: absolute;top:2464px;left:24px;width:306px;" title="Make Mold"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="69.html" class="issue status-1 priority-2 overdue">Feature #69</a>: Make Mold</span></div><div class="issue-subject" style="position: absolute;top:2484px;left:24px;width:306px;" title="Pour Base"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="70.html" class="issue status-1 priority-2 overdue">Milestone #70</a>: Pour Base</span></div><div class="project-name" style="position: absolute;top:2504px;left:4px;width:326px;"><span class='icon icon-projects '><a href="../projects/spacechiles.html">Space Chiles v1.0</a></span></div><div class="issue-subject" style="position: absolute;top:2524px;left:24px;width:306px;" title="Helium supply is not reliable/readily availble"><span class=' icon icon-issue'><a href="72.html" class="issue status-1 priority-2">Bug #72</a>: Helium supply is not reliable/readily availble</span></div><div class="issue-subject" style="position: absolute;top:2544px;left:24px;width:306px;" title="Inability to run flight prediction more than 7.5d before launch"><span class=' icon icon-issue'><a href="127.html" class="issue status-1 priority-2">Bug #127</a>: Inability to run flight prediction more than 7.5d before launch</span></div><div class="project-name" style="position: absolute;top:2564px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/attenuatorx.html">AttenuatorX</a></span></div><div class="issue-subject" style="position: absolute;top:2584px;left:24px;width:306px;" title="The header should be SMT (as I already determined in the BOM), not through-hole (as I designed the board), and it should be on the bottom of the board."><span class=' icon icon-issue'><a href="115.html" class="issue status-1 priority-2">Bug #115</a>: The header should be SMT (as I already determined in the BOM), not through-hole (as I designed the board), and it should be on the bottom of the board.</span></div><div class="issue-subject" style="position: absolute;top:2604px;left:24px;width:306px;" title="The pad I designed for the on-off switch isn’t wide enough. With enough solder, it works, but it’s not right."><span class=' icon icon-issue'><a href="117.html" class="issue status-1 priority-2">Bug #117</a>: The pad I designed for the on-off switch isn’t wide enough. With enough solder, it works, but it’s not right.</span></div><div class="issue-subject" style="position: absolute;top:2624px;left:24px;width:306px;" title="The LEDs displaying attenuation level are in opposite order. MSB should be on the left, like the silkscreen, but it’s on the right."><span class=' icon icon-issue'><a href="118.html" class="issue status-1 priority-3">Bug #118</a>: The LEDs displaying attenuation level are in opposite order. MSB should be on the left, like the silkscreen, but it’s on the right.</span></div><div class="issue-subject" style="position: absolute;top:2644px;left:24px;width:306px;" title="No strain relief was provided for the battery connection."><span class=' icon icon-issue'><a href="119.html" class="issue status-1 priority-3">Bug #119</a>: No strain relief was provided for the battery connection.</span></div><div class="issue-subject" style="position: absolute;top:2664px;left:24px;width:306px;" title="Something in my design seems to cause failures on pin PC1 when the Brown-out detection is enabled on the AVR microcontroller."><span class=' icon icon-issue'><a href="120.html" class="issue status-1 priority-2">Bug #120</a>: Something in my design seems to cause failures on pin PC1 when the Brown-out detection is enabled on the AVR microcontroller.</span></div><div class="project-name" style="position: absolute;top:2684px;left:4px;width:326px;"><span class='icon icon-projects '><a href="../projects/w0z-ekg-6022j-v1.html">Laboratory EKG Pre-Amplifier</a></span></div><div class="issue-subject" style="position: absolute;top:2704px;left:24px;width:306px;" title="Enclosure Marking/Machining Accuracy Issue"><span class=' icon icon-issue'><a href="169.html" class="issue status-1 priority-2">Bug #169</a>: Enclosure Marking/Machining Accuracy Issue</span></div><div class="issue-subject" style="position: absolute;top:2724px;left:24px;width:306px;" title="Find a Workable Drill Templating Solution"><span class=' icon icon-issue'><a href="171.html" class="issue status-1 priority-2 parent">Milestone #171</a>: Find a Workable Drill Templating Solution</span></div><div class="issue-subject" style="position: absolute;top:2744px;left:44px;width:286px;" title="Machine 15 Enclosure Lids/Bodies"><span class=' icon icon-issue'><a href="172.html" class="issue status-1 priority-2 child">Milestone #172</a>: Machine 15 Enclosure Lids/Bodies</span></div><div class="project-name" style="position: absolute;top:2764px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/fresno-cnc-table-4x8-ideaworks.html">CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks</a></span></div><div class="issue-subject" style="position: absolute;top:2784px;left:24px;width:306px;" title="Assemble Stepper Motor Driver Boards"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="226.html" class="issue status-2 priority-2 overdue">Milestone #226</a>: Assemble Stepper Motor Driver Boards</span></div><div class="issue-subject" style="position: absolute;top:2804px;left:24px;width:306px;" title="Build the base (table)"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="227.html" class="issue status-1 priority-2 overdue parent">Milestone #227</a>: Build the base (table)</span></div><div class="issue-subject" style="position: absolute;top:2824px;left:44px;width:286px;" title="Design the base (table)"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="228.html" class="issue status-1 priority-2 overdue child">Milestone #228</a>: Design the base (table)</span></div><div class="issue-subject" style="position: absolute;top:2844px;left:24px;width:306px;" title="Flash an ATMEGA328 with grbl firmware"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="229.html" class="issue status-1 priority-2 overdue">Milestone #229</a>: Flash an ATMEGA328 with grbl firmware</span></div><div class="issue-subject" style="position: absolute;top:2864px;left:24px;width:306px;" title="Design X and Y axes"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="230.html" class="issue status-1 priority-2 overdue">Milestone #230</a>: Design X and Y axes</span></div><div class="issue-subject" style="position: absolute;top:2884px;left:24px;width:306px;" title="Build the Y axis"><span class=' icon icon-issue'><a href="231.html" class="issue status-1 priority-2">Milestone #231</a>: Build the Y axis</span></div><div class="issue-subject" style="position: absolute;top:2904px;left:24px;width:306px;" title="Build the X and Y axes"><span class=' icon icon-issue'><a href="232.html" class="issue status-1 priority-2">Milestone #232</a>: Build the X and Y axes</span></div><div class="project-name" style="position: absolute;top:2924px;left:4px;width:326px;"><span class='icon icon-projects '><a href="../projects/osap%3Fjump=overview.html">Open Source Anchor Project (OSAP)</a></span></div><div class="issue-subject" style="position: absolute;top:2944px;left:24px;width:306px;" title="Version 1.0 Fabrication "><span class=' icon icon-issue'><a href="221.html" class="issue status-1 priority-2">Milestone #221</a>: Version 1.0 Fabrication </span></div><div class="issue-subject" style="position: absolute;top:2964px;left:24px;width:306px;" title="FEM Analysis OSA V1.0 "><span class=' icon icon-issue'><a href="222.html" class="issue status-1 priority-2 parent">Milestone #222</a>: FEM Analysis OSA V1.0 </span></div><div class="issue-subject" style="position: absolute;top:2984px;left:44px;width:286px;" title="FEM Analysis of Fluke Strength"><span class=' icon icon-issue'><a href="223.html" class="issue status-1 priority-2 child">Milestone #223</a>: FEM Analysis of Fluke Strength</span></div><div class="issue-subject" style="position: absolute;top:3004px;left:44px;width:286px;" title="FEM Analysis of Attachment Points for chain"><span class=' icon icon-issue'><a href="224.html" class="issue status-1 priority-2 child">Milestone #224</a>: FEM Analysis of Attachment Points for chain</span></div><div class="issue-subject" style="position: absolute;top:3024px;left:44px;width:286px;" title="FEM Analysis of Attachment point Shank"><span class=' icon icon-issue'><a href="225.html" class="issue status-1 priority-2 child">Milestone #225</a>: FEM Analysis of Attachment point Shank</span></div><div class="project-name" style="position: absolute;top:3044px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../projects/mobinimr.html">Perpetum mobile</a></span></div><div class="issue-subject" style="position: absolute;top:3064px;left:24px;width:306px;" title="Preštudiraj teorijo"><span class=' issue-overdue issue-behind-schedule icon icon-issue'><a href="271.html" class="issue status-1 priority-2 overdue">Feature #271</a>: Preštudiraj teorijo</span></div>
+</div>
+
+</div>
+</td>
+<td>
+
+<div style="position:relative;height:3370px;overflow:auto;">
+<div style="width:735px;height:36px;background: #eee;" class="gantt_hdr">&nbsp;</div>
+
+	<div style="left:0px;width:123px;height:18px;" class="gantt_hdr">
+	<a href="gantt%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2.html" title="July 2022">2022-7</a>
+	</div>
+	
+	<div style="left:124px;width:123px;height:18px;" class="gantt_hdr">
+	<a href="gantt%3Fmonth=8&amp;months=6&amp;year=2022&amp;zoom=2.html" title="August 2022">2022-8</a>
+	</div>
+	
+	<div style="left:248px;width:119px;height:18px;" class="gantt_hdr">
+	<a href="gantt%3Fmonth=9&amp;months=6&amp;year=2022&amp;zoom=2.html" title="September 2022">2022-9</a>
+	</div>
+	
+	<div style="left:368px;width:123px;height:18px;" class="gantt_hdr">
+	<a href="gantt%3Fmonth=10&amp;months=6&amp;year=2022&amp;zoom=2.html" title="October 2022">2022-10</a>
+	</div>
+	
+	<div style="left:492px;width:119px;height:18px;" class="gantt_hdr">
+	<a href="gantt%3Fmonth=11&amp;months=6&amp;year=2022&amp;zoom=2.html" title="November 2022">2022-11</a>
+	</div>
+	
+	<div style="left:612px;width:123px;height:18px;" class="gantt_hdr">
+	<a href="gantt%3Fmonth=12&amp;months=6&amp;year=2022&amp;zoom=2.html" title="December 2022">2022-12</a>
+	</div>
+	
+
+
+		<div style="left:0px;top:19px;width:11px;height:3327px;" class="gantt_hdr">&nbsp;</div>
+		
+	
+		<div style="left:12px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>27</small>
+		</div>
+		
+		<div style="left:40px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>28</small>
+		</div>
+		
+		<div style="left:68px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>29</small>
+		</div>
+		
+		<div style="left:96px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>30</small>
+		</div>
+		
+		<div style="left:124px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>31</small>
+		</div>
+		
+		<div style="left:152px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>32</small>
+		</div>
+		
+		<div style="left:180px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>33</small>
+		</div>
+		
+		<div style="left:208px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>34</small>
+		</div>
+		
+		<div style="left:236px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>35</small>
+		</div>
+		
+		<div style="left:264px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>36</small>
+		</div>
+		
+		<div style="left:292px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>37</small>
+		</div>
+		
+		<div style="left:320px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>38</small>
+		</div>
+		
+		<div style="left:348px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>39</small>
+		</div>
+		
+		<div style="left:376px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>40</small>
+		</div>
+		
+		<div style="left:404px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>41</small>
+		</div>
+		
+		<div style="left:432px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>42</small>
+		</div>
+		
+		<div style="left:460px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>43</small>
+		</div>
+		
+		<div style="left:488px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>44</small>
+		</div>
+		
+		<div style="left:516px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>45</small>
+		</div>
+		
+		<div style="left:544px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>46</small>
+		</div>
+		
+		<div style="left:572px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>47</small>
+		</div>
+		
+		<div style="left:600px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>48</small>
+		</div>
+		
+		<div style="left:628px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>49</small>
+		</div>
+		
+		<div style="left:656px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>50</small>
+		</div>
+		
+		<div style="left:684px;top:19px;width:27px;height:3327px;" class="gantt_hdr">
+		<small>51</small>
+		</div>
+		
+		<div style="left:712px;top:19px;width:23px;height:3327px;" class="gantt_hdr">
+		<small>52</small>
+		</div>
+		
+
+
+
+<div style='top:44px;left:8px;' class='project task label'>Far Horizons Project</div><div style='top:84px;left:8px;' class='task leaf label'>In Progress 60%</div><div style='top:104px;left:8px;' class='project task label'>Groundstation v.2.0</div><div style='top:124px;left:8px;' class='task leaf label'>New 100%</div><div style='top:144px;left:8px;' class='task leaf label'>New 100%</div><div style='top:164px;left:8px;' class='task leaf label'>New 100%</div><div style='top:184px;left:8px;' class='task leaf label'>New 90%</div><div style='top:204px;left:8px;' class='task leaf label'>New 0%</div><div style='top:224px;left:8px;' class='task leaf label'>New 0%</div><div style='top:244px;left:8px;' class='task leaf label'>New 0%</div><div style='top:264px;left:8px;' class='task leaf label'>New 50%</div><div style='top:324px;left:8px;' class='project task label'>Mach 30 Technical Roadmap</div><div style='top:364px;left:8px;' class='project task label'>Open Design Engine</div><div style='top:2144px;left:8px;' class='project task label'>Shepard Test Stand</div><div style='top:2164px;left:8px;' class='version task label'>Shepard Test Stand -v2.0 Shepard Test Stand - Prototype 16%</div><div style='top:2184px;left:8px;' class='task leaf label'>In Progress 0%</div><div style='top:2204px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2224px;left:8px;' class='task leaf label'>Feedback 0%</div><div style='top:2244px;left:8px;' class='task parent label'>In Progress 40%</div><div style='top:2264px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2284px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2304px;left:8px;' class='task leaf label'>Feedback 0%</div><div style='top:2324px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2344px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2404px;left:8px;' class='project task label'>Epoxy Granite CNC Mill</div><div style='top:2424px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2444px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2464px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2484px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2564px;left:8px;' class='project task label'>AttenuatorX</div><div style='top:2764px;left:8px;' class='project task label'>CNC Mill: 4x8 Wood (&lt;$500), Fresno Ideaworks</div><div style='top:2784px;left:8px;' class='task leaf label'>In Progress 10%</div><div style='top:2804px;left:8px;' class='task parent label'>New 0%</div><div style='top:2824px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2844px;left:8px;' class='task leaf label'>New 0%</div><div style='top:2864px;left:8px;' class='task leaf label'>New 0%</div><div style='top:3044px;left:8px;' class='project task label'>Perpetum mobile</div><div style='top:3064px;left:8px;' class='task leaf label'>New 0%</div>
+
+
+    <div style="position: absolute;height:3310px;top:37px;left:87px;width:10px;border-left: 1px dashed red;">&nbsp;</div>
+
+
+</div>
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td align="left"><a href="gantt%3Fmonth=1&amp;months=6&amp;year=2022&amp;zoom=2.html">« Previous</a></td>
+<td align="right"><a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=2.html">Next »</a></td>
+</tr>
+</table>
+
+<p class="other-formats">Also available in:
+	<span><a href="gantt.pdf%3Fmonth=7&amp;months=6&amp;year=2022&amp;zoom=2" class="pdf" rel="nofollow">PDF</a></span>
+	
+</p>
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

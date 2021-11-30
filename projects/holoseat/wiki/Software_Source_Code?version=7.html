@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Software Source Code - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../holoseat%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Holoseat"></a>
+<h2 >Holoseat<a href="Software_Source_Code%3Fversion=7.html#Holoseat" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/holoseat/repository/entry/trunk/LICENSE.txt" class="external">LICENSE.txt</a></li>
+		<li><a href="Wiki.html" class="wiki-page">Home</a></li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Versions" class="wiki-page">Versions</a>
+	<ul>
+	<li><a href="Versioning_Scheme.html" class="wiki-page">Versioning Scheme</a></li>
+	</ul>
+	</li>
+		<li><ins>Agile Process Docs</ins><br /><em>See <strong><a href="https://opendesignengine.net/projects/holoseat/news" class="external">News</a></strong> feed for weekly status reports</em>
+	<ul>
+	<li><strong><ins>PY 2018</ins></strong><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external">Sprints</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRCZuJwnYll_TmSo-xetofzjQEt3Z7iNpluPzayWbqm2HfYWLipouTmh1opgfWy-x-3OGeM2Cf1irWh/pubhtml" class="external">Alpha Test Program Prep User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlnq6BIMuJN-t3uKjflf_q9u3dXzvch0zEVz9O3335_fPiGyPcJxaRJ8IHz4ErCTIw7QrtPh5d_b50/pubhtml" class="external">Run Alpha Test User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyBqnWyXACEEoG5dThw5szRkVltrdHNvFpyaPqF1sNXHrS_fG1w1g861yqTjjyoL1b9xP2xUtNsFz3/pubhtml" class="external">Finalize v1.0 Design User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-DTjsHW_DTbR0hbIvS1Gl_9ItytNimWamw5wmEJ-8K44NpYyw0eQ4GM91nVI-ZRs2-BbQr-S9EA6Z/pubhtml" class="external">Social Media Engagement User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAt6mXMp1lwvffT9mNiNCXENC3wI47ofl_sATVjadmkgGnJroKbMCChzkZctD-wlNnsREUa0c0YqA-/pubhtml" class="external">Prep Initial Crowdsource Campaign User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQWsqkwJTsFScDjahnQ6AhIpC5Qk-BMsfurWkfxy7SmtSotXtgSvEgCC6uB2d_Hch9PUc41MRd4cwm2/pubhtml" class="external">SyndCon 2018 Prep User Stories</a></li>
+		<li><strong><ins>2017</ins></strong><br /><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/spreadsheets/d/1j_eza96PgV3tMuTy_fypZ4SuCLWP2jLKIEG1HgXg5LA/pubhtml" class="external">Development User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1Q1mnwN-Um-nn47k3GF9SzAEblP1sw7Lwtpq4snxCEXk/pubhtml" class="external">SyndCon User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1GGMKfctxfgl5Ath5ld7SL3lvXx7fN759DRMKXVEJSR4/pubhtml" class="external">Biz User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1UKTSqLvZyH9EIJBt7YSVZoF8krdZYmHjoK1yx6pesQs/pubhtml" class="external">Crowd Source User Stories</a></li>
+		<li><strong><ins>2016</ins></strong> <br /><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTnBFoFpZA4rAainOlzv4E7-PW3-BwjTg9SP0iXHz1XZUCjVF_4WYIWttJyHtO5EhO24pYazn8sL7Jh/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/document/d/e/2PACX-1vSVLmaORZab4QV0ZSy5OUl6lSPx2lNc3gud5nB6WSxNrrxkMu7Kz5zObKeKnP8pw7eghYJY3h_xs99L/pub" class="external">User Stories</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Instructions"></a>
+<h4 >Instructions<a href="Software_Source_Code%3Fversion=7.html#Instructions" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="User's_Guide.html" class="wiki-page">User&#x27;s Guide</a>
+	<ul>
+	<li><a href="First_Time_Setup.html" class="wiki-page">First Time Setup</a></li>
+		<li><a href="Operating_Instructions.html" class="wiki-page">Operating Instructions</a></li>
+		<li><a href="Alpha_Patches.html" class="wiki-page">Alpha Patches</a></li>
+	</ul>
+	</li>
+		<li><ins>Assembly Information</ins>
+	<ul>
+	<li><a href="BOM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a>
+	<ul>
+	<li><a href="Controller_Assembly.html" class="wiki-page">Controller Assembly</a></li>
+		<li><a href="Sensor_Assembly.html" class="wiki-page">Sensor Assembly</a></li>
+		<li><a href="Snap_Fit_Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Half Assembly</a><br /><a href="Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Assembly</a> (deprecated)</li>
+		<li><a href="Final_Assembly.html" class="wiki-page">Final Assembly</a></li>
+	</ul>
+	</li>
+		<li><a href="Software_Set_Up.html" class="wiki-page">Software Set Up</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Design-Data"></a>
+<h4 >Design Data<a href="Software_Source_Code%3Fversion=7.html#Design-Data" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="http://pid.codes/1209/B058/" title="via pid.codes" class="external">USB PID</a>
+	<ul>
+	<li>VID: 0x1209</li>
+		<li>PID: 0xB058</li>
+	</ul>
+	</li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Project Software</a>
+	<ul>
+	<li><a href="HSP.html" class="wiki-page">Holoseat Serial Protocol</a> <br />(<a href="https://opendesignengine.net/projects/holoseat/wiki/HSP?version=26" class="external">Legacy REST Implementation</a>)</li>
+		<li><a href="HSP_Over_REST_API.html" class="wiki-page">HSP Over REST API</a> </li>
+	</ul>
+	</li>
+		<li><a href="Vendor_Documentation.html" class="wiki-page">Vendor Documentation</a></li>
+	</ul>
+
+
+	<a name="Dev-Team-Links"></a>
+<h4 >Dev Team Links<a href="Software_Source_Code%3Fversion=7.html#Dev-Team-Links" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Dev_Team_On_Boarding" class="wiki-page new">Dev Team On Boarding</a> (outline)</li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/CHIP_Setup_Instructions" class="wiki-page new">C.H.I.P. Setup Instructions</a></li>
+	</ul>
+
+
+	<a name="Research"></a>
+<h4 >Research<a href="Software_Source_Code%3Fversion=7.html#Research" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Resources.html" class="wiki-page">General Resources</a></li>
+		<li><ins>Technical Resources</ins>
+	<ul>
+	<li><a href="General_Technical_Resources.html" class="wiki-page">General</a></li>
+		<li><a href="ME_Resources.html" class="wiki-page">Mech Eng Resources</a></li>
+		<li><a href="Arduino_Resources.html" class="wiki-page">Arduino Resources</a></li>
+		<li><a href="Bluetooth.html" class="wiki-page">Bluetooth</a></li>
+		<li><a href="HID.html" class="wiki-page">HID</a></li>
+		<li><del><a href="NodeBots_Resources.html" class="wiki-page">NodeBots Resources</a></del></li>
+		<li><del><a href="Raspbery_Pi_Resources.html" class="wiki-page">Raspbery Pi Resources</a></del></li>
+		<li><a href="Python_Resources.html" class="wiki-page">Python Resources</a></li>
+		<li><a href="CHIP_Resources.html" class="wiki-page">C.H.I.P. Resources</a></li>
+	</ul>
+	</li>
+		<li><ins>Biz Resources</ins>
+	<ul>
+	<li><a href="Marketing_Resources.html" class="wiki-page">Marketing Resources</a></li>
+		<li><a href="Start_Up_Resources.html" class="wiki-page">Start Up Resources</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Edit-Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Edit Navigation</a><a href="Software_Source_Code%3Fversion=7.html#Edit-Navigation" class="wiki-anchor">&para;</a></h3>
+
+<h3>Wiki</h3>
+
+<a href="../../holoseat%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-192-watcher"></span>
+
+
+
+
+
+
+<a href="Software_Source_Code/history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <a name="Project-Software"></a>
+<h1 >Project Software<a href="Software_Source_Code%3Fversion=7.html#Project-Software" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="Software_Source_Code%3Fversion=7.html#Project-Software">Project Software</a><ul><li><a href="Software_Source_Code%3Fversion=7.html#Introduction">Introduction</a></li><li><a href="Software_Source_Code%3Fversion=7.html#Controller-Firmware">Controller Firmware</a></li><li><a href="Software_Source_Code%3Fversion=7.html#Desktop-App">Desktop App</a><ul><li><a href="Software_Source_Code%3Fversion=7.html#Update-Default-Parameters">Update Default Parameters</a></li><li><a href="Software_Source_Code%3Fversion=7.html#Live-Updates-to-Holoseat-Settings">Live Updates to Holoseat Settings</a></li></ul>
+</li><li><a href="Software_Source_Code%3Fversion=7.html#Test-Rig-Software">Test Rig Software</a><ul><li><a href="Software_Source_Code%3Fversion=7.html#Test-Rig-Firmware">Test Rig Firmware</a></li><li><a href="Software_Source_Code%3Fversion=7.html#Test-Scripts">Test Scripts</a></li></ul>
+</li><li><a href="Software_Source_Code%3Fversion=7.html#HoloSeat-Serial-Protocol">HoloSeat Serial Protocol</a><ul><li><a href="Software_Source_Code%3Fversion=7.html#Protocol-Commands">Protocol Commands</a></li><li><a href="Software_Source_Code%3Fversion=7.html#Protocol-Messages">Protocol Messages</a></li><li><a href="Software_Source_Code%3Fversion=7.html#Protocol-Usage">Protocol Usage</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h2 >Introduction<a href="Software_Source_Code%3Fversion=7.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The Holoseat project has three software elements.  The first software element is the firmware running on the Holoseat controller.  The second software element is the desktop configuration app.  And the third software element is the test rig software (composed of more firmware and test execution software).  This page covers each of these elements and the serial protocol between the Holoseat controller and the desktop configuration app.</p>
+
+
+	<a name="Controller-Firmware"></a>
+<h2 >Controller Firmware<a href="Software_Source_Code%3Fversion=7.html#Controller-Firmware" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The Holoseat controller firmware can be found in the <a href="https://opendesignengine.net/projects/holoseat/repository/show/tags/version-0.3/holoseat_firmware" class="external">SVN Repository</a>.  It runs on an <a href="https://www.adafruit.com/feather" class="external">Adafruit Feather</a> and relies on the <a href="https://github.com/thomasfredericks/Bounce2" class="external">Bounce2</a> library for button <a href="https://www.arduino.cc/en/Tutorial/Debounce" class="external">debouncing</a>.  Its function is to detect pedal events from the sensor, use the timing of those events to determine the cadence (in RPM) and direction (forward or backward), and then send the walk command (generally by pressing the 'w' or 's' key) when the pedal speed is greater than the specified trigger cadence.</p>
+
+
+	<p>The default parameters for the firmware are stored in the <code>holoseat_constants.h</code> file so they will be available at start up without the need for a connection to the desktop configuration app.  The following parameters have default values in the constants file.</p>
+
+
+	<ul>
+	<li>Default Walk Forward Character - what key is sent to move the character forward in the game</li>
+		<li>Default Walk Backward Character - what key is sent to move the character backward in the game</li>
+		<li>Default Holoseat Enabled - is the Holoseat enabled by default?</li>
+		<li>Default Trigger Cadence - how fast does the user need to pedal (in RPM) to trigger walking?</li>
+		<li>Default Logging Enabled - is serial logging enabled by default?</li>
+		<li>Default Logging Interval - how long between messages in serial logging in deci-seconds (0.1 of a second)</li>
+	</ul>
+
+
+	<a name="Desktop-App"></a>
+<h2 >Desktop App<a href="Software_Source_Code%3Fversion=7.html#Desktop-App" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The Holoseat configuration app can be found in the <a href="https://opendesignengine.net/projects/holoseat/repository/show/tags/version-0.3/HoloseatConfigurationApp_Win" class="external">SVN Repository</a>.  It is written in C# and runs in the Windows System Tray (other operating systems will be supported in future releases).  The configuration app requires a locally installed copy of the <a href="https://www.arduino.cc/en/Main/Software" class="external">Arduino IDE</a> to update the default parameters in the Holoseat controller and uses the <a href="https://github.com/jcurl/SerialPortStream" class="external">SerialPortStream 2.0</a> library to manage the serial communications with the Holoseat controller for live updates to the Holoseat settings.  Its function is to display and modify current settings for the Holoseat and allow users to update the default values for those settings.</p>
+
+
+	<a name="Update-Default-Parameters"></a>
+<h3 >Update Default Parameters<a href="Software_Source_Code%3Fversion=7.html#Update-Default-Parameters" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The configuration app modifies the default parameters by updating the values of the corresponding constants in <code>holoseat_constants.h</code> and then flashing updated firmware to the Holoseat controller.  It is the need to flash the controller with updated firmware that drives the need for a local installation of the Arduino IDE.  If it is not present, the configuration app disables this feature.</p>
+
+
+	<a name="Live-Updates-to-Holoseat-Settings"></a>
+<h3 >Live Updates to Holoseat Settings<a href="Software_Source_Code%3Fversion=7.html#Live-Updates-to-Holoseat-Settings" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The configuration app uses the Holoseat Serial Protocol (see below) to display and update the current settings.  These settings will remain in the Holoseat controller until they are changed again using the configuration app or the Holoseat loses power (e.g. when unplugged or the host computer is shutdown).  At which point, the Holoseat reverts to its default parameter values when next used.</p>
+
+
+	<a name="Test-Rig-Software"></a>
+<h2 >Test Rig Software<a href="Software_Source_Code%3Fversion=7.html#Test-Rig-Software" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The test rig software can be found in the <a href="https://opendesignengine.net/projects/holoseat/repository/show/tags/version-0.3/test_rig" class="external">SVN Repository</a>.  The test rig was developed to support <a href="https://opendesignengine.net/boards/36/topics/901" class="external">research into the sensor and magnet pairing</a>.  It is made up of an <a href="https://www.arduino.cc/en/Main/ArduinoBoardUno" class="external">Arduino Uno</a> driving a stepper motor.  The stepper motor has an arm attached to it with magnets on the end to simulate users pedaling.  Finally, a Raspberry Pi runs the tests and hosts the sensors under test, receiving signals from the magnets attached to the stepper motor as it turns.  A test case includes a magnet, a sensor, and a simulated pedaling cadence.</p>
+
+
+	<p>The test rig software is made up of two components:</p>
+
+
+	<ul>
+	<li>test rig firmware - running on the Arduino Uno driving a stepper motor</li>
+		<li>test scripts running on the Raspberry Pi, written in <a href="https://nodejs.org/en/" class="external">NodeJS</a>, defining the tests performed with the test rig</li>
+	</ul>
+
+
+	<a name="Test-Rig-Firmware"></a>
+<h3 >Test Rig Firmware<a href="Software_Source_Code%3Fversion=7.html#Test-Rig-Firmware" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The test rig firmware uses <a href="http://www.airspayce.com/mikem/arduino/AccelStepper/index.html" class="external">AccelStepper v1.45</a> to implement an open loop controller on the test rig's stepper motor.  This controller drives the stepper motor at a specified cadence (in rpm).  The cadence is specified as an integer on the serial port.</p>
+
+
+	<a name="Test-Scripts"></a>
+<h3 >Test Scripts<a href="Software_Source_Code%3Fversion=7.html#Test-Scripts" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The test scripts use the <a href="http://johnny-five.io/" class="external">Johnny-Five</a> library to connect to the peripherals required for the test.  The first peripheral is the Arduino running the stepper motor controller (over serial port).  The second peripheral is the sensor under test (over a GPIO port).  Tests are defined first in a csv file.  The generate-test-files.js script converts the csv file listing all of the desired tests into a set of JSON files, each defining a single test.  The scripts run-char-tests.js and run-doe-test.js implement two testing patterns (characterization and Design of Experiments, respectively).  These scripts parse a test definition JSON file and write out test results in a csv time history file.  The set-cadence.js script is a command line tool to set the stepper motor cadence (used before and after tests to start and stop the stepper motor).  The remaining scripts are demonstration tools to verify code was functional before being integrated into the test execution scripts.</p>
+
+
+	<a name="HoloSeat-Serial-Protocol"></a>
+<h2 >HoloSeat Serial Protocol<a href="Software_Source_Code%3Fversion=7.html#HoloSeat-Serial-Protocol" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><em><strong>Note:</strong> This documentation is deprecated for v0.4.0+.  See <a href="HSP.html" class="wiki-page">HSP</a> page for updated documentation.</em></p>
+
+
+	<p>The HoloSeat firmware has a serial protocol, the Holoseat Serial Protocol (HSP), to enable the desktop configuration app to modify all key parameters and to determine the current configuration of the Holoseat at runtime.</p>
+
+
+	<a name="Protocol-Commands"></a>
+<h3 >Protocol Commands<a href="Software_Source_Code%3Fversion=7.html#Protocol-Commands" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The HSP supports three commands.  Each command is made up of a single upper case character indicating the statement type.  One command, the (S)et statement, also takes an input string.</p>
+
+
+	<ul>
+	<li><code>?</code> - Ready(?) command; used to determine if the HoloSeat is ready to receive commands over the HSP (will reply with the (R)eady message followed by one standard state message if the HoloSeat is ready)</li>
+		<li><code>S &lt;config string&gt;</code> - (S)et command; used to send updated configuration to HoloSeat (HoloSeat will reply with <code>OK</code> on success).  The config string has the following format:<br /><code>&lt;WFC&gt;,&lt;WBC&gt;,&lt;E&gt;,&lt;TC&gt;,&lt;L&gt;,&lt;LI&gt;</code> - example: <code>S w,s,0,60,0,20</code>
+	<ul>
+	<li><code>&lt;WFC&gt;</code> - Walk forward character (example: w)</li>
+		<li><code>&lt;WBC&gt;</code> - Walk backward character (example: s)</li>
+		<li><code>&lt;E&gt;</code> - Enabled? Must be a <code>0</code> (disabled) or a <code>1</code> (enabled) (example: 1)</li>
+		<li><code>&lt;TC&gt;</code> - Trigger cadence (example: 65)</li>
+		<li><code>&lt;L&gt;</code> - Logging enabled? Must be a <code>0</code> (disabled) or a <code>1</code> (enabled) (example: 1)</li>
+		<li><code>&lt;LI&gt;</code> - Logging interval in deci-seconds (example: 10)</li>
+	</ul>
+	</li>
+		<li><code>Q</code> - (Q)uery command; used to request the HoloSeat send one standard state message (see <strong>Protocol Messages</strong> below)</li>
+	</ul>
+
+
+	<a name="Protocol-Messages"></a>
+<h3 >Protocol Messages<a href="Software_Source_Code%3Fversion=7.html#Protocol-Messages" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The HSP has two messages.  One is a single character message similar to the commands and one is the HSP standard state message which is sent after initialization, in reply to a (Q)uery command, and as the serial logging message.</p>
+
+
+	<ul>
+	<li><code>R</code> - (R)eady; sent by the HoloSeat to indicate it is ready for serial communication; sent in reply to the Ready(?) command and when serial port is attached in debug mode (to be added)</li>
+		<li><code>&lt;VER&gt;,&lt;WFC&gt;(&lt;DWFC&gt;),&lt;WBC&gt;(&lt;DWBC&gt;),&lt;E&gt;(&lt;DE&gt;),&lt;C&gt;/&lt;TC&gt;(&lt;DTC&gt;),&lt;L&gt;(&lt;DL&gt;)/&lt;LI&gt;(&lt;DLI&gt;)</code> - standard state message, see below for key; example: <code>1.2.3,w(w),s(s),1(1),70/65(75),1(0)/10(10)</code>
+	<ul>
+	<li><code>&lt;VER&gt;</code> - Firmware version string (example: 1.2.3)</li>
+		<li><code>&lt;WFC&gt;</code> - Walk forward character (example: w)</li>
+		<li><code>&lt;DWFC&gt;</code> - Default walk forward character (example: w)</li>
+		<li><code>&lt;WBC&gt;</code> - Walk backward character (example: s)</li>
+		<li><code>&lt;DWBC&gt;</code> - Default walk backward character (example: s)</li>
+		<li><code>&lt;E&gt;</code> - Enabled? Must be a <code>0</code> (disabled) or a <code>1</code> (enabled) (example: 1)</li>
+		<li><code>&lt;DE&gt;</code> - Default enabled state, same format as <code>&lt;E&gt;</code> (example: 1)</li>
+		<li><code>&lt;C&gt;</code> - Current cadence rounded to whole number; positive value means direction is forward, negative value means direction is backward (example: 70)</li>
+		<li><code>&lt;TC&gt;</code> - Trigger cadence (example: 65)</li>
+		<li><code>&lt;DTC&gt;</code> - Default trigger cadence (example: 75)</li>
+		<li><code>&lt;L&gt;</code> - Logging enabled? Must be a <code>0</code> (disabled) or a <code>1</code> (enabled) (example: 1)</li>
+		<li><code>&lt;DL&gt;</code> - Default logging enabled,  same format as <code>&lt;L&gt;</code> (example: 0)</li>
+		<li><code>&lt;LI&gt;</code> - Logging interval in deci-seconds (example: 10)</li>
+		<li><code>&lt;DLI&gt;</code> - Default logging interval in deci-seconds (example: 10)</li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Protocol-Usage"></a>
+<h3 >Protocol Usage<a href="Software_Source_Code%3Fversion=7.html#Protocol-Usage" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Always start a serial session by sending a Ready(?) command.  If a (R)eady message is not received, wait and try again until a timeout is reached or a (R)eady message is received.  Be sure to check the version string sent in the initial standard state message to ensure your app is compatible with the version of the HoloSeat firmware.</p>
+
+
+	<p>After you have initialized your connection, you can then use the (Set) and (Q)uery commands as necessary to control and observe the HoloSeat's state.</p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="Software_Source_Code.html%3Fversion=7.html" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="Software_Source_Code.txt%3Fversion=7" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/Software_Source_Code.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

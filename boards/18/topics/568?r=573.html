@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Station - Version 1.1/1.2 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/gs-001.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/gs-001.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/gs-001%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=news.html" class="news">News</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/gs-001/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/gs-001/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/gs-001%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/gs-001/boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/gs-001/boards/18">General</a> » </p>
+
+<div class="contextual">
+    <span class="message-568-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Version 1.1/1.2</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/gs-001/activity?from=2013-08-03" title="08/03/2013 04:25 pm">about 9 years</a> ago</span></p>
+<div class="wiki">
+<p>This post is long overdue.  Version 1.0 had some shortcomings, and not all of them were in performance.  The construction left a lot to be desired.  It was difficult and balky requiring soldering copper to silver to aluminum.  Much of this has already been covered in the <a href="https://opendesignengine.net/boards/18/topics/447" class="external">Version 1.0 close out</a> post.  Once assembled, manipulating the aerials moved these connections and the failure of the 1.0 prototype just before Yuri's night was traced to a broken wire which I only found after disassembling the 1.0 prototype to build the 1.1 version for the show at New Space.  The issues of build difficulty as well as durability were solved by using ground lugs to connect the aerials and using crimp connectors on all the connections in the antenna itself... but this created new problems.</p>
+
+
+	<p>The crimp connectors and hardware used to bolt these to the ground lugs, then the ground lugs connecting to the aerial, while fairly direct by our eyes, represents quite a number of transitions between various metals, each diminishing the signal by a bit.  Once I got the 1.1 groundstation back from New Space, I discovered that not only was the antenna horribly out of tune (peaked at 385-405 MHz instead of 460), it also had a signal loss of -2db in the between the jack and the aerials.  This doesn't sound that bad until you consider that the second arial was also less than it should be, at -1.8db from the main loop.  This seriously affected the tuning as well as the phase of the signal, and brought down the overall gain of a circularly polarized satellite signal from +8db or better (calculated based on received signal quality, as I did not lab test 1.0 sufficiently), down to +3.2db as tested today.</p>
+
+
+	<p>Much of this can be compensated for.  The tuning issue is caused by failing to account for the lead length inside the antenna.  As far as the electrons were concerned, the actual aerial continues past the loop, into the ground lug, through the body of the antenna on the mounting bolt, through the crimp connector, and along the lead until it enters into the coaxial cable for either the antenna line or the tuning loop.  Now that we know, we can make the lead length consistent and reduce the circumference of the loops by the required amount.  This will tune the antenna to a 460MHz center frequency and raise the gain, but I doubt that it will be sufficient.</p>
+
+
+	<p>To pick the signal out of the noise floor for most people's build would require a good bit of tweaking it until it works, but this solves no problems and would lead to frustrated kit builders.  We simply need more gain.  A +20db preamplifier mounted directly to the main aerial line and phasing loop would minimize cable loss and give the preamp a solid signal to amplify.  The SDR dongle could be connected directly to the output of the preamp.  The ground station would have somewhere in the neighborhood of +26db to +28db of gain, though this would be strictly in the UHF band.  It will bring the signal right up out of the noise floor and yield a solid 15db signal to noise ratio.</p>
+
+
+	<p>The preamp is powered, requiring +12 to +15VDC, and this should not come from a wall wart power supply due to the amount of noise they introduce unless some extreme filtering is used.  I am recommending a rechargeable battery pack, which may be charged from a wall wart or car lighter plug. Since battery power will be available in the enclosure, and this power is "clean" DC, it would make some sense to power the SDR dongle from this supply as well, just stepped down to the 5VDC it expects.  The data lines from the SDR's USB connection may be brought out of the ground station's enclosure on a USB bulkhead connector.  The power from the computer on the USB connector will not be used except to signal the ground station's internal power supply to power up the ground station preamp and SDR when connected to the computer.</p>
+
+
+	<p>All that said, I feel that these changes would represent a new subversion.  Not the antenna correction, but rather the addition of the preamp, change in the location of the SDR, and addition of a power subsystem.  This groundstation version 1.2 will also use some refinements to the ground plane I have been playing with, namely the use of conductive fabric and spring tensioners, which would allow the ground plane to fold like an umbrella against the body while in transit.  The other benefit is that the ground plane would lay flatter giving an improved reception pattern, and remain usable at higher frequencies, though the dimensions of all tuned parts would need to be adjusted.  This is in preparation of 900MHz and L-band versions.</p>
+
+
+	<p>I will be retuning the aerials as mentioned in this text over the next few days and have ordered a preamp for the UHF band (around 435MHz).  It will be assembled, installed and tested as soon as it arrives.  To make room for the SDR, battery, and power supply I may increase the length of the antenna body, but only if necessary.  Finally, I will be adding a tripod mount (1/4-20 threaded receptacle) which will make the unit more rugged and outdoor friendly.  If anyone has any input I would love to hear it, even if it is for clarification of something said above.  This will likely be the final revision before kitification, so please speak now or...  you know the rest :)</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (3)</h3>
+
+  <div class="message reply" id="message-571">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/18/topics/568?r=571#message-571">RE: Version 1.1/1.2</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/gs-001/activity%3Ffrom=2013-08-11.html" title="08/11/2013 08:45 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I received the preamp, <a href="http://www.ramseyelectronics.com/cgi-bin/commerce.exe?preadd=action&#38;key=PR-SERIES" class="external">Ramsey Electronics PR40 UHF low noise preamp</a> on Friday and built it Saturday afternoon.  While small (7/8" x 1 1/2"), this kit is a through-hole design and soldering it was quick and easy.  More importantly, the design is straightforward, allowing some modification.  While the kit is designed to run on 12VDC, the transistor used (2SC2498) has a maximum bias voltage (B-E) of 3V, which means it will be possible to run the preamp on 5VDC by changing the bias resistor R1 from 470 ohms to a lower value such as 220 ohms. The purpose of running the preamp on 5VDC instead of 12VDC is to pull power from the same supply as the SDR, eliminating the need for the power subsystem.</p>
+
+
+	<p>For Version 1.1/1.2 I am considering the removal of the SDR dongle's plastic enclosure to improve cooling and allow the connection of the preamp directly to the SDR's board.  This could then be mounted in an aluminum enclosure with a large capacitor for the power filtering.  This preamped, shielded, and filtered SDR would significantly improve the noise floor issue that plagues RTL based SDRs without much additional effort or cost.  The trade-off is that the RF filtering of the preamp makes the window of frequencies the antenna can tune much narrower.  The bottom line is that I doubt we will be able to use a UHF tuned preamped version to pick up 900MHz signals the way we did at the New Space show.  In a pinch we could bypass the preamp if we had to, but it would be fairly difficult.</p>
+
+
+	<p>That said, the preamp's filters are tuned using a capacitor and inductor (LC) network.  Just like the voltage, this can be changed by swapping out components with different values. The reason to do this is to make a 900MHz version of the preamp to use with an antenna specifically tuned for a 915MHz center frequency.  This would have more than enough sensitivity to pick up the cubesat our friends at <a href="http://www.southernstars.com/skycube/" class="external">Soutern Stars</a> will be lanching.  There are a couple of ideas I have to lower the cost of entry for the 900MHz (L-band) version and make it even easier to build while improving the performance.</p>
+
+
+	<p>Another improvement is in the ground plane.  Aluminum window screen was used for expedience, but making it have a consistent radius, lay flat, and make a good electrical connection proved to be a significant challenge.  On VHF frequencies, you can get away with murder as far as the quality of the components and especially the ground plane, but not so much with UHF which is what the current ground station design is tuned for.  At 900MHz, the ground plane partially fails, though I'm not sure if the problem is the geometry, the material (grids become transparent at higher frequencies) or what, but it is clear a redesign would improve matters.  Now that the aerial connection has been resolved, it is the next weak link.</p>
+
+
+	<p>One method we are looking at to make the ground plane work at 900MHz and improve the performance at UHF frequencies is to use a finer material to cover the disk... much finer.  I have ordered some nickel/copper ripstop fabric from <a href="http://www.lessemf.com/fabric.html" class="external">Lessemf.com</a> . It has a conductivity of 0.01 to 0.03 Ohms per meter (good) and blocks RF at 80db up to over 3GHz.  This blows away any other material, but the challenge is working with it, since it is a fabric.  Fortunately for us all, I live with a talented seamstress (Jaye Sudar) who took one look at it and said "tedious, but easy".  Even more interesting is what this does for the electrical connections.  Rather than rely on aluminum struts to ground the screen and hold it in the proper shape, the material itself will conduct the ground potential and connect to the ground line using conductive thread.  This means that the struts to hold it flat do not need to be conductive at all; they can be 3D printed out of ABS or PLA.  We hope to have the new version ready to show for the Albuquerque maker fair at the end of the month.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-572">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="http://opendesignengine.net/boards/18/topics/568?r=572#message-572">RE: Version 1.1/1.2</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/gs-001/activity%3Ffrom=2013-08-11.html" title="08/11/2013 08:59 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have to admit that I cruised Joanne Fabrics for antenna components, which I must admit was a first for me and amused me mightily.  I was just waiting for a store clerk to ask "What are you working on?" or" is there anything I can help you find?" The result would have been priceless.  Thinking about it, I realized that the impact of using conductive fabric and thread in antenna systems may not be immediately obvious to everyone.</p>
+
+
+	<p>While cloth tends to be flexible, it can be made rigid through several methods.  The first is the use of rigid struts.  Called boning by makers in fabric fields, these stiffening struts used in dresses and corsets were literally bone once upon a time, but later moved to steel and composites today.  These make great struts for our uses.  We have also come up with a potential method to create antenna aerials and loops out of conductive threads, ribbons, and fabrics (etextiles).</p>
+
+
+	<p>A tube with extremely thin walls can be passed through a channel in the material as a deployable strut.  The antenna or ground plane material will fold or crush easily for storage, but straighten out to the desired shape once compressed gas is used to inflate the tube.  A perfect material to do this for HAB or small spacecraft is ultra thin wall PTFE (Teflon) tubing such as <a href="http://www.amazon.com/Zeus-PTFE-Gauge-Length-Spool/dp/B00193ZXAY/ref=sr_1_1?ie=UTF8&#38;qid=1376270363&#38;sr=8-1" class="external">this offering available on Amazon</a> for $44.95 per 100ft roll.  It withstands temperatures of -454F to +500F, making it able useful in spacecraft for one time deployment of fabric antennas.</p>
+
+
+	<p>The pressure required to deploy a stowed antenna would be about 5-10 PSI of differential pressure between the inside and outside of the tube, meaning that a small bottle or reservoir made from Schedule 40 PVC pipe components containing ambient pressure at launch would suffice.  The deployment could be triggered with a small pneumatic solenoid such as <a href="http://www.amazon.com/Vdc-Normally-Closed-Solenoid-Valve/dp/B007D1U64E/ref=sr_1_12?ie=UTF8&#38;qid=1376272216&#38;sr=8-12" class="external">this offering from American Science and Surplus</a> for $3.75.  Prior to storage of the fabric antenna, the tubing system should be deflated with a small hand vacuum pump to prevent premature deployment as ambient pressure drops below the pressure in the tubes.</p>
+
+
+	<p>For a more permanent deployment on a small satellite, the fabric of the antenna aerials and ground plane could be impregnated with a UV cure epoxy before stowing in a light proof enclosure.  Once deployed in space with no UV shielding from the atmosphere the epoxy would cure quite rapidly locking the antenna assembly in the deployed position even after the pressure in the teflon lines has bled down.  This means that a cubesat can contain and deploy an antenna much larger than the outside dimensions of any cubesat form factor, even with it folded up with a mechanical assembly.  This deployment system is not limited to antenna systems either.  It could easily be used to deploy solar panels or other spacecraft structures.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-573">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="568%3Fr=573.html#message-573">RE: Version 1.1/1.2</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/gs-001/activity%3Ffrom=2013-08-11.html" title="08/11/2013 09:15 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Would it be possible to make the preamp, LC network and SDR assembly modular so that they could be swapped out in minutes depending on what someone wanted to do with the ground station? Or maybe they could just buy the kit for whatever frequencies they care about.</p>
+
+
+	<p>I really like the idea of using ultra thin wall PTFE tubing and compressed gas for antenna deployment on HABs or spacecraft. I'm guessing we'd have to build our own dryers to get the compressed air dry enough for that application though. I think your last two paragraphs should be brought up to the Cube Sat community if they're not working on such things already.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-3/3)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/568">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

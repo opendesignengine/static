@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Groundstation v.2.0 - Requirements Document - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/gs-002.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/gs-002.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Groundstation v.2.0</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../gs-002.html" class="overview">Overview</a></li>
+<li><a href="../activity.html" class="activity">Activity</a></li>
+<li><a href="../issues.html" class="issues">Issues</a></li>
+<li><a href="../issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../issues/calendar.html" class="calendar">Calendar</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/gs-002.html" class="dmsf">DMSF</a></li>
+<li><a href="../documents.html" class="documents">Documents</a></li>
+<li><a href="../wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../files.html" class="files">Files</a></li>
+<li><a href="../repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Navigation</a><a href="Requirements_Document.html#Navigation" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Ground-Station-v20"></a>
+<h3 >Ground Station v.2.0<a href="Requirements_Document.html#Ground-Station-v20" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>General Overview</li>
+	</ul>
+
+
+	<a name="Systems-Engineering-Process"></a>
+<h4 >Systems Engineering Process<a href="Requirements_Document.html#Systems-Engineering-Process" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="Initial_Questions.html" class="wiki-page">Initial Questions</a></li>
+		<li><a href="Requirements_Document.html" class="wiki-page">Requirements Document</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Block_Diagram" class="wiki-page new">Block Diagram</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Architecture_Study" class="wiki-page new">Architecture Study</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Preliminary_Design" class="wiki-page new">Preliminary Design</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Detailed_Design" class="wiki-page new">Detailed Design</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Design_Review" class="wiki-page new">Design Review</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/ProcurementManufacture" class="wiki-page new">Procurement/Manufacture</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Assembly" class="wiki-page new">Assembly</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Integration" class="wiki-page new">Integration</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Testing" class="wiki-page new">Testing</a></li>
+	</ol>
+
+
+	<a name="Documentation"></a>
+<h4 >Documentation<a href="Requirements_Document.html#Documentation" class="wiki-anchor">&para;</a></h4>
+
+
+	<ol>
+	<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Budget" class="wiki-page new">Budget</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Timeline" class="wiki-page new">Timeline</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/BOM" class="wiki-page new">BOM</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Plans" class="wiki-page new">Plans</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Source_Code" class="wiki-page new">Source Code</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Assembly_Instructions" class="wiki-page new">Assembly Instructions</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Operating_Manual" class="wiki-page new">Operating Manual</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Safety" class="wiki-page new">Safety</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Licensing_and_Attribution" class="wiki-page new">Licensing and Attribution</a></li>
+		<li><a href="http://opendesignengine.net/projects/gs-002/wiki/Errata" class="wiki-page new">Errata</a></li>
+	</ol>
+
+<h3>Wiki</h3>
+
+<a href="../wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-172-watcher"></span>
+
+
+
+
+
+
+<a href="http://opendesignengine.net/projects/gs-002/wiki/Requirements_Document/history" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <a name="Requirements-Document-for-Ground-Station-v20"></a>
+<h1 >Requirements Document for Ground Station v2.0<a href="Requirements_Document.html#Requirements-Document-for-Ground-Station-v20" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="Requirements_Document.html#Requirements-Document-for-Ground-Station-v20">Requirements Document for Ground Station v2.0</a><ul><li><ul><li><a href="Requirements_Document.html#Introduction">Introduction</a></li><li><a href="Requirements_Document.html#Technical-Requirements">Technical Requirements</a></li><li><a href="Requirements_Document.html#Project-Requirements">Project Requirements</a></li><li><a href="Requirements_Document.html#Future-Requirements">Future Requirements</a></li><li><a href="Requirements_Document.html#Glossary">Glossary</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h3 >Introduction<a href="Requirements_Document.html#Introduction" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The requirements list matches up to the Initial Questions in step one of the Systems Engineering process as shown below. Each requirement is labeled with GS2R (Ground Station 2.0 Requirement), followed by the number of the <a href="https://opendesignengine.net/projects/gs-002/wiki/Initial_Questions" class="external">initial question</a> that the requirement corresponds to, followed by a dot and then the ID number of the requirement.</p>
+
+
+	<ul>
+	<li><strong>GS2R 1.x</strong> - Why are we making this?</li>
+		<li><strong>GS2R 2.x</strong> - Who is this for?</li>
+		<li><strong>GS2R 3.x</strong> - How will this be used?</li>
+		<li><strong>GS2R 4.x</strong> - What features does it need to have (now)?</li>
+		<li><strong>GS2R 5.x</strong> - What features does it need to have (later)?</li>
+		<li><strong>GS2R 6.x</strong> - What are the legacy requirements?</li>
+		<li><strong>GS2R 7.x</strong> - Who's going to build this?</li>
+		<li><strong>GS2R 8.x</strong> - How many do we want to make?</li>
+		<li><strong>GS2R 9.x</strong> - What is the budget?</li>
+		<li><strong>GS2R 10.x</strong> - What is the timeline?</li>
+		<li><strong>GS2R 11.x</strong> - What waste products will be produced by the manufacture and/or operation of this?</li>
+	</ul>
+
+
+	<a name="Technical-Requirements"></a>
+<h3 >Technical Requirements<a href="Requirements_Document.html#Technical-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Technical requirements are those requirements which include measurable performance values.  Each technical requirement should be verified through testing to ensure the design meets the requirement.</p>
+
+
+	<ul>
+	<li><strong>GS2R 1.1</strong> The ground station must be able to receive satellite signals within the designated amateur radio bands.</li>
+		<li><strong>GS2R 1.2</strong> The ground station must be able to transmit and be received by satellites in orbit.</li>
+		<li><strong>GS2R 1.3</strong> The ground station must be portable to enable live demonstrations as part of educational and outreach activities including remote field use.
+	<ul>
+	<li><strong>GS2R 1.3.1</strong> The total weight of Ground Station 2.0 shall be less than 35kg and be able to break down into components which do not exceed 150cm on any axis to ensure portability.</li>
+		<li><strong>GS2R 1.3.2</strong> The ground station must be transportable by a single person in a compact car.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 1.4</strong> The external components of the ground station must be able to handle rain, dust, winds up to 80km/h, as well as cold (-20C) and hot (60C) temperatures.</li>
+		<li><strong>GS2R 1.5</strong> The external components of the ground station must be able to be mounted securely to a structure or vehicle.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 2.1</strong> The ground station must be designed so that the components may be quickly and easily set up and torn down by minimally qualified personnel and with common tools.</li>
+		<li><strong>GS2R 2.3</strong> All components must either be commercially available or available in “kitified” form.</li>
+		<li><strong>GS2R 2.4</strong> Clear and simple instructions on the use of the ground station's major components as well as instructions on the use of the ground station as a whole must be publicly available.  </li>
+		<li><strong>GS2R 2.5</strong> A safety guide must be included with the kit, the above instruction manual, and be made publicly available on the internet.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 3.1</strong> The user constructing the ground station will be expected to provide their own equipment as follows:
+	<ul>
+	<li><strong>GS2R 3.1.1</strong> A laptop or other portable computer.</li>
+		<li><strong>GS2R 3.1.2</strong> A dual band (UHF/VHF) amateur band handheld transceiver (HT) with at least 5W output transmit power.</li>
+		<li><strong>GS2R 3.1.3</strong> Additional modules or equipment necessary for meeting additional user requirements.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 3.2</strong> The ground station will be used in a manner consistent with relevant laws.
+	<ul>
+	<li><strong>GS2R 3.2.1</strong> The design, construction and operation of the ground station and components will comply with <a href="http://www.ecfr.gov/cgi-bin/text-idx?c=ecfr&#38;SID=273eb7d322bf9d317063be6dc8908e9c&#38;rgn=div5&#38;view=text&#38;node=47:5.0.1.1.6&#38;idno=47" class="external">FCC regulation under CFR Title 47 part 97</a></li>
+		<li><strong>GS2R 3.2.2</strong> Users in other countries are expected to comply with regulations specific to their country and region in the construction, operation, and use of the ground station and components.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 3.3</strong> The ground station software will be able to perform the following tasks:
+	<ul>
+	<li><strong>GS2R 3.3.1</strong> Predict the time and bearing of satellite acquisition of signal (AOS) and loss of signal (LOS) with respect to receiver location (it may not take into account local obstructions like buildings or mountains).</li>
+		<li><strong>GS2R 3.3.2</strong> Display a record of known satellites, their transponder, and transceiver frequencies. </li>
+		<li><strong>GS2R 3.3.3</strong> Identify the expected uplink and downlink doppler shift.</li>
+		<li><strong>GS2R 3.3.4</strong> The software must work with Microsoft Windows, Mac OSX, and Linux operating systems.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 3.4</strong> The operator of the ground station will be able to perform the following tasks:
+	<ul>
+	<li><strong>GS2R 3.4.1</strong> Contact the satellite for verification of signal and telemetry (not possible with all satellites).</li>
+		<li><strong>GS2R 3.4.2</strong> Contact ground personnel beyond the visual or radio horizon through the satellite (possible only with amateur communication satellites supporting a repeater mode).</li>
+		<li><strong>GS2R 3.4.3</strong> Contact manned spacecraft which are able to transmit and receive on amateur frequencies such as ISS.</li>
+	</ul></li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 4.1</strong> Mobile Ground Station operations
+	<ul>
+	<li><strong>GS2R 4.1.1</strong> See GS2R 2.1</li>
+		<li><strong>GS2R 4.1.2</strong> Mobile ground station build out and set up time should be less than 1 hr.</li>
+		<li><strong>GS2R 4.1.3</strong> Mobile ground station break down and pack time should be less than 1 hr.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 4.2</strong> Stationary ground station
+	<ul>
+	<li><strong>GS2R 4.2.1</strong> The stationary ground station antenna must be able to be securely attached to a structure or vehicle. </li>
+		<li><strong>GS2R 4.2.2</strong> Stationary ground station should come on line in less than 10 min (warm start).</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 4.3</strong> Packaging:  The ground station equipment shall be easy to package for shipment.
+	<ul>
+	<li><strong>GS2R 4.3.1</strong> The entire mobile ground station system, safety equipment, and required tools (if any) shall fit in common carrier compliant shipping package.  See also GS2R 1.3.1</li>
+		<li><strong>GS2R 4.3.2</strong> Given that the antenna elements may be bulky and crushable, the antenna design shall be made to disassemble, collapse into a flat package, of be constructed to be crush resistant.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 4.4</strong> Antenna:  The antenna system must be
+	<ul>
+	<li><strong>GS2R 4.4.1</strong> Weatherproof. See GS2R 1.4</li>
+		<li><strong>GS2R 4.4.2</strong> Tuned to produce Vertical Standing Wave Ratio (VSWR) no greater than 1.5 on all bands.</li>
+		<li><strong>GS2R 4.4.3</strong> Designed and constructed to allow easy shipping as well as transport. See GS2R 4.3.2.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 4.5</strong> Grounding and protection:   
+	<ul>
+	<li><strong>GS2R 4.5.1</strong> Stationary ground station installations must be properly grounded to a grounding rod, vehicle frame, or metal water pipe.</li>
+		<li><strong>GS2R 4.5.2</strong> Stationary ground station installations must have lightning protection installed in line with the transmission line(s) between the antenna and radio.</li>
+		<li><strong>GS2R 4.5.2</strong> Mobile ground station antenna systems may be grounded using a temporary ground spike driven into the ground.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 4.6</strong> Radio equipment:  The radio transceiver shall:
+	<ul>
+	<li><strong>GS2R 4.6.1</strong> Tune to the amateur radio VHF band from 144 to 148 MHz.</li>
+		<li><strong>GS2R 4.6.2</strong> Tune to the amateur radio UHF band from 430 to 440 MHZ.</li>
+		<li><strong>GS2R 4.6.3</strong> Operate in full duplex; simultaneously transmit on one frequency while receiving on another.</li>
+	</ul>
+	</li>
+		<li><strong>GS2R 4.7</strong> Computer and software system.  The software shall be “OS Agnostic” as indicated in GS2R 3.3.4.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 6.1</strong> Transmitting will require HAM radio licenses (technician level or greater) in the US. Other countries may have other requirements.  See GS2R 3.2.1</li>
+		<li><strong>GS2R 6.2</strong> Any software should run on all three major PC platforms (MS Windows, Mac OS X, and Linux).  See GS2R 3.3.4.</li>
+		<li><strong>GS2R 6.3</strong> The portable ground station system must use standardized connections to allow for greater flexibility in it's deployment (BNC for RF signals and Serial, USB, Ethernet, or similar connections for the computer).</li>
+	</ul>
+
+
+	<a name="Project-Requirements"></a>
+<h3 >Project Requirements<a href="Requirements_Document.html#Project-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Project requirements are the remaining requirements which are not tied to specific performance values.</p>
+
+
+	<ul>
+	<li><strong>GS2R 2.1</strong> The ground station must be well documented so as to meet the needs of open source spaceflight designers who will design and build future ground station equipment at Mach 30 and elsewhere (allow derivative works).</li>
+		<li><strong>GS2R 2.2</strong> The ground station documentation and procedures must be thorough so that Mach 30 operators, students, and educators who want to bring aerospace communications engineering into the classroom, and anyone else interested in how to communicate with satellites may use this equipment as learning a tool.</li>
+		<li><strong>GS2R 2.3</strong> The ground station documentation must cover safety, setting up the ground station, permanent installation, software operation, station operation and protocol, breaking down and stowing the equipment.</li>
+		<li><strong>GS2R 2.4</strong> The ground station operations manual safety section shall include pinch hazards, overhead power line awareness, RF safety, and precautions necessary to operate grounded equipment outdoors as well as all other known potential safety issues.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 7.1</strong> All design documentation must be open and complete so that ANYONE would be able to build the equipment and operate it once the proper licensing requirement has been satisfied.  See GS2R 3.2.1.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 8.1</strong> The design of the ground station must enable the completion of at least one operational unit.</li>
+		<li><strong>GS2R 8.2</strong> Whenever and wherever possible, considerations should be made so that the design of the ground station components allow them to be used in a kit in the future.  See GS2R 2.3</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 9.1</strong> The cost of the first operational ground station must not exceed $1000 excluding "consumables", tools, computer system, and radio transceiver.  See GS2R 3.1</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 10.1</strong> If possible, the first ground station should be completed within 8 weeks of formal launch as an exercise in agile design and project management.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong>GS2R 11.1</strong> Elements from earlier versions will be reused or kept as backups. </li>
+		<li><strong>GS2R 11.2</strong> Any components that wear out, fail, or are damaged must be disposed up according to all federal, state and local guidelines in the US, or as regulations require in other parts of the world.</li>
+		<li><strong>GS2R 11.3</strong> Attention shall be paid into the durability of the design to keep waste to a minimum.  See GS2R 4.3.2.</li>
+		<li><strong>GS2R 11.4</strong> Wherever possible, the design should make it easy to replace components which are consumable or relatively easy to damage.</li>
+	</ul>
+
+
+	<a name="Future-Requirements"></a>
+<h3 >Future Requirements<a href="Requirements_Document.html#Future-Requirements" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>These are for reference only so that future features can be accommodated in the current design where practical.</p>
+
+
+<strong>Version 2.1:</strong>
+	<ul>
+	<li><strong>GS2R 5.1</strong> Direct computer control of receive and transmit frequencies to automatically compensate for doppler shift.  Requires a supported radio as listed <a href="https://opendesignengine.net/attachments/209/Supported_Radios.xls" class="external">here.</a></li>
+		<li><strong>GS2R 5.2</strong> GPS time synchronization for the host PC</li>
+		<li><strong>GS2R 5.3</strong> Automatic determination of GPS position and magnetic north with computation to derive true north (rotational axis).</li>
+		<li><strong>GS2R 5.4</strong> Automatic determination of zenith by using a MEMS accelerometer to determine gravitational vector allowing automatic power on self calibration.</li>
+		<li><strong>GS2R 5.5</strong> Automatic stabilization for ship or other vehicle use.</li>
+	</ul>
+
+
+<strong>Beyond Version 2.1:</strong>
+	<ul>
+	<li><strong>GS2R 5.5</strong> Version 3.0 will use a Software Defined Radio (SDR), such as the Ettus Research USRP series, as a receiver for higher sensitivity, recording, data demodulation (digital modes), and waterfall displays.</li>
+		<li><strong>GS2R 5.6</strong> Version 4.0 will feature the addition of a dish to the tracking assembly as well as an L-band SDR transceiver to work with common satellite command and control frequencies.  </li>
+		<li><strong>GS2R 5.7</strong> Version 5.0 will feature real time conversion of data and audio streams into a VPN'd link to a common server database, allowing multiple ground stations across the planet to act as one.  This development will be export controlled under ITAR/MTCR.</li>
+	</ul>
+
+
+	<a name="Glossary"></a>
+<h3 >Glossary<a href="Requirements_Document.html#Glossary" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Azimuth - A coordinate system of relative direction based upon polar direction in degrees parallel to the ground where 0 is true north, 90 is due east, etc.<br />BNC - A type of quick disconnect radio frequency connector which needs no tools to connect or disconnect from the jack.<br />Consumables - Items that are used and then discarded such as nylon zip ties or cleaning wipes.<br />Demodulation - The conversion of an analog signal to audio or digital information.  <br />Directional - In this context, antennas which function best in one direction.<br />Dish - Parabolic dish (short form).  In this context, a highly directional antenna system characterized by a parabolic reflector dish and a feed horn in the focal point.<br />Doppler shift - Frequency shift caused by relative motion between the sender and receiver.<br />Downlink - The signal from a spacecraft to the ground station(s).<br />Duplex - In this context, the capability to send and receive at the same time.<br />Elevation - A coordinate system of relative direction ranging from 0 degrees, parallel to the ground, to 90 degrees, straight up or zenith.<br />Feed Horn - A radio antenna and in some cases preamplifier (LNA) fixed to the vocal point of a parabolic dish.<br />Full Duplex - See Duplex.<br />GPS - Global Positioning System.  While primarily used for navigation, the signal contains a precision time base.<br />GS - Ground Station (short form).<br />Half Duplex - The ability to transmit or receive, but not at the same time.<br />Ham - Amateur radio operator.<br />HT - Handheld Transceiver<br />IAW - In Accordance With (short form).<br />ISS - The International Space Station<br />Kitified - Designed to be made into a kit.<br />L-band - In this context, the Amateur radio frequency range from 1,240 to 1,300 MHz.  Amateur satellite up-links are in the frequency range from 1,260 to 1,270 MHz<br />LNA - Low Noise Amplifier.  A high performance antenna and preamplifier combined in a single assembly mounted to the focal point of a parabolic dish. <br />Modulation - Embedding an analog or digital information on an analog signal.<br />Omni - See Omnidirectional<br />Omnidirectional - In this context, antennas capable of functioning in any direction<br />OH - Open Hardware<br />OS - Operating System, also Open Source<br />Preamp - See Preamplifier<br />Preamplifier - An amplifier designed to be mounted between an antenna and radio receiver.<br />Repeater - A transciever set up to rebroadcast a signal on a different frequency for extended coverage.<br />RF - Radio Frequency<br />Rotator - A device to point a dish or directional antenna at the signal source, in this context a satellite.<br />SDR - Software Defined Radio. A radio system where its capabilities and tuning are defined in software.<br />Sensitivity - The ability of a radio receiver to pick up a faint signal.  Measured in -dB where a higher negative number is more sensitive on a logarithmic scale.<br />SWR - Standing Wave Ratio.  A factor of antenna system efficiency based upon matching components.  Measured in a ratio with no units.<br />Timebase - In this context, a time measurement system which may be synchronized with others using a central source.<br />Transceiver - A transmitter and receiver combined in one physical unit.<br />UHF - Ultra High Frequency.  In this context, the amateur radio UHF band from 430 to 440 MHZ.<br />Uplink - The signal from the ground station to the satellite.<br />USB - Universal Serial Bus.  A physical data transfer standard for computer equipment.<br />VHF - Very High Frequency.  In this context, the amateur radio VHF band from 144 to 148 MHz.<br />VPN - Virtual Private Network. A private and secure method of transferring data on the public Internet.<br />VSWR - See SWR.<br />Yagi - A type of directional antenna characterized by multiple straight elements mounted in parallel on a common backbone.</p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/gs-002/wiki/Requirements_Document.html?version=3" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/gs-002/wiki/Requirements_Document.txt?version=3" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/Requirements_Document">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

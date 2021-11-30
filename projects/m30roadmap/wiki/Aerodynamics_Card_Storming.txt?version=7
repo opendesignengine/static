@@ -1,0 +1,34 @@
+back [[Technology Evaluation]]
+
+h1. Aerodynamics Card Storming
+
+h2. Unsorted list of ideas
+
+* Wind Tunnel Projects (a'la the Shepard Test Stand)
+* survey all of the rocket aerodynamics software and rank by utility, ease-of-use, and openness
+* port J's masters thesis on fin flutter analysis/optimization to open source tools
+* parametric #CodeCAD models of fins (suitable for 3D printing, milling, and drafting)
+* Practice/document manufacturing processes for aero structures, hotwire for foam, cutting balsa for fins, 3D printing, etc
+* Build a computing cluster
+* Make the computing cluster opt-in (from donated hardware/time)
+* Study/research impact of surface finish on aerodynamic surfaces
+* Research/study aerodynamic “fixes” (like trip lines, vortex generators, etc)
+* Visualization tools/processes for aerodynamic phenomenon/flows (smoke, pressure sensitive paint, streamers, Schlieren)
+* Scaled composites style wind tunnel by “car/truck”
+* How fast of a wind tunnel is reasonable to build?
+* Design processes for wind tunnels by target regime
+* How to’s for wind tunnel analysis (things like dealing with Reynold’s number etc to properly scale test articles)
+* Using other “tricks/hacks” to do wind tunnel style tests (UAVs, mounting to model rockets, etc) <- expands the car idea above
+* Software tools for aero stability (not controls or guidance)
+* Laboratory measurement software and equipment, especially distributed viewers of a test to remote locations
+* Research/study impact and limits on externally mounted features (like antennas, etc) on aerodynamic performance (flow perturbation analysis)
+> * see NACA Aerodynamic DB (subsonic), see NASA for supersonic
+> * can document how to use sources like that including doing a flight test with a model rocket
+* Hydro tunnel projects
+* Cheat sheet/booklet/software for aerodynamic calculations (Cd/Cl build up to go from design to rough estimate of total Cd/Cl)
+* Add ability to include environmental impact (rain, fog, etc) to wind tunnel to test performance under all weather conditions
+* Aerodynamic analysis/design of a stable recovery system for payload module in case of vehicle failure (no thrusters or parachutes, like a seed pod)
+* Investigate using OpenVSP for model/high power rocket design/layout
+* Extend analysis of aero stability and aero characteristics software and calcs to include subsonic, transonic, and supersonic regimes
+* Investigation of aerodynamic mechanisms (glider wings, canard fins, etc)
+* Simulate/study aero-structural analysis (include aeroelasticity, etc)

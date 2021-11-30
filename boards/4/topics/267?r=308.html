@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Future Design Discussion - v1.1 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-267-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Future Design Discussion - v1.1</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-10-05.html" title="10/05/2012 10:31 am">about 10 years</a> ago</span></p>
+<div class="wiki">
+<p>The following is a suggestion on affordable force sensors from Pierce Nichols of Logos Electromechanical (logos-electro.com) via email:</p>
+
+
+	<p>Check out <a class="external" href="http://aeroconsystems.com/cart/load-cells/">http://aeroconsystems.com/cart/load-cells/</a>. Get a 20 kg load cell from them and an amplifier from me (<a class="external" href="http://www.logos-electro.com/1x3-ana-brdg-2/">http://www.logos-electro.com/1x3-ana-brdg-2/</a>) and you're out the door for $80. If you want a lower range and are willing to spend a bit more, check out Omega's low force sensors (<a class="external" href="http://www.omega.com/toc_asp/subsectionSC.asp?subsection=F07&#38;book=Pressure">http://www.omega.com/toc_asp/subsectionSC.asp?subsection=F07&#38;book=Pressure</a>), again with one of my amplifiers. You shouldn't have any trouble getting out the door for sub-$200.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (41)</h3>
+
+  <div class="message reply" id="message-268">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=268.html#message-268">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-10-06.html" title="10/06/2012 07:54 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>This is a suggestion via email from John Yeh of Link Instuments (linkinstruments.com) on a better thermocoule amplifier.</p>
+
+
+	<p>Try this chip <a class="external" href="http://www.ti.com/lit/ds/symlink/ads1118.pdf">http://www.ti.com/lit/ds/symlink/ads1118.pdf</a> This will give you up to 860 samples per second. If you run two units and alternate the CS pin, you should be able to double the sample rate.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-269">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=269.html#message-269">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-10-06.html" title="10/06/2012 09:45 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I haven't run the numbers, but if 12bit A/D is adequate, look at the ADS1018 on the same data sheet.<br /><a class="external" href="http://www.ti.com/lit/ds/symlink/ads1118.pdf">http://www.ti.com/lit/ds/symlink/ads1118.pdf</a><br />It runs 3300 samples/sec. at 12bit resolution vs the ADS1118 with 16 bits at 860 samples/sec.</p>
+
+
+	<p>If I ever get a little spare time I will run the numbers on the whole analog and A/D section and see if I can improve the performance/cost of the measurement system.  Note that my area is mostly analog hardware, and I will leave the digital stuff to others.</p>
+
+
+	<p>Ben</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-271">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=271.html#message-271">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-10-14.html" title="10/14/2012 08:44 pm">about 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Pierce Nichols just sent me this link on discount load cells via email. He says the S-beam types are among the easiest to integrate mechanically.</p>
+
+
+	<p><a class="external" href="http://discountloadcells.com/ds-diamond-s-type-c-105_760.html">http://discountloadcells.com/ds-diamond-s-type-c-105_760.html</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-275">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=275.html#message-275">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-11-19.html" title="11/19/2012 05:34 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Based on discussions that we've had during hangouts, I'm going to suggest the following. Version 1.1 of Shepard will only include a properly spec'd FSR and updated software. Shepard version 2.0 will incorporate the DAQ feedback that we've gotten above as well as receive a mechanical redesign/facelift consistent with a level 1 kite that can be kitted.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-276">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=276.html#message-276">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-11-21.html" title="11/21/2012 09:03 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy Wright wrote:</p>
+
+
+<blockquote>
+
+	<p>Based on discussions that we've had during hangouts, I'm going to suggest the following. Version 1.1 of Shepard will only include a properly spec'd FSR and updated software. Shepard version 2.0 will incorporate the DAQ feedback that we've gotten above as well as receive a mechanical redesign/facelift consistent with a level 1 kite that can be kitted.</p>
+
+
+</blockquote>
+
+	<p>Concur on the general roadmap.  I have one comment/suggestion.  I think we should look at whether we can do the DAQ and mechanical in one step or if they should be done in two.  Perhaps a v1.5 that updates the mechanical system and v2.0 that updates the DAQ.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-277">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=277.html#message-277">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-11-22.html" title="11/22/2012 01:27 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Or should we break the DAQ and mechanical systems out into separate sub-projects with their own versioning schemes (starting at 1.0)?</p>
+
+
+	<p>One drawback to that would be if Shepard's DAQ system ended up being good enough to use on the level 2 kite. In that case I'm guessing that we would want the DAQ system to be a completely separate project.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-278">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=278.html#message-278">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-11-26.html" title="11/26/2012 11:18 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>The following items have been stored as notes on my phone for months and needed to be placed here.</p>
+
+
+<strong>Possible Mechanical Upgrades</strong>
+	<ol>
+	<li>Use Misumi extruded aluminum instead of wood for the test stand structure.</li>
+		<li>Use Makerslide for the motor mount's linear guide.</li>
+	</ol>
+
+
+<strong>Possible DAQ Upgrades</strong>
+	<ol>
+	<li>Use Ethernet instead of USB for data transfer.</li>
+	</ol>
+
+
+	<p>I'm still working to finish up the docs for Shepard v1.0 and Far Horizons v1.0, and will start in on testing the validity of these upgrade suggestions when I get caught up.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-280">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=280.html#message-280">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-12-30.html" title="12/30/2012 03:38 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Would someone please double check my numbers by telling me what the measurement range (in pounds) is for this FSR? I'm not seeing the same numbers that I thought I did a couple of months ago, and I would like someone to verify the numbers so we can put the issue of this FSR's range to rest.</p>
+
+
+	<p>Spec Sheet:<br /><a class="external" href="http://www.trossenrobotics.com/productdocs/2010-10-26-DataSheet-FSR406-Layout2.pdf">http://www.trossenrobotics.com/productdocs/2010-10-26-DataSheet-FSR406-Layout2.pdf</a></p>
+
+
+	<p>Product Page:<br /><a class="external" href="http://www.trossenrobotics.com/store/p/6496-1-5-Inch-Force-Sensing-Resistor-FSR-.aspx">http://www.trossenrobotics.com/store/p/6496-1-5-Inch-Force-Sensing-Resistor-FSR-.aspx</a></p>
+
+
+	<p>This page has some info on it that may have been what led me astray before.<br /><a class="external" href="http://www.trossenrobotics.com/productdocs/FSR_Integration_Guide.pdf">http://www.trossenrobotics.com/productdocs/FSR_Integration_Guide.pdf</a></p>
+
+
+	<p>Thanks.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-281">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=281.html#message-281">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-03.html" title="01/03/2013 10:36 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I think I found it.  Page 2 of the first document (FSR 406 Data Sheet), second line in the table, "Force Sensitivity Range" = 0.1 - 10.0 N.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-282">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=282.html#message-282">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-03.html" title="01/03/2013 11:42 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Isn't that value 10.0^2 N though, making it 100 N? Also, the website shows the "Force Range" to be "&lt;1N to &gt;100N". If that's correct, we should have plenty of head room for all of the motors we're testing. The curve was definitely topping out too soon during our tests, so I'm thinking it must be the way the voltage divider is set up in the circuit. I based the circuit off of someone else's work, so maybe it's just the fact that I didn't double check their numbers that's caused this issue. I'm kind of hoping that's the case because simply running the numbers and then swapping out one resistor should fix the problem.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-283">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=283.html#message-283">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-03.html" title="01/03/2013 12:45 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I thought that "2" was a squared as well, but that would make the units N^2 and that didn't make sense for a force measurement. So I looked again and realized it is a <strong>very</strong> poorly placed footnote (see bottom of the page for the note).  Which means the range only goes up to 10.0 N.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-293">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=293.html#message-293">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-06.html" title="01/06/2013 10:58 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I looked at this FSR yesterday. It has the range, sensitivity, and linearity to be a good replacement for the current FSR I think.</p>
+
+
+	<p><a class="external" href="http://www.tekscan.com/pdf/A401-force-sensor.pdf">http://www.tekscan.com/pdf/A401-force-sensor.pdf</a></p>
+
+
+	<p>It costs more than the original FSR, but should still fit within the budget. I'm checking to see if you can buy them individually instead of in packs of 2 through 8.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-294">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=294.html#message-294">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-07.html" title="01/07/2013 11:24 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Hi Jeremy,</p>
+
+
+	<p>We have used this sensor for years and have found that it gives a faster and more linear response without the drift we encountered with other FSRs.  The only gotcha is that the readings can be skewed if the backing is not flat and solid (epoxy flexes) and the contact plate isn't parallel to the backing plate.  If you have to buy two, I'll buy the extra one off of you.  I have attached the documentation we had for the sensor usage.</p>
+
+
+	<p>Best,</p>
+
+
+	<p>Aaron</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/207/FlexiForce-Sensors-Manual.pdf" class="icon icon-attachment">FlexiForce-Sensors-Manual.pdf</a>
+  <span class="size">(400.4 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-296">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=296.html#message-296">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-07.html" title="01/07/2013 01:08 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Looks good to me.  Our max load is 7.4 lbf (32.9 N) when testing D motors, and this sensor goes up to 25 lbf.  And, Aaron, the pdf you attached is very helpful.  Thanks!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-297">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=297.html#message-297">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-07.html" title="01/07/2013 04:15 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Excellent, thanks Aaron.</p>
+
+
+	<p>It looks like SparkFun sells these FSRs individually.</p>
+
+
+	<p><a class="external" href="https://www.sparkfun.com/search/results?term=flexiforce&#38;what=products">https://www.sparkfun.com/search/results?term=flexiforce&#38;what=products</a></p>
+
+
+	<p>I'll get one of <a href="https://www.sparkfun.com/products/11207" class="external">these</a> on order.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-298">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=298.html#message-298">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-07.html" title="01/07/2013 09:59 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I did an experiment tonight where I disabled the Arduino's code to read the thermocouple amplifier (the one that takes 70 to 100 ms for each read). I just hard coded a dummy value of 0.0 for the temp, so all the Arduino had to do was read the voltage from the FSR and send the data over serial. The sample rate that I ended up with is about 825 samples per second. Divide that by two, and we should be able to get somewhere around (and probably over) 400 samples per second for two analog voltage channels.</p>
+
+
+	<p>Another digital <a href="http://www.ti.com/lit/ds/symlink/ads1118.pdf" class="external">thermocouple amplifier</a> was mentioned above as a replacement for the current one. It works much like the MAX31855 that we're using now, but it offers 860 samples per second. I'm not sure how long it will take the Arduino to read the data over the ADS1118's SPI interface though. One of the informal goals that we set for version 1.1 of the test stand was 150 samples per second, with an upper-end goal of 250. It seems like we should be able to get that.</p>
+
+
+	<p>For any thermocouple amplifier we use on version 1.1, it would be best if it came in a DIP package and didn't require any crazy support circuitry to make it work. That is if we want me doing the circuit and finishing it in a reasonable time frame anyway.</p>
+
+
+	<p>Are there any thoughts on this?</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/211/_22_42_20.csv.html" class="icon icon-attachment">_22_42_20.csv</a>
+  <span class="size">(36.8 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-304">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=304.html#message-304">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-08.html" title="01/08/2013 10:22 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>There's one thing that we need to keep in mind that I don't think ever got documented on version 1.0 of the test stand structure. While at <a href="http://www.clubcyberia.org/index.php/Main_Page" class="external">Club Cyberia</a> , J and I noticed that the contact and backing plates for the motor mount and the FSR weren't perfectly parallel. Aaron's mention of that above just reminded me. On the version 1.1 structure we should shoot to correct that problem as much as possible when working with wood.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-305">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=305.html#message-305">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-08.html" title="01/08/2013 10:44 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Not to be a pain, but why are we still working with wood beyond the proof of concept and demo stages?  Between the proximity of flame and change of tolerance changes due to moisture and humidity would it be advantageous to move to aluminum extrusions despite the change in cost.  Speaking of that, what would it take to mount a drawer slide to the extrusion as opposed to mounting a makerslide to wood?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-307">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=307.html#message-307">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-08.html" title="01/08/2013 11:02 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Aaron - Valid questions. I would like to move toward something like Misumi extruded aluminum and Makerslide for version 2.0 of Shepard. Version 1.1 is an incremental development where we fix the primary problems with version 1.0. We're also trying to get version 1.1 done quickly for a partner organization that wants to get their feet wet with motor testing, so reusing the wood structure with some incremental improvements has the added advantage of getting it into their hands quickly.</p>
+
+
+	<p>I agree with your critique of using wood for the structure. I've got the Misumi structure in my head for 2.0, I just have to get version 1.1 ready for public consumption first. I'll post my sketches for review once 1.1 is ready to go.</p>
+
+
+	<p>Here's a <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Errata_v1_0" class="external">list of the main problems</a> that we've found with the version 1.0 design.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-308">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=308.html#message-308">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-08.html" title="01/08/2013 11:21 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Gotcha.  With such a low scan rate on the sensor, you would never notice deflection or non-linearity due to the material anyway, but we're fixing that too.</p>
+
+
+	<p>Any ideas on how to prevent the fouling of the slide, or is that the reason for evaluating a move to the makerslide?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-309">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=309.html#message-309">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-08.html" title="01/08/2013 11:31 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I haven't seen the design change yet since J just got it done, but he has shielded the drawer rail by extending the motor mount plate I believe. I'll get info on the design change posted soon. Ideally we would make these changes on ODE and discuss them before implementing them, but with this being an incremental change and with the time constraints, we're cheating a little. I'm waiting for an engineering process fairy to pop up and smack my knuckles with a ruler for cutting such corners though.</p>
+
+
+	<p>The move to the Makerslide is a personal preference of mine, but I wouldn't be opposed to continuing with the drawer slide if we can make it work, and if that's what our development team decides on for version 2.0.</p>
+
+
+	<p>I forgot to address one comment you made about the wood construction above. The wood in the structure is exposed to flame, but we've had good luck on this version by using heat resistant paint.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-310">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=310.html#message-310">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-08.html" title="01/08/2013 12:40 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>In my experience, the engineering process fairy is fairly forgiving as long as the process is documented eventually and results are obtained within the timeline.  :)  I figured you treated the wood with something... You and J would lose sleep if you didn't.</p>
+
+
+	<p>For v2.0 have you considered using 3D printed parts (shielded from heat) and the same 7mm smooth rod and LM7UU bearings you would use on a 3D printer?  Mounting 2 of these rails on either side of the engine holder with 4 linear bearings (similar to the X axis of a Reprap) may work and would provide a fairly easy way to build the parts.  I figure if 3D printed parts can hold up for hours close to a heated bed and print head, it will be fine for the brief impulse of radiant heat from the engine plume, particularly if shielded with something like this: <a class="external" href="http://www.jegs.com/i/JEGS+Performance+Products/555/32075/10002/-1">http://www.jegs.com/i/JEGS+Performance+Products/555/32075/10002/-1</a>.  The thing these parts will not give you is the mass that would help with stability.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-312">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=312.html#message-312">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-08.html" title="01/08/2013 02:07 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>What you're proposing is very similar to a Shepard 1.0 preliminary design that Greg proposed quite awhile ago.</p>
+
+
+	<p><img src="../../../attachments/download/218" alt="" /></p>
+
+
+	<p>Ideally, what I'd like to see during the preliminary design phase for v2.0 is several competing design sketches (including my own) so that we can work through the pros and cons of each design to see what falls out. We didn't start with many visuals or any sketches in the preliminary design Hangout for version 1.0, and I think the process suffered because of that. That's just my opinion, but I think it's backed by the fact that the design we came up with in the Hangout has very little resemblance to what J actually built for the Open Hardware Summit. Greg had also voiced a very valid concern that the design was overly complicated for a level 1 kite. Below is a simplified representation of the original Shepard preliminary design that Greg did when he was trying to understand what we were talking about.</p>
+
+
+	<p><img src="../../../attachments/download/219" alt="" /></p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/218/Gregs_Test_Stand_Concept.jpg" class="icon icon-attachment">Gregs_Test_Stand_Concept.jpg</a>
+  <span class="size">(48.4 kB)</span>
+  
+  
+  </p>
+
+<p><a href="../../../attachments/219/Shepard_1_0_Preliminary_Concept.jpg" class="icon icon-attachment">Shepard_1_0_Preliminary_Concept.jpg</a>
+  <span class="size">(59.7 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-315">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=315.html#message-315">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-08.html" title="01/08/2013 02:52 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>My thought was similar to Greg's, but make both end pieces out of ABS or PLA and leave the back open to allow the gasses to vent without hitting the plastic.  Join the front and back halves with threaded rods. The carriage could be plastic too as long as the engine mount and ejection charge deflectors are insulated.  This would also allow the front bulkhead to hold the sensor mounted to a thin steel plate and the microcontroller on the other side under a cover.  The trouble is, as light as this would be that it would move around with a big engine enough to reduce the sensed thrust.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-320">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=320.html#message-320">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-09.html" title="01/09/2013 10:29 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here's a great metal enclosure with pre-drilled flanges for the Arduino and a shield, but it would put us over budget for this rev of Shepard.</p>
+
+
+	<p><a class="external" href="https://www.sparkfun.com/products/10033">https://www.sparkfun.com/products/10033</a></p>
+
+
+	<p>It would make Shepard a lot easier to transport and operate though.</p></div>
+  
+  </div>
+
+<p class="pagination">1 <a href="http://opendesignengine.net/boards/4/topics/267?page=2&amp;r=308">2</a>  <a href="http://opendesignengine.net/boards/4/topics/267?page=2&amp;r=308">Next »</a> (1-25/41)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/267.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

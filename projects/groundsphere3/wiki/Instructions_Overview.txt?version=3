@@ -1,0 +1,12 @@
+h1. Instructions Overview
+
+Welcome to Ground Sphere Mk 3.  With these instructions you are well on your way to setting up your own ground station suitable for capturing the freely available weather data transmitted to Earth by NOAA's constellation of weather satellites.  The instructions include 5 parts.
+
+
+# [[Instructions Overview]] - This introductory page
+# "Bill of Materials":https://goo.gl/zyuizi - The lists of materials (hardware and software) required to make your ground stations
+# [[Hardware Setup]] - The instructions related to assembling the physical components of the ground station
+# [[Software Setup]] - The instructions for installing and configuring the ground station software
+# [[Operating Instructions]] - The users guide showing how to capture images sent down from NOAA weather satellites
+
+Don't forget to share your downloaded images online and to tag Mach 30 ("Facebook":https://www.facebook.com/Mach30/ | "Twitter":https://twitter.com/Mach_30).

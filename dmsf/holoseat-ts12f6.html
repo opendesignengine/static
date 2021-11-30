@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from opendesignengine.net/dmsf/holoseat-ts?folder_id=83 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Apr 2022 05:56:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat Test Stand - DMSF - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="43Xq6MoeofKl64bwP8yiZeGKOcuACSqEZWmEBfM8AhY="/>
+<link rel='shortcut icon' href='../favicon805e.ico?1359925685' />
+<link href="../stylesheets/applicationefba.css?1359925542" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototypeefba.js?1359925542" type="text/javascript"></script>
+<script src="../javascripts/effectsefba.js?1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdropefba.js?1359925542" type="text/javascript"></script>
+<script src="../javascripts/controlsefba.js?1359925542" type="text/javascript"></script>
+<script src="../javascripts/applicationefba.js?1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-servicec91c.css?1359925705" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery-ui/jquery-ui-1.8.13c91c.css?1359925705" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/plupload/jquery.ui.pluploadc91c.css?1359925705" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery.dataTables/jquery-ui.dataTablesc91c.css?1359925705" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/dmsfc91c.css?1359925705" media="screen" rel="stylesheet" type="text/css" />
+	
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-1.6.1.minc91c.js?1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-ui-1.8.13.minc91c.js?1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/jquery.dataTables.minc91c.js?1359925705" type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function() {
+			jQuery("#browser").dataTable({
+				"bJQueryUI": true,
+				"oLanguage": {
+					'sUrl': '/plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/en.json'	
+				},
+				"bAutoWidth": false,
+				"bPaginate": false,
+				"aaSorting": [[1,'asc']],
+				"aaSortingFixed": [[7,'asc']],
+				"aoColumnDefs": [
+					{ "bSearchable": false, "aTargets": [0, 6, 7, 8] },
+					{ "bSortable": false, "aTargets": [0, 6, 7] },
+					{ "iDataSort": 8, "aTargets": [ 2 ] }
+				],
+				"fnInitComplete": function() {
+					jQuery("div.controls").prependTo(jQuery("#browser_wrapper div.fg-toolbar")[0]);
+				},
+				"fnInfoCallback": function( oSettings, iStart, iEnd, iMax, iTotal, sPre ) {
+					return "Folders: 0, Documents: 2";
+				}
+			});
+			
+			jQuery("[data-downloadurl]").each(function() {
+		        var url = this.getAttribute("data-downloadurl");
+		        if (this.addEventListener) {
+		          this.addEventListener("dragstart", function(e) {
+		            if (e.dataTransfer) {
+		              e.dataTransfer.setData("DownloadURL", url);
+		            }
+		          },false);
+		        }
+	      	});
+		});
+	</script>
+</head>
+<body class="controller-dmsf action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="http://opendesignengine.net/search/index/holoseat-ts" method="get">
+        
+        <a href="../search/index/holoseat-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1><a href="http://opendesignengine.net/projects/holoseat?jump=dmsf" class="root">Holoseat</a> &#187; Holoseat Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/holoseat-ts.html" class="overview">Overview</a></li>
+<li><a href="http://opendesignengine.net/projects/holoseat-ts/activity" class="activity">Activity</a></li>
+<li><a href="http://opendesignengine.net/projects/holoseat-ts/issues" class="issues">Issues</a></li>
+<li><a href="holoseat-ts.html" class="dmsf selected">DMSF</a></li>
+<li><a href="http://opendesignengine.net/projects/holoseat-ts/wiki" class="wiki">Wiki</a></li>
+<li><a href="http://opendesignengine.net/projects/holoseat-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        
+
+<div class="contextual">
+	
+</div>
+
+
+<h2>
+	<a href="holoseat-ts.html">Documents</a>
+
+ / 
+ <a href="holoseat-ts0116.html?folder_id=80">CAD and CAM</a>
+ 
+
+ / 
+ <a href="holoseat-ts12f6.html?folder_id=83">Arduino Bumper</a>
+ 
+
+
+</h2>
+
+<div class="wiki">
+<p>Minimalist case/mount for Arduino boards by <a href="https://www.thingiverse.com/Chu/about" class="external">Chu on Thingiverse</a>.  Contains cache of stl file and gcode for a Printrbot Simple Metal. See Thingiverse for the <a href="https://www.thingiverse.com/thing:26237" class="external">original source files</a>.</p>
+</div>
+
+<form action="http://opendesignengine.net/dmsf/entries_operation/holoseat-ts?folder_id=83" class="dmfs_entries" id="entries_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="43Xq6MoeofKl64bwP8yiZeGKOcuACSqEZWmEBfM8AhY=" /></div>
+	<input id="action" name="action" type="hidden" />
+	<div class="controls" style="float: left">
+		<input name="download_entries" title="Download checked in Zip archive" type="submit" value="Download" />
+		<input name="email_entries" title="Send checked by email" type="submit" value="Email" />
+		
+	</div> 
+	<table class="display entries" id="browser">
+		<thead>
+			<tr id="root">
+				<th class="check">
+					<input id="check_all_entries" title="Check/Uncheck all for zip download or email" type="checkbox" />
+				</th>
+				<th>Title</th>
+				<th>Size</th>
+				<th>Modified</th>
+				<th>Ver.</th>
+				<th>Author</th>
+				<th></th>
+				<th class="hidden"></th>
+				<th class="hidden"></th>
+			</tr>
+		</thead>
+	<tbody>
+	
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="658" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/Arduino_Bumper_0006b4d7.stl?download=" class="icon icon-file " data-downloadurl="application/octet-stream:Arduino_Bumper_0006.stl:http://opendesignengine.net/dmsf_files/658?download=" title="Arduino Bumper 0006 version 0.1 download">Arduino Bumper 0006</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Arduino_Bumper_0006.stl</div>
+			</td>
+			<td class="size">272.8 kB</td>
+			<td class="modified">
+				2017-12-03 02:44
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/658.html" title="Arduino Bumper 0006 details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetailsc91c.png?1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/658" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lockc91c.png?1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">279297</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="657" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/Arduino_Bumper_0006%20-%20JRS%20PrintrBotb4d7.gcode?download=" class="icon icon-file " data-downloadurl="application/octet-stream:Arduino_Bumper_0006 - JRS PrintrBot.gcode:http://opendesignengine.net/dmsf_files/657?download=" title="Arduino Bumper 0006 - JRS PrintrBot version 0.1 download">Arduino Bumper 0006 - JRS PrintrBot</a>
+				<div class="filename" title="Filename used for download or in Zip archive">Arduino_Bumper_0006 - JRS PrintrBot.gcode</div>
+			</td>
+			<td class="size">802.1 kB</td>
+			<td class="modified">
+				2017-12-03 02:44
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/657.html" title="Arduino Bumper 0006 - JRS PrintrBot details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetailsc91c.png?1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="http://opendesignengine.net/dmsf_files/lock/657" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lockc91c.png?1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">821356</td>
+		</tr>
+	
+	</tbody>
+	</table>
+	<br />
+</form>
+
+<script type="text/javascript">
+	jQuery("a.delete-link").click(function(event) {
+		if(!window.confirm("Do you really want to delete this entry?")) event.preventDefault();
+	})
+	
+	jQuery("#entries_delete_button").click(function(event) {
+		if(window.confirm("Do you really want to delete checked entries?")) {
+			jQuery("#entries_form").attr("action", "/dmsf/delete_entries/holoseat-ts?folder_id=83");
+			jQuery("#entries_form").submit();
+		}
+	})
+	
+	jQuery("#check_all_entries").click(function(event) {
+		var $this = jQuery(this);
+		if($this.prop("checked")) {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", true);
+		} else {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", false);
+		}
+	})			
+</script>
+
+
+
+
+
+
+<br />
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/holoseat-ts.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+
+<!-- Mirrored from opendesignengine.net/dmsf/holoseat-ts?folder_id=83 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Apr 2022 05:56:21 GMT -->
+</html>

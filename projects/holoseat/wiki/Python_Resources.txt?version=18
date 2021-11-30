@@ -1,0 +1,75 @@
+h1. Python Resources
+
+{{>toc}}
+
+h2. General Python Coding
+
+* "Python Notes for Professionals book":http://books.goalkicker.com/PythonBook/
+* @__init__.py@
+** "What's your opinion on what to include in __init__.py ?":https://www.reddit.com/r/Python/comments/1bbbwk/whats_your_opinion_on_what_to_include_in_init_py/
+** "How to create a Python Package with __init__.py":http://timothybramlett.com/How_to_create_a_Python_Package_with___init__py.html
+* @__main__.py@
+** "Python Apps the Right Way: entry points and scripts":https://chriswarrick.com/blog/2014/09/15/python-apps-the-right-way-entry_points-and-scripts/
+* Documentation Standards
+** "Writing Python Documentation":http://docs.python-guide.org/en/latest/writing/documentation/
+
+h2. Tornado
+
+* "How to unit test tornado ioloop callbacks":https://www.obeythetestinggoat.com/how-to-unit-test-tornado-ioloop-callbacks.html
+
+h3. WebSockets Using Tornado
+
+* "WebSocket Server sending messages periodically in python":https://stackoverflow.com/questions/19542333/websocket-server-sending-messages-periodically-in-python
+* "Tornado WebSocket example":https://github.com/hiroakis/tornado-websocket-example
+* Python Tornado Web Server With WebSockets
+** "Part 1":http://www.codestance.com/tutorials-archive/python-tornado-web-server-with-websockets-part-i-441
+** Part 2 - never published
+* "How to run functions outside websocket loop in python (tornado)":https://stackoverflow.com/questions/12479054/how-to-run-functions-outside-websocket-loop-in-python-tornado
+* "Sending messages actively from Tornado WebSocket server":https://stackoverflow.com/questions/45755114/sending-messages-actively-from-tornado-websocket-server
+
+h2. Desktop Development
+
+* Installer Builders
+** "cx_Freeze":https://cx-freeze.readthedocs.io/en/latest/
+** "PyInstaller":http://www.pyinstaller.org/
+** http://nuitka.net/pages/overview.html
+
+h2. Microservices in Python
+
+* "Example of Microservices in Python":https://github.com/umermansoor/microservices - primary example driving v0.4 development 
+* "Crafting Effective Microservices in Python":https://tech.zalando.com/blog/crafting-effective-microservices-in-python/
+* Building Microservices with Python
+** "Part 1":https://medium.com/@ssola/building-microservices-with-python-part-i-5240a8dcc2fb
+** "Part 2":https://medium.com/@ssola/building-microservices-with-python-part-2-9f951199094a
+** "Part 3":https://medium.com/@ssola/building-microservices-with-python-part-3-a556a4c4bc00
+
+h2. Python Service Management 
+
+* "usrsvc":https://github.com/kata198/usrsvc
+* "monitoring":https://github.com/sebastien/monitoring - "slides discussing monitoring (then watchdog)":https://www.slideshare.net/mobile/ffunction/fabric-cuisine-and-watchdog-for-server-administration-in-python
+
+h2. UI Development 
+
+* "Introducing Dash":https://medium.com/@plotlygraphs/introducing-dash-5ecf7191b503
+
+h2. REST
+
+h3. Client Libraries
+
+* "Siesta":http://scastillo.sh/siesta/
+* "Requests":https://pypi.python.org/pypi/requests
+
+h3. Developing REST APIs
+
+* "Best Practices REST API from Scratch - Introduction":https://www.sitepoint.com/best-practices-rest-api-scratch-introduction/
+* "Learn REST: A RESTful Tutorial":http://www.restapitutorial.com
+
+h2. Multi-Threading
+
+* "Running a method as a background thread in Python":http://sebastiandahlgren.se/2014/06/27/running-a-method-as-a-background-thread-in-python/
+* "threading interface in Python (official docs)":https://docs.python.org/2/library/threading.html
+* "Daemon Threads Explanation (stack overflow)":https://stackoverflow.com/questions/190010/daemon-threads-explanation
+
+h2. HID
+
+* "How can I get raw USB keyboard data with Python?":https://stackoverflow.com/questions/37134686/how-can-i-get-raw-usb-keyboard-data-with-python

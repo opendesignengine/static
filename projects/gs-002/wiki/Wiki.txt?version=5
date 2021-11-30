@@ -1,0 +1,7 @@
+h1. Wiki
+
+Welcome to the *Ground Station v.2.0* project Wiki. This wiki contains documentation covering the design, development, fabrication, and use of the ground station. Much of the information here started life over in the forums, where we hold discussions and work to achieve a consensus on all items within the time permitted. Due to this, the forums would be a good place to start if you have questions about the thought process behind an item. In most cases, links to the appropriate forum discussions will be included in the wiki pages.
+
+The idea behind the *Ground Station v.2.0* project is to start small and simple, and then build on what is learned when moving to larger and more complex devices later on. This is very much in keeping with Mach 30's philosophy of starting (literally) from the ground up to build the infrastructure required to facilitate safe, routine, reliable, and sustained access to space. 
+
+If you're interested in getting involved a good place to start would be the "Initial Questions":https://opendesignengine.net/projects/gs-002/wiki/Initial_Questions page. There you will find the foundational questions that will guide the rest of the *Ground Station v.2.0* design process. There is also the navigation bar at the right to help you find a specific section of the documentation quickly.

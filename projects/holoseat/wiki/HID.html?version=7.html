@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>HID</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="HID-Resources"></a>
+<h1 >HID Resources<a href="HID.html%3Fversion=7.html#HID-Resources" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc"><li><a href="HID.html%3Fversion=7.html#HID-Resources">HID Resources</a><ul><li><a href="HID.html%3Fversion=7.html#Arduino-HID-Libraries">Arduino HID Libraries</a></li><li><a href="HID.html%3Fversion=7.html#Custom-USB-PID">Custom USB PID</a></li><li><a href="HID.html%3Fversion=7.html#Embedding-Leonardo-for-HID">Embedding Leonardo for HID</a></li><li><a href="HID.html%3Fversion=7.html#Connecting-Joypads-to-Controller-Boards">Connecting Joypads to Controller Boards</a></li><li><a href="HID.html%3Fversion=7.html#HID-in-Nodejs-deprecated">HID in Node.js. (deprecated)</a></li></ul></li></ul>
+
+
+	<a name="Arduino-HID-Libraries"></a>
+<h2 >Arduino HID Libraries<a href="HID.html%3Fversion=7.html#Arduino-HID-Libraries" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://www.arduino.cc/en/Reference/MouseKeyboard" class="external">Mouse and Keyboard libraries</a></li>
+		<li><a href="https://www.arduino.cc/en/Reference/KeyboardModifiers" class="external">Keyboard Modifiers</a></li>
+		<li>Joystick Library
+	<ul>
+	<li><a href="https://github.com/MHeironimus/ArduinoJoystickLibrary" class="external">Arduino Joystick Library</a></li>
+		<li><a href="http://mheironimus.blogspot.com/2015/11/arduino-joystick-library.html" class="external">Joystick Library Tutorial</a></li>
+		<li><a href="http://mheironimus.blogspot.com/2016/11/arduino-joystick-library-version-20.html" class="external">Joystick Library v2.0 Tutorial</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Custom-USB-PID"></a>
+<h2 >Custom USB PID<a href="HID.html%3Fversion=7.html#Custom-USB-PID" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>TL;DR - This is something we will want to do for v1.0 not v0.4.  It will allow use to identify Holoseat as Holoseat and not a Feather, Arduino, etc.  This will be important for drivers on Windows and to make it easier for the serial client to identify the Holoseat via the description.  We should still go ahead and register for a PID now so we have it reserved.</p>
+
+
+	<ul>
+	<li><a href="http://pid.codes/howto/" class="external">PID.Codes How To</a></li>
+		<li><a href="https://github.com/MHeironimus/ArduinoJoystickLibrary/issues/14" class="external">is it possible to Rename the HID Controller</a></li>
+		<li><a href="https://learn.adafruit.com/simple-arduino-based-usb-vid-and-pid-tester?view=all" class="external">Simple Arduino-based USB VID &#38; PID tester</a></li>
+		<li><a href="http://steven.casagrande.io/articles/compiling-arduino-caterina-with-new-vidpid/" class="external">Compiling Arduino Caterina with New VID/PID</a></li>
+		<li><a href="https://www.oshwa.org/2013/11/19/new-faq-on-usb-vendor-id-and-product-id/" class="external">OSHWA FAQ: What’s a USB vendor ID (VID) and product ID (PID) and what should I do about them?</a></li>
+		<li><a href="https://www.voti.nl/docs/usb-pid.html" class="external">How to obtain an USB VID/PID for your project</a>
+*</li>
+	</ul>
+
+
+	<a name="Embedding-Leonardo-for-HID"></a>
+<h2 >Embedding Leonardo for HID<a href="HID.html%3Fversion=7.html#Embedding-Leonardo-for-HID" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="http://electronut.in/bootloader-atmega32u4/" class="external">Installing Arduino Bootloader on Leonardo. Atmel Chip</a></li>
+	</ul>
+
+
+	<a name="Connecting-Joypads-to-Controller-Boards"></a>
+<h2 >Connecting Joypads to Controller Boards<a href="HID.html%3Fversion=7.html#Connecting-Joypads-to-Controller-Boards" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://tutorials-raspberrypi.com/raspberry-pi-xbox-360-controller-wireless/" class="external">Control your Raspberry Pi by using a wireless Xbox 360 controller</a></li>
+		<li><a class="external" href="https://pimylifeup.com/xbox-controllers-raspberry-pi/">https://pimylifeup.com/xbox-controllers-raspberry-pi/</a></li>
+	</ul>
+
+
+	<a name="HID-in-Nodejs-deprecated"></a>
+<h2 >HID in Node.js. (deprecated)<a href="HID.html%3Fversion=7.html#HID-in-Nodejs-deprecated" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://github.com/node-hid/node-hid" class="external">node-hid</a> - "Access USB HID devices through Node.JS" </li>
+		<li><a href="https://github.com/emilyrose/hidstream" class="external">hidstream</a> - "Streaming HID events in Node.js"</li>
+	</ul>
+</body>
+</html>

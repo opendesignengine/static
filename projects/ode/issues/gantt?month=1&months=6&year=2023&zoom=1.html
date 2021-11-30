@@ -1,0 +1,847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Open Design Engine - Gantt - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../../../javascripts/calendar/calendar.js%3F1359925542" type="text/javascript"></script><script src="../../../javascripts/calendar/lang/calendar-en.js%3F1359925542" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+
+//]]>
+</script><script src="../../../javascripts/calendar/calendar-setup.js%3F1359925542" type="text/javascript"></script><link href="../../../stylesheets/calendar.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" /></head>
+<body class="controller-gantts action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/ode.html" method="get">
+        
+        <a href="../../../search/index/ode.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Open Design Engine</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../ode%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../activity.html" class="activity">Activity</a></li>
+<li><a href="../roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../issues.html" class="issues">Issues</a></li>
+<li><a href="gantt.html" class="gantt selected">Gantt</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../files.html" class="files">Files</a></li>
+<li><a href="http://opendesignengine.net/projects/ode/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <h3>Issues</h3>
+<a href="../issues%3Fset_filter=1.html">View all issues</a><br />
+
+<a href="report.html">Summary</a><br />
+
+
+
+
+
+	<a href="gantt.html">Gantt</a><br />
+
+
+
+
+
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        
+<h2>Gantt</h2>
+
+<form action="http://opendesignengine.net/projects/ode/issues/gantt?month=1&amp;months=6&amp;year=2023" id="query_form" method="get">
+<input id="set_filter" name="set_filter" type="hidden" value="1" />
+<fieldset id="filters" class="collapsible ">
+  <legend onclick="toggleFieldset(this);">Filters</legend>
+	<div style="">
+    <script type="text/javascript">
+//<![CDATA[
+function add_filter() {
+  select = $('add_filter_select');
+  field = select.value
+  Element.show('tr_' +  field);
+  check_box = $('cb_' + field);
+  check_box.checked = true;
+  toggle_filter(field);
+  select.selectedIndex = 0;
+
+  for (i=0; i<select.options.length; i++) {
+    if (select.options[i].value == field) {
+      select.options[i].disabled = true;
+    }    
+  }
+}
+
+function toggle_filter(field) {
+  check_box = $('cb_' + field);
+  if (check_box.checked) {
+    Element.show("operators_" + field);
+    Form.Element.enable("operators_" + field);
+    toggle_operator(field);
+  } else {
+    Element.hide("operators_" + field);
+    Form.Element.disable("operators_" + field);
+    enableValues(field, []);
+  }
+}
+
+function enableValues(field, indexes) {
+	var f = $$(".values_" + field);
+	for(var i=0;i<f.length;i++) {
+		if (indexes.include(i)) {
+			Form.Element.enable(f[i]);
+			f[i].up('span').show();
+		} else {
+			f[i].value = '';
+      Form.Element.disable(f[i]);
+      f[i].up('span').hide();
+		}
+	}
+	if (indexes.length > 0) {
+		Element.show("div_values_" + field);
+	} else {
+		Element.hide("div_values_" + field);
+	}
+}
+
+function toggle_operator(field) {
+  operator = $("operators_" + field);
+  switch (operator.value) {
+    case "!*":
+    case "*":
+    case "t":
+    case "w":
+    case "o":
+    case "c":
+      enableValues(field, []);
+      break;
+    case "><":
+      enableValues(field, [0,1]);
+      break;
+    case "<t+":
+    case ">t+":
+    case "t+":
+    case ">t-":
+    case "<t-":
+    case "t-":
+      enableValues(field, [2]);
+      break;
+    default:
+      enableValues(field, [0]);
+      break;
+  }
+}
+
+function toggle_multi_select(el) {
+  var select = $(el);
+  if (select.multiple == true) {
+    select.multiple = false;
+  } else {
+    select.multiple = true;
+  }
+}
+
+function submit_query_form(id) {
+  selectAllOptions("selected_columns");
+  $(id).submit();
+}
+
+function apply_filters_observer() {
+  $$("#query_form input[type=text]").invoke("observe", "keypress", function(e){
+    if(e.keyCode == Event.KEY_RETURN) {
+      submit_query_form("query_form");
+    }
+  });
+}
+Event.observe(document,"dom:loaded", apply_filters_observer);
+//]]>
+</script>
+
+<table width="100%">
+<tr>
+<td>
+<table>
+
+    
+    <tr  id="tr_status_id" class="filter">
+    <td class="field">
+        <input checked="checked" id="cb_status_id" name="f[]" onclick="toggle_filter('status_id');" type="checkbox" value="status_id" />
+        <label for="cb_status_id">Status</label>
+    </td>
+    <td class="operator">
+        <select id="operators_status_id" name="op[status_id]" onchange="toggle_operator('status_id');"><option value="o" selected="selected">open</option>
+<option value="=">is</option>
+<option value="!">is not</option>
+<option value="c">closed</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_status_id" style="display:none;">
+    
+        <span class="span_values_status_id">
+        	<select class="values_status_id" id="values_status_id_1" name="v[status_id][]"><option value="1">New</option>
+<option value="2">In Progress</option>
+<option value="3">Resolved</option>
+<option value="4">Feedback</option>
+<option value="5">Closed</option>
+<option value="6">Rejected</option></select>
+          <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="toggle_multi_select('values_status_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../../../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('status_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_tracker_id" class="filter">
+    <td class="field">
+        <input id="cb_tracker_id" name="f[]" onclick="toggle_filter('tracker_id');" type="checkbox" value="tracker_id" />
+        <label for="cb_tracker_id">Tracker</label>
+    </td>
+    <td class="operator">
+        <select id="operators_tracker_id" name="op[tracker_id]" onchange="toggle_operator('tracker_id');"><option value="=">is</option>
+<option value="!">is not</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_tracker_id" style="display:none;">
+    
+        <span class="span_values_tracker_id">
+        	<select class="values_tracker_id" id="values_tracker_id_1" name="v[tracker_id][]"><option value="1">Bug</option>
+<option value="2">Feature</option>
+<option value="3">Support</option>
+<option value="4">Milestone</option></select>
+          <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="toggle_multi_select('values_tracker_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../../../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('tracker_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_priority_id" class="filter">
+    <td class="field">
+        <input id="cb_priority_id" name="f[]" onclick="toggle_filter('priority_id');" type="checkbox" value="priority_id" />
+        <label for="cb_priority_id">Priority</label>
+    </td>
+    <td class="operator">
+        <select id="operators_priority_id" name="op[priority_id]" onchange="toggle_operator('priority_id');"><option value="=">is</option>
+<option value="!">is not</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_priority_id" style="display:none;">
+    
+        <span class="span_values_priority_id">
+        	<select class="values_priority_id" id="values_priority_id_1" name="v[priority_id][]"><option value="3">Low</option>
+<option value="4">Normal</option>
+<option value="5">High</option>
+<option value="6">Urgent</option>
+<option value="7">Immediate</option></select>
+          <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="toggle_multi_select('values_priority_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../../../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('priority_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_assigned_to_id" class="filter">
+    <td class="field">
+        <input id="cb_assigned_to_id" name="f[]" onclick="toggle_filter('assigned_to_id');" type="checkbox" value="assigned_to_id" />
+        <label for="cb_assigned_to_id">Assignee</label>
+    </td>
+    <td class="operator">
+        <select id="operators_assigned_to_id" name="op[assigned_to_id]" onchange="toggle_operator('assigned_to_id');"><option value="=">is</option>
+<option value="!">is not</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_assigned_to_id" style="display:none;">
+    
+        <span class="span_values_assigned_to_id">
+        	<select class="values_assigned_to_id" id="values_assigned_to_id_1" name="v[assigned_to_id][]"><option value="1">Admin Administrator</option>
+<option value="231">Camdon Cady</option>
+<option value="130">Christopher Sigman</option>
+<option value="3">J. Simmons</option>
+<option value="102">Jeremy Wright</option>
+<option value="114">Kevin Bouwkamp</option></select>
+          <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="toggle_multi_select('values_assigned_to_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../../../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('assigned_to_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_author_id" class="filter">
+    <td class="field">
+        <input id="cb_author_id" name="f[]" onclick="toggle_filter('author_id');" type="checkbox" value="author_id" />
+        <label for="cb_author_id">Author</label>
+    </td>
+    <td class="operator">
+        <select id="operators_author_id" name="op[author_id]" onchange="toggle_operator('author_id');"><option value="=">is</option>
+<option value="!">is not</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_author_id" style="display:none;">
+    
+        <span class="span_values_author_id">
+        	<select class="values_author_id" id="values_author_id_1" name="v[author_id][]"><option value="1">Admin Administrator</option>
+<option value="231">Camdon Cady</option>
+<option value="130">Christopher Sigman</option>
+<option value="3">J. Simmons</option>
+<option value="102">Jeremy Wright</option>
+<option value="114">Kevin Bouwkamp</option></select>
+          <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="toggle_multi_select('values_author_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../../../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('author_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_assigned_to_role" class="filter">
+    <td class="field">
+        <input id="cb_assigned_to_role" name="f[]" onclick="toggle_filter('assigned_to_role');" type="checkbox" value="assigned_to_role" />
+        <label for="cb_assigned_to_role">Assignee's role</label>
+    </td>
+    <td class="operator">
+        <select id="operators_assigned_to_role" name="op[assigned_to_role]" onchange="toggle_operator('assigned_to_role');"><option value="=">is</option>
+<option value="!">is not</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_assigned_to_role" style="display:none;">
+    
+        <span class="span_values_assigned_to_role">
+        	<select class="values_assigned_to_role" id="values_assigned_to_role_1" name="v[assigned_to_role][]"><option value="3">Manager</option>
+<option value="4">Developer</option></select>
+          <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="toggle_multi_select('values_assigned_to_role_1');; return false;"><img alt="Bullet_toggle_plus" src="../../../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('assigned_to_role');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_fixed_version_id" class="filter">
+    <td class="field">
+        <input id="cb_fixed_version_id" name="f[]" onclick="toggle_filter('fixed_version_id');" type="checkbox" value="fixed_version_id" />
+        <label for="cb_fixed_version_id">Target version</label>
+    </td>
+    <td class="operator">
+        <select id="operators_fixed_version_id" name="op[fixed_version_id]" onchange="toggle_operator('fixed_version_id');"><option value="=">is</option>
+<option value="!">is not</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_fixed_version_id" style="display:none;">
+    
+        <span class="span_values_fixed_version_id">
+        	<select class="values_fixed_version_id" id="values_fixed_version_id_1" name="v[fixed_version_id][]"><option value="1">Open Design Engine - v0.1 - Private Alpha</option>
+<option value="2">Open Design Engine - v0.2 - Public Beta</option>
+<option value="3">Open Design Engine - Under consideration</option>
+<option value="10">Open Design Engine - v0.2.1 - Public Beta Enhancements</option>
+<option value="4">Open Design Engine - v0.3 - Sustainability Enhancements</option>
+<option value="5">Open Design Engine - v0.4 - Wiki Enhancements</option></select>
+          <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="toggle_multi_select('values_fixed_version_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../../../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('fixed_version_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_subject" class="filter">
+    <td class="field">
+        <input id="cb_subject" name="f[]" onclick="toggle_filter('subject');" type="checkbox" value="subject" />
+        <label for="cb_subject">Subject</label>
+    </td>
+    <td class="operator">
+        <select id="operators_subject" name="op[subject]" onchange="toggle_operator('subject');"><option value="~">contains</option>
+<option value="!~">doesn&#x27;t contain</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_subject" style="display:none;">
+    
+        <span class="span_values_subject"><input class="values_subject" id="values_subject" name="v[subject][]" size="30" type="text" /></span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('subject');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_created_on" class="filter">
+    <td class="field">
+        <input id="cb_created_on" name="f[]" onclick="toggle_filter('created_on');" type="checkbox" value="created_on" />
+        <label for="cb_created_on">Created</label>
+    </td>
+    <td class="operator">
+        <select id="operators_created_on" name="op[created_on]" onchange="toggle_operator('created_on');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="&gt;t-">less than days ago</option>
+<option value="&lt;t-">more than days ago</option>
+<option value="t-">days ago</option>
+<option value="t">today</option>
+<option value="w">this week</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_created_on" style="display:none;">
+    
+        <span class="span_values_created_on"><input class="values_created_on" id="values_created_on_1" name="v[created_on][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_created_on_1_trigger" src="../../../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_created_on_1', ifFormat : '%Y-%m-%d', button : 'values_created_on_1_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_created_on"><input class="values_created_on" id="values_created_on_2" name="v[created_on][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_created_on_2_trigger" src="../../../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_created_on_2', ifFormat : '%Y-%m-%d', button : 'values_created_on_2_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_created_on"><input class="values_created_on" id="v_created_on_" name="v[created_on][]" size="3" type="text" /> days</span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('created_on');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_updated_on" class="filter">
+    <td class="field">
+        <input id="cb_updated_on" name="f[]" onclick="toggle_filter('updated_on');" type="checkbox" value="updated_on" />
+        <label for="cb_updated_on">Updated</label>
+    </td>
+    <td class="operator">
+        <select id="operators_updated_on" name="op[updated_on]" onchange="toggle_operator('updated_on');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="&gt;t-">less than days ago</option>
+<option value="&lt;t-">more than days ago</option>
+<option value="t-">days ago</option>
+<option value="t">today</option>
+<option value="w">this week</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_updated_on" style="display:none;">
+    
+        <span class="span_values_updated_on"><input class="values_updated_on" id="values_updated_on_1" name="v[updated_on][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_updated_on_1_trigger" src="../../../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_updated_on_1', ifFormat : '%Y-%m-%d', button : 'values_updated_on_1_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_updated_on"><input class="values_updated_on" id="values_updated_on_2" name="v[updated_on][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_updated_on_2_trigger" src="../../../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_updated_on_2', ifFormat : '%Y-%m-%d', button : 'values_updated_on_2_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_updated_on"><input class="values_updated_on" id="v_updated_on_" name="v[updated_on][]" size="3" type="text" /> days</span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('updated_on');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_start_date" class="filter">
+    <td class="field">
+        <input id="cb_start_date" name="f[]" onclick="toggle_filter('start_date');" type="checkbox" value="start_date" />
+        <label for="cb_start_date">Start date</label>
+    </td>
+    <td class="operator">
+        <select id="operators_start_date" name="op[start_date]" onchange="toggle_operator('start_date');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="&lt;t+">in less than</option>
+<option value="&gt;t+">in more than</option>
+<option value="t+">in</option>
+<option value="t">today</option>
+<option value="w">this week</option>
+<option value="&gt;t-">less than days ago</option>
+<option value="&lt;t-">more than days ago</option>
+<option value="t-">days ago</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_start_date" style="display:none;">
+    
+        <span class="span_values_start_date"><input class="values_start_date" id="values_start_date_1" name="v[start_date][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_start_date_1_trigger" src="../../../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_start_date_1', ifFormat : '%Y-%m-%d', button : 'values_start_date_1_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_start_date"><input class="values_start_date" id="values_start_date_2" name="v[start_date][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_start_date_2_trigger" src="../../../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_start_date_2', ifFormat : '%Y-%m-%d', button : 'values_start_date_2_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_start_date"><input class="values_start_date" id="v_start_date_" name="v[start_date][]" size="3" type="text" /> days</span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('start_date');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_due_date" class="filter">
+    <td class="field">
+        <input id="cb_due_date" name="f[]" onclick="toggle_filter('due_date');" type="checkbox" value="due_date" />
+        <label for="cb_due_date">Due date</label>
+    </td>
+    <td class="operator">
+        <select id="operators_due_date" name="op[due_date]" onchange="toggle_operator('due_date');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="&lt;t+">in less than</option>
+<option value="&gt;t+">in more than</option>
+<option value="t+">in</option>
+<option value="t">today</option>
+<option value="w">this week</option>
+<option value="&gt;t-">less than days ago</option>
+<option value="&lt;t-">more than days ago</option>
+<option value="t-">days ago</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_due_date" style="display:none;">
+    
+        <span class="span_values_due_date"><input class="values_due_date" id="values_due_date_1" name="v[due_date][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_due_date_1_trigger" src="../../../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_due_date_1', ifFormat : '%Y-%m-%d', button : 'values_due_date_1_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_due_date"><input class="values_due_date" id="values_due_date_2" name="v[due_date][]" size="10" type="text" /> <img alt="Calendar" class="calendar-trigger" id="values_due_date_2_trigger" src="../../../images/calendar.png%3F1359925542" /><script type="text/javascript">
+//<![CDATA[
+Calendar.setup({inputField : 'values_due_date_2', ifFormat : '%Y-%m-%d', button : 'values_due_date_2_trigger' });
+//]]>
+</script></span>
+        <span class="span_values_due_date"><input class="values_due_date" id="v_due_date_" name="v[due_date][]" size="3" type="text" /> days</span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('due_date');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_subproject_id" class="filter">
+    <td class="field">
+        <input id="cb_subproject_id" name="f[]" onclick="toggle_filter('subproject_id');" type="checkbox" value="subproject_id" />
+        <label for="cb_subproject_id">Subproject</label>
+    </td>
+    <td class="operator">
+        <select id="operators_subproject_id" name="op[subproject_id]" onchange="toggle_operator('subproject_id');"><option value="*">all</option>
+<option value="!*">none</option>
+<option value="=">is</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_subproject_id" style="display:none;">
+    
+        <span class="span_values_subproject_id">
+        	<select class="values_subproject_id" id="values_subproject_id_1" name="v[subproject_id][]"><option value="99">Allow Private Projects Plugin</option></select>
+          <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="toggle_multi_select('values_subproject_id_1');; return false;"><img alt="Bullet_toggle_plus" src="../../../images/bullet_toggle_plus.png%3F1359925542" /></a>
+        </span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('subproject_id');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_estimated_hours" class="filter">
+    <td class="field">
+        <input id="cb_estimated_hours" name="f[]" onclick="toggle_filter('estimated_hours');" type="checkbox" value="estimated_hours" />
+        <label for="cb_estimated_hours">Estimated time</label>
+    </td>
+    <td class="operator">
+        <select id="operators_estimated_hours" name="op[estimated_hours]" onchange="toggle_operator('estimated_hours');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_estimated_hours" style="display:none;">
+    
+        <span class="span_values_estimated_hours"><input class="values_estimated_hours" id="values_estimated_hours_1" name="v[estimated_hours][]" size="6" type="text" /></span>
+        <span class="span_values_estimated_hours"><input class="values_estimated_hours" id="values_estimated_hours_2" name="v[estimated_hours][]" size="6" type="text" /></span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('estimated_hours');</script>
+    </td>
+    </tr>
+
+    
+    <tr style="display:none;" id="tr_done_ratio" class="filter">
+    <td class="field">
+        <input id="cb_done_ratio" name="f[]" onclick="toggle_filter('done_ratio');" type="checkbox" value="done_ratio" />
+        <label for="cb_done_ratio">% Done</label>
+    </td>
+    <td class="operator">
+        <select id="operators_done_ratio" name="op[done_ratio]" onchange="toggle_operator('done_ratio');"><option value="=">is</option>
+<option value="&gt;=">&gt;=</option>
+<option value="&lt;=">&lt;=</option>
+<option value="&gt;&lt;">between</option>
+<option value="!*">none</option>
+<option value="*">all</option></select>
+    </td>
+    <td class="values">    
+    <div id="div_values_done_ratio" style="display:none;">
+    
+        <span class="span_values_done_ratio"><input class="values_done_ratio" id="values_done_ratio_1" name="v[done_ratio][]" size="6" type="text" /></span>
+        <span class="span_values_done_ratio"><input class="values_done_ratio" id="values_done_ratio_2" name="v[done_ratio][]" size="6" type="text" /></span>
+    
+    </div>
+    <script type="text/javascript">toggle_filter('done_ratio');</script>
+    </td>
+    </tr>
+
+</table>
+</td>
+<td class="add-filter">
+<label for="add_filter_select">Add filter</label>
+<select id="add_filter_select" onchange="add_filter();"><option value=""></option>
+<option value="tracker_id">Tracker</option>
+<option value="priority_id">Priority</option>
+<option value="assigned_to_id">Assignee</option>
+<option value="author_id">Author</option>
+<option value="assigned_to_role">Assignee&#x27;s role</option>
+<option value="fixed_version_id">Target version</option>
+<option value="subject">Subject</option>
+<option value="created_on">Created</option>
+<option value="updated_on">Updated</option>
+<option value="start_date">Start date</option>
+<option value="due_date">Due date</option>
+<option value="subproject_id">Subproject</option>
+<option value="estimated_hours">Estimated time</option>
+<option value="done_ratio">% Done</option></select>
+</td>
+</tr>
+</table>
+<input id="f_" name="f[]" type="hidden" value="" />
+
+  </div>
+</fieldset>
+
+<p class="contextual">
+  <a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=2.html" class="icon icon-zoom-in">Zoom in</a>
+  <span class="icon icon-zoom-out">Zoom out</span>
+</p>
+
+<p class="buttons">
+<input id="months" name="months" size="2" type="text" value="6" />
+months from
+<select id="month" name="month">
+<option selected="selected" value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+
+<select id="year" name="year">
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option selected="selected" value="2023">2023</option>
+<option value="2024">2024</option>
+<option value="2025">2025</option>
+<option value="2026">2026</option>
+<option value="2027">2027</option>
+<option value="2028">2028</option>
+</select>
+
+<input id="zoom" name="zoom" type="hidden" value="1" />
+
+<a class="icon icon-checked" href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html#" onclick="$(&quot;query_form&quot;).submit(); return false;">Apply</a>
+<a href="gantt%3Fset_filter=1.html" class="icon icon-reload">Clear</a>
+</p>
+</form>
+
+
+
+
+
+
+
+<table width="100%" style="border:0; border-collapse: collapse;">
+<tr>
+<td style="width:330px; padding:0px;">
+
+<div style="position:relative;height:1832px;width:331px;">
+<div style="right:-2px;width:330px;height:18px;background: #eee;" class="gantt_hdr"></div>
+<div style="right:-2px;width:330px;height:1808px;border-left: 1px solid #c0c0c0;overflow:hidden;" class="gantt_hdr"></div>
+
+<div class="gantt_subjects">
+<div class="project-name" style="position: absolute;top:26px;left:4px;width:326px;"><span class='icon icon-projects project-overdue'><a href="../../ode%3Fjump=overview.html">Open Design Engine</a></span></div><div class="issue-subject" style="position: absolute;top:46px;left:24px;width:306px;" title="Ability to Set Aliases for Module Tab Names"><span class=' icon icon-issue'><a href="../../../issues/135.html" class="issue status-2 priority-1 child">Feature #135</a>: Ability to Set Aliases for Module Tab Names</span></div><div class="issue-subject" style="position: absolute;top:66px;left:24px;width:306px;" title="Change &quot;Issues&quot; to &quot;Tickets&quot;"><span class=' icon icon-issue'><a href="../../../issues/156.html" class="issue status-1 priority-2 child">Feature #156</a>: Change &quot;Issues&quot; to &quot;Tickets&quot;</span></div><div class="issue-subject" style="position: absolute;top:86px;left:24px;width:306px;" title="Allow Users to Accept or Reject Project &quot;Invitations&quot;"><span class=' icon icon-issue'><a href="../../../issues/104.html" class="issue status-1 priority-1">Feature #104</a>: Allow Users to Accept or Reject Project &quot;Invitations&quot;</span></div><div class="issue-subject" style="position: absolute;top:106px;left:24px;width:306px;" title="Organize Projects Page Entries"><span class=' icon icon-issue'><a href="../../../issues/105.html" class="issue status-1 priority-2">Feature #105</a>: Organize Projects Page Entries</span></div><div class="issue-subject" style="position: absolute;top:126px;left:24px;width:306px;" title="Ability to Collapse Subprojects List"><span class=' icon icon-issue'><a href="../../../issues/106.html" class="issue status-1 priority-1">Feature #106</a>: Ability to Collapse Subprojects List</span></div><div class="issue-subject" style="position: absolute;top:146px;left:24px;width:306px;" title="Add Current and All Revisions Deletion of Images"><span class=' icon icon-issue'><a href="../../../issues/112.html" class="issue status-1 priority-2">Feature #112</a>: Add Current and All Revisions Deletion of Images</span></div><div class="issue-subject" style="position: absolute;top:166px;left:24px;width:306px;" title="Live Collaborative Editing"><span class=' icon icon-issue'><a href="../../../issues/132.html" class="issue status-1 priority-2">Feature #132</a>: Live Collaborative Editing</span></div><div class="issue-subject" style="position: absolute;top:186px;left:24px;width:306px;" title="Preview and Edit Capability for News Comments"><span class=' icon icon-issue'><a href="../../../issues/133.html" class="issue status-1 priority-1">Feature #133</a>: Preview and Edit Capability for News Comments</span></div><div class="issue-subject" style="position: absolute;top:206px;left:24px;width:306px;" title="Deactivate Files Module"><span class=' icon icon-issue'><a href="../../../issues/148.html" class="issue status-1 priority-2">Bug #148</a>: Deactivate Files Module</span></div><div class="issue-subject" style="position: absolute;top:226px;left:24px;width:306px;" title="Investigate usage of Redmine's To-Do List plugin"><span class=' icon icon-issue'><a href="../../../issues/149.html" class="issue status-1 priority-2">Bug #149</a>: Investigate usage of Redmine&#x27;s To-Do List plugin</span></div><div class="issue-subject" style="position: absolute;top:246px;left:24px;width:306px;" title="Open ID Integration"><span class=' icon icon-issue'><a href="../../../issues/151.html" class="issue status-1 priority-1">Feature #151</a>: Open ID Integration</span></div><div class="issue-subject" style="position: absolute;top:266px;left:24px;width:306px;" title="Bread Crumb Navigation"><span class=' icon icon-issue'><a href="../../../issues/250.html" class="issue status-1 priority-2">Feature #250</a>: Bread Crumb Navigation</span></div><div class="issue-subject" style="position: absolute;top:286px;left:24px;width:306px;" title="ThingTracker Integration"><span class=' icon icon-issue'><a href="../../../issues/263.html" class="issue status-1 priority-1">Feature #263</a>: ThingTracker Integration</span></div><div class="issue-subject" style="position: absolute;top:306px;left:24px;width:306px;" title="New Project Creation Does Not Require Selection of Software or Documentation Licenses"><span class=' icon icon-issue'><a href="../../../issues/264.html" class="issue status-1 priority-2">Bug #264</a>: New Project Creation Does Not Require Selection of Software or Documentation Licenses</span></div><div class="issue-subject" style="position: absolute;top:326px;left:24px;width:306px;" title="SCM URL in project settings is incorrect"><span class=' icon icon-issue'><a href="../../../issues/265.html" class="issue status-1 priority-3">Bug #265</a>: SCM URL in project settings is incorrect</span></div><div class="issue-subject" style="position: absolute;top:346px;left:24px;width:306px;" title="Upgrade fundraising plugin to include more sites"><span class=' icon icon-issue'><a href="../../../issues/266.html" class="issue status-1 priority-2">Feature #266</a>: Upgrade fundraising plugin to include more sites</span></div><div class="issue-subject" style="position: absolute;top:366px;left:24px;width:306px;" title="Add Companies Plugin"><span class=' icon icon-issue'><a href="../../../issues/267.html" class="issue status-1 priority-2">Feature #267</a>: Add Companies Plugin</span></div><div class="version-name" style="position: absolute;top:386px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../../../versions/4.html">v0.3 - Sustainability Enhancements</a></span></div><div class="issue-subject" style="position: absolute;top:406px;left:44px;width:286px;" title="Modernize ODE theme"><span class=' icon icon-issue'><a href="../../../issues/10.html" class="issue status-1 priority-2 parent">Feature #10</a>: Modernize ODE theme</span></div><div class="issue-subject" style="position: absolute;top:426px;left:64px;width:266px;" title="Add support to showcase &quot;featured projects&quot; on the site homepage"><span class=' icon icon-issue'><a href="../../../issues/14.html" class="issue status-1 priority-2 child">Feature #14</a>: Add support to showcase &quot;featured projects&quot; on the site homepage</span></div><div class="issue-subject" style="position: absolute;top:446px;left:64px;width:266px;" title="Make project homepage more dynamic"><span class=' icon icon-issue'><a href="../../../issues/15.html" class="issue status-1 priority-2 child">Feature #15</a>: Make project homepage more dynamic</span></div><div class="issue-subject" style="position: absolute;top:466px;left:64px;width:266px;" title="Improve dashboard"><span class=' icon icon-issue'><a href="../../../issues/16.html" class="issue status-1 priority-2 child">Feature #16</a>: Improve dashboard</span></div><div class="issue-subject" style="position: absolute;top:486px;left:64px;width:266px;" title="Add tool tips to icons in the web site GUI"><span class=' icon icon-issue'><a href="../../../issues/48.html" class="issue status-1 priority-2 child">Feature #48</a>: Add tool tips to icons in the web site GUI</span></div><div class="issue-subject" style="position: absolute;top:506px;left:44px;width:286px;" title="Research how Redmine uses RMagick"><span class=' icon icon-issue'><a href="../../../issues/36.html" class="issue status-2 priority-2">Support #36</a>: Research how Redmine uses RMagick</span></div><div class="issue-subject" style="position: absolute;top:526px;left:44px;width:286px;" title="Per project web stores"><span class=' icon icon-issue'><a href="../../../issues/42.html" class="issue status-1 priority-2">Feature #42</a>: Per project web stores</span></div><div class="issue-subject" style="position: absolute;top:546px;left:44px;width:286px;" title="Git hosting is not working"><span class=' icon icon-issue'><a href="../../../issues/51.html" class="issue status-1 priority-2">Bug #51</a>: Git hosting is not working</span></div><div class="issue-subject" style="position: absolute;top:566px;left:44px;width:286px;" title="Update embedded image and video rendering to handle browser resizing"><span class=' icon icon-issue'><a href="../../../issues/73.html" class="issue status-1 priority-2">Feature #73</a>: Update embedded image and video rendering to handle browser resizing</span></div><div class="issue-subject" style="position: absolute;top:586px;left:44px;width:286px;" title="Updates to the repository don&amp;#x27;t show up on &quot;Activity&quot; tab automatically"><span class=' icon icon-issue'><a href="../../../issues/102.html" class="issue status-1 priority-2">Bug #102</a>: Updates to the repository don&amp;#x27;t show up on &quot;Activity&quot; tab automatically</span></div><div class="issue-subject" style="position: absolute;top:606px;left:44px;width:286px;" title="No Notification of Comments on News Items"><span class=' icon icon-issue'><a href="../../../issues/131.html" class="issue status-1 priority-2">Support #131</a>: No Notification of Comments on News Items</span></div><div class="issue-subject" style="position: absolute;top:626px;left:44px;width:286px;" title="Inconsistent visual layout between project tabs"><span class=' icon icon-issue'><a href="../../../issues/195.html" class="issue status-1 priority-2">Bug #195</a>: Inconsistent visual layout between project tabs</span></div><div class="issue-subject" style="position: absolute;top:646px;left:44px;width:286px;" title="For Pay Private Projects"><span class=' icon icon-issue'><a href="../../../issues/260.html" class="issue status-1 priority-2">Feature #260</a>: For Pay Private Projects</span></div><div class="version-name" style="position: absolute;top:666px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../../../versions/3.html">Under consideration</a></span></div><div class="issue-subject" style="position: absolute;top:686px;left:44px;width:286px;" title="Configure installer to use ODE.net&amp;#x27;s settings for defaults"><span class=' icon icon-issue'><a href="../../../issues/18.html" class="issue status-1 priority-2">Feature #18</a>: Configure installer to use ODE.net&amp;#x27;s settings for defaults</span></div><div class="issue-subject" style="position: absolute;top:706px;left:44px;width:286px;" title="Add support for shared &quot;engineering&quot; workflows"><span class=' icon icon-issue'><a href="../../../issues/20.html" class="issue status-1 priority-2">Feature #20</a>: Add support for shared &quot;engineering&quot; workflows</span></div><div class="issue-subject" style="position: absolute;top:726px;left:44px;width:286px;" title="Project assistance Bounty System"><span class=' icon icon-issue'><a href="../../../issues/21.html" class="issue status-1 priority-2">Feature #21</a>: Project assistance Bounty System</span></div><div class="issue-subject" style="position: absolute;top:746px;left:44px;width:286px;" title="Add a &quot;fans&quot; page to projects"><span class=' icon icon-issue'><a href="../../../issues/23.html" class="issue status-1 priority-2">Feature #23</a>: Add a &quot;fans&quot; page to projects</span></div><div class="issue-subject" style="position: absolute;top:766px;left:44px;width:286px;" title="Social networking sites support"><span class=' icon icon-issue'><a href="../../../issues/24.html" class="issue status-1 priority-2">Feature #24</a>: Social networking sites support</span></div><div class="issue-subject" style="position: absolute;top:786px;left:44px;width:286px;" title="Add tagging support to projects and their modules"><span class=' icon icon-issue'><a href="../../../issues/25.html" class="issue status-1 priority-2">Feature #25</a>: Add tagging support to projects and their modules</span></div><div class="issue-subject" style="position: absolute;top:806px;left:44px;width:286px;" title="Native support for Bills of Materials"><span class=' icon icon-issue'><a href="../../../issues/26.html" class="issue status-1 priority-2 parent">Feature #26</a>: Native support for Bills of Materials</span></div><div class="issue-subject" style="position: absolute;top:826px;left:64px;width:266px;" title="Include the ability to embed references to other OSHW projects in BoM module"><span class=' icon icon-issue'><a href="../../../issues/183.html" class="issue status-1 priority-2 child">Feature #183</a>: Include the ability to embed references to other OSHW projects in BoM module</span></div><div class="issue-subject" style="position: absolute;top:846px;left:44px;width:286px;" title="Engineering file management features"><span class=' icon icon-issue'><a href="../../../issues/27.html" class="issue status-1 priority-2">Feature #27</a>: Engineering file management features</span></div><div class="issue-subject" style="position: absolute;top:866px;left:44px;width:286px;" title="Add real-time wiki editing"><span class=' icon icon-issue'><a href="../../../issues/28.html" class="issue status-1 priority-2">Feature #28</a>: Add real-time wiki editing</span></div><div class="issue-subject" style="position: absolute;top:886px;left:44px;width:286px;" title="Add embedded project IRC support"><span class=' icon icon-issue'><a href="../../../issues/29.html" class="issue status-1 priority-2">Feature #29</a>: Add embedded project IRC support</span></div><div class="issue-subject" style="position: absolute;top:906px;left:44px;width:286px;" title="Allow users to request membership in projects"><span class=' icon icon-issue'><a href="../../../issues/33.html" class="issue status-1 priority-2">Feature #33</a>: Allow users to request membership in projects</span></div><div class="issue-subject" style="position: absolute;top:926px;left:44px;width:286px;" title="Visual diffs for graphical file formats"><span class=' icon icon-issue'><a href="../../../issues/37.html" class="issue status-1 priority-2">Feature #37</a>: Visual diffs for graphical file formats</span></div><div class="issue-subject" style="position: absolute;top:946px;left:44px;width:286px;" title="Add license usage stats to a public page "><span class=' icon icon-issue'><a href="../../../issues/45.html" class="issue status-1 priority-2">Feature #45</a>: Add license usage stats to a public page </span></div><div class="issue-subject" style="position: absolute;top:966px;left:44px;width:286px;" title="Save filter settings on Activity tab"><span class=' icon icon-issue'><a href="../../../issues/49.html" class="issue status-1 priority-2">Feature #49</a>: Save filter settings on Activity tab</span></div><div class="issue-subject" style="position: absolute;top:986px;left:44px;width:286px;" title="Publish ODE specific plugins as separate sub-projects with their own repositories"><span class=' icon icon-issue'><a href="../../../issues/91.html" class="issue status-1 priority-2">Support #91</a>: Publish ODE specific plugins as separate sub-projects with their own repositories</span></div><div class="issue-subject" style="position: absolute;top:1006px;left:44px;width:286px;" title="Repository Zip Download"><span class=' icon icon-issue'><a href="../../../issues/113.html" class="issue status-1 priority-2">Feature #113</a>: Repository Zip Download</span></div><div class="issue-subject" style="position: absolute;top:1026px;left:44px;width:286px;" title="Enhanced wiki formatting"><span class=' icon icon-issue'><a href="../../../issues/124.html" class="issue status-1 priority-2">Bug #124</a>: Enhanced wiki formatting</span></div><div class="issue-subject" style="position: absolute;top:1046px;left:44px;width:286px;" title="Add oEmbed wiki macro"><span class=' icon icon-issue'><a href="../../../issues/128.html" class="issue status-1 priority-2">Feature #128</a>: Add oEmbed wiki macro</span></div><div class="issue-subject" style="position: absolute;top:1066px;left:44px;width:286px;" title="Add support for formal PLM process"><span class=' icon icon-issue'><a href="../../../issues/129.html" class="issue status-1 priority-2">Feature #129</a>: Add support for formal PLM process</span></div><div class="issue-subject" style="position: absolute;top:1086px;left:44px;width:286px;" title="Install and begin usage of Redmine CMS Plugin"><span class=' icon icon-issue'><a href="../../../issues/150.html" class="issue status-1 priority-2">Feature #150</a>: Install and begin usage of Redmine CMS Plugin</span></div><div class="issue-subject" style="position: absolute;top:1106px;left:44px;width:286px;" title="Add &quot;Create new page&quot; button to wiki system"><span class=' icon icon-issue'><a href="../../../issues/152.html" class="issue status-1 priority-2">Feature #152</a>: Add &quot;Create new page&quot; button to wiki system</span></div><div class="issue-subject" style="position: absolute;top:1126px;left:44px;width:286px;" title="Add svn style tagging to ODE projects"><span class=' icon icon-issue'><a href="../../../issues/177.html" class="issue status-1 priority-3">Feature #177</a>: Add svn style tagging to ODE projects</span></div><div class="issue-subject" style="position: absolute;top:1146px;left:44px;width:286px;" title="Dozuki Integration"><span class=' icon icon-issue'><a href="../../../issues/179.html" class="issue status-1 priority-2">Feature #179</a>: Dozuki Integration</span></div><div class="issue-subject" style="position: absolute;top:1166px;left:44px;width:286px;" title="Add 3D rendering support to wiki syntax and DMSF file details"><span class=' icon icon-issue'><a href="../../../issues/180.html" class="issue status-1 priority-2">Feature #180</a>: Add 3D rendering support to wiki syntax and DMSF file details</span></div><div class="issue-subject" style="position: absolute;top:1186px;left:44px;width:286px;" title="Slideshare wiki macro"><span class=' icon icon-issue'><a href="../../../issues/181.html" class="issue status-1 priority-2">Feature #181</a>: Slideshare wiki macro</span></div><div class="issue-subject" style="position: absolute;top:1206px;left:44px;width:286px;" title="Add a requirements management system to ODE"><span class=' icon icon-issue'><a href="../../../issues/182.html" class="issue status-1 priority-2">Feature #182</a>: Add a requirements management system to ODE</span></div><div class="issue-subject" style="position: absolute;top:1226px;left:44px;width:286px;" title="Add STL part editor using OpenJsCad"><span class=' icon icon-issue'><a href="../../../issues/184.html" class="issue status-1 priority-2">Feature #184</a>: Add STL part editor using OpenJsCad</span></div><div class="issue-subject" style="position: absolute;top:1246px;left:44px;width:286px;" title="Add video conferencing support"><span class=' icon icon-issue'><a href="../../../issues/185.html" class="issue status-1 priority-2">Feature #185</a>: Add video conferencing support</span></div><div class="issue-subject" style="position: absolute;top:1266px;left:44px;width:286px;" title="Upverter wiki macro"><span class=' icon icon-issue'><a href="../../../issues/186.html" class="issue status-1 priority-2">Feature #186</a>: Upverter wiki macro</span></div><div class="issue-subject" style="position: absolute;top:1286px;left:44px;width:286px;" title="Automatic site submissions to Google for projects and their pages"><span class=' icon icon-issue'><a href="../../../issues/187.html" class="issue status-1 priority-2">Feature #187</a>: Automatic site submissions to Google for projects and their pages</span></div><div class="issue-subject" style="position: absolute;top:1306px;left:44px;width:286px;" title="Create project &quot;Contact us&quot; pages"><span class=' icon icon-issue'><a href="../../../issues/188.html" class="issue status-1 priority-2">Feature #188</a>: Create project &quot;Contact us&quot; pages</span></div><div class="issue-subject" style="position: absolute;top:1326px;left:44px;width:286px;" title="Implement a &quot;karma&quot; system"><span class=' icon icon-issue'><a href="../../../issues/189.html" class="issue status-1 priority-2">Feature #189</a>: Implement a &quot;karma&quot; system</span></div><div class="issue-subject" style="position: absolute;top:1346px;left:44px;width:286px;" title="Shipper tracking wiki macro"><span class=' icon icon-issue'><a href="../../../issues/190.html" class="issue status-1 priority-2">Feature #190</a>: Shipper tracking wiki macro</span></div><div class="issue-subject" style="position: absolute;top:1366px;left:44px;width:286px;" title="Allow Voting For Features"><span class=' icon icon-issue'><a href="../../../issues/191.html" class="issue status-1 priority-1">Feature #191</a>: Allow Voting For Features</span></div><div class="version-name" style="position: absolute;top:1386px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../../../versions/5.html">v0.4 - Wiki Enhancements</a></span></div><div class="issue-subject" style="position: absolute;top:1406px;left:44px;width:286px;" title="Add wiki page templates"><span class=' icon icon-issue'><a href="../../../issues/30.html" class="issue status-1 priority-2">Feature #30</a>: Add wiki page templates</span></div><div class="issue-subject" style="position: absolute;top:1426px;left:44px;width:286px;" title="Add embedded video support to wiki"><span class=' icon icon-issue'><a href="../../../issues/32.html" class="issue status-4 priority-2">Feature #32</a>: Add embedded video support to wiki</span></div><div class="version-name" style="position: absolute;top:1446px;left:24px;width:306px;"><span class='icon icon-package  '><a href="../../../versions/10.html">v0.2.1 - Public Beta Enhancements</a></span></div><div class="issue-subject" style="position: absolute;top:1466px;left:44px;width:286px;" title="Clean up capistrano deploy script"><span class=' icon icon-issue'><a href="../../../issues/92.html" class="issue status-1 priority-2">Bug #92</a>: Clean up capistrano deploy script</span></div><div class="issue-subject" style="position: absolute;top:1486px;left:44px;width:286px;" title="Remove unused and outdated .gem files from vendor/cache"><span class=' icon icon-issue'><a href="../../../issues/122.html" class="issue status-1 priority-1">Bug #122</a>: Remove unused and outdated .gem files from vendor/cache</span></div><div class="issue-subject" style="position: absolute;top:1506px;left:44px;width:286px;" title="Address inconsistent use of http and https in fundraising plugin"><span class=' icon icon-issue'><a href="../../../issues/123.html" class="issue status-4 priority-2">Bug #123</a>: Address inconsistent use of http and https in fundraising plugin</span></div><div class="issue-subject" style="position: absolute;top:1526px;left:44px;width:286px;" title="Migrate ODE source code to match current version of Redmine"><span class=' icon icon-issue'><a href="../../../issues/217.html" class="issue status-1 priority-2 parent">Milestone #217</a>: Migrate ODE source code to match current version of Redmine</span></div>
+</div>
+
+</div>
+</td>
+<td>
+
+<div style="position:relative;height:1832px;overflow:auto;">
+<div style="width:361px;height:18px;background: #eee;" class="gantt_hdr">&nbsp;</div>
+
+	<div style="left:0px;width:61px;height:1808px;" class="gantt_hdr">
+	<a href="gantt%3Fmonth=1&amp;months=6&amp;year=2023&amp;zoom=1.html" title="January 2023">2023-1</a>
+	</div>
+	
+	<div style="left:62px;width:55px;height:1808px;" class="gantt_hdr">
+	<a href="http://opendesignengine.net/projects/ode/issues/gantt?month=2&amp;months=6&amp;year=2023&amp;zoom=1" title="February 2023">2023-2</a>
+	</div>
+	
+	<div style="left:118px;width:61px;height:1808px;" class="gantt_hdr">
+	<a href="http://opendesignengine.net/projects/ode/issues/gantt?month=3&amp;months=6&amp;year=2023&amp;zoom=1" title="March 2023">2023-3</a>
+	</div>
+	
+	<div style="left:180px;width:59px;height:1808px;" class="gantt_hdr">
+	<a href="http://opendesignengine.net/projects/ode/issues/gantt?month=4&amp;months=6&amp;year=2023&amp;zoom=1" title="April 2023">2023-4</a>
+	</div>
+	
+	<div style="left:240px;width:61px;height:1808px;" class="gantt_hdr">
+	<a href="http://opendesignengine.net/projects/ode/issues/gantt?month=5&amp;months=6&amp;year=2023&amp;zoom=1" title="May 2023">2023-5</a>
+	</div>
+	
+	<div style="left:302px;width:59px;height:1808px;" class="gantt_hdr">
+	<a href="http://opendesignengine.net/projects/ode/issues/gantt?month=6&amp;months=6&amp;year=2023&amp;zoom=1" title="June 2023">2023-6</a>
+	</div>
+	
+
+
+
+
+
+<div style='top:26px;left:8px;' class='project task label'>Open Design Engine</div>
+
+
+
+</div>
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td align="left"><a href="http://opendesignengine.net/projects/ode/issues/gantt?month=7&amp;months=6&amp;year=2022&amp;zoom=1">« Previous</a></td>
+<td align="right"><a href="http://opendesignengine.net/projects/ode/issues/gantt?month=7&amp;months=6&amp;year=2023&amp;zoom=1">Next »</a></td>
+</tr>
+</table>
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/ode/issues/gantt.pdf?month=1&amp;months=6&amp;year=2023&amp;zoom=1" class="pdf" rel="nofollow">PDF</a></span>
+	
+</p>
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

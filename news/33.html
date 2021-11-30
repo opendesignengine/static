@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Shepard v1.1 Dev Log (DAQ) 04-03-13 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/shepard-ts.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/shepard-ts/news.html" class="news selected">News</a></li>
+<li><a href="../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/shepard-ts/boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-33-watcher"></span>
+
+
+</div>
+
+<h2>Shepard v1.1 Dev Log (DAQ) 04-03-13</h2>
+
+
+
+<p><em>A log of the work done on the thrust sensor circuitry for Shepard 1.1.</em><br />
+<span class="author">Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-04-03.html" title="04/03/2013 10:47 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>The first thing following from yesterday's work was to determine the maximum voltage coming from the FSR's output at a target weight, so that I could build a voltage divider to feed that voltage to the AREF pin on the Arduino.</p>
+
+
+	<p>I used a multimeter and measured between the output (yellow wire in yesterday's pic) and ground (green) to get this voltage. The absolute max that I was able to get out of the FSR's voltage divider with the variable resistor set to approximately 100k-Ohm was about 4.0 volts (with 5 volt supply from the Arduino). This would represent the maximum force for the FSR, which is 25 lbs (110 N). The maximum thrust that we expect to see from the Estes motors used with Shepard will be 30 N (6.7 lbs). Assuming that we want to calibrate to at least 1.4 times the maximum expected value (good engineering practice), the FSR range needs to be set to max out somewhere around 41.8 N (9.4 lbs).</p>
+
+
+	<p>I don't have the means to add this amount of weight to the sensor right now, but I do have access to a gallon jug and water (about 8.3 to 8.5 lbs). This will give me a relatively known weight to experiment with.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/83?download=" alt="" /></p>
+
+
+	<p>The jug of water's weight gave me about 2.6 volts, and if I work that out based on a max of 4.0 volts at 25 lbs I get:</p>
+
+
+	<p>2.6 volts / x lbs = 4.0 volts / 25 lbs</p>
+
+
+	<p>which becomes:</p>
+
+
+	<p>2.6 volts * 25 lbs = 4.0 volts * x lbs</p>
+
+
+	<p>which becomes:</p>
+
+
+	<p>x = (2.6 volts * 25 lbs) / 4.0 volts</p>
+
+
+	<p>or</p>
+
+
+	<p>x = 16.25 lbs</p>
+
+
+	<p>Obviously, 16.25 lbs a little less than twice the value I should get. It's getting late where I'm at, so I'll figure out what I did wrong tomorrow evening.</p>
+
+
+	<p>For anyone reading this dev log in the meantime, I'd welcome your help. Did I make a simple mistake (very likely at this hour of the night)? Is there a fundamental flaw in the way I've built the circuit? Is there something else going on? Let me know in a comment to this news item.</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-04-04" title="04/04/2013 07:58 am">over 9 years</a> ago</h4>
+    <p>I think I figured out this morning what I did wrong. The maximum rating for FSRs (or the range if given) normally just specifies the range within which the FSR has the most linear response. When I was finding the maximum voltage last night, I was just pressing down on the FSR until it saturated (maxed out). There's a very good chance that the FSR was saturating at a much higher force than 25 lbs, which would have caused the high x value that I saw.</p>
+
+
+	<p>I've got a small C-clamp, and I'll try to find a hanging scale tonight so that I can get a more accurate view of the force the FSR is seeing.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/646" class="icon icon-contributor-license">Rae Norton</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-10-17" title="10/17/2018 06:15 am">about 4 years</a> ago</h4>
+    <p>The apparatus which is used to do an experiment is called the stand or table and the components which help you out are called parts. Here is the device which is used to produce current and <a href="https://www.rushmyessays.org/" class="external">write my paper 4 me</a> help to get detail of this.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/679" class="icon icon-contributor-license">Jeffrey Hollister</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-11-12" title="11/12/2018 12:17 pm">almost 4 years</a> ago</h4>
+    <p>Raise chairs are, normally very snug and chic, recliners which have a motorized base that raises and lowers at a gradual and regular tempo. This rising base makes it a lot simpler for somebody who's mobility challenged to return to a standing place with out outdoors help and will also be used to offer a managed sitting expertise.<a href="http://opendesignengine.net/projects/shepard-ts/wiki/Smartelectricscooterscom" class="wiki-page new">smartelectricscooters.com</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/679" class="icon icon-contributor-license">Jeffrey Hollister</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-11-16" title="11/16/2018 08:04 am">almost 4 years</a> ago</h4>
+    <p>Awesome Article.<a href="https://smartelectricscooters.com/best-razor-electric-scooter/" class="external">.</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/1356" class="icon icon-contributor-license">Caroline Flack</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2019-09-17" title="09/17/2019 11:08 am">about 3 years</a> ago</h4>
+    <p>This meter is best for voltage calculations. I have read reviews regarding it at <a href="https://www.dissertationhelpdeal.co.uk/buy-dissertation/" class="external">Buy Dissertation</a> It is really authentic and there no risk in using it.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/33">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

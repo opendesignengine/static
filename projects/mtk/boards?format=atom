@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mathematics Tool Kit: Discussion</title>
+  <link rel="self" href="http://opendesignengine.net/projects/mtk/boards?format=atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/mtk/boards"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2016-09-04T10:13:16+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Discussion: Great news from Ipython-Land (actually Jupyter-Land)</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1209"/>
+    <id>http://opendesignengine.net/boards/49/topics/1209</id>
+    <updated>2016-09-04T10:13:16+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Check this link Jeremy sent me:&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/"&gt;http://blog.jupyter.org/2016/07/14/jupyter-lab-alpha/&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Look familar?  Check out the wiki landing page, because it should look familar.&lt;/p&gt;
+
+
+	&lt;p&gt;These upgrades should take a good chunk of work off our plate for MTK. But there are a couple of things I still want to see in MTK that are not discussed in the blog post.&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;I would like to see MTK be an application, managing the server process and giving me a web container for notebooks other than my already busy browser&lt;/li&gt;
+		&lt;li&gt;I still want to see the Python libraries we use included in MTK&lt;/li&gt;
+		&lt;li&gt;I want to see a focus on easy generation of professional looking PDFs&lt;/li&gt;
+		&lt;li&gt;There are also a number of Jupyter plugins we use and those need to be in MTK&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;Still, packing things up is way better than extending core functionality.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: Working on @CSS blocker about dealing with library paths in MTK</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1098"/>
+    <id>http://opendesignengine.net/boards/49/topics/1098</id>
+    <updated>2015-11-14T15:00:02+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;So, Chris is working on YVN-10 (Create unit tests for the PressureVessel class and integrate them into its MTK document as the harness for the reported test results).  As part of that work he has been reorganizing the Yavin project directory into something that looks like this:&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Yavin/
+	&lt;ul&gt;
+	&lt;li&gt;lib/
+	&lt;ul&gt;
+	&lt;li&gt;chamber/
+	&lt;ul&gt;
+	&lt;li&gt;pressure_vessel_calcs.py &lt;em&gt;the Yavin module used to size the chamber's wall thickness&lt;/em&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;documentation/
+	&lt;ul&gt;
+	&lt;li&gt;&lt;em&gt;mtk notebook files&lt;/em&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;tests/
+	&lt;ul&gt;
+	&lt;li&gt;chamber/
+	&lt;ul&gt;
+	&lt;li&gt;pressure_vessel_test_case_dataset.py &lt;em&gt;data set for pressure vessel test cases and documentation&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;test_math.py &lt;em&gt;unit tests for pressure vessel calcs class&lt;/em&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;So, why and I talking about this over in MTK.  Well, this new structure highlights a problem in MTK, namely when Chris goes to import the pressure vessel calcs class (or anything else from parallel directories) into the notebook(s) in the documentation directory, he gets import errors.  This is blocking his progress.  At this week's &lt;a href="https://docs.google.com/document/d/12IaGAevWIR3fT3i9XwbwAlBaHHwZhA_NNbwodv9a4iQ/pub" class="external"&gt;#EngineerSpeak hangout&lt;/a&gt; I agreed to help Chris look for some ways to get around this issue.&lt;/p&gt;
+
+
+	&lt;p&gt;At the heart of this block is the fact that Jupyter notebooks each get their own IPython kernel running as its own process with its current working directory equal to the notebook's directory.  If you want to import libraries from the notebook directory or one of its sub-directories, everything works great.  But, if you want to import from a parent or sibling directory you are out of luck.  After poking around how libraries are searched for in Python, I found &lt;a href="http://stackoverflow.com/questions/4383571/importing-files-from-different-folder-in-python" class="external"&gt;this little gem&lt;/a&gt;.  So, I know we can easily add a directory to the search path, we just need to choose one and then have a reliable way to tell the notebook to use it.&lt;/p&gt;
+
+
+	&lt;p&gt;In terms of choosing one, I think the top level project directory (Yavin/ in the example we are working with) makes the most sense.  Now, as for finding it, I am thinking we borrow from the library search process in Python, and require a file be placed in this directory (say &lt;code&gt;__mtk_project_root__.py&lt;/code&gt; which we can later use to contain project specific notebook initialization commands) to identify it as the top level project directory.  Then we just need to include some initialization code which is run for each notebook kernel that searches up its directory structure for this file and then adds the located directory to the Python sys.path.&lt;/p&gt;
+
+
+	&lt;p&gt;I tested out this idea today with some inline code in a couple of notebooks (see below).  The code is clearly just draft code (it should use directory objects instead of strings, it should be bullet proofed for when the &lt;code&gt;__mtk_project_root__.py&lt;/code&gt; is not found, etc).  But, in a test environment, it proved the technique works for a few different directory structures, including one like Chris' example.&lt;/p&gt;
+
+
+&lt;pre&gt;
+import os, sys
+
+PROJECT_ROOT_FILE = '__mtk_project_root__.py'
+searchPath = ''
+cwd = os.getcwd()
+
+while (not os.path.isfile(cwd + '/' + searchPath + PROJECT_ROOT_FILE)):
+    searchPath = searchPath + "../" 
+
+libPath = cwd + '/' + searchPath
+sys.path.insert(0, libPath)
+&lt;/pre&gt;
+
+	&lt;p&gt;So, the question becomes how to make sure this gets run every time a new notebook is started.  Well, IPython has a configuration option called &lt;a href="http://ipython.readthedocs.org/en/stable/interactive/tutorial.html?highlight=startup" class="external"&gt;startup files&lt;/a&gt; (scroll down toward the end of the page).  I think we could easily insert an improved version of the code above into a startup script and be good to go (plus later source the script after we find it to get project custom settings).&lt;/p&gt;
+
+
+	&lt;p&gt;The last thing this made me think about was IPython configurations.  I wonder if we should start planning on setting up and shipping an MTK configuration (for stuff like this, initializing Pint, ensuring our set of notebook extensions are loaded, etc).  The idea would be when you launch the MTK GUI, it would set its IPython to use the MTK configuration so we have what we need, but don't clobber IPython for other uses.  I will have to do some more research on configurations and see what all we can really do with them.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Updating MTK architecture documentation</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1081?r=1091#message-1091"/>
+    <id>http://opendesignengine.net/boards/49/topics/1081?r=1091#message-1091</id>
+    <updated>2015-10-31T13:28:37+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Here is an open source SysML tool to look at when generating new block diagrams - &lt;a class="external" href="https://eclipse.org/papyrus/"&gt;https://eclipse.org/papyrus/&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Spyder and IPython Notebooks</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1088?r=1090#message-1090"/>
+    <id>http://opendesignengine.net/boards/49/topics/1088?r=1090#message-1090</id>
+    <updated>2015-10-30T08:32:10+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;That is very exciting news.  Thanks for checking this out.  I think we should probably follow up with them sooner rather than later.  Try to align our efforts (I added several PBIs about this concept during the planning for the last sprint).&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Spyder and IPython Notebooks</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1088?r=1089#message-1089"/>
+    <id>http://opendesignengine.net/boards/49/topics/1088?r=1089#message-1089</id>
+    <updated>2015-10-30T08:28:42+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Oh, and here's the link to Spyder's Github repo. They don't use Bitbucket anymore.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://github.com/spyder-ide"&gt;https://github.com/spyder-ide&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: Spyder and IPython Notebooks</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1088"/>
+    <id>http://opendesignengine.net/boards/49/topics/1088</id>
+    <updated>2015-10-30T08:27:51+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We already knew this, but we're not the only ones wanting this integration. When we get to the point of being ready to start on this &lt;acronym title="s"&gt;PBI&lt;/acronym&gt;, we should contact the Spyder team and offer our resources.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://groups.google.com/forum/#!topic/spyderlib/s8utNNakOSs"&gt;https://groups.google.com/forum/#!topic/spyderlib/s8utNNakOSs&lt;/a&gt; (last reply)&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Issues with the python-markdown Jupyter Notebook extension</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1085?r=1087#message-1087"/>
+    <id>http://opendesignengine.net/boards/49/topics/1085?r=1087#message-1087</id>
+    <updated>2015-10-28T16:36:31+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;To give an update, I just submitted an issue on the GutHub project &lt;a href="https://github.com/ipython-contrib/IPython-notebook-extensions/issues/382" class="external"&gt;here&lt;/a&gt; . The ticket explains a little bit of why I didn't do this sooner: I started to have difficulties reproducing it. I was able to again though, and noted as such in the ticket. The ticket also references a change that I made to get around the issue.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: Issues with the python-markdown Jupyter Notebook extension</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1085"/>
+    <id>http://opendesignengine.net/boards/49/topics/1085</id>
+    <updated>2015-10-22T22:33:48+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We've been encountering issues with the python-markdown extension for Jupyter notebook. The easiest way to reproduce the issue appears to be to create a notebook that uses python markdown, and then restart the kernel or reload the page. When the kernel is restarted / reloaded, executing cells with python markdown in them throws an error due to thiscell.metadata.variables being undefined. As a solution, I added the following lines of code after line 96 of main.js in python-markdown:&lt;br /&gt;&lt;pre&gt;
+if (typeof thiscell.metadata.variables === "undefined") {
+  thiscell.metadata.variables = {};
+}
+&lt;/pre&gt;&lt;br /&gt;I plan on posting on the project on GitHub to see what they have to say about it.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Updating MTK architecture documentation</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1081?r=1084#message-1084"/>
+    <id>http://opendesignengine.net/boards/49/topics/1081?r=1084#message-1084</id>
+    <updated>2015-10-22T19:58:47+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;OK, here goes another round of brain dumping.  This reply is about identifying the functions and implementing elements that go into making MTK (under the new implementation decision to use IPython and friends).  &lt;strong&gt;Bold&lt;/strong&gt; elements are functions, and &lt;em&gt;Italic&lt;/em&gt; elements are implementing elements.&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Provide a common platform for implementing and documenting engineering math&lt;/strong&gt; - &lt;em&gt;MTK&lt;/em&gt;
+	&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Enable the development of engineering math&lt;/strong&gt; - &lt;em&gt;IPython runtime hosted in Spyder IDE&lt;/em&gt;
+	&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Support calculations of physical quantities by supporting units in mathematical calculations&lt;/strong&gt; - &lt;em&gt;Pint units library&lt;/em&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Enable the documentation of engineering math&lt;/strong&gt; - &lt;em&gt;Customized Jupyter notebooks hosted in Spyder IDE&lt;/em&gt;  
+	&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Support easy movement between narrative and mathematical expression producing professional PDFs&lt;/strong&gt; - &lt;em&gt;Stock Jupyter notebooks&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Support editing documentation in IDE environment&lt;/strong&gt; - &lt;em&gt;Spyder extension to display web content displaying Jupyter notebooks&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Support displaying formatted code inline in documentation&lt;/strong&gt; - &lt;em&gt;Custom Jupyter notebook magic to implement formatted text output from source file&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Support easy plotting of engineering data&lt;/strong&gt; - &lt;em&gt;&amp;lt;insert Jupyter plotting library here&amp;gt;&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Support inclusion of calculation results inline with narrative sections&lt;/strong&gt; - &lt;em&gt;Jupyter Python Markdown notebook extension&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Support "hidden" calculations to suppress repetitive calculations from exported reports without removing them from the documentation source&lt;/strong&gt; - &lt;em&gt;Jupyter Code Folding notebook extension&lt;/em&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Support displaying tables of engineering data, including units&lt;/strong&gt; - &lt;em&gt;&amp;lt;probably from Pandas support in IPython/Jupyter&amp;gt;&lt;/em&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Updating MTK architecture documentation</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1081?r=1083#message-1083"/>
+    <id>http://opendesignengine.net/boards/49/topics/1081?r=1083#message-1083</id>
+    <updated>2015-10-20T22:47:05+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Yesterday I talked about how Mach 30's OSHW documentation ground rules help shape how we should go about doing engineering math. &#160;Tonight I want to talk about how we could break up the tasks discussed last night to be done by different volunteers to distribute the work and to enable remote collaboration by a team of contributors that results in high quality, well tested, and well documented engineering math in reusable modules.&lt;/p&gt;
+
+
+	&lt;p&gt;I will do this by telling a little story (some may recognize this as a CONOPS or CONcept of OPerations). &#160;Let me begin by setting the scene. &#160;Let's say Mach 30 needs to do engineering analysis (aka math) on ballistic trajectories for a sub-orbital test vehicle (the rocket science equivalent to throwing a ball, very high). Engineer Isaac knows all of the physics and math involved to predict the vehicle's flight, but he is not comfortable coding it up. Fortunately, Mach 30 also has Programmer Ada who rocks at writing Python and can easily translate math to code. &#160;&lt;/p&gt;
+
+
+	&lt;p&gt;So, they decide to team up on developing Mach 30's ballistic analysis. Isaac starts a new MTK project and writes a short intro covering why we need this new analysis, and then spends most of his time researching and writing down (aka he documents before they act):&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;the equations we need to use for this analysis&lt;/li&gt;
+		&lt;li&gt;why these are the right equations&lt;/li&gt;
+		&lt;li&gt;how to use them, with an example&lt;/li&gt;
+		&lt;li&gt;some test cases (inputs and expected outputs)&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;p&gt;This work is in Isaac's wheelhouse. He is able to knock it out quickly and easily. &#160;Best of all this work is fun for him. &#160;When he is done he easily shares this work with Ada since they are using a common platform for their contributions to the project.&lt;/p&gt;
+
+
+	&lt;p&gt;Ada takes over to design and implement the Python class that will perform the calculations Isaac specified. As she develops her code in MTK, she references and expands the documentation, which is open in a panel next to her code for easy access. &#160;She adds a section showing how different parts of her code compute the results of the equations and how they do so with the correct data and in the correct order (documenting as she acts). &#160;Ada then writes up the test cases in a test suite and includes the results of those test cases in the documentation (a kind of documenting after she acts). &#160;&lt;/p&gt;
+
+
+	&lt;p&gt;Notice how the only documentation Ada is writing directly relates to her code and just explains how it works in relation to the material Isaac provided. Everything else Ada is doing involves writing a key Python library for Mach 30. &#160;Even the test cases are easier to write because they are based on engineering research from Isaac. This is a productive and enjoyable contribution for Ada involving a minimum of fuss reviewing and writing documentation.&lt;/p&gt;
+
+
+	&lt;p&gt;Isaac then takes a look at the updated MTK project's documentation, instead of having to review each line of source code. &#160;Isaac pays special attention to the implementation details ("hmm, yes that code excerpt does compute the value for equation 3") and the test results which could include tables and figures ("yup, that's the right plot"). If he has questions, he can get on a hangout to review things with Ada. When they are about done, Isaac writes up a short conclusion and abstract wrapping up the documentation (one last bit of documenting after they act).&#160;&lt;/p&gt;
+
+
+	&lt;p&gt;The jointly created documentation could be shared inside and outside Mach 30 for peer review and the Python class would be ready for use after addressing any comments from the peer review. Of course, those comments and updates would be handled in MTK as well.&#160;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Updating MTK architecture documentation</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1081?r=1082#message-1082"/>
+    <id>http://opendesignengine.net/boards/49/topics/1081?r=1082#message-1082</id>
+    <updated>2015-10-19T22:11:06+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The first set of topics I want to discuss relate to why Mach 30 needs MTK. At the most basic level, we need MTK so we can do math (specifically engineering math). But, it is not enough to just do the math, we need to be able to document it (both to ensure we meet our standards for OSHW and to support quality peer review). Ideally we want a single tool that can do the math and document the math to facilitate following our ground rules of OSHW documentation.&#160;&lt;/p&gt;
+
+
+	&lt;ol&gt;
+	&lt;li&gt;&lt;strong&gt;Document before you act&lt;/strong&gt; - With engineering math, this means doing things like finding the correct mathematical models, identifying the key equations from those models, and demonstrating why the selected models are the correct ones to use. This involves writing narratives and the equations covering the items above and citing sources used to arrive at the selected equations. This phase should also identify test cases for later verification efforts.&#160;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Document as you act&lt;/strong&gt; - In engineering math, a critical part of "as you act" is coding up the equations from the mathematical models, preferably into reusable modules (functions, classes, etc). When I am writing up rigorous verification of my engineering math, I like to provide commentary on the critical sections of the code, showing how specific lines of code implement the required equations or methodologies (such as solver algorithms). Being able to easily switch between the code I am writing and this kind of documentation in the same tool would be a huge productivity boost, making it easier to follow this ground rule.&#160;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Document after you act&lt;/strong&gt; - Once the engineering math has been implemented, it needs to be tested. The test cases need to be run, the results should be verified and interpreted visually with plots and tables and with narrative commentary to prove to readers that the code is ready to be used.&#160;&lt;/li&gt;
+	&lt;/ol&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: Updating MTK architecture documentation</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1081"/>
+    <id>http://opendesignengine.net/boards/49/topics/1081</id>
+    <updated>2015-10-19T21:45:19+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This thread is a work area for updates to our background and architecture materials for MTK. &#160;I have two objectives with these updates:&lt;/p&gt;
+
+
+	&lt;ol&gt;
+	&lt;li&gt;Migrate implementation details from Sage+LaTeX to IPython+Jupyter+Spyder&lt;/li&gt;
+		&lt;li&gt;Fill in more details about the architecture based on what we have learned from our development so far&lt;/li&gt;
+	&lt;/ol&gt;
+
+
+	&lt;p&gt;I will be adding details in a series of replies to this post, then gathering up the material into updates on the wiki pages. Please feel free to post questions in the thread. And fair warning, these posts may come out slightly stream of consciousness.&#160;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: MTK Installer</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1010?r=1080#message-1080"/>
+    <id>http://opendesignengine.net/boards/49/topics/1010?r=1080#message-1080</id>
+    <updated>2015-10-16T10:44:35+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;So, the Linux installer script works and the nbextensions load fine. However, when I try to open and execute the sample notebook we've been using, I get an error in the browser console that seems to related to the notebook version (3.x). The error is similar to what J and I experienced in the #ES Hangout last night. If I create a blank notebook with Jupyter 4.x and copy the code and markdown from the 3.x notebook into it, everything executes correctly. When I view the meta data for the old notebook, it shows that it is indeed version 3.x. I'm not sure if there's an easy way to upgrade notebooks from 3.x to 4.x.&lt;/p&gt;
+
+
+	&lt;p&gt;The error I get with the 3.x notebook.&lt;/p&gt;
+
+
+&lt;pre&gt;
+SyntaxError: invalid property id
+&lt;/pre&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: RE: Experimenting with IPython</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/949?r=1079#message-1079"/>
+    <id>http://opendesignengine.net/boards/49/topics/949?r=1079#message-1079</id>
+    <updated>2015-10-15T22:29:23+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Here's an updated notebook with the new nbexternsion load method from above done correctly for the installer and Jupyter 4.0.4.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Discussion: Working on YVN-10 (hooking up unit tests to MTK docs)</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/49/topics/1077"/>
+    <id>http://opendesignengine.net/boards/49/topics/1077</id>
+    <updated>2015-10-11T09:25:30+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Dumping useful info about the test case we are using so Chris has it handy.&lt;/p&gt;
+
+
+	&lt;ul&gt;
+	&lt;li&gt;Goal: Reproduce Table 3 in the &lt;a href="http://opendesignengine.net/dmsf_files/482?download=" class="external"&gt;PressureVessel Report&lt;/a&gt; from data generated in the unit tests for the PressureVessel class&lt;/li&gt;
+		&lt;li&gt;Notes:
+	&lt;ul&gt;
+	&lt;li&gt;Table 3 uses metric units, but the source data is in English units, so the unit tests need to run in English units and then tabulate the results in metric&lt;/li&gt;
+		&lt;li&gt;The raw data (in English units) and the commands to convert the results to metric can be found near the end of the &lt;a href="https://opendesignengine.net/projects/yavin-thruster/repository/revisions/18/entry/trunk/chamber/pressure_vessel_doc.tex" class="external"&gt;pressure_vessel_doc.tex&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;Jupyter notebooks have good &lt;a href="http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%201%20-%20Reading%20from%20a%20CSV.ipynb" class="external"&gt;integration with Pandas&lt;/a&gt;, I recommend storing the data generated by the unit tests in a data structure that can then be loaded into a Pandas object for display in the notebook that looks like the table just before Section 1.2 of the linked example&lt;/li&gt;
+	&lt;/ul&gt;&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+</feed>

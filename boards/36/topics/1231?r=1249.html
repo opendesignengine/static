@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Testing out the C.H.I.P. - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-1231-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Testing out the C.H.I.P.</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-11.html" title="01/11/2017 09:16 pm">almost 6 years</a> ago</span></p>
+<div class="wiki">
+<p>So, one of our efforts this year will be to migrate from Arduino-like boards for our controller to something more full featured.  We have discussed the <a href="https://www.raspberrypi.org/products/pi-zero/" class="external">Raspberry Pi Zero</a> and Pocket Computing's <a href="https://getchip.com/pages/chip" class="external">C.H.I.P.</a>.  We are heavily leaning toward the C.H.I.P. (it is open source and Pocket Computing has what looks like an awesome <a href="https://getchip.com/pages/chippro" class="external">developer version</a>).</p>
+
+
+	<p>We already have a couple of Pi Zeros and C.H.I.P.s on hand, so while we work out the details of our 2017 plan, I am going to test a couple of things out on the C.H.I.P.  Specifically, I want to do the following:</p>
+
+
+	<ul>
+	<li>Get comfortable working with C.H.I.P. (boot it up, install additional tools like Node.js, and make it do something basic like blink an LED)<br />This will put me in a position to do real work with the C.H.I.P.</li>
+		<li>Port the test rig over to the C.H.I.P. from a Raspberry Pi 2 (this will involve moving the other electronics to perfboard and getting <a href="http://johnny-five.io/" class="external">Johnny Five</a> working first then getting the test software to run)<br />This will demonstrate we can fully interact with the sensors we have.</li>
+		<li>Get the C.H.I.P working as an HID device over USB using the <a href="https://www.kernel.org/doc/Documentation/usb/gadget_hid.txt" class="external">Linux USB HID gadget driver</a><br />This will demonstrate we can replicate the keyboard input of the v0.3 Holoseat.  Good news is there has already been some chatter about this on the C.H.I.P forums:
+	<ul>
+	<li><a class="external" href="https://bbs.nextthing.co/t/using-usb-otg-to-act-like-a-keyboard/769">https://bbs.nextthing.co/t/using-usb-otg-to-act-like-a-keyboard/769</a></li>
+		<li><a class="external" href="https://bbs.nextthing.co/t/pocket-chip-can-be-use-as-an-usb-hid-device/10025">https://bbs.nextthing.co/t/pocket-chip-can-be-use-as-an-usb-hid-device/10025</a></li>
+	</ul></li>
+	</ul>
+
+
+	<p>As usual, I will track my progress here.  Feel free to follow along or comment.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (21)</h3>
+
+  <div class="message reply" id="message-1232">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1232.html#message-1232">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 01:20 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Today's work will focus on the first set of tasks.  Specifically, I am going to</p>
+
+
+	<ol>
+	<li>Get CHIP booted</li>
+		<li>install additional tools
+	<ol>
+	<li>svn</li>
+		<li>Node.js</li>
+		<li><a href="http://johnny-five.io/" class="external">Johnny-Five</a></li>
+	</ol>
+	</li>
+		<li>Check out the test stand scripts</li>
+		<li>Run a <a href="https://howtonode.org/hello-node" class="external">Hello world Node.js project</a></li>
+		<li>Try and <a href="http://johnny-five.io/examples/" class="external">blink an LED</a></li>
+	</ol>
+
+
+	<p>There are several <a href="https://docs.getchip.com" class="external">CHIP docs</a> that I have been reading in prep for today's work.</p>
+
+
+	<ul>
+	<li><a href="https://docs.getchip.com/dip.html" class="external">DIPS Documentation</a></li>
+		<li><a href="https://docs.getchip.com/dip.html#update-c-h-i-p-to-linux-kernel-4-4" class="external">Update CHIP ti Linux kernel 4.4</a></li>
+		<li><a href="https://docs.getchip.com/chip.html" class="external">CHIP User Guide</a></li>
+	</ul></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1233">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1233.html#message-1233">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 02:01 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>I plan to use the <a href="https://getchip.com/products/hdmi-adapter" class="external">HDMI DIP module</a> to connect to my display.  According to the <a href="https://docs.getchip.com/dip.html" class="external">DIPS documentation</a>, I need to update the CHIP kernel before using the HDMI DIP.  So, my first step today will be to <a href="https://docs.getchip.com/dip.html#update-c-h-i-p-to-linux-kernel-4-4" class="external">update the CHIP</a>.</p>
+
+
+	<ol>
+	<li>Go to <a class="external" href="http://flash.getchip.com/">http://flash.getchip.com/</a> in Chrome</li>
+		<li>Install CHIP Flasher App for Chrome</li>
+		<li>Jumper FEL and GND pins on the CHIP per instructions on CHIP flash webpage</li>
+		<li>Plug in the CHIP to a USB port, the flasher app will detect the CHIP and read its version info</li>
+		<li>Select an OS to flash to the CHIP (I selected GUI 4.4 so I can run the CHIP like a desktop computer)</li>
+		<li>Click <strong>Start Flashing</strong> on the <em>Step 4 Flashing</em> dialog and wait for the flasher app to flash the new OS onto the CHIP</li>
+		<li>Unplug the CHIP from the USB port and then click the <strong>Exit Flasher</strong> button</li>
+	</ol>
+
+
+	<p>Next up is to connect the HDMI DIP and set things up to power up the CHIP.</p>
+
+
+	<ol>
+	<li>Remove jumper from FEL/GND pins</li>
+		<li>Attach the DIP per the <a href="https://docs.getchip.com/dip.html#attaching-dips" class="external">DIP instructions</a></li>
+		<li>Attach USB hub to CHIP and USB keyboard and mouse to the hub</li>
+		<li>Attach monitor with HDMI cable to the CHIP</li>
+		<li>Power up monitor and CHIP</li>
+	</ol>
+
+
+	<p>In theory, this is where the CHIP should boot up to its desktop.  However, instead I am getting "Out of Range" errors on my monitor, followed by the CHIP powering off.  Going to try another display.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1234">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1234.html#message-1234">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 02:19 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>No dice on the second display.  Looking at a <a href="http://www.chip-community.org/index.php/Troubleshooting#Video_DIPs_blank" class="external">troubleshooting wiki page</a> now.  According to this page, the first diagnostic step is to flash with the "no limit" version of the OS (note, this disable the current limiter, and should not be used with direct connections to a laptop).  Next step then is to re-flash with the no-limit OS.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1235">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1235.html#message-1235">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 03:14 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>That did it.  Past today, I think I will switch over to the headless configuration.  But for now I will continue testing.  Next up is following the user guide.</p>
+
+
+	<ol>
+	<li><a href="https://docs.getchip.com/chip.html#settings-and-configuration" class="external">Configure network</a></li>
+		<li>Update apt-get: <code>sudo apt-get update</code> (default password is "chip")</li>
+		<li>Install svn: <code>sudo apt-get install subversion</code></li>
+		<li>Check out test-rig scripts from svn (under ~/ Documents/holoseat/): <code>svn co https://opendesignengine.net/svn/holoseat/trunk/test_rig/test-scripts</code></li>
+		<li>Install Node.js per <a class="external" href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions</a></li>
+		<li>Install npm: <code>sudo apt-get install npm</code></li>
+		<li>Run Node.js hello world examples (per above link)<br />Note - use <code>ip addr show wlan0</code> to find ip address of CHIP (from <a class="external" href="https://bbs.nextthing.co/t/ssh-to-pocket-chip/4694/2">https://bbs.nextthing.co/t/ssh-to-pocket-chip/4694/2</a>)</li>
+	</ol>
+
+
+	<p>This covers everything but hardware integration.  In general, so far, so good.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1236">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1236.html#message-1236">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 04:01 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, moving on to Johnny-Five, <a href="http://johnny-five.io/platform-support/#chip" class="external">CHIP is supported</a>, but it needs a newer install of Node than we just installed (specifically so node will run as <code>node</code> and not <code>nodejs</code>).</p>
+
+
+	<ol>
+	<li>Remove old install of node: <code>sudo apt-get remove nodejs</code></li>
+		<li>Follow the <a href="https://github.com/sandeepmistry/node-chip-io#prerequisites" class="external">Additional Instructions</a> for Johnny-Five on CHIP<br />So, in my rush to test things, I skipped over an error with <code>apt-get update</code>, specifically some hash sum mismatches.  The fix was to edit <code>/etc/apt/sources.list</code> and comment out the backports line, then run <code>sudo apt-get clean</code> and <code>sudo apt-get update</code>.  (I also installed node 7.)  I also ran into out of memory errors during chip-io installation.  Reinstalled chip-io under a session started with <code>sudo bash</code> and with no other software running and it finally worked.</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1237">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1237.html#message-1237">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 04:09 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Here is the first attempt at a Johnny-Five test script (to blick the onboard status LED).</p>
+
+
+<pre>
+var five = require('johnny-five');
+var chipio = require('chip-io');
+
+var board = new five.Board({
+  io: new chipio()
+});
+
+board.on('ready', function() {
+  // do Johnny-Five stuff
+  var statusLed = new chipio.StatusLed();
+  statusLed.blink(500);
+});
+</pre>
+
+	<p>Unfortunately, the display shutdown and I did not see an LED blinking every 1/2 second.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1238">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1238.html#message-1238">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 04:33 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>After rebooting I discovered the chip-io package file (among others: ffi, ref, and ref-struct) was corrupt.  So, I uninstalled and reinstalled chip-io.  When I tried it again, the display still went dark.  I rebooted and managed to get an error on the commend line: cannot open shared object file."  So, two things come to mind here:</p>
+
+
+	<ol>
+	<li>The HDMI DIP must only work for a limited period of time with the current build.  I need to repeat these tests in headless server mode</li>
+		<li>Guessing the shared object it cannot find is the status LED.  Going to try changing the code to use a pin as an LED.</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1239">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1239.html#message-1239">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 04:39 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>I tried just initializing Johnny-Five and writing out to the console, and still no luck.  So, generally productive day, but clearly I need to go back and redo some work to get to the point where Johnny-Five will work.  Next step is reviewing headless setup for CHIP (followed by careful review of my work with Johnny-Five on the original test rig).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1240">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1240.html#message-1240">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 09:38 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, a quick search on Google turned up this <a href="https://www.dexterindustries.com/howto/connect-to-chip-headless-mode/" class="external">tutorial for setting up CHIP as a headless server</a>.  It covers using Putty to connect to the CHIP over the USB serial port and how to set up the wifi over the CLI.  Just what I was looking for.  Since I am on a Mac, I also looked up how to <a href="http://pbxbook.com/other/mac-tty.html" class="external">connect to a device over a serial connection</a>.</p>
+
+
+	<p>With that info in hand, I started today's experiments in headless mode.</p>
+
+
+	<ol>
+	<li>Install <a href="http://pbxbook.com/other/mac-tty.html#minicom" class="external">minicom</a></li>
+		<li>Flash the CHIP with the Headless OS</li>
+		<li>Remove the jumper and reconnect the CHIP to the computer</li>
+		<li>Locate the USB serial port: <code>ls /dev/cu.usb*</code></li>
+		<li>Connect to the CHIP at 9600 baud: <code>screen /dev/xx.usbXXXXX-XXXXXXXX 9600 –L</code></li>
+		<li>Login to the CHIP (default username:password:  chip:chip)</li>
+		<li>Setup the wifi: <code>sudo nmtui</code></li>
+		<li>Shutdown the CHIP: <code>sudo shutdown -h now</code></li>
+		<li>Power up the CHIP off of AC power</li>
+		<li>Connect to the CHIP over ssh: <code>ssh chip@chip.local</code></li>
+	</ol>
+
+
+	<p>These steps got me to the point where I could login and use the CHIP from the cli (much better so far - more responsive and more reliable).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1241">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1241.html#message-1241">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 09:41 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>As the last step for the night, I am implementing the fix for apt that I mentioned earlier and then running <code>sudo apt-get update</code>.</p>
+
+
+<blockquote>
+
+	<p>So, in my rush to test things, I skipped over an error with <code>apt-get update</code>, specifically some hash sum mismatches.  The fix was to edit <code>/etc/apt/sources.list</code> and comment out the backports line, then run <code>sudo apt-get clean</code> and <code>sudo apt-get update</code>.  (I also installed node 7.)  I also ran into out of memory errors during chip-io installation.  Reinstalled chip-io under a session started with <code>sudo bash</code> and with no other software running and it finally worked.</p>
+
+
+</blockquote></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1242">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1242.html#message-1242">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-15.html" title="01/15/2017 09:47 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Now that I am doing all of the testing/development over the network, I think my next step will be to put samba (or something similar) on the CHIP so I can code in a local copy of <a href="https://atom.io/" class="external">Atom</a>.  Back to research.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1243">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1243.html#message-1243">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-16.html" title="01/16/2017 08:56 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, two thoughts for tonight.</p>
+
+
+	<ol>
+	<li>As I continue with testing the CHIP, I can see one of the products of this set of experiments will be a wiki page covering how to initialize a new CHIP for Holoseat development (starting with flashing the correct OS and going all the way through setting up all required development software).</li>
+		<li>The next step is to set up Samba (<a href="https://bbs.nextthing.co/t/chip-project-is-complete-smb-network-file-server-with-usb-1t-drive/1499" class="external">someone else has indeed gotten Samba running on CHIP</a> and I found a <a href="https://goo.gl/mnFQHq" class="external">very quick tutorial for Samba on Ubuntu</a> to try out)</li>
+	</ol>
+
+
+	<p>Setting up Samba</p>
+
+
+	<ol>
+	<li>Install Samba: <code>sudo apt-get install samba</code></li>
+		<li>Set password for Samba user <em>chip</em> (to match the main user for ease of use; use the same password as the chip user): <code>sudo smbpasswd -a chip</code></li>
+		<li>Create <em>dev</em> directory to store our development work: <code>mkdir /home/chip/dev</code></li>
+		<li>Make a back up of the Samba conf file: <code>sudo cp /etc/samba/smb.conf ~</code></li>
+		<li>Open the Samba conf file for editing in nano: <code>sudo nano /etc/samba/smb.conf</code></li>
+		<li>Add the configuration block below to the end of the Samba conf file</li>
+		<li>Save the Samba conf file and exit nanor</li>
+		<li>Restart Samba: <code>sudo service smbd restart</code></li>
+		<li>Verify the Samba conf file syntax: <code>testparm</code></li>
+		<li>Test the new <em>dev</em> share from another machine by trying to connect to \\chip.local\dev\ as the <em>chip</em> user</li>
+	</ol>
+
+
+<pre>
+[dev]
+path = /home/chip/dev
+valid users = chip
+read only = no
+</pre>
+
+	<p>That all seems to work (I can add files directly on the CHIP over ssh to the <em>dev</em> share and delete them over Samba and vice versa.  Note, do not get confused and try connecting to the share named <em>chip</em>.  This is a default share that you will not have full access to over Samba (in my testing it was read-only for some reason).  To keep things simple, we will use the <em>dev</em> share to host development code.</p>
+
+
+	<p>Next up, installing svn and node, then reviewing my notes about how to get node + johnny-five running based on my work with the test rig last year.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1244">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1244.html#message-1244">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-23.html" title="01/23/2017 08:51 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>OK, so tonight we are ready to get node running.  But first, I will be revisiting the <a href="https://opendesignengine.net/boards/36/topics/901#Install-Nodejs" class="external">work I did on the test rig</a>.</p>
+
+
+	<ol>
+	<li>Install svn: <code>sudo apt-get install subversion</code></li>
+		<li>Install Node.js using the <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions" class="external">official instructions</a> (making sure to use v6.x and not 7.x) with the following three commands
+	<ol>
+	<li><code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code></li>
+		<li><code>sudo apt-get install -y nodejs</code></li>
+		<li><code>sudo apt-get install -y build-essential</code></li>
+	</ol>
+	</li>
+		<li>Set up npm per <a href="https://devcenter.heroku.com/articles/node-best-practices" class="external">Best Practices for Node.js Development</a>
+	<ol>
+	<li><code>npm config set save=true</code></li>
+		<li><code>npm config set save-exact=true</code></li>
+	</ol></li>
+	</ol>
+
+
+	<p>Now things should be ready to start working with the test rig files to demo Johnny-Five.</p>
+
+
+	<ol>
+	<li>Check out test-rig scripts from svn (under /home/chip/dev/): <code>svn co https://opendesignengine.net/svn/holoseat/trunk/test_rig/test-scripts</code></li>
+		<li>Edit package.json and remove raspi-io (this is the library for the Raspberry Pi)</li>
+		<li>Run <code>npm install</code> in /home/chip/dev/test-scripts/ to install everything but chip-io</li>
+		<li>Add chip user to i2c group: <code>sudo adduser chip i2c</code><br />When I ran this command, it reported chip was already a member of the i2c group</li>
+		<li>Install chip-io: <code>npm install chip-io</code><br />This will also add chip-io to the package.json file</li>
+	</ol>
+
+
+	<p>At this point everything should be installed.  Going to post this much then look at running an example or two.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1245">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1245.html#message-1245">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-23.html" title="01/23/2017 09:43 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>The first test will be to blink an LED.  I have wired up a 220 Ohm resistor to positive leg of an LED with an alligator jumper.  I then plugged the resistor into pin XIO-P0 of the CHIP and the negative leg of the LED into ground on the CHIP.  I then modified the previous blink.js to match the <a href="https://github.com/sandeepmistry/node-chip-io/blob/master/examples/led.js" class="external">chip-io LED example</a></p>
+
+
+<pre>
+// "johnny five hello world, aka blink an LED
+var chipio = require('chip-io');
+var five = require('johnny-five');
+var board = new five.Board({
+  io: new chipio()
+});
+
+board.on('ready', function() {
+  // Create an Led on XIO-P0 pin
+  // and strobe it on/off
+  var led = new five.Led('XIO-P0');
+  led.strobe(500);
+});
+</pre>
+
+	<p>Finally, I tried running it with the command <code>node blink.js</code>.   Everything looks like it is running fine, but there is no blinking on my LED (I confirmed the LED worked by moving the resistor to the +5v pin).  Going to upgrade the versions of Node and Johhny-Five in the package file and upgrade my install to see if that resolves the issue.  No dice.  Interestingly enough, I think I got the <a href="https://github.com/sandeepmistry/node-chip-io/blob/master/examples/blink-status.js" class="external">blink status</a> demo working.  So the problem must be with writing to the pins.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1246">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1246.html#message-1246">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-24.html" title="01/24/2017 09:56 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, I have been continuing my experiments with trying to get the LED blink demo working.  To isolate the issue, I am setting Node.js solutions aside and trying a more direct route.  There is a post called <a href="https://www.hackster.io/jefflarkin/blinky-led-with-c-h-i-p-and-bash-18ad59" class="external">Blinky LED with C.H.I.P. and BASH</a> that looked very promising.  It blinks the LED with direct filesystem level calls in BASH.  When I first gave it a try I was getting errors like <code>sh: line 0: echo: write error: Invalid argument</code>.  A little digging indicated the new OS release for the CHIP (4.4.x) broke the original scripts and a simple change of the initial address for the ports from 408 to 1016 should fix things.</p>
+
+
+	<p>That change did eliminate the error message, but it did not make things work.  Thanks to some additional searching by Bryan, we have learned the correct replacement value is 1013, not 1016.  When I account for this I am able to get the LED to light up.  But, that only works when I plug the LED in "backwards" and treat the pin as ground.  The XIO pins on the CHIP apparently don't have the juice to light the LED.</p>
+
+
+	<p>So, we have learned two things from this experiment:</p>
+
+
+	<ul>
+	<li>the XIO pins are working on the CHIP</li>
+		<li>the XIO pins cannot drive an LED directly</li>
+	</ul>
+
+
+	<p>Next test is to try runnign blink.js again with the LED plugged in "backwards" (that is the long leg in 3.3v pin and the short leg in the XIO pin).</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1247">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1247.html#message-1247">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-24.html" title="01/24/2017 10:11 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Success from Node.js!!!  Using the "backward" wiring for the LED, the blink.js script works.  Now, I would prefer to wire things up closer to what I am used to in Arduino-land.  A little more googlng gives us <a href="https://bbs.nextthing.co/t/leds-with-gpio/1802/17" class="external">this post</a> on the CHIP forums.  Apparently the XIO pins are a little different than I am used to, but it sounds like the CSID pins are more what I am expecting to see.</p>
+
+
+	<p>According to the chip-io docs I should be able to control these, they just need me to run the script as root.  So, going back to a normal wiring for the blink example (resistor > long leg of LED and short leg of LED > GND using CSID0.  And that works!!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1248">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1248.html#message-1248">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-24.html" title="01/24/2017 10:30 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, now that we have output working, the next question is how to get input working.  And here we run into a temporary snag.  The IO pins (XIO and CSID) are "3.3V tolerant for input" - <a href="http://www.chip-community.org/index.php/GPIO_Info#Electrical_Characteristics" class="external">CHIP Wiki - GPIO Info: Electrical Characteristics</a>.  Of course, this doc still shows the address base for the XIO pins as 1016 for OS v4.4.x, but still the input voltage is not one of those things that changes.  A little more reading shows that the <a href="http://www.chip-community.org/index.php/GPIO_Info#Introduction" class="external">Introduction</a> makes it very clear the GPIO pins are 3.3V only for input.</p>
+
+
+	<p>So, before we explore input, we need to source replacement sensors with the same sensitivity but running at 3.3V.  Back to the BoM.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1249">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1249.html#message-1249">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-24.html" title="01/24/2017 10:44 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>Alternately, we could make a <a href="https://learn.sparkfun.com/tutorials/voltage-dividers/all" class="external">Voltage Divider</a> (thanks <a href="https://www.sparkfun.com/" class="external">SparkFun</a>).  I think that will be the next thing I read up on.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1250">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1250.html#message-1250">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-25.html" title="01/25/2017 07:31 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, I went back and looked at the data for the <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto?view=all" class="external">Adafruit Feather Proto</a>.  The Feather is one do the new generation of Arduino-like boards that is <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto?view=all#logic-pins" class="external">3.3v logic only</a> (just like the CHIP.  Yet, in the hours and hours of use of the 5V logic Hall effect sensor, we have not fried the Feather.</p>
+
+
+	<p>So, I thought it was time to get brave.  I took one of the sensor assemblies I have left over from v0.3 development and I wired it up to the CHIP (red wire to 5V, black wire to GND, and green wire to CSID0).  I then updated the hall-read.js file from the test rig to use the chip-io library and set the input pin to CSID0.  I fired up the script under root (<code>sudo node hall-read.js</code>) and it just worked!  I am now quite confident I can port the test rig over to the CHIP.  It is just a matter of time.</p>
+
+
+	<p>This just leaves one open question:  can we get the CHIP to look like an HID keyboard over USB.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1251">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1251.html#message-1251">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-01-25.html" title="01/25/2017 09:03 pm">almost 6 years</a> ago
+  </h4>
+  <div class="wiki"><p>A quick look at the HID Gadget links and it looks like we have to build a custom kernel to make this work on the CHIP.  Bryan is going to take over that part while I move on to non-CHIP related research.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-1252">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1231%3Fr=1252.html#message-1252">RE: Testing out the C.H.I.P.</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2017-02-14.html" title="02/14/2017 09:14 pm">over 5 years</a> ago
+  </h4>
+  <div class="wiki"><p>So, the real question this thread of research was intended to answer was should we go with the CHIP (by way of answering can we make the CHIP work?).  In terms of Node.js, Johnny-Five, and our sensors, the answer is a resounding yes.  And while we need to sort out how we want to emulate HID devices so we can send user input to games, that question is more of a which way should we go (HID Gadget through the Linux Kernel or slave the Atmel chip from the Leonardo style boards to the CHIP controller).  So we know we can make the HID interface work, which added to the test results above means we can make CHIP work.</p>
+
+
+	<p>After discussing these overall results with Bryan, we have decided to go with the CHIP as our new controller for v0.4 and to move the HID testing into separate threads in the forums.  One will be testing the HID Gadget feature by compiling a custom CHIP kernel (Bryan will take point on that) and the other will look at slaving a Leonardo style board with an eye towards simplifying the circuitry if we use this option (these tests will be led by me).</p>
+
+
+	<p>That just leaves one clean up step from this thread - creating  wiki page documenting the CHIP setup I created as part of my research to go from fresh CHIP to ready for Holoseat development.  That is something else I will work on shortly.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-21/21)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1231.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+#,Status,Project,Tracker,Priority,Subject,Assignee,Category,Target version,Author,Start date,Due date,% Done,Estimated time,Parent task,Created,Updated,Description
+92,New,Open Design Engine,Bug,Normal,Clean up capistrano deploy script,"","",v0.2.1 - Public Beta Enhancements,J. Simmons,11/18/2012,"",0,"","",11/18/2012 06:32 pm,12/11/2012 07:45 pm,"During the release over v0.2.0, we noticed that the deploy script has a few bugs in it such as
+
+* not removing old releases
+* sub-optimal handling of config files
+* error with migration logging
+
+We should address these issues and just in general tighten up the deployment script."
+122,New,Open Design Engine,Bug,Low,Remove unused and outdated .gem files from vendor/cache,Kevin Bouwkamp,"",v0.2.1 - Public Beta Enhancements,Kevin Bouwkamp,02/20/2013,"",0,0.2,"",02/20/2013 09:46 pm,02/20/2013 09:46 pm,"While going through a standard ODE development setup, this is printed out at the end of a successful `bundle`:
+
+Removing outdated .gem files from vendor/cache
+  * rails-2.3.11.gem
+  * actionpack-2.3.11.gem
+  * rack-1.1.2.gem
+  * activerecord-2.3.11.gem
+  * actionmailer-2.3.11.gem
+  * actionmailer-2.3.15.gem
+  * activesupport-2.3.15.gem
+  * activeresource-2.3.15.gem
+  * actionpack-2.3.15.gem
+  * rails-2.3.15.gem
+  * activeresource-2.3.11.gem
+  * activesupport-2.3.11.gem
+  * rack-1.1.4.gem
+  * activerecord-2.3.15.gem
+
+This is due to the recent updates to rails and friends. We should remove these files from the repository, just to keep things squeaky clean."
+51,New,Open Design Engine,Bug,Normal,Git hosting is not working,"","",v0.3 - Sustainability Enhancements,J. Simmons,02/13/2012,"",0,"","",02/13/2012 03:58 pm,03/08/2013 10:39 am,"Git repositories can be created, but not accessed.  Need to figure out how to host the git repositories over https like we have done for svn.  Next step is to consult with Bitnami docs and forums about a solutions."
+102,New,Open Design Engine,Bug,Normal,"Updates to the repository don&#x27;t show up on ""Activity"" tab automatically",J. Simmons,"",v0.3 - Sustainability Enhancements,Jack Linke,12/30/2012,"",0,"","",12/30/2012 11:14 pm,03/08/2013 10:40 am,"I have noticed that when I make push changes to my repository, those changes are not reflected on the ""Activity"" tab until I manually visit the ""Repository"" tab in my browser. Then, if I go back to the ""Activity"" tab, the updates to my repository show up.
+"
+148,New,Open Design Engine,Bug,Normal,Deactivate Files Module,Christopher Sigman,"","",Christopher Sigman,07/18/2013,"",0,"","",07/18/2013 09:03 pm,07/18/2013 09:07 pm,"DMSF is a replacement for the files module. As such, the files module should be deactivated.  This can currently be done on a per-project basis, but should be done on a site-wide basis."
+149,New,Open Design Engine,Bug,Normal,Investigate usage of Redmine's To-Do List plugin,"","","",Christopher Sigman,07/20/2013,"",0,"","",07/20/2013 01:55 pm,07/20/2013 01:55 pm,http://www.redmine.org/plugins/to-do-list
+195,New,Open Design Engine,Bug,Normal,Inconsistent visual layout between project tabs,"","",v0.3 - Sustainability Enhancements,J. Simmons,09/23/2013,"",0,"","",09/23/2013 04:02 pm,09/24/2013 07:56 am,"So, I have been thinking about the UI for *ODE*, especially the theme.  And I just noticed something that I think is part of what makes the site just a little bit clunky.  Different tabs in projects either have or do not have the right hand side navigation bar.  Go check out the Overview tab, the Activity tab, the News tab, and the Wiki tab for examples.  You will go back and forth between having a right hand side navigation bar and not having one.  This inconsistency creates a jerkiness.  If every tab had a navigation bar, it would cut down on dramatic changes in rendering (smoothing out the user experience) and create a consistent location for users to look for navigation and additional controls."
+124,New,Open Design Engine,Bug,Normal,Enhanced wiki formatting,"","",Under consideration,J. Simmons,03/22/2013,"",0,"","",03/22/2013 02:39 pm,11/07/2013 03:09 pm,"Would like to be able to change font foreground and background colors (for highliting, etc)."
+123,Feedback,Open Design Engine,Bug,Normal,Address inconsistent use of http and https in fundraising plugin,J. Simmons,"",v0.2.1 - Public Beta Enhancements,J. Simmons,03/08/2013,"",0,"","",03/08/2013 10:46 am,06/12/2014 09:33 pm,"Some of the widgets that the fundraising plugin supports try to use dynamic calls to determine if they should use http vs https for the protocol when including content from third party sites on *ODE*.  Other widgets use the string ""https"".  We need to use a consistent (and working) implementation for including content from third party sites."
+264,New,Open Design Engine,Bug,Normal,New Project Creation Does Not Require Selection of Software or Documentation Licenses,Christopher Sigman,"","",Jeremy Wright,08/19/2014,"",0,"","",08/19/2014 11:05 am,08/19/2014 11:05 am,"If you select the hardware license, but not other licenses, the project is still created. I think it should at least stop you if you haven't selected a documentation license."
+265,New,Open Design Engine,Bug,High,SCM URL in project settings is incorrect,J. Simmons,"","",Christopher Sigman,09/03/2014,"",0,"","",09/03/2014 07:12 pm,09/03/2014 07:12 pm,"The URL shows the URL to the file system, instead of the URL users access the repository at."

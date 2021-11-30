@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Wave Articulation Matrix - Wiki - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/wam.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../search/index/wam.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Wave Articulation Matrix</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../wam.html" class="overview">Overview</a></li>
+<li><a href="activity.html" class="activity">Activity</a></li>
+<li><a href="issues.html" class="issues">Issues</a></li>
+<li><a href="news.html" class="news">News</a></li>
+<li><a href="documents.html" class="documents">Documents</a></li>
+<li><a href="wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="boards.html" class="boards">Forums</a></li>
+<li><a href="files.html" class="files">Files</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+  
+<h3>Wiki</h3>
+
+<a href="wiki.html">Start page</a><br />
+<a href="http://opendesignengine.net/projects/wam/wiki/index">Index by title</a><br />
+<a href="http://opendesignengine.net/projects/wam/wiki/date_index">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-261-watcher"></span>
+
+
+
+
+
+
+<a href="http://opendesignengine.net/projects/wam/wiki/Wiki/history" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <p><img src="https://opendesignengine.net/attachments/download/499/fountains-23.jpg" alt="" /></p>
+
+
+	<p><strong>Fabrication and experimentation with Wave Articulation Matrices is encouraged.</strong></p>
+
+
+	<a name="Wave-Articulation-Matrix"></a>
+<h1 >Wave Articulation Matrix<a href="wiki.html#Wave-Articulation-Matrix" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>The Wave Articulation Matrix is composed of concentric steel cylinders.  The simplest design uses four cylinders.  More sophisticated devices may have 6, 8, or any even number of cylinders.</p>
+
+
+	<p>Fig. 1.1:  <a href="https://opendesignengine.net/attachments/download/446/6frw2.jpg" class="external">Wave Articulation Matrix, 8-Element</a></p>
+
+
+	<p>All the cylinders have the same mass, and the same surface area.</p>
+
+
+	<p>Counting outwards from the innermost cylinder, the next cylinder's length is equal to the length of the previous cylinder, divided by alpha.  Alpha is the constant of proportionality.  Here, it is 1.618034, the Golden Ratio.  See Fig. 1.2.</p>
+
+
+	<p>The cylinder circumferences follow a similar pattern.  Counting outwards from the innermost cylinder, the circumference of each cylinder is equal to that of the one immediately within it, multiplied by alpha.</p>
+
+
+	<p>This kind of proportionality is commonly referred to in antenna design as "Log Periodic".  As in, a "Log Periodic Dipole Array".</p>
+
+
+	<p>The length of the innermost cylinder is equal to the circumference of the outermost cylinder.  The length of the outermost cylinder is equal to the circumference of the innermost.</p>
+
+
+	<p>Fig. 1.2:  <a href="https://opendesignengine.net/attachments/download/439/side_dimensions.jpg" class="external">Physical Dimensions -- Side View -- 8-Element WAM</a><br />Fig. 1.3:  <a href="https://opendesignengine.net/attachments/download/455/top-view.gif" class="external">Physical Dimensions -- Top View -- 8-Element WAM</a><br />Fig. 1.4:  <a href="https://opendesignengine.net/attachments/download/451/primary-axis2.jpg" class="external">Perspective Views -- 8-Element WAM</a></p>
+
+
+	<p>The WAM can be thought of as a Nested Waveguide.</p>
+
+
+	<p>The volumes of space between the metal cylinders can be thought of as Resonant Cavities, or as sections of Cylindrical Coaxial Waveguide.  It is these cavities of space which are excited by the charging and discharging of the central cylinder.  RF forms in these cavities when the E field associated with the central cylinder collapses.</p>
+
+
+	<p>Fig. 1.5:  <a href="https://opendesignengine.net/attachments/download/477/log-periodic2.jpg" class="external">The Fountain is a Log Periodic Nested Waveguide</a></p>
+
+
+	<p>If we want to build a 4-element Fountain around a 0.75 inch diameter acetel rod, using 0.002 inch thick steel shim stock, then Lambda = 10.008 inch.</p>
+
+
+	<p>Fig. 1.6:  <a href="https://opendesignengine.net/attachments/download/453/4wam.jpg" class="external">Example Dimensions -- 4-Element Fountain</a><br />Fig. 1.7:  <a href="https://opendesignengine.net/attachments/download/498/4-wam-proto.jpg" class="external">Photo of a 4 Element Fountain</a></p>
+
+
+	<p><strong>Method of Operation</strong><br />Let's call the innermost cylinder the Anode.</p>
+
+
+	<p>The anode is repeatedly charged and discharged.  Each time it is discharged, RF waves form in the cavities of space between the metal cylinders.  This RF can be picked up with Magnetic Loop Antennas inserted into the cavities and soldered to the wall.  See the section, Wiring Diagrams, below.</p>
+
+
+	<p><strong>Note   23 April 2014:</strong><br />Iron-Nickel alloys  (Permalloy) exist which have much higher Magnetic Permeability than steel.  It might be interesting to construct a WAM out of Permalloy instead of steel.</p>
+
+
+	<a name="Calculation-of-the-Volumes-of-the-Resonant-Cavities"></a>
+<h1 > Calculation of the Volumes of the Resonant Cavities<a href="wiki.html#Calculation-of-the-Volumes-of-the-Resonant-Cavities" class="wiki-anchor">&para;</a></h1>
+
+
+	<p><a href="https://opendesignengine.net/attachments/download/517/lab-1.jpg" class="external">Page 1</a><br /><a href="https://opendesignengine.net/attachments/download/518/lab-2.jpg" class="external">Page 2</a><br /><a href="https://opendesignengine.net/attachments/download/519/lab-3.jpg" class="external">Page 3</a><br /><a href="https://opendesignengine.net/attachments/download/520/lab-4.jpg" class="external">Page 4</a><br /><a href="https://opendesignengine.net/attachments/download/521/lab-5.jpg" class="external">Page 5</a><br /><a href="https://opendesignengine.net/attachments/download/522/lab-7.jpg" class="external">Page 6</a></p>
+
+
+	<p>The next step is to find the cutoff frequency for each cavity.  Then, find which Modes are resonant within each one.  It may be wise to do this first algebraically (that is, with variables, instead of actual numbers).</p>
+
+
+	<p>We are also going to try doing a Method of Moments simulation to see what the standing waves look like within the cavities.</p>
+
+
+	<p>Learn about Modes of Vibration<br /><a href="http://en.wikipedia.org/wiki/Mode_of_vibration" class="external">Modes of Vibration</a></p>
+
+
+	<a name="Its-like-Music-Played-with-Light"></a>
+<h1 > It's like Music, Played with Light<a href="wiki.html#Its-like-Music-Played-with-Light" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Think of the resonant cavities as bells.  The larger ones ring at a lower frequency; the smaller ones ring at a higher frequency.  When you strike the bells, they ring.  All the bells ring together.</p>
+
+
+	<p>How do you strike the bells?</p>
+
+
+	<p>The Pulse Forming Network is charge up.  The innermost metal cylinder is connected to the high side of the PFN.  Thus there is an electric field surrounding the central cylinder.  When the PFN discharges through the top of this cylinder, this electric field collapses.  The collapse of the E field induces a magnetic field, which spins CCW around the cylinders, when viewed from above.  Where the E and B fields cross, we take the vector cross product to find the photon flux.</p>
+
+
+	<p>Discharging the PFN is analogous to striking a bell.</p>
+
+
+	<a name="Correct-Orientation-of-the-Magnetic-Loop-Antenna-within-the-Cavity"></a>
+<h1 > Correct Orientation of the Magnetic Loop Antenna within the Cavity<a href="wiki.html#Correct-Orientation-of-the-Magnetic-Loop-Antenna-within-the-Cavity" class="wiki-anchor">&para;</a></h1>
+
+
+	<p><a href="https://opendesignengine.net/attachments/download/524/interlink-flux.jpg" class="external">Correct Orientation of the Magnetic Loop Antenna within the Cavity</a></p>
+
+
+	<a name="RF-Bypass-Capacitor-on-the-Output-Stage"></a>
+<h1 > RF Bypass Capacitor on the Output Stage<a href="wiki.html#RF-Bypass-Capacitor-on-the-Output-Stage" class="wiki-anchor">&para;</a></h1>
+
+
+	<p><a href="https://opendesignengine.net/attachments/download/523/rf-cap.jpg" class="external">RF Bypass Cap.</a></p>
+
+
+	<a name="Two-Waves-Whose-Frequencies-are-Consecutive-Integer-Powers-of-the-Golden-Ratio-Heterodyne-to-Produce-a-Geometric-Series"></a>
+<h1 > Two Waves, Whose Frequencies are Consecutive Integer Powers of the Golden Ratio, Heterodyne to Produce a Geometric Series<a href="wiki.html#Two-Waves-Whose-Frequencies-are-Consecutive-Integer-Powers-of-the-Golden-Ratio-Heterodyne-to-Produce-a-Geometric-Series" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Fig. 9.1:  <a href="https://opendesignengine.net/attachments/download/450/golden-ratio-powers.gif" class="external">Powers of the Golden Ratio</a><br />Fig. 9.2:  <a href="https://opendesignengine.net/attachments/download/441/heterodyne.gif" class="external">...Heterodyne to Produce More Terms of the Series</a></p>
+
+
+	<a name="Casting-Resonant-Cavities-in-Epoxy"></a>
+<h1 > Casting Resonant Cavities in Epoxy<a href="wiki.html#Casting-Resonant-Cavities-in-Epoxy" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>In a 4 Element Fountain, there are three resonant cavities.</p>
+
+
+	<p>Fig. 10.0:  <a href="https://opendesignengine.net/attachments/download/500/cavities-resonant.jpg" class="external">There are three Resonant Cavities in a 4 Element Fountain</a></p>
+
+
+	<p>Let's cast these volumes of space out of epoxy resin.</p>
+
+
+	<p>We will make urethane molds to cast in.  The positives, from which the molds are made, are turned on a lathe from Acetel (Delrin).  Here are the dimensions for the positives for the 4 element fountain with Lambda = 10.008 inches.</p>
+
+
+	<p>Fig. 10.1:  <a href="https://opendesignengine.net/attachments/download/504/positive_a.jpg" class="external">Positive for Mold, Cavity A</a><br />Fig. 10.2:  <a href="https://opendesignengine.net/attachments/download/505/positive_b.jpg" class="external">Positive for Mold, Cavity B</a><br />Fig. 10.3:  <a href="https://opendesignengine.net/attachments/download/506/positive_c.jpg" class="external">Positive for Mold, Cavity C</a><br />Fig. 10.4:  <a href="https://opendesignengine.net/attachments/download/507/positive_d.jpg" class="external">Acetel Rod for Central Element</a></p>
+
+
+	<p>Fig. 10.5:  <a href="https://opendesignengine.net/attachments/download/508/mold.jpg" class="external">Epoxy sections and their dimensions</a></p>
+
+
+	<p><del>Fig. 10.1:  <a href="https://opendesignengine.net/attachments/download/502/positives-1.jpg" class="external">Positives for Molds pt. 1</a><br />Fig. 10.2:  <a href="https://opendesignengine.net/attachments/download/503/positives-2.jpg" class="external">Positives for Molds pt. 2</a></del></p>
+
+
+	<p>The disc is to hold the central shaft centered within the mold while the epoxy cures.  The positives are each about one inch taller than the actual epoxy pieces, so we have some room to work with and the molds don't overflow.</p>
+
+
+	<p><strong>This is just one way of doing it.</strong>  We could also make one positive and mould for each resonant cavity, and cast each one as a separate piece, then assemble them.  I think this way would be better, but it will be tricky soldering the magnetic loop antennas onto the previous cylinder.</p>
+
+
+	<a name="Wiring-Diagrams"></a>
+<h1 > Wiring Diagrams<a href="wiki.html#Wiring-Diagrams" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Fig. 3.23:  <a href="https://opendesignengine.net/attachments/download/501/wiring-174.jpg" class="external">New Wiring Diagram, 7-April-2014</a></p>
+
+
+	<p>Notes:</p>
+
+
+	<p>1.  The Anode may swing negative if the load resistor (the one at the top which the Anode discharges into) is not  matched to the impedance of the Anode.  The Anode, surrounded by the other steel cylinders, can be thought of as a transmission line, and it has a particular impedance.  We want the resistor to match this impedance so there is no ringing when we discharge.  For the resistor, it may be appropriate to use a bar of some resistive material, with a moveable contact that can slide along its length to choose a particular resistance.  This may or may not be important.</p>
+
+
+	<p>2.  The positive voltage on the Control Ring (the outermost cylinder is called the Control Ring) is what we're pushing against.  It is the weight of your friend in the swing.  You push her on the swing at regular intervals, hopefully as she's swinging <strong>away</strong> from you, and each time she goes higher and higher.  If there's no one in the swing, and you try to push it, you'll just fall on your face.  That's what would happen if the control ring was grounded.  Then there'd be nothing to push against.  The Anode and the Control Ring have to both be positive.  But the Anode is like 10kV, while the Control Ring is only 12V.</p>
+
+
+	<p>The circuit used to excite the WAM is very similar to a RADAR Modulator.</p>
+
+
+	<p>Fig. 3.0:  <a href="https://opendesignengine.net/attachments/download/479/RADAR23.jpg" class="external">RADAR Modulator is very Similar to WAM Exciter</a></p>
+
+
+	<p>Fig. 3.1:  <a href="https://opendesignengine.net/attachments/download/475/wiring-simple.jpg" class="external">Simple Wiring Diagram</a></p>
+
+
+	<p>Fig. 3.2:  <a href="https://opendesignengine.net/attachments/download/495/wiring-complete2.jpg" class="external">Complete Wiring Diagram</a></p>
+
+
+	<p>The Control Ring is tied to the low side of the switch.  It is held at a positive low voltage, 12v.</p>
+
+
+	<p>Let's use a Hydrogen Thyratron, or Spark Gap  as the switching mechanism.  These devices switch from "OFF" to "ON" very quickly -- on the order of tens of pico seconds.  Some fast IGBTs can switch in 20 - 50 nano seconds, but this is still 1000 times slower than a Thyratron.  And a spark gap is even faster.</p>
+
+
+	<p>Why do we need such a fast switch?  Theoretical:  The switching time is directly proportional to the diameter of the first cylinder surrounding the Primary Axis.  The Modes which this cylindrical waveguide can support are around 11 GHz for the 4-element WAM shown above.  Larger structures would tolerate slower switching times.</p>
+
+
+	<a name="Assembly-Instructions"></a>
+<h1 > Assembly Instructions<a href="wiki.html#Assembly-Instructions" class="wiki-anchor">&para;</a></h1>
+
+
+	<p><strong>The method of construction documented here is obsolete.  A superior method is to cast the volumes of space between the cylinders in epoxy.  This new method will be documented here shortly.</strong></p>
+
+
+	<p><em>Note:  We recommend using a 100 watt soldering iron to solder the steel cylinders.</em></p>
+
+
+	<p>A 4-element prototype can be constructed, using 0.002 inch thick steel shim stock to form the cylinders.</p>
+
+
+	<p>Fig. 8.0:  <a href="https://opendesignengine.net/attachments/download/453/4wam.jpg" class="external">Physical Dimensions of a 4-element Fountain</a></p>
+
+
+	<p>Begin by choosing a value for Lambda (how big you want your Fountain to be).  All physical dimensions are derived from this value.  You may wish to consider what diameters are available for the rod material which you will build your structure around.  Then choose a lambda based on that.  For example, we decided to use a 0.75 inch dia. Acetel rod, so our Lambda came out to be 10.008 inches.</p>
+
+
+	<p>Steel shim stock, 0.002 inch thick, is reasonable to work with.</p>
+
+
+	<p>Fig. 8.1:  <a href="https://opendesignengine.net/attachments/download/490/as_steel-shim.jpg" class="external">0.002 inch thich Steel Shim Stock</a></p>
+
+
+	<p>The shim stock can be measured, then cut with a utility knife.</p>
+
+
+	<p>Fig. 8.2:  <a href="https://opendesignengine.net/attachments/download/485/as_cut-shim.jpg" class="external">Cut Steel Shim Stock with a Utility Knife</a></p>
+
+
+	<p>You will cut out 4 rectangles of steel to roll up into cylinders.  The "Circumference" of the cylinder, in Fig. 8.0, is the width of the rectangle.  The "Length" is the length.</p>
+
+
+	<p>Remember that the steel has a grain to it.  Cut your rectangles such that the grain runs in the direction which they roll up to form cylinders.</p>
+
+
+	<p>The meeting edges of the cylinder should be sanded with fine emery cloth to remove oxide layer.  Then soldered together using high-acid flux and lead free silver solder.</p>
+
+
+	<p>Fig. 8.3:  <a href="https://opendesignengine.net/attachments/download/488/as_silver-solder.jpg" class="external">Steel can be Soldered with a High Acid Flux</a></p>
+
+
+	<p>You will need wooden spacer rings to hold the metal cylinders apart.  We had ours laser-cut from good quality plywood.  The "OD" and "ID" dimensions in Fig. 8.0 refer to the dimensions of these wooden rings.</p>
+
+
+	<p>Fig. 8.4:  <a href="https://opendesignengine.net/attachments/download/489/as_spacer-rings.jpg" class="external">Wooden Spacer Rings, Laser-Cut</a></p>
+
+
+	<p>Wrap the first steel rectangle around a dowel or rod and solder.  This is cylinder number zero.  We used a 12 inch length, 0.75 inch diameter Acetel (Delrin) rod for our prototype.</p>
+
+
+	<p>Next, wrap a thin layer of dielectric material (4 mil plastic sheeting) around the metal cylinder.  The dielectric layer should be as long as the next metal cylinder, and flush with the top of the cylinders.  (see Fig. 8.4.1, and Fig. 8.6).</p>
+
+
+	<p>Fig. 8.4.1:  <a href="https://opendesignengine.net/attachments/download/497/dielectric-layers.jpg" class="external">Dielectric Layers</a></p>
+
+
+	<p>Now, assemble the wooden spacer rings around the first cylinder, on top of the dielectric.  You may wish to use cyanoacrylate glue (superglue) to keep everything in place and flush at the top.  Water-based glues may not be ideal, due to their material characteristics at microwave frequencies.</p>
+
+
+	<p>Wrap the next steel rectangle around the wooden rings and solder.  This is cylinder number one.  This cylinder, and the next one, each get a wire soldered to them, which provides the output of the device.  When cylinder one is all soldered, it will look like Fig. 8.5.  Wrap a layer of dielectric around it, and it will look like Fig. 8.6.</p>
+
+
+	<p>Fig. 8.5:  <a href="https://opendesignengine.net/attachments/download/483/as_2-rings.jpg" class="external">The First Two Elements</a><br />Fig. 8.6:  <a href="https://opendesignengine.net/attachments/download/486/as_dielectric.jpg" class="external">The First Two Elements, with Dielectric</a></p>
+
+
+	<p>Now assemble the next set of wooden spacer rings on top of the structure you have created thus far.  It will look like this:</p>
+
+
+	<p>Fig. 8.7:  <a href="https://opendesignengine.net/attachments/download/491/as_wooden-rings.jpg" class="external">Two Completed Cylinders, with Spacer Rings Ready for Third</a></p>
+
+
+	<p>Wrap the next steel layer around the wooden rings and solder.  Also solder to this cylinder a wire for output.  Wrap dielectric around it.  Put the next set of wooden rings around that.  It will now look like this:</p>
+
+
+	<p>Fig. 8.8:  <a href="https://opendesignengine.net/attachments/download/492/as_wooden-rings2.jpg" class="external">Three completed Cylinders, with Spacer Rings Ready for Fourth</a></p>
+
+
+	<p>Wrap the last steel layer on and solder.  Now you are done.  The last cylinder does not get a layer of dielectric.  Here is your completed Fountain:</p>
+
+
+	<p>Fig. 8.9:  <a href="https://opendesignengine.net/attachments/download/484/as_complete2.jpg" class="external">Four Completed Cylinders.  You're Done!</a></p>
+
+
+	<p>Notice that during the assembly, cylinders 1 and 2 had wires soldered on before the dielectric was wrapped around.  These provide the output of the device.</p>
+
+
+	<a name="From-a-Golden-Spiral-to-Gabriels-Horn"></a>
+<h1 > From a Golden Spiral to Gabriel's Horn<a href="wiki.html#From-a-Golden-Spiral-to-Gabriels-Horn" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>I would like to show you how the geometry of the Fountain can be derived from a Golden Spiral.</p>
+
+
+	<p>Let's take a look at a Golden Spiral.</p>
+
+
+	<p>Fig. 2.1:  <a href="https://opendesignengine.net/attachments/download/447/golden-spiral3.gif" class="external">A Golden Spiral</a></p>
+
+
+	<p>A Golden Spiral is a Logarithmic Spiral.  Its radius multiplies by the Golden Ratio every quarter cycle.  In Fig. 2.1, the Golden Ratio is written as the Greek letter Phi.</p>
+
+
+	<p>Just to make things simpler, let's have our Golden Spiral grow by a factor of Phi every complete cycle, instead of every quarter cycle.  Let's also look at our spiral sideways, and allow it to exist in the dimension of time.  Now what does it look like?</p>
+
+
+	<p>Fig. 2.2:  <a href="https://opendesignengine.net/attachments/download/448/golden-spiral-2.gif" class="external">A Golden Spiral in Time</a></p>
+
+
+	<p>The envelope of the wave on the right is an exponential curve; the amplitude of the wave is growing exponentially.</p>
+
+
+	<p>Can our wave grow in any other way?  Yes.  Its frequency can grow as well as its amplitude.  Let's make a wave where each time it completes one cycle, its amplitude has multiplied by the Golden Ratio, and its period has been divided by the Golden Ratio.  Now what does our wave look like?</p>
+
+
+	<p>Fig. 2.3:   <a href="https://opendesignengine.net/attachments/download/444/hyperbolic-wave.gif" class="external">A Golden Spiral with a Hyperbolic Envelope</a><br />Fig. 2.3.1: <a href="https://opendesignengine.net/attachments/download/449/logarithm.gif" class="external">Explanation of the Logarithm Used in the Equation</a></p>
+
+
+	<p>This wave has a hyperbolic envelope, not an exponential one, as before.</p>
+
+
+	<p>We can also flip our wave around.  This is perhaps the more general form of the equation.</p>
+
+
+	<p>Fig. 2.4:   <a href="https://opendesignengine.net/attachments/download/458/wave.gif" class="external">A Golden Spiral with a Hyperbolic Envelope -- a Chirp</a><br />Fig. 2.4.1: <a href="https://opendesignengine.net/attachments/download/457/enter-time1.jpg" class="external">The Constant K Determines How Quickly the Wave Collapses</a></p>
+
+
+	<p>If we rotate the envelope of this wave around the Z-axis, we create a Hyperboloid.</p>
+
+
+	<p>Fig. 2.5:  <a href="https://opendesignengine.net/attachments/download/460/below.jpg" class="external">Gabriel's Horn</a></p>
+
+
+	<p>This Hyperboloid is known as Gabriel's Horn, because it looks like the trumpet blown by Archangel Gabriel on the Last Day.  It has finite volume, yet infinite surface area.  This is the correct shape of a vortex in water.</p>
+
+
+	<p><img src="http://fountain11235.files.wordpress.com/2014/04/water-vortex1.jpg" alt="" /> <img src="http://fountain11235.files.wordpress.com/2014/04/trombaditorricelli1.gif" alt="" /></p>
+
+
+	<p>The cylinders of the Fountain are formed by taking slices of Gabriel's Horn.</p>
+
+
+	<p>Fig. 2.6: <a href="https://opendesignengine.net/attachments/download/443/hyperboloid.gif" class="external">Wave Articulation Matrix and Gabriel's Horn</a><br />Fig. 2.7: <a href="https://opendesignengine.net/attachments/download/438/beautiful.jpg" class="external">Wave Articulation Matrix -- Perspective View</a></p>
+
+
+	<p>Gabriel's Horn is pertinent to Hyperbolic Geometry, and the work of N. I. Lobachevsky (Lobachevskii).</p>
+
+
+	<a name="Not-a-Steady-State-Device-Transients"></a>
+<h1 > Not a Steady State Device -- Transients<a href="wiki.html#Not-a-Steady-State-Device-Transients" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>The Fountain is not a steady state device.  It is not excited by RF alternating currents.  Rather, it is excited by Transients.</p>
+
+
+	<p>Fig. 4.1:  <a href="https://opendesignengine.net/attachments/download/478/fig8.jpg" class="external">Transients vs. Steady State AC</a></p>
+
+
+	<p>For an excellent introduction on Transients, please see:</p>
+
+
+	<p><a href="https://archive.org/details/elementarylectur00stei" class="external">Steinmetz, Charles Proteus, Elementary lectures on electric discharges, waves and impulses, and other transients</a></p>
+
+
+	<a name="Pulsed-DC-not-AC"></a>
+<h1 > Pulsed DC, not AC<a href="wiki.html#Pulsed-DC-not-AC" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>The Fountain is excited with pulsed DC, not AC.  In a pulsed DC circuit, the magnetic field always spins the same direction.  This is in contradistinction to the magnetic field in an AC circuit, which reverses direction repeatedly.</p>
+
+
+	<p>Fig 5.1:  <a href="https://opendesignengine.net/attachments/download/480/ac-dc.gif" class="external">The Magnetic Field in a Pulsed DC circuit Always Spins the Same Direction</a></p>
+
+
+	<p><strong>The magnetic field has to spin in the same direction each time</strong> so we can get a vortex going.  Imagine you're pushing on a flywheel.  You want to push it the same way each time to get it going.  If your flywheel was liquid instead of solid, then it would be a vortex.</p>
+
+
+	<a name="Maxwells-Equations-are-Fluid-Mechanics"></a>
+<h1 > Maxwell's Equations are Fluid Mechanics<a href="wiki.html#Maxwells-Equations-are-Fluid-Mechanics" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>The Vector Calculus form of Maxwell's Equations (written by Heaviside) are simply Fluid Mechanics.<br />Divergence and Curl are concepts from Fluid Mechanics.</p>
+
+
+	<p>Tesla said, "Whatever Electricity may be, it behaves like an incompressible fluid." <br />Water is an incompressible fluid.</p>
+
+
+	<p><strong>Divergence</strong> means the flow of a liquid into, or out of, a region of space.  Electric Flux means electric flow.  Before the end of WWII, all electrical engineers conceptualized Electric Field as a fluid flowing from one region of space to another.  My US Army Physics training manual, published by the War Department in 1944 says, "Radio waves are Ether Waves."</p>
+
+
+	<p><strong>Curl</strong> is a description of the rotation -- the swirling -- of a fluid.  Maxwell's Equation for the Curl of the Magnetic Field is literally, exactly, the equation for the vorticity of a volume of liquid. <strong>It is a mathematical description of a vortex.</strong>  This is literally what Maxwell and Heaviside thought a magnetic field was:  A vortex in a liquid.</p>
+
+
+	<p>It is important to remember that for a long time, all physicists and engineers thought of electric and magnetic fields as the flow and swirling of a fluid, which they called the AEther.  Now I don't want to get into an argument about whether or not the AEther exists.  Just as a thought experiment, allow yourself to think in the way that Maxwell, Faraday, Heaviside, Lorentz, Tesla, and Sir Oliver Lodge did.  Pretend there is an AEther. A fluid.   We know it is true that an accurate  mathematical description of the Electric and Magnetic fields comes from this way of thinking.  Might other insights into the nature and behavior of these natural forces be had by their further consideration in terms of fluid mechanics?</p>
+
+
+	<p>One kind of phenomenon that can occur in a fluid is a wave.</p>
+
+
+	<p>Another is a Vortex.</p>
+
+
+	<p>A vortex in a fluid is shaped like a Hyperboloid called Gabriel's Horn.</p>
+
+
+	<p>Vorticity</p>
+
+
+	<p><a class="external" href="http://www.youtube.com/watch?v=loCLkcYEWD4">http://www.youtube.com/watch?v=loCLkcYEWD4</a></p>
+
+
+	<a name="Discharge-to-Low-Voltage-Not-to-Ground"></a>
+<h1 > Discharge to Low Voltage, Not to Ground<a href="wiki.html#Discharge-to-Low-Voltage-Not-to-Ground" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>In order to create the phenomenon, the following must be done:</p>
+
+
+	<p>1.  One plate of a capacitor is connected to Earth Ground.<br />2.  The other plate is charged to a high positive voltage (9 kV).<br />3.  The capacitor is rapidly discharged (through a spark gap, or thyratron) to a low positive voltage (12V).<br />4.  The capacitor is charged up again, and the process repeats.</p>
+
+
+	<p>Fig. 6.1:  <a href="https://opendesignengine.net/attachments/download/481/bias.gif" class="external">The Low Side of the Switch is Biased at +12v</a></p>
+
+
+	<p>One terminal of the spark gap is connected to a conductor, which is connected to the high voltage plate of the capacitor.  The other terminal of the spark gap is connected to the positive terminal of a 12v battery.  The negative terminal of the battery is connected to Earth Ground.</p>
+
+
+	<a name="Transformation-Between-Extensive-Space-and-Gegenraum"></a>
+<h1 > Transformation Between Extensive Space, and Gegenraum<a href="wiki.html#Transformation-Between-Extensive-Space-and-Gegenraum" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Consider the concept of "Duality" in Projective Geometry,  applied not to a particular solid, but to space itself.</p>
+
+
+	<p>Consider the transformation between the Infinite Plane (Euclidean Space), and the Point at Infinite Distance (Gegenraum).  This transformation is represented by Gabriel's Horn.</p>
+
+
+	<p>See the Projective Geometry developed by George Adams and Rudolph Steiner.</p>
+
+
+	<p>Fig. 7.1:  <a href="https://opendesignengine.net/attachments/download/454/gegenraum.jpg" class="external">Growth Measure from Gegenraum to Extensive Space</a></p>
+
+
+	<a name="Recursive-Process"></a>
+<h1 > Recursive Process<a href="wiki.html#Recursive-Process" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>We believe that a recursive process iterates once, each time the Fountain is charged and discharged.</p>
+
+
+	<a name="Reference-Material-and-Related-Subjects"></a>
+<h1 > Reference Material and Related Subjects<a href="wiki.html#Reference-Material-and-Related-Subjects" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>Comprehension of Wave Articulation Matrices will be aided by study of the following concepts</p>
+
+
+	<p><strong>Vortex</strong>  in Fluid Mechanics.   Also,  Vorticity, Circulation.<br /><strong>Gabriel's Horn</strong>  Also called Torricelli's Trumpet.<br /><strong>Log Periodic Antenna</strong><br /><strong>Nested Waveguide</strong><br /><strong>Resonant Cavity</strong><br /><strong>Projective Geometry</strong>  Particularly the concept of Growth Measure.<br /><strong>The Golden Ratio</strong><br /><strong>Dynamic Symmetry and Root Rectangles</strong> in Ancient Greek Art.<br /><strong>Pulse Forming Network</strong>  Also called a Delay Line, Rayleigh Line, Artificial Transmission Line<br /><strong>RADAR Modulator</strong></p>
+
+
+	<p><a href="http://www.oshwa.org/definition/"><img src="../../dmsf_files/262%3Fdownload=" alt="" /></a></p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/wam/wiki/Wiki.html?version=113" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/wam/wiki/Wiki.txt?version=113" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

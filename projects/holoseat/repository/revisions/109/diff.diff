@@ -1,0 +1,132 @@
+Index: trunk/app-src/holoseat/api/mainHandlers.py
+===================================================================
+--- trunk/app-src/holoseat/api/mainHandlers.py	(revision 108)
++++ trunk/app-src/holoseat/api/mainHandlers.py	(revision 109)
+@@ -1,40 +0,0 @@
+-from tornado import web
+-from holoseat.api import status, apiConfig, apiHandler
+-
+-class DevicenameHandler(apiHandler):
+-    def initialize(self):
+-        pass
+-
+-    def get(self):
+-        pass
+-
+-    SUPPORTED_METHODS = ('GET')
+-
+-    def get(self):
+-        super().processCommand({"uri":"/main/devicename","verb":"GET"})
+-
+-class VersionHandler(apiHandler):
+-    def initialize(self):
+-        pass
+-
+-    def get(self):
+-        pass
+-
+-    SUPPORTED_METHODS = ('GET')
+-
+-    def get(self):
+-        super().processCommand({"uri":"/main/version","verb":"GET"})
+-
+-class ApiVersionHandler(web.RequestHandler):
+-    def initialize(self):
+-        pass
+-
+-    def get(self):
+-        pass
+-
+-    SUPPORTED_METHODS = ('GET')
+-
+-    def get(self):
+-        self.set_status(status.HTTP_200_OK)
+-        response = {'apiVer': apiConfig['apiVersion']}
+-        self.write(response)
+Index: trunk/app-src/holoseat/api/__init__.py
+===================================================================
+--- trunk/app-src/holoseat/api/__init__.py	(revision 108)
++++ trunk/app-src/holoseat/api/__init__.py	(revision 109)
+@@ -6,25 +6,24 @@
+ from concurrent.futures import ThreadPoolExecutor
+ from holoseat.util import holoseatSerial
+ 
+-apiConfig = { 'apiVersion' : 'v0.4.0',
+-              'uiPort' : 8000,
++apiConfig = { 'uiPort' : 8000,
+               'apiPort' : 8080,
+               'debug' : False }
+ 
+ apiThreadPool = ThreadPoolExecutor()
+ 
+ def connectedOrConnect():
+-    return holoseatSerial.connected() or holoseatSerial.connect(apiConfig['apiVersion'])
++    return holoseatSerial.connected() or holoseatSerial.connect()
+ 
+ # package imports now that the package variables are declared
+ from holoseat.api.apiHandler import apiHandler
+-from holoseat.api import mainHandlers, debugHandlers, socketHandler
++from holoseat.api import debugHandlers, socketHandler
+ 
+ def apiThreadFunc(debug=False, port=8080):
+     application = web.Application([
+-        (r"/api/main/devicename", mainHandlers.DevicenameHandler),
+-        (r"/api/main/version", mainHandlers.VersionHandler),
+-        (r"/api/main/apiVersion", mainHandlers.ApiVersionHandler),
++        (r"/api/main/devicename", apiHandler),
++        (r"/api/main/version", apiHandler),
++        (r"/api/main/enabled", apiHandler),
+         (r"/api/debug", debugHandlers.DebugHandler),
+         (r"/api/debug/serial", debugHandlers.DebugSerialHandler),
+         (r'/ws', socketHandler.SocketHandler)
+Index: trunk/app-src/holoseat/api/apiHandler.py
+===================================================================
+--- trunk/app-src/holoseat/api/apiHandler.py	(revision 108)
++++ trunk/app-src/holoseat/api/apiHandler.py	(revision 109)
+@@ -1,7 +1,7 @@
+ from holoseat.api import status, apiThreadPool, apiConfig, connectedOrConnect
+ from concurrent.futures import ThreadPoolExecutor
+ from tornado.concurrent import run_on_executor
+-from tornado import web, gen
++from tornado import web, gen, escape
+ from holoseat.util import holoseatSerial
+ import json
+ import serial
+@@ -59,3 +59,12 @@
+             self.write(response)
+             self.finish()
+             return
++
++    def get(self):
++        command = {"uri":self.request.uri.replace("/api",""),"verb":"GET"}
++        self.processCommand(command)
++
++    def put(self):
++        args = escape.json_decode(self.request.body)
++        command = {"uri":self.request.uri.replace("/api",""),"verb":"PUT", "args":args}
++        self.processCommand(command)
+Index: trunk/app-src/holoseat/util/holoseatSerial.py
+===================================================================
+--- trunk/app-src/holoseat/util/holoseatSerial.py	(revision 108)
++++ trunk/app-src/holoseat/util/holoseatSerial.py	(revision 109)
+@@ -98,7 +98,7 @@
+     # we iterated over all available com ports and did not find Holoseat
+     return None
+ 
+-def connect(expectedHspVer=None):
++def connect():
+     holoseatPort = findHoloseatPort()
+     if not(holoseatPort):
+         return False  # no Holoseat Controllers connected to USB
+@@ -137,10 +137,7 @@
+ 
+         # TODO - is this a compatible FW version?
+ 
+-        # is this the compatible HSP version (must match exactly)?
+-        if expectedHspVer and (versionResults['hspVer'] != expectedHspVer):
+-            disconnect()
+-            return False
++        # TODO - is this the compatible HSP version?
+ 
+         # tell holoseat to echo out all status events to sync up any connected clients
+         eventsResults = json.loads(execCommand({"uri":"/lowlevel/events","verb":"GET"}))

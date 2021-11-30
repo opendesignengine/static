@@ -1,0 +1,79 @@
+h1. GS Mk 3 Meeting Minutes
+
+{{toc}}
+
+"Sprint Planning Document":https://docs.google.com/spreadsheets/d/1b2WNtS10kq8yuOQJQwRfIBf9d0afU-EbczXwzqx4HpE/pubhtml (perpetually updated)
+
+h2. Sprint 5
+
+* "Planning Meeting":https://docs.google.com/document/d/1_qvzpXR3-S7mGmitB4BVUk3amVBJ2M6bVfXKf3GyhkA/pub
+* Stand Up 1
+* Stand Up 2
+* Stand Up 3
+* Stand Up 4
+* Stand Up 5, Sprint Review, and Retrospective
+
+h2. Sprint 4
+
+* "Planning Meeting":https://docs.google.com/document/d/1j_8RbXHUR1H0xLVwaWc2BwgKbN-cCKBKRPNdEMFNyIQ/pub
+* "Stand Up 1":https://docs.google.com/document/d/1grHWCuWVhfsfDzvAFzM6fS4ZgLr-iDOkNTiS59G5yvo/pub
+* "Stand Up 2":https://docs.google.com/document/d/1dMIbhBUsCOboC_UaQ2kfp7Kd9JVfIQsjPrEgKfWOcC0/pub
+* "Stand Up 3":https://docs.google.com/document/d/174Il5tQYykEPyMb-Pj7Wd7ClI9q7C6VgacCk7s5V-0U/pub
+* "Stand Up 4":https://docs.google.com/document/d/1UPJPoNZWHUjX4f41XRQOomtS2GO8LJ563BWkN4E6LvU/pub
+* "Stand Up 5":https://docs.google.com/document/d/1ftnu73XMwcWen3kUED71f0PwfyVY72WK6DW6nIXUH4Y/pub
+* "Stand Up 6, Sprint Review, and Retrospective":https://docs.google.com/document/d/17XuDVPd7Ta0J_-d3NIY6v4kyNqpY_DzJs8AerVeub4g/pub
+
++Sprint 4 Sprint Review+
+
+{{youtube(C0r6PrimuvE)}}
+
+h2. Sprint 3
+
+* "Planning Meeting":https://docs.google.com/document/d/1Tyg_MSbgrlUkySvqge7jF0ljwYWFWL1W0WWqpW8bEBI/pub
+* "Stand Up 1":https://docs.google.com/document/d/1_RAb-TddCe6v5ninaUcW0Ll15MfyrLHuevH7RUgftB0/pub
+* "Stand Up 2":https://docs.google.com/document/d/19U9WpElSI6viPCNl7ZyUkxiIQKMKSrqa2xV5cScW5Lg/pub
+* "Stand Up 3":https://docs.google.com/document/d/1tdddhevbeIeZrK53W0PjOrCpDXs5oVZ7KZyvPUtb4a0/pub
+* "Stand Up 4":https://docs.google.com/document/d/1PW9BIthNz8kcmoJoKrhLQId1COqa-uQGxBAj87C4qQw/pub
+* "Stand Up 5 (abbreviated sprint)":https://docs.google.com/document/d/1dCKTXbq5Ohf0fXdQ9TsjpKBPHUUbTVDYWjCu9lYa1iM/pub
+* "Sprint Review and Retrospective":https://docs.google.com/document/d/1S8C_YVqFGmtTPghCtOrz7fCgHJ8KVoyGBCvQgZP8aao/pub
+
+_YouTube did not capture the Sprint 3 Review hangout_
+
+h2. Sprint 2
+
+* "Planning Meeting":https://docs.google.com/document/d/1tBFfoBlq_5yGPrOdjKw0ryqVrPf3dKcMSRqXuPIMfmQ/pub - and documented as the Sprint 2 plan in the planning document
+* "Stand Up 1":https://docs.google.com/document/d/1c-rvgVoEPshufSu92alVEmVhqzp-HmXTvxKX3vMvX1o/pub
+* "Product Owners Meeting May 18, 2016":https://docs.google.com/document/d/1M9QpDHhmw-zz-2_t97x7OpGA93Qjr38AeOopV1r5CpI/pub
+* "Stand Up 2":https://docs.google.com/document/d/1rvYRB2jRRVFOIM0sXZoV74q2adiAwNByL5w1ZagJoMU/pub
+* "Stand Up 3":https://docs.google.com/document/d/1mdkHERuK16bd0SMrqG8ayLazCqpRf2oyGthT-yLkt9Y/edit
+* "Stand Up 4 (virtual over slack)":https://docs.google.com/document/d/1RgButu-d5nT_yQn3hVQ71jnTnJHaQVYDK9WgA-EXByM/pub
+* "Stand Up 5":https://docs.google.com/document/d/1mjaZqSpI64zr-W9bmiKWhHUf9oTX8-gd4rLsExpxrpg/pub
+* "Stand Up 6, Sprint Review, and Retrospective":https://docs.google.com/document/d/1xsExE0ey9hSQnoXlcTnazgPtXf6fggU2DapE7kZQ0pg/pub
+
++Sprint 2 Sprint Review+
+
+(Complete with impromptu orbital mechanics lessons and demonstration)
+
+{{youtube(Cdlst-mlF7U)}}
+
+h2. Between Sprints 1 and 2
+
+* "Between Sprints 1 and 2 Meeting":https://docs.google.com/document/d/1Rc-5SuAnJ7ef4B-FMYCXDYmi74dX3HAzowK6SACuE78/pub
+
+h2. Sprint 1
+
+* Planning Meeting - documented as the Sprint 1 plan in the planning document
+* "Stand Up 1":https://docs.google.com/document/d/1CBXZfilTN-YWOwUmS2ghtMkJq72dDUYqYES-0HrqAN4/pub
+* "Stand Up 2":https://docs.google.com/document/d/14CtGvw_zrS51glXV2NpZOIQZZoS3NOder0TIzUBWSLw/pub
+* "Stand Up 3":https://docs.google.com/document/d/17Wc4sMqlUissR5am6ANDcKP-psRQ41ysxOV0vrcgHJA/pub
+* "Stand Up 4":https://docs.google.com/document/d/1o70kTCoMviGnAA-F5xV3ZnrKjtGb0wmd3vvulQtviCI/pub
+* "Stand Up 5":https://docs.google.com/document/d/1Yqm5dz4XvVSAYf0YaM2t4lbkdMNcCaXbdy3NXFRmTZk/pub
+* "Stand Up 6, Sprint Review, and Retrospective":https://docs.google.com/document/d/1lSFNd2muuRuIwGoWZanTKsoPOunDJElXGwpEcviW0nU/pub
+
++Sprint 1 Sprint Review+
+
+{{youtube(1nDdU9RXQW0)}}
+
+
+
+

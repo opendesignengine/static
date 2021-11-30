@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Errata v1 0</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Errata-v10"></a>
+<h1 >Errata v1.0<a href="Errata_v1_0.html%3Fversion=5.html#Errata-v10" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>This document has been relinked to the Errata document <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Errata" class="external">here</a> as part of our versioning system update.</p>
+
+
+	<p>There are a four main problems with the current design that will need to be addressed in future iterations (v1.1+).</p>
+
+
+	<ol>
+	<li>The drawer guide that is being used as a linear guide is not properly shielded from motor exhaust particulates, and thus the guide's bearings tend to foul after less than 30 test firings.</li>
+		<li>The data acquisition system is not capable of sample rates in excess of 15 samples per second. This is due to the fact that the thermocouple amplifier requires 70 to 100 milliseconds to do a temperature conversion (A to D). This is an unacceptably slow sample rate. The target for future iterations up to version 2.0 should be a minimum of 150 samples per second.</li>
+		<li>The Force Sensing Resistor (FSR) used will not measure forces in excess of 10.0 Newtons. Some of the motors that this stand tests can exert a trust of 25 to 30 Newtons, so this is unacceptable because the full range of thrust cannot be measured. </li>
+		<li>The contact between the FSR's backing plate and the motor mount's contact plate was not completely parallel in version 1.0. This causes skewed results with the FSR. This should be corrected in future 1.x versions as much as the material (wood) allows.</li>
+	</ol>
+</body>
+</html>

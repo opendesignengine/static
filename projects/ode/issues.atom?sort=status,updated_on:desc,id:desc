@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Issues</title>
+  <link href="http://opendesignengine.net/projects/ode/issues.atom?sort=status%2Cupdated_on%3Adesc%2Cid%3Adesc" rel="self"/>
+  <link href="http://opendesignengine.net/projects/ode/issues?sort=status%2Cupdated_on%3Adesc%2Cid%3Adesc" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2014-09-11T19:10:50+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Feature #267 (New): Add Companies Plugin</title>
+    <link href="http://opendesignengine.net/issues/267" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/267</id>
+    <updated>2014-09-11T19:10:50+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It would be nice to have the companies plugin (with additional features for users to register their own companies directly) so orgs like Mach 30 could group their projects together.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://github.com/splendeo/chiliproject_companies"&gt;https://github.com/splendeo/chiliproject_companies&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #266 (New): Upgrade fundraising plugin to include more sites</title>
+    <link href="http://opendesignengine.net/issues/266" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/266</id>
+    <updated>2014-09-11T18:51:37+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We should definitely add Indiegogo.  There are probably others that I can't think of right now, so the first step should be to find a good list of popular fundraising and payment sites for individuals and small groups, then make the new master list of supported sites.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #265 (New): SCM URL in project settings is incorrect</title>
+    <link href="http://opendesignengine.net/issues/265" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/265</id>
+    <updated>2014-09-03T19:12:54+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The URL shows the URL to the file system, instead of the URL users access the repository at.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Bug #264 (New): New Project Creation Does Not Require Selection of Software or Documentation Lice...</title>
+    <link href="http://opendesignengine.net/issues/264" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/264</id>
+    <updated>2014-08-19T11:05:50+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;If you select the hardware license, but not other licenses, the project is still created. I think it should at least stop you if you haven't selected a documentation license.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #263 (New): ThingTracker Integration</title>
+    <link href="http://opendesignengine.net/issues/263" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/263</id>
+    <updated>2014-08-11T08:13:54+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This is a feature request based on a conversation on project discoverability on the forums.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a class="external" href="https://opendesignengine.net/boards/3/topics/790?r=794#message-794"&gt;https://opendesignengine.net/boards/3/topics/790?r=794#message-794&lt;/a&gt;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #260 (New): For Pay Private Projects</title>
+    <link href="http://opendesignengine.net/issues/260" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/260</id>
+    <updated>2014-07-29T18:21:01+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;
+	&lt;li&gt;Integration with payment processing (as another feature)&lt;/li&gt;
+		&lt;li&gt;Turning private projects into a &#8220;sellable feature&#8221; (aka restrict number of users in private projects, tiers of private projects, etc)&lt;/li&gt;
+		&lt;li&gt;Test that the projects are well and truly private&lt;/li&gt;
+		&lt;li&gt;Preferably have all of this automated in terms of selling the feature (user clicks buy, server turns collects money, server turns on feature, feature gets turned off if money stops coming in, user can cancel, etc)&lt;/li&gt;
+	&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #250 (New): Bread Crumb Navigation</title>
+    <link href="http://opendesignengine.net/issues/250" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/250</id>
+    <updated>2014-07-09T13:49:40+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I know we talked about this at one time, and it just hit me (again) how useful this would be as I've been testing the new version. Where did this feature end up?&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Milestone #217 (New): Migrate ODE source code to match current version of Redmine</title>
+    <link href="http://opendesignengine.net/issues/217" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/217</id>
+    <updated>2013-10-31T21:42:09+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It has been too long since we did this migration.  Be sure to document process in the ODE wiki so we can keep current from now on.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #184 (New): Add STL part editor using OpenJsCad</title>
+    <link href="http://opendesignengine.net/issues/184" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/184</id>
+    <updated>2013-09-18T16:07:06+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Provides a Google Docs like functionality for editing 3D parts direct on ODE.  See &lt;a href="http://joostn.github.io/OpenJsCad/" class="external"&gt;OpenJsCad&lt;/a&gt;.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #183 (New): Include the ability to embed references to other OSHW projects in BoM module</title>
+    <link href="http://opendesignengine.net/issues/183" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/183</id>
+    <updated>2013-09-18T16:05:05+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;As OSHW projects grow in scale and complexity, some projects will become components of other projects (Thingiverse objects come to mind as an example).  Bill of Materials components should be able to easily point at OSHW projects as components and take advantage of metadata from the source sites.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #181 (New): Slideshare wiki macro</title>
+    <link href="http://opendesignengine.net/issues/181" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/181</id>
+    <updated>2013-09-18T15:54:40+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Add a &lt;a href="http://www.slideshare.net/" class="external"&gt;Slideshare&lt;/a&gt; wiki macro (or see if one exists as a Redmine plugin) to render embedded slideshows in wiki pages.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #180 (New): Add 3D rendering support to wiki syntax and DMSF file details</title>
+    <link href="http://opendesignengine.net/issues/180" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/180</id>
+    <updated>2013-09-18T15:53:07+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Use &lt;a href="http://n0r.org/thingiview.js/examples/index.html" class="external"&gt;Thingiview.js&lt;/a&gt; to add a wiki macro which can render 3D objects (STL for now) inline on wiki pages.  Take look at &lt;a href="http://n0r.org/thingiview.js/examples/pre_parsed_json_inline.html" class="external"&gt;this example&lt;/a&gt; to see how useful this could be.&lt;/p&gt;
+
+
+	&lt;p&gt;Also look at embedding this directly into DMSF file detail pages so user can preview the file from DMSF file details.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #179 (New): Dozuki Integration</title>
+    <link href="http://opendesignengine.net/issues/179" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/179</id>
+    <updated>2013-09-18T15:47:52+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;&lt;a href="http://www.dozuki.com/" class="external"&gt;Dozuki&lt;/a&gt; is a technical manual wiki tool (used by a growing list of OSHW projects). One very interesting possibility for integration is ODE plugin for Dozuki. Managers would give ODE a Dozuki url and then ODE would show the Dozuki manual under a &#8220;manuals&#8221; tab in the project.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #150 (New): Install and begin usage of Redmine CMS Plugin</title>
+    <link href="http://opendesignengine.net/issues/150" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/150</id>
+    <updated>2013-07-20T14:15:19+00:00</updated>
+    <author>
+      <name>Christopher Sigman</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The plugin (&lt;a class="external" href="http://www.redmine.org/plugins/cms"&gt;http://www.redmine.org/plugins/cms&lt;/a&gt;) may be very useful for adding additional information that would require writing a custom plugin at the moment in a much easier manner.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Feature #26 (New): Native support for Bills of Materials</title>
+    <link href="http://opendesignengine.net/issues/26" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/26</id>
+    <updated>2011-04-09T16:17:17+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The Bill of Materials (BOM) module should include a BOM tree to visualize the structure. Also, a method to see where a part is used in other assemblies.&lt;/p&gt;    </content>
+  </entry>
+</feed>

@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>HSP Over REST API</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="HSP-Over-REST-API"></a>
+<h1 >HSP Over REST API<a href="HSP_Over_REST_API.html%3Fversion=16.html#HSP-Over-REST-API" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="HSP_Over_REST_API.html%3Fversion=16.html#HSP-Over-REST-API">HSP Over REST API</a><ul><li><a href="HSP_Over_REST_API.html%3Fversion=16.html#Meaning-of-HTTP-Verbs">Meaning of HTTP Verbs</a></li><li><a href="HSP_Over_REST_API.html%3Fversion=16.html#REST-API">REST API</a></li><li><a href="HSP_Over_REST_API.html%3Fversion=16.html#Specifying-an-Action">Specifying an Action</a></li><li><a href="HSP_Over_REST_API.html%3Fversion=16.html#Defaults">Defaults</a></li></ul></li></ul>
+
+
+	<p><strong>TODO</strong> - port all of this data over to the HSP page (except /api/debug) and explain how the REST API is mapped to the HSP.  Then link to HSP for full details of the calls.</p>
+
+
+	<a name="Meaning-of-HTTP-Verbs"></a>
+<h2 >Meaning of HTTP Verbs<a href="HSP_Over_REST_API.html%3Fversion=16.html#Meaning-of-HTTP-Verbs" class="wiki-anchor">&para;</a></h2>
+
+
+	<table>
+		<tr>
+			<th>Verb</th>
+			<th>Meaning</th>
+		</tr>
+		<tr>
+			<td>GET</td>
+			<td>Read value from controller</td>
+		</tr>
+		<tr>
+			<td>PUT</td>
+			<td>Write value to controller (volatile) </td>
+		</tr>
+		<tr>
+			<td>POST</td>
+			<td>Write value to controller (non-volatile)</td>
+		</tr>
+		<tr>
+			<td>DELETE</td>
+			<td>Clear value from controller (volatile)</td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="REST-API"></a>
+<h2 >REST API<a href="HSP_Over_REST_API.html%3Fversion=16.html#REST-API" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Items in <em>italics</em> are for future development.  These methods will return a 501 not implemented status code (see <a href="http://www.django-rest-framework.org/api-guide/status-codes/" class="external">status codes</a> for more details).</p>
+
+
+	<table>
+		<tr>
+			<th>URI </th>
+			<th>Verb</th>
+			<th>Operation</th>
+		</tr>
+		<tr>
+			<td>/api/main/devicename</td>
+			<td>GET</td>
+			<td>Returns the name of the Holoseat device attached to the system</td>
+		</tr>
+		<tr>
+			<td>/api/main/enabled</td>
+			<td>GET</td>
+			<td>Returns current enabled state</td>
+		</tr>
+		<tr>
+			<td>/api/main/enabled</td>
+			<td>PUT</td>
+			<td>Update enabled state</td>
+		</tr>
+		<tr>
+			<td>/api/main/stepsize</td>
+			<td>GET</td>
+			<td>Returns current step size [1-4]</td>
+		</tr>
+		<tr>
+			<td>/api/main/stepsize</td>
+			<td>PUT</td>
+			<td>Update current step size [1-4]</td>
+		</tr>
+		<tr>
+			<td>/api/main/profile</td>
+			<td>GET</td>
+			<td>Returns current profile name (will end in a * if settings have been updated since profile was set)</td>
+		</tr>
+		<tr>
+			<td> <em>/api/main/profile</em> </td>
+			<td> <em>PUT</em> </td>
+			<td> <em>Sets current profile name (cannot end in a '*')  Note: sending an empty string as the profile name will suspend configuration update messages until a non-empty profile name is set.</em> </td>
+		</tr>
+		<tr>
+			<td>/api/main/cadence</td>
+			<td>GET</td>
+			<td>Returns current cadence (>0 means forward, &lt;0 means reverse) and cadence level [0-4].  See firmware notes for definition of cadence level.</td>
+		</tr>
+		<tr>
+			<td>/api/main/version</td>
+			<td>GET</td>
+			<td>Returns hardware, firmware, and HSP version data</td>
+		</tr>
+		<tr>
+			<td>/api/forward</td>
+			<td>GET</td>
+			<td>Returns current forward action (see below), returns 404 status if no forward action is active</td>
+		</tr>
+		<tr>
+			<td>/api/forward</td>
+			<td>PUT</td>
+			<td>Sets current forward action (see below)</td>
+		</tr>
+		<tr>
+			<td> <em>/api/forward</em> </td>
+			<td> <em>DELETE</em> </td>
+			<td> <em>Clears current forward action</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/forward/sprint</em> </td>
+			<td> <em>GET</em> </td>
+			<td> <em>Returns current forward sprint action (see below), returns 404 status if no forward sprint action is active</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/forward/sprint</em> </td>
+			<td> <em>PUT</em> </td>
+			<td> <em>Sets current forward sprint action (see below)</em></td>
+		</tr>
+		<tr>
+			<td> <em>/api/forward/sprint</em> </td>
+			<td> <em>DELETE</em> </td>
+			<td> <em>Clears current forward sprint action</em> </td>
+		</tr>
+		<tr>
+			<td>/api/reverse</td>
+			<td>GET</td>
+			<td>Returns current reverse action (see below), returns 404 status if no reverse action is active</td>
+		</tr>
+		<tr>
+			<td>/api/reverse</td>
+			<td>PUT</td>
+			<td>Sets current reverse action (see below)</td>
+		</tr>
+		<tr>
+			<td> <em>/api/reverse</em> </td>
+			<td> <em>DELETE</em> </td>
+			<td> <em>Clears current reverse action</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/reverse/sprint</em> </td>
+			<td> <em>GET</em> </td>
+			<td> <em>Returns current reverse sprint action (see below), returns 404 status if no forward sprint action is active</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/reverse/sprint</em> </td>
+			<td> <em>PUT</em> </td>
+			<td> <em>Sets current reverse sprint action (see below)</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/reverse/sprint</em> </td>
+			<td> <em>DELETE</em> </td>
+			<td> <em>Clears current reverse sprint action</em> </td>
+		</tr>
+		<tr>
+			<td>/api/defaults</td>
+			<td>GET</td>
+			<td>Returns current defaults (see below)</td>
+		</tr>
+		<tr>
+			<td>/api/defaults</td>
+			<td>POST</td>
+			<td>Sets new defaults (see below)</td>
+		</tr>
+		<tr>
+			<td>/api/defaults</td>
+			<td>DELETE</td>
+			<td>Restore factory defaults (see below)</td>
+		</tr>
+		<tr>
+			<td> <em>/api/resistance</em> </td>
+			<td> <em>GET</em> </td>
+			<td> <em>Returns current resistance setting of the pedals</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/resistance</em> </td>
+			<td> <em>PUT</em> </td>
+			<td> <em>Sets current resistance setting of the pedals</em> </td>
+		</tr>
+		<tr>
+			<td>/api/debug</td>
+			<td>GET</td>
+			<td>Returns current debug state (True/False) as defined by the service configuration</td>
+		</tr>
+		<tr>
+			<td>/api/debug/serial</td>
+			<td>PUT</td>
+			<td>Sends a serial message to Holoseat (returns result as JSON string or status 401 not authorized if debug state is false)</td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="Specifying-an-Action"></a>
+<h2 >Specifying an Action<a href="HSP_Over_REST_API.html%3Fversion=16.html#Specifying-an-Action" class="wiki-anchor">&para;</a></h2>
+
+
+Actions are composed of 4 parts:
+	<ol>
+	<li>Device [keyboard|mouse|joypad] - what device is being emulated to implement this action<br />#Input - what input value (e.g. key on a keyboard or button on a mouse) is being activated by the command</li>
+		<li>Command [press|hold] - how the input value should be sent:<br />    press = press and release the input (e.g. press a key on a keyboard or click a mouse button)<br />    hold = press and hold the input (e.g. hold down a key on a keyboard or a button on a mouse)</li>
+		<li>End [release|repeat|noop] - how to end the action<br />    release = release the held input (requires command  'hold')<br />    repeat = repeat the action to end the action (requires command  'press')<br />    noop = no steps required to end the action, it will timeout in game (requires command == 'press')</li>
+	</ol>
+
+
+	<p>The JSON format for an action is show below for the default forward action (hold down the 'w' key down on a keyboard)</p>
+
+
+<pre>
+{
+"device": "keyboard",
+"input": 'w',
+"command": "hold",
+"end": "release" 
+}
+</pre>
+
+	<a name="Defaults"></a>
+<h2 >Defaults<a href="HSP_Over_REST_API.html%3Fversion=16.html#Defaults" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The default settings for the Holoseat are those settings which are persisted in non-volatile memory.  They represent the most generic use case for the Holoseat and as such make a number of assumptions about the default actions associated with pedaling forward and backward.</p>
+
+
+	<p>Specifically, the default settings assume the only device being emulated is a keyboard, with a command/end pairing of hold/release for both the forward and backward actions.  Further, the default settings assume there are no sprint actions.  These assumptions leave the following minimum set of default settings.</p>
+
+
+	<ol>
+	<li>Enabled [True|False] - whether the Holoseat starts in the enabled state or not</li>
+		<li>Step Size [1-4] - the relative length of single steps (smaller values yield shorter steps)</li>
+		<li>Forward Character [alphanumeric character] - the key to press as the default forward action</li>
+		<li>Reverse Character [alphanumeric character] - the key to press as the default reverse action<br /><br />The JSON format for default settings is show below for the factory defaults.</li>
+	</ol>
+
+
+<pre>
+{
+"enabled": "True",
+"stepsize": 2,
+"forward": 'w',
+"reverse": 's'
+}
+</pre>
+
+	<p>Note, the default settings are written to the Holoseat controller’s EEPROM which has an expected life of approximately 100,000 write operations.  While this should allow for more than sufficient lifespan for the Holoseat controller, we still want to take precautions to avoid malicious code burning through the available write operations.  To that end, the POST method on /api/defaults will be protected to only support calls from the application GUI.  Additionally, there will be a minimum 5 second timeout that must elapse between calls to update the default settings.</p>
+</body>
+</html>

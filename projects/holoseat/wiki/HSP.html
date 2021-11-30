@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - HSP - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../holoseat%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Holoseat"></a>
+<h2 >Holoseat<a href="HSP.html#Holoseat" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/holoseat/repository/entry/trunk/LICENSE.txt" class="external">LICENSE.txt</a></li>
+		<li><a href="Wiki.html" class="wiki-page">Home</a></li>
+		<li><a href="Versions.html" class="wiki-page">Versions</a>
+	<ul>
+	<li><a href="Versioning_Scheme.html" class="wiki-page">Versioning Scheme</a></li>
+	</ul>
+	</li>
+		<li><ins>Agile Process Docs</ins><br /><em>See <strong><a href="https://opendesignengine.net/projects/holoseat/news" class="external">News</a></strong> feed for weekly status reports</em>
+	<ul>
+	<li><strong><ins>PY 2018</ins></strong><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external">Sprints</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRCZuJwnYll_TmSo-xetofzjQEt3Z7iNpluPzayWbqm2HfYWLipouTmh1opgfWy-x-3OGeM2Cf1irWh/pubhtml" class="external">Alpha Test Program Prep User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlnq6BIMuJN-t3uKjflf_q9u3dXzvch0zEVz9O3335_fPiGyPcJxaRJ8IHz4ErCTIw7QrtPh5d_b50/pubhtml" class="external">Run Alpha Test User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyBqnWyXACEEoG5dThw5szRkVltrdHNvFpyaPqF1sNXHrS_fG1w1g861yqTjjyoL1b9xP2xUtNsFz3/pubhtml" class="external">Finalize v1.0 Design User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-DTjsHW_DTbR0hbIvS1Gl_9ItytNimWamw5wmEJ-8K44NpYyw0eQ4GM91nVI-ZRs2-BbQr-S9EA6Z/pubhtml" class="external">Social Media Engagement User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAt6mXMp1lwvffT9mNiNCXENC3wI47ofl_sATVjadmkgGnJroKbMCChzkZctD-wlNnsREUa0c0YqA-/pubhtml" class="external">Prep Initial Crowdsource Campaign User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQWsqkwJTsFScDjahnQ6AhIpC5Qk-BMsfurWkfxy7SmtSotXtgSvEgCC6uB2d_Hch9PUc41MRd4cwm2/pubhtml" class="external">SyndCon 2018 Prep User Stories</a></li>
+		<li><strong><ins>2017</ins></strong><br /><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/spreadsheets/d/1j_eza96PgV3tMuTy_fypZ4SuCLWP2jLKIEG1HgXg5LA/pubhtml" class="external">Development User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1Q1mnwN-Um-nn47k3GF9SzAEblP1sw7Lwtpq4snxCEXk/pubhtml" class="external">SyndCon User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1GGMKfctxfgl5Ath5ld7SL3lvXx7fN759DRMKXVEJSR4/pubhtml" class="external">Biz User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1UKTSqLvZyH9EIJBt7YSVZoF8krdZYmHjoK1yx6pesQs/pubhtml" class="external">Crowd Source User Stories</a></li>
+		<li><strong><ins>2016</ins></strong> <br /><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTnBFoFpZA4rAainOlzv4E7-PW3-BwjTg9SP0iXHz1XZUCjVF_4WYIWttJyHtO5EhO24pYazn8sL7Jh/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/document/d/e/2PACX-1vSVLmaORZab4QV0ZSy5OUl6lSPx2lNc3gud5nB6WSxNrrxkMu7Kz5zObKeKnP8pw7eghYJY3h_xs99L/pub" class="external">User Stories</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Instructions"></a>
+<h4 >Instructions<a href="HSP.html#Instructions" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="User's_Guide.html" class="wiki-page">User&#x27;s Guide</a>
+	<ul>
+	<li><a href="First_Time_Setup.html" class="wiki-page">First Time Setup</a></li>
+		<li><a href="Operating_Instructions.html" class="wiki-page">Operating Instructions</a></li>
+		<li><a href="Alpha_Patches.html" class="wiki-page">Alpha Patches</a></li>
+	</ul>
+	</li>
+		<li><ins>Assembly Information</ins>
+	<ul>
+	<li><a href="BOM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a>
+	<ul>
+	<li><a href="Controller_Assembly.html" class="wiki-page">Controller Assembly</a></li>
+		<li><a href="Sensor_Assembly.html" class="wiki-page">Sensor Assembly</a></li>
+		<li><a href="Snap_Fit_Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Half Assembly</a><br /><a href="Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Assembly</a> (deprecated)</li>
+		<li><a href="Final_Assembly.html" class="wiki-page">Final Assembly</a></li>
+	</ul>
+	</li>
+		<li><a href="Software_Set_Up.html" class="wiki-page">Software Set Up</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Design-Data"></a>
+<h4 >Design Data<a href="HSP.html#Design-Data" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="http://pid.codes/1209/B058/" title="via pid.codes" class="external">USB PID</a>
+	<ul>
+	<li>VID: 0x1209</li>
+		<li>PID: 0xB058</li>
+	</ul>
+	</li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Project Software</a>
+	<ul>
+	<li><a href="HSP.html" class="wiki-page">Holoseat Serial Protocol</a> <br />(<a href="https://opendesignengine.net/projects/holoseat/wiki/HSP?version=26" class="external">Legacy REST Implementation</a>)</li>
+		<li><a href="HSP_Over_REST_API.html" class="wiki-page">HSP Over REST API</a> </li>
+	</ul>
+	</li>
+		<li><a href="Vendor_Documentation.html" class="wiki-page">Vendor Documentation</a></li>
+	</ul>
+
+
+	<a name="Dev-Team-Links"></a>
+<h4 >Dev Team Links<a href="HSP.html#Dev-Team-Links" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Dev_Team_On_Boarding" class="wiki-page new">Dev Team On Boarding</a> (outline)</li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/CHIP_Setup_Instructions" class="wiki-page new">C.H.I.P. Setup Instructions</a></li>
+	</ul>
+
+
+	<a name="Research"></a>
+<h4 >Research<a href="HSP.html#Research" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Resources.html" class="wiki-page">General Resources</a></li>
+		<li><ins>Technical Resources</ins>
+	<ul>
+	<li><a href="General_Technical_Resources.html" class="wiki-page">General</a></li>
+		<li><a href="ME_Resources.html" class="wiki-page">Mech Eng Resources</a></li>
+		<li><a href="Arduino_Resources.html" class="wiki-page">Arduino Resources</a></li>
+		<li><a href="Bluetooth.html" class="wiki-page">Bluetooth</a></li>
+		<li><a href="HID.html" class="wiki-page">HID</a></li>
+		<li><del><a href="NodeBots_Resources.html" class="wiki-page">NodeBots Resources</a></del></li>
+		<li><del><a href="Raspbery_Pi_Resources.html" class="wiki-page">Raspbery Pi Resources</a></del></li>
+		<li><a href="Python_Resources.html" class="wiki-page">Python Resources</a></li>
+		<li><a href="CHIP_Resources.html" class="wiki-page">C.H.I.P. Resources</a></li>
+	</ul>
+	</li>
+		<li><ins>Biz Resources</ins>
+	<ul>
+	<li><a href="Marketing_Resources.html" class="wiki-page">Marketing Resources</a></li>
+		<li><a href="Start_Up_Resources.html" class="wiki-page">Start Up Resources</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Edit-Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Edit Navigation</a><a href="HSP.html#Edit-Navigation" class="wiki-anchor">&para;</a></h3>
+
+<h3>Wiki</h3>
+
+<a href="../../holoseat%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-337-watcher"></span>
+
+
+
+
+
+
+<a href="http://opendesignengine.net/projects/holoseat/wiki/HSP/history" class="icon icon-history">History</a>
+</div>
+
+
+
+
+
+<div class="wiki">
+  <a name="Holoseat-Controller-Communications-Protocol"></a>
+<h1 >Holoseat Controller Communications Protocol<a href="HSP.html#Holoseat-Controller-Communications-Protocol" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="HSP.html#Holoseat-Controller-Communications-Protocol">Holoseat Controller Communications Protocol</a><ul><li><a href="HSP.html#Introduction">Introduction</a></li><li><a href="HSP.html#Serial-Port-Configuration">Serial Port Configuration</a></li><li><a href="HSP.html#Controller-EventsMessages">Controller Events/Messages</a><ul><li><a href="HSP.html#connect-event">connect (event)</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li><li><a href="HSP.html#set_enabled-event">set_enabled (event)</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li><li><a href="HSP.html#set_configuration-event">set_configuration (event)</a><ul><li><a href="HSP.html#Configuration-Schema">Configuration Schema</a></li><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li><li><a href="HSP.html#set_resistance-event-FUTURE-DEVELOPMENT">set_resistance (event) FUTURE DEVELOPMENT</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li></ul>
+</li><li><a href="HSP.html#Client-EventsMessages">Client Events/Messages</a><ul><li><a href="HSP.html#enabled-event">enabled (event)</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li><li><a href="HSP.html#cadence-event">cadence (event)</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li><li><a href="HSP.html#configuration-event">configuration (event)</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li><li><a href="HSP.html#resistance-event-FUTURE-DEVLOPMENT">resistance (event) FUTURE DEVLOPMENT</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li><li><a href="HSP.html#controller_version-message">controller_version (message)</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul>
+</li><li><a href="HSP.html#controller_error-message">controller_error (message)</a><ul><li><a href="HSP.html#Public-Layer-Details">Public Layer Details</a></li><li><a href="HSP.html#Private-Layer-Details">Private Layer Details</a></li></ul></li></ul></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h2 >Introduction<a href="HSP.html#Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The Holoseat controller has a two layer communication stack.  The lower (private) layer is a custom serial protocol, implemented in JSON messages.  The upper (public) layer is a <a href="https://socket.io/" class="external">Socket.io</a> event/message API wrapping around the serial protocol.  This architecture places the bulk of the responsibility for implementation on the firmware, accessed using the private layer.  The public layer is then only responsible for passing messages in/out of the private API and reporting when the Holoseat is disconnected.</p>
+
+
+	<p>This page serves to document both layers.  Each event/message will be covered at a conceptual level followed by layer specific information and examples.</p>
+
+
+	<a name="Serial-Port-Configuration"></a>
+<h2 >Serial Port Configuration<a href="HSP.html#Serial-Port-Configuration" class="wiki-anchor">&para;</a></h2>
+
+
+	<table>
+		<tr>
+			<td><strong>Field</strong></td>
+			<td><strong>Value</strong></td>
+		</tr>
+		<tr>
+			<td>Baud Rate</td>
+			<td>115200</td>
+		</tr>
+		<tr>
+			<td>Data Bits</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>Parity</td>
+			<td>None</td>
+		</tr>
+		<tr>
+			<td>Stop Bit</td>
+			<td>1</td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="Controller-EventsMessages"></a>
+<h2 >Controller Events/Messages<a href="HSP.html#Controller-EventsMessages" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>This section covers the events and message that the controller responds to (aka those sent to the controller by clients).</p>
+
+
+	<p>Note, the various set_* events only broadcast their corresponding client events when they receive data that leads to an actual state change.  So, if the Holoseat is already enabled and set_enabled is called with a value of True, then no state change will occur and in turn the enabled event will not be broadcast to the clients.</p>
+
+
+	<a name="connect-event"></a>
+<h3 >connect (event)<a href="HSP.html#connect-event" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong>  Used to establish client connection</p>
+
+
+	<p><strong>Event Specific Inputs</strong></p>
+
+
+	<ul>
+	<li>none</li>
+	</ul>
+
+
+	<p><strong>Response</strong></p>
+
+
+	<ol>
+	<li>controller-version message sent to connecting client</li>
+		<li>enabled event sent to connecting client</li>
+		<li>cadence event sent to connecting client</li>
+		<li>configuration event sent to connecting client</li>
+		<li>resistance event sent to connecting client FUTURE DEVELOPMENT</li>
+	</ol>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Event Name:</strong> connect<br /><strong>Event Data:</strong> none</p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Serial Message:</strong> <code>{"event_name":"connect", "client_id":&lt;socket.id&gt;}</code></p>
+
+
+	<a name="set_enabled-event"></a>
+<h3 >set_enabled (event)<a href="HSP.html#set_enabled-event" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong>  Used to toggle enabled state</p>
+
+
+	<p><strong>Event Specific Inputs</strong></p>
+
+
+	<ul>
+	<li>enabled: boolean - new enabled state for the holoseat controller</li>
+	</ul>
+
+
+	<p><strong>Response</strong></p>
+
+
+	<ol>
+	<li>enabled event sent to all clients</li>
+	</ol>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Event Name:</strong> set_enabled<br /><strong>Event Data:</strong> <code>{"enabled":&lt;True|False&gt;}</code></p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Serial Message:</strong> <code>{"event_name":"set_enabled", "client_id":&lt;socket.id&gt;, "data":{"enabled":&lt;True|False&gt;}}</code></p>
+
+
+	<a name="set_configuration-event"></a>
+<h3 >set_configuration (event)<a href="HSP.html#set_configuration-event" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong> Used to give Holoseat a new configuration (aka tell it how to react to cadences)</p>
+
+
+	<p><strong>Event Specific Inputs</strong></p>
+
+
+	<ul>
+	<li>configuration: configuration data (see below) or an empty dictionary to reset Holoseat to hardware default configuration (<strong>wasd</strong>)</li>
+	</ul>
+
+
+	<p><strong>Response</strong></p>
+
+
+	<ol>
+	<li>configuration event sent to connecting client</li>
+	</ol>
+
+
+	<a name="Configuration-Schema"></a>
+<h4 >Configuration Schema<a href="HSP.html#Configuration-Schema" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li>name(string): label for the current configuration </li>
+		<li>forward = dictionary: how to respond to forward pedaling
+	<ul>
+	<li>hid(string <"keyboard" | "mouse" | "joypad">): what device is being emulated for this direction (v1.0.x will only support keyboard)</li>
+		<li>responses(array of dictionaries): list of responses keyed off of trigger cadences
+	<ul>
+	<li>triggerCadence(int): action occurs when current cadence >= triggerCadence; use 0 for at all cadences</li>
+		<li>actions(array): set of discrete hid actions to take (e.g. [“shift”, “w”] could indicate pressing the shift+w on keyboard); specifics are device emulation dependent, will be specified in a separate doc; actions are always to hold some hid signal until cadence changes and action is reevaluated (in other words actions cannot be single press/click)</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>reverse(dictionary): how to respond to reverse pedaling (same structure as forward)</li>
+	</ul>
+
+
+	<h5>Hardware defaults in configuration JSON</h5>
+
+
+	<p><code>{"name":"wasd", "forward":{"hid":"keyboard", "responses":[{"triggerCadence":0, "actions":["w"]}]}, "reverse":{"hid":"keyboard", "responses":[{"triggerCadence":0, "actions":["s"]}]}}</code></p>
+
+
+	<p>This string would be hard coded into the firmware and used to initialize the default configuration object.</p>
+
+
+	<h5>The No Op configuration JSON</h5>
+
+
+	<p>Used by games responding to the cadence stream instead of hid actions.</p>
+
+
+	<p><code>{"name":"noop", "forward":{"hid":"keyboard", "responses":[]}, "reverse":{"hid":"keyboard", "responses":[]}}</code></p>
+
+
+	<p>Note the use of empty arrays for the responses.  This can be used separately for configurations where only one direction makes sense.</p>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Event Name:</strong> set_configuration<br /><strong>Event Data:</strong> <code>{"configuration":&lt;configuration object&gt;}</code></p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Serial Message:</strong> <code>{"event_name":"set_configuration", "client_id":&lt;socket.id&gt;, "data":{"configuration":&lt;configuration object&gt;}}</code></p>
+
+
+	<a name="set_resistance-event-FUTURE-DEVELOPMENT"></a>
+<h3 >set_resistance (event) FUTURE DEVELOPMENT<a href="HSP.html#set_resistance-event-FUTURE-DEVELOPMENT" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong> Manage the resistance level of the execise equipment Holoseat is connected to</p>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>TBD</p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>TBD</p>
+
+
+	<a name="Client-EventsMessages"></a>
+<h2 >Client Events/Messages<a href="HSP.html#Client-EventsMessages" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>This section covers the events and message that clients must respond to (aka those sent by the controller to clients).</p>
+
+
+	<p>Note, events and messages read from the private layer may leave out the client_id.  No client_id indicate public layer shoud broadcast the event/message to all connects clients (this ia the typcial behavior).  Otherwise, the event/message should be sent only to th specified client.</p>
+
+
+	<a name="enabled-event"></a>
+<h3 >enabled (event)<a href="HSP.html#enabled-event" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong> Updates clients of enabled state when it changes</p>
+
+
+	<p><strong>Event Specific Inputs</strong></p>
+
+
+	<ul>
+	<li>state: string indicating state <"enabled" | "disabled" | "disconnected"></li>
+	</ul>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Event Name:</strong> enabled<br /><strong>Event Data:</strong> <code>{"state":<"enabled" | "disabled" | "disconnected">}</code></p>
+
+
+	<p>Note, The public layer is the layer which determines if the state is "disconnected". This determination is made every time an event is handled by the public layer.  If Holoseat is disconnectd, this event will be broadcast to all clients regardless of value in the client_id field or the original event received.</p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Serial Message:</strong> <code>{"event_name":"enabled", "client_id":&lt;socket.id&gt;, "data":{"state":<"enabled" | "disabled">}}</code></p>
+
+
+	<a name="cadence-event"></a>
+<h3 >cadence (event)<a href="HSP.html#cadence-event" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong> Updates clients of cadence when it changes</p>
+
+
+	<p><strong>Event Specific Inputs</strong></p>
+
+
+	<ul>
+	<li>cadence: integer indicating how fast user is pedalling/stepping</li>
+	</ul>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Event Name:</strong> cadence<br /><strong>Event Data:</strong> <code>{"cadence":&lt;current cadence&gt;}</code></p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Serial Message:</strong> <code>{"event_name":"cadence", "client_id":&lt;socket.id&gt;, "data":{"cadence":&lt;current cadence&gt;}}</code></p>
+
+
+	<a name="configuration-event"></a>
+<h3 >configuration (event)<a href="HSP.html#configuration-event" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong> Updates clients of cadence when it changes</p>
+
+
+	<p><strong>Event Specific Inputs</strong></p>
+
+
+	<ul>
+	<li>configuration: configuruation data (see above)</li>
+	</ul>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Event Name:</strong> configuration<br /><strong>Event Data:</strong> <code>{"configuration":&lt;configuration object&gt;}</code></p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Serial Message:</strong> <code>{"event_name":"configuration", "client_id":&lt;socket.id&gt;, "data":{"configuration":&lt;configuration object&gt;}}</code></p>
+
+
+	<a name="resistance-event-FUTURE-DEVLOPMENT"></a>
+<h3 >resistance (event) FUTURE DEVLOPMENT<a href="HSP.html#resistance-event-FUTURE-DEVLOPMENT" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong> Updates clients on exercise equipment resistance</p>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>TBD</p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p>TBD</p>
+
+
+	<a name="controller_version-message"></a>
+<h3 >controller_version (message)<a href="HSP.html#controller_version-message" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong> Inform clients of attached Holoseat device and its hardware and firmare versions (see Version Scheme for details).</p>
+
+
+	<p><strong>Message Specific Inputs</strong></p>
+
+
+	<ul>
+	<li>type: "controller_version" </li>
+		<li>message (dictionary): 
+	<ul>
+	<li>device (string): name of connected device (e.g. "Holoseat", "Holoseat Alpha")</li>
+		<li>hwVer (string): major version number of hardware (e.g. 1)</li>
+		<li>fwVer (string): major.minor.patch version number of firmware (e.g. 1.0.0)</li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Message Data:</strong> <code>{"type":"controller_version", "message":{"device":"&lt;device name&gt;", "hwVer":"&lt;major version number&gt;", "fwVer":"&lt;major.minor.patch version number&gt;"}}</code></p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Serial Message:</strong> <code>{"event_name":"message", "client_id":&lt;socket.id&gt;, "data":{"type":"controller_version", "message":{"device":"&lt;device name&gt;", "hwVer":"&lt;major version number&gt;", "fwVer":"&lt;major.minor.patch version number&gt;"}}}</code></p>
+
+
+	<a name="controller_error-message"></a>
+<h3 >controller_error (message)<a href="HSP.html#controller_error-message" class="wiki-anchor">&para;</a></h3>
+
+
+	<p><strong>Purpose:</strong> Inform clients of error message</p>
+
+
+	<p><strong>Message Specific Data</strong></p>
+
+
+	<ul>
+	<li>type: contoller_error</li>
+		<li>message (string): the error message from the controller</li>
+	</ul>
+
+
+	<a name="Public-Layer-Details"></a>
+<h4 >Public Layer Details<a href="HSP.html#Public-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Message Data:</strong> <code>{"type":"controller_error", "message":"&lt;error message&gt;"}</code></p>
+
+
+	<a name="Private-Layer-Details"></a>
+<h4 >Private Layer Details<a href="HSP.html#Private-Layer-Details" class="wiki-anchor">&para;</a></h4>
+
+
+	<p><strong>Serial Message:</strong> <code>{"event_name":"message", "client_id":&lt;socket.id&gt;, "data":{"type":"controller_error", "message":"&lt;error message&gt;"}}</code></p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/HSP.html?version=27" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/HSP.txt?version=27" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/HSP">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

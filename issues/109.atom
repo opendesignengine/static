@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link href="http://opendesignengine.net/issues/109.atom" rel="self"/>
+  <link href="http://opendesignengine.net/" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-01-19T20:24:23+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <entry>
+    <title>Shepard Test Stand - Milestone #109: Test and Evaluate New Force Sensing Resistor</title>
+    <link href="http://opendesignengine.net/issues/109" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/109?journal_id=168</id>
+    <updated>2013-01-19T20:24:23+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Target version&lt;/strong&gt; set to &lt;i&gt;v1.1 Shepard Test Stand - Prototype&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard Test Stand - Milestone #109: Test and Evaluate New Force Sensing Resistor</title>
+    <link href="http://opendesignengine.net/issues/109" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/109?journal_id=193</id>
+    <updated>2013-06-24T06:53:13+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; changed from &lt;i&gt;New&lt;/i&gt; to &lt;i&gt;Closed&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Aaron Harper found a load cell that was cheaper than the upgraded FSR we were going to use. The load cell worked well in testing and so the FSR design has been abandoned.&lt;/p&gt;    </content>
+  </entry>
+</feed>

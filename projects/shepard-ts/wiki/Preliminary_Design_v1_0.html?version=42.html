@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Preliminary Design v1 0</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Shepard-Test-Stand-Preliminary-Design-v10"></a>
+<h1 >Shepard Test Stand Preliminary Design v1.0<a href="Preliminary_Design_v1_0.html%3Fversion=42.html#Shepard-Test-Stand-Preliminary-Design-v10" class="wiki-anchor">&para;</a></h1>
+
+
+	<p>This document has been relinked to the Preliminary Design document <a href="https://opendesignengine.net/projects/shepard-ts/wiki/Preliminary_Design" class="external">here</a> as part of our versioning system update.</p>
+
+
+	<ul class="toc"><li><a href="Preliminary_Design_v1_0.html%3Fversion=42.html#Shepard-Test-Stand-Preliminary-Design-v10">Shepard Test Stand Preliminary Design v1.0</a><ul><li><ul><li><a href="Preliminary_Design_v1_0.html%3Fversion=42.html#Introduction">Introduction</a></li><li><a href="Preliminary_Design_v1_0.html%3Fversion=42.html#Preliminary-Mechanical-Design">Preliminary Mechanical Design</a></li><li><a href="Preliminary_Design_v1_0.html%3Fversion=42.html#Preliminary-Data-Acquisition-Design">Preliminary Data Acquisition Design</a></li></ul></li></ul></li></ul>
+
+
+	<a name="Introduction"></a>
+<h3 >Introduction<a href="Preliminary_Design_v1_0.html%3Fversion=42.html#Introduction" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>The preliminary design discussion is broken down into two parts in the forums.</p>
+
+
+	<ol>
+	<li><a href="https://opendesignengine.net/boards/4/topics/158" class="external">Mechanical systems</a></li>
+		<li><a href="https://opendesignengine.net/boards/4/topics/159" class="external">Data Acquisition (DAQ) Systems</a></li>
+	</ol>
+
+
+	<p>Most of this preliminary design work was done via Google+ Hangout. The meeting minutes from those hangouts will be distilled down into a form suitable for this document, but in the meantime you can find links to the raw meeting minutes below. You will most likely need to request permission to view the document.</p>
+
+
+	<ol>
+	<li><a href="https://docs.google.com/document/d/1M5qMFE-SNDYR_yHCI5XGnKLK1Xq17f7NVWNOhb3XkyU/edit" class="external">Mechanical Hangout Minutes</a></li>
+		<li><a href="https://docs.google.com/document/d/1c4HOtpcp2yDxln5aTmMffk5PxDC5d3YM5UA53KJLoi0/edit" class="external">Data Acquisition Hangout Minutes</a></li>
+	</ol>
+
+
+	<p><em>Note: Need to get all of the minutes linked here</em></p>
+
+
+	<a name="Preliminary-Mechanical-Design"></a>
+<h3 >Preliminary Mechanical Design<a href="Preliminary_Design_v1_0.html%3Fversion=42.html#Preliminary-Mechanical-Design" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>STSPM 1.1</strong> We're going to attempt to use <a href="http://sourceforge.net/apps/mediawiki/free-cad/index.php?title=Main_Page" class="external">FreeCAD</a> as the base CAD program for this project.
+	<ul>
+	<li><strong>STSPM 1.1.1</strong> Files will be stored on "Open Design Engine":opendesignengine.net in the default FreeCAD file format.</li>
+		<li><strong>STSPM 1.1.2</strong> For milestones STL versions will be saved for models, and DXF and PDF formats will be saved for draft files.</li>
+	</ul>
+	</li>
+		<li><strong>STSPM 2.1</strong> The over all design will be composed of three principle components 
+	<ul>
+	<li><strong>STSPM 2.1.1</strong> The body will hold the other system elements (both mechanical and DAQ related) with sufficient weight to prevent movement</li>
+		<li><strong>STSPM 2.1.2</strong> The rail system will limit the motor's movement to the x-axis</li>
+		<li><strong>STSPM 2.1.3</strong> The motor mount will connect the motor under test to the rail system </li>
+	</ul>
+	</li>
+		<li><strong>STSPM 2.2</strong> Concepts considered for the body design
+	<ul>
+	<li><strong>STSPM 2.2.1</strong> <a href="https://lh5.googleusercontent.com/-7g_Oh9iY94E/T_KiaNjAzXI/AAAAAAAABp8/8_6TBhH77Og/s721/12+-+1" class="external">Integrated body/rail system</a> similar to <a href="http://reprap.org/wiki/File:Plumb-1.jpg" class="external">RepRap 3D Printer</a></li>
+		<li><strong>STSPM 2.2.2</strong> <a href="https://lh6.googleusercontent.com/-EL0FCBNC7TU/T_KiaPZghdI/AAAAAAAABqA/IPtEM64lX5E/s801/12+-+2" class="external">Open Box</a> design</li>
+		<li><strong>STSPM 2.2.3</strong> Back plate and beam(s)</li>
+	</ul>
+	</li>
+		<li><strong>STSPM 2.3</strong> Concepts considered for the rail system design
+	<ul>
+	<li><strong>STSPM 2.3.1</strong> Smooth rods and linear bearings (number of rods depends on the body design)</li>
+		<li><strong>STSPM 2.3.2</strong> Ball bearing drawer guide</li>
+	</ul>
+	</li>
+		<li><strong>STSPM 2.4</strong> Concepts considered for the motor mount design
+	<ul>
+	<li><strong>STSPM 2.4.1</strong> Estes motor mount placed in a rocket body tube</li>
+		<li><strong>STSPM 2.4.2</strong> An aluminum tube</li>
+		<li><strong>STSPM 2.4.3</strong> Estes motor mount with a plumbing t-connector on the back to route the ejection charge away from the force sensor</li>
+	</ul>
+	</li>
+		<li><strong>STSPM 2.4</strong> Some sort of shielding such as chicken wire or plexi-glass may be used to protect observers from runaway rockets.</li>
+		<li><strong>STSPM 2.5</strong> The thermocouple will be attached to the motor casing with Kapton tape.
+	<ul>
+	<li><strong>STSPM 2.5.1</strong> The thermocouple leads will be routed away from the motor exhaust and in such a way that it won't interfere with the movement of the motor mount carriage.</li>
+	</ul>
+	</li>
+		<li><strong>STSPM 2.6</strong> A Mount will be created for to attach the selected force sensor to the body such that it will interface with the motor mount</li>
+		<li><strong>STSPM 2.7</strong> Selected design concept: back plate and beam body (covering a concrete block for added weight), ball bearing drawer guide rail system, and Estes motor mount with a plumbing t-connector</li>
+	</ul>
+
+
+<strong>Preliminary Mechanical Cost Estimates (For One-Off Quantities)</strong>
+	<table>
+		<tr>
+			<th>Item </th>
+			<th>Cost (Shipping to Midwest U.S.)</th>
+			<th>Approx Total </th>
+			<th>Link </th>
+		</tr>
+		<tr>
+			<td> 8' 2x10 pine board </td>
+			<td> $7.75 </td>
+			<td> $7.75 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> 8' 2x4 pine board </td>
+			<td> $2.50 </td>
+			<td> $2.50 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> 4"x8"x16" solid concrete block </td>
+			<td> $1.50 </td>
+			<td> $1.50 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> Small Ball Bearing Drawer Guide  </td>
+			<td> $6.00 </td>
+			<td> $6.00 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> Pulley </td>
+			<td> $3.00 </td>
+			<td> $3.00 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> Estes D/E Motor Mount </td>
+			<td> $9.00 </td>
+			<td> $9.00 </td>
+			<td> <a class="external" href="http://bit.ly/Rrn330">http://bit.ly/Rrn330</a> </td>
+		</tr>
+		<tr>
+			<td> Estes Motor Adapters </td>
+			<td> $6.00 </td>
+			<td> $6.00 </td>
+			<td> <a class="external" href="http://bit.ly/MYMnNg">http://bit.ly/MYMnNg</a> </td>
+		</tr>
+		<tr>
+			<td> Copper T-Fitting </td>
+			<td> $3.00 </td>
+			<td> $3.00 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> High Heat Spray Primer </td>
+			<td> $8.00 </td>
+			<td> $8.00 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> High Heat Spray Paint </td>
+			<td> $5.00 </td>
+			<td> $5.00 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> Misc Hardware </td>
+			<td> $5.00 </td>
+			<td> $5.00 </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td> <strong>Total</strong></td>
+			<td> </td>
+			<td> $56.75 </td>
+			<td> </td>
+		</tr>
+	</table>
+
+
+
+
+	<p><em>Note: Need to address shielding in the cost table above.</em></p>
+
+
+	<a name="Preliminary-Data-Acquisition-Design"></a>
+<h3 >Preliminary Data Acquisition Design<a href="Preliminary_Design_v1_0.html%3Fversion=42.html#Preliminary-Data-Acquisition-Design" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li><strong>STSPD 1.1</strong> An <a href="http://www.arduino.cc/" class="external">Arduino Uno</a> will be used as the data collection platform which includes the ADC interface with the load cell and thermocouple(s).</li>
+		<li><strong>STSPD 1.2</strong> A <a href="http://www.trossenrobotics.com/c/robot-force-sensor-fsr.aspx" class="external">Force Sensing Resistor</a> (FSR) will be used for the load cell. We will need to watch for hysteresis issues with this type of load sensor.
+	<ul>
+	<li><strong>STSPD 1.2.1</strong> A <a href="http://banananan.wordpress.com/2012/01/12/pressure-sensor-arduino-processing-signal-analysis/" class="external">unity gain amplifier</a> will be used to obtain measurable output from this sensor.</li>
+	</ul>
+	</li>
+		<li><strong>STSPD 1.3</strong> A <a href="http://adafruit.com/products/270" class="external">type K glass braid insulated thermocouple</a> will be used to measure the casing temperature of the motor.
+	<ul>
+	<li><strong>STSPD 1.3.1</strong> An Adafruit <a href="http://adafruit.com/products/269" class="external">thermocouple amplifier</a> will be used to condition the thermocouple signal for the Arduino's analog inputs. This requires SPI communication with the Arduino.</li>
+	</ul>
+	</li>
+		<li><strong>STSPD 1.4</strong> The data will that is recorded by the Arduino will be streamed over the USB connection unless it is found that is not fast enough.
+	<ul>
+	<li><strong>STSPD 1.4.1</strong> The data format will consist of a data point coupled with a simple time stamp.</li>
+		<li><strong>STSPD 1.4.2</strong> Data processing will be handled by the computer. This will include the conversion from voltage to force due to the logarithmic nature of the force sensing resistor.</li>
+	</ul>
+	</li>
+		<li><strong>STSPD 1.5</strong> The Wiring programming language will be used to program the Arduino, and Processing will be used for any computer-side code.</li>
+	</ul>
+
+
+<strong>Preliminary DAQ Cost Estimates (For One-Off Quantities)</strong>
+	<table>
+		<tr>
+			<th>Item </th>
+			<th>Cost (Shipping to Midwest U.S.)</th>
+			<th>Approx Total </th>
+			<th>Link </th>
+		</tr>
+		<tr>
+			<td> Arduino Uno R3 </td>
+			<td> $29.95 + shipping </td>
+			<td> $35 </td>
+			<td> <a class="external" href="http://bit.ly/N5kizl">http://bit.ly/N5kizl</a> </td>
+		</tr>
+		<tr>
+			<td> 1.5 Inch Square FSR </td>
+			<td> $7.95 + shipping </td>
+			<td> $16 </td>
+			<td> <a class="external" href="http://bit.ly/Pd3ztz">http://bit.ly/Pd3ztz</a> </td>
+		</tr>
+		<tr>
+			<td> TLV2374 Op Amp </td>
+			<td> $1.71 + shipping </td>
+			<td> $8 </td>
+			<td> <a class="external" href="http://bit.ly/OcVA12">http://bit.ly/OcVA12</a> </td>
+		</tr>
+		<tr>
+			<td> 560 Ohm Resistor x 2 </td>
+			<td> $0.20 (combined w/ shipping above) </td>
+			<td> $0.20 </td>
+			<td> <a class="external" href="http://bit.ly/M3duBJ">http://bit.ly/M3duBJ</a> </td>
+		</tr>
+		<tr>
+			<td> Type-K Glass Braid Insulated Thermocouple </td>
+			<td> $10.00 + shipping </td>
+			<td> $13.87 </td>
+			<td> <a class="external" href="http://bit.ly/NPRosE">http://bit.ly/NPRosE</a> </td>
+		</tr>
+		<tr>
+			<td> Adafruit Thermocouple Amplifier </td>
+			<td> $17.50 + shipping </td>
+			<td> $21.50 </td>
+			<td> <a class="external" href="http://bit.ly/OqVc2A">http://bit.ly/OqVc2A</a> </td>
+		</tr>
+		<tr>
+			<td> Misc (Wire, etc) </td>
+			<td> </td>
+			<td> $5.00 </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> <strong>Total</strong></td>
+			<td> </td>
+			<td> $99.57 </td>
+			<td> </td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,15 @@
+h1. Setup Instructions
+
+{{toc}}
+
+h2. On Linux
+
+These instructions were developed using a PC laptop running Ubuntu 14.04 64-bit.
+
+# Download the "install script":https://opendesignengine.net/projects/mtk/repository/revisions/36/raw/trunk/install/linux/mtk_setup_script.sh from the MTK repository (rev 36 is the current working build)
+# Open a terminal window and change to the directory where you downloaded the install script (e.g. ~/Downloads/)
+# Add execute permissions to the install script 
+@chmod +x ./mtk_setup_script.sh@
+# Run the install script (you will be prompted for your password as the script uses sudo)
+@./mtk_setup_script.sh@ 
+# Be patient and answer yes to any prompts (the install script needs to download, install, and update a number of tools to fully configure MTK)

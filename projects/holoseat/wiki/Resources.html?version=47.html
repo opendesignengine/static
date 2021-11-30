@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Resources</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Resources"></a>
+<h1 >Resources<a href="Resources.html%3Fversion=47.html#Resources" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="Resources.html%3Fversion=47.html#Resources">Resources</a><ul><li><a href="Resources.html%3Fversion=47.html#Moving-from-keyboard-to-joystick-interface">Moving from keyboard to joystick interface</a></li><li><a href="Resources.html%3Fversion=47.html#Dealing-with-DataSignals">Dealing with Data/Signals</a></li><li><a href="Resources.html%3Fversion=47.html#Sensors-considered">Sensors considered</a></li></ul></li></ul>
+
+
+	<a name="Moving-from-keyboard-to-joystick-interface"></a>
+<h2 >Moving from keyboard to joystick interface<a href="Resources.html%3Fversion=47.html#Moving-from-keyboard-to-joystick-interface" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://github.com/sandeepmistry/node-chip-io/issues/14" class="external">Support thread on joysticks and CHIP plus NodeBots</a></li>
+		<li><a href="http://www.imaginaryindustries.com/blog/?p=80" class="external">Turning an Arduino Leonardo into a joystick</a>  </li>
+		<li><a href="http://arduino.cc/en/Main/ArduinoUSBHostShield" class="external">USB Host Shield</a></li>
+		<li><a href="https://github.com/tloimu/adapt-ffb-joy/blob/wiki/" class="external">Gameport to USB Joystick using 32U4</a></li>
+		<li><a href="https://learn.adafruit.com/how-to-sign-windows-drivers-installer" class="external">How to sign Windows drivers and executables</a></li>
+	</ul>
+
+
+	<a name="Dealing-with-DataSignals"></a>
+<h2 >Dealing with Data/Signals<a href="Resources.html%3Fversion=47.html#Dealing-with-DataSignals" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="http://www.adafruit.com/products/1456" class="external">USB Tester from Adafruit</a> - might be useful for later prototype development</li>
+		<li><a href="http://arduino.cc/en/Tutorial/Smoothing" class="external">Data Smoothing</a> - Arduino tutorial dealing with smoothing out noisy data</li>
+	</ul>
+
+
+	<a name="Sensors-considered"></a>
+<h2 >Sensors considered<a href="Resources.html%3Fversion=47.html#Sensors-considered" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><strong><a href="http://en.wikipedia.org/wiki/Hall_effect_sensor" class="external">Hall Effect Sensor</a></strong> - selected for v0.3+
+	<ul>
+	<li><a href="http://playground.arduino.cc/Code/HallEffect" class="external">Arduino Playground</a></li>
+		<li><a href="http://bildr.org/2011/04/various-hall-effect-sensors/" class="external">Blog post covering three types of Hall Effect Sensors</a> - this is a very good resource, especially with respect to the types of sensors to consider</li>
+		<li><a href="http://playground.arduino.cc/Main/ReadingRPM" class="external">Arduino post on using Hall Effect sensor to measure RPM</a></li>
+		<li><a href="http://forum.arduino.cc/index.php?topic=208227.0" class="external">Forum post about measuring RPM and resetting to 0 when motion stops</a> - lengthy discussion and covers many of our goals</li>
+		<li><a href="http://forum.arduino.cc/index.php?topic=185174.0" class="external">Forum post about calculating RPM on a bike</a> - not really enough details here, but still documenting it</li>
+	</ul>
+	</li>
+		<li>Reed switch (<a href="http://www.instructables.com/id/Arduino-Based-Optical-Tachometer/" class="external">Link 1</a> | <a href="http://www.instructables.com/id/Arduino-Bike-Speedometer/" class="external">Link 2</a>) - v0.1 and v0.2 used reed switches (originally off of an old Bike Computer, now purpose selected)</li>
+		<li>Rotary Encoder
+	<ul>
+	<li><a href="http://playground.arduino.cc/Main/RotaryEncoders" class="external">Rotary Encoders</a></li>
+		<li><a href="http://christian.liljedahl.dk/guides/simple-rotary-encoder" class="external">Homemade Rotary Encoder</a> - used in very first prototype, but quickly abandoned because the mechanical interface was difficult to maintain</li>
+	</ul></li>
+	</ul>
+</body>
+</html>

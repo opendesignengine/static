@@ -1,0 +1,20 @@
+h1. Operating Instructions
+
+{{>toc}}
+
+h2. Using Holoseat in Games
+
+Holoseat supports any game which uses *wasd* control schemes.  Pedal forward to use 'w' actions and pedal backwards to use 's' actions.  In both cases simply stop pedaling to stop the current action.  
+
+h2. Controlling Holoseat
+
+Holoseat has two modes, indicated by the illuminated 'h' key on the controller.
+* Enabled (key is lit) - Holoseat will send key strokes to the PC when you pedal
+* Disabled (key is unlit) - Holoseat will not send key strokes to PC when you pedal
+
+h2. Troubleshooting
+
+h3. I am pedaling, but my character is not walking.
+
+* Is the illuminated 'h' key  lit?  If not, enable the Holoseat by pressing the illuminated 'h' key.
+* Is the cable connecting the sensor to the controller plugged in firmly at both ends?  If not, disconnect Holoseat from the computer, connect the sensor to the controller, then connect the Holoseat back to the computer.

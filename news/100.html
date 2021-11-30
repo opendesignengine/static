@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - PY18 Sprint 1A Review and Retrospective - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/holoseat.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/holoseat/news.html" class="news selected">News</a></li>
+<li><a href="../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/holoseat/boards.html" class="boards">Forums</a></li>
+<li><a href="../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-100-watcher"></span>
+
+
+</div>
+
+<h2>PY18 Sprint 1A Review and Retrospective</h2>
+
+
+
+<p><em>Moving from prototype development as a team of 2 to product development and including volunteers is a big change.  Lots of important lessons to be learned from this sprint.</em><br />
+<span class="author">Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-12-09" title="12/09/2017 05:59 pm">almost 5 years</a> ago</span></p>
+<div class="wiki">
+<p><strong>Review</strong></p>
+
+
+	<p><ins>Claiming Done</ins></p>
+
+
+	<ul>
+	<li>V04-27: Order at quantity any parts where we have high confidence and a reasonable discount</li>
+		<li>V04-16: Place order for replacement components on the v0.4 BOM for confirming suitability</li>
+		<li>V04-49: Implement python serial library for accessing new version of HSP</li>
+		<li>V04-60: Design Rest API in seperate thread that is running using serial protocol</li>
+		<li>V04-50: Implement foundation of desktop app in flask</li>
+		<li>V04-51: Implement Serial Monitor feature</li>
+		<li>V04-71: Branding on keycap</li>
+		<li>SME-02: Split social media accounts out into a seperate folder</li>
+		<li>SME-03: share only the social media folder with Jazmint</li>
+		<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwors securely for social media</li>
+		<li>SME-07: Publish at least one blog post in December</li>
+	</ul>
+
+
+	<p><ins>Not Claiming Done</ins></p>
+
+
+	<ul>
+	<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step</li>
+		<li>V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping)</li>
+		<li>V04-15: Adapt test rig to use the new auto-adjusting cadence firmware</li>
+		<li>V04-26: Assemble a test Wings to verify design (on proto-wing)</li>
+		<li>V04-24: Have layout double checked by a volunteer with layout experience</li>
+		<li>V04-52: Figure out how to stabilize the TRRS jack when using female header</li>
+		<li>V04-30: Test prints of both housings to confirm they will work</li>
+		<li>V04-28: Design a housing in Fusion 360 for the sensor and TRRS jack (Sensor Housing)</li>
+		<li>V04-29: Design a housing in Fusion 360 for the Feather and daughter board as well as the LED button and TRRS jack (Controller Housing)</li>
+		<li>V04-59: Design scheme for checking the hardware version so the software can find compatibility</li>
+		<li>V04-58: Implement hardware versioning system that can be detected by Holoseat software</li>
+		<li>V04-47: Develop and document outline of new version of HSP</li>
+		<li>V04-48: Implement new version of HSP in controller firmware</li>
+		<li>V04-61: Implement v0.4 required REST API methods for HSP</li>
+		<li>RAT-12: Ask legal aid about collecting health data and verify requirements for data security</li>
+		<li>V10-01: Have a volunteer familiar with injection molding review the Sensor Housing and make suggestions to allow the design to be usable for both</li>
+		<li>V10-02: Have a volunteer familiar with injection molding review the Controller Housing and make suggestions to allow the design to be usable for both</li>
+		<li>SME-11: Publish overview of gamification and gamification of exercise</li>
+		<li>SME-06: Publish at least one blog post in November</li>
+		<li>SME-10: Research gamify exercise competition (e.g. Pelaton and Virzoom)</li>
+		<li>SME-13: Research exerfy games competition (e.g. PC Gamer Bike and Hack a Day DIY projects)</li>
+		<li>PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat</li>
+	</ul>
+
+
+	<p><strong>Retrospective</strong></p>
+
+
+	<p><ins>What went well?</ins></p>
+
+
+	<ul>
+	<li>All component level updates have been completed and verified (still need to verify a couple of assemblies using new components)</li>
+		<li>New software architecture is completed and verified at firmware and software level</li>
+		<li>Engaged with a lawyer, finally</li>
+		<li>Engaged with Roanoke Small Biz Dev Council</li>
+	</ul>
+
+
+	<p><ins>What did not go well?</ins></p>
+
+
+	<ul>
+	<li>Too many PBIs not done</li>
+		<li>We did not attend all stand ups, or even virtual stand ups</li>
+		<li>Did not do a job of engaging with volunteers</li>
+		<li>Spent too much time in this and last sprint trying to engage DC biz dev center</li>
+		<li>Got overly ambitious (just too many PBIs period - again!)</li>
+		<li>Set unrealistic goals for Alpha delivery and have still not accepted what it will take to finish the Alphas</li>
+		<li>Not prioritizing communication enough (especially outside of core dev team)</li>
+		<li>Personal feelings of not doing a good job of personal time management and task list</li>
+	</ul>
+
+
+	<p><ins>What can we do better?</ins></p>
+
+
+	<ul>
+	<li>Find additional volunteers (especially CAD and Marketing)</li>
+		<li>Move "will do"s from stand ups each week to personal task list (on phone)</li>
+		<li>Develop a metric for determining the size of a planned sprint and select an initial cut off point for max size of sprint work (to include how we address outsourced work)</li>
+		<li>Avoid running short sprints in the future, and when we have to run short sprints, the total size of the sprint needs to be reduced from normal</li>
+		<li>Reexamine how we address blocks so they are about what is preventing us from making progress</li>
+		<li>Address lack of time to commit in how much and what goes into "will do" for a stand up (not treat as blocks)</li>
+		<li>Prioritize handling real blocks to remove the thing preventing progress/recognize if block means PBI needs to be dropped from sprint</li>
+		<li>Develop cookie-cutter set of external communication templates that are triggered by specific types of content/events (aka poor man's communication plan)</li>
+	</ul>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/517" class="icon icon-contributor-license">Taylor Wilson</a> <a href="../projects/holoseat/activity%3Ffrom=2018-05-15.html" title="05/15/2018 01:13 pm">over 4 years</a> ago</h4>
+    <p>I need recommendation which will be very helpful for me anyone can tell me? I need for <a href="http://www.AOneEssays.net/" class="external">AOneEssays | Custom Essay Writing Service</a> and we have 55 users.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/552" class="icon icon-contributor-license">Brielle Orr</a> <a href="../projects/holoseat/activity%3Ffrom=2018-07-02.html" title="07/02/2018 11:15 am">over 4 years</a> ago</h4>
+    <p>Latest information about calming procedures as you share here this is quite helpful for relevant people. Students can buy written essay papers from <a href="https://customessaysreviews.com/mycustomessay-com-review/" class="external">mycustomessays.org</a> here those are also easy for them in editing.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/561" class="icon icon-contributor-license">sheeraz khatri</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-08-10" title="08/10/2018 09:09 pm">about 4 years</a> ago</h4>
+    <p>It is perfect time to make some plans for the future and it is time to be happy. I've read this post and if I could I desire to suggest you some interesting things or suggestions. Perhaps you could write next articles referring to this article. I want to read more things about it!   <a href="https://www.texttriggers.com/text-chemistry-review" class="external">Text Chemistry Review</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/561" class="icon icon-contributor-license">sheeraz khatri</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-08-11" title="08/11/2018 08:21 am">about 4 years</a> ago</h4>
+    <p>Wonderful illustrated information. I thank you about that. No doubt it will be very useful for my future projects. Would like to see some other posts on the same subject!  <a href="https://www.naturalfoodseries.com/eczema-symptoms-treatment" class="external">Eczema</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/561" class="icon icon-contributor-license">sheeraz khatri</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-08-11" title="08/11/2018 08:29 am">about 4 years</a> ago</h4>
+    <p>Really nice and interesting post. I was looking for this kind of information and enjoyed reading this one.  <a href="https://www.naturalfoodseries.com/11-benefits-intermittent-fasting" class="external">Intermittent Fasting</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/561" class="icon icon-contributor-license">sheeraz khatri</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-08-11" title="08/11/2018 08:37 am">about 4 years</a> ago</h4>
+    <p>I am a new user of this site so here i saw multiple articles and posts posted by this site,I curious more interest in some of them hope you will give more information on this topics in your next articles.  <a href="https://www.naturalfoodseries.com/chronic-pain-symptoms-causes-treatments" class="external">Chronic Pain</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/561" class="icon icon-contributor-license">sheeraz khatri</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-08-11" title="08/11/2018 08:51 pm">about 4 years</a> ago</h4>
+    <p>I wish more writers of this sort of substance would take the time you did to explore and compose so well. I am exceptionally awed with your vision and knowledge.  <a href="https://www.languageofdesires.com/text-chemistry-examples-review/" class="external">Text Chemistry</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/561" class="icon icon-contributor-license">sheeraz khatri</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-08-11" title="08/11/2018 09:06 pm">about 4 years</a> ago</h4>
+    <p>You have done a amazing job with you website  <a href="https://www.naturalfoodseries.com/strep-throat-symptoms-causes-and-treatment" class="external">Strep Throat</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/561" class="icon icon-contributor-license">sheeraz khatri</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-08-11" title="08/11/2018 09:30 pm">about 4 years</a> ago</h4>
+    <p>Here at this site really the fastidious material collection so that everybody can enjoy a lot.   <a href="https://www.naturalfoodseries.com/12-signs-kidney-infection" class="external">Kidney Infection</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/561" class="icon icon-contributor-license">sheeraz khatri</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-08-11" title="08/11/2018 09:55 pm">about 4 years</a> ago</h4>
+    <p>This is a smart blog. I mean it. You have so much knowledge about this issue, and so much passion. You also know how to make people rally behind it, obviously from the responses.  <a href="https://www.naturalfoodseries.com/13-benefits-watermelon" class="external">Watermelon</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/663" class="icon icon-contributor-license">John Wan</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2019-03-02" title="03/02/2019 11:39 am">over 3 years</a> ago</h4>
+    <p>Review and Retrospective are two different things for me at least. I come to know about <a href="https://tripodsdslr.com/" class="external">lightweight travel tripod buy now</a> through reviews. This is why I am here.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/100">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Shepard Test Stand: News</title>
+  <link href="http://opendesignengine.net/projects/shepard-ts/news.atom" rel="self"/>
+  <link href="http://opendesignengine.net/projects/shepard-ts/news" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-06-19T21:11:50+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Shepard v2.0 Dev Log (Structure Concept) Started 06-19-13</title>
+    <link href="http://opendesignengine.net/news/40" rel="alternate"/>
+    <id>http://opendesignengine.net/news/40</id>
+    <updated>2013-06-19T21:11:50+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;There was a conversation about the structure concept that Aaron created on Google+. I wanted to make sure it got captured here.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Chris Sigman&lt;/strong&gt; Yesterday 8:02 PM&lt;/p&gt;
+
+
+	&lt;p&gt;Excited!&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; Yesterday 8:06 PM&lt;/p&gt;
+
+
+	&lt;p&gt;The motor mount is going to be the PITA.  This will take some fabrication, but the rest of the construction takes 5 min, not counting bolting it to the brick.&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Chris Sigman&lt;/strong&gt; Yesterday 9:01 PM&lt;/p&gt;
+
+
+	&lt;p&gt;What where you thinking for the design of the motor mount? I've got a picture in my mind (one based upon your little paper model and another).&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; Yesterday 9:22 PM&lt;/p&gt;
+
+
+	&lt;p&gt;Basically the paper model done in steel.  I was shooting for 18ga 1018 mild steel, since this will contain an explosion with almost zero chance of coming apart, but it will be a real challenge to bend.&lt;/p&gt;
+
+
+	&lt;p&gt;The design also created an engineered failure point should the explosion exceed the rating of the steel.  With a crimped edge, the crimp will undo and deform the mount.  this will start at the front and rear (depending on location of the breach), opening the enclosed area in a cone shape.&lt;/p&gt;
+
+
+	&lt;p&gt;This cone allows the pressure wave to escape to the front or back in a way that will reduce pressure by increasing volume rather than attack a specific point in the motor mount, causing shrapnel.&lt;/p&gt;
+
+
+	&lt;p&gt;Finally, if the pressure is simply too much, or the explosion started in the exact center of the mount, the ear on the top will shear and the crimp will let go very shortly thereafter, allowing the partially uncurled mount to deflect much of the blast and debris.  This part will remain attached to the load cell since it is still bolted in place.&lt;/p&gt;
+
+
+	&lt;p&gt;In such an event, I would no longer trust the load cell, and the temp sensors are likely toast, but this will make the test stand safer than the models the motors are supposed to power.&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Jaye Sudar&lt;/strong&gt; Yesterday 11:31 PM&lt;/p&gt;
+
+
+	&lt;p&gt;The pictures came out much better than I expected.&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; Yesterday 11:58 PM&lt;/p&gt;
+
+
+	&lt;p&gt;Yes they did.  Using my halo lamp as flood fill on top of the flash really helped.&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;J. Simmons&lt;/strong&gt; 12:30 AM&lt;/p&gt;
+
+
+	&lt;p&gt;Aaron, I like the look of this design.  It is very sexy, and compact (great for kits).  But I do have a couple of design questions/concerns.  (Note, all of this should really go on ODE, but I don't want to lose any of these thoughts.)&lt;/p&gt;
+
+
+	&lt;p&gt;1. I want to have a pretty significant discussion about motor mounts before much more work happens.  We discovered lots of concerns on the first design iteration and as the primary operator of v1.0 I have some additional feedback.  I want to make sure we create an opportunity to discuss those points.&lt;/p&gt;
+
+
+	&lt;p&gt;2. How is the load cell going to be calibrated in the current design?  In the previous design we used a pulley to turn gravity horizontal.  I am not sure that is an option in the current design.  And my next thought (just turn the test stand on its end so the load cell is facing gravity) both includes the load cell's mass in the calibration load and puts the test stand in an unstable orientation with a weight hanging off-axis, creating a moment that could unbalance the test stand and knock it over.&lt;/p&gt;
+
+
+	&lt;p&gt;3. I assume the screws holding the frame to the block will easily withstand the shear load from the motor thrust, but we should document (and test) that to cover our bases.&lt;/p&gt;
+
+
+	&lt;p&gt;4. Without a rail system, will we have any issues with misaligned thrust during firings?  While the rails were large and creates some problems, they did at least ensure the motor's thrust only went in the desired line of force.&lt;/p&gt;
+
+
+	&lt;p&gt;5. Where are you thinking of mounting the electronics?  I know we never got that far with v1.0, but the idea was always to place the electronics on the back of the test stand.&lt;/p&gt;
+
+
+	&lt;p&gt;All of that being said, I love the simplification of the new design over the original.  It is compact, light weight (I assume), and it removes issues like the rails being fouled.  This is definitely a huge step forward in terms of design for Shepard.  And, it clearly has kit users in mind for assembly.&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; 1:45 AM&lt;/p&gt;
+
+
+	&lt;p&gt;Hi +J. Simmons thanks for the feedback.  I will be capturing all of this to ODE, but I want to make sure we hit the high points while the iron is hot.  To be honest, you have not brought up anything I haven't thought about, but it's always good to make sure I am thinking straight.&lt;/p&gt;
+
+
+	&lt;p&gt;1. Discussion on the motor mount design:  I would have it no other way.  I think I have a good design, but I want to open this part to the discussion process to a lot of discussion before we start to bend metal.  The question that's bugging me is this:  How do we engineer a failure to verify the failure mode of the design?  I get the feeling that working with the metal I have (16ga) will be a colossal PITA, but I don't want to build it out of something that will shred and turn to shrapnel either.  We have got to come up with a way to test this.&lt;/p&gt;
+
+
+	&lt;p&gt;2. Calibration:  On my unit, I can just set the brick on it's nose and set the weight on the arm after the mount is removed while I stabilize the brick.  On more solidly mounted units, I would recommend the purchase of a spring type hanging scale to attach to the arm with the motor mount removed.  The other end of the scale should be attached to another immovable object using a turnbuckle.  As you tighten the turnbuckle, the spring changes both the reading on the hanging scale and changes the tension applied to the load cell.  This technique is one which will become mandatory as the test stands become larger.&lt;/p&gt;
+
+
+	&lt;p&gt;3. The weak link are the aluminum angle brackets which are rated for 686 N of force.  The M5 hardware is all 304 stainless with a yield rating of at least 400N/mm^2.  This means that for a 5mm bolt, de-rated by 1 mm for the cut threads, we have a cross sectional area of a little over 12.5mm, resulting in a yield strength of over 5kN.  Another weak link is the plastic anchors... which is why I would not include these in the kit.  Mine are in there good enough to where I can pick up the whole assembly, brick and all, by the frame and shake it with no slop.  I can confidently say that removal of the frame from the brick will definitely require much more than the 40 newtons of force an Estes motor can muster.&lt;/p&gt;
+
+
+	&lt;p&gt;4. Force alignment.  I was worried about that too, and at the distance the mockup demonstrated as a torque arm (34mm), it would take 12.5 kg of thrust to deform the sensor in any meaningful (+/- 0.25 degree) amount.  Using a torque wrench and laser boresight, I verified the amount of deflection was less than a quarter of a degree at the specified torque, and that the sensor returned true.  I would not want to use such an offset for larger engines, but for the smaller versions it seems fine.  I have a design which does not feed to the side, but it will be much more expensive.  I will document that in ODE as well as time permits, but it is overkill for Shepard's task.&lt;/p&gt;
+
+
+	&lt;p&gt;5. Electronics:  The electronics consists of the beaglebone, a daughtercard (they call them capes... I am seeing Edna from The Incredibles...  "No capes!"), and a separate small board to mount under the motor mount on the frame.  The beaglebone and "cape" can be installed in an enclosure on the right side of the frame in an enclosure only slightly larger than an Altoids tin length and width, and double the height.  This would allow the enclosure to contain the DAQ system and battery for use wirelessly or through Ethernet cables.  We're still working on the best way to pull that off.&lt;/p&gt;
+
+
+	&lt;p&gt;The really cool thing about this is how compactly it can ship.  The entire thing can fit in a 4x3x2 mailer  and would weigh under a pound and a half, including the DAQ.  the thing that consistently blows my mind about working with the aluminum extrusions is how light they are, yet can support an ungodly amount of weight, especially across their long axis.    Anyhow, enough for tonight.  I'll talk with you in the morning. :)&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Chris Sigman&lt;/strong&gt; 8:01 AM&lt;/p&gt;
+
+
+	&lt;p&gt;One more question... how is the motor affixed to the motor mount so that it doesn't move around in there?&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; 8:45 AM&lt;/p&gt;
+
+
+	&lt;p&gt;The traditional way is a friction (interference) fit with an end stop and a clip to hold it in place.  This isn't modeled on the mockup because I was just working on the basic shape. :)&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Chris Sigman&lt;/strong&gt; 9:26 AM&lt;/p&gt;
+
+
+	&lt;p&gt;OK, I've drawn up an idea that once this is in ODE it'll be easier to share, but the idea is this:&lt;/p&gt;
+
+
+	&lt;p&gt;The motor mount will primarily consist of a piece of steel tubing (18ga if you'd like, but since you don't have to bend it you could go higher). The tubing would be attached to the load cell by using adjustable pipe fittings to hold 2 right-angle brackets to the side, with a bolt through the angle brackets attaching them to the load cell.  To hold the motor (allowing for various diameters of motor) to the inside of the mount, several holes will be drilled through on the opposite side (perhaps at 45&#176; from center both ways) for bolts.  A bolt will be held in place using 2 nuts: one on the outside of the tube, and one on the inside. On the end of the threading of the bolt will be a rubber footing, keeping the bolt from damaging the motor casing.  Finally, if needed, one end of the tube would be closed off for the non-business end of the motor to be placed against.&lt;/p&gt;
+
+
+	&lt;p&gt;Of course, a picture's worth a thousand words, and I don't have nearly that many there.  &#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Chris Sigman&lt;/strong&gt; 9:32 AM&lt;/p&gt;
+
+
+	&lt;p&gt;I also have another item of note not entirely related: why is Shepard fired horizontally? Why not have it oriented so that the thrust fires up, pushing down towards earth?&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; 9:55 AM&lt;/p&gt;
+
+
+	&lt;p&gt;The trouble I have with a steel tube is the failure mode.  A steel tube with no seam will allow pressures to build and exit at random, potentially causing shrapnel.&lt;/p&gt;
+
+
+	&lt;p&gt;Shepard 1.0/1.1 use a cardboard mount to limit the mass and pressure during such an event, and thus potential damage.  My design holds for a bit more pressure, but is designed to yield in a specific way (burst along the crimp while the bolted center holds.&lt;/p&gt;
+
+
+	&lt;p&gt;The reason Shepard fires sideways is because this way the instruments measure only the thrust component and don't register the reduction in mass as the fuel is burned.  This variable mass issue is why most solid  and hybrid fueled designs, including the SRBs made by ATK are tested on their side.&lt;/p&gt;
+
+
+	&lt;p&gt;In a liquid fueled design, the mass of the engine is fixed, and when the rocket engine is bolted to the stand the weight added to the sensor can be tared, adding the weight necessary to overcome it's own mass to the recorded thrust.&lt;/p&gt;
+
+
+	&lt;p&gt;Not all test stands follow this though.  Many of the high power rocket folks drop the motor with the nozzle up down a tube supported by legs (looks like a tripod).  A sensor in the bottom of the tube registers the weight as well as the downward force when the motor is fired.  Once the engine is done firing, the empty is weighed again, and the sensor data is adjusted based upon the linear reduction of mass over the run.&lt;/p&gt;
+
+
+	&lt;p&gt;The trouble is that the consumption of fuel and reduction of mass is not quite linear.  This method is for "close enough" work.  The method we are using for Shepard is very accurate, depending only on the linearity of the sensor and accuracy of the calibration.&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Chris Sigman&lt;/strong&gt; 10:09 AM&lt;/p&gt;
+
+
+	&lt;p&gt;With a tube, you have a few options for handling failure.  The first is you could rather easily go with a higher gauge steel, because there's no need to bend it.  There's also engineering a failure point.  Now, I don't know much about that, but I would think you could drill holes along one side (the 'top' for example) that don't go all the way through.&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; 4:20 PM&lt;/p&gt;
+
+
+	&lt;p&gt;Hmmm... that might work, as it would open like a zipper.  I'd like to keep the machining to a minimum though.  I wonder if we couldn't use something 3D printed...&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; 6:00 PM1&lt;br /&gt;Reply&lt;/p&gt;
+
+
+	&lt;p&gt;Speaking of pipes, I wonder if a length of MIL-T 6736B spec 4130 steel tubing with a wall thickness of 2.1mm open on both ends (except the retention ring) wouldn't just hold the pressure and laugh it off.  Time to dust off my books again.&lt;/p&gt;
+
+
+	&lt;p&gt;For those who want to do the math, use a 4" section of this pipe:  &lt;a class="external" href="http://www.onlinemetals.com/merchant.cfm?pid=7551&amp;#38;step=4&amp;#38;showunits=inches&amp;#38;id=1&amp;#38;top_cat=0"&gt;http://www.onlinemetals.com/merchant.cfm?pid=7551&amp;#38;step=4&amp;#38;showunits=inches&amp;#38;id=1&amp;#38;top_cat=0&lt;/a&gt; and figure on 3/4" orifices on both sides.&lt;/p&gt;
+
+
+	&lt;p&gt;The engine for our worst case scenario would be an Estes E9-6 with 35.8 grams of propellant.  I can't find the specs on the propellant to do the analysis, but it can't be too high test... the casing is cardboard after all.&lt;/p&gt;
+
+
+	&lt;p&gt;This brings me to another point.  If the mount were snug and unyielding as well as tolerant of the temperatures of a burn-thru, would the motor rupture at all?  This is starting to climb outside my engineering pay grade... does anyone else wanna take a stab at it?&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; 9:50 PM&lt;/p&gt;
+
+
+	&lt;p&gt;Youtube video to go with it:  &lt;a class="external" href="http://youtu.be/Lgkbm5svo50&#65279;"&gt;http://youtu.be/Lgkbm5svo50&#65279;&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Jeremy Wright&lt;/strong&gt; 9:56 PM&lt;/p&gt;
+
+
+	&lt;p&gt;I'm tempted to copy the text from this post (since it's shared privately) directly into the dev log on ODE. Thoughts?&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; 9:58 PM&lt;/p&gt;
+
+
+	&lt;p&gt;I was headed in that direction myself.  Go for it!&#65279;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Aaron Harper&lt;/strong&gt; 9:59 PM&lt;/p&gt;
+
+
+	&lt;p&gt;I can build the structure (if I'm not gabbing) in under 7 min. :)&#65279;&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard v2.0 Dev Log (Simplified Mount) Started: 06-17-13</title>
+    <link href="http://opendesignengine.net/news/39" rel="alternate"/>
+    <id>http://opendesignengine.net/news/39</id>
+    <updated>2013-06-17T17:46:24+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;In reviewing the Shepard 1.0/1.1 design it became clear that much of the complexity, cost, and build time was centered around both the slide and the structure necessary to pinch the pressure sensor between the slide and an immovable stop. When the sensor was upgraded to a single beam load cell, the need for the backstop went away. Since the slide was bolted to the load cell, and load cells generally have a mechanical failure point around 2.5 times their max sensor value, this would mean that the 5kg load cell shears at about 12.5kg or about 122.5 Newtons of force. Since this is a little over 3.72 times the max thrust of any engine made by Estes (32.9N is the highest it goes), it is safe to bolt a motor mount directly to the load cell, provided that both the mount and mounting hardware are able to withstand similar forces. Finally, if the slide and backstop are not used, it would be safe to vent the rocket motor's ejection charge forward rather than deflect it. This again simplifies the structure and assembly.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard v1.1 Dev Log (Temperature DAQ) Started: 05-21-13</title>
+    <link href="http://opendesignengine.net/news/36" rel="alternate"/>
+    <id>http://opendesignengine.net/news/36</id>
+    <updated>2013-05-21T23:31:41+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I had to wait awhile to go get parts to mount the load cell on the v1.1 structure, so I started to research communicating with the ADS1118 via an Arduino to get the thermocouple data.&lt;/p&gt;
+
+
+	&lt;p&gt;I found &lt;a href="http://www.arduino.si/blog/talking-with-ads1118/" class="external"&gt;this blog post&lt;/a&gt; which at least shows how to get a single ended voltage (single shot, high speed). I then got the register settings for temperature monitoring from &lt;a href="http://e2e.ti.com/support/data_converters/precision_data_converters/f/73/t/255692.aspx" class="external"&gt;this source&lt;/a&gt; .&lt;/p&gt;
+
+
+	&lt;p&gt;Using these resources, I came up with the following simple source code for the Arduino:&lt;/p&gt;
+
+
+&lt;pre&gt;
+#include &amp;lt;SPI.h&amp;gt;
+
+void setup() {
+  Serial.begin(9600);
+
+  // Set up and start the SPI serial interface
+  SPI.begin();
+  SPI.setBitOrder(MSBFIRST); // Most significant bit first
+  SPI.setClockDivider(SPI_CLOCK_DIV8); // Step down the arduino clock by 8
+  SPI.setDataMode(SPI_MODE1); //Serial interface timing
+}
+
+void loop()
+{ 
+  Serial.println(readRaw());
+  delay(1000);
+}
+
+/* Allows the caller to read the raw value from the ADS1118 */
+int readRaw(void) {
+  int rawValue; // Raw value received back from the ADS1118
+  byte MSB, LSB; //The most and least significant bits read from the ADS1118
+  byte MSBConf=B10001011; // Most Significant Bit configuration register
+  //11010001
+  byte LSBConf=B11110010; // Least Significant Bit configuration register
+  //10000010
+
+  // Read the ADS1118's channel's A0 and A1 as temperature in single-shot mode
+  MSB = SPI.transfer(MSBConf);
+  LSB = SPI.transfer(LSBConf);
+  //SPI.transfer(MSBConf);
+  //SPI.transfer(LSBConf);
+
+  // Build the raw value from the most and least significant bits
+  rawValue = (MSB &amp;lt;&amp;lt; 8) | LSB;
+
+  return rawValue;
+}
+
+/* Allows the caller to read the raw voltage */
+double readVoltage(void) {
+  int rawValue; // Raw value received back from the ADS1118
+  double volts; // Converted voltage from the raw value
+  const double amp = 0.256; // FS multiplier in register (check data sheet)
+
+  // Get the raw value so that we can convert it to a voltage
+  rawValue = readRaw();
+
+  // Convert the raw value to the corresponding voltage (16 bits = 0 to 32767)
+  volts = amp * (double)(rawValue / 32768);
+
+  return volts;
+}
+&lt;/pre&gt;
+
+	&lt;p&gt;Using the following resources, I then came up with the circuit below:&lt;/p&gt;
+
+
+	&lt;ol&gt;
+	&lt;li&gt;&lt;a class="external" href="http://www.ti.com/lit/ds/sbas457c/sbas457c.pdf"&gt;http://www.ti.com/lit/ds/sbas457c/sbas457c.pdf&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a class="external" href="http://arduino.cc/en/Reference/SPI"&gt;http://arduino.cc/en/Reference/SPI&lt;/a&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Fritzing Diagram&lt;/strong&gt;&lt;br /&gt;&lt;img src="http://opendesignengine.net/dmsf_files/95?download=" alt="" /&gt;&lt;br /&gt;( &lt;a href="http://opendesignengine.net/dmsf_files/94?download=" class="external"&gt;Large&lt;/a&gt; ) ( &lt;a href="http://opendesignengine.net/dmsf_files/98?download=" class="external"&gt;Real Life Breadboard Photo&lt;/a&gt; )&lt;/p&gt;
+
+
+	&lt;p&gt;The blue terminal block on the breadboard is what the thermocouple leads attach to.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;strong&gt;Fritzing Generated Schematic&lt;/strong&gt;&lt;br /&gt;&lt;img src="http://opendesignengine.net/dmsf_files/97?download=" alt="" /&gt;&lt;br /&gt;( &lt;a href="http://opendesignengine.net/dmsf_files/96?download=" class="external"&gt;Large&lt;/a&gt; )&lt;/p&gt;
+
+
+	&lt;p&gt;The two open terminals on AIN0 and AIN1 represent the attachment points for the thermocouple leads.&lt;/p&gt;
+
+
+	&lt;p&gt;For anyone reading this after the fact, keep in mind that this was my first time using &lt;a href="http://fritzing.org" class="external"&gt;Fritzing&lt;/a&gt; and I did a horrible job of routing. I really like Fritzing so far though.&lt;/p&gt;
+
+
+	&lt;p&gt;When I tested the ADS1118 circuit with the source code above, I found that it wouldn't display any value except -1. I'm not sure yet what is causing this problem. If anyone reading this figures it out before I do, please feel free to leave a comment and let me know.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard v1.1 Dev Log (Thrust DAQ) Started: 05-20-13</title>
+    <link href="http://opendesignengine.net/news/34" rel="alternate"/>
+    <id>http://opendesignengine.net/news/34</id>
+    <updated>2013-05-20T16:35:41+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The DAQ (Data AcQuisition) system for version 1.1 of the &lt;a href="https://opendesignengine.net/projects/shepard-ts" class="external"&gt;Shepard Test Stand&lt;/a&gt; is quickly getting left behind technology-wise. We believe that we've found a good source for small load cells, which makes the use of FSRs (Force Sensing Resistors) not worth pursuing any more. The sample rate due to the thermocouple amplifier is far too slow as well, and we're looking at switching to a non-contact temperature sensor to obtain faster sensor response during runs. However, we still have a partner organization that needs a version of Shepard to experiment with, pre-2.0, and I thought that I'd use a hybrid platform of the old and the new technologies to test out some of our ideas in version 1.1. Hopefully I'll end up with a setup that our partner can utilize for their testing that will also be a good test bed for our new components.&lt;/p&gt;
+
+
+	&lt;p&gt;The two ICs in this test circuit are the &lt;a href="http://www.ti.com/product/ina122" class="external"&gt;INA122 Instrumentation Amplifier&lt;/a&gt; , and the &lt;a href="http://www.ti.com/product/ads1118" class="external"&gt;ADS1118 amplifier/ADC&lt;/a&gt; , set up to amplify thermocouple inputs. The ADS1118 required a MSOP10 to DIP converter so that I could use it with a breadboard/protoboard. Thanks to Aaron Harper for going through the painstaking process of soldering/reflowing such a small package for me.&lt;/p&gt;
+
+
+	&lt;p&gt;I'll start with the INA122, although both ICs will be on the breadboard so that I can plan the layout appropriately.&lt;/p&gt;
+
+
+	&lt;p&gt;Using the following resources, I came up with the circuit below:&lt;/p&gt;
+
+
+	&lt;ol&gt;
+	&lt;li&gt;&lt;a class="external" href="http://www.ti.com/lit/ds/sbos069/sbos069.pdf"&gt;http://www.ti.com/lit/ds/sbos069/sbos069.pdf&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a class="external" href="http://www.nakka-rocketry.net/strainlc.html"&gt;http://www.nakka-rocketry.net/strainlc.html&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a class="external" href="http://www.nerdkits.com/videos/weighscale/"&gt;http://www.nerdkits.com/videos/weighscale/&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a class="external" href="http://www.robotshop.com/phidgetbridge-wheatstone-bridge-sensor-interface-2.html"&gt;http://www.robotshop.com/phidgetbridge-wheatstone-bridge-sensor-interface-2.html&lt;/a&gt; (Documentation link)&lt;/li&gt;
+	&lt;/ol&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/dmsf_files/85?download=" alt="" /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/dmsf_files/87?download=" alt="" /&gt;&lt;br /&gt;( &lt;a href="http://opendesignengine.net/dmsf_files/86?download=" class="external"&gt;Large&lt;/a&gt; )&lt;/p&gt;
+
+
+	&lt;p&gt;It made sense to me that for testing purposes, the gain of the INA122 should be adjustable, so I swapped out the 1k RG fixed resistor for a 10k 15-turn potentiometer. I then experimented with the gains shown in the INA122's application information. I found that the gains of 1000 (200 ohms) to 5000 (40.2 ohms) gave a good amount of change with the force that I applied with my fingers. The next step was to clamp the load cell down to my desktop and hang some weight from it, using a hanging scale for reference.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/dmsf_files/89?download=" alt="" /&gt;&lt;br /&gt;( &lt;a href="http://opendesignengine.net/dmsf_files/88?download=" class="external"&gt;Large&lt;/a&gt; )&lt;/p&gt;
+
+
+	&lt;p&gt;The max thrust we should ever see from an Estes motor (A through E) on Shepard is around 30 Newtons (6.74 lbs). If we want to calibrate to 1.4 times the max thrust we'll ever see (per good engineering practices), we'll need to calibrate to 42 Newtons (9.44 lbs). I thought that I'd go ahead and round that value up to set the gain so that 9.5 lbs was the max, or would "fill" the Arduino's ADC. I started to use jugs of water to reach this weight (simulated thrust). Unfortunately, I didn't have the right kind of clamps to hold one end of the load cell properly. I believe my best bet of getting the gain set and calibrating the load cell will be to make the minor modifications necessary to mount the load cell in the Shepard v1.1 structure used during &lt;a href="http://www.youtube.com/watch?v=y4TLxWVTIgM" class="external"&gt;Yuri's Night&lt;/a&gt; (starts at about 1:03:19). Then I can use the previous calibration mechanism (pulley and string) to set and calibrate the system.&lt;/p&gt;
+
+
+	&lt;p&gt;Thoughts, questions, suggestions? Feel free to leave them as comments on this news feed.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard v1.1 Dev Log (DAQ) 04-03-13</title>
+    <link href="http://opendesignengine.net/news/33" rel="alternate"/>
+    <id>http://opendesignengine.net/news/33</id>
+    <updated>2013-04-03T22:47:44+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;The first thing following from yesterday's work was to determine the maximum voltage coming from the FSR's output at a target weight, so that I could build a voltage divider to feed that voltage to the AREF pin on the Arduino.&lt;/p&gt;
+
+
+	&lt;p&gt;I used a multimeter and measured between the output (yellow wire in yesterday's pic) and ground (green) to get this voltage. The absolute max that I was able to get out of the FSR's voltage divider with the variable resistor set to approximately 100k-Ohm was about 4.0 volts (with 5 volt supply from the Arduino). This would represent the maximum force for the FSR, which is 25 lbs (110 N). The maximum thrust that we expect to see from the Estes motors used with Shepard will be 30 N (6.7 lbs). Assuming that we want to calibrate to at least 1.4 times the maximum expected value (good engineering practice), the FSR range needs to be set to max out somewhere around 41.8 N (9.4 lbs).&lt;/p&gt;
+
+
+	&lt;p&gt;I don't have the means to add this amount of weight to the sensor right now, but I do have access to a gallon jug and water (about 8.3 to 8.5 lbs). This will give me a relatively known weight to experiment with.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/dmsf_files/83?download=" alt="" /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;The jug of water's weight gave me about 2.6 volts, and if I work that out based on a max of 4.0 volts at 25 lbs I get:&lt;/p&gt;
+
+
+	&lt;p&gt;2.6 volts / x lbs = 4.0 volts / 25 lbs&lt;/p&gt;
+
+
+	&lt;p&gt;which becomes:&lt;/p&gt;
+
+
+	&lt;p&gt;2.6 volts * 25 lbs = 4.0 volts * x lbs&lt;/p&gt;
+
+
+	&lt;p&gt;which becomes:&lt;/p&gt;
+
+
+	&lt;p&gt;x = (2.6 volts * 25 lbs) / 4.0 volts&lt;/p&gt;
+
+
+	&lt;p&gt;or&lt;/p&gt;
+
+
+	&lt;p&gt;x = 16.25 lbs&lt;/p&gt;
+
+
+	&lt;p&gt;Obviously, 16.25 lbs a little less than twice the value I should get. It's getting late where I'm at, so I'll figure out what I did wrong tomorrow evening.&lt;/p&gt;
+
+
+	&lt;p&gt;For anyone reading this dev log in the meantime, I'd welcome your help. Did I make a simple mistake (very likely at this hour of the night)? Is there a fundamental flaw in the way I've built the circuit? Is there something else going on? Let me know in a comment to this news item.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Shepard v1.1 Dev Log (DAQ) 04-02-13</title>
+    <link href="http://opendesignengine.net/news/32" rel="alternate"/>
+    <id>http://opendesignengine.net/news/32</id>
+    <updated>2013-04-02T22:18:56+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;It occurred to me that the Shepard 1.0 DAQ software has not been milestoned and added to DMSF yet. I've already shipped the 1.0 DAQ shield for the Arduino to J for the Yuri's Night demos, so he's going to test the version in the repo out. Once it's confirmed that works, I'll zip the code up for upload to DMSF as the 1.0 milestone version. For now, I'll keep my changes local.&lt;/p&gt;
+
+
+	&lt;p&gt;The new thrust measurement circuitry for the DAQ system has been prototyped, and seems to work well.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;img src="http://opendesignengine.net/dmsf_files/82?download=" alt="" /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;It uses a higher quality FSR ("Force Sensing Resistor" that costs about $25), and uses a variable resistor to set the effective range of the FSR (Flexiforce Sensor). The variable resistor's max is 100k-Ohm since this is the max specified in the FSR's documentation. In order to see and adjust this range, you can use the "Raw Value" field of the Calibration_Util_Processing.pde Processing app. The process for setting the max range is below, and is a rough cut at creating a max range setting process.&lt;/p&gt;
+
+
+	&lt;p&gt;1. Add the amount of weight onto the FSR that represents the max that you ever want the sensor to be able to read (up to the 25 lb max).&lt;br /&gt;2. Adjust the variable resistor until the "Raw Value" reading is maxed out at that weight (~1023 if possible).&lt;br /&gt;3. Put a dot of clear silicone (RTV) on the side of the resistor where the "turntable" and the body meet. This will prevent the resistor from turning on its own during a rough shipping trip.&lt;/p&gt;
+
+
+	&lt;p&gt;While working on this I was reminded that the default reference voltage for the &lt;a href="http://arduino.cc/en/Reference/AnalogReference" class="external"&gt;Arduino's ADC&lt;/a&gt; is 5.0 volts. Since the FSR is being used in a voltage divider that's being fed from the Arduino's 5V pin, this means that we'll never "fill" the ADC's range, and thus we won't have the maximum resolution possible. This can be corrected by building a voltage divider and using it to feed the AREF (external ADC reference voltage) pin with the max voltage that we ever expect seeing from the FSR's voltage divider.&lt;/p&gt;    </content>
+  </entry>
+</feed>

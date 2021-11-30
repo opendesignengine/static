@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - News - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../../javascripts/jstoolbar/jstoolbar.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/textile.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/lang/jstoolbar-en.js%3F1359925542" type="text/javascript"></script><link href="../../stylesheets/jstoolbar.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="news.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+  <link href="../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/holoseat.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="news.html" class="news selected">News</a></li>
+<li><a href="../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="boards.html" class="boards">Forums</a></li>
+<li><a href="../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+</div>
+
+<div id="add-news" style="display:none;">
+<h2>Add news</h2>
+<form action="news.html" class="tabular" id="news-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0=" /></div>
+
+<div class="box tabular">
+<p><label for="news_title">Title<span class="required"> *</span></label><input id="news_title" name="news[title]" size="60" type="text" /></p>
+<p><label for="news_summary">Summary</label><textarea cols="60" id="news_summary" name="news[summary]" rows="2"></textarea></p>
+<p><label for="news_description">Description<span class="required"> *</span></label><textarea class="wiki-edit" cols="60" id="news_description" name="news[description]" rows="15"></textarea></p>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var wikiToolbar = new jsToolBar($('news_description')); wikiToolbar.setHelpLink('<a href="http://opendesignengine.net/projects/holoseat/\&quot;/help/wiki_syntax.html\&quot;" onclick=\"window.open(&quot;/help/wiki_syntax.html&quot;, &quot;&quot;, &quot;resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes&quot;); return false;\">Text formatting<\/a>'); wikiToolbar.draw();
+//]]>
+</script>
+
+<input name="commit" type="submit" value="Create" />
+<a accesskey="r" href="news%3Fpage=4.html#" onclick="new Ajax.Updater('preview', '/news/preview?project_id=holoseat', {asynchronous:true, evalScripts:true, method:'get', parameters:Form.serialize('news-form') + '&amp;authenticity_token=' + encodeURIComponent('dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0=')}); return false;">Preview</a> |
+<a href="news%3Fpage=4.html#" onclick="Element.hide(&quot;add-news&quot;)">Cancel</a>
+</form>
+<div id="preview" class="wiki"></div>
+</div>
+
+<h2>News</h2>
+
+
+
+    <h3>
+    <a href="http://opendesignengine.net/news/83">2017 Sprint 3 Stand Up 5</a>
+    (5 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-07-21" title="07/21/2017 01:37 am">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>SYN-03: Develop and test the firmware for SyndCon 2017 demo units merging v0.3 controller (Feather) with v0.4 sensor configuration - updated test rig, did initial proof of concept for using new sensor, drafted key changes for updated firmware</li>
+		<li>SYN-12: Design and print a horizontal "brand banner" for display on wall over demo units - done</li>
+		<li>SYN-13: Design, print, and frame on site 24"x36" marketing poster - done</li>
+		<li>SYN-22: Design and print business cards for J and Bryan - have updated design</li>
+		<li>SYN-27: Finalize the definition and marketing language for the pre-sales initiative - done</li>
+		<li>DEV-31: Identify a tone ring that will work with Desk Cycle and selected sensor - done (based on SYN-03 work)</li>
+		<li>SYN-29: Prep Twitter and Facebook accounts for Holoseat - Ingrid has a first draft</li>
+		<li>SYN-26: Prepare slides and script for the Holoseat panel emphasizing our pre-sales initiative - took video/pictures for slides</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>SYN-03: Develop and test the firmware for SyndCon 2017 demo units merging v0.3 controller (Feather) with v0.4 sensor configuration - write new firmware</li>
+		<li>SYN-22: Design and print business cards for J and Bryan - will get updated design approval to Ingrid and have her order cards</li>
+		<li>SYN-29: Prep Twitter and Facebook accounts for Holoseat - will iterate with Ingrid</li>
+		<li>SYN-07: Identify and pack 2 appropriate gaming laptops based on selected game (be sure to include Holoseat controller app and dev tools) - will start prepping my laptop per plan</li>
+		<li>SYN-26: Prepare slides and script for the Holoseat panel emphasizing our pre-sales initiative - add slides to the pre-sales section based on new marketing language and take more video/pictures for slides</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Still have all sorts of personal stuff going on</li>
+		<li>Work travel happening again</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>BIZ-17: Research product liability insurance so that we are properly covered for our pre-sales at SyndCon - done, including an example to build our own revised agreement for testing</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>SYN-11: Refresh the demo surveys - revise rough cut survey</li>
+		<li>prepare draft legalize for testing pre-sales agreement</li>
+		<li>update BoM and estimate down payment cost</li>
+		<li>SYN-10: Build Holoseat packing box - will work on the box</li>
+		<li>SYN-04: Develop a controller "box" that mounts on Desk Cycle in the same place their bike computer mounts - will check on volunteer's progress</li>
+		<li>should have updated sensors for the demo units</li>
+	</ul>
+	</li>
+		<li>Blocked?</li>
+		<li>still on vacation</li>
+		<li>work will be busy post vacation</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/82">2017 Sprint 3 Stand Up 4</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-07-14" title="07/14/2017 02:48 am">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>SYN-11: Refresh the demo surveys - worked with Bryan at last week's meeting to get the rough edits complete</li>
+		<li>SYN-22: Design and print business cards for J and Bryan - finalized design with Ingrid (no QR code this year)</li>
+		<li>SYN-25: Prepare slides and script for Main Guild Meeting section (keep it short as always) emphasizing our pre-sales initiative - started planning actual slides from outline</li>
+		<li>SYN-26: Prepare slides and script for the Holoseat panel emphasizing our pre-sales initiative - started planning actual slides from outline</li>
+		<li>SYN-27: Finalize the definition and marketing language for the pre-sales initiative - met with Ingrid to review what we need</li>
+		<li>SYN-29: Prep Twitter and Facebook accounts for Holoseat - Confirmed Ingrid is working on this task, she should be done this week</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>SYN-03: Develop and test the firmware for SyndCon 2017 demo units merging v0.3 controller (Feather) with v0.4 sensor configuration - update test rig to work with tone ring and new sensor, begin initial firmware development</li>
+		<li>SYN-12: Design and print a horizontal "brand banner" for display on wall over demo units - will print</li>
+		<li>SYN-13: Design, print, and frame on site 24"x36" marketing poster - will print</li>
+		<li>SYN-22: Design and print business cards for J and Bryan - will check in with Ingrid</li>
+		<li>SYN-27: Finalize the definition and marketing language for the pre-sales initiative - will check with Ingrid</li>
+		<li>SYN-29: Prep Twitter and Facebook accounts for Holoseat - will check with Ingrid</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Was blocked on poster/banner printing (miscommunication about the PDFs), but that is resolved</li>
+		<li>Still have all sorts of personal stuff going on</li>
+		<li>Waiting on content for SYN-22, SYN-27, and SYN-29</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>SYN-11: Refresh the demo surveys - worked with J at last week's meeting to get the rough edits complete</li>
+		<li>SYN-03: Develop and test the firmware for SyndCon 2017 demo units merging v0.3 controller (Feather) with v0.4 sensor configuration - sent J v0.4 hardware</li>
+		<li>SYN-06: Select and purchase 2 tables worth of table height adjusters - ordered enough for one table (in hindsight we should be good with one table's worth)</li>
+		<li>DEV-31: Identify a tone ring that will work with Desk Cycle and selected sensor - finished assembly of both tone rings</li>
+		<li>SYN-10: Build Holoseat packing box - worked on materials gathering</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>SYN-11: Refresh the demo surveys - revise rough cut survey</li>
+		<li>BIZ-17: Research product liability insurance so that we are properly covered for our pre-sales at SyndCon - start research</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>DEV-33 - lacked some of the required equipment, handing over to J as part of firmware work (SYN-03)</li>
+		<li>on vacation for a full week (including during next stand up)</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Next Week's Joint Work</strong></p>
+
+
+	<ul>
+	<li>Trip planning</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/81">2017 Sprint 3 Stand Up 3</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-07-06" title="07/06/2017 12:18 am">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>Post Sprint 2 to Sprint 3 blog post - ready to publish after it gets reviewed</li>
+		<li>SYN-19: Design swag for swag bags - done</li>
+		<li>SYN-21: Order enough swag for swag bags - done</li>
+		<li>Ping Ingrid about follow up email - making progress on several marketing tasks</li>
+		<li>SYN-26: Prepare slides and script for the Holoseat panel emphasizing our pre-sales initiative - outline complete, need to review with Bryan</li>
+		<li>SYN-13: Design, print, and frame on site 24"x36" marketing poster - poster designed</li>
+		<li>SYN-22: Design and print business cards for J and Bryan (including QR code on back to one of our landing pages - using new redirecting link) - design is in progress, dropping the QR code this time</li>
+		<li>SYN-12: Design and print a horizontal "brand banner" for display on wall over demo units - banner designed</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>SYN-13: Design, print, and frame on site 24"x36" marketing poster - will print</li>
+		<li>SYN-12: Design and print a horizontal "brand banner" for display on wall over demo units - will print</li>
+		<li>SYN-22: Design and print business cards for J and Bryan (including QR code on back to one of our landing pages - using new redirecting link) - will finalize design</li>
+		<li>SYN-27: Finalize the definition and marketing language for the pre-sales initiative - will meet with Ingrid to work on this </li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>have lots of personal stuff going on so have limited time during the week</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>DEV-31: Identify a tone ring that will work with Desk Cycle and selected sensor - 3d printed tone ring structures, received magnets, almost done mounting magnets for first tone ring; also did a test mount of tone ring on Desk Cycle, fits great!</li>
+		<li>DEV-33: Implement physical design of new sensor configuration on Desk Cycle (mechanically and electrically) - ordered and received sensors</li>
+		<li>SYN-09: Design final Holoseat packing box - did rev 0 design for box; will probably build on the fly</li>
+		<li>SYN-10: Build Holoseat packing box - bought critical materials for build (foam latches)</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>DEV-31: Identify a tone ring that will work with Desk Cycle and selected sensor - finish assembly of both tone rings</li>
+		<li>DEV-33: Implement physical design of new sensor configuration on Desk Cycle (mechanically and electrically) - conduct initial tests of the sensor</li>
+		<li>SYN-10: Build Holoseat packing box - materials gathering </li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>none</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Next Week's Joint Work</strong></p>
+
+
+	<ul>
+	<li>SYN-07: Identify and pack 2 appropriate gaming laptops based on selected game (be sure to include Holoseat controller app and dev tools)</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/80">2017 Sprint 3 Stand Up 2</a>
+    (5 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-06-27" title="06/27/2017 11:53 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>Drafted Sprint 2 to Sprint 3 blog post</li>
+		<li>SYN-18: Research and select type of swag to include in the con swag bags - done, found 3 options, worked with Bryan to select one</li>
+		<li>Followed up with Ingrid about contract work</li>
+		<li>SYN-20: Ask D. for swag bag count - done</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>Post Sprint 2 to Sprint 3 blog post</li>
+		<li>SYN-19: Design swag for swag bags - will handle this as part of SYN-21</li>
+		<li>SYN-21: Order enough swag for swag bags - order wrist bands</li>
+		<li>Ping Ingrid about follow up email</li>
+		<li>SYN-26: Prepare slides and script for the Holoseat panel emphasizing our pre-sales initiative - will start working on outline</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Waiting to hear back from Ingrid</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>DEV-32: Select sensor package format (which specific model of the selected sensor) - done and ordered</li>
+		<li>DEV-31: Identify a tone ring that will work with Desk Cycle and selected sensor - ordered tool, selected magnets (and ordered them), modeled and printed the custom tone ring</li>
+		<li>SYN-08: Build small scale test of expanding foam based packing boxes to verify/improve this construction technique - ran an initial test of spray foam techniques; spray foam is not going to work :(  Going to need another approach</li>
+		<li>SYN-04: Develop a controller "box" that mounts on Desk Cycle in the same place their bike computer mounts - have located external resource to support designing and printing the controller "box" </li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>nothing; but hope to get some work done over the holiday weekend</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>On personal travel this week</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Next Week's Joint Work</strong></p>
+
+
+	<ul>
+	<li>SYN-11: Refresh the demo surveys</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/79">2017 Sprint 3 Stand Up 1</a>
+    (4 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-06-22" title="06/22/2017 12:17 am">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>Posted <a href="https://opendesignengine.net/news/78" class="external">Sprint 3 Plan</a> on ODE</li>
+		<li>Ping Ingrid about requests for assistance with marketing tasks - sent email, waiting to hear back from her</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>Write Sprint 2 to Sprint 3 blog post</li>
+		<li><del>SYN-04: Develop a controller "box" that mounts on Desk Cycle in the same place their bike computer mounts - start modeling (and maybe start test printing) mounting bracket for controller box</del></li>
+		<li>SYN-18: Research and select type of swag to include in the con swag bags - will come back with three options for custom headbands</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>none</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>SYN-15: Design branded t-shirts - Jess is on board and has the logo files</li>
+		<li>DEV-31: Identify a tone ring that will work with Desk Cycle and selected sensor - examined a desk cycle, determined process and tools for disassembly, recommending we create custom tone ring for the time being</li>
+		<li>SYN-14: Determine a demo/survey target number - researched the numbers</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>DEV-31: Identify a tone ring that will work with Desk Cycle and selected sensor - order tool, continue physical research, start modeling a custom tone ring in CAD</li>
+		<li>SYN-08: Build small scale test of expanding foam based packing boxes to verify/improve this construction technique - run an initial test of spray foam techniques</li>
+		<li>DEV-32: Select sensor package format (which specific model of the selected sensor) - will make a recommendation on sensor packaging</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>need to move next week's meeting due to personal travel</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Next Week's Joint Work</strong></p>
+
+
+	<ul>
+	<li>SYN-11: Refresh the demo surveys</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/78">2017 Sprint 3 Plan</a>
+    (2 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-06-21" title="06/21/2017 01:59 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p>We just wrapped up Sprint 2 (check out our <a href="https://opendesignengine.net/news/77" class="external">Review and Retrospective</a>) and are ready to start Sprint 3.  With the successful completion of the HID research during Sprint 2, we are turning our full attention to preparations for  SyndCon 2017.</p>
+
+
+	<p><strong>Duration:</strong> 7 weeks<br /><strong>Stand Ups:</strong> Wednesday nights<br /><strong>Start:</strong> Jun 17, 2017 <br /><strong>End:</strong> Aug 5, 2017</p>
+
+
+	<p><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Backlog and Full Sprint Plan</a> (see <em>Backlog</em> and <em>Sprint 3</em> tabs)</p>
+
+
+<ins>Key Tasks</ins>
+	<ul>
+	<li>Finalizing the sensor configuration, utilizing <a href="https://opendesignengine.net/boards/36/topics/1256" class="external">wheel speed sensor and tone ring</a> </li>
+		<li>Prep updated demo units</li>
+		<li>Prep demos (games, computers, displays, etc)</li>
+		<li>Design and make swag to give away at the con</li>
+		<li>Create the presentations for the main meeting and our panel</li>
+	</ul>
+
+
+<ins>Pre-Sprint Commitments</ins>
+	<ul>
+	<li>J
+	<ul>
+	<li>Post sprint 3 plan on ODE</li>
+		<li>Ping Ingrid about requests for assistance with marketing tasks</li>
+	</ul>
+	</li>
+		<li>Bryan
+	<ul>
+	<li>ping Jess about shirts and get her the design files for Holoseat logos</li>
+		<li>Investigate tone ring mounting options for Desk Cycle</li>
+		<li>Pull SyndCon attendance numbers</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/77">2017 Sprint 2 Review and Retrospective</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-06-18" title="06/18/2017 08:19 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>Review</strong></p>
+
+
+	<p><ins>Claiming Done</ins></p>
+
+
+	<ul>
+	<li>SYN-01: Contact D to open up conversation about Model B's presence at SyndCon (we are looking for booth/demo space, presentations, announcements in the SyndCon emails, etc)</li>
+		<li>BIZ-07: Submit paperwork to adjust ownership to the appropriate entities</li>
+		<li>DEV-07: Test Keyboard USB HID over Arduino</li>
+		<li>DEV-23: Test Nodejs then Johnny-Five in chiptainer enviroment to determine if we want to use chiptainer approach; note, testing lead to moving from Nodejs to Python and this PBI is claimed done for the Python implementation</li>
+		<li>DEV-24: Create Fritzing element for CHIP Pro; note, testing lead to adopting <a href="https://circuitmaker.com/Projects/Details/Bryan-Christian-3/holoseat" class="external">Circuit Maker</a>, and this PBI is claimed done for Circuit Maker</li>
+		<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?); note, testing lead to adopting Circuit Maker, this PBI is claimed done in Circuit Maker</li>
+		<li>DEV-26: Determine wiring to power CHIP Pro from Feather</li>
+		<li>DEV-27: Determine wiring to provide I2C between CHIP Pro and Feather</li>
+		<li>DEV-28: Develop Feather code to be I2C slave</li>
+		<li>DEV-29: Develop Johnny-Five code for CHIP Pro to be I2C master; note, testing lead to moving from Nodejs to Python and this PBI is claimed done for the Python implementation</li>
+		<li>DEV-30: Test master to slave and slave to master events between Feather and CHIP Pro</li>
+	</ul>
+
+
+	<p><ins>Not Claiming Done</ins></p>
+
+
+	<ul>
+	<li>BIZ-15: Contact A.G. to ask if he will be at SyndCon 2017 and if so ask for a meeting about financing Holoseat; <strong>Blocked:</strong> no response</li>
+		<li>CAMP-04: Send out emails to marketing volunteer prospects to determine their interest, availbility, and what they can do to help with marketing</li>
+		<li>DEV-19: Add hot key for enable/disable of Holoseat to v0.3 Configuration App for UX testing in prep to move controller down to the exercise equipment and remove separate sensor board; <strong>Deferred</strong> during sprint</li>
+		<li>DEV-31: Send out note to fans asking for input about hotkey vs button for enable/disable; <strong>OBE</strong> during sprint</li>
+	</ul>
+
+
+	<p><strong>Retrospective</strong></p>
+
+
+	<p><ins>What went well?</ins></p>
+
+
+	<ul>
+	<li>Recovered mid sprint from missing several stand ups</li>
+		<li>Had a last few week surge that was very productive</li>
+		<li>Theme of this sprint was "recovery" - like the stand ups, like identifying Node was not working and shifting focus to test python</li>
+		<li>Worked super well as a team this sprint</li>
+		<li>Finding Circuit Maker and adopting it over other options was a huge boon - let us actually complete schematics for v0.4</li>
+		<li>We did what <ins>had</ins> to be done as idenified at the sprint planning (specifically HID over USB)</li>
+	</ul>
+
+
+	<p><ins>What did not go well?</ins></p>
+
+
+	<ul>
+	<li>Missed several stand ups</li>
+		<li>Had some problems trying to keep up with external communications (like emails)</li>
+		<li>Hard to account for extra summer time projects</li>
+		<li>We have hit a capacity limit in how much can get done in a sprint</li>
+	</ul>
+
+
+	<p><ins>What can we do better?</ins></p>
+
+
+	<ul>
+	<li>Keep prioritizing stand ups, that is what saved us from a sad sprint</li>
+		<li>Prioritize external communications</li>
+		<li>Take the time to "pick the low hanging fruit" </li>
+		<li>Need to bring in more outside resources (including contract work) to increase capacity</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/76">2017 Sprint 2 Stand Up 8</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-06-15" title="06/15/2017 12:12 am">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>Continued working on updated architecture documentation, specifically local notes about i2c protocol and REST APIs for micro-services (cannot really claim progress until these things get into ODE)</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>none</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>work and convention</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?) - updated the schematic we built last week to use "proper" formatting/layout</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?) - will clean up and finish the schematic and produce a png to upload to DMSF</li>
+		<li>Send out email to potential volunteers about helping with Python development on Holoseat</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>none</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/75">2017 Sprint 2 Stand Up 7</a>
+    (1 comment)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-06-07" title="06/07/2017 07:05 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>DEV-23: Test Nodejs then Johnny-Five in chiptainer enviroment to determine if we want to use chiptainer approach - resolved block (we are going with CHIP Pro + Python) and completed tests (and a lot more, see <a href="https://opendesignengine.net/boards/36/topics/1254?r=1280#message-1280" class="external">testing thread</a> and the completed PBIs below)</li>
+		<li>DEV-26: Determine wiring to power CHIP Pro from Feather - done</li>
+		<li>DEV-27: Determine wiring to provide I2C between CHIP Pro and Feather - done</li>
+		<li>DEV-28: Develop Feather code to be I2C slave</li>
+		<li>DEV-29: Develop Johnny-Five code for CHIP Pro to be I2C master - done</li>
+		<li>DEV-30: Test master to slave and slave to master events between Feather and CHIP Pro - done</li>
+		<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?) - worked with Bryan to start documenting v0.4 design in Circuit Maker</li>
+		<li>Started working on updated architecture documentation (e.g. block diagrams)</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>Continue working on updated architecture documentation</li>
+		<li>Start working on Docker images for Holoseat (release and dev)</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>still on travel</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>DEV-07: Test Keyboard USB HID over Arduino - looked over things a little, but going to postpone more work while we are wrapping up work that uses Feather since that is working</li>
+		<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?) - started looking at the work done with J over the weekend and tutorials so he can update the rough schematics</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?) - going to try and get it done</li>
+		<li>Send out email to potential volunteers about helping with Python development on Holoseat</li>
+		<li>Start developing v0.4 prototype Bill of Materials</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>none</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="http://opendesignengine.net/news/74">2017 Sprint 2 Stand Up 6</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-05-31" title="05/31/2017 07:47 pm">over 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>Tag v0.3.1 in SVN and update v0.3 Documentation (SVN and DMSF)</li>
+		<li>DEV-23: Test Nodejs then Johnny-Five in chiptainer environment to determine if we want to use chiptainer approach - got all NTC examples running and published to docker.io; hit a snag where node chip-io (needed for johnny-five) is only working on CHIP, not CHIP Pro; this blocks forward progress until we resolve language/CHIP platform questions</li>
+		<li>DEV-26: Determine wiring to power CHIP Pro from Feather/DEV-27: Determine wiring to provide I2C between CHIP Pro and Feather - did circuit maker tutorials, but cannot get write access to Holoseat docs</li>
+		<li>Ordered test antennas for CHIP Pros</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>Resolve the block on DEV-23 by testing nodejs in CHIPtainer from CHIP and Python in CHIPtainer from CHIP Pro, <strong>focusing on Python/CHIP Pro implementation</strong> (python community is all over the CHIP Pro, so we should lean in that direction)</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>CHIP Platform and language interface issue (see DEV-23)</li>
+		<li>Circuit Maker permissions/user error (see DEV-26)</li>
+		<li>Back on the road Sunday</li>
+	</ul></li>
+	</ul>
+
+
+<strong>Bryan's Report</strong>
+	<ul>
+	<li>Did
+	<ul>
+	<li>BIZ-15: Contact A.G. to ask if he will be at SyndCon 2017 and if so ask for a meeting about financing Holoseat - sent email, no reply</li>
+		<li>SYN-01: Contact D to open up conversation about Model B's presence at SyndCon (we are looking for booth/demo space, presentations, announcements in the SyndCon emails, etc) - all good to go</li>
+		<li>CAMP-04: Send out emails to marketing volunteer prospects to determine their interest, availbility, and what they can do to help with marketing - talked to one of the people who expressed interest, available in very specific ways</li>
+		<li>DEV-19: Add hot key for enable/disable of Holoseat to v0.3 Configuration App for UX testing in prep to move controller down to the exercise equipment and remove separate sensor board - started reviewing the code needed for the hotkey implementation</li>
+		<li>DEV-24: Create Fritzing element for CHIP Pro - (done) migrated to circuit maker and imported Eagle version of CHIP Pro into project</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>DEV-07: Test Keyboard USB HID over Arduino - research alternative HID chip (<a href="http://www.microchip.com/wwwproducts/en/PIC16F1454" class="external">PIC16F1454</a>), specifically coding and usage (see <a href="https://github.com/psrg/innovation-board" class="external">innovation board source code</a></li>
+		<li>DEV-25: Update Fritzing docs to migrate from CHIP to CHIP Pro (EagleCad?) - Port v0.4 CHIP fritzing to CHIP Pro in circuit maker</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Blocked on BIZ-15</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Notes</strong></p>
+
+
+	<ul>
+	<li>De-prioritizing hotkey PBIs for this sprint (lower priority than things like HID)</li>
+		<li>Bryan has come to the conclusion that he want to keep the physical button and add hotkey if time permits (J. agrees)</li>
+	</ul>
+    </div>
+
+
+<p class="pagination"><a href="news%3Fpage=3.html">« Previous</a> <a href="news%3Fpage=1.html">1</a> <a href="news%3Fpage=2.html">2</a> <a href="news%3Fpage=3.html">3</a> 4 <a href="news%3Fpage=5.html">5</a> <a href="news%3Fpage=6.html">6</a>  <a href="news%3Fpage=5.html">Next »</a></p>
+
+<p class="other-formats">Also available in:
+	<span><a href="news.atom" class="atom" rel="nofollow">Atom</a></span>
+</p>
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

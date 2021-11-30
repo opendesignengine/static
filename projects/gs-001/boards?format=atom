@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ground Station: General</title>
+  <link rel="self" href="http://opendesignengine.net/projects/gs-001/boards?format=atom"/>
+  <link rel="alternate" href="http://opendesignengine.net/projects/gs-001/boards"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2013-08-11T21:15:23+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>General: RE: Version 1.1/1.2</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/568?r=573#message-573"/>
+    <id>http://opendesignengine.net/boards/18/topics/568?r=573#message-573</id>
+    <updated>2013-08-11T21:15:23+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Would it be possible to make the preamp, LC network and SDR assembly modular so that they could be swapped out in minutes depending on what someone wanted to do with the ground station? Or maybe they could just buy the kit for whatever frequencies they care about.&lt;/p&gt;
+
+
+	&lt;p&gt;I really like the idea of using ultra thin wall PTFE tubing and compressed gas for antenna deployment on HABs or spacecraft. I'm guessing we'd have to build our own dryers to get the compressed air dry enough for that application though. I think your last two paragraphs should be brought up to the Cube Sat community if they're not working on such things already.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: RE: Version 1.1/1.2</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/568?r=572#message-572"/>
+    <id>http://opendesignengine.net/boards/18/topics/568?r=572#message-572</id>
+    <updated>2013-08-11T20:59:50+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I have to admit that I cruised Joanne Fabrics for antenna components, which I must admit was a first for me and amused me mightily.  I was just waiting for a store clerk to ask "What are you working on?" or" is there anything I can help you find?" The result would have been priceless.  Thinking about it, I realized that the impact of using conductive fabric and thread in antenna systems may not be immediately obvious to everyone.&lt;/p&gt;
+
+
+	&lt;p&gt;While cloth tends to be flexible, it can be made rigid through several methods.  The first is the use of rigid struts.  Called boning by makers in fabric fields, these stiffening struts used in dresses and corsets were literally bone once upon a time, but later moved to steel and composites today.  These make great struts for our uses.  We have also come up with a potential method to create antenna aerials and loops out of conductive threads, ribbons, and fabrics (etextiles).&lt;/p&gt;
+
+
+	&lt;p&gt;A tube with extremely thin walls can be passed through a channel in the material as a deployable strut.  The antenna or ground plane material will fold or crush easily for storage, but straighten out to the desired shape once compressed gas is used to inflate the tube.  A perfect material to do this for HAB or small spacecraft is ultra thin wall PTFE (Teflon) tubing such as &lt;a href="http://www.amazon.com/Zeus-PTFE-Gauge-Length-Spool/dp/B00193ZXAY/ref=sr_1_1?ie=UTF8&amp;#38;qid=1376270363&amp;#38;sr=8-1" class="external"&gt;this offering available on Amazon&lt;/a&gt; for $44.95 per 100ft roll.  It withstands temperatures of -454F to +500F, making it able useful in spacecraft for one time deployment of fabric antennas.&lt;/p&gt;
+
+
+	&lt;p&gt;The pressure required to deploy a stowed antenna would be about 5-10 PSI of differential pressure between the inside and outside of the tube, meaning that a small bottle or reservoir made from Schedule 40 PVC pipe components containing ambient pressure at launch would suffice.  The deployment could be triggered with a small pneumatic solenoid such as &lt;a href="http://www.amazon.com/Vdc-Normally-Closed-Solenoid-Valve/dp/B007D1U64E/ref=sr_1_12?ie=UTF8&amp;#38;qid=1376272216&amp;#38;sr=8-12" class="external"&gt;this offering from American Science and Surplus&lt;/a&gt; for $3.75.  Prior to storage of the fabric antenna, the tubing system should be deflated with a small hand vacuum pump to prevent premature deployment as ambient pressure drops below the pressure in the tubes.&lt;/p&gt;
+
+
+	&lt;p&gt;For a more permanent deployment on a small satellite, the fabric of the antenna aerials and ground plane could be impregnated with a UV cure epoxy before stowing in a light proof enclosure.  Once deployed in space with no UV shielding from the atmosphere the epoxy would cure quite rapidly locking the antenna assembly in the deployed position even after the pressure in the teflon lines has bled down.  This means that a cubesat can contain and deploy an antenna much larger than the outside dimensions of any cubesat form factor, even with it folded up with a mechanical assembly.  This deployment system is not limited to antenna systems either.  It could easily be used to deploy solar panels or other spacecraft structures.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: RE: Version 1.1/1.2</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/568?r=571#message-571"/>
+    <id>http://opendesignengine.net/boards/18/topics/568?r=571#message-571</id>
+    <updated>2013-08-11T20:45:38+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;I received the preamp, &lt;a href="http://www.ramseyelectronics.com/cgi-bin/commerce.exe?preadd=action&amp;#38;key=PR-SERIES" class="external"&gt;Ramsey Electronics PR40 UHF low noise preamp&lt;/a&gt; on Friday and built it Saturday afternoon.  While small (7/8" x 1 1/2"), this kit is a through-hole design and soldering it was quick and easy.  More importantly, the design is straightforward, allowing some modification.  While the kit is designed to run on 12VDC, the transistor used (2SC2498) has a maximum bias voltage (B-E) of 3V, which means it will be possible to run the preamp on 5VDC by changing the bias resistor R1 from 470 ohms to a lower value such as 220 ohms. The purpose of running the preamp on 5VDC instead of 12VDC is to pull power from the same supply as the SDR, eliminating the need for the power subsystem.&lt;/p&gt;
+
+
+	&lt;p&gt;For Version 1.1/1.2 I am considering the removal of the SDR dongle's plastic enclosure to improve cooling and allow the connection of the preamp directly to the SDR's board.  This could then be mounted in an aluminum enclosure with a large capacitor for the power filtering.  This preamped, shielded, and filtered SDR would significantly improve the noise floor issue that plagues RTL based SDRs without much additional effort or cost.  The trade-off is that the RF filtering of the preamp makes the window of frequencies the antenna can tune much narrower.  The bottom line is that I doubt we will be able to use a UHF tuned preamped version to pick up 900MHz signals the way we did at the New Space show.  In a pinch we could bypass the preamp if we had to, but it would be fairly difficult.&lt;/p&gt;
+
+
+	&lt;p&gt;That said, the preamp's filters are tuned using a capacitor and inductor (LC) network.  Just like the voltage, this can be changed by swapping out components with different values. The reason to do this is to make a 900MHz version of the preamp to use with an antenna specifically tuned for a 915MHz center frequency.  This would have more than enough sensitivity to pick up the cubesat our friends at &lt;a href="http://www.southernstars.com/skycube/" class="external"&gt;Soutern Stars&lt;/a&gt; will be lanching.  There are a couple of ideas I have to lower the cost of entry for the 900MHz (L-band) version and make it even easier to build while improving the performance.&lt;/p&gt;
+
+
+	&lt;p&gt;Another improvement is in the ground plane.  Aluminum window screen was used for expedience, but making it have a consistent radius, lay flat, and make a good electrical connection proved to be a significant challenge.  On VHF frequencies, you can get away with murder as far as the quality of the components and especially the ground plane, but not so much with UHF which is what the current ground station design is tuned for.  At 900MHz, the ground plane partially fails, though I'm not sure if the problem is the geometry, the material (grids become transparent at higher frequencies) or what, but it is clear a redesign would improve matters.  Now that the aerial connection has been resolved, it is the next weak link.&lt;/p&gt;
+
+
+	&lt;p&gt;One method we are looking at to make the ground plane work at 900MHz and improve the performance at UHF frequencies is to use a finer material to cover the disk... much finer.  I have ordered some nickel/copper ripstop fabric from &lt;a href="http://www.lessemf.com/fabric.html" class="external"&gt;Lessemf.com&lt;/a&gt; . It has a conductivity of 0.01 to 0.03 Ohms per meter (good) and blocks RF at 80db up to over 3GHz.  This blows away any other material, but the challenge is working with it, since it is a fabric.  Fortunately for us all, I live with a talented seamstress (Jaye Sudar) who took one look at it and said "tedious, but easy".  Even more interesting is what this does for the electrical connections.  Rather than rely on aluminum struts to ground the screen and hold it in the proper shape, the material itself will conduct the ground potential and connect to the ground line using conductive thread.  This means that the struts to hold it flat do not need to be conductive at all; they can be 3D printed out of ABS or PLA.  We hope to have the new version ready to show for the Albuquerque maker fair at the end of the month.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: Version 1.1/1.2</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/568"/>
+    <id>http://opendesignengine.net/boards/18/topics/568</id>
+    <updated>2013-08-03T16:25:48+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This post is long overdue.  Version 1.0 had some shortcomings, and not all of them were in performance.  The construction left a lot to be desired.  It was difficult and balky requiring soldering copper to silver to aluminum.  Much of this has already been covered in the &lt;a href="https://opendesignengine.net/boards/18/topics/447" class="external"&gt;Version 1.0 close out&lt;/a&gt; post.  Once assembled, manipulating the aerials moved these connections and the failure of the 1.0 prototype just before Yuri's night was traced to a broken wire which I only found after disassembling the 1.0 prototype to build the 1.1 version for the show at New Space.  The issues of build difficulty as well as durability were solved by using ground lugs to connect the aerials and using crimp connectors on all the connections in the antenna itself... but this created new problems.&lt;/p&gt;
+
+
+	&lt;p&gt;The crimp connectors and hardware used to bolt these to the ground lugs, then the ground lugs connecting to the aerial, while fairly direct by our eyes, represents quite a number of transitions between various metals, each diminishing the signal by a bit.  Once I got the 1.1 groundstation back from New Space, I discovered that not only was the antenna horribly out of tune (peaked at 385-405 MHz instead of 460), it also had a signal loss of -2db in the between the jack and the aerials.  This doesn't sound that bad until you consider that the second arial was also less than it should be, at -1.8db from the main loop.  This seriously affected the tuning as well as the phase of the signal, and brought down the overall gain of a circularly polarized satellite signal from +8db or better (calculated based on received signal quality, as I did not lab test 1.0 sufficiently), down to +3.2db as tested today.&lt;/p&gt;
+
+
+	&lt;p&gt;Much of this can be compensated for.  The tuning issue is caused by failing to account for the lead length inside the antenna.  As far as the electrons were concerned, the actual aerial continues past the loop, into the ground lug, through the body of the antenna on the mounting bolt, through the crimp connector, and along the lead until it enters into the coaxial cable for either the antenna line or the tuning loop.  Now that we know, we can make the lead length consistent and reduce the circumference of the loops by the required amount.  This will tune the antenna to a 460MHz center frequency and raise the gain, but I doubt that it will be sufficient.&lt;/p&gt;
+
+
+	&lt;p&gt;To pick the signal out of the noise floor for most people's build would require a good bit of tweaking it until it works, but this solves no problems and would lead to frustrated kit builders.  We simply need more gain.  A +20db preamplifier mounted directly to the main aerial line and phasing loop would minimize cable loss and give the preamp a solid signal to amplify.  The SDR dongle could be connected directly to the output of the preamp.  The ground station would have somewhere in the neighborhood of +26db to +28db of gain, though this would be strictly in the UHF band.  It will bring the signal right up out of the noise floor and yield a solid 15db signal to noise ratio.&lt;/p&gt;
+
+
+	&lt;p&gt;The preamp is powered, requiring +12 to +15VDC, and this should not come from a wall wart power supply due to the amount of noise they introduce unless some extreme filtering is used.  I am recommending a rechargeable battery pack, which may be charged from a wall wart or car lighter plug. Since battery power will be available in the enclosure, and this power is "clean" DC, it would make some sense to power the SDR dongle from this supply as well, just stepped down to the 5VDC it expects.  The data lines from the SDR's USB connection may be brought out of the ground station's enclosure on a USB bulkhead connector.  The power from the computer on the USB connector will not be used except to signal the ground station's internal power supply to power up the ground station preamp and SDR when connected to the computer.&lt;/p&gt;
+
+
+	&lt;p&gt;All that said, I feel that these changes would represent a new subversion.  Not the antenna correction, but rather the addition of the preamp, change in the location of the SDR, and addition of a power subsystem.  This groundstation version 1.2 will also use some refinements to the ground plane I have been playing with, namely the use of conductive fabric and spring tensioners, which would allow the ground plane to fold like an umbrella against the body while in transit.  The other benefit is that the ground plane would lay flatter giving an improved reception pattern, and remain usable at higher frequencies, though the dimensions of all tuned parts would need to be adjusted.  This is in preparation of 900MHz and L-band versions.&lt;/p&gt;
+
+
+	&lt;p&gt;I will be retuning the aerials as mentioned in this text over the next few days and have ordered a preamp for the UHF band (around 435MHz).  It will be assembled, installed and tested as soon as it arrives.  To make room for the SDR, battery, and power supply I may increase the length of the antenna body, but only if necessary.  Finally, I will be adding a tripod mount (1/4-20 threaded receptacle) which will make the unit more rugged and outdoor friendly.  If anyone has any input I would love to hear it, even if it is for clarification of something said above.  This will likely be the final revision before kitification, so please speak now or...  you know the rest :)&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: CARPCOMM - similar project</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/541"/>
+    <id>http://opendesignengine.net/boards/18/topics/541</id>
+    <updated>2013-07-15T18:29:06+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This gentleman &lt;a class="external" href="http://blog.carpcomm.com/2013/03/how-to-build-satellite-receiving.html"&gt;http://blog.carpcomm.com/2013/03/how-to-build-satellite-receiving.html&lt;/a&gt; reinvented the wheel a lot, probably to make a GS SDR software suite that would run on the Raspberry Pi.  While a talented programmer with a fairly good grip on SDR technology, it should be noted that the pictures show him using a TVB dongle as we have, not the FunCube Dongle as indicated in his text.  Further, he is using a standard (linear polarity) Yagi antenna with no ability to aim it.  While interesting and probably useful as reference, his work has little in the way of value for the Groundstations, either the 1.1 or the 2.0 design.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: Version 1.0 close out.</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/540"/>
+    <id>http://opendesignengine.net/boards/18/topics/540</id>
+    <updated>2013-07-15T16:30:00+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;At it&#8217;s most basic level, a satellite ground station is simply a radio receiver and an antenna.  An exercise in just how simple one can be made was demonstrated at a Yuri&#8217;s Night event in April of this year.  Using a TV dongle as a software defined radio receiver (SDR) and connecting it directly to a medium gain &#8220;eggbeater&#8221; omnidirectional antenna, we were able to hear multiple satellite contacts, some quite far away.  While it worked, it cannot be said that it worked well, nor was the communication bidirectional, but it was inexpensive (under $50.00 for the entire project) and did receive radio communications as demonstrated in the linked Youtube video: &lt;a class="external" href="http://youtu.be/CbODjHt-BSg"&gt;http://youtu.be/CbODjHt-BSg&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;There were problems with this device.  First the antenna design was selected based upon the fact that it is not top-blind (low or no gain at zenith) like most, but in use we found another issue: it is not circularly polarized when the transmitting object is to the side.  This presents some major issues since the coupling between a randomly polarized signal and a vertically polarized antenna will likely be non-ideal, and could even cancel the signal.  This issue strongly affects reception, but the impact it has on the transmission using a 5 watt handheld transceiver would be disastrous.&lt;/p&gt;
+
+
+	&lt;p&gt;Another issue is that the other aerial loop at a 90 degree physical mounting as well as 90 degrees phase delayed do not contribute to the signal at all, and in some cases are detrimental.  The resulting real reception pattern when viewed from the top is a weak (+1.6-2.1db) cloverleaf with lobes between the aerial loops.  That said, it has a strong reception spike (+7.92dB) coming from the top of the assembly with a beam width of 38 degrees. Essentially we built a directional antenna in an effort to construct a high gain omni.  In practice, the only place the link budget will allow bidirectional contact with the satellite is within a couple of degrees of zenith.&lt;/p&gt;
+
+
+	&lt;p&gt;While quite functional for overhead passes this design turned out to be useless for pulling in weak signals close to the horizon.  Other designs were evaluated as well, and they had similar issues; they were either "top-blind" or had the same issues to the side the eggbeater antenna had.  we briefly considered building a hybrid antenna or connecting two different antennas, one "top-blind like a turnstile, and the other an eggbeater design.  The increase in cost and complexity makes this a bad idea.  The bottom line is that the 1.x design will never be able to meet the design criteria and paints us in a corner when it comes to its development as a tool for serious use.  That said, the eggbeater antenna design is a great introduction to satellite reception, and will be further developed as the 1.1 version which will be much easier to construct.&lt;/p&gt;
+
+
+	&lt;p&gt;It is clearly time to increase the complexity a bit for the purpose of enhancing the utility of the device into the realm of real use.  Thus the Groundstation 2.0 project has been born.  The solution is to change the design to a directional antenna, one which is expected to pick up a signal in a narrow cone and ignore signals in the remaining sphere.  For the bands we are interested in, the amateur VHF and UHF FM bands at approximately 144 and 440 MHz, the two most effective antennas are the X-Yagi and the Helical antenna designs.&lt;/p&gt;
+
+
+	&lt;p&gt;Since LEO satellites this ground station is designed to pick up move across the sky quite rapidly, a method of automatically pointing the antenna must be implemented.  Fortunately this is easy to implement in both the mechanical and electrical areas.  The challenge is to knowing where the satellite is and point the antenna array at it as it passes, but for this we have computer software which is capable of relaying the azimuth and elevation data to the microprocessor controller on the mount itself.&lt;/p&gt;
+
+
+	&lt;p&gt;This will yield the best possible horizon to horizon coverage for the satellite pass.  While the fact that the ground station now has moving parts makes it more complex, more expensive, and in some respects more prone to failure, the end result will improve the day to day operation and mission effectiveness of the ground station.  With some careful engineering, the new ground station design will remain buildable by students and hobbyists while keeping the complexity and costs to a minimum.&lt;/p&gt;
+
+
+	&lt;p&gt;To recap:  Version 1.0 will be abandoned, Version 1.1 will be developed as an easy to build hobby device, and version 2.0 will be developed as a strong mobile capable groundstation.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: GENSO - similar project</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/500"/>
+    <id>http://opendesignengine.net/boards/18/topics/500</id>
+    <updated>2013-06-17T09:08:46+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;As we have been discussing the ground station project, one idea keeps coming up:  using open source hardware to implement a global network of inexpensive ground station nodes to create affordable global coverage for spacecraft communications.  It turns out, Greg sent me (us) a presentation some months back about &lt;a href="http://www.genso.org/" class="external"&gt;GENSO&lt;/a&gt; which is an &lt;a href="http://www.esa.int/ESA" class="external"&gt;ESA&lt;/a&gt; run project to develop similar capability (but perhaps without as strong a focus on open source hardware).  More details at the &lt;a href="http://en.wikipedia.org/wiki/Global_Educational_Network_for_Satellite_Operations_(GENSO)" class="external"&gt;GENSO wiki&lt;/a&gt; page.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: Aerial Attachment Lug</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/447?r=457#message-457"/>
+    <id>http://opendesignengine.net/boards/18/topics/447?r=457#message-457</id>
+    <updated>2013-05-10T13:04:39+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;One of the biggest issues with the construction of the groundstation antenna as noted above is the attachment of the transmission line, phasing line, and aerials.  The way it was done in the 1.0 prototype design was difficult in a well equipped lab, and unreasonable to expect a hobbyist to do it that way.  We had to figure out something else.&lt;/p&gt;
+
+
+	&lt;p&gt;While a ground lug would be ideal, allowing a bolt to be used to physically attach the lug and connectors to the body, most ground lugs have square ends which cause oddball issues particularly in higher frequencies such as UHF.  One design, although pricey, doesn't have this issue.  Panduit's ML8-CY ground lug is a rounded case design which accepts 3/16" hardware and wire diameters from &lt;a href="http://opendesignengine.net/issues/14" class="issue status-1 priority-2 child" title="Add support to showcase &amp;quot;featured projects&amp;quot; on the site homepage (New)"&gt;#14&lt;/a&gt; to &lt;a href="http://opendesignengine.net/issues/8" class="issue status-3 priority-2 closed" title="Add support for enhanced document management (Resolved)"&gt;#8&lt;/a&gt; AWG.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a href="http://hqwww.panduit.com/panduit/Products/ProductOverviews/ProductSearch/index.htm?Ns=P_ItemSortOrder&amp;#38;Ne=1&amp;#38;R=ML8-CY&amp;#38;sid=13C814936034&amp;#38;lastNodeId=ss_prod_powerconnectors&amp;#38;N=5000001%20555%203000688" class="external"&gt;Product page&lt;/a&gt;&lt;br /&gt;&lt;a href="http://www.newark.com/jsp/displayProduct.jsp?sku=72K8889&amp;#38;CMP=KNC-G-SKU-OTH-PANDUIT&amp;#38;mckv=s7g0b1Ohj|pcrid|19224798423|plid" class="external"&gt;Newark&lt;/a&gt;| $3.73&lt;br /&gt;&lt;a href="http://www.mouser.com/ProductDetail/Panduit/ML8-CY?qs=df4aQwA0H1qhuGIRWuv2a6BeHRY4JcQs" class="external"&gt;Mouser&lt;/a&gt; NA&lt;br /&gt;&lt;a href="http://www.amazon.com/Panduit-ML8-CY-Barrel-Straight-Tongue/dp/B00B5P3KT2" class="external"&gt;Amazon&lt;/a&gt; $2.07&lt;br /&gt;&lt;a href="http://store.cableorganizer.com/p-49414-copper-mechanical-lug-1-hole-barrel-post-14-sol-8-str-316-48mm-stud.aspx" class="external"&gt;CableOrganizer.com&lt;/a&gt; $2.07&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: Receiver</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/447?r=449#message-449"/>
+    <id>http://opendesignengine.net/boards/18/topics/447?r=449#message-449</id>
+    <updated>2013-05-01T00:50:23+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Using a Realtek RTL2832u chipset USB HDTV receiver dongle, I attempted to receive the UHF signals the antenna was designed to receive.  There were several issues, most of them dealing with specific hardware issues on the target laptop.  It worked once under windows, and a windows update screwed up the USB driver or the way the software communicated with the dongle.  Under Linux I had version compatibility issues in PERL.  This is something I will be fixing in the next month, but simply ran out of time for the Yuri's night video.  I am just glad I got a recording of it working before windows thought it was smarter than I was.&lt;/p&gt;
+
+
+	&lt;p&gt;Lessons learned:  Using an early netbook with some proprietary oddities and has seen some "love" over it's long live was probably not a good choice of host PC.  I will be using a more conventional laptop for testing later in the month.  While I was originally thinking about putting the radio dongle in the PVC pipe enclosure of the antenna, this would have been a bad idea when it comes to the temperatures I can reasonably expect the enclosure to see if mounted outside.  Use coax to run between the dongle and the antenna, keeping the dongle in a temperature controlled room.  When selecting the dongle, don't get one with a barrel of F-connector.  chose instead an MMCX or other connector which will make good contact for a long time and where the connector can freely swivel instead of putting stress on the RF and USB connectors.&lt;/p&gt;
+
+
+	&lt;p&gt;A gentleman from Bucketworks Makerspace asked about the noise floor issue.  I discovered that if the laptop is running on batteries and the dongle is connected to the PC with a long cord (mine was 5 ft), the noise drops by a huge margin.  This is due to hash noise from the digital circuits in the host PC which were filtered by the longer cable, as well as the switching power supply used on the laptop making noise.  When the laptop ran on batteries, the noise floor dropped by a ton.  I will have more precise measurements of the difference when I have GNU Radio running.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: Antenna design</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/447?r=448#message-448"/>
+    <id>http://opendesignengine.net/boards/18/topics/447?r=448#message-448</id>
+    <updated>2013-05-01T00:31:42+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Eggbeater antennas are quite simple in concept, but I have discovered that they require a bit of skill to design and put together.  The loops are one full wavelength of whatever you are trying to receive, with a little extra thrown in to make bends and connections with.  Specifically, the formula is 1005 / F (MHz).  This is equal to 1005 / 145 = 6.93 feet or 2 meters 11.26 cm for the VHF band (also called the 2 meter band), and UHF is the same formula which comes to 1005 / 435 = 2.31 feet or 70.4 cm.  You will need a little extra on the ends, so give yourself a little wiggle room here.  An extra inch or two will do.&lt;/p&gt;
+
+
+	&lt;p&gt;Your loop, should it have continued, completing the circle, should be precisely one wavelength.  That said, you do not wish for those ends to meet, but the closer you get to a circle, the better off you are.  Bend the aerial material sharply from this point to form attachment points for the feed line and phasing loop.  The loops should be built from a substance that weathers well (I used 12 ga aluminum fence wire), and cannot tough at the top.  To make sure of this, I used two small zip ties around each loop and through each other.  When tightened they maintain the geometry while insulating the loops.  Use black outdoor zip ties to make the whole thing (and your radio) last longer.&lt;/p&gt;
+
+
+	&lt;p&gt;The  phasing loop made from RG-68 coaxial cable is another item which requires precise cuts according to the output of a formula.  It is a quarter wavelength, but radio waves travel at a different rate in a piece of coaxial line, so we have to take all these things into account.  The formula is 246 x coax. velocity factor / F (MHz).  This is equal to (246 x 0.86) / 145 = 1.46 ft or 44.5 cm for VHF or  (246 x 0.86) / 435 = 0.486 ft or 14.8 cm for UHF bands.  Again, from a practical standpoint give yourself some extra to attach things to and to strip back the coax.&lt;/p&gt;
+
+
+	&lt;p&gt;The coaxial cable used for the phasing loop &lt;strong&gt;must&lt;/strong&gt; be RG-68 due to two properties of this cable.  At 90 ohms impedance, it is close to the 50 ohm impedance of each of the loops in series (2*50=100), and it contains the right properties such as the velocity factor to phase delay the circular polarized signals picked up by the loops and make it into a good signal for the receiver.  Unfortunately, RG-68 is the cable the old Thin Net (10base2) networks used to run on when we still used coax instead of ethernet.  Very little of it is still around, and this was the delay in getting the ground station up and running with a comfortable margin.  The good news is I have bought a thousand foot spool of it for the kits, so if anyone needs any, just drop me a line and I'll make you a sweet deal.&lt;/p&gt;
+
+
+	&lt;p&gt;Connecting the feed line (a piece of RG58 or RG6 (50 ohm) transmission line, the phasing line, and the aerials is simple, but turned out to be the most difficult to do.  I soldered mine, but soldering copper and silver to the aluminum I used for the aerial material was a real pain.  For the next version I will be using small ground lugs to make the electrical connections on the aerial loops and crimp terminals for connection to the phasing and feed lines.&lt;/p&gt;
+
+
+	&lt;p&gt;The sequence to connect the various lines and aerials for right hand circular polarization looking down from the top of the antenna is as follows:&lt;/p&gt;
+
+
+	&lt;p&gt;1. Starting with the aerial loop end at the 12 o'clock position attach both the center conductor from the feed line as well as the center conductor of the phasing loop.  &lt;br /&gt;2. Moving to the end at the 6 o'clock position, connect both the shield braids of the feed line and end of the phasing loop of which you attached the center conductor in the first step. &lt;br /&gt;3. At the 3 o'clock position, connect only the shield braid from the other end of the phasing line.&lt;br /&gt;4. At the 9 o'clock position, connect only the center conductor from the other end of the phasing line.&lt;/p&gt;
+
+
+	&lt;p&gt;If you need left hand circular polarization, simply reverse the connections made in steps 3 and 4 above.&lt;/p&gt;
+
+
+	&lt;p&gt;I was looking for an ideal antenna body.  On a trip to Home Depot, I picked up a 24" long 3" diameter black PVC tube for the body of the antenna.  The diameter was overkill, but it attaches firmly to a wall, eave, or other surface with a fence clamp.  The black PVC was chosen because it is more resistant to UV weathering and looks better.  For the prototype used in the demo, I simply cut 4 slots for the aerial loops to exit the antenna body at 90 degree intervals (cross cut) just wide enough for the wire used for the loops to friction fit, and deep enough for the wire loop to pass through with the cap fully seated.  This will be unnecessary in the final version since it makes more sense for the loops to be screwed down instead of clamped in the body and soldered.&lt;/p&gt;
+
+
+	&lt;p&gt;When I brought the pipe into the lab, I realized that not only was the diameter overkill, but the length was as well.  I cut the pipe in half and it is much more portable.  Theoretically, I could have cut the pipe in half again for a 6" length, but that would make it difficult to attach the ground plane, mounting hardware, get the aerial loops to exit the side within the proscribed distance from the ground plane and install the end caps.  A minimum of an 8" length is needed for the UHF model, while I calculate that a 12" length is needed for the VHF model or a model which receives in both bands.&lt;/p&gt;
+
+
+	&lt;p&gt;The ground plane is non-critical, except for four factors:&lt;/p&gt;
+
+
+	&lt;p&gt;1. It must be connected to the signal ground (6 o'clock in our sequence above).&lt;br /&gt;2. It must be level with the ground while perpendicular to the body of the antenna.&lt;br /&gt;3. It must extend at least 1/4 of a wavelength from the body of the antenna ((1005/F)/4).&lt;br /&gt;4. It must be mounted 1/8 of a wavelength below the bottom of the aerial loops ((1005/F)/8).&lt;/p&gt;
+
+
+	&lt;p&gt;The lower the frequency, the more you can get away with murder in the construction of the ground plane.  In VHF, you only need 8 aerial protruding from the body.  For UHF, I used aluminum flat struts cut to length, bent, and fastened with an automotive hose clamp (which also held the ground wire).  I covered the aluminum struts with aluminum window screening which is secured by folding over the excess and stapling the two sides together.  for L-band or above, I would recommend the use of a solid ground plane.&lt;/p&gt;
+
+
+	&lt;p&gt;The feed line on the prototype was terminated with a BNC connector, but any RF connector will do.  Once all the connections were made inside the tube, the top and bottom were covered with the end caps.  I did not glue them as I would for a production model since I expected to tear it down and rebuild the device multiple times.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: Major Project Shift </title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/447"/>
+    <id>http://opendesignengine.net/boards/18/topics/447</id>
+    <updated>2013-04-30T16:04:41+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Due to time constraints of Yuri's Night 2013, primarily due to supplier issues, physical development of the ground station receiver was not started until the Friday morning before the Saturday event.  The downside was that in order to show something for the event, I had to build rapidly which means documentation fell by the wayside.  The upshot of all this is that the ground station had to be simpler to build than the original design in order to be done in time.  Further, as the ground station components came together I was able to identify areas which needed improvement before the device is kitified.  This thread will outline the journey and issue recommendations for improvements.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: RE: Project scope</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/287?r=442#message-442"/>
+    <id>http://opendesignengine.net/boards/18/topics/287?r=442#message-442</id>
+    <updated>2013-04-18T13:35:32+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;One of the things we have been talking about in hangouts and over email is how we can tie lots of ground stations across the planet together into a cohesive network with complete coverage of the sky.  While looking at some Youtube videos about SDR I found this very interesting site:  &lt;a class="external" href="http://www.websdr.org/"&gt;http://www.websdr.org/&lt;/a&gt;  It let's users access SDR servers all of the country (planet?) from a web page.  The server software is not open source, but the developer is willing to give people access to it if they are running a publicly available server.  It might be worth talking to the developer about what we want to do to see if he can share lessons, source code, etc with us.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: Maker Magazine Video Blog Covering Ground Station Related Tech</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/441"/>
+    <id>http://opendesignengine.net/boards/18/topics/441</id>
+    <updated>2013-04-18T13:20:52+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Check out these two recent videos from a Make Magazine employee.  The first is how to get started in &lt;a href="http://en.wikipedia.org/wiki/Amateur_radio" class="external"&gt;HAM radio&lt;/a&gt; and the second is about &lt;a href="http://en.wikipedia.org/wiki/Software-defined_radio" class="external"&gt;Software Defined Radio&lt;/a&gt;.  I was just amused to see such relevant posts this week right after our &lt;a href="http://is.gd/M30YN13" class="external"&gt;Yuri's Night Party&lt;/a&gt; where we demonstrated the ground station hardware.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;object width="600" height="400"&gt;
+  &lt;param name="movie" value="https://www.youtube.com/v/bm9GtSHXicI?rel=1&amp;fs=1"&gt;&lt;/param&gt;
+  &lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;
+  &lt;param name="allowScriptAccess" value="always"&gt;&lt;/param&gt;
+  &lt;embed src="https://www.youtube.com/v/bm9GtSHXicI?rel=1&amp;fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"&gt;&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;object width="600" height="400"&gt;
+  &lt;param name="movie" value="https://www.youtube.com/v/fow9lOCuv0k?rel=1&amp;fs=1"&gt;&lt;/param&gt;
+  &lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;
+  &lt;param name="allowScriptAccess" value="always"&gt;&lt;/param&gt;
+  &lt;embed src="https://www.youtube.com/v/fow9lOCuv0k?rel=1&amp;fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"&gt;&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: Substantial changes in project scope, milestones, target, and architecture.</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/287?r=427#message-427"/>
+    <id>http://opendesignengine.net/boards/18/topics/287?r=427#message-427</id>
+    <updated>2013-03-11T13:31:05+00:00</updated>
+    <author>
+      <name>Aaron Harper</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Some changes were proposed which led to a whole new train of thought and a better project.  These are outlined below:&lt;/p&gt;
+
+
+	&lt;ol&gt;
+	&lt;li&gt;To allow people to use the equipment, satisfy curiosity, and listen in on space activities, all without a license, the first project is a simple radio receiver with an omnidirectional antenna.&lt;/li&gt;
+		&lt;li&gt;One of the least expensive and most capable receivers is an inexpensive USB TV dongle based upon the Realtek RTL-2832U chipset running GNURadio software.  It is capable of 24-1766MHz reception.&lt;/li&gt;
+		&lt;li&gt;When this is combined with a rugged circular polarized omnidirectional antenna, a ground station receiver may be designed which fits in a very small space for under $100.00.&lt;/li&gt;
+		&lt;li&gt;Using a Software Defined Receiver (SDR) helps to create a much more versatile project since this device can tune from HF to L/C band microwave with only the replacement of the antenna assembly.&lt;/li&gt;
+	&lt;/ol&gt;
+
+
+	&lt;p&gt;These changes alter the entire architecture of the project, and will result in radical changes to what had been designed before.  Over the next few days we will review the project documentation and make it match the current project details.  Any thoughts on procedure or recommendations would be greatly appreciated.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>General: RE: Project scope</title>
+    <link rel="alternate" href="http://opendesignengine.net/boards/18/topics/287?r=425#message-425"/>
+    <id>http://opendesignengine.net/boards/18/topics/287?r=425#message-425</id>
+    <updated>2013-02-12T22:08:33+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;That sounds good to me (including the names), but I do have a few questions.&lt;/p&gt;
+
+
+	&lt;ol&gt;
+	&lt;li&gt;Do you need to re-specify the construction of the eggbeater antenna in Parks if you've already done it for Goldstone? Maybe add some wording to make it clear that you're just building a duplicate from the Goldstone plans?&lt;/li&gt;
+		&lt;li&gt;Under Parks, "The software must be by the user programmed..." should be "The software must be programmed by the user..." or "The software must be configured by the user..." if it's GPredict and the user doesn't have to write any code. The current wording sounds like you're channeling Yoda :) "Programmed by the user the software must be...hmmmm..." &lt;/li&gt;
+		&lt;li&gt;In Version 3.0, "...from elements of the telemetry and control present it custom web based..." seems awkward. I'm not quite sure what you mean.&lt;/li&gt;
+	&lt;/ol&gt;
+
+
+	&lt;p&gt;Nice work, I like it.&lt;/p&gt;    </content>
+  </entry>
+</feed>

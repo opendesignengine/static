@@ -1,0 +1,12 @@
+h1. Shepard Test Stand Schematics and PCB Files v1.1
+
+This is a newer document based on "this one":https://opendesignengine.net/projects/shepard-ts/wiki/Schematics_and_PCB_Files_v1_0 , and you should refer to that original version if you want to see the revision history.
+
+There are no PCB files for this version of the Shepard Test Stand at this time.
+
+You can find the schematic files in the DMSF plugin "here":https://opendesignengine.net/dmsf/shepard-ts?folder_id=17
+
+An image of the schematic is shown in *Figure 1*.
+
+*Figure 1*
+!Shepard_v1.0_DAQ.png!

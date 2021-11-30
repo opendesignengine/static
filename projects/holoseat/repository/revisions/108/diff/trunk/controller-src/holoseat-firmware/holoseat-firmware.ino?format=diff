@@ -1,0 +1,218 @@
+Index: holoseat-firmware.ino
+===================================================================
+--- holoseat-firmware.ino	(revision 107)
++++ holoseat-firmware.ino	(revision 108)
+@@ -156,17 +156,6 @@
+   return Hardware_v0_4_VersionString;
+ }
+ 
+-// deprecated
+-void SendReadyMessage() {
+-    Serial.print("Holoseat");
+-    Serial.print(" HW=");
+-    Serial.print(GetHardwareVersion());
+-    Serial.print(" FW=");
+-    Serial.print(FirmwareVersionString);
+-    Serial.print(" HSP=");
+-    Serial.println(HspVersionString);
+-}
+-
+ void SerialReturnError(char* messageId, char* errorMessage) {
+   const size_t bufferSize = JSON_OBJECT_SIZE(2);
+   DynamicJsonBuffer jsonBuffer(bufferSize);
+@@ -196,6 +185,14 @@
+     const char* verb = root["verb"];
+ 
+     // find the method for uri/verb pair
++    if (strcmp(uri, "/lowlevel/events") == 0) {
++      if (strcmp(verb, "GET") == 0) {
++        LowlevelEventsGet(messageId);
++      }
++      else {
++        SerialReturnError(messageId, Error_Illegal_Verb);
++      }
++    }
+     if (strcmp(uri, "/main/devicename") == 0) {
+       if (strcmp(verb, "GET") == 0) {
+         MainDevicenameGet(messageId);
+@@ -212,6 +209,17 @@
+         SerialReturnError(messageId, Error_Illegal_Verb);
+       }
+     }
++    if (strcmp(uri, "/main/enabled") == 0) {
++      if (strcmp(verb, "GET") == 0) {
++        MainEnabledGet(messageId);
++      }
++      else if (strcmp(verb, "PUT") == 0) {
++        MainEnabledPut(messageId, root["args"]["enabled"]);
++      }
++      else {
++        SerialReturnError(messageId, Error_Illegal_Verb);
++      }
++    }
+     if (strcmp(uri, "/main/logging") == 0) {
+       if (strcmp(verb, "PUT") == 0) {
+         LoggingEnabled = root["args"]["enabled"];
+@@ -232,6 +240,20 @@
+   }
+ }
+ 
++void LowlevelEventsGet(char * messageId) {
++  // send all of the event messages 
++  sendEnabledChangeEvent();
++  
++  const size_t bufferSize = JSON_OBJECT_SIZE(2);
++  DynamicJsonBuffer jsonBuffer(bufferSize);
++  JsonObject& root = jsonBuffer.createObject();
++
++  root["messageId"] = messageId;  
++  root["events"] = "Echoed";
++  root.printTo(Serial);
++  Serial.println();
++}
++
+ void MainDevicenameGet(char * messageId) {
+   const size_t bufferSize = JSON_OBJECT_SIZE(2);
+   DynamicJsonBuffer jsonBuffer(bufferSize);
+@@ -259,60 +281,24 @@
+   Serial.println();
+ }
+ 
+-//-----------------------------------------------------
+-// deprecated
+-void ProcessSerialData_old() {
+-  if (Serial && Serial.available()) {
+-    // FIXME - replace with C-string functions later for stability 
+-    String command = Serial.readStringUntil('\n'); 
+-    int nextStart = 0;
+-  
+-    if (command.charAt(0) == '?') {
+-      SendReadyMessage();
+-    }
+-    else if (command.charAt(0) == 'Q') {
+-      SendStateMessage();
+-    }
+-    else if (command.charAt(0) == 'S') {
+-      // find new walk forward character
+-      nextStart = 2;
+-      WalkForwardCharacter = command.charAt(nextStart);
++void MainEnabledGet(char* messageId) {
++  const size_t bufferSize = JSON_OBJECT_SIZE(2);
++  DynamicJsonBuffer jsonBuffer(bufferSize);
++  JsonObject& root = jsonBuffer.createObject();
+ 
+-      // find new walk backward character
+-      nextStart = command.indexOf(',', nextStart);
+-      WalkBackwardCharacter = command.charAt(nextStart+1);
+-    
+-      // find new enabled flag
+-      nextStart = command.indexOf(',', nextStart+1);
+-      HoloseatEnabled = command.substring(nextStart+1).toInt();
+-      
+-      // find trigger cadence
+-      nextStart = command.indexOf(',', nextStart+1);
+-      unsigned int foo = command.substring(nextStart+1).toInt();
+-      //ForwardTriggerCadence = command.substring(nextStart+1).toInt();
+-      //BackwardTriggerCadence = ForwardTriggerCadence;
+-      
+-      // find new enable logging
+-      nextStart = command.indexOf(',', nextStart+1);
+-      LoggingEnabled = command.substring(nextStart+1).toInt();
+-      
+-      // find the new logging interval
+-      nextStart = command.indexOf(',', nextStart+1);    
+-      LoggingInterval = command.substring(nextStart+1).toInt();
+-      
+-      Serial.println("OK");
+-    }
+-    else {
+-      Serial.println("ERROR");  
+-    }
++  root["messageId"] = messageId;  
++  root["enabled"] = HoloseatEnabled;
++  root.printTo(Serial);
++  Serial.println();
++}
++
++void MainEnabledPut(char* messageId, int enabled) {
++  if (HoloseatEnabled != enabled) {
++    toggleEnabledState();
+   }
+-  
+-  if (LoggingEnabled && (millis() - LastLogTime >= (100 * LoggingInterval))) { // measured in 1/10 sec
+-    LastLogTime = millis();
+-    SendStateMessage();
+-  }
++
++  MainEnabledGet(messageId);
+ }
+-//-----------------------------------------------------
+ 
+ // set up enabled state variables
+ int enableReading = LOW;          
+@@ -341,26 +327,31 @@
+   EnableSensors(true);
+   LastLogTime = millis();
+   Keyboard.begin();
++}
+ 
+-#ifdef DEBUG  // when debugging, hold for the serial monitor and setup some test defaults
+-  while (!Serial)
+-    {
+-    ;
+-    }
++void toggleEnabledState() {
++  HoloseatEnabled = !HoloseatEnabled;
++  if (HoloseatEnabled) {
++    digitalWrite(enableLedPin, HIGH);
++  }
++  else {
++    digitalWrite(enableLedPin, LOW);
++  }
++  
++  sendEnabledChangeEvent();
++}
+ 
+-  // override defaults
+-  WalkForwardCharacter = 'w';
+-  WalkBackwardCharacter = 's';
+-  HoloseatEnabled = !true;  // when we wake up, we will go through the transition right away, so set up for that fact
+-  //ForwardTriggerCadence = 45;
+-  //BackwardTriggerCadence = 45;
+-  LoggingEnabled = 1;
+-  LoggingInterval = 5;
++void sendEnabledChangeEvent() {
++  const size_t bufferSize = JSON_OBJECT_SIZE(3);
++  DynamicJsonBuffer jsonBuffer(bufferSize);
+ 
+-  // send ready message and state
+-  Serial.println("R"); // send ready signal, if there is a serial connection
+-  SendStateMessage();
+-#endif
++  JsonObject& root = jsonBuffer.createObject();
++  root["messageId"] = "event";
++  root["type"] = "enabledChange";
++  root["enabled"] = HoloseatEnabled;
++
++  root.printTo(Serial);
++  Serial.println();
+ }
+ 
+ void loop() {
+@@ -373,15 +364,13 @@
+   
+   // handle enable switching
+   if (enableReading == HIGH && enablePrevious == LOW)
+-    HoloseatEnabled = !HoloseatEnabled;
++    toggleEnabledState();
+ 
+   // handle "walking" (or not)
+   if (HoloseatEnabled) {
+-    digitalWrite(enableLedPin, HIGH);
+     HandleWalking();
+   }
+   else {
+-    digitalWrite(enableLedPin, LOW);
+     InitializeWalkingVariables();
+   }
+     

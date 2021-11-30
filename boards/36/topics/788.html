@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Discussion on managing firmware upgrades from desktop application - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/holoseat/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/holoseat/boards.html">Forums</a> » <a href="../../../projects/holoseat/boards/36.html">Design Discussions</a> » </p>
+
+<div class="contextual">
+    <span class="message-788-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Discussion on managing firmware upgrades from desktop application</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-07-10.html" title="07/10/2014 12:49 pm">over 8 years</a> ago</span></p>
+<div class="wiki">
+<p>So, one of the big new developments is a companion desktop application to manage configuration in the <strong>Holoseat</strong> controller (walking trigger speed, key to press for walking).  It simplifies the electronics and makes the <strong>Holoseat</strong> more flexible in terms of games support.  It also enables us to consider automatic firmware updates for the controller.  This thread is to capture/hash out how to implement firmware upgrades.  Here are the initial concepts Bryan and I have been discussing.</p>
+
+
+	<a name="Where-to-pull-firmware-from"></a>
+<h3 >Where to pull firmware from<a href="788.html#Where-to-pull-firmware-from" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>SVN Repo tags by version (contains all versions, would need to select correct one)</li>
+		<li>SVN Repo releases directory (may contain multiple versions, but only if required to support older gen hardware)</li>
+		<li>DMSF file download (new idea, not sure how it would be structured)</li>
+	</ul>
+
+
+	<a name="Determining-hardware-software-and-firmware-compatibility"></a>
+<h3 >Determining hardware, software, and firmware compatibility<a href="788.html#Determining-hardware-software-and-firmware-compatibility" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>For everything to work, the hardware, software (so we can control configuration, partly done through compiling the firmware), and the firmware need to be compatible versions (though not necessarily the same version).  Here are some initial ideas about how to identify versions for the various elements.</p>
+
+
+	<ul>
+	<li>Hardware
+	<ul>
+	<li>???</li>
+	</ul>
+	</li>
+		<li>Software
+	<ul>
+	<li>Hard coded into the software (a constant in the source code)</li>
+	</ul>
+	</li>
+		<li>Firmware
+	<ul>
+	<li>Declared in the common header used to control configuration</li>
+		<li>Declared in a separate version.h </li>
+		<li>Declared in both (config version and firmware version) so we can compare the two version numbers before flashing the firmware with an incompatible configuration</li>
+	</ul></li>
+	</ul>
+
+
+	<p>We also need to discuss how to identify when various versions are compatible with each other (that is the Desktop application will generate a compatible header file for the current firmware, or the firmware will work with the sensors on the <strong>Holoseat</strong>).</p>
+
+
+	<ul>
+	<li>Tag all three elements with a major.minor.patch release number scheme and enforce compatibility at the major version level (all 1.x.x elements will be compatible, otherwise we rev up the major version number on an element)</li>
+	</ul>
+
+
+	<p>Finally, how will we know what version firmware we are downloading and that it matches the current hardware and software.</p>
+
+
+	<ul>
+	<li>Inspect tag or other SVN description before downloading</li>
+		<li>Download firmware to separate directory from compiler working directory and inspect version info before moving it to working directory</li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (1)</h3>
+
+  <div class="message reply" id="message-859">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="788%3Fr=859.html#message-859">RE: Discussion on managing firmware upgrades from desktop application</a>
+    -
+    Added by <a href="../../../users/158.html" class="icon icon-contributor-license">Bryan Christian</a> <a href="../../../projects/holoseat/activity%3Ffrom=2014-09-26.html" title="09/26/2014 09:57 am">about 8 years</a> ago
+  </h4>
+  <div class="wiki"><p>SVN makes more sense to me, but that's because I've already integrated an SVN library and managed to get a connection.  I just need to work on getting it to handle check-out correctly.</p>
+
+
+	<p>I'm thinking the versioning ends up like this:<br />Major.minor.rev<br />Major always breaks and requires reinstall and may break hardware compatability.  Might need to include a hardware compatibility flag for once we get the hardware versioned.<br />Minor means the headers are no longer compatible.  This requires update to the desktop application itself.  Not sure how we handle this one.  Perhaps have the application check SVN for an update to itself then launch a desktop updater app that will pull it down the new desktop app and launch the installer.<br />Revision means just a firmware update.  No real issues here.</p>
+
+
+	<p>I'm thinking we need to do some sort of circuit we can poll and get a static value off of for determining hardware version.  Something adjustable by something as simple as swapping out a resistor if possible.</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-1/1)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/788.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

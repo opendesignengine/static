@@ -1,0 +1,117 @@
+h1. Shepard Test Stand Requirements Document v1.1
+
+{{toc}}
+
+This is a newer document based on "this one":https://opendesignengine.net/projects/shepard-ts/wiki/Requirements_Document_v1_0 , and you should refer to that original version if you want to see the revision history.
+
+h3. Introduction
+
+The requirements list matches up to the "Initial Questions":https://opendesignengine.net/projects/shepard-ts/wiki/Initial_Questions in step one of the Systems Engineering process as shown below. Each requirement is labeled with STSR (Shepard Test Stand Requirement), followed by the number of the initial question that the requirement corresponds to, followed by a dot and then the ID number of the requirement.
+
+* *STSR 1.x* - Why are we making this?
+* *STSR 2.x* - Who is this for?
+* *STSR 3.x* - How will this be used?
+* *STSR 4.x* - What features does it need to have (now)?
+* *STSR 5.x* - What features does it need to have (later)?
+* *STSR 6.x* - What are the legacy requirements?
+* *STSR 7.x* - Who's going to build this?
+* *STSR 8.x* - How many do we want to make?
+* *STSR 9.x* - What is the budget?
+* *STSR 10.x* - What is the timeline?
+* *STSR 11.x* - What waste products will be produced by the manufacture and/or operation of this?
+
+
+h3. Technical Requirements
+
+Technical requirements are those requirements which include measurable performance values.  Each technical requirement should be verified through testing to ensure the design meets the requirement.
+
+* *STSR 1.1* The STS must accommodate low power, commercially available amateur rocket motors sized A through E.
+* *STSR 1.2* The STS must be mobile enough to enable live demonstrations as part of educational and outreach activities.
+** *STSR 1.2.1* The STS total weight shall be less than 25 pounds (11.3 Kg), or be able to break into components that weigh no more than 25 pounds (11.3 Kg) each (based on OSHA recommendations).
+** *STSR 1.2.2* The STS must be transportable by 1 person.
+
+* *STSR 3.1* The design and operation of the STS shall be conducted in compliance with "The National Association of Rocketry (NAR) Standards & Testing Committee Motor Testing Manual, Version 1.5, Effective Date: July 1, 2011":http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf, henceforth referred to as the "NAR testing manual". 
+* *STSR 3.2* The STS must be useful for the verification of Estes thrust vs time "motor performance data":http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf and to acquire casing temperature vs time data.
+** *STSR 3.2.1* The STS must be able to record motor thrust vs time data for Estes motors and transport that data to an attached computer.
+** *STSR 3.2.2* The STS must be able to record motor casing temperature vs time data at the nozzle throat of Estes motors and transport that data to an attached computer.
+*** *STSR 3.2.2.1* The STS must be able to record the peak temperature at the nozzle throat of Estes motors during a test run.
+
+* *STSR 4.1* The STS shall be easily set up and torn down for demonstration purposes.
+** *STSR 4.1.1* Unpack and set up time should be less than 45 min.
+** *STSR 4.1.2* Clean up and storage time should be less than 90 min.
+* *STSR 4.2* The STS shall be easy to package for shipment to any event at which it will be used, meaning the whole test stand system shall fit in the backseat or trunk of a standard 4-door sedan.
+* *STSR 4.4* The STS shall be capable of a data acquisition sample rate of no less than 250 samples per second when sampling both the thrust and casing temperature values, with a goal of 400 samples per second.
+* *STSR 4.5* Force sensor requirements
+** *STSR 4.5.1* IAW NAR testing manual requirements specified in Section 8.5.1, it must be possible to calibrate the load cell with a "NIST traceable weight standard such as an Instron". "1":http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf
+** *STSR 4.5.2* IAW NAR testing manual requirements specified in Section 8.5, the STS shall use a data collection system "where the least significant bit (LSB) has a value that is" 0.006 lbs ("less than 0.33% percent of the average thrust of the motor under test"). "1":http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf
+** *STSR 4.5.3* The force sensor shall have a measurement range of no less than 33 Newtons.
+* *STSR 4.6* Temperature sensor requirements
+** *STSR 4.6.1* IAW NAR testing manual requirements specified in Section 8.6, the STS shall use temperature sensors with a readout system "accurate to 10 degrees C" "1":http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf
+** *STSR 4.6.2* IAW NAR testing manual requirements specified in Section 8.6, the STS shall use temperature sensors with a response time of "5 seconds or less" "1":http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf
+** *STSR 4.6.3* IAW (partial) NAR testing manual requirements specified in Section 8.6, a temperature sensor will be attached to the motor under test "where the propellant and nozzle meet" (the "throat" in Mach 30 parlance). "1":http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf Full compliance with this requirement has been moved to the future requirements section below.
+* *STSR 4.7* IAW NAR testing manual requirements specified in Section 8.5, the STS shall "store the collected data into a general use data formats [sic], such as a .txt, .csv" "1":http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf
+* *STSR 4.8* The data collection system must have a threshold (minimum) of 1 ADC (Analog to Digital Converter) channel for the force sensor.
+* *STSR 4.9* The data collection system must have a threshold (minimum) of 1 I2C interface for the temperature sensor.
+
+* *STSR 6.1* Any desktop computer based control software for the STS should run on all three major PC platforms (MS Windows, Mac OS X, and Linux).
+* *STSR 6.2* The STS must use standard connections to the computer running the control software (for example, USB, Ethernet, or similar connections).
+
+h3. Project Requirements
+
+Project requirements are the remaining requirements which are not tied to specific performance values.
+
+* *STSR 2.1* The STS must be well documented so as to meet the needs of open source spaceflight designers who will design and build future test stands (at Mach 30 and elsewhere).
+* *STSR 2.2* The STS documentation and procedures must be complete enough that Mach 30 operators, students and educators who want to bring rocket engineering into the classroom, and anyone else interested in how rockets are tested can learn how to use it.
+* *STSR 2.3* The STS documentation must cover the engine testing procedure from test stand setup, to running tests, and ending with stowing the test stand.
+
+* *STSR 3.3* The STS must be designed in a way that the structure can be slid down over a heavier object, such as a concrete block, to hold it in place. Whoever builds the test stand structure should not be required to permanently fasten it down to an object to keep it stationary.
+* *STSR 3.4* The STS shall be operated IAW the safety procedures which are outlined in Section 8 of the NAR testing manual.
+
+* *STSR 4.3* The STS shall provide a fixed base on which to test model rocket motors.  
+** *STSR 4.3.1* The test stand will remain stationary during motor firings.
+** *STSR 4.3.2* The test stand components will not experience undo vibration during motor firings. 
+
+* *STSR 7.1* All STS design documentation must be open and complete enough so that ANYONE, without necessarily a technical education in rocketry, propulsion, or engineering, would be able to build and operate the test stand.
+
+* *STSR 8.1* The design of the STS must enable the completion of at least one operational test stand.
+* *STSR 8.2* Whenever and wherever possible, considerations should be made so that the design of this STS can be used as a kit in the future.
+
+* *STSR 9.1* The cost of the first operational STS must not exceed $200 excluding "consumables" and tools.
+
+* *STSR 10.1* If at all possible, the STS should be completed within 3 months of formal launch as an exercise in agile design.
+
+* *STSR 11.1* Disposal of the spent Estes motors should conform to all local, state, and federal guidelines.
+* *STSR 11.2* Electronic waste items, including batteries and circuit boards, must also be disposed of according to all local, state, and federal guidelines.
+* *STSR 11.3* If the frame of the STS is damaged beyond repair during operation, proper disposal/recycling guidelines must be followed for the materials used in its construction.
+* *STSR 11.4* Wherever possible, the STS design should make it as easy as possible to replace components which are consumable or relatively easy to damage.
+
+h3. Future Requirements
+
+These are for reference only so that future features can be accommodated in the current design where practical.
+
+* *STSR 5.1* High and low speed video capture of test firings from multiple angles.
+* *STSR 5.2* Integrated ignition system so the test management software can control the entire test.
+* *STSR 5.3* Additional measurements including:
+** *STSR 5.3.1* The STS must meet the second part of the NAR testing manual requirement for casing temperature measurements and have a second temperature sensor "3/4 of the way down the motor casing as measured from the nozzle end." "1":http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf
+** *STSR 5.3.2* The STS must be able to record exhaust temperature vs time of Estes motors and transport that data to an attached computer.
+* *STSR 5.4* Higher resolution measurements.
+* *STSR 5.5* Collection of accelerometer data.
+* *STSR 5.6* Collection of acoustic sensor data.
+
+The accommodation of:
+* *STSR 5.7* High power commercial solid motors.
+* *STSR 5.8* Small hybrid motors (on the thrust scale of high power commercial solid motors).
+* *STSR 5.9* Larger thrust hybrid motors.
+* *STSR 5.10* Small liquid engines.
+* *STSR 5.11* Medium liquid engines.
+* *STSR 5.12* Large liquid engines.
+
+h3. Glossary
+
+ADC - Analog to Digital Converter
+consumables - Items that are used and then discarded, i.e. rocket motors.
+IAW - In Accordance With
+LSB - Least Significant Bit
+NAR - National Association of Rocketry
+STS - Shepard Test Stand
+STSR - Shepard Test Stand Requirement

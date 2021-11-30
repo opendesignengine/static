@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mach 30 Technical Roadmap - Choosing the technology branch for the v 1.0 roadmap - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/m30roadmap.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/m30roadmap.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Mach 30 Technical Roadmap</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/m30roadmap.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/m30roadmap/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/m30roadmap/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/m30roadmap/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../dmsf/m30roadmap.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/m30roadmap/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/m30roadmap/boards.html" class="boards selected">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/m30roadmap/boards.html">Forums</a> » <a href="http://opendesignengine.net/projects/m30roadmap/boards/45">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-815-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Choosing the technology branch for the v 1.0 roadmap</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/m30roadmap/activity?from=2014-09-13" title="09/13/2014 06:19 pm">about 8 years</a> ago</span></p>
+<div class="wiki">
+<p><strong>Intro</strong><br />The Board has tasked us with developing a 1+ year long roadmap which avoids export controlled technology and is focused on launch vehicle technology.  I can see two obvious paths to go down.  One, picking a launch vehicle subsystem rich with projects we can design and build without encroaching on export controlled technologies.  Two, cherry picking various small projects from across launch vehicle systems that we can develop outside of export controls (either by scaling down, by developing for alternate applications, or because the particular technology is inherently not export controlled).  I favor the former option and will be leading the discussion toward that option until such time as we determine there is no satisfactory subsystem to target.</p>
+
+
+	<p>I propose the following requirements for selecting a launch vehicle subsystem based on this <a href="https://www.evernote.com/shard/s3/sh/2ca3e702-8340-4dc6-ad89-b83bafb8b1b7/7b7aed25b7672a6073486aba9eb05e86" class="external">discussion on evaluating projects</a>.</p>
+
+
+	<ul>
+	<li>Engineering expertise - Mach 30 needs to be able to clearly demonstrate there are multiple members of the engineering community able to provide technical expertise to projects related to the subsystem; this will ensure projects do not get stuck due to the absence of any one contributor.</li>
+		<li>Fabrication - Is there sufficient expertise in the maker side of Mach 30 to build early projects and is there an appropriate ramping up of complexity and tolerances to allow for Mach 30 resources to grow in step with the projects in the roadmap?</li>
+		<li>Mission - While developing any launch vehicle technology meets the open design objectives of our mission, does the subsystem under consideration support the other aspects of Mach 30's mission (education, outreach, and supporting open source hardware generally)?  This category should also weigh the technology maturity of the subsystem to ensure Mach 30 honors its bias toward mature technology.</li>
+		<li>Income - Not every project can lead to income, especially as Mach 30 moves into more and more complex projects; however, those subsystems with a greater income potential (measured in number of projects contributing income and likely return from those projects) should be scored higher in this category.</li>
+		<li>Admin - This is the kicker, does the subsystem support ample projects that will steer clear of export controls?  Can the projects be sufficiently insured?  What level of budgets may be required?  Is there a gradual ramp up in scale of budgets required for a roadmap in this subsystem?</li>
+	</ul>
+
+
+	<p>Evaluation of each subsystem will take place in separate forum threads (listed below) to keep discussions organized and on topic.  The conclusions of these discussions will be posted in the wiki in the form of spider graphs of each subsystem's potential as a technology branch for the v 1.0 roadmap and a link back to the discussion threads.</p>
+
+
+	<p><strong>Evaluation of Launch Vehicle Subsystems</strong></p>
+
+
+	<ul>
+	<li><a href="816.html" class="message">v 1.0 Roadmap Evaluation of Propulsion Subsystem</a></li>
+		<li><a href="817.html" class="message">v 1.0 Roadmap Evaluation of Navigation, Guidance, and Con...</a></li>
+		<li><a href="818.html" class="message">v 1.0 Roadmap Evaluation of Communication and Data Handli...</a></li>
+		<li><a href="819.html" class="message">v 1.0 Roadmap Evaluation of Telemetry, Tracking, and Comm...</a></li>
+		<li><a href="820.html" class="message">v 1.0 Roadmap Evaluation of Electrical Power Subsystem</a></li>
+		<li><a href="821.html" class="message">v 1.0 Roadmap Evaluation of Structure and Mechanisms Subs...</a></li>
+		<li><a href="822.html" class="message">v 1.0 Roadmap Evaluation of Aerodynamics Subsystem</a></li>
+		<li><a href="823.html" class="message">v 1.0 Roadmap Evaluation of Thermal Management Subsystem</a></li>
+		<li><a href="824.html" class="message">v 1.0 Roadmap Evaluation of Thermal Protection Subsystem</a></li>
+		<li><a href="825.html" class="message">v 1.0 Roadmap Evaluation of Trajectory (launch and reentr...</a></li>
+		<li><a href="826.html" class="message">v 1.0 Roadmap Evaluation of Attitude Control Subsystem</a></li>
+		<li><a href="827.html" class="message">v 1.0 Roadmap Evaluation of Payload Handling Subsystem</a></li>
+	</ul>
+
+
+	<p>List of subsystems generated from:</p>
+
+
+	<ul>
+	<li><a class="external" href="https://www.faa.gov/other_visit/aviation_industry/designees_delegations/designee_types/ame/media/Section%20III.4.2.1%20Rockets%20and%20Launch%20Vehicles.pdf">https://www.faa.gov/other_visit/aviation_industry/designees_delegations/designee_types/ame/media/Section%20III.4.2.1%20Rockets%20and%20Launch%20Vehicles.pdf</a></li>
+		<li><a class="external" href="https://acc.dau.mil/adl/en-US/444824/file/57170/MIL-HDBK-881A%20Appendix%20F%20-%20Space%20Systems%20WBS.pdf">https://acc.dau.mil/adl/en-US/444824/file/57170/MIL-HDBK-881A%20Appendix%20F%20-%20Space%20Systems%20WBS.pdf</a></li>
+		<li><a class="external" href="http://www.oai.org/docs/SpaceLaunchAndTransportationSystems.pdf">http://www.oai.org/docs/SpaceLaunchAndTransportationSystems.pdf</a></li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/815">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

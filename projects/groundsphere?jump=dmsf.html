@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ground Sphere CubeSat Ground Station - DMSF - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery-ui/jquery-ui-1.8.13.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/plupload/jquery.ui.plupload.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/jquery.dataTables/jquery-ui.dataTables.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../plugin_assets/redmine_dmsf/stylesheets/dmsf.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" />
+	
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-1.6.1.min.js%3F1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery-ui-1.8.13.min.js%3F1359925705" type="text/javascript"></script>
+	<script src="../plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/jquery.dataTables.min.js%3F1359925705" type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function() {
+			jQuery("#browser").dataTable({
+				"bJQueryUI": true,
+				"oLanguage": {
+					'sUrl': '/plugin_assets/redmine_dmsf/javascripts/jquery.dataTables/en.json'	
+				},
+				"bAutoWidth": false,
+				"bPaginate": false,
+				"aaSorting": [[1,'asc']],
+				"aaSortingFixed": [[7,'asc']],
+				"aoColumnDefs": [
+					{ "bSearchable": false, "aTargets": [0, 6, 7, 8] },
+					{ "bSortable": false, "aTargets": [0, 6, 7] },
+					{ "iDataSort": 8, "aTargets": [ 2 ] }
+				],
+				"fnInitComplete": function() {
+					jQuery("div.controls").prependTo(jQuery("#browser_wrapper div.fg-toolbar")[0]);
+				},
+				"fnInfoCallback": function( oSettings, iStart, iEnd, iMax, iTotal, sPre ) {
+					return "Folders: 5, Documents: 2";
+				}
+			});
+			
+			jQuery("[data-downloadurl]").each(function() {
+		        var url = this.getAttribute("data-downloadurl");
+		        if (this.addEventListener) {
+		          this.addEventListener("dragstart", function(e) {
+		            if (e.dataTransfer) {
+		              e.dataTransfer.setData("DownloadURL", url);
+		            }
+		          },false);
+		        }
+	      	});
+		});
+	</script>
+</head>
+<body class="controller-dmsf action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/groundsphere.html" method="get">
+        
+        <a href="../search/index/groundsphere.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Ground Sphere CubeSat Ground Station</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="groundsphere%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="groundsphere%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="groundsphere%3Fjump=roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="groundsphere%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="groundsphere%3Fjump=gantt.html" class="gantt">Gantt</a></li>
+<li><a href="groundsphere%3Fjump=news.html" class="news">News</a></li>
+<li><a href="groundsphere%3Fjump=dmsf.html" class="dmsf selected">DMSF</a></li>
+<li><a href="groundsphere%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="groundsphere%3Fjump=boards.html" class="boards">Forums</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        
+
+<div class="contextual">
+	
+</div>
+
+
+<h2>
+	<a href="groundsphere%3Fjump=dmsf.html">Documents</a>
+
+
+</h2>
+
+<div class="wiki">
+
+</div>
+
+<form action="http://opendesignengine.net/dmsf/entries_operation/groundsphere" class="dmfs_entries" id="entries_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>
+	<input id="action" name="action" type="hidden" />
+	<div class="controls" style="float: left">
+		<input name="download_entries" title="Download checked in Zip archive" type="submit" value="Download" />
+		<input name="email_entries" title="Send checked by email" type="submit" value="Email" />
+		
+	</div> 
+	<table class="display entries" id="browser">
+		<thead>
+			<tr id="root">
+				<th class="check">
+					<input id="check_all_entries" title="Check/Uncheck all for zip download or email" type="checkbox" />
+				</th>
+				<th>Title</th>
+				<th>Size</th>
+				<th>Modified</th>
+				<th>Ver.</th>
+				<th>Author</th>
+				<th></th>
+				<th class="hidden"></th>
+				<th class="hidden"></th>
+			</tr>
+		</thead>
+	<tbody>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="44" /></td>
+			<td class="title">
+				<a href="../dmsf/groundsphere%3Ffolder_id=44.html" class="icon icon-folder">Bill of Materials (BOM)</a>
+				<div class="filename" title="Number of files in directory">[5]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">99 kB</td>
+			<td class="modified">2013-12-24 10:37</td>
+			<td class="version"></td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">101367</td>
+		</tr>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="39" /></td>
+			<td class="title">
+				<a href="../dmsf/groundsphere%3Ffolder_id=39.html" class="icon icon-folder">Block Diagrams</a>
+				<div class="filename" title="Number of files in directory">[2]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">232.4 kB</td>
+			<td class="modified">2013-10-07 08:06</td>
+			<td class="version"></td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">238008</td>
+		</tr>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="40" /></td>
+			<td class="title">
+				<a href="../dmsf/groundsphere%3Ffolder_id=40.html" class="icon icon-folder">Design Files</a>
+				<div class="filename" title="Number of files in directory">[4]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">168.6 kB</td>
+			<td class="modified">2013-10-07 08:07</td>
+			<td class="version"></td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">172688</td>
+		</tr>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="45" /></td>
+			<td class="title">
+				<a href="../dmsf/groundsphere%3Ffolder_id=45.html" class="icon icon-folder">Images</a>
+				<div class="filename" title="Number of files in directory">[52]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">17.7 MB</td>
+			<td class="modified">2013-12-26 07:26</td>
+			<td class="version"></td>
+			<td class="author">Jeremy Wright</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">18599923</td>
+		</tr>
+	
+		<tr class="dir">
+			<td class="check"><input id="subfolders_" name="subfolders[]" title="Check for Zip download or email" type="checkbox" value="37" /></td>
+			<td class="title">
+				<a href="../dmsf/groundsphere%3Ffolder_id=37.html" class="icon icon-folder">Software Releases</a>
+				<div class="filename" title="Number of files in directory">[4]</div>
+			</td>
+			<td class="size" title="Total size of all files under this folder">9.1 MB</td>
+			<td class="modified">2013-10-07 07:57</td>
+			<td class="version"></td>
+			<td class="author">J. Simmons</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					
+					<div style="float: right">
+						
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">0</td>
+			<td class="hidden">9535378</td>
+		</tr>
+	
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="434" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/434%3Fdownload=" class="icon icon-file filetype-odt" data-downloadurl="application/vnd.oasis.opendocument.text:GroundSphereMk2Build.odt:http://opendesignengine.net/dmsf_files/434?download=" title="GroundSphereMk2Build version 0.2 download">GroundSphereMk2Build</a>
+				<div class="filename" title="Filename used for download or in Zip archive">GroundSphereMk2Build.odt</div>
+			</td>
+			<td class="size">36.5 kB</td>
+			<td class="modified">
+				2014-03-13 22:45
+				
+				
+			</td>
+			<td class="version">
+				0.2
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/434.html" title="GroundSphereMk2Build details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/434.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">37421</td>
+		</tr>
+	
+		<tr class="file">
+			<td class="check"><input id="files_" name="files[]" title="Check for Zip download or email" type="checkbox" value="421" /></td>
+			<td class="title">
+				
+				<a href="../dmsf_files/421%3Fdownload=" class="icon icon-file filetype-odt" data-downloadurl="application/vnd.oasis.opendocument.text:GroundsphereMk1Build.odt:http://opendesignengine.net/dmsf_files/421?download=" title="GroundsphereMk1Build version 0.1 download">GroundsphereMk1Build</a>
+				<div class="filename" title="Filename used for download or in Zip archive">GroundsphereMk1Build.odt</div>
+			</td>
+			<td class="size">52.9 kB</td>
+			<td class="modified">
+				2014-01-21 22:57
+				
+				
+			</td>
+			<td class="version">
+				0.1
+				
+			</td>
+			<td class="author">Aaron Harper</td>
+			<td class="actions">
+				
+				<div class="right_icon_box" style="width: 70px;">
+					<div style="float: left">
+					<a href="../dmsf_files/421.html" title="GroundsphereMk1Build details"><img alt="Filedetails" class="detail_icon" src="../plugin_assets/redmine_dmsf/images/filedetails.png%3F1359925705" /></a>
+					</div>
+					<div style="float: right; width: 44px;">
+					
+						
+							<a href="../dmsf_files/lock/421.html" title="Lock to prevent changes for other members"><img alt="Lock" src="../plugin_assets/redmine_dmsf/images/lock.png%3F1359925705" /></a>
+						 
+						&nbsp;
+					
+					
+					</div>
+				</div>
+				<br class="clear" />
+			</td>
+			<td class="hidden">1</td>
+			<td class="hidden">54152</td>
+		</tr>
+	
+	</tbody>
+	</table>
+	<br />
+</form>
+
+<script type="text/javascript">
+	jQuery("a.delete-link").click(function(event) {
+		if(!window.confirm("Do you really want to delete this entry?")) event.preventDefault();
+	})
+	
+	jQuery("#entries_delete_button").click(function(event) {
+		if(window.confirm("Do you really want to delete checked entries?")) {
+			jQuery("#entries_form").attr("action", "/dmsf/delete_entries/groundsphere");
+			jQuery("#entries_form").submit();
+		}
+	})
+	
+	jQuery("#check_all_entries").click(function(event) {
+		var $this = jQuery(this);
+		if($this.prop("checked")) {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", true);
+		} else {
+			jQuery("input[type=checkbox]", jQuery("#browser > tbody")).prop("checked", false);
+		}
+	})			
+</script>
+
+
+
+
+
+
+<br />
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/groundsphere.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

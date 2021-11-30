@@ -1,0 +1,10 @@
+h1. CHIP Resources
+
+* "How open source is CHIP?":http://makezine.com/2015/07/22/with-linux-and-creative-commons-the-9-chip-computer-reveals-its-open-source-details/
+* "CHIP $9 computer walkthough and review to hello, world":https://www.youtube.com/watch?v=OP45YYEfUQM
+* Availability of alternate boards (CHIP)
+** "Comments on CHIP":https://bbs.nextthing.co/t/life-after-kickstarter/6415/19
+** "New CHIP Pro for Developers":https://getchip.com/pages/chippro
+* Making the CHIP a USB HID device using the "Linux USB HID gadget driver":https://www.kernel.org/doc/Documentation/usb/gadget_hid.txt
+** "Using USB OTG to act like a keyboard":https://bbs.nextthing.co/t/using-usb-otg-to-act-like-a-keyboard/769
+** "Pocket chip can be use as an usb hid device":https://bbs.nextthing.co/t/pocket-chip-can-be-use-as-an-usb-hid-device/10025

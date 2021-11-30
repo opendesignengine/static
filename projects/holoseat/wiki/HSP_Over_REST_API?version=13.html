@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - HSP Over REST API - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-wiki action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/holoseat.html" method="get">
+        <input name="wiki_pages" type="hidden" value="1" />
+        <a href="../../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="../news.html" class="news">News</a></li>
+<li><a href="../../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../../holoseat%3Fjump=wiki.html" class="wiki selected">Wiki</a></li>
+<li><a href="../boards.html" class="boards">Forums</a></li>
+<li><a href="../../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+    <a name="Holoseat"></a>
+<h2 >Holoseat<a href="HSP_Over_REST_API%3Fversion=13.html#Holoseat" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="https://opendesignengine.net/projects/holoseat/repository/entry/trunk/LICENSE.txt" class="external">LICENSE.txt</a></li>
+		<li><a href="Wiki.html" class="wiki-page">Home</a></li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Versions" class="wiki-page">Versions</a>
+	<ul>
+	<li><a href="Versioning_Scheme.html" class="wiki-page">Versioning Scheme</a></li>
+	</ul>
+	</li>
+		<li><ins>Agile Process Docs</ins><br /><em>See <strong><a href="https://opendesignengine.net/projects/holoseat/news" class="external">News</a></strong> feed for weekly status reports</em>
+	<ul>
+	<li><strong><ins>PY 2018</ins></strong><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external">Sprints</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRCZuJwnYll_TmSo-xetofzjQEt3Z7iNpluPzayWbqm2HfYWLipouTmh1opgfWy-x-3OGeM2Cf1irWh/pubhtml" class="external">Alpha Test Program Prep User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlnq6BIMuJN-t3uKjflf_q9u3dXzvch0zEVz9O3335_fPiGyPcJxaRJ8IHz4ErCTIw7QrtPh5d_b50/pubhtml" class="external">Run Alpha Test User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyBqnWyXACEEoG5dThw5szRkVltrdHNvFpyaPqF1sNXHrS_fG1w1g861yqTjjyoL1b9xP2xUtNsFz3/pubhtml" class="external">Finalize v1.0 Design User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-DTjsHW_DTbR0hbIvS1Gl_9ItytNimWamw5wmEJ-8K44NpYyw0eQ4GM91nVI-ZRs2-BbQr-S9EA6Z/pubhtml" class="external">Social Media Engagement User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAt6mXMp1lwvffT9mNiNCXENC3wI47ofl_sATVjadmkgGnJroKbMCChzkZctD-wlNnsREUa0c0YqA-/pubhtml" class="external">Prep Initial Crowdsource Campaign User Stories</a><br /> <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQWsqkwJTsFScDjahnQ6AhIpC5Qk-BMsfurWkfxy7SmtSotXtgSvEgCC6uB2d_Hch9PUc41MRd4cwm2/pubhtml" class="external">SyndCon 2018 Prep User Stories</a></li>
+		<li><strong><ins>2017</ins></strong><br /><a href="https://docs.google.com/spreadsheets/d/1jqOwehWnSD8kbHw8bYQPMaTnqAzL6WM20qazQUJKRWQ/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/spreadsheets/d/1j_eza96PgV3tMuTy_fypZ4SuCLWP2jLKIEG1HgXg5LA/pubhtml" class="external">Development User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1Q1mnwN-Um-nn47k3GF9SzAEblP1sw7Lwtpq4snxCEXk/pubhtml" class="external">SyndCon User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1GGMKfctxfgl5Ath5ld7SL3lvXx7fN759DRMKXVEJSR4/pubhtml" class="external">Biz User Stories</a><br /><a href="https://docs.google.com/spreadsheets/d/1UKTSqLvZyH9EIJBt7YSVZoF8krdZYmHjoK1yx6pesQs/pubhtml" class="external">Crowd Source User Stories</a></li>
+		<li><strong><ins>2016</ins></strong> <br /><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTnBFoFpZA4rAainOlzv4E7-PW3-BwjTg9SP0iXHz1XZUCjVF_4WYIWttJyHtO5EhO24pYazn8sL7Jh/pubhtml" class="external">Sprints</a><br /><a href="https://docs.google.com/document/d/e/2PACX-1vSVLmaORZab4QV0ZSy5OUl6lSPx2lNc3gud5nB6WSxNrrxkMu7Kz5zObKeKnP8pw7eghYJY3h_xs99L/pub" class="external">User Stories</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Instructions"></a>
+<h4 >Instructions<a href="HSP_Over_REST_API%3Fversion=13.html#Instructions" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="User's_Guide.html" class="wiki-page">User&#x27;s Guide</a>
+	<ul>
+	<li><a href="First_Time_Setup.html" class="wiki-page">First Time Setup</a></li>
+		<li><a href="Operating_Instructions.html" class="wiki-page">Operating Instructions</a></li>
+		<li><a href="Alpha_Patches.html" class="wiki-page">Alpha Patches</a></li>
+	</ul>
+	</li>
+		<li><ins>Assembly Information</ins>
+	<ul>
+	<li><a href="BOM.html" class="wiki-page">Bill of Materials</a></li>
+		<li><a href="Assembly_Instructions.html" class="wiki-page">Assembly Instructions</a>
+	<ul>
+	<li><a href="Controller_Assembly.html" class="wiki-page">Controller Assembly</a></li>
+		<li><a href="Sensor_Assembly.html" class="wiki-page">Sensor Assembly</a></li>
+		<li><a href="Snap_Fit_Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Half Assembly</a><br /><a href="Tone_Ring_Assembly.html" class="wiki-page">Tone Ring Assembly</a> (deprecated)</li>
+		<li><a href="Final_Assembly.html" class="wiki-page">Final Assembly</a></li>
+	</ul>
+	</li>
+		<li><a href="Software_Set_Up.html" class="wiki-page">Software Set Up</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Design-Data"></a>
+<h4 >Design Data<a href="HSP_Over_REST_API%3Fversion=13.html#Design-Data" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Block_Diagram.html" class="wiki-page">Block Diagram</a></li>
+		<li><a href="http://pid.codes/1209/B058/" title="via pid.codes" class="external">USB PID</a>
+	<ul>
+	<li>VID: 0x1209</li>
+		<li>PID: 0xB058</li>
+	</ul>
+	</li>
+		<li><a href="Schematics_and_PCB_Files.html" class="wiki-page">Schematics and PCB Files</a></li>
+		<li><a href="Software_Source_Code.html" class="wiki-page">Project Software</a>
+	<ul>
+	<li><a href="HSP.html" class="wiki-page">Holoseat Serial Protocol</a> <br />(<a href="https://opendesignengine.net/projects/holoseat/wiki/HSP?version=26" class="external">Legacy REST Implementation</a>)</li>
+		<li><a href="HSP_Over_REST_API.html" class="wiki-page">HSP Over REST API</a> </li>
+	</ul>
+	</li>
+		<li><a href="Vendor_Documentation.html" class="wiki-page">Vendor Documentation</a></li>
+	</ul>
+
+
+	<a name="Dev-Team-Links"></a>
+<h4 >Dev Team Links<a href="HSP_Over_REST_API%3Fversion=13.html#Dev-Team-Links" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="http://opendesignengine.net/projects/holoseat/wiki/Dev_Team_On_Boarding" class="wiki-page new">Dev Team On Boarding</a> (outline)</li>
+		<li><a href="http://opendesignengine.net/projects/holoseat/wiki/CHIP_Setup_Instructions" class="wiki-page new">C.H.I.P. Setup Instructions</a></li>
+	</ul>
+
+
+	<a name="Research"></a>
+<h4 >Research<a href="HSP_Over_REST_API%3Fversion=13.html#Research" class="wiki-anchor">&para;</a></h4>
+
+
+	<ul>
+	<li><a href="Resources.html" class="wiki-page">General Resources</a></li>
+		<li><ins>Technical Resources</ins>
+	<ul>
+	<li><a href="General_Technical_Resources.html" class="wiki-page">General</a></li>
+		<li><a href="ME_Resources.html" class="wiki-page">Mech Eng Resources</a></li>
+		<li><a href="Arduino_Resources.html" class="wiki-page">Arduino Resources</a></li>
+		<li><a href="Bluetooth.html" class="wiki-page">Bluetooth</a></li>
+		<li><a href="HID.html" class="wiki-page">HID</a></li>
+		<li><del><a href="NodeBots_Resources.html" class="wiki-page">NodeBots Resources</a></del></li>
+		<li><del><a href="Raspbery_Pi_Resources.html" class="wiki-page">Raspbery Pi Resources</a></del></li>
+		<li><a href="Python_Resources.html" class="wiki-page">Python Resources</a></li>
+		<li><a href="CHIP_Resources.html" class="wiki-page">C.H.I.P. Resources</a></li>
+	</ul>
+	</li>
+		<li><ins>Biz Resources</ins>
+	<ul>
+	<li><a href="Marketing_Resources.html" class="wiki-page">Marketing Resources</a></li>
+		<li><a href="Start_Up_Resources.html" class="wiki-page">Start Up Resources</a></li>
+	</ul></li>
+	</ul>
+
+
+	<a name="Edit-Navigation"></a>
+<h3 ><a href="Sidebar.html" class="wiki-page">Edit Navigation</a><a href="HSP_Over_REST_API%3Fversion=13.html#Edit-Navigation" class="wiki-anchor">&para;</a></h3>
+
+<h3>Wiki</h3>
+
+<a href="../../holoseat%3Fjump=wiki.html">Start page</a><br />
+<a href="index.html">Index by title</a><br />
+<a href="date_index.html">Index by date</a><br />
+
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="wiki_page-338-watcher"></span>
+
+
+
+
+
+
+<a href="HSP_Over_REST_API/history.html" class="icon icon-history">History</a>
+</div>
+
+
+
+
+    <p>
+    <a href="HSP_Over_REST_API%3Fversion=12.html">« Previous</a> - 
+    Version 13/16
+    (<a href="http://opendesignengine.net/projects/holoseat/wiki/HSP_Over_REST_API/diff/13">diff</a>) - 
+    <a href="HSP_Over_REST_API%3Fversion=14.html">Next »</a> - 
+    <a href="HSP_Over_REST_API.html">Current version</a>
+    <br />
+    <em><a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a>, 11/01/2017 11:29 am </em><br />
+    
+    </p>
+    <hr />
+
+
+<div class="wiki">
+  <a name="HSP-Over-REST-API"></a>
+<h1 >HSP Over REST API<a href="HSP_Over_REST_API%3Fversion=13.html#HSP-Over-REST-API" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="HSP_Over_REST_API%3Fversion=13.html#HSP-Over-REST-API">HSP Over REST API</a><ul><li><a href="HSP_Over_REST_API%3Fversion=13.html#Meaning-of-HTTP-Verbs">Meaning of HTTP Verbs</a></li><li><a href="HSP_Over_REST_API%3Fversion=13.html#REST-API">REST API</a></li><li><a href="HSP_Over_REST_API%3Fversion=13.html#Specifying-an-Action">Specifying an Action</a></li><li><a href="HSP_Over_REST_API%3Fversion=13.html#Defaults">Defaults</a></li></ul></li></ul>
+
+
+	<a name="Meaning-of-HTTP-Verbs"></a>
+<h2 >Meaning of HTTP Verbs<a href="HSP_Over_REST_API%3Fversion=13.html#Meaning-of-HTTP-Verbs" class="wiki-anchor">&para;</a></h2>
+
+
+	<table>
+		<tr>
+			<th>Verb</th>
+			<th>Meaning</th>
+		</tr>
+		<tr>
+			<td>GET</td>
+			<td>Read value from controller</td>
+		</tr>
+		<tr>
+			<td>PUT</td>
+			<td>Write value to controller (volatile) </td>
+		</tr>
+		<tr>
+			<td>POST</td>
+			<td>Write value to controller (non-volatile)</td>
+		</tr>
+		<tr>
+			<td>DELETE</td>
+			<td>Clear value from controller (volatile)</td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="REST-API"></a>
+<h2 >REST API<a href="HSP_Over_REST_API%3Fversion=13.html#REST-API" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Items in <em>italics</em> are for future development.  These methods will return a 501 not implemented status code (see <a href="http://www.django-rest-framework.org/api-guide/status-codes/" class="external">status codes</a> for more details).</p>
+
+
+	<table>
+		<tr>
+			<th>URI </th>
+			<th>Verb</th>
+			<th>Operation</th>
+		</tr>
+		<tr>
+			<td>/api/main/devicename</td>
+			<td>GET</td>
+			<td>Returns the name of the Holoseat device attached to the system</td>
+		</tr>
+		<tr>
+			<td>/api/main/enabled</td>
+			<td>GET</td>
+			<td>Returns current enabled state</td>
+		</tr>
+		<tr>
+			<td>/api/main/enabled</td>
+			<td>PUT</td>
+			<td>Update enabled state</td>
+		</tr>
+		<tr>
+			<td>/api/main/stepsize</td>
+			<td>GET</td>
+			<td>Returns current step size [1-4]</td>
+		</tr>
+		<tr>
+			<td>/api/main/stepsize</td>
+			<td>PUT</td>
+			<td>Update current step size [1-4]</td>
+		</tr>
+		<tr>
+			<td>/api/main/profile</td>
+			<td>GET</td>
+			<td>Returns current profile name (will end in a * if settings have been updated since profile was set)</td>
+		</tr>
+		<tr>
+			<td> <em>/api/main/profile</em> </td>
+			<td> <em>PUT</em> </td>
+			<td> <em>Sets current profile name (cannot end in a '*')  Note: sending an empty string as the profile name will suspend configuration update messages until a non-empty profile name is set.</em> </td>
+		</tr>
+		<tr>
+			<td>/api/main/cadence</td>
+			<td>GET</td>
+			<td>Returns current cadence (>0 means forward, &lt;0 means reverse) and cadence level [0-4].  See firmware notes for definition of cadence level.</td>
+		</tr>
+		<tr>
+			<td>/api/main/version</td>
+			<td>GET</td>
+			<td>Returns hardware and firmware version data</td>
+		</tr>
+		<tr>
+			<td>/api/forward</td>
+			<td>GET</td>
+			<td>Returns current forward action (see below), returns 404 status if no forward action is active</td>
+		</tr>
+		<tr>
+			<td>/api/forward</td>
+			<td>PUT</td>
+			<td>Sets current forward action (see below)</td>
+		</tr>
+		<tr>
+			<td> <em>/api/forward</em> </td>
+			<td> <em>DELETE</em> </td>
+			<td> <em>Clears current forward action</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/forward/sprint</em> </td>
+			<td> <em>GET</em> </td>
+			<td> <em>Returns current forward sprint action (see below), returns 404 status if no forward sprint action is active</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/forward/sprint</em> </td>
+			<td> <em>PUT</em> </td>
+			<td> <em>Sets current forward sprint action (see below)</em></td>
+		</tr>
+		<tr>
+			<td> <em>/api/forward/sprint</em> </td>
+			<td> <em>DELETE</em> </td>
+			<td> <em>Clears current forward sprint action</em> </td>
+		</tr>
+		<tr>
+			<td>/api/reverse</td>
+			<td>GET</td>
+			<td>Returns current reverse action (see below), returns 404 status if no reverse action is active</td>
+		</tr>
+		<tr>
+			<td>/api/reverse</td>
+			<td>PUT</td>
+			<td>Sets current reverse action (see below)</td>
+		</tr>
+		<tr>
+			<td> <em>/api/reverse</em> </td>
+			<td> <em>DELETE</em> </td>
+			<td> <em>Clears current reverse action</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/reverse/sprint</em> </td>
+			<td> <em>GET</em> </td>
+			<td> <em>Returns current reverse sprint action (see below), returns 404 status if no forward sprint action is active</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/reverse/sprint</em> </td>
+			<td> <em>PUT</em> </td>
+			<td> <em>Sets current reverse sprint action (see below)</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/reverse/sprint</em> </td>
+			<td> <em>DELETE</em> </td>
+			<td> <em>Clears current reverse sprint action</em> </td>
+		</tr>
+		<tr>
+			<td>/api/defaults</td>
+			<td>GET</td>
+			<td>Returns current defaults (see below)</td>
+		</tr>
+		<tr>
+			<td>/api/defaults</td>
+			<td>POST</td>
+			<td>Sets new defaults (see below)</td>
+		</tr>
+		<tr>
+			<td>/api/defaults</td>
+			<td>DELETE</td>
+			<td>Restore factory defaults (see below)</td>
+		</tr>
+		<tr>
+			<td> <em>/api/resistance</em> </td>
+			<td> <em>GET</em> </td>
+			<td> <em>Returns current resistance setting of the pedals</em> </td>
+		</tr>
+		<tr>
+			<td> <em>/api/resistance</em> </td>
+			<td> <em>PUT</em> </td>
+			<td> <em>Sets current resistance setting of the pedals</em> </td>
+		</tr>
+		<tr>
+			<td>/api/debug</td>
+			<td>GET</td>
+			<td>Returns current debug state (True/False) as defined by the service configuration</td>
+		</tr>
+		<tr>
+			<td>/api/debug/serial</td>
+			<td>PUT</td>
+			<td>Sends a serial message to Holoseat (returns result as JSON string or status 401 not authorized if debug state is false)</td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="Specifying-an-Action"></a>
+<h2 >Specifying an Action<a href="HSP_Over_REST_API%3Fversion=13.html#Specifying-an-Action" class="wiki-anchor">&para;</a></h2>
+
+
+Actions are composed of 4 parts:
+	<ol>
+	<li>Device [keyboard|mouse|joypad] - what device is being emulated to implement this action<br />#Input - what input value (e.g. key on a keyboard or button on a mouse) is being activated by the command</li>
+		<li>Command [press|hold] - how the input value should be sent:<br />    press = press and release the input (e.g. press a key on a keyboard or click a mouse button)<br />    hold = press and hold the input (e.g. hold down a key on a keyboard or a button on a mouse)</li>
+		<li>End [release|repeat|noop] - how to end the action<br />    release = release the held input (requires command  'hold')<br />    repeat = repeat the action to end the action (requires command  'press')<br />    noop = no steps required to end the action, it will timeout in game (requires command == 'press')</li>
+	</ol>
+
+
+	<p>The JSON format for an action is show below for the default forward action (hold down the 'w' key down on a keyboard)</p>
+
+
+<pre>
+{
+"device": "keyboard",
+"input": 'w',
+"command": "hold",
+"end": "release" 
+}
+</pre>
+
+	<a name="Defaults"></a>
+<h2 >Defaults<a href="HSP_Over_REST_API%3Fversion=13.html#Defaults" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The default settings for the Holoseat are those settings which are persisted in non-volatile memory.  They represent the most generic use case for the Holoseat and as such make a number of assumptions about the default actions associated with pedaling forward and backward.</p>
+
+
+	<p>Specifically, the default settings assume the only device being emulated is a keyboard, with a command/end pairing of hold/release for both the forward and backward actions.  Further, the default settings assume there are no sprint actions.  These assumptions leave the following minimum set of default settings.</p>
+
+
+	<ol>
+	<li>Enabled [True|False] - whether the Holoseat starts in the enabled state or not</li>
+		<li>Step Size [1-4] - the relative length of single steps (smaller values yield shorter steps)</li>
+		<li>Forward Character [alphanumeric character] - the key to press as the default forward action</li>
+		<li>Reverse Character [alphanumeric character] - the key to press as the default reverse action<br /><br />The JSON format for default settings is show below for the factory defaults.</li>
+	</ol>
+
+
+<pre>
+{
+"enabled": "True",
+"stepsize": 2,
+"forward": 'w',
+"reverse": 's'
+}
+</pre>
+
+	<p>Note, the default settings are written to the Holoseat controller’s EEPROM which has an expected life of approximately 100,000 write operations.  While this should allow for more than sufficient lifespan for the Holoseat controller, we still want to take precautions to avoid malicious code burning through the available write operations.  To that end, the POST method on /api/defaults will be protected to only support calls from the application GUI.  Additionally, there will be a minimum 5 second timeout that must elapse between calls to update the default settings.</p>
+</div>
+
+
+
+
+
+
+<p class="other-formats">Also available in:
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/HSP_Over_REST_API.html?version=13" class="html" rel="nofollow">HTML</a></span>
+	<span><a href="http://opendesignengine.net/projects/holoseat/wiki/HSP_Over_REST_API.txt?version=13" class="txt" rel="nofollow">TXT</a></span>
+</p>
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/HSP_Over_REST_API.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

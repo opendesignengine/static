@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Groundstation v.2.0 - Preliminary design notes - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/gs-002.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/gs-002.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Groundstation v.2.0</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/gs-002.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/gs-002/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/gs-002/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/gs-002/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/gs-002/issues/calendar.html" class="calendar">Calendar</a></li>
+<li><a href="../../../projects/gs-002/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/gs-002.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/gs-002/documents.html" class="documents">Documents</a></li>
+<li><a href="../../../projects/gs-002/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/gs-002/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/gs-002/files.html" class="files">Files</a></li>
+<li><a href="../../../projects/gs-002/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/gs-002/boards.html">Forums</a> » <a href="../../../projects/gs-002/boards/27.html">Preliminary design</a> » </p>
+
+<div class="contextual">
+    <span class="message-547-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Preliminary design notes</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/gs-002/activity%3Ffrom=2013-07-21.html" title="07/21/2013 10:33 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>A 3 rpm gear motor is mounted inverted and mounted to the middle of a 24" aluminum beam.  To take the load, the 24" aluminum beam sits on a ball bearing turntable rated for several hundred pounds.  Ordinary hobby servos are mounted on either side of the aluminum channel using an aluminum mount for the servo as well as a pillow block (bearing) to support the weight and torsional loads of the antenna.  The shaft on which the antennas are mounted is an aluminum output shaft extension for the servo which rides in the 1/2" pillow block.  The antenna mounts to this output extension shaft by 6-32 threaded holes in the output hub.  A cap is installed on the tail shaft of the azimuth gear motor to help weatherproofing.  The servos mounted on the ends of the aluminum beam will be protected from the elements by the pillow block and a small plastic shroud.</p>
+
+
+	<p>Azimuth position is determined by a digital compass module which will be mounted on a plastic extension arm which will keep the elements out of it and hold the sensor away from both the motor's magnetic field and the diamagnetic properties of the aluminum components.  To determine the true heading of the array, The magnetic heading will have an offset applied (magvar) which for this location comes to 9 degrees east.  Future revisions of this design will contain a GPS module and mathematically extract magvar from a lookup table based upon the GPS position so that the ground station may be used anywhere in the world without calibration.</p>
+
+
+	<p>Elevation for each antenna is accomplished using a hobby servo, and while it is possible to determine elevation from the servo's position, the elevation axis receives positional feedback from an accelerometer. This device will determine zenith from the vector of the gravitational pull, and determine true elevation from there independent of the mount's installation.  The mount may be placed on an uneven surface or vehicle with no loss of accuracy.  The system is designed to self-calibrate.  The accuracy of the selected sensors is higher than the selectivity of the antenna's pattern, so while the sensors may give noisy data, this can be sanity checked and mathematically smoothed to yield a stream of good data in a noisy environment.</p>
+
+
+	<p>The controller will ramp up the speed according to a programmed rate of acceleration (soft start) and slow it down based upon a mathematical process called PID. PID stands for proportional-integral-derivative, which simply means that the speed at which the motion occurs is proportional to the distance it must travel to hit the set point. As it approaches the set point, the motion slows reducing wear on the components and enhancing accuracy. These systems should make the mount have a long productive life chasing satellites.  It may not be possible to apply either a soft start or PID to the elevation axis since the servos have similar systems built into their controllers.  This will likely be a factor which must be experimented with.</p>
+</div>
+
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/547">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

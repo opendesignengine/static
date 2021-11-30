@@ -1,0 +1,41 @@
+h1. Budget v1.0
+
+This document has been relinked to the Budget document "here":https://opendesignengine.net/projects/shepard-ts/wiki/Budget as part of our versioning system update.
+
+h3. Overview
+
+The budget is $200, firm. If there is a conflict between function and budget, for this iteration, budget should trump. Our goal is not to make the perfect test stand, it is to make the first prototype of a test stand and see what we can learn from that experience (both about test stands, and about our processes). We can always go back and do another iteration to meet the design requirements if needed. Holding to a firm budget minimizes the amount of time spent trying to make it perfect (once you are out of money, you have to wrap up the project, successful or not). Even a "unsuccessful" prototype will teach us important lessons to apply moving forward. This budget does not include "consumables" such as motors, nor tools, but the $200 cost for the stand itself keeps the basic project affordable if standard tools found in hackerspaces can be used. Any manufacturing that has to be hired out to a third party will be taken out of the $200 budget, and should be avoided to keep this project more practical for those same hackerspaces.
+
+h3. Detailed Budget
+
+*Preliminary Mechanical Cost Estimates (For One-Off Quantities)*
+|_.Item |_.Cost (Shipping to Midwest U.S.)|_.Approx Total |_.Link |
+| 8' 2x10 pine board | $7.75 | $7.75 |  |
+| 8' 2x4 pine board | $2.50 | $2.50 |  |
+| 4"x8"x16" solid concrete block | $1.50 | $1.50 |  |
+| Small Ball Bearing Drawer Guide  | $6.00 | $6.00 |  |
+| Pulley | $3.00 | $3.00 |  |
+| Estes D/E Motor Mount | $9.00 | $9.00 | http://bit.ly/Rrn330 |
+| Estes Motor Adapters | $6.00 | $6.00 | http://bit.ly/MYMnNg |
+| Copper T-Fitting | $3.00 | $3.00 |  |
+| High Heat Spray Primer | $8.00 | $8.00 |  |
+| High Heat Spray Paint | $5.00 | $5.00 |  |
+| Misc Hardware | $5.00 | $5.00 |  |
+| *Total*| | $56.75 | |
+
+_Note: Need to address shielding in the cost table above._
+
+*Preliminary DAQ Cost Estimates (For One-Off Quantities)*
+|_.Item |_.Cost (Shipping to Midwest U.S.)|_.Approx Total |_.Link |
+| Arduino Uno R3 | $29.95 + shipping | $35 | http://bit.ly/N5kizl |
+| Arduino Protoshield | $16.50 + shipping | $20.45 | http://bit.ly/S7I466 |
+| 1.5 Inch Square FSR | $7.95 + shipping | $16 | http://bit.ly/Pd3ztz |
+| TLV2374 Op Amp | $1.71 + shipping | $8 | http://bit.ly/OcVA12 | 
+| 560 Ohm Resistor x 2 | $0.20 (combined w/ shipping above) | $0.20 | http://bit.ly/M3duBJ |
+| Type-K Glass Braid Insulated Thermocouple | $10.00 + shipping | $13.87 | http://bit.ly/NPRosE |
+| Adafruit Thermocouple Amplifier | $17.50 + shipping | $21.50 | http://bit.ly/OqVc2A |
+| Misc (Wire, Tape, etc) | | $5.00 | |
+| *Total*| | $120.02 | |
+
+*Total Project Cost:*
+$176.77 ($23.23 under budget)

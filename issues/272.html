@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - Bug #272: Walking forward is sometimes interrupted by one or two backward steps - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="dzzFcpth1f8cPbivO+rke8vKdtnvojeLZL6CNQegpc0="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+    <link href="272.atom" rel="alternate" title="Holoseat - Bug #272: Walking forward is sometimes interrupted by one or two backward steps" type="application/atom+xml" />
+    <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="../javascripts/context_menu.js%3F1359925542" type="text/javascript"></script>
+    <link href="../stylesheets/context_menu.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+    
+</head>
+<body class="controller-issues action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/holoseat.html" method="get">
+        <input name="issues" type="hidden" value="1" />
+        <a href="../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../projects/holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/holoseat%3Fjump=issues.html" class="issues selected">Issues</a></li>
+<li><a href="../projects/holoseat/news.html" class="news">News</a></li>
+<li><a href="../projects/holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/holoseat/boards.html" class="boards">Forums</a></li>
+<li><a href="../projects/holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="" id="main">
+    <div id="sidebar">
+        
+  <h3>Issues</h3>
+<a href="../projects/holoseat/issues%3Fset_filter=1.html">View all issues</a><br />
+
+<a href="../projects/holoseat/issues/report.html">Summary</a><br />
+
+
+
+
+
+
+
+
+
+
+
+  
+
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+
+<span class="issue-272-watcher"></span>
+
+
+
+
+</div>
+
+
+<h2>Bug #272</h2>
+
+<div class="issue status-3 priority-2 closed details">
+        
+      
+<div class="subject">      
+<div><h3>Walking forward is sometimes interrupted by one or two backward steps</h3></div>
+</div>
+        <p class="author">
+        Added by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/holoseat/activity%3Ffrom=2016-11-21.html" title="11/21/2016 07:18 pm">almost 6 years</a> ago.
+        
+        Updated <a href="../projects/holoseat/activity%3Ffrom=2017-01-19.html" title="01/19/2017 05:29 am">almost 6 years</a> ago.
+        
+        </p>
+
+<table class="attributes">
+<tr>
+    <th class="status">Status:</th><td class="status">Resolved</td>
+    <th class="start-date">Start date:</th><td class="start-date">11/21/2016</td>
+</tr>
+<tr>
+    <th class="priority">Priority:</th><td class="priority">Normal</td>
+    <th class="due-date">Due date:</th><td class="due-date"></td>
+</tr>
+<tr>
+    <th class="assigned-to">Assignee:</th><td class="assigned-to"><a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a></td>
+    <th class="progress">% Done:</th><td class="progress"><table class="progress" style="width: 80px;"><tr><td class="todo" style="width: 100%;"></td></tr></table><p class="pourcent">0%</p></td>
+</tr>
+<tr>
+    <th class="category">Category:</th><td class="category">-</td>
+    
+</tr>
+<tr>
+    <th class="fixed-version">Target version:</th><td class="fixed-version">-</td>
+    
+</tr>
+
+
+</table>
+
+<hr />
+
+	<div class="contextual">
+	
+	</div>
+	
+	<p><strong>Description</strong></p>
+	<div class="wiki">
+	<p>This can happen from a stand still or in the middle of walking forward.  It appears to be related to your actual cadence, your trigger cadence, and the timing between the two hall effect sensors.  More research will need to be done to determine the underlying cause.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div id="history">
+<h3>History</h3>
+
+  <div id="change-535" class="journal has-notes">
+    <h4><div class="journal-link"><a href="272.html#note-1">#1</a></div>
+    
+    <a name="note-1"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/holoseat/activity%3Ffrom=2017-01-13.html" title="01/13/2017 09:45 pm">almost 6 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-535-notes"><p>I believe I have figured out what is causing this issue.  In <code>void HandleWalking()</code> I decided to reuse the <code>void InitializeWalkingVariables()</code> method to implement the branch of code that handles the case when a user stops walking.</p>
+
+
+	<p><code>InitializeWalkingVariables()</code> has several side effects I did not consider when I made this decision, not the least of which is it wipes out all data about the cadence and its direction.  So, if a user is pedaling very close to the trigger cadence and happens to slow down below the trigger cadence while the magnet is between the sensors, then the cadence and its direction are zeroed out.  The next events the Holoseat sees are the direction sensor followed by the cadence sensor.  This condition indicates walking backwards and tada you get a step or two backwards.  Once the user gets back up to the trigger cadence the walking forward state is established again and their character moves forward.</p>
+
+
+	<p>I tested this theory last night by ensuring I was always pedaling faster than I needed to.  At no point during that testing did I see this issue.  However, later I resumed normal play and this issue presented itself.</p>
+
+
+	<p>I believe the fix is to simplify the response to the state transitioning to stopped walking since we want to hold on to cadence and direction to avoid this issue.  My first test will be to simply release all of the keys and set the walking state to false.</p></div>
+  </div>
+  
+
+  <div id="change-536" class="journal has-notes">
+    <h4><div class="journal-link"><a href="272.html#note-2">#2</a></div>
+    
+    <a name="note-2"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/holoseat/activity%3Ffrom=2017-01-13.html" title="01/13/2017 11:05 pm">almost 6 years</a> ago</h4>
+    
+    
+    <div class="wiki" id="journal-536-notes"><p>Probable fix committed to revision <a href="../projects/holoseat/repository/revisions/54.html" class="changeset" title="Probable fix for issue #272.  Updated what values get reset when walking state transitions to sto...">r54</a> per comment above.  New side effect of pedaling near the trigger cadence is the occasional stop and go motion (which is exactly what should happen when you pedal around and below the trigger cadence).</p>
+
+
+	<p>Going to leave this issue open for a few days while Bryan and I both test out the fix.  But, I am feeling very good about it.</p></div>
+  </div>
+  
+
+  <div id="change-537" class="journal has-notes has-details">
+    <h4><div class="journal-link"><a href="272.html#note-3">#3</a></div>
+    
+    <a name="note-3"></a>
+		Updated by <a href="../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../projects/holoseat/activity%3Ffrom=2017-01-19.html" title="01/19/2017 05:29 am">almost 6 years</a> ago</h4>
+    
+    
+    <ul class="details">
+      
+       <li><strong>Status</strong> changed from <i>New</i> to <i>Resolved</i></li>
+      
+    </ul>
+    
+    <div class="wiki" id="journal-537-notes"><p>Bryan and I have done more testing with no sign of this bug. Marking it as resolved.</p></div>
+  </div>
+  
+
+
+
+
+</div>
+
+
+
+<div style="clear: both;"></div>
+<div class="contextual">
+
+
+<span class="issue-272-watcher"></span>
+
+
+
+
+</div>
+
+
+<div style="clear: both;"></div>
+
+
+<p class="other-formats">Also available in:
+	<span><a href="272.atom" class="atom" rel="nofollow">Atom</a></span>
+	<span><a href="272.pdf" class="pdf" rel="nofollow">PDF</a></span>
+</p>
+
+
+
+
+
+
+<div id="context-menu" style="display: none;"></div>
+<script type="text/javascript">
+//<![CDATA[
+new ContextMenu('/issues/context_menu')
+//]]>
+</script>
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../terms_of_services/272.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

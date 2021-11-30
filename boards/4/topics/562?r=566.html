@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Software Updates and Discussion - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-562-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Software Updates and Discussion</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-28.html" title="07/28/2013 09:48 pm">about 9 years</a> ago</span></p>
+<div class="wiki">
+<p>This is part update, part discussion and agenda starter for a much needed Shepard software discussion/Hangout. The discussion points are numbered to make it easier to reference them.</p>
+
+
+UPDATE:
+	<ul>
+	<li>The version of the Processing graphical library (ControlP5) we've been using became incompatible with Processing starting at version 2.0b8. I updated ControlP5 to version 2.0.4 last night, and it seems to have fixed the compatibility problem. I was able to run ShepardDCS on Processing 2.0.1.</li>
+		<li>I also reworked the code a little bit so the UI doesn't hang if there are no serial ports available, or if the wrong serial port is selected by default. The UI will now come up, and it will give you a chance to select the correct serial port. </li>
+		<li>I'll be continuing to make some changes in the short term to make the software more usable for us and for CCSSC, but I want to make sure that we get our heads together so we put out a superior software product for Shepard 2.0.</li>
+	</ul>
+
+
+AGENDA/DISCUSSION POINTS:
+	<ol>
+	<li>There's been discussion that because we are holding the motors fixed, we can drop the 30 foot safety radius requirement for E motors down to 15 feet. We need to decide on this since it will influence what type of interface we use for Arduino-to-Computer communications.
+	<ol>
+	<li>If we decrease the radius to 15 feet for every motor we can use the standard USB interface on the Arduino.</li>
+	</ol>
+	</li>
+		<li>We need to decide whether or not we're going to stick with Processing for the laptop UI side of things.
+	<ol>
+	<li>Pros:
+	<ol>
+	<li>We've already done quite a bit of work on the Processing app and CCSSC (our primary educational partner) has already been using it.</li>
+		<li>The Arduino community is very familiar and comfortable with Processing.</li>
+	</ol>
+	</li>
+		<li>Cons:
+	<ol>
+	<li>There are some Java compatibility issues, the biggest of which is that serial communications don't work on the 64-bit architecture Java. We may be able to work around that by embedding a specific Java jar with the application though. Some R&#38;D still needs to be done to see if we can do this with the Windows apps that are exported from the Processing IDE.</li>
+	</ol>
+	</li>
+	</ol>
+	</li>
+		<li>Jeremy has been thinking about doing a simple autodiscovery protocol where the Processing app will try to transmit a predefined character on each available serial port, and the Arduino will know to respond to that character.
+	<ol>
+	<li>You would be required to plug the Arduino in first.</li>
+		<li>Could be risky if there are serial devices on other ports that might be sensitive to having random characters thrown at them. However, how many educators are going to have other serial devices attached to their computers in this day and age?</li>
+		<li>Jeremy thinks this will go a long way toward making Shepard a plug-and-play system for educators.</li>
+	</ol>
+	</li>
+		<li>Another change Jeremy's been thinking about for the Processing app is to create a tabbed interface with 3 tabs. The first will be "Calibrate", which will hold the UI to calibrate the load cell. The second will be "Collect" that holds the UI you can use to collect the test run data. The third will be "Analyze", which will hold a UI that will allow you to do some work with the data. The only thing Jeremy can think to add to that tab currently would be the ability to overlay multiple curves from previous firings over each other to compare them.</li>
+		<li>Code review
+	<ol>
+	<li>Walk through current code base so the team can make recommendations.</li>
+	</ol>
+	</li>
+		<li>We need to go through the code and what we want the app to do, and then have a discussion about code organization and architecture.
+	<ol>
+	<li>How to best structure the code if multiple people are going to be working on it at once (Chris and Jeremy)?</li>
+		<li>Should we stick with the current GUI library (ControlP5), or try to find something better?
+	<ol>
+	<li>Keep in mind that we've already built our current app around ControlP5.</li>
+		<li>ControlP5 was originally chosen because it had the best charting features of any Processing GUI library.</li>
+		<li>You have to scale the UI elements manually to the window size. ControlP5 doesn't have an autoscale feature and the author hasn't shown any interest in adding it.</li>
+	</ol>
+	</li>
+		<li>How do we encapsulate the customizations to the UI elements most effectively? Jeremy had to write code to add axes markers to the charts, and that needs to be more cleanly encapsulated.
+	<ol>
+	<li>Take the ControlP5 code base, make the improvements we need, and then contribute the code back?</li>
+		<li>Extend the current ControlP5 classes we need increased functionality on?</li>
+		<li>Create wrapper classes?</li>
+	</ol></li>
+	</ol></li>
+	</ol>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (4)</h3>
+
+  <div class="message reply" id="message-563">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="562%3Fr=563.html#message-563">RE: Software Updates and Discussion</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-29.html" title="07/29/2013 11:11 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Great news on the update to the latest version of Processing and the Graphics library.  And I think this agenda (or rather list of topics which need to be discussed over what will probably turn into several hangouts) is taking shape.  I have a few comments on the topics which I will list below.</p>
+
+
+	<ol>
+	<li>This is definitely something we should discuss in the group, and may require a little research outside of meeting time</li>
+		<li>This is something that we may be able to work out either very quickly in a hangout or over the forums.  I am personally in favor of sticking with processing because I think the pros significantly outweigh the cons and I am confident we can do something to address the bitness issue</li>
+		<li>I love this idea and would just endorse it being implemented</li>
+		<li>I also like the tabbed interface idea, and I think with some discussion we can come up with some analysis to do with multiple sets of run data</li>
+		<li>I am pro doing a code review - this alone could take a good chunk of a hangout</li>
+		<li>This looks like another good discussion, which if the code review is really about getting people up to speed should come after the code review and if the code review is about checking the code for concerns/bugs should come before (in my opinion)</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-564">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="562%3Fr=564.html#message-564">RE: Software Updates and Discussion</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-30.html" title="07/30/2013 10:26 am">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I've been in a chicken and egg dilemma with 5 and 6. However, I do think we'll about have to do 5 before 6 so that everyone will be up to speed on things like what ControlP5 is and how it's being used currently. That will make discussions easier on items like 6.2.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-566">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="562%3Fr=566.html#message-566">RE: Software Updates and Discussion</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-07-30.html" title="07/30/2013 09:59 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy, that makes sense to me.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-567">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="562%3Fr=567.html#message-567">RE: Software Updates and Discussion</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-08-01.html" title="08/01/2013 10:31 pm">about 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>We had a Hangout about items 1 and 2 tonight. Here are the notes from that meeting.</p>
+
+
+	<p><a class="external" href="https://docs.google.com/document/d/1Rzv6735R6Lv60j-RnUqB9eEZ2TeWSqzO1JvyUgKKQJA/pub">https://docs.google.com/document/d/1Rzv6735R6Lv60j-RnUqB9eEZ2TeWSqzO1JvyUgKKQJA/pub</a></p></div>
+  
+  </div>
+
+<p class="pagination"> (1-4/4)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/562.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

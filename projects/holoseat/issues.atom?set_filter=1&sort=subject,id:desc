@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Holoseat: Issues</title>
+  <link href="http://opendesignengine.net/projects/holoseat/issues.atom?set_filter=1&amp;amp;sort=subject%2Cid%3Adesc" rel="self"/>
+  <link href="http://opendesignengine.net/projects/holoseat/issues?set_filter=1&amp;amp;sort=subject%2Cid%3Adesc" rel="alternate"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2017-11-11T18:50:38+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Bug #277 (In Progress): App window renders below full resolution on high resolution screen</title>
+    <link href="http://opendesignengine.net/issues/277" rel="alternate"/>
+    <id>http://opendesignengine.net/issues/277</id>
+    <updated>2017-11-11T18:50:38+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This is the result of a bug/feature request in &lt;a href="https://github.com/r0x0r/pywebview" class="external"&gt;PyWebView&lt;/a&gt; (&lt;a href="https://github.com/r0x0r/pywebview/issues/87" class="external"&gt;Issue 87&lt;/a&gt;).  At last review, the PyWebView developer was looking for help for this issue.&lt;/p&gt;    </content>
+  </entry>
+</feed>

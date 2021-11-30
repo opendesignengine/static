@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mathematics Tool Kit - Embedding calculated values in narrative sections of MTK in IPython - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="6BofmwnlGqRkkG4J2XmPSnANvUqYqK/JFDSmhU8vN7Q="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/mtk.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/mtk.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Mathematics Tool Kit</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/mtk.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/mtk/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/mtk/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/mtk/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/mtk.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/mtk/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/mtk/boards.html" class="boards selected">Forums</a></li>
+<li><a href="../../../projects/mtk/repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/mtk/boards.html">Forums</a> » <a href="../../../projects/mtk/boards/49.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-1072-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Embedding calculated values in narrative sections of MTK in IPython</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-10.html" title="08/10/2015 10:13 pm">about 7 years</a> ago</span></p>
+<div class="wiki">
+<p>My work for this week is to sort out the issues we are having rendering calculated values in the narrative sections of MTK documents.  In the IPython implementation we are looking to embed calculated values in Markdown cells.  We tried to implement this with a notebook extension (<a href="https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/python-markdown" class="external">Python-Markdown</a>).  However, we found that this solution only worked in the notebook web interface.  When we go to export a PDF of the notebook, the resulting narrative sections are left with the Markdown syntax for embedding the calculated values instead of the calculated values.  I believe this is because the notebook export function is using the <a href="https://github.com/ipython/ipython/blob/e51e50d36f2d05061ef7bdcea56531f5fca08f4c/examples/Notebook/Converting%20Notebooks%20With%20nbconvert.ipynb" class="external">nbconvert</a> library and that library works directly on the notebook source file which means the notebook extensions (which are javascript code interacting with the browser) do not even get executed.</p>
+
+
+	<p>So, what we really need is universal support for embedding calculated values in Markdown cells.  Imagine my surprise when I came across a throw away <a href="http://stackoverflow.com/questions/19524554/suppress-code-in-nbconvert-ipython" class="external">second issue on this stack overflow post</a> (the main issue in the post, suppressing some calculation cells is something else we need for other test cases, but we can come back to that later).</p>
+
+
+	<p>The discussion on the stack overflow comments led me to a <a href="https://github.com/ipython/ipython/pull/2592" class="external">Literate programming feature request</a> for IPython.  This is so close, but the discussion is closed....  But, scroll down to the bottom, and there is a comment that the <a href="https://github.com/ipython/ipython/issues/2958" class="external">conversation continues</a>.  And, it continues to this day (the last comment is four days old).  I need to digest the conversation a bit more, but it is interesting to see the Python-Markdown extension mentioned near the end of the thread.  I am guessing we will need to interact with the IPython community to address this issue.  Might as well see how that goes early in the process.</p>
+
+
+	<p>I have a few other links related to formatting and customizing IPython PDFs that I am dumping into this thread until I can come back and sort them out a little better.</p>
+
+
+	<ul>
+	<li><a href="http://www.damian.oquanta.info/posts/hide-the-input-cells-from-your-ipython-slides.html" class="external">Hide the input cells from your IPython slides</a></li>
+		<li><a href="https://github.com/ipython/nbconvert-examples/tree/master/latex_cell_style" class="external">LaTeX Cell Styles</a></li>
+		<li><a href="https://github.com/ipython/nbconvert-examples" class="external">nbconvert examples</a></li>
+		<li><a href="https://github.com/ipython/ipython/wiki/Cookbook:-nbconvert-templates" class="external">Cookbook: nbconvert templates</a> (specifically <a href="https://github.com/ipython/ipython/wiki/Cookbook:-Branding-the-IPython-notebook" class="external">Branding the IPython notebook</a>)</li>
+	</ul>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (1)</h3>
+
+  <div class="message reply" id="message-1073">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="1072%3Fr=1073.html#message-1073">RE: Embedding calculated values in narrative sections of MTK in IPython</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/mtk/activity%3Ffrom=2015-08-10.html" title="08/10/2015 10:21 pm">about 7 years</a> ago
+  </h4>
+  <div class="wiki"><p>This sounds like a blocker to me. We can interact with the IPython community and contribute code, but there's no short-term fix that will allow this task to be completed in this sprint (and new PBIs will be needed). Is that a correct interpretation?</p></div>
+  
+  </div>
+
+<p class="pagination"> (1-1/1)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/1072.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

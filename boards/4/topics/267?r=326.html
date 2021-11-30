@@ -1,0 +1,662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Future Design Discussion - v1.1 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="Lf/lyt8UDhc6eFPBCL2UkkFNSEkw3dEPgYrKkXFHqYI="/>
+<link rel='shortcut icon' href='../../../favicon.ico%3F1359925685' />
+<link href="../../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-messages action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../../index.html" class="home">Home</a></li>
+<li><a href="../../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../../search/index/shepard-ts.html" method="get">
+        <input name="messages" type="hidden" value="1" />
+        <a href="../../../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../../../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../../../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../../../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../../../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../../../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../../../projects/shepard-ts/news.html" class="news">News</a></li>
+<li><a href="../../../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../../../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../../../projects/shepard-ts/boards.html" class="boards selected">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <p class="breadcrumb"><a href="../../../projects/shepard-ts/boards.html">Forums</a> » <a href="../../../projects/shepard-ts/boards/4.html">Discussion</a> » </p>
+
+<div class="contextual">
+    <span class="message-267-watcher"></span>
+    
+    
+    
+</div>
+
+<h2>Future Design Discussion - v1.1</h2>
+
+<div class="message">
+<p><span class="author">Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2012-10-05.html" title="10/05/2012 10:31 am">about 10 years</a> ago</span></p>
+<div class="wiki">
+<p>The following is a suggestion on affordable force sensors from Pierce Nichols of Logos Electromechanical (logos-electro.com) via email:</p>
+
+
+	<p>Check out <a class="external" href="http://aeroconsystems.com/cart/load-cells/">http://aeroconsystems.com/cart/load-cells/</a>. Get a 20 kg load cell from them and an amplifier from me (<a class="external" href="http://www.logos-electro.com/1x3-ana-brdg-2/">http://www.logos-electro.com/1x3-ana-brdg-2/</a>) and you're out the door for $80. If you want a lower range and are willing to spend a bit more, check out Omega's low force sensors (<a class="external" href="http://www.omega.com/toc_asp/subsectionSC.asp?subsection=F07&#38;book=Pressure">http://www.omega.com/toc_asp/subsectionSC.asp?subsection=F07&#38;book=Pressure</a>), again with one of my amplifiers. You shouldn't have any trouble getting out the door for sub-$200.</p>
+</div>
+
+</div>
+<br />
+
+
+<h3 class="comments">Replies (41)</h3>
+
+  <div class="message reply" id="message-322">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=322.html#message-322">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-10.html" title="01/10/2013 11:18 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>On the over all structure design, I have a couple of comments.</p>
+
+
+	<ol>
+	<li>I think the version 2.0 stand needs to replace the drawer slide with some other solution for cost and size reasons (the drawer slides are a little more expensive than I would want in a kit component, and they are one of the drivers of the over all length of the test stand).</li>
+		<li>I think we need to get away from 2x10 construction, and am more inclined to look at something like maker beam or other extruded aluminum for the construction material.  I would point out that one of the reasons we moved away from the rep-rap style construction was concerns over the rigidity and how much maintenance would be required to keep the test stand rigid and true.  From looking at the <a href="http://www.mendelmax.com/" class="external">Mendel Max</a> Jeremy and I have seen at Club Cyberia, I would guess that some of the concerns could be addressed by moving to the extruded aluminum instead of rods.</li>
+		<li>Jeremy, can't agree more with the need for a case of some kind for the Arduino (or whatever replaces it should that change in the next rev).  Might want to look at 3D printing them?</li>
+		<li>After having to replace the motor mount because of the motor failure, I have been thinking of how we could simplify the motor mount.  I will be sure to post my thoughts as soon as I can collect them.</li>
+	</ol></div>
+  
+  </div>
+
+  <div class="message reply" id="message-324">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=324.html#message-324">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-10.html" title="01/10/2013 09:45 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Regarding J's No. 1 above:</p>
+
+
+	<p>How about a strip of spring steel and a couple pieces of steel music wire to replace the the linear slide, and a strain-gauge to replace the FSR?  A single-axis, uncalibrated strain-gauge is about the same cost as your FSR, and has the advantage of scalability almost without limit (just use a thicker spring).  For cheap strain-gauges see:<br /><a class="external" href="http://www.omega.com/ppt/pptsc.asp?ref=Prewired_GP_Strain_KFG&#38;Nav=pree02">http://www.omega.com/ppt/pptsc.asp?ref=Prewired_GP_Strain_KFG&#38;Nav=pree02</a><br />...and scroll down to KFG-10-120-C1-11L1M2R.  At $100/pkg of 10, I would be inclined to use one on each side of a spring in a bridge configuration for twice the sensitivity plus temperature compensation.  I believe that using spring suspension is far superior to sliding suspension, particularly in a harsh environment where any type of bearing is subject to abrasive fouling.  In fact, the measuring spring could even be 316 stainless.  Spring suspension also eliminates the need for a rigid "L" frame. If the engine mount gets fairly massive, the frame could be bolted together from small aluminum angle and the spring and music wire used to hang the engine mount from above.  However, note that to keep sample rate up, the sensing spring should be fairly stiff so that the primary resonant frequency of the spring and moving mass don't limit sample rate.  This also means minimizing the mass of the motor mount per no. 4 of J's comments.</p>
+
+
+	<p>My initial vision is a box frame of small aluminum angle enclosing the motor mount.  The measuring spring and suspension wires would be held rigidly to the front and rear top rails of the frame, and fastened rigidly to the engine mount by whatever means fit the mount design.  Alternatively, the strain-gauge sensitivity could be improved by a flexible connection at the motor-mount end to provide a single curve, instead of "S" curve in the sensing spring.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-326">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=326.html#message-326">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-10.html" title="01/10/2013 10:39 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>On J's comments:</p>
+
+
+	<ol>
+	<li>We have talked to the folks at Club Cyberia about using Makerslide instead of the drawer guide. I'm leaning this way, but I know Aaron, Greg, and others have proposed other linear guide configurations.</li>
+		<li>We've also talked about specifically using Misumi extruded aluminum. There are others, but I think the Misumi brand seems to fit within our price range for the Shepard series of test stands.</li>
+		<li>I'm not sure we can do a 3D printed enclosure in the timeline we're looking at for having version 1.1 available, but we should certainly look at it.</li>
+		<li>Sounds good.</li>
+	</ol>
+
+
+	<p>On the data acquisition front, here are some notes about the new flexible force sensor:</p>
+
+
+	<ol>
+	<li>The "active sensing area" is a 0.375” diameter circle at the end of the sensor.</li>
+		<li>The sensor is terminated with a solderable male square pin.</li>
+		<li>There's a sample circuit diagram in the pdf document that Aaron posted above. All that is needed is a force to voltage circuit though, so I'm inclined to go with a similar circuit to what we had for version 1.0. I would go with a one channel version of the TLV2374 (4 channels) because the other 3 channels go to waste. The <a href="http://www.ti.com/product/tlv2370" class="external">TLV2370</a> should work. Any arguments against doing this?</li>
+		<li>The applied load needs to be distributed evenly across the sensing area to ensure accurate readings.</li>
+		<li>If the load area is larger than the sensing area (as it is on the Shepard motor mount), an adapter pad needs to be used to step the area down to the sensing area. We already do this, but will have to reconfigure for the new sensor.</li>
+		<li>The sensor needs to be loaded in the same way each time.</li>
+		<li>Use tape rather than adhesives to attach the sensor to the mounting surface.</li>
+		<li>The sensor can become saturated, and the value at which that happens will vary with the reference resistance in the force to voltage circuit.</li>
+		<li>A lower reference resistance in the force to voltage circuit will make the system less sensitive, and increase its active force range.</li>
+		<li>Sensor conditioning is required for new sensors or sensors that have not been used in awhile. To condition a sensor, you load it to 110% of the test force, let the value settle, and then repreat the process 4 or 5 times. Doing this helps cut down on hysteresis and drift. It's best to condition the sensor before calibration.</li>
+		<li>When calibrating, you want to plot force vs conductance (1/R) so that you get mostly linear output.
+	<ol>
+	<li>If you use an "adapter pad" during operation, you also need to use it during calibration.</li>
+		<li>Avoid the saturation point of the sensor during calibration. If need be, lower the sensitivity with the reference resistance in the force to voltage circuit.</li>
+		<li>Calibrate at the same temperature the sensor will operate at. This may be difficult since Shepard has to be run outside, and it's not always convenient to calibrate outdoors.</li>
+	</ol>
+	</li>
+		<li>The repeatability of the sensor is increased by conditioning it.</li>
+		<li>The sensor is supposed to be linear within +/-3%.</li>
+		<li>There will be some hysteresis with Shepard's data since it ramps the force up and then back down, but the documentation doesn't specify how much there could be.</li>
+		<li>Drift is a problem that we observed with the Force Sensing Resistor used in Shepard 1.0, and this sensor will also have that to a certain extent. The documentation's suggestion is to load the sensor during calibration for a similar length of time as when doing actual testing.</li>
+		<li>As far as temperature sensitivity, the documentation suggests to do a calibration at each of the expected operating temperatures and save those calibrations to be recalled depending on the current ambient temperature.</li>
+	</ol>
+
+
+	<p>The issue of calibration and temperature sensitivity leads me to think that the 1.x version of the Shepard data collection software should make it possible for users to do their own calibration and save multiple calibrations. Are there any thoughts from anyone else on this?</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-327">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=327.html#message-327">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-10.html" title="01/10/2013 10:46 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ben - Based on what I just posted about the flexible force sensor, would a strain gauge largely eliminate the problems with the flexible force sensor, like drift and temperature sensitivity? What circuit would you use with a strain gauge to convert the force to a voltage for the Arduino? Do you know of anywhere we can buy the pre wired strain gauges in quantities of 1? I'm having a hard time finding any vendors for that quantity.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-328">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=328.html#message-328">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-11.html" title="01/11/2013 10:27 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Jeremy,</p>
+
+
+	<p>Last thing first:  No, I haven't found a vendor for qty. 1.  ...but Omega has less expensive strain-gauges<br /><a class="external" href="http://www.omega.com/ppt/pptsc.asp?ref=SGD_LINEAR1-AXIS&#38;Nav=pree02">http://www.omega.com/ppt/pptsc.asp?ref=SGD_LINEAR1-AXIS&#38;Nav=pree02</a><br />When strain-gauges are properly bonded to the spring material, they are very stable and predictable.  I have never done a system design with a strain-gauge, so I have no experience with the trade-offs among spring material, spring resonance, sensitivity, and all of the other mechanical details.  I have designed amplifiers for bridge-type sensors that use a strain-gauge bridge on a stainless-steel diaphragm to measure pressure.  I believe that amplifier had a cost of about $10 @ 500 ea.</p>
+
+
+	<p>The “Bridge Amplifier v2” that you mentioned earlier:<br /><a class="external" href="http://logos-electro.com/1x3-ana-brdg-2/">http://logos-electro.com/1x3-ana-brdg-2/</a><br />would work quite well with 2 strain-gauges on opposite sides of the spring (one in compression and the other in tension) along with 2 precision resistors.  ...but that is another $50.</p>
+
+
+	<p>The part that I really like about the strain-gauge concept is the elimination of any rolling or sliding guide bearings.  If the motor-mount mass is minimized, which is good for many reasons, the spring mount might not even require a solid back-stop to prevent shipping damage to the finished assembly.</p>
+
+
+	<p>Who is the primary Mechanical Engineer on the team?  Maybe we should meet to figure out mechanical details.  If I do the mechanical design, I would probably need the whole pack of strain-gauges to get it right :-)</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-329">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=329.html#message-329">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-12.html" title="01/12/2013 09:26 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Ben,</p>
+
+
+	<p>There's not really one mechanical engineer on the project since the design is more of a collaborative effort. The face-to-face design meetings have been held in Google+ Hangouts.</p>
+
+
+	<p>When you say "spring" in reference to the strain gauges, you basically mean a bar, correct? So, two strain gauges would be mounted on a bar, one on the front side and one on the back, and the motor would be mounted to one end of the bar (cantilevered)?</p>
+
+
+	<p>Most load cells are based on strain gauges aren't they? What would be the advantage of using strain gauges mounted to a spring ("indirect" force measurement) rather than using a load cell ("direct" force measurement)? Would it just be that using the spring would eliminate the need for a linear guide, whereas with a load cell we'd still have to use a slide?</p>
+
+
+	<p>Last question - How will we want to measure thrust when we get to much larger rocket engines instead of model rocket motors? If NASA, Space X, and others only uses a strain gauge and spring configuration for testing high thrust motors, maybe we should get started down that route sooner rather than later. I'll research this myself when I have time, but I thought somebody might have a quick answer.</p>
+
+
+	<p>With that said, I think our course of action (design) of version 1.1 is already pretty well locked in due to time constraints. I think that you make a very good point on eliminating the sliding movement though Ben, and I'd like to research this design a little more so that I can discuss it more intelligently.</p>
+
+
+	<p>Thanks!</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-331">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=331.html#message-331">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/5.html" class="icon icon-contributor-license">Ben Barnett</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-12.html" title="01/12/2013 02:53 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>The most general case of "spring" is a member on which the load remains well within the elastic limit of the material.  My initial concept was a cantilever with the strain-gauge(s) as close as possible to the rigid mount where stress (thus strain) is maximum.  "Bar" in this case might be a piece of spring steel 25mm wide X 1mm thick.  I have no real concept of how much strain it takes to get good resolution with a strain-gauge, nor how much it takes to break it.  Looking at some of the "S" shaped, tension-mode load cells, my first guess would be "not much".</p>
+
+
+	<p>I have a sheet of 7075-T6 aluminum in my shop.  Maybe a strip of that would be a good place to start.  It is about 1.6mm thick, and Omega has strain-gauges thermally matched to aluminum.</p>
+
+
+	<p>My primary motivation was to eliminate sliding bearings, which tend to cause problems in abrasive environments.  My guess is that the exhaust of a solid-fuel rocket motor probably contains highly abrasive metal oxide(s).  (Aluminum powder and ammonium nitrate has a BUNCH of chemical potential energy, but I tried a small sample of that as a kid and found it to be highly explosive.)</p>
+
+
+	<p>BIG rocket motor - go swipe a rear spring out of a wrecked truck chassis, stick a couple of strain-gauges on it, and launch the project.</p>
+
+
+	<p>I am certainly NOT a mechanical engineer when it comes to stress calculations in structural members.  My real specialty is analog circuit design.  If you design a structure and mount a couple of strain-gauges on it, I would have no problem getting whatever signal level the Arduino needs from a few mV of strain-gauge output.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-354">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=354.html#message-354">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-14.html" title="01/14/2013 11:18 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I want to check in real quick and make sure we are all on the same page about the scope of v1.1 of Shepard vs v2.0 vs follow on test stand projects.</p>
+
+
+	<p><strong>V1.1</strong> - goal: Enable CCSSC to build a copy of the prototype test stand with minimum improvements to allow basic operation (this is per their request at our initial meeting about our partnership with them)</p>
+
+
+	<p>Activities to complete:</p>
+
+
+	<ol>
+	<li>Develop and install shielding for the rails system to protect it from the motor exhaust (assigned to me, this is built but still needs documenting)</li>
+		<li>Replace the old FSR with a correctly sized one (assigned to Jeremy, and in progress)</li>
+		<li>Complete documentation, emphasis on assembly instructions, so CCSSC can build a version 1.1 stand for early testing (assigned to both of Jeremy and myself, but at this point I think we are just waiting on my part, the assembly instructions)</li>
+	</ol>
+
+
+	<p>I am guessing given the conversation about the thermal measurements, I think we should consider disabling the thermal measurements on v1.1 so CCSSC can get a test stand built ASAP.  I would like to deliver what they need before the end of Jan.</p>
+
+
+	<p><strong>V2.0</strong> - goal: Develop fully functional (that is meet our initial performance requirements) test stand for education and training purposes</p>
+
+
+	<p>Activities to complete:</p>
+
+
+	<ol>
+	<li>Build new motor mounts for prototype structure so we can use it for version 2.0 DAQ development (assigned to me, and this is complete)</li>
+		<li>Address DAQ challenges
+	<ol>
+	<li>Is the new FSR sufficient for use on Shepard?  If not, select final(?) load sensor</li>
+		<li>Get thermal measurements working</li>
+		<li>Get acceptable sample frequency</li>
+	</ol>
+	</li>
+		<li>New structure
+	<ol>
+	<li>needs to be made to tighter tolerances (no funny angles from warped wood, clean physical interfaces between motor and sensors, etc)</li>
+		<li>needs to be easy to sell as a kit</li>
+		<li>needs to be robust (no more fouling of the rail system, etc)</li>
+	</ol>
+	</li>
+		<li>Develop teaching materials with help from CCSSC</li>
+		<li>Turn Shepard into a kit</li>
+	</ol>
+
+
+	<p><strong>Follow on projects</strong> - goal: Develop additional test stands beyond "Shepard" class to test larger motors and eventually engines</p>
+
+
+	<p>So, I think this is a point where there is less agreement (or at least less clarity)...  In my opinion, the name "Shepard Test Stand" represents the class of test stands we are building for small Estes motors which we can use for education, training, and outreach (safe test stand to use in front of audiences).  When we move on to testing larger motors and engines, I am envisioning new projects with new names (Grissom, Glenn, etc come to mind for example).</p>
+
+
+	<p>If folks agree with the list above, I can enter it into the issue tracker so we can focus our efforts for each version.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-355">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=355.html#message-355">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-14.html" title="01/14/2013 11:33 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>All of this makes good sense.  At this point I do not see a way for us to include thermal measurements in any meaningful way for version 1.1, nor do I see any benefit since the design well be testing well documented engines.  Conversely, Shepard 2.0 is a good place to test methods of thermal measurement, but I do not see it as part of the test stand to be kitified unless we have a real breakthrough reducing the cost of the thermal measurement system to less that the rest of the stand.</p>
+
+
+	<p>Thank you for clarifying the naming conventions.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-359">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=359.html#message-359">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-14.html" title="01/14/2013 05:20 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>In my travels looking for an unsaturated flame image, I found this test stand doing a run.  Have a look:  <a class="external" href="http://youtu.be/N6MeCSRN-b8">http://youtu.be/N6MeCSRN-b8</a></p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-360">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=360.html#message-360">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-15.html" title="01/15/2013 11:07 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>From my sales rep at Misumi; a whitepaper on linear bearings.</p></div>
+  <div class="attachments">
+
+<p><a href="../../../attachments/224/Linear_Bushings_and_Linear_Motion_Products_081117.pdf" class="icon icon-attachment">Linear_Bushings_and_Linear_Motion_Products_081117.pdf</a> - Linear bearing design note whitepaper from Misumi
+  <span class="size">(868.1 kB)</span>
+  
+  
+  </p>
+
+</div>
+
+  </div>
+
+  <div class="message reply" id="message-362">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=362.html#message-362">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-16.html" title="01/16/2013 12:00 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>J - I agree with your interpretation of the Shepard upgrade path. That is not what we originally talked about when we started Shepard, but I think it makes more sense. Originally, version 1.0 of Shepard was going to be the level 1 kite ($200), 2.0 was going to be the level 2 kite ($2000), and so on. I think it's a good idea for us to have a completely separate entry level tier of very affordable test stands (~$200), with that tier being Shepard.</p>
+
+
+	<p>On the thermocouple monitoring - I think there may be a misunderstanding. I don't believe that the thermocouples that were talked about as having the slower response time describes the one we're using. The charts I'm looking at for the wire size (which directly affects response time apparently) of our thermocouple show a response time of 0.05 to 0.08 seconds. Even if the thermocouple does not react any faster than .17 to .22 seconds (or whatever the response time was), that doesn't mean we can't sample faster than that. I've already got the parts on order that should max out the sample rate we can get from the Arduino Uno. They should be in this week. With that said, we need to document what the thermocouple's actual response time is when in contact with a motor casing so that people don't think they're getting a real-time temperature for each of the data points if they're not. It also occurs to me that we need to make sure that everyone knows that we already dropped the exhaust temp monitoring from Shepard 1.x because of the issues we saw coming. That doesn't mean that exhaust temperature is not important, or that an open source pyrometer isn't a great idea though.</p>
+
+
+	<p>I feel that dropping the motor casing thermal measurement feature from a test stand that's going to be used for educational purposes would be a mistake. At the very least it could be used as an excellent teaching tool about sensor response time and how it affects your data.</p>
+
+
+	<p>Also J, I don't think the FSR is going to be suitable for version 2.0. I believe that just the thermal and drift issues are enough to disqualify the FSR for version 2.0 with the tight data collection requirements we'll have. We'll see how well I can make it work when all the parts for the 1.1 DAQ system get here though. I'll be able to tell for sure after some live tests.</p>
+
+
+	<p>Entering the version 1.1 items into the issue tracker was on my mind too, I just hadn't gotten to it yet. If you don't get to it J, I'll try to get them entered tomorrow evening.</p>
+
+
+	<p>Aaron - Thanks for the link and the doc. I'm currently pretty fascinated by the concept of using a beam with two strain gauges as Ben has been suggesting for awhile. It may be too much of a change in direction for us to use it in version 2.0, but I could maybe see a version 3.0 that's vertical with the thrust pushing the motor up into the beam as I believe is done on large scale test stands. It would eliminate moving parts, and mounting the motor so it pushes up into the beam would eliminate the need to compensate for fuel burn weight loss.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-363">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=363.html#message-363">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-16.html" title="01/16/2013 09:47 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>The thermocouple capable of measuring the casing temperature is quite different from one stout enough to measure temperature in the flow of the exhaust stream.  You are correct that the one to measure the casing temp will have a much faster response time, and this is a good application.  Measuring the casing temp is a good thing and may be done inexpensively, but measuring the temp of the exhaust stream is a challenge, even for the big players.</p>
+
+
+	<p>I can't see where going through all the effort to measure the exhaust stream would benefit any Shepard class stand, but we can use the Shepard class stand to test the pyrometer for use on a Glenn or Grissom class stand where there would be a benefit, as these stands would be capable of running motors and engines which are a lot less standardized.</p>
+
+
+	<p>Going vertical will be important, about the same time as we add the deflector plate, water injection, and the rest, so this something to put in the back of our heads and let cook.  We have a lot of little hurdles to clear before we get to that point.  The change to a different type of thrust measurement is only one of them.  We'll get there... one step at a time.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-364">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=364.html#message-364">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-16.html" title="01/16/2013 11:01 am">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have a couple of questions regarding the Estes rocket motor failure on Shepard 1.0:<br />Do we know where the burn through occurred from visual evidence in the video or scorch marks on the stand?<br />Could the failure have anything to do with the fact it was run horizontally and the heat disproportionately weakened the casing on one side (like the top)?</p>
+
+
+	<p>The reason for these questions is that it may become quite important to run test stand in a vertical configuration earlier (Shepard v2.0) rather than later if running Estes rocket motors horizontally can cause an increase in the numbers of motor failures.  NAR Model Rocket Safety Code section 13 prohibits horizontal launches, without a clear explanation.  We can assume that it's to protect bystanders, but this is an assumption.  The reason I bring this up now instead of waiting with some data  is that it is a safety issue, and it could be necessary to turn things on their ear (literally).</p>
+
+
+	<p>Testing vertically makes life interesting when it comes to measuring thrust because of the changing mass of the motor as the fuel is burned will change the apparent thrust in a vertical configuration.  It may be necessary to tare the mass of the motor prior to the run, then tare again during the pause prior to the ejection charge and assume a linear reduction in mass.  This is not such an issue in a liquid fueled engine where the wet weight of the engine remains constant as fuel is added to the combustion, but even ATK tests their SRBs on their side to cancel the affect of the changing mass.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-365">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=365.html#message-365">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-16.html" title="01/16/2013 08:19 pm">almost 10 years</a> ago
+  </h4>
+  <div class="wiki"><p>Thanks for the replies Aaron.</p>
+
+
+<blockquote>
+
+	<p>You are correct that the one to measure the casing temp will have a much faster response time, and this is a good application.</p>
+
+
+</blockquote>
+
+	<p>Thanks for the clarification. I thought folks were starting to advocate dumping thermal measurement all together and was starting to worry. I agree on the difficulties of measuring exhaust temperature. When we first put the requirements together for Shepard 1.0 I don't think anybody understood what a challenge it would be.</p>
+
+
+<blockquote>
+
+	<p>I can't see where going through all the effort to measure the exhaust stream would benefit any Shepard class stand...</p>
+
+
+</blockquote>
+
+	<p>Agreed. When I talk about using Shepard with the Pyrometer, it's just to do early tests of the Pyrometer. We're on the same page here.</p>
+
+
+<blockquote>
+
+	<p>We have a lot of little hurdles to clear before we get to that point [vertical].</p>
+
+
+</blockquote>
+
+	<p>If we are going to have to go vertical eventually, I wouldn't mind experimenting with it a little now on something like Shepard 3.0 or 4.0. My main reason for wanting to do that is to get a ballpark feel for strain gauges and vertical mounting. It's not on our roadmap for 2013 though, so as you said, something to keep in the back of our minds for now.</p>
+
+
+<blockquote>
+
+	<p>Do we know where the burn through occurred from visual evidence in the video or scorch marks on the stand?</p>
+
+
+</blockquote>
+
+	<p>Not sure. Have you seen J's <a href="https://opendesignengine.net/boards/4/topics/270" class="external">after action post</a> ? If we can find out what size motor J had in the stand when it happened and get the tube length, that should give you some indication. Telling exacly where it failed along the motor casing is difficult though. From what I've heard, failures in these Estes motors happen when the nozzle suddenly gets plugged with grains of fuel during peak-ish thrust. Greg tried to cause a failure on several motors by plugging the nozzles and then firing them, to no avail.</p>
+
+
+<blockquote>
+
+	<p>Could the failure have anything to do with the fact it was run horizontally and the heat disproportionately weakened the casing on one side (like the top)?</p>
+
+
+</blockquote>
+
+	<p>It's possible, but the only NAR test stands I've seen for this size motor have been horizontal and similar in design to Shepard (structurally). If we have a problem with this, they most likely have a problem with this too. Based on the fact that NAR uses horizontal stands, I think the horizontal launch prohibition is mainly for safety.</p>
+
+
+	<p>I'll be taking 60 fps video of version 1.1 of the test stand during my DAQ testing, so maybe we'll get lucky and capture a motor failure on that. During the last integration test I put the camera on a tripod close to the test stand so that I could stand outside the "danger zone". That will give us 720p x 60 fps video of the motors firing.</p>
+
+
+<blockquote>
+
+	<p>Testing vertically makes life interesting when it comes to measuring thrust because of the changing mass of the motor as the fuel is burned will change the apparent thrust in a vertical configuration.</p>
+
+
+</blockquote>
+
+	<p>When the motor thrust is pushing it up into the load cell this happens? I thought this was only an issue when the motor thrust was pushing it down (with gravity) into the load cell.</p></div>
+  
+  </div>
+
+  <div class="message reply" id="message-410">
+    <div class="contextual">
+      
+      
+      
+    </div>
+  <h4>
+  	
+    <a href="267%3Fr=410.html#message-410">RE: Future Design Discussion - v1.1</a>
+    -
+    Added by <a href="../../../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../../../projects/shepard-ts/activity%3Ffrom=2013-01-31.html" title="01/31/2013 10:52 am">over 9 years</a> ago
+  </h4>
+  <div class="wiki"><p>I have been going through and reworking the documentation for Shepard 1.1, and I noticed that the NAR motor testing manual (which we based some of our requirements off of) specifies that the thermocouple used must have a response time of "5 seconds or less". For a test run on a motor that may produce thrust for less than a second (Estes A motors), it seems like the data you would get from a thermocouple that has a 5 second response time would be useless for even getting a max temp during firing.</p>
+
+
+	<p>This fits in with the response time discussion we've had here, so I thought I'd mention it.</p></div>
+  
+  </div>
+
+<p class="pagination"><a href="http://opendesignengine.net/boards/4/topics/267?page=1&amp;r=326">« Previous</a> <a href="http://opendesignengine.net/boards/4/topics/267?page=1&amp;r=326">1</a> 2  (26-41/41)</p>
+
+
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../../terms_of_services/267.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

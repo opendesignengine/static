@@ -1,0 +1,35 @@
+h1. Alpha Patch 1 - Sensor Housing Fix
+
+{{>toc}}
+
+h2. Tools
+
+* Large household scissors
+
+h2. Materials
+
+* Holoseat sensor module
+
+h2. Safety Issues
+
+* Take care to avoid having flying plastic pieces get in your eyes
+
+h2. Product
+
+This patch is to remove the nib on the front of the Holoseat sensor module.  This modification is required to ensure the signal from the tone ring is reliable.  
+
+Before implementing the patch the sensor module will look like this:
+
+!before_md.jpg!
+
+After implementing the patch it will look like this:
+
+!after_md.jpg!
+
+h2. Procedure
+
+# Use scissors to cut the nib off.  Start with the adhesive side of the sensor pointing down.
+!step1_md.jpg!
+# Rotate 90 degrees and cut again.
+!step2_md.jpg!
+# Repeat until the nib has been (mostly) removed.

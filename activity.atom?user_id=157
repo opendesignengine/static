@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Damien Hartmann</title>
+  <link rel="self" href="http://opendesignengine.net/activity.atom?user_id=157"/>
+  <link rel="alternate" href="http://opendesignengine.net/activity?user_id=157"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2022-10-27T04:30:24+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+</feed>

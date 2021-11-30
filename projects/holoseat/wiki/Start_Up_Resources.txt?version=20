@@ -1,0 +1,52 @@
+h1. Start Up Resources
+
+{{>toc}}
+
+h2. Prototype to production
+
+* "Building your first PCB prototype (part 1)":https://blog.particle.io/2018/03/06/proto-to-prod/
+
+h2. *FROM PROJECT TO KIT*
+
+Hackaday on "turning an electronic project into a marketable kit"
+
+* "SO YOU WANT TO SELL ELECTRONIC KITS":http://hackaday.com/2016/07/29/from-project-to-kit-so-you-want-to-sell-electronic-kits/
+* "GETTING THE HARDWARE RIGHT":http://hackaday.com/2016/08/05/from-project-to-kit-getting-the-hardware-right/
+* "INSTRUCTIONS ARE EVERYTHING":http://hackaday.com/2016/08/12/from-project-to-kit-instructions-are-everything/
+* "BRINGING IT ALL TOGETHER":http://hackaday.com/2016/08/19/from-project-to-kit-bringing-it-all-together/
+* "AFTER THE SALE":http://hackaday.com/2016/09/02/from-project-to-kit-after-the-sale/
+
+h2. Make Magazine: Launching A Kickstarter
+
+* "Behind The Scenes":http://makezine.com/2017/01/31/launch-kickstarter-behind-scenes/
+* "Finalizing The Prototype":http://makezine.com/2017/02/07/launching-kickstarter-finalizing-prototype/
+* "Quotes, Money & Timelines":http://makezine.com/2017/02/15/launching-kickstarter-quotes-money-timelines/
+
+h2. Production & Design Work
+
+* "9 Costs That Factor into Mass Manufacturing a Hardware Product":http://makezine.com/2017/05/22/cost-manufacture-new-electronic-hardware-product/
+* "Connectors Tutorial":https://learn.sparkfun.com/tutorials/connector-basics
+* "Monday Experiment: Bootloading an ATmega32u4 with Arduino":http://jeffmurchison.com/blog/monday-experiment-bootloading-an-atmega32u4-with-arduino/ - minimum electronics necessary to create a Leonardo clone, important documentation for building completely custom PCB/"Shrinkifying":http://makezine.com/2011/10/10/how-to-shrinkify-your-arduino-projects/ the *Holoseat*
+* "PCB Routing Service":http://dirtycircuits.com/about.php - Team at "Dangerous Prototypes":http://dangerousprototypes.com/ provides PCB routing/layout service for OSHW projects at $35/hour (3 hour min)
+* "Bulk programmer for Arduino":http://makezine.com/2014/12/11/a-raspberry-pi-powered-bulk-arduino-programmer/
+* "OSH Park":https://oshpark.com/ - community PCB order site ("great review on G+":https://plus.google.com/u/0/+SameerAnsariSam/posts/NturKML6TGZ)
+* "3 Costs to Consider When Mass Manufacturing a Hardware Product":http://makezine.com/2017/05/11/costs-to-consider-mass-manufacturing-hardware-product/
+* "HOW TO SELECT JUST ABOUT ANY ELECTRONIC PART":https://hackaday.com/2017/09/03/how-to-select-just-about-any-electronic-part/
+* "Small Batch Assembly":https://www.smallbatchassembly.com/
+
+h2. Product Pricing
+
+* "A Founder’s Guide to Product Pricing":https://medium.com/dreamit-perspectives/founders-guide-to-product-pricing-b187093e2483
+* "The Essential Guide on the Costs to Develop, Scale, and Manufacture a New Electronic Hardware Product":http://predictabledesigns.com/the-cost-to-develop-scale-and-manufacture-a-new-electronic-hardware-product/
+* "Preliminary ﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿d﻿﻿esign (pre-design) and detailed cost analysis ﻿for﻿ new electronic hardware products.":http://predictabledesigns.com/predictable-hardware-report/
+* "The Definitive Guide to Pricing Your New Electronic Hardware Product":https://blog.hackster.io/the-definitive-guide-to-pricing-your-new-electronic-hardware-product-7305c19d2102
+
+h2. Start Up Case Studies
+
+* "Mini Materials on Starter Story":https://www.starterstory.com/mini-materials
+* "What Investors Look for in a Hardware Startup":https://www.outdesign.co/single-post/2017/10/17/This-is-what-Investors-look-for-in-a-Hardware-Startup
+* https://www.fastcompany.com/40426906/why-200-adult-security-blankets-are-a-stroke-of-startup-genius
+* "How to Test Drive Your Business Idea Before Quitting Your Job":https://blog.ladder.io/business-idea/
+* "Reddit AMA about a couple who started an online business together":https://www.reddit.com/r/IAmA/comments/56ne8w/my_boyfriend_and_i_started_a_business_out_of_his/
+* "Bootstrapping Side Projects into Profitable Startups":https://levels.io/bootstrapping/
+* "Emerging Business Models for Open Source Hardware":http://openhardware.metajnl.com/article/10.5334/joh.4/

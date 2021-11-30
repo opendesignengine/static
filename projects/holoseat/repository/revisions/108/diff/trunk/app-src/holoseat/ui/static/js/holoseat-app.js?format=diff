@@ -1,0 +1,19 @@
+Index: holoseat-app.js
+===================================================================
+--- holoseat-app.js	(revision 107)
++++ holoseat-app.js	(revision 108)
+@@ -34,3 +34,14 @@
+     .append("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>" + message)
+     .appendTo("#alertArea");
+ }
++
++function setHoloseatEnableButton(enabled) {
++  if (enabled) {
++    $('#holoseatEnableButton').attr("aria-pressed", true);
++    $('#holoseatEnableButton').addClass('active');
++  }
++  else {
++    $('#holoseatEnableButton').attr("aria-pressed", false);
++    $('#holoseatEnableButton').removeClass('active');
++  }
++}

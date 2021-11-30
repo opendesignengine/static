@@ -1,0 +1,14 @@
+h1. Holoseat - Interactive Exercise Video Game Project
+
+!>Holoseat-Model-B.png!:http://holoseat.com
+
+{{toc}}
+
+
+
+The *Holoseat* is an open source Arduino project which turns activity on exercise bikes/elliptical machines (generally recumbent models) into the keyboard command for locomotion (usually walking triggered by the *w* key).  The current version only works with PCs and Macs, as they can have multiple keyboards for input devices (including joysticks if a keyboard mapping program like "JoyToKey":http://www-en.jtksoft.net/ is used).  Current development is focused on productizing the initial prototype (shown in the video below).  The *Holoseat* will be available as both a kit and a completed product.  Later development will investigate the possibility of connecting the *Holoseat* control unit inline with USB controllers for use on game consoles and in games which directly support controllers.
+
+!>hs_qrcode.png! !hs_in_use.png!
+
+
+

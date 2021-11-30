@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Holoseat - News - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../../favicon.ico%3F1359925685' />
+<link href="../../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+<script src="../../javascripts/jstoolbar/jstoolbar.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/textile.js%3F1359925542" type="text/javascript"></script><script src="../../javascripts/jstoolbar/lang/jstoolbar-en.js%3F1359925542" type="text/javascript"></script><link href="../../stylesheets/jstoolbar.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="news.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+  <link href="../../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-index">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../../index.html" class="home">Home</a></li>
+<li><a href="../../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../../search/index/holoseat.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../../search/index/holoseat.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Holoseat</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../holoseat%3Fjump=overview.html" class="overview">Overview</a></li>
+<li><a href="../holoseat%3Fjump=activity.html" class="activity">Activity</a></li>
+<li><a href="../holoseat%3Fjump=issues.html" class="issues">Issues</a></li>
+<li><a href="news.html" class="news selected">News</a></li>
+<li><a href="../holoseat%3Fjump=dmsf.html" class="dmsf">DMSF</a></li>
+<li><a href="../holoseat%3Fjump=wiki.html" class="wiki">Wiki</a></li>
+<li><a href="boards.html" class="boards">Forums</a></li>
+<li><a href="../holoseat%3Fjump=repository.html" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+
+</div>
+
+<div id="add-news" style="display:none;">
+<h2>Add news</h2>
+<form action="news.html" class="tabular" id="news-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=" /></div>
+
+<div class="box tabular">
+<p><label for="news_title">Title<span class="required"> *</span></label><input id="news_title" name="news[title]" size="60" type="text" /></p>
+<p><label for="news_summary">Summary</label><textarea cols="60" id="news_summary" name="news[summary]" rows="2"></textarea></p>
+<p><label for="news_description">Description<span class="required"> *</span></label><textarea class="wiki-edit" cols="60" id="news_description" name="news[description]" rows="15"></textarea></p>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var wikiToolbar = new jsToolBar($('news_description')); wikiToolbar.setHelpLink('<a href="http://opendesignengine.net/projects/holoseat/\&quot;/help/wiki_syntax.html\&quot;" onclick=\"window.open(&quot;/help/wiki_syntax.html&quot;, &quot;&quot;, &quot;resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes&quot;); return false;\">Text formatting<\/a>'); wikiToolbar.draw();
+//]]>
+</script>
+
+<input name="commit" type="submit" value="Create" />
+<a accesskey="r" href="news%3Fpage=2.html#" onclick="new Ajax.Updater('preview', '/news/preview?project_id=holoseat', {asynchronous:true, evalScripts:true, method:'get', parameters:Form.serialize('news-form') + '&amp;authenticity_token=' + encodeURIComponent('b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8=')}); return false;">Preview</a> |
+<a href="news%3Fpage=2.html#" onclick="Element.hide(&quot;add-news&quot;)">Cancel</a>
+</form>
+<div id="preview" class="wiki"></div>
+</div>
+
+<h2>News</h2>
+
+
+
+    <h3>
+    <a href="../../news/103.html">PY18 Sprint 2 Stand Up 1</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-01-12" title="01/12/2018 12:53 am">almost 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - printed 2 of 2 sets of tone ring parts</li>
+		<li>PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat - started filling out google doc that has the questions copied into it; need to pull some copy from website and need to meet with Bryan about planning for the campaign</li>
+		<li>SME-08: Publish at least one blog post in Jan. - drafted Jan blog post (part 2 of the 3 part series I am working on); needs lots of editing</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - send Bryan a set of tone ring parts</li>
+		<li>SME-08: Publish at least one blog post in Jan. - get blog post edited and into wordpress for review</li>
+		<li>V04-28: Design a housing in Fusion 360 for the sensor and TRRS jack (Sensor Housing) - start working on the CAD model</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>No, just reduced capacity, planning accordingly</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>V04-26: Assemble a test Wings to verify design (on proto-wing) - working on this, found some issues and lost some time, but back on track (except for block below)</li>
+		<li>BIZ-01: Prep books for taxes - working on it, need to chase some details down</li>
+		<li>BIZ-03: Work with Legal on Trademark Filing - still working on this, looking at next week for first meeting</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>V04-26: Assemble a test Wings to verify design (on proto-wing) - aiming to get 1 completed and start the second of two</li>
+		<li>BIZ-01: Prep books for taxes - we will see how things go chasing things down</li>
+		<li>BIZ-03: Work with Legal on Trademark Filing - aim to have the meeting</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Missing 10k resistors; taking care of it</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/102.html">PY18 Sprint 2 Plan</a>
+    (12 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2018-01-06" title="01/06/2018 07:26 pm">almost 5 years</a> ago</p>
+    <div class="wiki">
+    <p>Winter break is over and we accomplished some nice bonus work during our down time (including finalizing design details and setting up the first prototype of a test stand for Holoseat components).  Now it is time to get back to our regular rhythm and wrap up the development work for the Alpha units so we can ship them to our testers.</p>
+
+
+	<p><strong>Duration:</strong> 8 weeks<br /><strong>Stand Ups:</strong> Thursday nights<br /><strong>Start:</strong> Jan 4, 2018<br /><strong>End:</strong> Mar 1, 2018</p>
+
+
+	<p><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external">Backlog and Full Sprint Plan</a> (see <em>Backlog</em> and <em>Sprint 2</em> tabs)</p>
+
+
+	<p><ins>User Stories Under Development</ins></p>
+
+
+	<ul>
+	<li>As a developer I want to design a "Wing" so that I can reduce risk to expensive components</li>
+		<li>As a designer I want to determine the sensor mount adhesive so that we can include it in the alpha test</li>
+		<li>As a manufacturer I want to source a manufactured tone ring so that I can reduce costs</li>
+		<li>As a developer I want to enable required functionality so that I can handle basic configuration through the application (defaults and live for: enabled, single step duration, forward and backward chars)</li>
+		<li>As a business owner I want to research site support for manufacturing process so that I can fill in gaps in organization knowledge and experience</li>
+		<li>As a testing coordinator I want to evaulate the design so that I can avoid additional expenses from updates</li>
+		<li>As a marketer I want to continue publishing blog posts once a month (on a consistent schedule) so that I have original content to share</li>
+		<li>As a designer I want to develop a housings so that I can avoid having lose electronics sitting on the equipment</li>
+	</ul>
+
+
+	<p>Plus work on business management PBIs.</p>
+
+
+	<p><ins>Pre-Sprint Commitments</ins></p>
+
+
+	<ul>
+	<li>J 
+	<ul>
+	<li>V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping) - print 2 sets of tone ring parts</li>
+		<li>PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat - start filling out google doc that has the questions copied into it</li>
+		<li>SME-08: Publish at least one blog post in Jan. - draft Jan blog post</li>
+	</ul>
+	</li>
+		<li>Bryan
+	<ul>
+	<li>V04-26: Assemble a test Wings to verify design (on proto-wing)</li>
+		<li>BIZ-01: Prep books for taxes</li>
+		<li>BIZ-03: Work with Legal on Trademark Filing</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/101.html">PY18 Winter Break Kanban</a>
+    (2 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-12-09" title="12/09/2017 07:38 pm">almost 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Kanban Items</strong></p>
+
+
+	<ul>
+	<li>Get test stand to a point where it can
+	<ul>
+	<li>Verify sensors</li>
+		<li>Verify tone rings</li>
+		<li>Simulate pedaling</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Kanban Items</strong></p>
+
+
+	<ul>
+	<li>Refining LED setup for Holoseat keys</li>
+		<li>Start the process of Alpha Test T&#38;C review</li>
+		<li>Start the trade mark application process (want trade mark by Christmas 2018)</li>
+		<li>Assemble one of the alpha prototype controllers</li>
+	</ul>
+
+
+	<p><strong>J and Bryan Kanban Items</strong></p>
+
+
+	<ul>
+	<li>Groom backlog</li>
+		<li>Work on Comm Plan</li>
+		<li>Review and finalize the v0.4 BoM</li>
+		<li>Identify the pin for HW versioning</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/100.html">PY18 Sprint 1A Review and Retrospective</a>
+    (11 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-12-09" title="12/09/2017 05:59 pm">almost 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>Review</strong></p>
+
+
+	<p><ins>Claiming Done</ins></p>
+
+
+	<ul>
+	<li>V04-27: Order at quantity any parts where we have high confidence and a reasonable discount</li>
+		<li>V04-16: Place order for replacement components on the v0.4 BOM for confirming suitability</li>
+		<li>V04-49: Implement python serial library for accessing new version of HSP</li>
+		<li>V04-60: Design Rest API in seperate thread that is running using serial protocol</li>
+		<li>V04-50: Implement foundation of desktop app in flask</li>
+		<li>V04-51: Implement Serial Monitor feature</li>
+		<li>V04-71: Branding on keycap</li>
+		<li>SME-02: Split social media accounts out into a seperate folder</li>
+		<li>SME-03: share only the social media folder with Jazmint</li>
+		<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwors securely for social media</li>
+		<li>SME-07: Publish at least one blog post in December</li>
+	</ul>
+
+
+	<p><ins>Not Claiming Done</ins></p>
+
+
+	<ul>
+	<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step</li>
+		<li>V04-13: Test the tone rings against the behavior of the existing 12 pole 3D printed design (at least same performance, but looking for faster response times and improved single stepping)</li>
+		<li>V04-15: Adapt test rig to use the new auto-adjusting cadence firmware</li>
+		<li>V04-26: Assemble a test Wings to verify design (on proto-wing)</li>
+		<li>V04-24: Have layout double checked by a volunteer with layout experience</li>
+		<li>V04-52: Figure out how to stabilize the TRRS jack when using female header</li>
+		<li>V04-30: Test prints of both housings to confirm they will work</li>
+		<li>V04-28: Design a housing in Fusion 360 for the sensor and TRRS jack (Sensor Housing)</li>
+		<li>V04-29: Design a housing in Fusion 360 for the Feather and daughter board as well as the LED button and TRRS jack (Controller Housing)</li>
+		<li>V04-59: Design scheme for checking the hardware version so the software can find compatibility</li>
+		<li>V04-58: Implement hardware versioning system that can be detected by Holoseat software</li>
+		<li>V04-47: Develop and document outline of new version of HSP</li>
+		<li>V04-48: Implement new version of HSP in controller firmware</li>
+		<li>V04-61: Implement v0.4 required REST API methods for HSP</li>
+		<li>RAT-12: Ask legal aid about collecting health data and verify requirements for data security</li>
+		<li>V10-01: Have a volunteer familiar with injection molding review the Sensor Housing and make suggestions to allow the design to be usable for both</li>
+		<li>V10-02: Have a volunteer familiar with injection molding review the Controller Housing and make suggestions to allow the design to be usable for both</li>
+		<li>SME-11: Publish overview of gamification and gamification of exercise</li>
+		<li>SME-06: Publish at least one blog post in November</li>
+		<li>SME-10: Research gamify exercise competition (e.g. Pelaton and Virzoom)</li>
+		<li>SME-13: Research exerfy games competition (e.g. PC Gamer Bike and Hack a Day DIY projects)</li>
+		<li>PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat</li>
+	</ul>
+
+
+	<p><strong>Retrospective</strong></p>
+
+
+	<p><ins>What went well?</ins></p>
+
+
+	<ul>
+	<li>All component level updates have been completed and verified (still need to verify a couple of assemblies using new components)</li>
+		<li>New software architecture is completed and verified at firmware and software level</li>
+		<li>Engaged with a lawyer, finally</li>
+		<li>Engaged with Roanoke Small Biz Dev Council</li>
+	</ul>
+
+
+	<p><ins>What did not go well?</ins></p>
+
+
+	<ul>
+	<li>Too many PBIs not done</li>
+		<li>We did not attend all stand ups, or even virtual stand ups</li>
+		<li>Did not do a job of engaging with volunteers</li>
+		<li>Spent too much time in this and last sprint trying to engage DC biz dev center</li>
+		<li>Got overly ambitious (just too many PBIs period - again!)</li>
+		<li>Set unrealistic goals for Alpha delivery and have still not accepted what it will take to finish the Alphas</li>
+		<li>Not prioritizing communication enough (especially outside of core dev team)</li>
+		<li>Personal feelings of not doing a good job of personal time management and task list</li>
+	</ul>
+
+
+	<p><ins>What can we do better?</ins></p>
+
+
+	<ul>
+	<li>Find additional volunteers (especially CAD and Marketing)</li>
+		<li>Move "will do"s from stand ups each week to personal task list (on phone)</li>
+		<li>Develop a metric for determining the size of a planned sprint and select an initial cut off point for max size of sprint work (to include how we address outsourced work)</li>
+		<li>Avoid running short sprints in the future, and when we have to run short sprints, the total size of the sprint needs to be reduced from normal</li>
+		<li>Reexamine how we address blocks so they are about what is preventing us from making progress</li>
+		<li>Address lack of time to commit in how much and what goes into "will do" for a stand up (not treat as blocks)</li>
+		<li>Prioritize handling real blocks to remove the thing preventing progress/recognize if block means PBI needs to be dropped from sprint</li>
+		<li>Develop cookie-cutter set of external communication templates that are triggered by specific types of content/events (aka poor man's communication plan)</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/99.html">PY18 Sprint 1A Stand Up 6</a>
+    (10 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-12-09" title="12/09/2017 05:56 pm">almost 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>fixed a newly discovered bug dealing with websocket security errors in the GUI</li>
+		<li>V04-15: Adapt test rig to use the new auto-adjusting cadence firmware - bootstrapped test stand as sub-project to isolate test stand source from product source and refactored serial module so it can be used in Holoseat app and in test stand code</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>n/a</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>n/a</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>SME-07 - published the state of the project blog post</li>
+		<li>Mailed J parts and J received them!</li>
+		<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwords securely for social media - pinged Jazz</li>
+		<li>Followed up with lawyer for various PBIs</li>
+		<li>Key/Keycap/LED evaluation for enable button completed</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>n/a</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>n/a</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/98.html">PY18 Sprint 1A Stand Up 5</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-12-03" title="12/03/2017 12:44 am">almost 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>V04-51: Implement Serial Monitor feature - async mode for serial monitor (observe all communications between Holoseat controller and the REST API) completed; can claim done on this PBI</li>
+		<li>V04-14: Select tone ring based on ease to adapt... - See <a href="https://opendesignengine.net/boards/36/topics/1295" class="external">forum thread about ProtoLabs</a> ... note, TechShop corporate filed for chapter 7 bankruptcy so all TechShop resources/contacts are now moot</li>
+		<li>V04-50: Implement foundation of desktop app in flask - done</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>V04-15: Adapt test rig to use the new auto-adjusting cadence firmware - bootstrap test stand as sub-project to isolate test stand source from product source and refactor serial module so it can be used in Holoseat app and in test stand code  </li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Busy at work and have been sick lately</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>RAT-12: Ask legal aid about collecting health data and verify requirements for data security - have a lawyer!</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwords securely for social media - follow up with Jazz</li>
+		<li>Finish blog post</li>
+		<li>Mail J parts!</li>
+		<li>Key/Keycap/LED evaluation for enable button </li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>have schedule conflict with day/time for review/retro</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/97.html">PY18 Sprint 1A Stand Up 2</a>
+    (2 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-11-10" title="11/10/2017 02:06 am">almost 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>V04-51: Implement Serial Monitor feature - implemented unified app infrastructure and completed the synchronous mode for the serial monitor (you can now send messages and observe the direct replies to your messages)</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step - printed v3 of the 2 piece tone ring on my printer (it is looking good), made initial contact with TechShop about injection molding and high end 3D printing reviews, took injection mold machine operation class at TechShop, and heard about an injection mold company to look into (<a href="https://www.protolabs.com/services/injection-molding/" class="external">Proto Labs</a>)</li>
+		<li>V04-15: Adapt test rig to use the new auto-adjusting cadence firmware - (not on sprint!) Ordered some components and started re-architecting the test rig into a test stand to support all testing/development work (going to want to verify tone rings soon, so we will want the test stand early)</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>V04-51: Implement Serial Monitor feature - begin work on async mode for serial monitor (observe all communications between Holoseat controller and the REST API)</li>
+		<li>V04-14: Select tone ring based on ease to adapt... - Research <a href="https://www.protolabs.com/services/injection-molding/" class="external">Proto Labs</a> and follow up with TechShop contacts about review for tone ring</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>Work travel coming up, so can only make headway for the next few days</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did
+	<ul>
+	<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwords securely for social media - pinged Jazmint, have not heard back yet</li>
+		<li>SME-02: Split social media accounts out into a separate folder - done</li>
+		<li>SME-03: share only the social media folder with Jazmint - done</li>
+		<li>V04-29: Design a housing in Fusion 360 for the Feather and daughter board as well as the LED button and TRRS jack (Controller Housing) - handed in progress controller prototype to volunteer to start working on controller housing design</li>
+		<li>V04-59: Design scheme for checking the hardware version so the software can find compatibility - done (see discord chat and later docs in wiki)</li>
+		<li>V04-14: Select tone ring based on ease to adapt, ... - got v3 of tone ring design from volunteer to J</li>
+		<li>Other branding work while we have volunteer available - had some early discussions about other branding PBIs with volunteer</li>
+		<li>Sent status email to alpha testers</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>V04-26: Assemble a test Wings to verify design (on proto-wing) - will finish soldering down all components so we have a test unit</li>
+		<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwords securely for social media - follow up with Jazz</li>
+		<li>Write blog post</li>
+		<li>Mail parts to J</li>
+		<li>RAT-12: Ask legal aid about collecting health data and verify requirements for data security - follow up with legal aid</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>work travel and house guests after</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Joint Work</strong></p>
+
+
+	<ul>
+	<li>Add trade mark related PBIs to backlog</li>
+		<li>Review and finalize the v0.4 BoM</li>
+		<li>Decide on pin out for hw version number resistors</li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/96.html">PY18 Sprint 1A Stand Up 1</a>
+    (2 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-11-02" title="11/02/2017 10:13 pm">almost 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>J's Report</strong></p>
+
+
+	<ul>
+	<li>Did 
+	<ul>
+	<li>Posted sprint plan to Holoseat news channel</li>
+		<li>RAT-12: Ask legal aid about collecting health data and verify requirements for data security
+	<ul>
+	<li>Looked into DC legal aid (it was a bust)</li>
+		<li>Organized questions for legal aid </li>
+	</ul>
+	</li>
+		<li>PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat
+	<ul>
+	<li>Researched application for CrowdSupply (discovered, again, we need a price point for the application)</li>
+		<li>Prepared a Google Doc to capture answers to CrowdSupply application</li>
+	</ul>
+	</li>
+		<li>V04-51: Implement Serial Monitor feature
+	<ul>
+	<li>Designed common elements for Holoseat app (enable button, profile selector, and cadence display)</li>
+		<li>Designed Serial Monitor UI</li>
+		<li>Started implementing Serial Monitor UI</li>
+		<li>Implemented REST API framework</li>
+		<li>Implemented first few REST API methods (and their counterparts in HSP)</li>
+	</ul>
+	</li>
+		<li>V04-49: Implement python serial library for accessing new version of HSP
+	<ul>
+	<li>Replaced old manual string parsing code in firmware with Arduino JSON library</li>
+		<li>Developed first draft of Holoseat serial library (nearly feature complete, need to discuss versioning scheme to finalize board checks)</li>
+	</ul>
+	</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step
+	<ul>
+	<li>Provided feedback and test prints for tone ring development</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>V04-51: Implement Serial Monitor feature - Finish implementing Serial Monitor</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step - Continue supporting tone ring development (including review about injection molding and printing on TechShop 3D printer)</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>no</li>
+	</ul></li>
+	</ul>
+
+
+	<p><strong>Bryan's Report</strong></p>
+
+
+	<ul>
+	<li>Did 
+	<ul>
+	<li>V04-26: Assemble a test Wings to verify design (on proto-wing) - partially assembled test wing, focused on layout this week</li>
+		<li>V04-71: Branding on keycap - done and key caps ordered</li>
+		<li>V04-59: Design scheme for checking the hardware version so the software can find compatibility - discussed hardware versioning with volunteer</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step
+	<ul>
+	<li>Worked with volunteer on design</li>
+		<li>ordered magnets</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>Will do
+	<ul>
+	<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwors securely for social media</li>
+		<li>SME-02: Split social media accounts out into a seperate folder</li>
+		<li>SME-03: share only the social media folder with Jazmint</li>
+		<li>V04-26: Assemble a test Wings to verify design (on proto-wing)</li>
+		<li>V04-59: Design scheme for checking the hardware version so the software can find compatibility</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step</li>
+		<li>Other branding work while we have volunteer available</li>
+		<li>Write a blog post and/or a message to alpha testers</li>
+	</ul>
+	</li>
+		<li>Blocked?
+	<ul>
+	<li>traveling for work</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/95.html">PY18 Sprint 1A Plan</a>
+    (5 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-10-28" title="10/28/2017 05:06 pm">about 5 years</a> ago</p>
+    <div class="wiki">
+    <p>The first iteration of Planning Year 2018 (PY18) is over.  While we accomplished many key tasks, I hesitate to call it a sprint (we never got to setting up a complete sprint plan).  It was more of a <a href="https://en.wikipedia.org/wiki/Kanban_(development)" class="external">kanban</a> run straight off of the evolving backlog.  To say it was less than a perfect process is an understatement (you can see all the details in our <a href="https://opendesignengine.net/news/94" class="external">Review and Retrospective</a>).</p>
+
+
+	<p>We have since finished grooming the PY18 backlog and we have looked at how moving to our new planning year cycle (SyndCon to SyndCon) impacts our annual cadence.  Based on this meta-planning work, we are calling the upcoming sprint Sprint 1A (this will put the rest of PY18 in sync with our proposed annual cadence).  See below for all of the PY18 Sprint 1A details.</p>
+
+
+	<p><strong>Duration:</strong> 6 weeks<br /><strong>Stand Ups:</strong> Thursday nights<br /><strong>Start:</strong> Oct 26, 2017 <br /><strong>End:</strong> Dec 7, 2017</p>
+
+
+	<p><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTl0RNiYJmxP5eL6KDfSXJdLTjkFSILai4lXUGI_pRj_Zqnyw4rECqy6tOgdSK0xk6MSBKs40aGkKhC/pubhtml" class="external">Backlog and Full Sprint Plan</a> (see <em>Backlog</em> and <em>Sprint 1A</em> tabs)</p>
+
+
+<ins>User Stories Under Development</ins>
+	<ul>
+	<li>As a manufacturer I want to source a manufactured tone ring so that I can reduce costs</li>
+		<li>As a developer I want to design a "Wing" so that I can reduce risk to expensive components</li>
+		<li>As a designer I want to source components so I can keep costs low</li>
+		<li>As a designer I want to test components so that I can validate design</li>
+		<li>As a designer I want to develop a housings so that I can avoid having lose electronics sitting on the equipment</li>
+		<li>As a testing coordinator I want to evaulate the design so that I can avoid additional expenses from updates</li>
+		<li>As a developer I want to update the Holoseat Serial Protocol so that I can adjust Holoseat on the fly again</li>
+		<li>As a developer I want to build the desktop app so that I can offer an API to games to directly interact</li>
+		<li>As a developer I want to recreate the Arduino Serial Monitor as a desktop app feature so that I can validate the desktop app architecture</li>
+		<li>As a marketer I want to make sure that the Holoseat logo and images are on the product so that I can promote the brand</li>
+		<li>As a business owner I want to verify requirements for collecting health data so that I can avoid endangering the company</li>
+		<li>As a designer I want to make sure the sensor housing will only need minor adjustments for injection molding so that I can minimize changes between alpha and final</li>
+		<li>As a designer I want to make sure the controller housing will only need minor adjustments for injection molding so that I can minimize changes between alpha and final</li>
+		<li>As a community leader I want to share posts about gamefying vs exerfying so that I can get people to think about things the holoseat way (clarifying the difference)</li>
+		<li>As a product manager I want to share access to social media accounts with Jazz so that she can help with social media</li>
+		<li>As a marketer I want to continue publishing blog posts once a month (on a consistent schedule) so that I have original content to share</li>
+		<li>As a social media consultant I want to educate myself on gamify and exerfy so that I can write better</li>
+		<li>As a business owner I want to research site support for manufacturing process so that I can fill in gaps in organization knowledge and experience</li>
+	</ul>
+
+
+<ins>Pre-Sprint Commitments</ins>
+	<ul>
+	<li>J
+	<ul>
+	<li>RAT-12: Ask legal aid about collecting health data and verify requirements for data security</li>
+		<li>V04-49: Implement python serial library for accessing new version of HSP</li>
+		<li>V04-51: Implement Serial Monitor feature</li>
+		<li>PIC-01: Submit application to Crowd Supply to see if they would be interested in Holoseat</li>
+	</ul>
+	</li>
+		<li>Bryan
+	<ul>
+	<li>V04-26: Assemble a test Wings to verify design (on proto-wing)</li>
+		<li>V04-59: Design scheme for checking the hardware version so the software can find compatibility</li>
+		<li>V04-71: Branding on keycap</li>
+		<li>V04-14: Select tone ring based on ease to adapt, costs, identical or faster response times, improved single step</li>
+		<li>SME-01: Get Jazmint signed up for Lastpass so we can share passwors securely for social media</li>
+		<li>SME-02: Split social media accounts out into a seperate folder</li>
+		<li>SME-03: share only the social media folder with Jazmint</li>
+	</ul></li>
+	</ul>
+    </div>
+
+    <h3>
+    <a href="../../news/94.html">PY18 Sprint 1 Review and Retrospective</a>
+    (3 comments)</h3>
+    <p class="author">Added by <a href="../../users/3.html" class="icon icon-contributor-license">J. Simmons</a> <a href="http://opendesignengine.net/projects/holoseat/activity?from=2017-10-27" title="10/27/2017 12:00 am">about 5 years</a> ago</p>
+    <div class="wiki">
+    <p><strong>Review</strong></p>
+
+
+	<p><ins>Claiming Done</ins></p>
+
+
+	<ul>
+	<li>V04-01: Get all testers signed up for the testing resources</li>
+		<li>V04-02: Go over testing resources with testers to confirm all questions or concerns are answered</li>
+		<li>V04-08: Keep meeting info updated on Meeting_Planning channel</li>
+		<li>V04-03: Get all testers to talk on Discord server</li>
+		<li>V04-10: Contact manufacturers to find a few tone rings that may work for us</li>
+		<li>V04-18: Test TRRS mini stereo jacks and cable to confirm ability to replace the network cable based system</li>
+		<li>V04-19: Select new button that should be a drop in replacement that is a through-pin design and screws on from outside of case (or not at all)</li>
+		<li>V04-20: Test new button to confirm it is a drop in replacement</li>
+		<li>V04-21: Decide what components we want to be on the wing</li>
+		<li>V04-42: Develop static mock up of app UI</li>
+		<li>V04-43: Demo pystray library</li>
+		<li>V04-44: Demo pywebview</li>
+		<li>V04-45: Demo flask app development</li>
+		<li>V04-46: Demo serial messaging library suitable for Serial Monitor</li>
+		<li>V04-53: Research how to leverage USB PID</li>
+		<li>V04-54: Follow instructions for registering USB PID with PID codes - <a class="external" href="http://pid.codes/howto/">http://pid.codes/howto/</a></li>
+	</ul>
+
+
+	<p><ins>Not Claiming Done</ins></p>
+
+
+	<ul>
+	<li>n/a (sprint was not completely planned)</li>
+	</ul>
+
+
+	<p><strong>Retrospective</strong></p>
+
+
+	<p><ins>What went well?</ins></p>
+
+
+	<ul>
+	<li>The hardware testing</li>
+		<li>Initial work on the new desktop app</li>
+		<li>Getting testers through initial on boarding</li>
+		<li>Got done about the right set of work at about the right time (especially considering we had no formal sprint plan)</li>
+	</ul>
+
+
+	<p><ins>What did not go well?</ins></p>
+
+
+	<ul>
+	<li>No formal sprint plan - <em>What's a sprint plan?</em></li>
+		<li>Hit the resource bottleneck again because we did not leverage outside resources (direct result of not having a formal sprint plan)</li>
+		<li>The timing for annual planning and needing to get things rolling for the planning year was off</li>
+		<li>Missed some stand ups (old habit coming back to haunt us) due to travel and other outside blocks</li>
+		<li>Travel in general</li>
+		<li>While we got a couple of blog posts got up, the social media continued to stagnate (related to resource constraints)</li>
+	</ul>
+
+
+	<p><ins>What can we do better?</ins></p>
+
+
+	<ul>
+	<li>We need to address annual planning; everything else that did not go well stems from not completing annual planning
+	<ul>
+	<li>In the rush to try to have delivery of alpha units by end of year, we cut annual planning short; last planning cycle took 3-4 weeks for planning</li>
+		<li>Need to determine correct annual cadence for planning years running SyndCon to SyndCon</li>
+		<li>Let's lay out the assumptions for our planning year
+	<ul>
+	<li>Year runs Sept to Aug</li>
+		<li>Aug is just for SyndCon and recovery from SyndCon</li>
+		<li>Planning year is broken into thirds which are ~2 sprints long each</li>
+		<li>Sept is dedicated to planning (no development)</li>
+	</ul>
+	</li>
+		<li><strong>Annual Cadence</strong>
+	<ul>
+	<li>Third 1
+	<ul>
+	<li>Sep: Planning</li>
+		<li>Oct - Nov: Sprint 1</li>
+		<li>Dec: Basically off (any development is out of cycle)</li>
+	</ul>
+	</li>
+		<li>Third 2
+	<ul>
+	<li>Jan - Feb: Sprint 2</li>
+		<li>Mar - Apr: Sprint 3</li>
+	</ul>
+	</li>
+		<li>Third 3
+	<ul>
+	<li>May - Jun: Sprint 4</li>
+		<li>Jul - Aug: Sprint 5 (runs short to meet deadline for SyndCon; it is always dedicated to convention prep)</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		<li>We need to discuss how to apply this cadence through the end of calendar year 2017</li>
+	</ul>
+    </div>
+
+
+<p class="pagination"><a href="http://opendesignengine.net/projects/holoseat/news?page=1">« Previous</a> <a href="http://opendesignengine.net/projects/holoseat/news?page=1">1</a> 2 <a href="news%3Fpage=3.html">3</a> <a href="http://opendesignengine.net/projects/holoseat/news?page=4">4</a>  ... <a href="news%3Fpage=6.html">6</a> <a href="news%3Fpage=3.html">Next »</a></p>
+
+<p class="other-formats">Also available in:
+	<span><a href="news.atom" class="atom" rel="nofollow">Atom</a></span>
+</p>
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="../../terms.html">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>

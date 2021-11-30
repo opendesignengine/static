@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Link_Budgets.html?version=10 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:11 GMT -->
+<head>
+<title>Link Budgets</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="Link-Budget-References"></a>
+<h1 >Link Budget References<a href="#Link-Budget-References" class="wiki-anchor">&para;</a></h1>
+
+
+	<ul class="toc right"><li><a href="#Link-Budget-References">Link Budget References</a><ul><li><a href="#Background-Material">Background Material</a></li><li><a href="#Example-Calculations">Example Calculations</a><ul><li><a href="#Online-Forms">Online Forms</a></li><li><a href="#Spreadsheets">Spreadsheets</a></li></ul>
+</li><li><a href="#Selected-Link-Budget-Source-Document">Selected Link Budget Source Document</a></li></ul></li></ul>
+
+
+	<p>TODO: write a 1-2 sentence explanation of what a link budget is here, and a summary of what the purpose of this page is.</p>
+
+
+	<a name="Background-Material"></a>
+<h2 >Background Material<a href="#Background-Material" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><a href="http://www.piscespacific.org/livesite/files/Link_Budget_Calculation.pdf" class="external">Link Budget Calculation</a></li>
+		<li><a href="http://www.sss-mag.com/pdf/an9804.pdf" class="external">Tutorial on Basic Link Budget Analysis</a></li>
+		<li><a href=".html" class="wiki-page">Link Budget Video Tutorials</a> by Aaron Harper, Mach 30 volunteer</li>
+	</ul>
+
+
+	<a name="Example-Calculations"></a>
+<h2 >Example Calculations<a href="#Example-Calculations" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Much of this material was reviewed with the stakeholders and the IPT at the <a href="https://docs.google.com/document/d/17Wc4sMqlUissR5am6ANDcKP-psRQ41ysxOV0vrcgHJA/pub" class="external">Sprint 1 Stand Up 3 meeting</a></p>
+
+
+	<a name="Online-Forms"></a>
+<h3 >Online Forms<a href="#Online-Forms" class="wiki-anchor">&para;</a></h3>
+
+
+Online forms are useful for one off calculations, source code/math not necessarily available to Mach 30.
+	<ul>
+	<li><a href="http://www.satsig.net/linkbugt.htm" class="external">Satellite Link Budget Calculator</a> - simple online form for uplink and downlink calculations</li>
+		<li><a href="http://www.tutorialsweb.com/satcom/satellite-link-budget-calculator.htm" class="external">Satellite Link Budget Calculator page</a> - a mor complete set of calculations for uplink and downlink</li>
+		<li><a href="http://www.satcom-services.com/VSAT/downlink.html" title="Downlink" class="external">Geostationary Satellite Link Budget Calculations</a> - Geo calculations, not really useful for us, but nice user experience</li>
+	</ul>
+
+
+	<a name="Spreadsheets"></a>
+<h3 >Spreadsheets<a href="#Spreadsheets" class="wiki-anchor">&para;</a></h3>
+
+
+Spreadsheets require the correct software to run (typically MS Excel), but Mach 30 can investigate the implementation to use as a source for porting to Python library.
+	<ul>
+	<li><a href="https://github.com/kicksat/groundstation/blob/master/Link Budgets.xlsx" class="external">KickSat Ground Station Link Budget</a> (MS Excel) - just about the right level of detail for current work (not surprising since KickSat has a similar level of technical complexity and available technical resources as Ground Sphere)</li>
+		<li><a href="http://www.amsatuk.me.uk/iaru/AMSAT-IARU_Link_Model_Rev2.5.3.xls" class="external">Jan King's AMSAT link budget</a> (MS Excel) - the most extensive calculations, too much detail for now, but will likely be useful for future projects</li>
+		<li><a href="http://www.ka9q.net/jjsat/full_links.xls" class="external">KA9Q JJSat link budget design spreadsheet</a> (MS Excel) - another set of right sized calculations for our current needs (came from <a href="http://www.ka9q.net/jjsat/" class="external">conceptual design work for JJSat</a>)</li>
+		<li><a href="http://www.crn2.inpe.br/conasat1/projetos_cubesat/projetos/DTUSat - Technical University of Denmark - Denmark/DTUSat - COM - Link Budget.xls" class="external">ConaSat Link Budget Calculations for DTUSat</a> (MS Excel) - the history of this spreadsheet is a little unclear, but it is a very clean implementation of the required calculations</li>
+	</ul>
+
+
+	<a name="Selected-Link-Budget-Source-Document"></a>
+<h2 >Selected Link Budget Source Document<a href="#Selected-Link-Budget-Source-Document" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The Ground Sphere Mk 3 team has decided to build its Python Link Budget library on the calculations used in the <a href="https://github.com/kicksat/groundstation/blob/master/Link Budgets.xlsx" class="external">KickSat Ground Station Link Budget</a>.  This spreadsheet includes nearly all of the required transmission effects and has been verified by <a href="../../../dmsf_files/16%20-%201%20(1)b4d7.jpg?download=" class="external">comparing its results to manual calculations</a>.</p>
+</body>
+
+<!-- Mirrored from opendesignengine.net/projects/groundsphere3/wiki/Link_Budgets.html?version=10 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Sep 2021 01:32:11 GMT -->
+</html>

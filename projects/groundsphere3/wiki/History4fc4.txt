@@ -1,0 +1,84 @@
+h1. History
+
+{{>toc}}   
+
+!>/attachments/download/591! 
+
+The Ground Sphere projects have a rich history at Mach 30, starting with a question from Mach 30 contributor Aaron Harper leading all the way to the current generation Ground Sphere intended for receiving signals from the International Space Station.
+
+h2. Mk 1
+
+h3. The Inspiration
+
+The first Ground Sphere project did not go by the name Ground Sphere, it was simply referred to as "GS-001":https://opendesignengine.net/projects/gs-001/.  GS-001 wasn't even a formal Mach 30 project.  Instead it was the physical answer to a question posed by Mach 30 volunteer Aaron Harper, _"How low can we get the cost down to and reliably receive radio signals from space?"_  
+
+Like all good makers, Aaron sought to answer the question quite practically, by building one with the goals of low cost and simple operations.  As you will see, the success of this early work had a profound impact on Mach 30 and influenced future project development.  Today we refer to GS-001 as Ground Sphere Mk 1 due to its relationship to the first project to bear the name Ground Sphere.
+
+h3. Revision 1
+
+_January 2013 - April 2013_
+
+The earliest documentation for a Ground Sphere related project dates to January 2013 when Aaron Harper started the "GS-001":https://opendesignengine.net/projects/gs-001 project.  Aaron chose to have this ground station receive signals from "Amateur Radio Satellites":http://www.amsat.org/ (or Ham radio satellites).  As a Ham radio operator, Aaron was familiar with their operation and availability of opportunities to receive their signals.  Ham radio satellites operate as "Ham radio repeaters":https://en.wikipedia.org/wiki/Amateur_radio_repeater in the sky.  Observers of Ham radio satellites can listen to Ham radio operators communicating with each other across vast distances.
+
+As part of his goal to have simple operations, Aaron elected to use an omni-directional antenna.  This choice meant that users would not have to track the satellite as it flies overhead, something that is required with higher gain, directional antennas.  After reviewing several options, Aaron selected an "egg-beater antenna design":http://on6wg.pagesperso-orange.fr/Page%201.html.  He tied this antenna to a "Software Defined Radio":https://en.wikipedia.org/wiki/Software-defined_radio "TV Tuner USB Dongle":http://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/.  These dongles are cheap and are often used by makers for similar applications.  
+
+So, how did Aaron's experiment turn out?  See for yourself in the video below.  By "Yuri's Night":https://yurisnight.net/ of 2013 Aaron had built and tested GS-001 for under $200.  Check out the blog post "Ground Station part 1":http://mach30.org/2013/05/16/ground-station-part-1 for Aaron's complete story of GS-001.
+
+{{youtube(CbODjHt-BSg)}}
+
+h3. Revision 2
+
+_May 2013 - July 2013_
+
+After the success of the first revision of Ground Sphere Mk 1, Mach 30 decided to include Ground Sphere (at this point, referred to simply as the Mach 30 ground station) in its booth at the 2013 "NewSpace":https://newspace.spacefrontier.org/ conference.  This decision posed some challenges as the first revision was not intended for transport, let alone shipping.  Its aerials were permanently mounted in place, making the shipping dimensions unmanageable and exposing the aerials to potential crushing if other packages were stacked on top of Ground Sphere's box.  
+
+Aaron made a second revision to the Mk 1 design to address these issues.  Instead of directly soldering the aerials to the rest of the antenna, Aaron added screw terminals to the outside of the Ground Sphere structure.  The aerials could then be packaged flat in a box and attached (or detached) with a screw driver.  This design choice remains integral to Ground Sphere and has been used in all versions since the spring of 2013.
+
+|!gsmk1r2.png!|
+|Ground Sphere Mk1 R2|
+
+NewSpace 2013 was a great event for Mach 30 in general, but it was an amazing event for Ground Sphere.  It turns out "SkyeCube":http://www.southernstars.com/skycube/, a CubeSat Kickstarted by "Southern Stars":http://www.southernstars.com/, was on exhibit two booths down from Mach 30.  Like Mach 30, Southern Stars had their hardware on display in their booth.  It did not take long for Mach 30's representative (J. Simmons) and Southern Stars' representative (Tim DeBenedictis) to realize Southern Stars had a satellite and Mach 30 had a ground station, and that clearly they should see if the two hardware projects could talk to each other. Within an hour Tim and J. were sending messages from the SkyCube engineering model on one end of the exhibit hall to the Mach 30 ground station at the other end. J. and Tim capped off the day by using the two projects to run an impromptu demo during a panel Tim was on later that afternoon.  
+
+|!j_at_new_space.jpg!:http://i1.wp.com/mach30.org/wp-content/uploads/2013/07/j_at_new_space.jpg|
+|Mach 30's NewSpace 2013 Booth|
+
+You can see more about Mach 30's NewSpace 2013 adventure on "Google+":https://plus.google.com/+JSimmons/posts/QhnWbyVsNsC and the "Mach 30 blog":http://mach30.org/2013/08/03/new-space-2013-wrap-up/
+
+
+h2. Mk 2
+
+<insert continued story (with photos and link to project) of the SkyCube GS>
+
+h3. Companion to SkyCube... Ground Sphere of Course
+
+_September 2013 - December 2013_
+
+<discussion of "updated requirements":https://opendesignengine.net/projects/groundsphere/wiki/Requirements_Document (focus on top level), new dimensions>
+
+h3. Building Mk 2 
+
+_January 2014 - May 2014_
+
+<discuss new build (use lots of pics, including from "this blog post":http://mach30.org/2014/06/03/testing-for-catastrophic-capacitor-failure/ > 
+
+h3. Testing and SkyCube
+
+_June 2014 - September 2014_
+
+<discuss "test procedure":https://opendesignengine.net/projects/groundsphere/wiki/Testing ("especially tests for signal reception":https://opendesignengine.net/projects/groundsphere/wiki/Test_112_Instructions).  close with info from "SkyCube updates":https://www.kickstarter.com/projects/880837561/skycube-the-first-satellite-launched-by-you/posts/985395>
+
+Project put on the shelf
+
+h2. Mk 3
+
+h3. Mach 30 Happy Hours - Taking Ground Sphere Back Off the Shelf
+
+_October 2015 - December 2015_
+
+summarize happy hours
+
+h3. Mach 30 IPT Development of Ground Sphere Mk 3
+
+_January 2016 - Present_
+
+<insert story and goal of Mk 3 (with logo), happy hour, Perigee, etc>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open Design Engine: Issues</title>
+  <link rel="self" href="http://opendesignengine.net/issues.atom?per_page=50"/>
+  <link rel="alternate" href="http://opendesignengine.net/issues?per_page=50"/>
+  <id>http://opendesignengine.net/</id>
+  <updated>2012-11-17T16:26:46+00:00</updated>
+  <author>
+    <name>Open Design Engine</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>Scanning Tunnelling Microscope - Milestone #89 (New): Test performance of bias voltage controller</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/89"/>
+    <id>http://opendesignengine.net/issues/89</id>
+    <updated>2012-11-17T16:26:46+00:00</updated>
+    <author>
+      <name>Andrew Starr</name>
+      <email>ajstarr@gmail.com</email>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Scanning Tunnelling Microscope - Milestone #88 (New): Assembly of bias voltage controller</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/88"/>
+    <id>http://opendesignengine.net/issues/88</id>
+    <updated>2012-11-17T16:21:20+00:00</updated>
+    <author>
+      <name>Andrew Starr</name>
+      <email>ajstarr@gmail.com</email>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Scanning Tunnelling Microscope - Milestone #86 (New): Test performance of Tunnelling Current Ampl...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/86"/>
+    <id>http://opendesignengine.net/issues/86</id>
+    <updated>2012-10-17T04:12:52+00:00</updated>
+    <author>
+      <name>Andrew Starr</name>
+      <email>ajstarr@gmail.com</email>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Scanning Tunnelling Microscope - Milestone #85 (New): Test performance of high frequency isolator</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/85"/>
+    <id>http://opendesignengine.net/issues/85</id>
+    <updated>2012-10-17T04:08:42+00:00</updated>
+    <author>
+      <name>Andrew Starr</name>
+      <email>ajstarr@gmail.com</email>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #73 (New): Update embedded image and video rendering to handle brows...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/73"/>
+    <id>http://opendesignengine.net/issues/73</id>
+    <updated>2012-09-09T13:49:53+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Browser size often causes rendering issues with embedded images and videos (which have a fixed size in the current implementation).  See the attached screenshot for an example.  We should look at automatically resizing these elements to fit the frame they are rendered in.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Space Chiles v1.0 - Bug #72 (New): Helium supply is not reliable/readily availble</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/72"/>
+    <id>http://opendesignengine.net/issues/72</id>
+    <updated>2012-09-05T11:54:00+00:00</updated>
+    <author>
+      <name>Greg Moran</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>Epoxy Granite CNC Mill - Milestone #70 (New): Pour Base</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/70"/>
+    <id>http://opendesignengine.net/issues/70</id>
+    <updated>2012-07-13T20:51:13+00:00</updated>
+    <author>
+      <name>Brandin Watson</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Get everything together; finished mold, rebar, inserts, attachment bolts, vacuuming system, vibrating table, EG components, and pour the mold for the base.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Epoxy Granite CNC Mill - Feature #69 (New): Make Mold</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/69"/>
+    <id>http://opendesignengine.net/issues/69</id>
+    <updated>2012-07-13T20:48:43+00:00</updated>
+    <author>
+      <name>Brandin Watson</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We have the design files for the mold. Now we need to find some melamine and at time that we can get together with Tux-Lab to get the components routed out.&lt;/p&gt;
+
+
+	&lt;p&gt;Need to design and attach a super-structure and internal support system.&lt;/p&gt;
+
+
+	&lt;p&gt;I also need to get Tux-Lab measurements for the files.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Epoxy Granite CNC Mill - Feature #68 (New): Finish v1 design of mill</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/68"/>
+    <id>http://opendesignengine.net/issues/68</id>
+    <updated>2012-07-13T20:43:50+00:00</updated>
+    <author>
+      <name>Brandin Watson</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We have designed the base, now we need to do at least a preliminary design of the gantry system.&lt;/p&gt;
+
+
+	&lt;p&gt;We also need to determine the best system to use as rails for the gantry to move on.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Epoxy Granite CNC Mill - Feature #67 (New): Vacuum</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/67"/>
+    <id>http://opendesignengine.net/issues/67</id>
+    <updated>2012-07-13T20:40:05+00:00</updated>
+    <author>
+      <name>Brandin Watson</name>
+    </author>
+    <content type="html">
+&lt;p&gt;We need to create a vacuuming system to mitigate air bubbles in the epoxy granite. It needs to be able to fit around the assembled mold.&lt;/p&gt;
+
+
+	&lt;p&gt;The cured EG may work perfectly for our purposes even with some bubbles but it is better safe than sorry.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Far Horizons Project - Milestone #65 (In Progress): Adler Planetarium Documentation Visit</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/65"/>
+    <id>http://opendesignengine.net/issues/65</id>
+    <updated>2012-06-09T17:58:03+00:00</updated>
+    <author>
+      <name>Jeremy Wright</name>
+    </author>
+    <content type="html">
+&lt;p&gt;This is the initial visit to the Adler Planetarium to document the Far Horizons High Altitude Balloon (HAB) platform.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #30 (New): Add wiki page templates</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/30"/>
+    <id>http://opendesignengine.net/issues/30</id>
+    <updated>2011-04-09T16:23:26+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;There will be many common types of wiki pages (meeting minutes, Bills of Materials, assembly instructions, etc).  ODE should support templates for these common types of wiki pages.  The templates should be sharable (link on page create by template, plus searchable on site), and be markable as "featured" so the best practices can spread through the community.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #16 (New): Improve dashboard</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/16"/>
+    <id>http://opendesignengine.net/issues/16</id>
+    <updated>2011-04-08T03:26:07+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Projects should also have dashboard page so members can keep up with progress (&lt;a href="http://i.imgur.com/Kc8Yc.png" class="external"&gt;possible example&lt;/a&gt;) - think members' homepage for the project.&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #15 (New): Make project homepage more dynamic</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/15"/>
+    <id>http://opendesignengine.net/issues/15</id>
+    <updated>2011-04-08T03:25:26+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Project "home page" should be wiki-like as well to let project owners "sell" their projects, including posting rich media (videos, pics, etc); More like OpenRocket's &lt;a href="http://openrocket.sourceforge.net/" class="external"&gt;home page&lt;/a&gt; than its &lt;a href="http://sourceforge.net/projects/openrocket/" class="external"&gt;sourceforge page&lt;/a&gt; - think public face of the project&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>Open Design Engine - Feature #14 (New): Add support to showcase "featured projects" on the site h...</title>
+    <link rel="alternate" href="http://opendesignengine.net/issues/14"/>
+    <id>http://opendesignengine.net/issues/14</id>
+    <updated>2011-04-08T03:19:41+00:00</updated>
+    <author>
+      <name>J. Simmons</name>
+    </author>
+    <content type="html">
+&lt;p&gt;Site level homepage should highlight best hosted projects (like &lt;a href="http://en.wikipedia.org/wiki/Main_Page" class="external"&gt;wikipedia&lt;/a&gt; does with featured articles?)&lt;/p&gt;    </content>
+  </entry>
+</feed>

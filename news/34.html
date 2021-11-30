@@ -1,0 +1,1032 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Shepard Test Stand - Shepard v1.1 Dev Log (Thrust DAQ) Started: 05-20-13 - Open Design Engine</title>
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="b4nxv+l+0X+9QTxkwU7cZxRTBOkGLNNfmAb56mbhXq8="/>
+<link rel='shortcut icon' href='../favicon.ico%3F1359925685' />
+<link href="../stylesheets/application.css%3F1359925542.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="../javascripts/prototype.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/effects.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/dragdrop.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/controls.js%3F1359925542" type="text/javascript"></script>
+<script src="../javascripts/application.js%3F1359925542" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<!--[if IE 6]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      body {behavior: url(/stylesheets/csshover.htc?1359925542);}
+    </style>
+<![endif]-->
+<link href="../plugin_assets/redmine_legal/stylesheets/terms-of-service.css%3F1359925705.css" media="screen" rel="stylesheet" type="text/css" /> 
+<!-- page specific tags -->
+
+  <link href="../stylesheets/scm.css%3F1359925542.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="controller-news action-show">
+<div id="wrapper">
+<div id="wrapper2">
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a href="../login.html" class="login">Sign in</a></li></ul>    </div>
+    
+    <ul><li><a href="../index.html" class="home">Home</a></li>
+<li><a href="../projects.html" class="projects">Projects</a></li>
+<li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
+
+<div id="header">
+    
+    <div id="quick-search">
+        <form action="../search/index/shepard-ts.html" method="get">
+        <input name="news" type="hidden" value="1" />
+        <a href="../search/index/shepard-ts.html" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        
+    </div>
+    
+
+    <h1>Shepard Test Stand</h1>
+
+    
+    <div id="main-menu">
+        <ul><li><a href="../projects/shepard-ts.html" class="overview">Overview</a></li>
+<li><a href="../projects/shepard-ts/activity.html" class="activity">Activity</a></li>
+<li><a href="../projects/shepard-ts/roadmap.html" class="roadmap">Roadmap</a></li>
+<li><a href="../projects/shepard-ts/issues.html" class="issues">Issues</a></li>
+<li><a href="../projects/shepard-ts/issues/gantt.html" class="gantt">Gantt</a></li>
+<li><a href="../projects/shepard-ts/news.html" class="news selected">News</a></li>
+<li><a href="../dmsf/shepard-ts.html" class="dmsf">DMSF</a></li>
+<li><a href="../projects/shepard-ts/wiki.html" class="wiki">Wiki</a></li>
+<li><a href="../projects/shepard-ts/boards.html" class="boards">Forums</a></li>
+<li><a href="http://opendesignengine.net/projects/shepard-ts/repository" class="repository">Repository</a></li></ul>
+    </div>
+    
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">
+        
+        
+    </div>
+
+    <div id="content">
+				
+        <div class="contextual">
+<span class="news-34-watcher"></span>
+
+
+</div>
+
+<h2>Shepard v1.1 Dev Log (Thrust DAQ) Started: 05-20-13</h2>
+
+
+
+<p><em>The work done on Shepard v1.1 on 05-20-13.</em><br />
+<span class="author">Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-20.html" title="05/20/2013 04:35 pm">over 9 years</a> ago</span></p>
+<div class="wiki">
+<p>The DAQ (Data AcQuisition) system for version 1.1 of the <a href="https://opendesignengine.net/projects/shepard-ts" class="external">Shepard Test Stand</a> is quickly getting left behind technology-wise. We believe that we've found a good source for small load cells, which makes the use of FSRs (Force Sensing Resistors) not worth pursuing any more. The sample rate due to the thermocouple amplifier is far too slow as well, and we're looking at switching to a non-contact temperature sensor to obtain faster sensor response during runs. However, we still have a partner organization that needs a version of Shepard to experiment with, pre-2.0, and I thought that I'd use a hybrid platform of the old and the new technologies to test out some of our ideas in version 1.1. Hopefully I'll end up with a setup that our partner can utilize for their testing that will also be a good test bed for our new components.</p>
+
+
+	<p>The two ICs in this test circuit are the <a href="http://www.ti.com/product/ina122" class="external">INA122 Instrumentation Amplifier</a> , and the <a href="http://www.ti.com/product/ads1118" class="external">ADS1118 amplifier/ADC</a> , set up to amplify thermocouple inputs. The ADS1118 required a MSOP10 to DIP converter so that I could use it with a breadboard/protoboard. Thanks to Aaron Harper for going through the painstaking process of soldering/reflowing such a small package for me.</p>
+
+
+	<p>I'll start with the INA122, although both ICs will be on the breadboard so that I can plan the layout appropriately.</p>
+
+
+	<p>Using the following resources, I came up with the circuit below:</p>
+
+
+	<ol>
+	<li><a class="external" href="http://www.ti.com/lit/ds/sbos069/sbos069.pdf">http://www.ti.com/lit/ds/sbos069/sbos069.pdf</a></li>
+		<li><a class="external" href="http://www.nakka-rocketry.net/strainlc.html">http://www.nakka-rocketry.net/strainlc.html</a></li>
+		<li><a class="external" href="http://www.nerdkits.com/videos/weighscale/">http://www.nerdkits.com/videos/weighscale/</a></li>
+		<li><a class="external" href="http://www.robotshop.com/phidgetbridge-wheatstone-bridge-sensor-interface-2.html">http://www.robotshop.com/phidgetbridge-wheatstone-bridge-sensor-interface-2.html</a> (Documentation link)</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/85?download=" alt="" /></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/87?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/86?download=" class="external">Large</a> )</p>
+
+
+	<p>It made sense to me that for testing purposes, the gain of the INA122 should be adjustable, so I swapped out the 1k RG fixed resistor for a 10k 15-turn potentiometer. I then experimented with the gains shown in the INA122's application information. I found that the gains of 1000 (200 ohms) to 5000 (40.2 ohms) gave a good amount of change with the force that I applied with my fingers. The next step was to clamp the load cell down to my desktop and hang some weight from it, using a hanging scale for reference.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/89?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/88?download=" class="external">Large</a> )</p>
+
+
+	<p>The max thrust we should ever see from an Estes motor (A through E) on Shepard is around 30 Newtons (6.74 lbs). If we want to calibrate to 1.4 times the max thrust we'll ever see (per good engineering practices), we'll need to calibrate to 42 Newtons (9.44 lbs). I thought that I'd go ahead and round that value up to set the gain so that 9.5 lbs was the max, or would "fill" the Arduino's ADC. I started to use jugs of water to reach this weight (simulated thrust). Unfortunately, I didn't have the right kind of clamps to hold one end of the load cell properly. I believe my best bet of getting the gain set and calibrating the load cell will be to make the minor modifications necessary to mount the load cell in the Shepard v1.1 structure used during <a href="http://www.youtube.com/watch?v=y4TLxWVTIgM" class="external">Yuri's Night</a> (starts at about 1:03:19). Then I can use the previous calibration mechanism (pulley and string) to set and calibrate the system.</p>
+
+
+	<p>Thoughts, questions, suggestions? Feel free to leave them as comments on this news feed.</p>
+</div>
+<br />
+
+<div id="comments" style="margin-bottom:16px;">
+<h3 class="comments">Comments</h3>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-20.html" title="05/20/2013 07:20 pm">over 9 years</a> ago</h4>
+    <p>Well done!  Are you getting sane values out of the INA122?  If so, that's where we need to be for 1.1.</p>
+
+
+	<p>For Shep 2.0, I was coveting the Microchip <a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en536354" class="external">MCP3424</a> with 18 bit resolution and scaling done in the device setup via I2C... something that can be changed during initialization simply by editing a variable in a setup screen.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-21.html" title="05/21/2013 07:59 am">over 9 years</a> ago</h4>
+    <p>So far I'm getting good looking values from the INA122, but I've only done some basic testing. Getting the gain set right will be the next step. To do that I'll have to mount the load cell in a cantilever configuration on the Shepard 1.1 structure. And to do that, I'll need some sort of stand off that doesn't allow the load cell to rotate. Any suggestions?</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/92?download=" alt="" /><br />( <a href="http://opendesignengine.net/dmsf_files/91?download=" class="external">Large</a> )</p>
+
+
+	<p>My thought is to add something like a button head screw onto the end of the load cell that comes into contact with the sliding motor mount. This will also eliminate the need for the plastic contact pad that you can just barely see on the front of the motor mount block in the image. On version 2.0, I'd like to see the motor mount statically mounted directly to the load cell, eliminating any linear guides.</p>
+
+
+	<p>The MCP3424 looks pretty good. The biggest drawback I see to it is that the max SPS you can get is 240, and that's at 12-bit resolution. At 18-bit it drops down to 3.75 SPS. Because of that, I'm still liking the <a href="http://www.ti.com/product/tlc2555" class="external">TLC2555</a> you previously found for Shepard 2.0. It only weighs in at only 12 bits of resolution, but with a max of 360 KSPS it seems like a good contender to me. Is there something about the TLC2555 that you don't like?</p>
+
+
+	<p>One thing I haven't thought through yet is the bit resolution vs the weight resolution. So, here goes:</p>
+
+
+	<p>12-bit = 4096 "steps" <br />9.5 lbs max weight (set by INA122 gain)</p>
+
+
+	<p>Weight resolution ~= 9.5 lbs / 4096 = 0.0023 lbs</p>
+
+
+	<p>The <a href="http://www.nar.org/SandT/docs/ST-MotorTestingManual.pdf" class="external">NAR standards and testing manual</a> states the following:</p>
+
+
+	<p>"8.5.2 A data collection system where the least significant bit(LSB) has a value that is value is less than 0.33% <br />percent of the average thrust of the motor under test. The sample rate for data collection must be 1000 samples <br />per second or greater for motors with a burn time of less than 1 second, and at least 500 samples per second for <br />all other motors."</p>
+
+
+	<p>There's been a fair amount of discussion on exactly what that means, but I take it to mean resolution. Looking at the <a href="http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf" class="external">Estes thrust curve charts</a> , it looks like the lowest average thrust we could possibly see with with a 1/4 A3 motor. That average would be around 2.5 Newtons (0.56 lbs). So, if I'm understanding it correctly, that means that 0.33% of that is 0.0018 lbs, so we're really close with 12-bits of resolution and a 9.5 lb max thrust. However, since we have adjustable gain on the INA122 for this version, we can just bump the max thrust down to something like 6 Newsons so that we exceed that 0.33% requirement.</p>
+
+
+	<p>Does my logic and math check out?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-21.html" title="05/21/2013 10:40 am">over 9 years</a> ago</h4>
+    <p>In order to mount the sensor anywhere near solid, you will probably need to attach one side of the beam to the test stand back plate with a stand off and the end of the beam out in free space so that the motor mount and slide can come in contact with it.  For a temporary (Rev. 1.1) solution, I would drill a hole in the Shepard back plate and mount the sensor to the back plate with a snug fitting nut and bolt, washers, and lock washers.  For a stand off, you can you stacked flat washers as long as the bolt is cranked down tight using fender washers in contact with the wood to distribute the load.  The goal is to prevent motion by anything other than the test end of the sensor.</p>
+
+
+	<p>In a more permanent design (Rev. 2.0) I would mount the sensor solidly to the frame and the other end to the end of the engine mount.  The only gotcha is that the single hole does not keep things from going squirrely.  To keep everything pointed in the right direction it may be necessary to still have some kind of guide or a precision machined mount to fit the square cross section of the sensor and tapped hole to bolt it to, but this begins to go outside of what a hobbyist can do, and would add machining costs to the frame budget.  We'll figure something out.  Since the response of the sensor is very close to linear, we could make the calibration routine simple by setting the test stand on end and placing a 5Lb weight on the sensor beam.  Once the unit reads the correct weight, the rest can be done in software.</p>
+
+
+	<p>The way I interpret NAR 8.5.2 is that if the sensor must have an LSB of 0.33%, then it needs 300 steps to full scale.  This is greater than 8 bit (256 steps), but less than 9 (512 steps).  Anything we do will probably be at least 10 bit A to D, which comes to 1024 steps, or 0.0977% precision.  Thus, we can use only the bottom third of a 10 bit A/D and still be in compliance.  With a 12 bit ADC, we have 4096 steps to full scale, or 0.0244% precision, allowing us to drop to using under 7.5% of the sensor's scale and still having better than a 0.33% LSB.  The way this breaks down to weight is that with a 10 bit ADC calibrated for 9.5lb (42.256N) max thrust, the least we should measure to stay in compliance is about 2.82lbs (12.543N) without recalibrating for the lower thrust.  With 12 bit resolution, the same system could measure down to 0.72lbs (3.125N) without recalibrating, making it possible to test the full range excluding the 1/4A.</p>
+
+
+	<p>I missed the sample rate the first time I read the NAR spec.  Our design goal needs to be 1000 samples per second then, which so far means that only the TLC2555 meets this criteria.  I misread the spec on the MCP3424.  It is too slow for our uses.  Speaking of sample rates, since we are using the Arduino A/D through the INA122 amp, what is the sample rate of the Arduino running the program?  I could be wrong, but I don't think we can hit anything close to 1kS/S or even half that. We may need to just call the Arduino sample rate good enough for Rev. 1.1, which is not where I want to be, but alas, here we are.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-21.html" title="05/21/2013 11:20 am">over 9 years</a> ago</h4>
+    <p>On the mounting of the load cell on the v1.1 structure - that was similar to what I had in mind.</p>
+
+
+	<p>I'm glad that you cleared up the "LSB of 0.33%" requirement. I had the wrong idea about it. It's nice to know that we'll be exceeding that requirement fairly easily in Shepard 2.0.</p>
+
+
+	<p>I can get about 800 to 825 SPS reading only one analog channel (thrust) with the Arduino. I'm guessing that with the SPI communication for the ADS1118 we'll be down around 300 SPS at the most. I'm not too concerned about that though since we're talking about switching to a BeagleBone for Shepard 2.0. Version 1.1 is intended to allow our partner to get their feet wet, and doesn't need to meet all the NAR specs.</p>
+
+
+	<p>This is shaping up to be a great stepping stone version to Shepard 2.0.</p>
+
+
+	<p>Thanks for the feedback.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-21.html" title="05/21/2013 11:43 am">over 9 years</a> ago</h4>
+    <p>For 1.1 I am not going to complain about 300SpS, as that's about ten times better than I suspected.  With the Beaglebone I don't think we'll have too much trouble meeting the guidelines once we get the methods figured out.</p>
+
+
+	<p>Another method for mounting the sensor, which might even be superior in some ways, is to drill a hole a little smaller to the length of the sensor in line with the motor mount slide contact area.  Then mount the sensor on the wood with a bolt on the side so that the slide assembly centers on the second hole (sort of where you are holding it for the picture).  Screw the motor mount slide to the sensor through the hole with a drywall screw using a washer as a spacer.  The large hole will allow the beam to flex while making solid contact with the body of the test stand, and the slide doesn't have to retract since the sensor zeros at no force.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-21.html" title="05/21/2013 12:59 pm">over 9 years</a> ago</h4>
+    <p>Aaron - I'm not quite sure that I follow you.</p>
+
+
+	<p>It sounds like you're suggesting using something like a hole saw to cut a hole in the back plate that will allow the beam to flex. One end would be cantilevered over the hole and the other attached to the back plate. It would be positioned in the same place as shown in the picture, but the standoff wouldn't be needed. Is this correct?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-05-21.html" title="05/21/2013 01:26 pm">over 9 years</a> ago</h4>
+    <p>That's exactly what I'm suggesting... in fact, this method would be more consistent with standard use of such a sensor.</p>
+
+
+	<p>The drywall screw is less to keep things attached firmly and more to keep things aligned, and the washer needs to go between the free end of the beam and the slide assembly to allow for some angular flex.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-22" title="05/22/2013 07:15 am">over 9 years</a> ago</h4>
+    <p>I like the concept you've come up with Aaron. My only concern is that it requires a relatively major change to the structure which makes it harder to adapt back to the v1.0 DAQ setup. I think I'd like to post this information to the forum to get feedback from the rest of the team before I do it. If I don't hear anything back in a reasonable amount of time I'll go ahead and make the change.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/99?download=" alt="" /></p>
+
+
+	<p>Another design concern just came to mind:</p>
+
+
+	<ul>
+	<li>With the way the load cell is designed, the amount of flat surface I have to lay against the structure's back plate is about 1/4 of the load cell's length (because of the adhesive holding the strain gauges). With only 1/4 of the load cell's surface in contact with the back plate, and the other 3/4 hanging over the hole, I'm worried that the wood at the edge of the hole might start deforming after multiple tests/calibrations, especially ones reaching towards 9.5 lbs. I'm not sure if that's a valid concern though, and I could probably countersink a screw into the wood under the supported part of the load cell to give it a hard surface to rest against.</li>
+	</ul>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-22" title="05/22/2013 11:00 am">over 9 years</a> ago</h4>
+    <p>I am also a little concerned about the structure, particularly the shear force on the wood surrounding the bolt.  The holes are what I would consider a major change and should be run through committee.  If the decision is a Nay, you can put a washer or two under the sensor to elevate it, but this would introduce a small amount of error through the compression of the washer into the wood structure during a run.  Sounds like a good reason to switch to aluminum structure for 2.0, doncha think?</p>
+
+
+	<p>As far as mounting goes, is the adhesive on both sides of the sensor? If not, you should be able to flip the sensor so the adhesive is toward the slide and simple reverse the sense wires.  This will give you more contact area to work with.  If the sensor has adhesive on both sides, we may have to go with the stacked washer method of elevating the sensor.  This may be a better solution for the hobby crowd anyway, since the holes will line up easier.</p>
+
+
+	<p>Best assembly procedure for the stacked washer spacer version for the average Joe (limited tools and skills) would be to do the following:</p>
+
+
+	<ol>
+	<li>Drill a hole through the backplate as far to one side of the slide end stop center line as the distance from mounting hole to mounting hole in the sensor.  The direction of this hole is non-critical, as long as it does not interfere with other mounting or the motion of the slide.  </li>
+		<li>Insert the bolt through the sensor, the drywall screw through the other hole facing the other direction (see above illustration) and temporarily bolt the sensor without the washers under it to the wood backplate.  </li>
+		<li>Rotate the sensor until the drywall screw lines up with the center of the slide end stop, then slide the assembly forward into the drywall screw to mark the end stop with its sharp point.</li>
+		<li>Remove the sensor from the test stand and secure to the end stop it as shown with the drywall screw and washer.  Turn screw until tight, then back it off 1/4 turn.</li>
+		<li>Move the slide forward and line up the holes by rotating the sensor.  Insert the the bolt and washer through the sensor's mounting hole, installing 2 washers between the sensor body and back plate.  </li>
+		<li>Using two wrenches, on the bolt head and one on the nut, secure the bolt with a washer, lockwasher, and nut.  Torque nut until lockwasher is fully compressed.</li>
+		<li>Secure sensor wires so that they are not pinched by the motion of the slide nor subjected to blast or heat from the ejection charge diverter.</li>
+	</ol>
+
+
+	<p>Had a thought regarding 1/4A motors and the like.  The drawer slide will present some resistance (some more than others).  On something with 8 pounds of force, this may be negligible, but the running resistance may significantly affect the accuracy of those motors.  I am not proposing a redesign of the slide, but rather a scope change that would specify that Shepard 1.1 is only for engines in the A through D range, since 1/2A and 1/4A would have diminished accuracy and the specific impulse of the E motors demands an evacuation radius beyond the range of the USB cable length.  This would then change what we need to worry about with the calibration.  If we calibrated the sensor to go full scale at 9lbs (a little less than the ideal, but still well within spec), the measurement of an A would still be within the 0.33% spec... meaning no between run calibrations for the different engine sizes unless we want to get higher accuracy. :)</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-05-22" title="05/22/2013 03:46 pm">over 9 years</a> ago</h4>
+    <p>Yes, the adhesive is on both sides and it's fairly thick.</p>
+
+
+	<p>Interesting thought on cutting down the range of usable motors. Eliminating the 1/2 and 1/4 A's will be an easy sell I think - the elimination of E's, not so much. I don't think we've ever tried to test any A's other than the standard (full) size. However, we've been including E's since the beginning, and it seemed to be an important thing for us. With that said, we'd only be restricting version 1.1 and stepping back up to E's on 2.0 since we'll be able to make the safety radius. This is something else that should be posted to the forums to see what people think.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-03" title="06/03/2013 08:32 am">over 9 years</a> ago</h4>
+    <p>I started today off by working on the mounting for the thrust measuring load cell. This was required (among other things) for me to set the gain on the INA122 properly so that I could do a test calibration.</p>
+
+
+	<p>Aaron's instructions from above are as follows:</p>
+
+
+	<ol>
+	<li>Drill a hole through the backplate as far to one side of the slide end stop center line as the distance from mounting hole to mounting hole in the sensor. The direction of this hole is non-critical, as long as it does not interfere with other mounting or the motion of the slide.</li>
+		<li>Insert the bolt through the sensor, the drywall screw through the other hole facing the other direction (see above illustration) and temporarily bolt the sensor without the washers under it to the wood backplate.</li>
+		<li>Rotate the sensor until the drywall screw lines up with the center of the slide end stop, then slide the assembly forward into the drywall screw to mark the end stop with its sharp point.</li>
+		<li>Remove the sensor from the test stand and secure to the end stop it as shown with the drywall screw and washer. Turn screw until tight, then back it off 1/4 turn.</li>
+		<li>Move the slide forward and line up the holes by rotating the sensor. Insert the the bolt and washer through the sensor's mounting hole, installing 2 washers between the sensor body and back plate.</li>
+		<li>Using two wrenches, on the bolt head and one on the nut, secure the bolt with a washer, lockwasher, and nut. Torque nut until lockwasher is fully compressed.<br />#Secure sensor wires so that they are not pinched by the motion of the slide nor subjected to blast or heat from the ejection charge diverter.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/99?download=" alt="" /></p>
+
+
+	<p>I changed the order from what Aaron suggested because of the lack of precision due to the tools I was working with. I've included Aaron's edited instructions below on how I got the load cell mounted. As an extra step, I had to remove the plastic contact pad (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB05) from the end stop (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02).</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/110?download=" alt="" /></p>
+
+
+	<ol>
+	<li>Remove the back plate (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> BP01) to allow the next few operations. This involves removing only 5 screws.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/110?download=" alt="" /></p>
+
+
+	<ol>
+	<li>Using a ruler and pencil, draw two diagonals on the face of the end stop block (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02), giving you (close to) a center position.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/112?download=" alt="" /></p>
+
+
+	<ol>
+	<li>Using a small center punch (or large nail) and a hammer, put a SHALLOW starter hole at the intersection of the two marked lines. Be sure not to hit the center punch so hard that you damage the reset of the motor mount or slide mechanism.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/113?download=" alt="" /></p>
+
+
+	<ol>
+	<li>Drill a pilot hole for the end stop (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02) mount screw. I selected a 6 x 1-5/8 trim head screw from my local hardware store because it seemed to fit the mounting hole on the load cell the best. Any other screw could be used as long as it allows the load cell to float freely against the end stop block (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02) while keeping it aligned. This screw required a 3/32 pilot hole in softwood, but I was afraid that was a little too small for the trim head screw so I went with a 5/64 drill size. I didn't think that this would cause any splitting in the end stop block (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02). Be careful not to drill through into the copper T (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MM06) that exhausts the parachute charge. Also, if you've added a longer screw to hold a string on the bottom of the block for calibration, you'll need to take this out and replace it with a shorter screw.</li>
+	</ol>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/114?download=" alt="" /></p>
+
+
+	<p>It was at this point that I realized that I had two problems. First, I had drawn my diagonal lines from the bottom of the motor mount plate (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB01) instead of only including the end stop block (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02). Second, I could not run the trim head screw far enough into the block because of interference with another mounting screw. I selected that length of trim head screw partly because there was enough unthreaded portion on the shank near the head to keep the screw from binding on the threads inside the load cell's mounting hole. To fix the first problem, I redrew the lines on the block and drilled the same sized pilot hole in that. I took the block off to do that, but you wouldn't have to.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/115?download=" alt="" /></p>
+
+
+	<p>I then remounted the block. I had noticed that the epoxy on the load cell was going to require me to use more washers than Aaron's drawing shows, but not enough to avoid the screw interference problem and I didn't have any <a href="../issues/6.html" class="issue status-5 priority-2 closed" title="Add wiki external format plugin as basis for wiki enhancements (Closed)">#6</a> washers, so I decided to make a hardware store run for shorter trim head screw and the properly sized washers.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-03" title="06/03/2013 08:39 am">over 9 years</a> ago</h4>
+    <p>I goofed and attached the wrong image for the second one down, and the News module won't let you edit your comments.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/111?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-03" title="06/03/2013 11:17 am">over 9 years</a> ago</h4>
+    <p>Ok, back from the hardware store. Just a reminder to anyone reading this after the fact, this is more of a retrofit than a from-scratch design.</p>
+
+
+	<p>For the load cell mounting screw, I ended up getting a <a href="../issues/6.html" class="issue status-5 priority-2 closed" title="Add wiki external format plugin as basis for wiki enhancements (Closed)">#6</a> 1-1/4 inch cabinet screw. I also got several <a href="../issues/6.html" class="issue status-5 priority-2 closed" title="Add wiki external format plugin as basis for wiki enhancements (Closed)">#6</a> flat washers to create the correct clearance between the load cell body and the end stop block. (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02). I ended up using 3 washers to achieve the correct spacing. Continuing on with Aaron's list (and fixing my numbering mix-up above):</p>
+
+
+	<p>5. Add 3 washers against the end stop block (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02) and run a <a href="../issues/6.html" class="issue status-5 priority-2 closed" title="Add wiki external format plugin as basis for wiki enhancements (Closed)">#6</a> 1-1/4 screw through the load cell mounting hole opposite the end where the leads are routed. Tighten, then back off by 1/4 of a turn.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/116?download=" alt="" /></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/117?download=" alt="" /></p>
+
+
+	<p>If I've mounted the load cell improperly for how I've wired it into the INA122, I'll just swap the white and green wires.</p>
+
+
+	<p>(<strong>Switching to present tense to see if it feels more natural for this dev log</strong>)</p>
+
+
+	<p>I'm replacing the calibration screw string with a <a href="http://opendesignengine.net/issues/8" class="issue status-3 priority-2 closed" title="Add support for enhanced document management (Resolved)">#8</a> 1/2 inch long wood screw.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/118?download=" alt="" /></p>
+
+
+	<p>At this point, I'm ready to put the Back Plate (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> BP01) back on by simply reversing the process I used to take it off. I'm tempted to route the load cell's wires through the hole in the Back Plate, but since that's also the hole for the calibration string I think I'll wait. I put the string back through the hole in the Back Plate so that I can start attaching the load cell to the plate.</p>
+
+
+	<p>6. Move the drawer slide forward until the load cell and its mounting screw comes in contact with the Back Plate (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> BP01).</p>
+
+
+	<p>7. Using either a level or your own eyesight, align the load cell vertically and use a small center punch or large nail to mark the center of the top mounting hole.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/119?download=" alt="" /></p>
+
+
+	<p>As Aaron mentioned, the orientation of the load cell doesn't matter as long as you calibrate the system properly. I oriented the load cell the way I did to get it as far away from the parachute charge flame as possible. I may also have to add some foil shielding (aluminum foil tape?) or something over the load cell's epoxy points and wiring as well.</p>
+
+
+	<p>I'm not sure that present tense is working for this dev log. I'd be curious to see what tense, voice, etc other people use in their logs. I think it changes the dynamic a little bit that these are public logs, but the concept is still the same.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 07:18 am">over 9 years</a> ago</h4>
+    <p>Outstanding work!  To allow for flex of the sensor, are we going to drill a relief in the back wall?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 07:36 am">over 9 years</a> ago</h4>
+    <p>I need to find the closest standard/English clearance drill for the M5 screw that fits the mounting holes on the load cell. It has threaded holes, so I'm going to reverse the direction of the bolt in Aaron's drawing so that the threads on the bolt/screw engage the threads in the load cell's mounting hole. The longest M5 bolt that I could find was 2 inches long, which is going to be a little short by the time I add the washers. I may have to use a counter-bore bit to create a pocket in the back plate (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> BP01) to make the bolt work and to hide it from view (not a big concern).</p>
+
+
+	<p>Looks like the closest English drill size for an M5 clearance hole is 7/32, so that's what I'll use. I can't get the drill perpendicular because of the motor mount and slide assembly, so I'm going to take the back plate off again.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/120?download=" alt="" /></p>
+
+
+	<p>With the hole drilled I'll attach the Back Plate again.</p>
+
+
+	<p>There are known alignment issues with version 1.0 and 1.1 of Shepard's structure since it uses dimensional lumber. It looks like I'm going to hit that somewhat trying to tie the back plate (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> BP01) and motor mount end stop (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> MMB02) together with the load cell, but fitting and drilling the holes in place has helped some. I'm going to put an M5 fender washer on the bolt head side of the back plate and three M5 flat washers on the end stop side.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/121?download=" alt="" /><br /><strong>Fender Washer</strong></p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/122?download=" alt="" /></p>
+
+
+	<p>I tightened the M5 bolt down and didn't really like the way the spacing looked with just the three M5 flat washers. Surprisingly, there's plenty of length left on the 2-inch long bolt with all the washers, so I think I'll add a fender washer against the back plate (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> BP01) on the motor side. This needs to be tight, but if you keep putting torque on the bolt the washers will start to embed themselves in the soft wood. Tighten this as tightly as you can without that happening.</p>
+
+
+	<p>Here's the finished assembly.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/123?download=" alt="" /></p>
+
+
+	<p>Now it's time to set the gain on the INA122 apmplifier and do a test calibration.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 07:53 am">over 9 years</a> ago</h4>
+    <p>Beautiful!  We may need to tweak things a bit here and there, but I think that's got it for the purposed of V1.1!</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 09:12 am">over 9 years</a> ago</h4>
+    <p>I agree Aaron, there's some tweaking that needs to be done, but I'm glad we get to try these things out on a version 1.1 retrofit instead of waiting till the first rev of 2.x. This will save us a lot of time.</p>
+
+
+	<p>As you would expect, I can see a little bit of flex in this assembly, but I'm hoping that calibration takes care of it (or at least the majority of it).</p>
+
+
+	<p>I went ahead and opened the calibration utility that I wrote for this version of Shepard. It reads a voltage from analog input 0 just like the FSR (Force Sensing Resistor) setup did, so it works with the load cell too. The first thing I notice is that the voltage goes down when I pull on the calibration weight hanger string, so I need to swap the green and white wires for the load cell.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/126?download=" alt="" /></p>
+
+
+	<p>With that fix the values started to look better (going up when I pull on the string instead of down).</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/124?download=" alt="" /></p>
+
+
+	<p>Now it's time to hang some weight on the test stand and figure out what gains need to be set for the various loads that we want to measure at, with a max of 9.5 lbs for our uses. Out of curiosity, I stood Shepard on end and clamped it to the desktop. Then I checked the resting value and it read 54 (on a scale of 0-1023), whereas the resting value was around 6 when the stand was horizontal. This is one thing we've discussed numerous times in project discussions, and it's part of the reason we went with a horizontal test stand rather than a vertical one. With vertical test stands you have to account for things like mass loss due to fuel burn and assembly weight which complicates things, especially for an entry level test stand like Shepard.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/125?download=" alt="" /></p>
+
+
+	<p>I had forgotten that I got a new flush mount pulley to help calibrate Shepard. It looked like it might not work when I first glanced at it awhile back, but I need to dig it out and try it.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 09:30 am">over 9 years</a> ago</h4>
+    <p>No big deal.  you can probably hang all kinds of weight from that bolt end sticking out of the deflector plate above the slide... possibly even using a shelf bracket for more support.</p>
+
+
+	<p>The gotcha with doing a vertical calibration is that you will need to account for the mass of the slide (only the moving portion), motor mount assy, brackets, weight, and even half of the sensor's mass as well.  This could be done, but will end up being a good bit of work on the front end.  We may want to tell CCSSC to weigh the parts prior to assembly for this sort of thing.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 10:27 am">over 9 years</a> ago</h4>
+    <p>The flush mount replacement pulley that I got won't work. The housing will cause the string to bind in the orientation that's needed for Shepard, which might throw off the load cell readings. I could go ahead and order another pulley like a <a href="http://www.mcmaster.com/#rope-pulleys/=n1oycv" class="external">3071T23</a> , but I think I'll just reuse a pulley from Shepard 1.0 (<a href="http://opendesignengine.net/dmsf_files/71?download=" class="external">BOM</a> BP02).</p>
+
+
+	<p>I ended up mounting it with a <a href="http://opendesignengine.net/issues/8" class="issue status-3 priority-2 closed" title="Add support for enhanced document management (Resolved)">#8</a> x 1/2" wood screw, with one <a href="http://opendesignengine.net/issues/8" class="issue status-3 priority-2 closed" title="Add support for enhanced document management (Resolved)">#8</a> flat washer and one <a href="../issues/10.html" class="issue status-1 priority-2 parent" title="Modernize ODE theme (New)">#10</a> flat washer. I screwed the pulley down tight to the structure so that it could stay in place as the test stand is moved around. On Shepard 1.0 we just kept the pulley in a box.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/127?download=" alt="" /></p>
+
+
+	<p>I want to go ahead and put a hook on the string so that I can add and remove a hanging scale quickly, but I don't have one. Looks like another hardware store run.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 01:26 pm">over 9 years</a> ago</h4>
+    <p>I ended up buying a Hillman "Safety Spring Snap Link" that was 5/16 open, 1/8 chain.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/128?download=" alt="" /></p>
+
+
+	<p>I went ahead and weighed the link, since it's weight and the weight of the scale itself will have to be added to the values used in calibration.</p>
+
+
+	<p>The link weighed in right at 1.0 ounces, and the scale itself (which is an <a href="http://www.americanweigh.com/product_info.php?products_id=1231" class="external">American Weigh Scales SR-20</a> by the way) weighs 3.8 ounces.</p>
+
+
+	<p>I'll put a small loop in the string so that the snap link can be attached and removed easily. I hung the scale and a milk 1 gallon jug full of water from the string and got a weight of 8.58 lbs (the jug was over-full) and a digital reading on the calibration app of 471, with some more headroom to go.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/129?download=" alt="" /></p>
+
+
+	<p>The next step is to add another gallon jug and fill it until the total weight is 9.5 lbs. Then I can set the gain of the system so that 9.5 lbs is the max. I'm using medium weight kite string to hang everything, including the milk jugs, and that apparently isn't enough. The string broke as I was hanging the second jug. I'll have to double the string up. The challenge is that I'm going to have to take the load cell loose and take the back plate off to replace the string. Not a huge deal, but it still takes awhile.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 02:05 pm">over 9 years</a> ago</h4>
+    <p>Eh, no big deal.  make sure that the response is linear though... anything else would indicate some deformation of the structure or fasteners.</p>
+
+
+	<p>The fact that you have that much headroom and can calibrate up or down indicates to me that Shepard 2.0 would be able to use the whole range of the sensor, not just a small part of it.  This is excellent!</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 02:37 pm">over 9 years</a> ago</h4>
+    <p>A post-mortem of the string showed that the area where it broke was not against anything that would have caused a stress point, but it was blackened by the parachute charges from many test firings. It's not surprising it would fail.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/130?download=" alt="" /></p>
+
+
+	<p>I doubled the string, clipped the ends so they would be the same length, and then taped the ends together to prevent fraying and to make them act more like a single strings. Now I'll repeat the hanging process again.</p>
+
+
+	<p>Since the first jug is 8.58 lbs, so the second needs to be 0.92 lbs to add up to 9.5 lbs. I've added 0.92 lbs into the other water jug, and I'll hang both of them.</p>
+
+
+	<p>The raw digital reading bounces between 499 and 500 with the full 9.5 lbs on there. At first the calibration software was only reading 396, but then I realized that one of the strings had slipped off the pulley and was holding up some of the weight.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/131?download=" alt="" /></p>
+
+
+	<p>I'm going to try to tune the variable resistor that sets the gain for the load cell so that 9.5 corresponds to something close to 1023 on the Arduino's ADC scale.</p>
+
+
+	<p>I got to about 663 on the scale when it stopped, and I remembered that I had set the breadboard up to use 3.3 volts when I was experimenting with the non-contact temp sensors. I corrected that after disconnecting the IR sensor since it's only supposed to be supplied with 3.3 volts. Now I'm topping out at about 1005, which I'm happy with. That "fills" most of the ADC's range, and accounts for some loss from the way I have the circuit set up. The variable resistor's value is 148 Ohms. According to the <a href="http://www.ti.com/lit/ds/sbos069/sbos069.pdf" class="external">datasheet for the INA122</a> (Figure 1), that would correspond to a gain of about 1500.</p>
+
+
+	<p>Now, if we back the weight down to 0.92 lbs (the lighter jug only), it takes a resistor value of 28 Ohms to give us approximately 1000 on the digital scale. The system becomes very sensitive and bounces around a lot when trying to tune in this weight, as you would expect. This resistance gives us a gain of a little more than 7500. Aaron walked me through a voltage divider setup the other day that makes it very easy to adjust resistance precisely within a given range. I'd be interested what he thinks about setting up the same resistor network to set the gain on the INA122.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 02:54 pm">over 9 years</a> ago</h4>
+    <p>The resistor network we discussed was a potentiometer (variable resistor) with two resistors on either end.  First, the total resistance is merely the sum of all three values.  For instance, if R1 was 10KOhms, the pot, R2 was 10KOhms, and the last resistor R3 was 10KOhms, the total series resistance would be 30KOhms.  Now we have a 30K resistor network which acts as a potentiometer with the range of adjustment limited to the middle third of the range.  At one extreme, the wiper of the pot is at the same electrical point as the bottom leg of the first resistor. At the other extreme, the wiper is at the same electrical point as the top leg of the last resistor.</p>
+
+
+	<p>This is helpful in that if 12V were passed through the network, the voltage at the wiper would vary between 1/3 and 2/3 of the supply voltage rather than a full range.  In other words, a pot by itself varying from 0-12V in the 270 degree arc of it's travel, yielding a "fussyness" of 44mV per degree of travel.  Our network varies from 4-8V under the same conditions, yielding a "fussyness" of 15mv per degree, making it easier to adjust more precisely.  The gotcha is that you are limiting your range of adjustment as a trade off for more precision.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 04:26 pm">over 9 years</a> ago</h4>
+    <p>So, for the INA122, I think we'd do best with a resistance that varies between about 25 Ohms to 150 Ohms. How would I set that up?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 05:15 pm">over 9 years</a> ago</h4>
+    <p>To reduce the resistance, we'd go parallel.  Playing around a little, I found the best combo of standard parts to be a 220 ohm resistor in parallel with the 10K pot and both of these in series with a 22 ohm resistor.  See the attached diagram with bad handwriting:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/132?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-04" title="06/04/2013 07:13 pm">over 9 years</a> ago</h4>
+    <p>My math was off.  The parallel resistor needs to be a 150 ohm.  Rmin=22 Ohms, Rmax=169.78 Ohms.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-06" title="06/06/2013 09:18 pm">over 9 years</a> ago</h4>
+    <p>What I'm ending up with (via a a multimeter) is 30 to 170 ohms with this network. I don't have access to the test stand at the moment so I can't test the load cell output right now, but a very quick test the other night showed that this network wasn't giving enough gain (at the 30 Ohm level) to fill the ADC at the lower weights/thrusts. This is what you'd expect based on the INA122's datasheet.</p>
+
+
+	<p>I'll test again when I can use the stand, but I think this network will have to be tweaked a little.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-06" title="06/06/2013 09:39 pm">over 9 years</a> ago</h4>
+    <p>If you need to reduce the Rmin value, reduce the 22 ohm resistor to 15 or even 12.  If you need to increase Rmax, you could bump the parallel resistor to 270 or 330 ohms.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-10" title="06/10/2013 10:51 am">over 9 years</a> ago</h4>
+    <p>Ok, I had a 15 ohm resistor on-hand, so I used that. The range of the resistor network is now 23 to 163 ohms. I think that range will work fine based on testing done on the stand. For future reference, if we need finer gain adjustment over a smaller range, this will be the place to make it happen.</p>
+
+
+	<p>With this resistor network, the Fritzing diagram (without the load cell) now becomes:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/134?download=" alt="" /><br />(<a href="http://opendesignengine.net/dmsf_files/133?download=" class="external">Large</a> )</p>
+
+
+	<p>Converted to a schematic it looks like:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/136?download=" alt="" /><br />(<a href="http://opendesignengine.net/dmsf_files/136?download=" class="external">Large</a> )</p>
+
+
+	<p>I would have to create a Fritzing part for the load cell, so for right now you can just match the colors of the load cell wires (red, green, white, black) to the colors on the diagrams. At some point we'll need a Fritzing part of this load cell though.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-10" title="06/10/2013 12:17 pm">over 9 years</a> ago</h4>
+    <p>Looks good.  The only thing left is connecting SDA, SCL, 3.3V, and ground to a socket for the temp sensor(s).</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-11" title="06/11/2013 07:52 am">over 9 years</a> ago</h4>
+    <p>Yep. I like the modular design for the temp sensors by doing them that way.</p>
+
+
+	<p>Update: Before I added the photos and published this, I plugged the shield into the Arduino for a quick test. The INA122 got too hot to touch, and I found the following wiring mistake.</p>
+
+
+	<p>This:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/137?download=" alt="" /></p>
+
+
+	<p>Should be this:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/138?download=" alt="" /></p>
+
+
+	<p>Many of these pictures show the wrong wiring, so keep that in mind. With this change the circuit works well, and the INA122 seems to have survived. I'll be swapping it out before shipping it to our partner organization though.</p>
+
+
+	<p>*<strong><b>START ORIGINAL DEV LOG</b></strong>*</p>
+
+
+	<p>I started assembling an Arduino Shield for this, and here's the process.</p>
+
+
+	<p>The stock shield:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/139?download=" alt="" /></p>
+
+
+	<p>Adding an 8 pin DIP socket:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/140?download=" alt="" /></p>
+
+
+	<p>I tend to use tap to hold components while I solder them:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/141?download=" alt="" /></p>
+
+
+	<p>Adding the ground wires (green) to the INA122's socket:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/138?download=" alt="" /></p>
+
+
+	<p>I decided to work from the top (1 and 8) and bottom pins (4 and 5) to the middle, so I had to build the resistor network for the INA122's gain next.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/142?download=" alt="" /></p>
+
+
+	<p>I had to make one jumpered connection between the trim pot's wiper and one of its legs on the underside of the shield.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/143?download=" alt="" /></p>
+
+
+	<p>Next I wanted to add the screw terminals for the load cell. It was at this point that I found out that the hole spacing on the ProtoShield was not compatible with the spacing of the pins on the terminal blocks. I was able to turn them on an angle to make them work though.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/144?download=" alt="" /></p>
+
+
+	<p>Since there are no traces on that part of the board (they might not work right with the terminals at an angle anyway), I had to jumper from the wire to the appropriate pin on the underside of the board.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/145?download=" alt="" /></p>
+
+
+	<p>Finished the top side looks like this:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/147?download=" alt="" /></p>
+
+
+	<p>And the bottom side looks like this:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/146?download=" alt="" /></p>
+
+
+	<p>With everything finished and connected to the load cell on the test stand it looks like this:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/148?download=" alt="" /></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-11" title="06/11/2013 08:58 am">over 9 years</a> ago</h4>
+    <p>I wouldn't have thought to angle the connector.  Well done!  I think we can safely say that the INA122 is one tough chip and we probably should consider it for other designs because of that, low cost, and versatility.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-11" title="06/11/2013 10:34 am">over 9 years</a> ago</h4>
+    <p>Yeah, I was impressed by the INA122. I was about to just throw that chip away, but out of curiosity tried it again after I fixed the wiring issue. It seems to have survived just fine, but I would only use it here for prototypes here in my lab just in case.</p>
+
+
+	<p>The next step was calibration and testing. The calibration app that we've written isn't fully finished or integrated yet, so I'll get the values, fit an equation to them in LibreOffice Calc, and hard code that in the software for now. Before I do that though, I'll set the current software up as a 1.0 branch in the SVN repo. There's a <a href="http://opendesignengine.net/dmsf_files/90?download=" class="external">version 1.0 snapshot</a> DMSF download for the software as well, but I felt this was the proper way to track the versions within SVN.</p>
+
+
+	<p>I used the following commands to create the tag.</p>
+
+
+	<p>svn copy <a class="external" href="https://opendesignengine.net/svn/shepard-ts/trunk">https://opendesignengine.net/svn/shepard-ts/trunk</a> <a class="external" href="https://opendesignengine.net/svn/shepard-ts/tags/version-1.0">https://opendesignengine.net/svn/shepard-ts/tags/version-1.0</a> -m "Tagging the 1.0 release of Shepard's data collection software."</p>
+
+
+	<p>I then deleted the local shepard-ts folder and checked the software back out from the repo to make sure that I was starting with a blank slate, so-to-speak.</p>
+
+
+	<p>I ran the calibration software and hung an empty milk jug on the calibration string via the hanging scale the way I did above for setting the gain on the INA122. I'll pour water from a full jug into the empty jug and take readings at approximately 0.5 lb increments.</p>
+
+
+	<p>Below is what I ended up with.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/149?download=" alt="" /></p>
+
+
+	<p>Raw (X),Real (Y)<br />65, 0.08<br />115,0.50<br />181,1.02<br />236,1.50<br />292,2.00<br />360,2.52<br />447,3.00<br />484,3.50<br />557,4.00<br />623,4.50<br />692,5.02<br />749,5.52<br />814,6.00<br />879,6.50<br />936,7.04<br />993,7.52<br />1014,8.04<br />1014,8.50</p>
+
+
+	<p>I was disappointed that the circuit didn't top out where I had set it (9.5 lbs), and that's something to experiment more with. Since this is a rough first calibration, I'll use everything up to 7.52 lbs to create a calibration equation that I can use in the software. Then I'll see how accurate the values are.</p>
+
+
+	<p>The calibration curve with a linear equation fit to it looks like this:</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/150?download=" alt="" /></p>
+
+
+	<p>I hard coded this equation into the data collection software, converted that value to Newtons, and the values the software gives are reasonably close to reality (+/- 0.06 lbs). For this retrofit I would say that's pretty good. I need to put some clear silicon on the trim potentiometer so that it won't move during transport.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-11" title="06/11/2013 10:50 am">over 9 years</a> ago</h4>
+    <p>Looks great!  Put the I2C header on it and ship it!</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-11" title="06/11/2013 11:10 am">over 9 years</a> ago</h4>
+    <p>Could the non-linearity at high force be due to the mounting or other flex?</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-11" title="06/11/2013 09:10 pm">over 9 years</a> ago</h4>
+    <p>I think the non-linearity was due to the fact that I didn't lock the trim pot down after I set the high end of the gain. I'll be building a copy of this shield for Mach 30 next week so we can do more testing.</p>
+
+
+	<p>To keep the resistor from jostling out of it's current position during shipping, I added a drop of clear silicone sealant between the trim pot's turn table and body.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/152?download=" alt="" /></p>
+
+
+	<p>Before shipping the shield, I wanted to do at least one test firing on it. It wasn't until the last of three firings that I got things coordinated enough for usable data and video.</p>
+
+
+	<p>Before I did the test firings, I decided to protect the epoxy on the load cell from the parachute charge flame. To do this I put foil tape over the load cell, making sure not to pull the tape tight, which would affect the measurements. I used Shurtape DC 181, but you could use any brand/model of foil tape. The idea is just to keep the epoxy from coming into contact with direct flame.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/153?download=" alt="" /></p>
+
+
+	<p>I then did the test firing using a D12-3 motor, as this video shows.</p>
+
+
+	<p><object width="600" height="400">
+  <param name="movie" value="https://www.youtube.com/v/GhQUiHNn5k?rel=1&fs=1"></param>
+  <param name="allowFullScreen" value="true"></param>
+  <param name="allowScriptAccess" value="always"></param>
+  <embed src="https://www.youtube.com/v/GhQUiHNn5k?rel=1&fs=1"
+    type="application/x-shockwave-flash"
+    allowscriptaccess="always"
+    width="600" height="400" 
+    allowfullscreen="true"></embed>
+</object>
+</p>
+
+
+	<p>The data that I got out of the test run looks good, closely matching what the <a href="http://www2.estesrockets.com/pdf/Estes_Time-Thrust_Curves.pdf" class="external">Estes motor curves document</a> shows for a D12 motor.</p>
+
+
+	<p><img src="http://opendesignengine.net/dmsf_files/154?download=" alt="" /></p>
+
+
+	<p>Our curve doesn't have the noise cleaned out of it, but the same basic profile is there. It has a similar rise to the peak thrust, peaks at just over 30 Newtons between the first quarter and half a second, and then falls off properly. There's definitely some tuning that needs to be done when this load cell is used on Shepard 2.0, but we've proven that we can replicate the thrust curve for at least this motor.</p>
+
+
+	<p>If anyone wants to take a look at the data from the run it's been uploaded to DMSF <a href="http://opendesignengine.net/dmsf_files/155?download=" class="external">here</a> . It's in comma delimited text format so you should be able to work with the data easily.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-11" title="06/11/2013 09:11 pm">over 9 years</a> ago</h4>
+    <p>I guess YouTube inserts don't work in the news feature, so here's a link to the video of the test run.</p>
+
+
+	<p><a class="external" href="http://www.youtube.com/watch?v=_GhQUiHNn5k">http://www.youtube.com/watch?v=_GhQUiHNn5k</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-06-11" title="06/11/2013 10:40 pm">over 9 years</a> ago</h4>
+    <p>That is a beautiful thing.  We may wish to apply a little Gaussian smoothing to clear up the ring from t0.38 to t0.79, but that's a software change.  The hardware works perfectly.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 09:04 pm">over 9 years</a> ago</h4>
+    <p>I had a good hard look at the data we got out of the sensor.  By performing a simple gaussian smoothing, the motor run data was deducted leaving the noise with a dramatically reduced DC component.</p>
+
+
+	<p>This dataset available here (<a class="external" href="http://opendesignengine.net/dmsf_files/179?download=">http://opendesignengine.net/dmsf_files/179?download=</a>) is ready to be processed with FFT to find all known frequency components in the signal, although some basic spot analysis was already done.  Analysis showed the primary oscillation in the noise shifted from 100hz to 120hz as the run progressed indicating that the vibrating mass was reducing as fuel was consumed.</p>
+
+
+	<p>This indicated that the issue was not AC hum or "chugging" since AC hum's frequency remains constant and chugging oscillations generally decrease in frequency as run progresses and the cavity in the fuel increases in size.  What was left as a culprit is a ringing longitudinal oscillation, which will likely not occur (at least not in the same way) in a version 2.0 structure.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/125.html" class="icon icon-contributor-license">Aaron Harper</a> <a href="../projects/shepard-ts/activity%3Ffrom=2013-06-17.html" title="06/17/2013 09:18 pm">over 9 years</a> ago</h4>
+    <p>To verify our results, Jeremy provided a dataset which came from a manual push on the sensor while indoors.  Performing the same basic analysis, we find a perfect example of AC hum in that it neither significantly varied in frequency or amplitude once the major displacement (DC component) was removed.  Here is the link to the test dataset:</p>
+
+
+	<p><a class="external" href="http://opendesignengine.net/dmsf_files/180?download=">http://opendesignengine.net/dmsf_files/180?download=</a></p>
+
+
+	<p><strong>WARNING  Large spreadsheet with calculations and linked graph.</strong></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="../users/102.html" class="icon icon-contributor-license">Jeremy Wright</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2013-09-14" title="09/14/2013 04:48 pm">about 9 years</a> ago</h4>
+    <p>We had a bit of an engineering process breakdown and the dev log entries beginning with the load cell should have been published under the Shepard v2.0 target version and not Shepard v1.1.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/713" class="icon icon-contributor-license">Ronald Janson</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2018-12-05" title="12/05/2018 04:41 am">almost 4 years</a> ago</h4>
+    <p>Thanks for sharing this post. I am highly interested in this topic. I would like be share my opinion in this.The target of rising indoor roses is type of smart and really sensible for a rose lover's perspective. One of the vital essential benefits of it's that it is possible for you to to get pleasure from and have enjoyable with roses with out even going exterior and soaking your self to the solar.<br />[[<a class="external" href="https://uptheproduction.com/best-grow-tent/">https://uptheproduction.com/best-grow-tent/</a>]]</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/935" class="icon icon-contributor-license">Alex Juvion</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2019-07-19" title="07/19/2019 10:44 am">over 3 years</a> ago</h4>
+    <p>Found best article regarding the DAQ system for version 1.1 of the Shepard Test Stand which is speedily getting left behindhand technology-wise. Thanks for sharing.</p>
+
+
+	<p>Alex,<br />Essay writer at well-known <a href="http://www.qualityassignment.co.uk/services/essay-writing-service/" class="external">essay writing company</a> Quality Assignment in UK.</p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/1379" class="icon icon-contributor-license">Lauren Desouza</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2019-09-19" title="09/19/2019 12:30 pm">about 3 years</a> ago</h4>
+    <p>It was really helpful blog for me as it is useful information for my students who studied in IT field as the sample rate due to the thermocouple amplifier is far too slow as well, and we're looking at switching to a non-contact temperature sensor to obtain faster sensor response during runs.</p>
+
+
+	<p>Lauren,<br /><a href="https://www.cvfolks.co.uk/cover-letter/" class="external">https://www.cvfolks.co.uk/cover-letter/</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/951" class="icon icon-contributor-license">Jack Ponting</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2020-03-09" title="03/09/2020 06:58 am">over 2 years</a> ago</h4>
+    <p>I am so happy to found this informative blog also I am thankful to an author for sharing this helpful blog with us. Keep writing and sharing more posts with us. <br />Jack Ponting, senior dissertation writer in UK. <a href="http://www.qualitydissertation.co.uk/business-dissertation-help/" class="external">http://www.qualitydissertation.co.uk/business-dissertation-help/</a></p>
+
+    
+    <div class="contextual">
+    
+    </div>
+    <h4>Added by <a href="http://opendesignengine.net/users/963" class="icon icon-contributor-license">William Riley</a> <a href="http://opendesignengine.net/projects/shepard-ts/activity?from=2020-03-12" title="03/12/2020 04:46 am">over 2 years</a> ago</h4>
+    <p>Very well explained here about circuit with the images. I think it will easy to understand way you describe. I also share it with my co-writer who is providing dissertation writing help- <a href="http://www.eliteassignment.co.uk/dissertation-writing-help/" class="external">http://www.eliteassignment.co.uk/dissertation-writing-help/</a> for an academic students.</p>
+
+</div>
+
+
+
+
+
+
+        
+				<div style="clear:both;"></div>
+    </div>
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+	
+<div id="footer">
+  <div class="bgl"><div class="bgr">
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
+  </div></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25732509-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <div id="footer">
+  <div class="bgl"><div class="bgr">
+    <a href="http://opendesignengine.net/terms_of_services/34">Terms Of Service</a>
+  </div></div>
+</div>
+<div id="footer">
+</div>
+</body>
+</html>
